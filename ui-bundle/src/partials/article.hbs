@@ -1,0 +1,39 @@
+<article class="doc">
+    {{#if (eq page.layout '404')}}
+    <h1 class="page">{{{or page.title 'Page Not Found'}}}</h1>
+    <div class="paragraph">
+        <p>The page you&#8217;re looking for does not exist. It may have been moved.</p>
+    </div>
+    <div class="paragraph">
+        <p>If you arrived on this page by clicking on a link, please notify the owner of the site that the link is
+            broken.
+            If you typed the URL of this page manually, please double check that you entered the address correctly.</p>
+    </div>
+    {{else}}
+    {{#if page.title}}
+    <h1 class="page">{{{page.title}}}</h1>
+    {{/if}}
+    {{{page.contents}}}
+    {{/if}}
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+ {{!-- <script>
+        $(".pdf").each(function() {
+        var link = $(this).html();
+        $(this).contents().wrap('<a href="{{site.url}}/{{page.component}}/{{page.componentVersion.displayVersion}}/_attachments/pdf/{{page.fileUri}}/master.pdf" target="_blank"></a>');
+        });
+</script> --}}

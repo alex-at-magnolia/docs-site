@@ -1,0 +1,103 @@
+.page-versions {
+  margin-left: 0.75rem;
+  display: block;
+  margin-right: 0.7rem;
+  position: relative;
+  line-height: 1;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 1024px) {
+  .page-versions {
+    margin-left: 13.15rem;
+    display: block;
+  }
+}
+
+.page-versions .version-menu-toggle {
+  color: whitesmoke;
+  background: url(../img/chevron.svg) no-repeat;
+  background-position: right 0.5rem top 50%;
+  background-size: auto 0.75em;
+  background-color: #689600;
+  /* border-radius: 4px; */
+  transition: ease-in  0.1s;
+  outline: none;
+  line-height: inherit;
+  padding: 0.4rem 1.5rem 0.4rem 0.6rem;
+  position: relative;
+  z-index: var(--z-index-page-version-menu);
+  margin-bottom: 2.5px;
+  margin-top: auto;
+  border: none;
+  width: 4.2rem;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+}
+
+.page-versions .version-menu-toggle:hover {
+  box-shadow: -1px 1px 6px 1px rgba(0, 0, 0, 0.05);
+  transition: ease-out  0.1s;
+}
+
+.page-versions .version-menu-no-toggle {
+  color: whitesmoke;
+  background: url(../img/no-chevron.svg) no-repeat;
+  background-position: right 0.5rem top 50%;
+  background-size: auto 0.75em;
+  background-color: #689600;
+  /* /* border-radius: 4px; */
+  transition: ease-in  0.1s;
+  outline: none;
+  line-height: inherit;
+  padding: 0.4rem 1.5rem 0.4rem 0.6rem;
+  position: relative;
+  z-index: var(--z-index-page-version-menu);
+  margin-bottom: 2.5px;
+  margin-top: auto;
+  border: none;
+  width: 4.2rem;
+  font-size: calc(15 / var(--rem-base) * 1rem);
+}
+
+.page-versions .version-menu-no-toggle:hover {
+  cursor: default;
+}
+
+.page-versions .version-menu {
+  border: 1px solid transparent;
+  background-color: #efefef;
+  box-shadow: -1px 1px 6px 1px rgba(255, 255, 255, 0.445);
+  padding: 0.5rem 1rem 1rem 1rem;
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 150%;
+  margin-top: 5px;
+  color: #689600;
+  font-size: 0.9rem;
+  transition: ease-in 1s;
+}
+
+.page-versions:not(.is-active) .version-menu {
+  display: none;
+}
+
+.page-versions .version {
+  display: block;
+  padding-top: 0.5rem;
+}
+
+.page-versions .version:hover {
+  color: #652445;
+  text-decoration: none;
+}
+
+.page-versions .version.is-current {
+  display: none;
+}
+
+.page-versions .version.is-missing {
+  color: var(--page-version-missing-font-color);
+  font-style: italic;
+  text-decoration: none;
+}

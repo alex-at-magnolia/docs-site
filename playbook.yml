@@ -1,0 +1,26 @@
+site:
+  title: Magnolia CMS Docs
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: http://localhost:9096/
+  start_page: core-docs::index.adoc
+
+content:
+  sources:
+  # embedding empty credentials in the URL disables the Edit this Page link for any page created from this repository
+  - url: https://amansell:kotaandIveragh!@git.magnolia-cms.com/scm/~amansell/core-docs.git
+    branches: [master]
+  - url: https://amansell:kotaandIveragh!@git.magnolia-cms.com/scm/~amansell/cloud-docs.git
+    branches: [master]
+
+ui:
+  bundle:
+    url: ./_antora/ui-bundle.zip
+    snapshot: true
+  supplemental_files: ./_antora/supplemental_ui
+
+# Global asciidoc attributes here
+asciidoc:
+  attributes:
+    magnolia-help-desk: HELPDESK
+    magnolia-url: www.magnolia-cms.com
+    

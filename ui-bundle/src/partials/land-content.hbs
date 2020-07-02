@@ -1,0 +1,39 @@
+    <article class="landing">
+    {{#if (eq page.layout '404')}}
+    <h1 class="page">{{{or page.title 'Page Not Found'}}}</h1>
+        <div class="paragraph">
+            <p>The page you&#8217;re looking for does not exist. It may have been moved.</p>
+        </div>
+        <div class="paragraph">
+            <p>If you arrived on this page by clicking on a link, please notify the owner of the site that the link is broken.
+            If you typed the URL of this page manually, please double check that you entered the address correctly.</p>
+        </div>
+            {{else}}
+            {{#if page.title}}
+            <h1 class="page">{{{page.title}}}</h1>
+            {{/if}}
+            {{{page.contents}}}
+            {{/if}}
+    </article>
+
+    <script>
+        $(".landing-card-new").each(function() {
+        var link = $(this).html();
+        $(this).contents().wrap('<a href="{{site.url}}/{{page.title}}/{{page.componentVersion.displayVersion}}/_attachments/pdf/{{page.title}}/master.pdf" target=></a>');
+        });
+    </script>
+
+    
+    {{!-- <script>
+        $(".landing-card-help").each(function() {
+        var link = $(this).html();
+        $(this).contents().wrap('<a href="https://alexmansell.com/welcome-docs/use.html"></a>');
+        });
+    </script> --}}
+
+    <script>
+        $(".landing-card-docs").each(function() {
+        var link = $(this).html();
+        $(this).contents().wrap('<a href="https://alexmansell.com/welcome-docs/releases.html"></a>');
+        });
+    </script>
