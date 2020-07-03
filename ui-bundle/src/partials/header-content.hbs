@@ -15,18 +15,20 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item has-dropdown is-hoverable">
+        {{!-- <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="">Docs</a>
           <div class="navbar-dropdown">
             <a class="navbar-item disabled" href="{{site.url}}/core-docs/index.html">Core</a>
             <a class="navbar-item disabled" href="{{site.url}}/cloud-docs/1.x/index.html">Cloud</a>
           </div>
-        </div>
+        </div> --}}
         {{!-- <a class="navbar-item" href="{{site.url}}/welcome-docs/releases.html">Releases</a> --}}
-        <a class="navbar-item disabled" href="{{site.url}}/welcome-docs/help.html">Help</a>
+        <a class="navbar-item disabled" href="{{site.url}}/core-docs/index.html">Core</a>
+        <a class="navbar-item disabled" href="{{site.url}}/cloud-docs/1.x/index.html">Cloud</a>
         <a class="navbar-item disabled" href="{{site.url}}/welcome-docs/faqs.html">FAQs</a>
-        <a class="navbar-item magnolia" href="mailto:documentation@magnolia-cms.com" title="Contact Magnolia docs"> <i
-            class="fas fa-book-reader fa-2x magnolia-official"></i></a>
+        <button class="magnolia-btn"><a href="https://www.magnolia-cms.com/get-started.html" target="_blank">Try Magnolia</a></button>
+        {{!-- <a class="navbar-item magnolia" href="mailto:documentation@magnolia-cms.com" title="Contact Magnolia docs"> <i
+            class="fas fa-book-reader fa-2x magnolia-official"></i></a> --}}
       </div>
     </div>
   </nav>
