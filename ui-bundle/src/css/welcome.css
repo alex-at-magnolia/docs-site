@@ -1,0 +1,742 @@
+.welcome {
+  color: var(--doc-font-color);
+  font-size: var(--doc-font-size);
+  line-height: var(--doc-line-height);
+  margin: var(--doc-margin);
+  max-width: var(--doc-max-width);
+  padding: 0 1rem 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .welcome {
+    font-size: var(--doc-font-size--desktop);
+    margin: var(--doc-margin--desktop);
+    max-width: var(--doc-max-width--desktop);
+  }
+}
+
+span.apiHeader {
+  font-weight: 600;
+}
+
+.delete {
+  font-size: larger;
+  background: red;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: -1px 1px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.get {
+  font-size: larger;
+  background: blue;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: -1px 1px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.put {
+  font-size: larger;
+  background: purple;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: -1px 1px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.post {
+  font-size: larger;
+  background: green;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: -1px 1px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.pdf {
+  font-size: larger;
+  background: #ce8c3f;
+  color: white;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 6px;
+  box-shadow: -1px 1px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+span.small { font-size: small; }
+
+.welcome h1,
+.welcome h2,
+.welcome h3,
+.welcome h4,
+.welcome h5,
+.welcome h6 {
+  color: var(--heading-font-color);
+  font-weight: var(--heading-font-weight);
+  line-height: 1.3;
+  margin: 1rem 0 0;
+}
+
+.welcome > h1.page:first-child {
+  font-size: calc(48 / var(--rem-base) * 1rem);
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 769px) {
+  .welcome > h1.page:first-child {
+    margin-top: 2.75rem;
+  }
+}
+
+#preamble + .sect1,
+.welcome .sect1 + .sect1 {
+  margin-top: 2rem;
+}
+
+.welcome h1.sect0 {
+  background: var(--abstract-background);
+  font-size: 1.8em;
+  margin: 1.5rem -1rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.welcome h2:not(.discrete) {
+  border-bottom: 1px solid var(--section-divider-color);
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding: 0.4rem 1rem 0.1rem;
+}
+
+.welcome h3:not(.discrete) {
+  font-weight: var(--alt-heading-font-weight);
+}
+
+.welcome h1 .anchor,
+.welcome h2 .anchor,
+.welcome h3 .anchor,
+.welcome h4 .anchor,
+.welcome h5 .anchor,
+.welcome h6 .anchor {
+  position: absolute;
+  text-decoration: none;
+  width: 1.75ex;
+  margin-left: -1.5ex;
+  visibility: hidden;
+  font-size: 0.8em;
+  font-weight: normal;
+  padding-top: 0.05em;
+}
+
+.welcome h1 .anchor::before,
+.welcome h2 .anchor::before,
+.welcome h3 .anchor::before,
+.welcome h4 .anchor::before,
+.welcome h5 .anchor::before,
+.welcome h6 .anchor::before {
+  content: "\00a7";
+}
+
+.welcome h1:hover .anchor,
+.welcome h2:hover .anchor,
+.welcome h3:hover .anchor,
+.welcome h4:hover .anchor,
+.welcome h5:hover .anchor,
+.welcome h6:hover .anchor {
+  visibility: visible;
+}
+
+.welcome p {
+  margin: 0;
+}
+
+.welcome .tableblock p {
+  font-size: inherit;
+}
+
+.welcome p,
+.welcome :not(td) > .content,
+.welcome .tableblock thead {
+  hyphens: auto;
+}
+
+.welcome a {
+  color: var(--link-font-color);
+}
+
+.welcome a:hover {
+  color: var(--link_hover-font-color);
+}
+
+.welcome a.bare {
+  hyphens: none;
+}
+
+.welcome a.unresolved {
+  color: var(--link_unresolved-font-color);
+}
+
+.welcome i.fa {
+  font-style: normal;
+}
+
+.welcome p code,
+.welcome thead code {
+  color: #689600;
+  background: var(--code-background);
+  border-radius: 0.25em;
+  font-size: 0.95em;
+  padding: 0.125em 0.25em;
+}
+
+.welcome pre {
+  font-size: calc(19 / var(--rem-base) * 1rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.welcome blockquote {
+  margin: 0;
+}
+
+.welcome .right {
+  float: right;
+}
+
+.welcome .left {
+  float: left;
+}
+
+.welcome .underline {
+  text-decoration: underline;
+}
+
+.welcome .line-through {
+  text-decoration: line-through;
+}
+
+.welcome .paragraph,
+.welcome .dlist,
+.welcome .olist,
+.welcome .ulist,
+.welcome .exampleblock,
+.welcome .imageblock,
+.welcome .listingblock,
+.welcome .literalblock,
+.welcome .sidebarblock,
+.welcome .verseblock,
+.welcome .quoteblock,
+.welcome .partintro {
+  margin: 1rem 0 0;
+}
+
+.welcome table.tableblock {
+  border-collapse: collapse;
+  font-size: calc(17 / var(--rem-base) * 1rem);
+  margin: 2rem 0;
+  /* enable table-layout: fixed if you want the table width to be enforced strictly */
+  /* alternative is to wrap table in div and set overflow-x: auto on the wrapper */
+  /* table-layout: fixed; */
+}
+
+.welcome table.stretch {
+  width: 100%;
+}
+
+.welcome table.tableblock thead th {
+  border-bottom: 2.5px solid var(--table-border-color);
+  padding: 0.5rem;
+}
+
+.welcome table.tableblock td,
+.welcome table.tableblock > :not(thead) th {
+  border-top: 1px solid var(--table-border-color);
+  border-bottom: 1px solid var(--table-border-color);
+  padding: 0.5rem;
+}
+
+.welcome .halign-left {
+  text-align: left;
+}
+
+.welcome .halign-right {
+  text-align: right;
+}
+
+.welcome .halign-center {
+  text-align: center;
+}
+
+.welcome .valign-top {
+  vertical-align: top;
+}
+
+.welcome .valign-bottom {
+  vertical-align: bottom;
+}
+
+.welcome .valign-middle {
+  vertical-align: middle;
+}
+
+.welcome .admonitionblock {
+  margin: 1.4rem 0 0;
+}
+
+.welcome .admonitionblock p,
+.welcome .admonitionblock td.content {
+  font-size: calc(16 / var(--rem-base) * 1rem);
+}
+
+.welcome .admonitionblock td.content > :first-child {
+  margin: 0;
+}
+
+.welcome .admonitionblock pre {
+  font-size: calc(15 / var(--rem-base) * 1rem);
+}
+
+.welcome .admonitionblock > table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  position: relative;
+  width: 100%;
+}
+
+.welcome .admonitionblock.tip {
+  border-left: 6px solid #4caf50;
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.caution {
+  border-left: 6px solid rgb(135, 29, 145);
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.warning {
+  border-left: 6px solid rgb(121, 15, 15);
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.note {
+  border-left: 6px solid #434e60;
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.important {
+  border-left: 6px solid #ce8c3f;
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock td.content {
+  padding: 1rem 1rem 0.75rem;
+  background: var(--admonition-background);
+  width: 100%;
+}
+
+.welcome .admonitionblock.tip td.content {
+  background: #ebfdeb;
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.caution td.content {
+  background: rgb(251, 233, 255);
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.warning td.content {
+  background: rgb(255, 201, 201);
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.note td.content {
+  background: #e1ecff;
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock.important td.content {
+  background: #ffead3;
+  border-radius: 8px;
+}
+
+.welcome .admonitionblock .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  font-family: var(--body-font-family);
+  padding: 0 0.5rem;
+  height: 1.25rem;
+  line-height: 1;
+  font-weight: normal;
+  text-transform: uppercase;
+  transform: translate(-0.5rem, -50%);
+  border-radius: 10px;
+}
+
+.welcome .admonitionblock.caution .icon {
+  background-color: rgb(135, 29, 145);
+  color: whitesmoke;
+}
+
+.welcome .admonitionblock.important .icon {
+  background-color: #ce8c3f;
+  color: whitesmoke;
+}
+
+.welcome .admonitionblock.note .icon {
+  background-color: #434e60;
+  color: whitesmoke;
+}
+
+.welcome .admonitionblock.tip .icon {
+  background-color: #4caf50;
+  color: whitesmoke;
+}
+
+.welcome .admonitionblock.warning .icon {
+  background-color: rgb(121, 15, 15);
+  color: whitesmoke;
+}
+
+.welcome .admonitionblock .icon i {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.welcome .admonitionblock .icon i::after {
+  content: attr(title);
+  hyphens: none;
+}
+
+.welcome .imageblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome .imageblock img {
+  display: block;
+}
+
+.welcome .imageblock img,
+.welcome .image > img {
+  height: auto;
+  max-width: 100%;
+}
+
+#preamble .abstract blockquote {
+  background: var(--abstract-background);
+  border-left: 5px solid var(--abstract-border-color);
+  color: var(--abstract-font-color);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  padding: 0.75em 1em;
+}
+
+.welcome .quoteblock {
+  background: var(--quote-background);
+  border-left: 5px solid var(--quote-border-color);
+  color: var(--quote-font-color);
+  padding: 0.25rem 2rem 1.25rem;
+}
+
+.welcome .quoteblock .attribution {
+  color: var(--quote-attribution-font-color);
+  font-size: calc(15 / var(--rem-base) * 1rem);
+  margin-top: 0.75rem;
+}
+
+.welcome .quoteblock blockquote {
+  margin-top: 1rem;
+}
+
+.welcome .quoteblock .paragraph {
+  font-style: italic;
+}
+
+.welcome .quoteblock cite {
+  padding-left: 1em;
+}
+
+.welcome table.tableblock .paragraph {
+  margin: 0;
+  padding: 0;
+}
+
+.welcome table.tableblock .admonitionblock,
+.welcome .ulist .admonitionblock,
+.welcome .olist .admonitionblock {
+  padding: 0;
+}
+
+.welcome ol,
+.welcome ul {
+  margin: 0;
+  padding: 0 0 0 2rem;
+}
+
+.welcome ol.arabic {
+  list-style-type: decimal;
+}
+
+.welcome ol.decimal {
+  list-style-type: decimal-leading-zero;
+}
+
+.welcome ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+
+.welcome ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+
+.welcome ol.lowerroman {
+  list-style-type: lower-roman;
+}
+
+.welcome ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+.welcome ol.lowergreek {
+  list-style-type: lower-greek;
+}
+
+.welcome ul.checklist {
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+.welcome ul.checklist p > i.fa-check-square-o:first-child,
+.welcome ul.checklist p > i.fa-square-o:first-child {
+  display: inline-flex;
+  justify-content: center;
+  width: 1.25rem;
+}
+
+.welcome ul.checklist i.fa-check-square-o::before {
+  content: "\2713";
+}
+
+.welcome ul.checklist i.fa-square-o::before {
+  content: "\274f";
+}
+
+.welcome .dlist .dlist,
+.welcome .dlist .olist,
+.welcome .dlist .ulist,
+.welcome .olist .dlist,
+.welcome .olist .olist,
+.welcome .olist .ulist,
+.welcome .ulist .dlist,
+.welcome .ulist .olist,
+.welcome .ulist .ulist {
+  margin-top: 0.5rem;
+}
+
+.welcome .olist li,
+.welcome .ulist li {
+  margin-bottom: 0.5rem;
+}
+
+.welcome .ulist .listingblock,
+.welcome .olist .listingblock,
+.welcome .admonitionblock .listingblock {
+  padding: 0;
+}
+
+.welcome .admonitionblock .title,
+.welcome .exampleblock .title,
+.welcome .imageblock .title,
+.welcome .literalblock .title,
+.welcome .listingblock .title,
+.welcome .openblock .title,
+.welcome .tableblock caption {
+  color: var(--caption-font-color);
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  font-weight: var(--caption-font-weight);
+  font-style: italic;
+  letter-spacing: 0.01em;
+  padding-bottom: 0.075rem;
+  text-align: left;
+}
+
+.welcome .imageblock .title {
+  margin-top: 0.5rem;
+  padding-bottom: 0;
+}
+
+.welcome .admonitionblock .title + .paragraph {
+  margin-top: 0;
+}
+
+.welcome .exampleblock > .content {
+  background: var(--example-background);
+  border: 0.25rem solid var(--example-border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.welcome .exampleblock > .content > :first-child {
+  margin-top: 0;
+}
+
+.welcome .sidebarblock {
+  background: var(--sidebar-background);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.welcome .sidebarblock > .content > .title {
+  font-size: calc(22.5 / var(--rem-base) * 1rem);
+  font-weight: var(--alt-heading-font-weight);
+  line-height: 1.3;
+  margin-bottom: -0.3em;
+  text-align: center;
+}
+
+.welcome .sidebarblock > .content > :not(.title):first-child {
+  margin-top: 0;
+}
+
+/* NEEDS REVIEW prevent pre in table from causing article to exceed bounds */
+.welcome .tableblock pre,
+.welcome .listingblock.wrap pre {
+  white-space: pre-wrap;
+}
+
+.welcome pre:not(.highlight),
+.welcome pre.highlight code {
+  color: var(--color-smoke-30);
+  background: var(--pre-background);
+  box-shadow: inset 0 0 1.75px var(--pre-border-color);
+  border-radius: 4px;
+  display: block;
+  overflow-x: auto;
+  padding: 0.75rem;
+}
+
+/* NOTE assume pre.highlight contains code[data-lang] */
+.welcome pre.highlight {
+  position: relative;
+}
+
+.welcome .listingblock code[data-lang]::before {
+  content: attr(data-lang);
+  display: none;
+  color: var(--pre-annotation-font-color);
+  font-size: calc(13.5 / var(--rem-base) * 1rem);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+}
+
+.welcome .listingblock:hover code[data-lang]::before {
+  display: block;
+}
+
+.welcome .dlist dt {
+  font-style: italic;
+}
+
+.welcome .dlist dd {
+  margin: 0 0 0.3rem 1.5rem;
+}
+
+.welcome .colist {
+  font-size: calc(16 / var(--rem-base) * 1rem);
+  margin-top: 0.5rem;
+}
+
+.welcome .colist > table tr > td:first-of-type {
+  padding: 0 0.75em;
+  line-height: 1;
+}
+
+.welcome .conum[data-value] {
+  border: 1px solid currentColor;
+  border-radius: 100%;
+  display: inline-block;
+  font-family: var(--body-font-family);
+  font-size: calc(16.5 / var(--rem-base) * 1rem);
+  font-style: normal;
+  height: 1.25em;
+  line-height: 1.2;
+  text-align: center;
+  width: 1.25em;
+  letter-spacing: -0.25ex;
+  text-indent: -0.25ex;
+}
+
+.welcome .conum[data-value]::after {
+  content: attr(data-value);
+}
+
+.welcome .conum[data-value] + b {
+  display: none;
+}
+
+.welcome b.button {
+  white-space: nowrap;
+}
+
+.welcome b.button::before {
+  content: "[";
+  padding-right: 0.25em;
+}
+
+.welcome b.button::after {
+  content: "]";
+  padding-left: 0.25em;
+}
+
+.welcome kbd {
+  display: inline-block;
+  font-size: calc(12 / var(--rem-base) * 1rem);
+  background: var(--kbd-background);
+  border: 1px solid var(--kbd-border-color);
+  border-radius: 0.25em;
+  box-shadow: 0 1px 0 var(--kbd-border-color), 0 0 0 0.1em var(--body-background) inset;
+  padding: 0.25em 0.5em;
+  vertical-align: text-bottom;
+  white-space: nowrap;
+}
+
+.welcome kbd,
+.welcome .keyseq {
+  line-height: 1;
+}
+
+.welcome .keyseq {
+  font-size: calc(16 / var(--rem-base) * 1rem);
+}
+
+.welcome .keyseq kbd {
+  margin: 0 0.125em;
+}
+
+.welcome .keyseq kbd:first-child {
+  margin-left: 0;
+}
+
+.welcome .keyseq kbd:last-child {
+  margin-right: 0;
+}
+
+.welcome .menuseq i.caret::before {
+  content: "\203a";
+  font-size: 1.1em;
+  font-weight: var(--body-font-weight-bold);
+  line-height: calc(1 / 1.1);
+}
