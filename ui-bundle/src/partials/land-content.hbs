@@ -15,25 +15,3 @@
             {{{page.contents}}}
             {{/if}}
     </article>
-
-    <script>
-        $(".landing-card-new").each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="{{site.url}}/{{page.title}}/{{page.componentVersion.displayVersion}}/_attachments/pdf/{{page.title}}/master.pdf" target=></a>');
-        });
-    </script>
-
-    
-    {{!-- <script>
-        $(".landing-card-help").each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="https://alexmansell.com/welcome-docs/use.html"></a>');
-        });
-    </script> --}}
-
-    <script>
-        $(".landing-card-docs").each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="https://alexmansell.com/welcome-docs/releases.html"></a>');
-        });
-    </script>
