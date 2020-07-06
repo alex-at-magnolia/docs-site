@@ -74,7 +74,7 @@ body {
   }
 
   .navbar-end > a.navbar-item.magnolia {
-    color: var(--navbar-font-color);
+    color: whitesmoke;
   }
 
   .navbar-end > a.navbar-item.magnolia:hover {
@@ -270,15 +270,16 @@ body {
   }
 
   .navbar-dropdown {
-    background-color: var(--navbar-menu-background);
-    border: 1px solid var(--navbar-menu-border-color);
-    border-top: none;
-    border-radius: 0 0 0.25rem 0.25rem;
-    display: none;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    position: absolute;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: var(--body-line-height);
+    margin: 6px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    background: #699600;
+    transition: 0.4s ease-in;
+    color: whitesmoke;
   }
 
   .navbar-dropdown .navbar-item {
@@ -304,17 +305,24 @@ body {
   }
 }
 
-.navbar .button {
+.magnolia-btn {
   display: inline-flex;
   align-items: center;
-  background: var(--navbar-button-background);
+  background-color: #699600;
   border: 1px solid var(--navbar-button-border-color);
-  border-radius: 0.15rem;
+  border-radius: 40px;
   height: 1rem;
-  color: var(--navbar-button-font-color);
-  padding: 0 0.75em;
+  color: whitesmoke;
+  padding: 25px;
   white-space: nowrap;
-  margin: 5px;
+  margin: 2px;
+}
+
+.magnolia-btn:hover {
+  background: white;
+  border: 1.2px solid #699600;
+  color: #652445;
+  transition: 0.3s ease-in;
 }
 
 i.magnolia-official {
