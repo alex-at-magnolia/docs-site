@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello Cloud :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2/cloud/getting-started/hello-cloud.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="http://localhost:9096">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="http://localhost:9096/magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="http://localhost:9096/magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="http://localhost:9096/magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-no-toggle" title="The only version of this page">6.2</button>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li>Get Started</li>
+    <li><a href="hello-cloud.html">Hello Magnolia Cloud</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Hello Cloud</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Hi there and welcome to the <strong>Hello Cloud Tutorial</strong>. This tutorial guides you on setting up and using Light Development with Magnolia Cloud.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud is a Platform as a Service (PaaS) offering that provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Magnolia CMS optimized for running in the cloud.</p>
+</li>
+<li>
+<p>A complete application development environment running on AWS.</p>
+</li>
+<li>
+<p>Managed services for enterprise-grade security.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Although we have both a custom and standard bundle variant, this tutorial focuses on the standard bundle where your projects are leveraged using Light Development. Your site is hosted in Magnolia Cloud and Magnolia manages the environment as a service.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+For more on custom bundles, check out Creating and deploying custom cloud bundles.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_magnolia_system_requirements"><a class="anchor" href="#_magnolia_system_requirements"></a>Magnolia System requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are certain prerequisites that you must have in order to continue with this tutorial. Basically, you need to be able to install Magnolia and in order to do that, you need:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_java">Java</a></p>
+</li>
+<li>
+<p><a href="#_node_js_and_npm">Node.js and npm</a></p>
+</li>
+<li>
+<p><a href="#_git">Git</a></p>
+</li>
+<li>
+<p>Access to the Magnolia Cockpit which is provided to you when you signed up for Magnolia Cloud.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you do not know your Cockpit URL and/or login information, contact the Magnolia Cloud Helpdesk.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_java"><a class="anchor" href="#_java"></a>Java</h3>
+<div class="paragraph">
+<p>You must have <strong>Java version 8 or higher</strong>. Check this by going to your terminal and running  <code>java --version</code>. If you get a version number as such below, you&#8217;re good to go. If not, you need to get Java for your operating system.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ java --version
+java 14.0.1 2020-04-14
+Java(TM) SE Runtime Environment (build 14.0.1+7)
+Java HotSpot(TM) 64-Bit Server VM (build 14.0.1+7, mixed mode, sharing)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_node_js_and_npm"><a class="anchor" href="#_node_js_and_npm"></a>Node.js and npm</h3>
+<div class="paragraph">
+<p>You also need Node.js and npm. If you think you may have them, do a quick check by running <code>node --version</code>  and <code>npm --version </code> respectively in your terminal. If you get a version number, you&#8217;re good to go. However, if you do not see a version (as below), you will need to install these. Don&#8217;t worry, it&#8217;s quick and easy.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you do not have Node installed, go to <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> to download and install the latest LTS version.  For installation instructions of npm, see  <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank" rel="noopener">npm&#8217;s website</a> .
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ node --version
+v12.18.1
+
+$ npm --version
+6.14.5)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_git"><a class="anchor" href="#_git"></a>Git</h3>
+<div class="paragraph">
+<p>And finally, you will need Git for version control and pushing local changes to your Magnolia remote repository. You can check this in your terminal by running <code>git --version</code>. If you see a version number (as below), you are good to go. However, if you do not have git, simply download it from Git&#8217;s website <a href="https://git-scm.com/" target="_blank" rel="noopener">here</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git --version
+git version 2.27.0</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_magnolia"><a class="anchor" href="#_get_magnolia"></a>Get Magnolia</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whew! Now, we can finally install and jumpstart Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s go ahead and install Magnolia. Make sure you have the <a href="#_prerequisites">prerequisites</a> completed and we&#8217;ll install and jumpstart Magnolia from the command line.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>You should have all <a href="#_magnolia_system_requirements">Magnolia System requirements</a> completed before trying to install Magnolia with the Magnolia CLI.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure"><a class="anchor" href="#_procedure"></a>Procedure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Just run <code>npm install @magnolia /cli -g</code> in your terminal where the <code>-g</code>  flag makes Magnolia available to you globally on your machine.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+To check if Magnolia was installed successfully, run <code>mgnl --version</code> and you will see the Magnolia CLI version number (as below).
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ mgnl --version
+Magnolia CLI: 3.1.0 (node.js: v12.18.1)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+<div class="sect3">
+<h4 id="_whoops_that_didnt_work"><a class="anchor" href="#_whoops_that_didnt_work"></a>Whoops! That didn&#8217;t work</h4>
+<div class="paragraph">
+<p>You may have to run the terminal as an administrator if you receive an error such as npm ERR! .</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">MAC or Linux</dt>
+<dd>
+<p><code>sudo npm install @magnolia /cli -g </code></p>
+</dd>
+<dt class="hdlist1">Windows</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Right click CMD, and choose <strong>Run as Administrator</strong>.</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jumpstart_magnolia"><a class="anchor" href="#_jumpstart_magnolia"></a>Jumpstart Magnolia</h3>
+<div class="paragraph">
+<p>Now that Magnolia is installed, let&#8217;s jumpstart it. Simply, navigate to the directory where you want to download Magnolia. For example purposes, we&#8217;ll call this directory <strong>magnolia</strong>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your <strong>magnolia</strong> directory, run <code>mgnl jumpstart -m &lt;version&gt;</code>.  If prompted, choose option <code>3 magnolia-community-demo-webapp</code>. If successful, you see:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">....
+info Magnolia has been successfully setup for light development!
+....</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>To make sure it&#8217;s working, run <code>mgnl start</code> from the <strong>magnolia directory</strong> and after a few seconds, go to the <a href="http://localhost:8080/magnoliaAuthor/" target="_blank" rel="noopener">localhost:8080/magnoliaAuthor</a> in your browser and login as <strong>superuser</strong> with the password <strong>superuser</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For now, go ahead and shut down the local server by entering CTRL+C in your terminal where the server is running. Don&#8217;t worry, we will come back to this later.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>jumpstart</code> command:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Downloads the Magnolia bundle specified into the magnolia directory.</p>
+</li>
+<li>
+<p>Creates a <code>light-modules</code> folder in the directory.</p>
+</li>
+<li>
+<p>Changes the default value of the <code>magnolia.resources.dir</code> configuration property from <code>${magnolia.home}/modules</code> to <code>/magnolia light-modules</code> for both the <em>Author</em> and the <em>Public</em> instances of Magnolia.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_set_up_the_cockpit"><a class="anchor" href="#_set_up_the_cockpit"></a>Set up the Cockpit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_your_first_light_module"><a class="anchor" href="#_create_your_first_light_module"></a>Create your first light module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_git_changes"><a class="anchor" href="#_install_git_changes"></a>Install git changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_a_page"><a class="anchor" href="#_add_a_page"></a>Add a page</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publish_your_work"><a class="anchor" href="#_publish_your_work"></a>Publish your work</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>text</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
