@@ -317,10 +317,190 @@ info Magnolia has been successfully setup for light development!
 </div>
 </div>
 <div class="sect1">
-<h2 id="_create_your_first_light_module"><a class="anchor" href="#_create_your_first_light_module"></a>Create your first light module</h2>
+<h2 id="_create_your_first_light_module_and_page_template"><a class="anchor" href="#_create_your_first_light_module_and_page_template"></a>Create your first light module and page template</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>text</p>
+<p>Let&#8217;s create our first light module. This brief set of instructions will guide you on creating a simple light module following standard Magnolia processes.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When creating a name for a module, do not use spaces, accented characters such as <em>é, à, ç, ä, ö, ü</em> or special characters such as slashes like <em>/, \</em> and so on.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites_2"><a class="anchor" href="#_prerequisites_2"></a>Prerequisites</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>You must have all of the <a href="#_magnolia_system_requirements">Magnolia System requirements</a> completed.</p>
+</li>
+<li>
+<p>Of course, you must have downloaded and installed Magnolia. <em>Just a friendly reminder</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_the_light_module"><a class="anchor" href="#_create_the_light_module"></a>Create the light module</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the <code>light-modules</code> folder of your Magnolia installation.</p>
+</li>
+<li>
+<p>Run <code>mgnl create-light-module hello-magnolia</code>. This creates the structure below:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">hello-magnolia/
+├── decorations/
+├── dialogs/
+│   ├── components/
+│   └── pages/
+├── i18n/
+│   └── hello-magnolia-messages_en.properties
+├── includes
+│   └── README.txt
+├── README.md
+├── templates/
+│   ├── components/
+│   └── pages/
+└── webresources/</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Magnolia continuously scans the file system folder defined by the <code>magnolia.resources.dir</code> property. In this case, it looks inside the <strong>light-modules folder</strong>, and registers your module(s) automatically. It detects new and modified templates, dialogs and (web)resources. Cool, huh?</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p> <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_the_page_template"><a class="anchor" href="#_create_the_page_template"></a>Create the page template</h3>
+<div class="paragraph">
+<p>When creating your first page template, you will create:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Some basic CSS for styling the page.</p>
+</li>
+<li>
+<p>A <strong>page template script</strong> file containing FreeMarker directives. Directives make it possible to retrieve the content of some parts of the page from the JCR repository.</p>
+</li>
+<li>
+<p>A <strong>page template definition</strong> that makes the template available to Magnolia&#8217;s authoring system.</p>
+</li>
+<li>
+<p>A <strong>dialog definition</strong> which defines the editable page properties.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s get started:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new css folder in <code>/hello-magnolia/webresources/</code>.</p>
+</li>
+<li>
+<p>Download the CSS file <a href="../../_attachments/files/hello-styles.css" target="_blank" rel="noopener">hello-styles.css</a> and save it as <code>/hello-magnolia/webresources/css/hello-style.css</code>. We will reference this stylesheet in a FreeMarker template script.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+upon saving, the file becomes a resource available as <a href="http://localhost:8080/magnoliaAuthor/.resources/hello-magnolia/webresources/css/hello-style.css" class="bare">http://localhost:8080/magnoliaAuthor/.resources/hello-magnolia/webresources/css/hello-style.css</a>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Go to the <code>/hello-magnolia/templates/pages/</code> folder.</p>
+</li>
+<li>
+<p>In the pages folder, download <a href="../../_attachments/files/hello.ftl" target="_blank" rel="noopener">hello.ftl</a> and save it as <code>/hello-magnolia/templates/pages/hello.ftl</code>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A template script defines the output, typically HTML, and is interpreted by a page renderer. The script in this step uses a templating language called FreeMarker.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Copy the template definition code below and save it to <code>hello-magnolia/templates/pages/hello.yaml</code>. <em>A template definition gives the template a name and makes it available to the system. It also tells the system which script renders the content</em>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">title: hello
+templateScript: /hello-magnolia/templates/pages/hello.ftl
+renderType: freemarker
+dialog: hello-magnolia:pages/hello
+visible: true</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Copy the following code to a file named <code><code>hello.yaml</code></code> in <code>/hello-magnolia/dialogs/pages/</code>. <em>A dialog defined like this allows content authors to add and edit the values of page properties such as windowTitle and title. The content of these properties is stored in the Magnolia JCR repository</em>.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">label: Page properties
+form:
+  tabs:
+    - name: tabMain
+      label: hello
+      fields:
+        - name: title
+          fieldType: text
+          i18n: true
+          label: Title
+        - name: windowTitle
+          fieldType: text
+          i18n: true
+          label: Window title
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition</code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -328,7 +508,52 @@ info Magnolia has been successfully setup for light development!
 <h2 id="_add_a_page"><a class="anchor" href="#_add_a_page"></a>Add a page</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>text</p>
+<p>To add a page using an existing page template, we use the Author instance to create the page and then publish it to our Public instance.</p>
+</div>
+<div class="sect2">
+<h3 id="_prerequisites_3"><a class="anchor" href="#_prerequisites_3"></a>Prerequisites</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>You must have downloaded and installed Magnolia.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_procedure_2"><a class="anchor" href="#_procedure_2"></a>Procedure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First of all, make sure you&#8217;re in your root <code>magnolia</code> folder (the parent directory of your <code>light-modules</code> folder), and run <code>mgnl start</code> to start Magnolia.</p>
+</li>
+<li>
+<p>Go to the <strong>App launcher</strong> and select the Pages tile to open the Pages app. <span class="image"><img src="../../_images/cockpit/navigate-to-pages-app.png" alt="navigate to pages app"></span></p>
+</li>
+<li>
+<p>Create a new page called <strong>hello</strong>. Start this by selecting Add page from the Action bar on the right-hand side.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/cockpit/add-page-icon.png" alt="add page icon"></span></p>
+</div>
+</li>
+<li>
+<p>In the Add page dialog that appears, choose the hello template as the page template and select Next.</p>
+</li>
+<li>
+<p>In the Page properties dialog, enter Hello Magnolia into the Title and Window title fields.</p>
+</li>
+<li>
+<p>Select Commit.</p>
+</li>
+<li>
+<p>Select Preview page on the right to preview your page.</p>
+</li>
+<li>
+<p>Select Publish. You can then access the page on the Public instance of your Magnolia installation via the URL
+<a href="http://localhost:8080/magnoliaPublic/hello.html" target="_blank" rel="noopener">http://localhost:8080/magnoliaPublic/hello.html</a>.</p>
+</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
