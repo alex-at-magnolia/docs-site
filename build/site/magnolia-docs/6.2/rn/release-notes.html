@@ -96,8 +96,377 @@
 <main>
 <article class="doc">
     <h1 class="page">Release Notes</h1>
-    <div class="paragraph">
-<p>Stuff goes here.</p>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This page contains the release notes for Magnolia 6.2.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_6_2_1"><a class="anchor" href="#_6_2_1"></a>6.2.1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_rest_api_updates"><a class="anchor" href="#_rest_api_updates"></a>REST API updates</h3>
+<div class="sect3">
+<h4 id="_rest_client_module_refactored"><a class="anchor" href="#_rest_client_module_refactored"></a>REST Client module refactored</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-151" target="_blank" rel="noopener">MGNLRESTCL-151A</a>: a number of optimizations have been implemented in the REST Client module that improve the behavior of RestClient and RestClientFactory</p>
+</div>
+<div class="paragraph">
+<p>In the API, the <code>getWebTarget()</code> method has been deprecated and the following methods have been introduced:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>register(name, component)</strong>: allows registering a custom component on demand, such as response/request filters.</p>
+</li>
+<li>
+<p><strong>unregister(name)</strong>: allows unregistering a custom component.</p>
+</li>
+<li>
+<p><strong>isClose()</strong>: allows checking whether a client is available for use.</p>
+</li>
+<li>
+<p><strong>close()</strong>: allows closing a client after its use. Note that if a client is retrieved from <code>RestClientFactory#createClientIfAbsent()</code>, there is no need to close it manually.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rest_based_type_aliases_renamed"><a class="anchor" href="#_rest_based_type_aliases_renamed"></a>REST-based type aliases renamed</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-151" target="_blank" rel="noopener">MGNLRESTUI-25</a>: in the UI Framework REST Extensions module, the type aliases for the fields that handle offline data sources have been renamed to <code>jsonLinkField</code> and <code>jsonComboBoxField</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_handling_of_missing_content_type_header"><a class="anchor" href="#_handling_of_missing_content_type_header"></a>Handling of missing Content-Type header</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-123" target="_blank" rel="noopener">MGNLRESTCL-123</a>: a warning is logged whenever a REST API does not return a <code>Content-Type</code> header. The REST Client module comes with a new <code>responseContentType</code> property that allows you to set the header in case it is missing in a response.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_using_custom_query_parameters_in_rest_calls"><a class="anchor" href="#_using_custom_query_parameters_in_rest_calls"></a>Using custom query parameters in REST calls</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-68" target="_blank" rel="noopener">MGNLRESTCL-68</a>: additional custom query parameters can be passed to and issued with a REST call without the need to configure the parameters in a YAML definition file.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements_in_6_ui_framework"><a class="anchor" href="#_improvements_in_6_ui_framework"></a>Improvements in 6 UI framework</h3>
+<div class="sect3">
+<h4 id="_additionalcomplex_field_transformers_ported_to_6_ui_framework"><a class="anchor" href="#_additionalcomplex_field_transformers_ported_to_6_ui_framework"></a>Additional complex field transformers ported to 6 UI framework</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5801" target="_blank" rel="noopener">MGNLUI-5801</a>: two 5 UI complex field transformers have been ported to the Magnolia 6 UI framework, <code>DelegatingMultiValueSubnodeTransformer</code> and <code>MultiValueSubChildrenNodePropertiesTransformer</code>. In the 6 UI, they are both handled by <code>JcrChildNodeProvider</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_newsupporti18n_property_in_jcrchildnodeprovider"><a class="anchor" href="#_newsupporti18n_property_in_jcrchildnodeprovider"></a>New supportI18N property in JcrChildNodeProvider</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5821" target="_blank" rel="noopener">MGNLUI-5821</a>: previously, <code>JcrChildNodeProvider allowed</code> creating subnodes that were always localized. Example structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">root
+├── nodes_de
+│   ├── item1_de
+│   └── item2_de
+└── nodes
+    ├── item1
+    └── item2</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>en</code> locale exists by default and therefore the <code>_en</code> suffixes are omitted.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This release adds the <code>supportI18N property</code>, which allows you to create non-localized subnodes:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">root
+└── nodes
+    ├── item1_de
+    ├── item2_de
+    ├── item1
+    └── item2</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_updates_in_the_blossom_module"><a class="anchor" href="#_updates_in_the_blossom_module"></a>Updates in the Blossom module</h3>
+<div class="paragraph">
+<p>We have fixed an issue in the Blossom module and adapted the module for use in Magnolia 6.2 and beyond. For more details, see our Blossom module <a href="https://documentation.magnolia-cms.com/display/DOCS62/Blossom+module+release+notes" target="_blank" rel="noopener">release notes</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dependency_on_content_api_removed_from_solr_module"><a class="anchor" href="#_dependency_on_content_api_removed_from_solr_module"></a>Dependency on Content API removed from Solr module</h3>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-140" target="_blank" rel="noopener">MGNLEESOLR-140</a>: in the Solr Search Provider module, we have removed dependencies on the old Content API that prevented Magnolia from starting when the module was included in a webapp.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_third_party_library_updates"><a class="anchor" href="#_third_party_library_updates"></a>Third-party library updates</h3>
+<div class="paragraph">
+<p>This release comes with third-party library updates to fix some security and compatibility issues as well as improve performance. The following are the most notable updates:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hibernate Validator updated to 6.1.4.Final (<a href="https://jira.magnolia-cms.com/browse/BLOSSOM-264" target="_blank" rel="noopener">BLOSSOM-264</a>).</p>
+</li>
+<li>
+<p>log4j-bom updated to 2.13.2 (BUILD-387).</p>
+</li>
+<li>
+<p>Tika updated to 1.24.1 (BUILD-389).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+We keep the details of security-related fixes private in line with our security policy. Contact our Support team if you need more information.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_notable_bug_fixes"><a class="anchor" href="#_notable_bug_fixes"></a>Notable bug fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>In the Cache module, CacheResponseWrapper did not retrieve contentType correctly. (MGNLCACHE-38)</p>
+</li>
+<li>
+<p>In the Publishing module, nodes appeared in the wrong order after publishing a single page. (PUBLISHING-79)</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This fix, coming with version 1.2.1 of the Publishing module, reverts part of a previous commit that addressed the issue. It is therefore highly probable that there is no node order issue in version 1.2 of the module either, which you may keep using in Magnolia 6.2.1.</p>
+</div>
+<div class="paragraph">
+<p>On the author instance, editors can move nodes to change the order in which they are stored in JCR. Since Magnolia does not track node order history, it is impossible to keep the same order of nodes on the public instance if you publish just one node that has been moved on the author instance. To make sure that the orders of nodes on both instances are aligned, always publish the parent node of any nodes you moved.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>In the Magnolia Templating Essentials (MTE) module, images could not be displayed due to NoSuchMethodError. (MTE-114)</p>
+</li>
+<li>
+<p>In the Segments and Personas apps of the Personalization module and in the Pages app, column filtering was not available. (MGNLUI-5671)</p>
+</li>
+<li>
+<p>In the UI module:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>LinkFieldDefinition did not extend ComboBoxFieldDefinition and could not use its properties. (MGNLUI-5798)</p>
+</li>
+<li>
+<p>Toolbar icons for some configuration properties such as alignment, color and fonts were not displayed in the rich text field. With this fix, ckeditor.js has been updated from version 4.13.0 to 4.14.0. (MGNLUI-4072)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_security_improvements"><a class="anchor" href="#_additional_security_improvements"></a>Additional security improvements</h3>
+<div class="sect3">
+<h4 id="_stateless_protection_against_login_csrf_attack"><a class="anchor" href="#_stateless_protection_against_login_csrf_attack"></a>Stateless protection against login CSRF attack</h4>
+<div class="paragraph">
+<p>A stateless technique is now used to protect against any login CSRF attack. See Double Submit Cookie for more information.</p>
+</div>
+<div class="paragraph">
+<p>When requesting a Magnolia login page before a session is created after authentication, a CSRF token is temporarily kept in a cookie in the client browser. That token is generated with each GET request before login. When the login form is submitted to the server with a POST request, the cookie token is matched against the value coming from the request.</p>
+</div>
+<div class="paragraph">
+<p>To improve security, a salted hash is used for the cookie so that an attacker will not be able to re-create the cookie value from the plain token without knowledge of the server secrets.</p>
+</div>
+<div class="paragraph">
+<p>MAGNOLIA-7660 (restricted access)</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_api_incompatibilities"><a class="anchor" href="#_api_incompatibilities"></a>API incompatibilities</h4>
+<div class="paragraph">
+<p>The improvements in this release generated a few API incompatibilities. For details, see the following links:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/ref/6.2.1/magnolia-core/clirr-report.html" class="bare">https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/ref/6.2.1/magnolia-core/clirr-report.html</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/ui/6.2.1/magnolia-ui-framework/clirr-report.html" class="bare">https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/ui/6.2.1/magnolia-ui-framework/clirr-report.html</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_known_issues"><a class="anchor" href="#_known_issues"></a>Known issues</h3>
+<div class="paragraph">
+<p>If you are upgrading from an earlier version, read the Upgrading to Magnolia 6.2.x page first and check the Known issues page.</p>
+</div>
+<div class="sect3">
+<h4 id="_virtual_uri_mappings_not_working_if_too_many_are_configured"><a class="anchor" href="#_virtual_uri_mappings_not_working_if_too_many_are_configured"></a>Virtual URI mappings not working if too many are configured</h4>
+<div class="paragraph">
+<p>To mitigate an issue caused by having more than 500 configured virtual URI mappings in light modules, a WARN-level message is now logged when a DirectoryWatcher overflow occurs (MAGNOLIA-7762). We also recommend to keep the number of files in a single folder below 100 and to use folder hierarchies whenever possible. For the upcoming fix, see MAGNOLIA-7798.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_documentation_screenshot_updates"><a class="anchor" href="#_documentation_screenshot_updates"></a>Documentation screenshot updates</h4>
+<div class="paragraph">
+<p>Some of the screenshots in the documentation still show the legacy Magnolia 5 UI. Please bear with us as we work to update them.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changelog"><a class="anchor" href="#_changelog"></a>Changelog</h3>
+<div class="paragraph">
+<p>See the 6.2.1 changelog for all the changes.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Updated modules</p>
+</li>
+<li>
+<p>Advance Cache 2.3.1</p>
+</li>
+<li>
+<p>Backup 2.4.1</p>
+</li>
+<li>
+<p>Blossom 3.4</p>
+</li>
+<li>
+<p>Cache 5.9.1</p>
+</li>
+<li>
+<p>Community Edition 6.2.1</p>
+</li>
+<li>
+<p>Content Dependencies 2.0.1</p>
+</li>
+<li>
+<p>Content Tags 2.0.1</p>
+</li>
+<li>
+<p>DAM 3.0.1</p>
+</li>
+<li>
+<p>Diff 2.2.1</p>
+</li>
+<li>
+<p>DX Core 6.2.1</p>
+</li>
+<li>
+<p>Image Recognition 1.2.1</p>
+</li>
+<li>
+<p>Imaging 3.4.3</p>
+</li>
+<li>
+<p>LDAP Connector 1.10.3</p>
+</li>
+<li>
+<p>Magnolia 6.2.1</p>
+</li>
+<li>
+<p>Mail 5.5.4</p>
+</li>
+<li>
+<p>Multisite 2.1.1</p>
+</li>
+<li>
+<p>Pages 6.2.1</p>
+</li>
+<li>
+<p>Password Manager 1.2.4</p>
+</li>
+<li>
+<p>Periscope 1.2.1</p>
+</li>
+<li>
+<p>Personalization 2.0.1</p>
+</li>
+<li>
+<p>Publishing 1.2.1</p>
+</li>
+<li>
+<p>Resources 3.0.1</p>
+</li>
+<li>
+<p>REST Client 2.0.1</p>
+</li>
+<li>
+<p>REST Client UI 1.0.1</p>
+</li>
+<li>
+<p>Scheduler 2.3.4</p>
+</li>
+<li>
+<p>Site 1.3.1</p>
+</li>
+<li>
+<p>Solr Search Provider 5.2.3</p>
+</li>
+<li>
+<p>Templating Essentials 1.5</p>
+</li>
+<li>
+<p>Text Classification 1.1.1</p>
+</li>
+<li>
+<p>Third-party library BOM 6.2.1</p>
+</li>
+<li>
+<p>UI 6.2.1</p>
+</li>
+<li>
+<p>Usage Metrics 1.1.1*</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_acknowledgements"><a class="anchor" href="#_acknowledgements"></a>Acknowledgements</h3>
+<div class="paragraph">
+<p>The Magnolia team would also like to thank everyone who reported issues, contributed patches or simply commented on issues for this release. Your continued interest helps us make Magnolia better. Special thanks go to Le Bao Duy, Oliver Böhrs, Tytgat Christian, Kathrin Kaufleitner, Marvin Kerkhoff, Alex Plouff and Diana Racho</p>
+</div>
+</div>
+</div>
 </div>
 </article>
 <aside class="article-aside hidden" role="navigation">
