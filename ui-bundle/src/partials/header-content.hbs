@@ -1,7 +1,7 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item magnolia-logo" href="{{{or site.url (or siteRootUrl siteRootPath)}}}">
+      <a class="navbar-item magnolia-logo" href="{{siteRootPath}}/index.html">
       </a>
       {{> search}}
 
@@ -23,9 +23,9 @@
           </div>
         </div> --}}
         {{!-- <a class="navbar-item" href="{{site.url}}/welcome-docs/releases.html">Releases</a> --}}
-        <a class="navbar-item disabled" href="{{site.url}}/magnolia-docs/6.2/core/index.html">Core</a>
-        <a class="navbar-item disabled" href="{{site.url}}/magnolia-docs/6.2/cloud/index.html">Cloud</a>
-        <a class="navbar-item disabled" href="{{site.url}}/magnolia-general/faqs.html">FAQs</a>
+        <a class="navbar-item disabled" href="{{siteRootPath}}/magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="{{siteRootPath}}/magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="{{siteRootPath}}/magnolia-general/faqs.html">FAQs</a>
         <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
         {{!-- <a class="navbar-item magnolia" href="mailto:documentation@magnolia-cms.com" title="Contact Magnolia docs"> <i
             class="fas fa-book-reader fa-2x magnolia-official"></i></a> --}}
