@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deploying a WAR on JBoss WildFly or EAP - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/administration/Deploying-a-WAR-on-JBoss-WildFly-or-EAP.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Deploying-a-WAR-on-JBoss-WildFly-or-EAP.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Deploying-a-WAR-on-JBoss-WildFly-or-EAP.html">Deploying a WAR on JBoss WildFly or EAP - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Deploying a WAR on JBoss WildFly or EAP - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Deploying.html">Deploying</a></p>
+</li>
+<li>
+<p><a href="Deploying-Magnolia-as-WAR-file.html">Deploying Magnolia as WAR
+file</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595645"><a class="anchor" href="#src-196595645"></a>Deploying a WAR on JBoss WildFly or EAP</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page describes how to deploy Magnolia as a WAR file on WildFly,
+formerly known as JBoss Application Server. The procedures described
+below have been checked for WildFly 11+. Magnolia 6.2 requires WildFly
+11 or later for compatibility. This page was also verified with JBoss
+EAP 7.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-dx-core-wildfly-webapp</code> works for both WildFly and EAP
+distributions.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-Preliminaries"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-Preliminaries"></a>Preliminaries</h3>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-ConfiguringJAASlogin"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-ConfiguringJAASlogin"></a>Configuring JAAS login</h4>
+<div class="paragraph">
+<p>Magnolia uses the
+<a href="http://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service">Java
+Authentication and Authorization Service</a> (JAAS) to authenticate and
+authorize users. You have to configure the JAAS login modules for
+WildFly so that you can log into Magnolia:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open <code>$WILDFLY_HOME/standalone/configuration/standalone.xml</code>.</p>
+</li>
+<li>
+<p>Add the following login modules in the
+<code>&lt;subsystem xmlns="urn:jboss:domain:security:1.2&gt;</code> section:</p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Or the <code>&lt;subsystem xmlns="urn:jboss:domain:security:2.0&gt;</code> section.
+Whichever you have.</p>
+</div>
+<div class="paragraph">
+<p>+
+standalone.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;subsystem xmlns=<code>"urn:jboss:domain:security:1.2"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;security-domains&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;security-domain name=<code>"magnolia"</code> cache-type=<code>"default"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`           &lt;authentication&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;login-module code=<code>"info.magnolia.jaas.sp.jcr.JCRAuthenticationModule"</code> flag = <code>"requisite"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;login-module code=<code>"info.magnolia.jaas.sp.jcr.JCRAuthorizationModule"</code> flag = <code>"required"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`           &lt;/authentication&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/security-domain&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;security-domain name=<code>"Jackrabbit"</code> cache-type=<code>"default"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`           &lt;authentication&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;login-module code=<code>"org.apache.jackrabbit.core.security.SimpleLoginModule"</code> flag = <code>"required"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`           &lt;/authentication&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/security-domain&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;security-domain name=<code>"other"</code> cache-type=<code>"default"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;authentication&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;login-module code=<code>"org.apache.jackrabbit.core.security.SimpleLoginModule"</code> flag=<code>"required"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/authentication&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/security-domain&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/security-domains&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/subsystem&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-MagnoliaWorkflow"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-MagnoliaWorkflow"></a>Magnolia Workflow</h4>
+<div class="paragraph">
+<p>When using Magnolia&#8217;s worklow modules you might experience class loading
+issue related to packages of <code>org.jboss.weld.*</code>. In this case create or
+edit <code>jboss-deployment-structure.xml</code> file in Magnolia&#8217;s <code>WEB-INF</code>
+folder by adding the following code.</p>
+</div>
+<div class="paragraph">
+<p>jboss-deployment-structure.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;?xml version=<code>"1.0"</code>?&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;jboss-deployment-structure xmlns=<code>"urn:jboss:deployment-structure:1.2"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;deployment&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;exclude-subsystems&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;subsystem name=<code>"weld"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/exclude-subsystems&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/deployment&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/jboss-deployment-structure&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-BouncyCastle"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-BouncyCastle"></a>Bouncy Castle</h4>
+<div class="paragraph">
+<p>Magnolia uses the <a href="http://www.bouncycastle.org/java.html">Bouncy Castle</a>
+cryptography package to decode the license key and to
+<a href="Activation-security.html">secure the activation process</a>. WildFly
+ships with a slightly older version of these libraries.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Find the BC module folder in
+<code>$WILDFLY_HOME/modules/system/layers/base/org/bouncycastle/main</code>.<br>
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+JBoss EAP <code>$EAP_HOME/modules/system/layers/base/org/bouncycastle/main</code></p>
+</li>
+<li>
+<p>Remove all the existing JAR files.</p>
+</li>
+<li>
+<p>Place the required Bouncy Castle
+<a href="http://www.bouncycastle.org/latest_releases.html">JAR files</a> in the
+folder:</p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="attachments_196595646_1_bouncycastle.zip">Here</a> you can download a
+copy of the entire bouncycastle folder as it should be setup.
+* Provider <code>bcprov</code>
+* PKIX <code>bcpkix</code>
+* OpenPGP/BCPG <code>bcpg</code>
+* SMIME <code>bcmail</code>
+. Edit the <code>module.xml</code> file in the same folder.</p>
+</div>
+<div class="paragraph">
+<p>+
+module.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;?xml version=<code>"1.0"</code> encoding=<code>"UTF-8"</code>?&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;module xmlns=<code>"urn:jboss:module:1.1"</code> name=<code>"org.bouncycastle"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;resources&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;resource-root path=<code>"bcprov-jdk15on-1.61.jar"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;resource-root path=<code>"bcpkix-jdk15on-1.61.jar"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;resource-root path=<code>"bcpg-jdk15on-1.61.jar"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;resource-root path=<code>"bcmail-jdk15on-1.61.jar"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/resources&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;dependencies&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;module name=<code>"javax.api"</code> slot=<code>"main"</code> export=<code>"true"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/dependencies&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/module&gt;</code>
+. Create or edit <code>jboss-deployment-structure.xml</code> file in Magnolia&#8217;s
+<code>WEB-INF</code> folder by adding the following code.</p>
+</div>
+<div class="paragraph">
+<p>+
+jboss-deployment-structure.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;?xml version=<code>"1.0"</code>?&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;jboss-deployment-structure xmlns=<code>"urn:jboss:deployment-structure:1.2"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;deployment&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;dependencies&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;module name=<code>"org.bouncycastle"</code> slot=<code>"main"</code> export=<code>"true"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/dependencies&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/deployment&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/jboss-deployment-structure&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-ConfiguringLog4j"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-ConfiguringLog4j"></a>Configuring Log4j</h4>
+<div class="paragraph">
+<p>WildFly Application Server adds its own log4j logging configuration. If
+you want to use your own log4j logging configuration
+(<a href="Monitoring.html#src-196595868_Monitoring-anc-log4j2">or the one
+provided by Magnolia</a>) in your deployment, exclude the default
+configuration first.</p>
+</div>
+<div class="paragraph">
+<p>Create a new file <code>jboss-deployment-structure.xml</code> under the <code>WEB-INF</code>
+folder with this content:</p>
+</div>
+<div class="paragraph">
+<p>jboss-deployment-structure.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;jboss-deployment-structure&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;deployment&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;exclusions&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;module name=<code>"org.apache.log4j"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;module name=<code>"org.slf4j"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/exclusions&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/deployment&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/jboss-deployment-structure&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-Resteasyclassloadingissue"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-Resteasyclassloadingissue"></a>Resteasy class loading issue</h4>
+<div class="paragraph">
+<p>During a deployment the Resteasy libraries can cause a class loading
+issue when the RestClient module is used. You can get rid of the issue
+by excluding the following subsystems in the <code>&lt;deploymenŧ&gt;</code> element of
+the <code>jboss-deployment-structure.xml</code> file:</p>
+</div>
+<div class="paragraph">
+<p>jboss-deployment-structure.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>exclude</code>-subsystems&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>subsystem</code> <code>name</code>=<code>"jaxrs"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>subsystem</code> <code>name</code>=<code>"resteasy"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>exclude</code>-subsystems&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-Deploymentoptions"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-Deploymentoptions"></a>Deployment options</h3>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-DeployingaWAR"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-DeployingaWAR"></a>Deploying a WAR</h4>
+<div class="paragraph">
+<p>To deploy the downloaded Magnolia WAR file to WildFly:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Rename the Magnolia WAR file to <code>magnoliaAuthor.war</code>.</p>
+</li>
+<li>
+<p>Make a copy of the file and rename it to <code>magnoliaPublic.war</code>.</p>
+</li>
+<li>
+<p>Copy the files to <code>$WILDFLY_HOME/standalone/deployments</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The application server will automatically pick up the files and deploy
+them.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+WildFly unpacks .war files to a <code>tmp</code> directory and deletes the
+directory as part of the shutdown process. This means that every time
+WildFly restarts, the Magnolia webapp forgets everything – modules,
+repository, license key. To get around this issue, you can deploy the
+Magnolia webapp as an extracted (unpacked) directory or configure
+Magnolia to store the repository outside the <code>tmp</code> directory.
+Alternatively, specify the following paths in your
+<a href="Configuration-management.html#src-196595691_Configurationmanagement-Properties"><code>magnolia.properties</code>
+configuration</a>. If you point the paths outside of WildFly&#8217;s <code>tmp</code>
+directory, Magnolia will not reinstall on every startup and they will
+not be deleted on every shutdown.</p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.home=/somewhere_outside_of_wildfly_tmp_folder</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.cache.startdir=${magnolia.home}/cache</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.upload.tmpdir=${magnolia.home}/tmp</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.exchange.history=${magnolia.home}/history</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.repositories.home=${magnolia.home}/repositories</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.logs.dir=${magnolia.home}/logs</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-Deployingextracteddirectories"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-Deployingextracteddirectories"></a>Deploying extracted directories</h4>
+<div class="paragraph">
+<p>To deploy an extracted directory:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Extract the Magnolia WAR file to the <code>/magnoliaAuthor.war</code> directory.</p>
+</li>
+<li>
+<p>Extract the Magnolia WAR file also to the <code>/magnoliaPublic.war</code>
+directory.</p>
+</li>
+<li>
+<p>If you did not download the prebundled WildFly webapp, set the
+<code>magnolia.definitions.classpath</code> property in <code>magnolia.properties</code> to
+<code>info.magnolia</code>.</p>
+</li>
+<li>
+<p>Copy the directories to <code>$WILDFLY_HOME/standalone/deployments</code>.</p>
+</li>
+<li>
+<p>Create empty files <code>magnoliaAuthor.war.dodeploy</code> and
+<code>magnoliaPublic.war.dodeploy</code> in the
+<code>$WILDFLY_HOME/standalone/deployments</code> directory.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The application server will pick up the extracted directories on startup
+and will deploy them.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-StartingWildFlyandaccessingMagnolia"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-StartingWildFlyandaccessingMagnolia"></a>Starting WildFly and accessing Magnolia</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Restart WildFly.</p>
+</li>
+<li>
+<p>Access Magnolia Author instance at
+<code><a href="http://localhost:8080/magnoliaAuthor/" class="bare">http://localhost:8080/magnoliaAuthor/</a></code>.</p>
+</li>
+<li>
+<p>Access Magnolia Public instance at
+<code><a href="http://localhost:8080/magnoliaPublic/" class="bare">http://localhost:8080/magnoliaPublic/</a></code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+It may happen that the Magnolia application is not deployed because of
+deployment timeout. You can avoid this by setting the
+<code>deployment-timeout</code> parameter to higher value in
+<code>$WILDFLY_HOME/standalone/configuration/standalone.xml</code>. The default is
+60 seconds.</p>
+</div>
+<div class="paragraph">
+<p>standalone.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;subsystem xmlns=<code>"urn:jboss:domain:deployment-scanner:1.1"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`   &lt;deployment-scanner path=<code>"deployments"</code> relative-to=<code>"jboss.server.base.dir"</code> scan-interval=<code>"5000"</code> deployment-timeout=<code>"120"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/subsystem&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you experience <code>java.lang.OutOfMemoryError</code> when accessing Magnolia
+instances, try restarting WildFly with the JVM <code>Xmx</code> value in
+<code>$WILDFLY_HOME/bin/standalone.conf</code> set at least to <code>1024m</code>:</p>
+</div>
+<div class="paragraph">
+<p>`   JAVA_OPTS=<code>`"-Xms64m -Xmx1024m -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true"</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-Changingthecontextpath"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-Changingthecontextpath"></a>Changing the context path</h3>
+<div class="paragraph">
+<p>Without the WAR file placed under <code>WEB-INF</code> folder, the context path
+will be the web application&#8217;s folder name by default.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop WildFly.</p>
+</li>
+<li>
+<p>Create a <code>jboss-web.xml</code> file in <code>WEB-INF</code> folder of your Magnolia
+instance.</p>
+</li>
+<li>
+<p>Add the following section in the file. Replace <code>YourContextPath</code> with
+your actual context path which can be <code>/</code> for a public instance, for
+example.</p>
+<div class="paragraph">
+<p><code>&lt;jboss-web&gt;</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>`   &lt;context-root&gt;/YourContextPath&lt;/context-root&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/jboss-web&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>+
+Restart WildFly. Your webapp should be available at
+<code><a href="http://localhost:8080/&lt;YourContextPath&gt" class="bare">http://localhost:8080/&lt;YourContextPath&gt</a>;</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595645_DeployingaWARonJBossWildFlyorEAP-Learnmore"><a class="anchor" href="#src-196595645_DeployingaWARonJBossWildFlyorEAP-Learnmore"></a>Learn more</h3>
+<div class="paragraph">
+<p><a href="https://docs.jboss.org/author/display/WFLY10/Getting+Started+Guide">Getting
+Started with WildFly</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/JBoss+AS+JNDI+Datasource+Setup">JBoss
+AS JNDI Datasource Setup</a></p>
+</div>
+<div class="paragraph">
+<p>Deploying a WAR on WebSphere Liberty</p>
+</div>
+<div class="paragraph">
+<p>WAR file with multiple configurations</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

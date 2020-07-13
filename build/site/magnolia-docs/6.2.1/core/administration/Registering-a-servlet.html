@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Registering a servlet - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/administration/Registering-a-servlet.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Registering-a-servlet.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Registering-a-servlet.html">Registering a servlet - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Registering a servlet - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Architecture.html">Architecture</a></p>
+</li>
+<li>
+<p><a href="Request-processing-and-filters.html">Request processing and
+filters</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595732"><a class="anchor" href="#src-196595732"></a>Registering a servlet</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>To register a servlet:</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595732_Registeringaservlet-Createaservletclass"><a class="anchor" href="#src-196595732_Registeringaservlet-Createaservletclass"></a>Create a servlet class</h3>
+<div class="paragraph">
+<p>To create a servlet class, extend <code>javax.servlet.http.HttpServlet</code>. Most
+servlets extend this class.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><code>HttpServlet</code> provides an abstract class to be subclassed to create an
+HTTP servlet suitable for a Web site. A subclass of <code>HttpServlet</code> must
+override at least one method, usually one of these:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>doGet</code>, if the servlet supports HTTP GET requests</p>
+</li>
+<li>
+<p><code>doPost</code>, for HTTP POST requests</p>
+</li>
+<li>
+<p><code>doPut</code>, for HTTP PUT requests</p>
+</li>
+<li>
+<p><code>doDelete</code>, for HTTP DELETE requests</p>
+</li>
+<li>
+<p><code>init</code> and <code>destroy</code>, to manage resources that are held for the life
+of the servlet</p>
+</li>
+<li>
+<p><code>getServletInfo</code>, which the servlet uses to provide information about
+itself</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There&#8217;s almost no reason to override the <code>service</code> method. <code>service</code>
+handles standard HTTP requests by dispatching them to the handler
+methods for each HTTP request type (the <code>doXXX</code> methods listed above).</p>
+</div>
+<div class="paragraph">
+<p>Likewise, there&#8217;s almost no reason to override the <code>doOptions</code> and
+<code>doTrace</code> methods.</p>
+</div>
+<div class="paragraph">
+<p>Servlets typically run on multithreaded servers, so be aware that a
+servlet must handle concurrent requests and be careful to synchronize
+access to shared resources. Shared resources include in-memory data such
+as instance or class variables and external objects such as files,
+database connections, and network connections.</p>
+</div>
+<div class="paragraph">
+<p>Source:
+<a href="http://docs.oracle.com/javaee/5/api/index.html?javax/servlet/http/HttpServlet.html">Java
+EE 5 SDK</a>, Oracle</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Additionally, implement SelfMappingServlet . This is an optional
+interface that servlets wrapped by ServletDispatchingFilter can
+implement, to provide their own mapping. When implementing this method,
+the servlet can get the mapping from any arbitrary component. This means
+the mapping can be configured centrally and re-used by other components,
+typically to generate links. See
+<a href="Dynamic-servlet-mapping.html">Dynamic servlet mapping</a> for more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595732_Registeringaservlet-Definetheservletinyourmoduledescriptor"><a class="anchor" href="#src-196595732_Registeringaservlet-Definetheservletinyourmoduledescriptor"></a>Define the servlet in your module descriptor</h3>
+<div class="paragraph">
+<p>Define the servlet in your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+descriptor">module
+descriptor</a> . Include any mappings and init parameters the servlet class
+supports.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: The Magnolia core module descriptor
+(<a href="http://git.magnolia-cms.com/gitweb/?p=magnolia_main.pub.git;a=blob;f=magnolia-core/src/main/resources/META-INF/magnolia/core.xml;h=7abf226d90445ba13c48c886a8311e4380da7df9;hb=HEAD">Git</a>)
+registers the ClasspathSpool servlet. The purpose of this servlet is to
+serve resource files such as CSS and JavaScript from the
+<code>mgnl-resources</code> folder of any module when requested with the path
+<code>/.resources/&lt;module name&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>core.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;servlets&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;servlet&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;name&gt;ClasspathSpoolServlet&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>class</code>&gt;info.magnolia.cms.servlets.ClasspathSpool&lt;/<code>class</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;comment&gt;Used to serve resources from the classpath.&lt;/comment&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;mappings&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;mapping&gt;/.resources/*&lt;/mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/mappings&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/servlet&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/servlets&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Initialization parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>name</code>: Name of the servlet.</p>
+</li>
+<li>
+<p><code>class</code>: Fully-qualified servlet class name.</p>
+</li>
+<li>
+<p><code>comment</code>: Description of what the servlet does.</p>
+</li>
+<li>
+<p><code>mappings</code>: URLs and paths that direct requests to the servlet.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+You don&#8217;t need to add the servlet to your <code>web.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>webdav.xml</code></p>
+</li>
+<li>
+<p><code>opensocial-container.xml</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595732_Registeringaservlet-Configuretheservletinthefilterchain"><a class="anchor" href="#src-196595732_Registeringaservlet-Configuretheservletinthefilterchain"></a>Configure the servlet in the filter chain</h3>
+<div class="paragraph">
+<p>Configure the servlet in the
+<a href="Filters.html#src-196595729_Filters-Servletsfilterchain">servlets
+filter chain</a> at <strong>Configuration &gt;</strong> <code>/server/filters/servlets</code>. The
+configuration is created automatically when the module is installed. The
+values are taken from the module descriptor.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Servlets are registered by the RegisterModuleServletsTask at install
+time; this means that if the definition changes over time, the module
+developer should take care of updating the configuration by using a
+<code>ModuleVersionHandler</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: The ClasspathSpoolServlet is configured at
+<code>/server/filters/servlets/ClasspathSpoolServlet</code>. The default resources
+root folder <code>/mgnl-resources</code> is hard-coded but is also configurable
+with the <code>resourcesRoot</code> init parameter. The servlet loads files from
+this folder and makes them available at the path defined in the
+<code>pattern</code> parameter.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servlets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ClasspathSpoolServlet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-.resources--</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourcesRoot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;resources root path&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.filters.ServletDispatchingFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used to spool resources from the classpath.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servletClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.servlets.ClasspathSpool</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servletName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ClasspathSpoolServlet</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;servlet name&gt;</code>: Name of the servlet as defined in the <code>servletName</code>
+property.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mappings</code>: URLs and paths that direct requests to the servlet.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;mapping name&gt;</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>pattern</code>: A URL pattern that triggers the servlet.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>parameters</code>: Parameters supported by the servlet class.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;parameter name&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>class</code>: Filter class. All servlets use the
+<code>info.magnolia.cms.filters.ServletDispatchingFilter</code> class which
+dispatches requests to a wrapped servlet. The filter initializes the
+servlet and its mappings. <code>ServletConfig</code> is wrapped to take init
+parameters into account.</p>
+</li>
+<li>
+<p><code>comment</code>: Servlet description.</p>
+</li>
+<li>
+<p><code>enabled</code>: Enables and disables the servlet. Default is <code>true</code>.</p>
+</li>
+<li>
+<p><code>servletClass</code>: Fully-qualified name of the servlet class.</p>
+</li>
+<li>
+<p><code>servletName</code>: Name of the servlet as defined in the module
+descriptor.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Filters</p>
+</div>
+<div class="paragraph">
+<p>Webapp</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

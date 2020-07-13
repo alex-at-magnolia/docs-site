@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Request processing and filters - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/administration/Request-processing-and-filters.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Request-processing-and-filters.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Request-processing-and-filters.html">Request processing and filters - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Request processing and filters - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Architecture.html">Architecture</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595721"><a class="anchor" href="#src-196595721"></a>Request processing and filters</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Magnolia uses the
+<a href="http://www.oracle.com/technetwork/java/filters-137243.html">Java filter
+concept</a>, introduced in the Java Servlet specification version 2.3. A
+filter captures and processes a request before it reaches a servlet.
+Filters typically do not themselves create responses but provide
+universal functions that can be "attached" to any type of servlet page.
+See also the <a href="Filters.html">list of filters</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_Requestprocessingandfilters-Lifeofarequest"><a class="anchor" href="#src-196595721_Requestprocessingandfilters-Lifeofarequest"></a>Life of a request</h3>
+<div class="paragraph">
+<p>This diagram shows a typical request process in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595721/request-processing.png" alt="images/download/attachments/196595721/request-processing.png"></span></p>
+</div>
+<div class="paragraph">
+<p>In the diagram you can see the following filters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Context</strong>. The first filter in the filter chain is the ContextFilter .
+It initializes <code>MgnlContext</code> which is local to the request and available
+on every further filter. The context provides a lot of useful functions.</p>
+</li>
+<li>
+<p><strong>URI security</strong>. Checks to see if the active user has permission to
+access the requested URI.</p>
+</li>
+<li>
+<p><strong>Custom filter</strong>. This could be your own filter implementation. For
+example, check if the URL includes a custom parameter.</p>
+</li>
+<li>
+<p><strong>Cache</strong>. The CacheFilter manages the Magnolia cache.<br>
+The cache filter checks if a requested resource is already stored in the
+cache to avoid recreation of the resource. If the resource is in the
+cache, then it will be written to the response and the filter chain
+stops. If the resource is not found in the cache, then a ResponseWrapper
+which not only writes to the "standard" response, but saves the response
+is passed to the chain.</p>
+</li>
+<li>
+<p><strong>CMS filter chain</strong>. Next we arrive to the CMS filter chain. It does
+page rendering and delivery. The filters in this subchain are groups so
+that they can share a bypass definition.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Aggregator</strong>. The AggregatorFilter analyses the request, selects
+content from the repository, and stores it in the AggregationState .</p>
+</li>
+<li>
+<p><strong>Rendering</strong>. Finally, the RenderingFilter is responsible for
+delivering the requested resource. If the requested resource is data
+(e.g. a file) then the data is just copied to the response.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_Requestprocessingandfilters-Fulfillingarequest"><a class="anchor" href="#src-196595721_Requestprocessingandfilters-Fulfillingarequest"></a>Fulfilling a request</h3>
+<div class="paragraph">
+<p>The filter chain calls the <code>doFilter(request, response, chain)</code> of the
+next filter. If the filter wants to continue the chain,
+<code>chain.doFilter(request, response)</code> will be called.</p>
+</div>
+<div class="paragraph">
+<p>A filter which can fullfill the request typically has a <code>doFilter(&#8230;&#8203;)</code>
+method:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void<code> doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) </code>throws`</code> IOException, ServletException{`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>if</code> (<code>this</code>.handle(request, response)) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    chain.doFilter(request, response);`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p>There are other filters which just do some processing in the request
+handling.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void<code> doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) </code>throws`</code> IOException, ServletException{`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// preprocessing</code></p>
+</div>
+<div class="paragraph">
+<p>`      &#8230;&#8203;.`</p>
+</div>
+<div class="paragraph">
+<p>`      chain.doFilter(request, response);`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// postprocessing</code></p>
+</div>
+<div class="paragraph">
+<p>`      &#8230;&#8203;.`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_Requestprocessingandfilters-Basicfilterdefinitioninweb.xml"><a class="anchor" href="#src-196595721_Requestprocessingandfilters-Basicfilterdefinitioninweb.xml"></a>Basic filter definition in web.xml</h3>
+<div class="paragraph">
+<p>If you look at the <code>web.xml</code> of a Magnolia web application, you will see
+that it only defines one filter ( MgnlMainFilter ) and one listener (
+MgnlServletContextListener ):</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;web-app xmlns=<code>"http://java.sun.com/xml/ns/j2ee"</code> xmlns:xsi=``"http://www.w3.org/2001/XMLSchema-instance"</code></p>
+</div>
+<div class="paragraph">
+<p>`   xsi:schemaLocation=<code>"http://java.sun.com/xml/ns/j2ee <a href="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"" class="bare">http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"</a></code> version=<code>"2.4"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;description&gt;Magnolia&lt;/description&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;display-name&gt;magnolia&lt;/display-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;distributable/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;filter&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;display-name&gt;Magnolia global filters&lt;/display-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;filter-name&gt;magnoliaFilterChain&lt;/filter-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;filter-<code>class</code>&gt;info.magnolia.cms.filters.MgnlMainFilter&lt;/filter-<code>class</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;/filter&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;filter-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;filter-name&gt;magnoliaFilterChain&lt;/filter-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;url-pattern&gt;/*&lt;/url-pattern&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;dispatcher&gt;ERROR&lt;/dispatcher&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;/filter-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;listener&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;listener-<code>class</code>&gt;info.magnolia.cms.servlets.MgnlServletContextListener&lt;/listener-<code>class</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;/listener&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/web-app&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>The listener initializes Magnolia while the filter handles all requests.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_Requestprocessingandfilters-Magnoliamainfilter"><a class="anchor" href="#src-196595721_Requestprocessingandfilters-Magnoliamainfilter"></a>Magnolia main filter</h3>
+<div class="paragraph">
+<p>The main filter MgnlMainFilter is a single filter which in turn executes
+a chain of other filters. The other filters are not configured in
+<code>web.xml</code> but in Magnolia&#8217;s <code>config</code> workspace at <code>/server/filters</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">context</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deviceDetection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">multipartRequest</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">unicodeNormalization</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">etc.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In the filter configuration you can again have single filters or filter
+chains. A filter chain consists of a list of single filters represented
+by child nodes. A filter node has a <code>class</code> property which specifies the
+implementing class and can optionally have an <code>enabled</code> property.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">context</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.filters.ContextFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If the filter is enabled (default) then the filter will be executed,
+otherwise the filter will be bypassed. A filter or a filter chain can
+define rules to determine when a filter should be bypassed. The
+configuration of bypasses is done using
+<a href="Configuration-management.html#src-196595691_Configurationmanagement-Voters">voters</a>.</p>
+</div>
+<div class="paragraph">
+<p>This example shows that the URI for the login form is bypassed in the
+<code>uriSecurity</code> filter.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uriSecurity</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bypasses</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">login</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.URIStartsWithVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/defaultLoginForm</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">logout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.URIStartsWithVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.magnolia/pages/logout.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">adminJavascript</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.URIStartsWithVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.magnolia/pages/javascript.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.security.URISecurityFilter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_safe-id-UmVxdWVzdHByb2Nlc3NpbmdhbmRmaWx0ZXJzLVdoYXRjYW5JZG93aXRoZmlsdGVycz8"><a class="anchor" href="#src-196595721_safe-id-UmVxdWVzdHByb2Nlc3NpbmdhbmRmaWx0ZXJzLVdoYXRjYW5JZG93aXRoZmlsdGVycz8"></a>What can I do with filters?</h3>
+<div class="paragraph">
+<p>Filters provide the ability to encapsulate recurring tasks and
+modularize code. They can also transform a response from a servlet page.
+A common task is to format data sent back to the client, such as sending
+XML instead of HTML.</p>
+</div>
+<div class="paragraph">
+<p>Some functions filters can perform:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Authentication based on user identity</p>
+</li>
+<li>
+<p>Logging, auditing, tracking, personalization</p>
+</li>
+<li>
+<p>Image conversion, scaling maps</p>
+</li>
+<li>
+<p>Data compression</p>
+</li>
+<li>
+<p>Localization</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_Requestprocessingandfilters-Customizationexample"><a class="anchor" href="#src-196595721_Requestprocessingandfilters-Customizationexample"></a>Customization example</h3>
+<div class="paragraph">
+<p>Incoming requests to display a page are handled by the
+<a href="Filters.html">filter chain</a> which is the place to start if you want
+to add your own business logic to Magnolia. A typical use case is
+connecting to a new framework with Magnolia. This is generally
+accomplished by implementing the following steps:</p>
+</div>
+<div class="paragraph">
+<p>Read the request and decide if the framework should handle it. Implement
+a filter to do this task and place the filter in the proper order in the
+filter chain. You can save the resulting model to be rendered as an
+attribute of the request&#8217;s MgnlContext object as follows.</p>
+</div>
+<div class="paragraph">
+<p><code>MgnlContext.setAttribute(<code>"xyModel"</code>, customModel)</code></p>
+</div>
+<div class="paragraph">
+<p>Access the model in your rendering system using freemarker like this.</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign customModel = ctx.xyModel]</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595721_Requestprocessingandfilters-Extensionpoints"><a class="anchor" href="#src-196595721_Requestprocessingandfilters-Extensionpoints"></a>Extension points</h3>
+<div class="paragraph">
+<p>These points are where Magnolia request handling can be extended with
+additional custom business logic:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Area</th>
+<th class="tableblock halign-left valign-top">Object</th>
+<th class="tableblock halign-left valign-top">Interface / parent class</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+<th class="tableblock halign-left valign-top">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter chain</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AbstractMgnlFilter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In the` config` workspace at
+<code>/server/filters</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <a href="Filters.html">filters</a> in the filter chain are executed in the
+configured order in the repository. Objects you store as attributes of
+the request&#8217;s MgnlContext object can be fetched via freemarker later on.</p>
+</div>
+<div class="paragraph">
+<p>Please also read <a href="Custom-filters.html">Custom filters</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AbstractRenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Define a renderer with a new type
+in a module&#8217;s template-renderers section.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use this new type in the
+template&#8217;s <code>renderType</code> property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AbstractRenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Define a renderer with a new
+type in a module&#8217;s paragraphs-renderers section.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use this new type in
+the component&#8217;s <code>renderType</code> property.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Repositories</p>
+</div>
+<div class="paragraph">
+<p>Custom filters</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
