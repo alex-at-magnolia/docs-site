@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Renderers - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Renderers.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Renderers.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Renderers.html">Renderers - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Renderers - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596690"><a class="anchor" href="#src-196596690"></a>Renderers</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page explains the concept of renderers, how to configure them and
+which renderers Magnolia provides out of the box.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596690_Renderers-Overview"><a class="anchor" href="#src-196596690_Renderers-Overview"></a>Overview</h3>
+<div class="paragraph">
+<p>A renderer produces output such as HTML or text based on the template
+definition, the template script and JCR content.</p>
+</div>
+<div class="paragraph">
+<p>In summary, a renderer does the following things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creates the <a href="Model.html">model</a>.</p>
+</li>
+<li>
+<p>Gets <a href="Rendering_context_objects.html">context objects</a>.</p>
+</li>
+<li>
+<p>Executes <a href="Template_scripts.html">template scripts</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+The <a href="#src-196596690_Renderers-SPArenderer">SPA renderer</a> uses
+different techniques to render a page.</p>
+</div>
+<div class="paragraph">
+<p>The rendering process is executed by the RenderingFilter. The result of
+the renderer is written to the
+<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletOutputStream.html">ServletOutputStream</a>
+and sent to the browser. For further details see
+<a href="Rendering_content.html">Rendering content</a>.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides the following renderers out of the box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FreemarkerRenderer</p>
+</li>
+<li>
+<p>SiteAwareRendererWrapper</p>
+</li>
+<li>
+<p>SpaRenderer</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also implement your own custom renderer. To use a renderer, you
+must configure it either using YAML or in the JCR configuration
+workspace.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596690_Renderers-Configuringarenderer"><a class="anchor" href="#src-196596690_Renderers-Configuringarenderer"></a>Configuring a renderer</h3>
+<div class="paragraph">
+<p>To make a renderer available, you must configure it in the <code>renderers</code>
+folder of any module either using YAML, or in the JCR <code>configuration</code>
+workspace.</p>
+</div>
+<div class="paragraph">
+<p>Once configured, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">Decorate</a>
+the renderer definition.</p>
+</li>
+<li>
+<p>Reuse the renderer definition as a base for a new renderer using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML+inherit+and+include">YAML
+inherit</a>.</p>
+</li>
+<li>
+<p>Use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML+inherit+and+include">YAML
+include</a> directive if the definition is YAML based.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>View your renderer definitions in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
+app</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596690/6-1-renderers-defApp.png" alt="images/download/attachments/196596690/6-1-renderers-defApp.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Example:YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>renderer-test-module/renderers/foobar.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.rendering.renderer.FreemarkerRenderer`</p>
+</div>
+<div class="paragraph">
+<p><code>contextAttributes:</code></p>
+</div>
+<div class="paragraph">
+<p>`  cms:`</p>
+</div>
+<div class="paragraph">
+<p>`    componentClass: info.magnolia.templating.freemarker.Directives`</p>
+</div>
+<div class="paragraph">
+<p>`    name: cms`</p>
+</div>
+<div class="paragraph">
+<p>`  cmsfn:`</p>
+</div>
+<div class="paragraph">
+<p>`    componentClass: info.magnolia.templating.functions.TemplatingFunctions`</p>
+</div>
+<div class="paragraph">
+<p>`    name: cmsfn`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderer-test-module</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">foobar</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contextAttributes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cms</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.freemarker.Directives</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cmsfn</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.functions.TemplatingFunctions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cmsfn</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Properties:</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the renderer. In JCR it is the node name, in YAML it is the
+file name. (In the example above, the name is <code>foobar</code>.)</p>
+</div>
+<div class="paragraph">
+<p>The renderer <code>name</code> is used to reference a renderer within a
+<a href="Template_definition.html">template definition</a>.</p>
+</div>
+<div class="paragraph">
+<p>Click here to see how to reference a renderer in a template definition</p>
+</div>
+<div class="paragraph">
+<p>/test-custom-renderers/templates/pages/test-page.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>title: test-page</code></p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /test-custom-renderers/templates/pages/test-page.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: foobar</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The fully qualified class name of the class that must
+implement the interface Renderer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contextAttributes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A map to register components that are injected
+into the rendering context. The components can be used within the
+template scripts with their given names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>componentClass</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The fully qualified class name of the context
+attribute component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the component to add to the context. Use this name
+to reference the component in a template script.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596690_Renderers-RenderersprovidedbyMagnolia"><a class="anchor" href="#src-196596690_Renderers-RenderersprovidedbyMagnolia"></a>Renderers provided by Magnolia</h3>
+<div class="paragraph">
+<p>Magnolia provides a number of renderers out-of-the-box.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Use the default Magnolia renderers as a base. Extend them to define your
+own new renderers using YAML inherit or similar techniques to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Reusing+configuration">reuse
+the configuration</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Renderer</th>
+<th class="tableblock halign-left valign-top">Provided by the module</th>
+<th class="tableblock halign-left valign-top">Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#src-196596690_Renderers-anc-freemarker-renderer">Freemarker
+renderer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-rendering</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/rendering/renderers/freemarker</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#src-196596690_Renderers-anc-site-aware-renderers">Site aware
+renderer for freemarker</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-site</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/site/renderers/site</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#src-196596690_Renderers-SPArenderer">SPA renderer</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/spa-rendering/renderers/spa.yaml</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note that <code>magnolia-rendering</code> is available in every
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">preconfigured
+Magnolia bundle or webapp</a>, whereas <code>magnolia-site</code> is available in
+every preconfigured Magnolia bundle or webapp <em>except</em>
+<code>magnolia-empty-webapp</code>.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596690_Renderers-anc-freemarker-renderer]</mark>#</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596690_Renderers-Freemarkerrenderer"><a class="anchor" href="#src-196596690_Renderers-Freemarkerrenderer"></a>Freemarker renderer</h4>
+<div class="paragraph">
+<p>The freemarker renderer is used to render pages relying on templates
+with <a href="https://freemarker.apache.org">freemarker</a>-based template scripts.
+The freemarker renderer can be considered as the standard Magnolia
+renderer. It is also the base for the
+<a href="#src-196596690_Renderers-a">site aware renderer</a>.</p>
+</div>
+<div class="paragraph">
+<p>The implementation class is FreemarkerRenderer.</p>
+</div>
+<div class="paragraph">
+<p>Click here to expand to see the configuration of the freemarker renderer</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rendering</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contextAttributes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cms</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.freemarker.Directives</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cms</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cmsfn</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.functions.TemplatingFunctions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cmsfn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">damfn</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.templating.functions.DamTemplatingFunctions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">damfn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">searchfn</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.functions.SearchTemplatingFunctions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">searchfn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">catfn</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">componentClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.categorization.functions.CategorizationTemplatingFunctions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">catfn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.rendering.renderer.FreemarkerRenderer</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Some parts of the configuration are added by modules which provide
+components registered in <code>contextAttributes</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596690_Renderers-Freemarkerexceptionhandling"><a class="anchor" href="#src-196596690_Renderers-Freemarkerexceptionhandling"></a>Freemarker exception handling</h5>
+<div class="paragraph">
+<p>Freemarker exceptions render differently on the author and public
+instances. On author, Freemarker exceptions show the stack trace in a
+yellow block with red text, and on public errors are hidden and logged.</p>
+</div>
+<div class="paragraph">
+<p>This behavior is controlled by ModeDependentTemplateExceptionHandler
+registered in <code>/server/rendering/freemarker/templateExceptionHandler</code>.
+You can extend this class to fine-grain behavior.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rendering</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateExceptionHandler</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.freemarker.ModeDependentTemplateExceptionHandler</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark>src-196596690_Renderers-anc-site-aware-renderers]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596690_Renderers-Siteawarerenderers"><a class="anchor" href="#src-196596690_Renderers-Siteawarerenderers"></a>Site aware renderers</h4>
+<div class="paragraph">
+<p>A site aware renderer resolves the <a href="Site_definition.html">site
+definition</a> related to the given request, and it merges the template
+definition of the requested page with the
+<a href="Template_prototype.html">template prototype</a> from the site
+definition.</p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+module"><code>magnolia-site</code>
+module</a> adds the <code>sitefn `context attribute to the `freemarker</code> renderer
+configuration, and it configures the <code>site</code> site-aware renderer at
+<code>/modules/site/renderers</code>.</p>
+</div>
+<div class="paragraph">
+<p>Site aware renderers are implemented by the class
+SiteAwareRendererWrapper. It is a wrapper that relies on another already
+existing renderer. It comes with the property <code>wrappedRendererType</code>,
+which must be configured. The value of this property is the name of the
+wrapped renderer.</p>
+</div>
+<div class="paragraph">
+<p>Click here to expand to see the configuration of the site aware
+renderers</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>site</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.site.renderer.SiteAwareRendererWrapper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wrappedRendererType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark>src-196596690_Renderers-anc-spa-renderer]</mark>#</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596690_Renderers-SPArenderer"><a class="anchor" href="#src-196596690_Renderers-SPArenderer"></a>SPA renderer</h4>
+<div class="paragraph">
+<p>The SPA
+(<a href="https://wiki.magnolia-cms.com/display/DOCS62/Single-page+applications">Single-Page
+Application</a>) renderer produces template annotations, which the Pages
+app transforms into the green toolbars – editable page elements.</p>
+</div>
+<div class="paragraph">
+<p>The implementation class is SpaRenderer.</p>
+</div>
+<div class="paragraph">
+<p>Currently, the following functionalities are not supported in SPA
+rendering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Component_autogeneration.html">component autogeneration</a></p>
+</li>
+<li>
+<p><a href="Component_inheritance.html">component inheritance</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+personalization">component
+personalization</a></p>
+</li>
+<li>
+<p><a href="Component_definition.html">fragment definition</a></p>
+</li>
+<li>
+<p><a href="Structuring_page_areas.html">area-in-area nesting</a></p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196596690_Renderers-JavaScriptrenderers"><a class="anchor" href="#src-196596690_Renderers-JavaScriptrenderers"></a>JavaScript renderers</h5>
+<div class="paragraph">
+<p>Two additional JavaScript libraries are provided by Magnolia to help
+render SPA pages in the Angular and ReactJS front-end frameworks.</p>
+</div>
+<div class="paragraph">
+<p>Repository link:
+<code><a href="https://git.magnolia-cms.com/scm/modules/frontend-helpers.git" class="bare">https://git.magnolia-cms.com/scm/modules/frontend-helpers.git</a></code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">npm package names</th>
+<th class="tableblock halign-left valign-top">README files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@magnolia/angular-editor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://git.magnolia-cms.com/projects/MODULES/repos/frontend-helpers/browse/packages/angular-editor/projects/angular-editor/README.md" class="bare">https://git.magnolia-cms.com/projects/MODULES/repos/frontend-helpers/browse/packages/angular-editor/projects/angular-editor/README.md</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@magnolia/react-editor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://git.magnolia-cms.com/projects/MODULES/repos/frontend-helpers/raw/packages/react-editor/README.adoc" class="bare">https://git.magnolia-cms.com/projects/MODULES/repos/frontend-helpers/raw/packages/react-editor/README.adoc</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596690_Renderers-Others"><a class="anchor" href="#src-196596690_Renderers-Others"></a>Others</h4>
+<div class="paragraph">
+<p>The renderers described above are the most frequently used Magnolia
+renderers and cater to many use cases.</p>
+</div>
+<div class="paragraph">
+<p>The following renderers are used for special cases.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NoScriptRenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The renderer for definitions without template
+scripts. Renders ContentMaps from components or component attribute from
+contextObjects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PlainTextTemplateRenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template renderer for plain text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ResourcesBinaryRenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Streams the binary data stored in the content
+or loads it from an arbitrary path.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596690_Renderers-Creatingacustomrenderer"><a class="anchor" href="#src-196596690_Renderers-Creatingacustomrenderer"></a>Creating a custom renderer</h3>
+<div class="paragraph">
+<p>To create your own renderer, extend AbstractRenderer. This convenience
+class supports typical functionality such as setting context attributes
+and executing a rendering model. It sets up the context by providing the
+following objects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>content</code></p>
+</li>
+<li>
+<p><code>def</code></p>
+</li>
+<li>
+<p><code>state</code></p>
+</li>
+<li>
+<p><code>model</code></p>
+</li>
+<li>
+<p><code>actionResult</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://git.magnolia-cms.com/projects/FORGE/repos/mustache-rendering">mustache-rendering</a>
+for a detailed example.</p>
+</div>
+<div class="paragraph">
+<p>Template prototype</p>
+</div>
+<div class="paragraph">
+<p>Rendering content</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

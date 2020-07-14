@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Field converters - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Field_converters.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Field_converters.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Field_converters.html">Field converters - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Field converters - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Dialog_definition.html">Dialog definition</a></p>
+</li>
+<li>
+<p><a href="Field_definition.html">Field definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209815712"><a class="anchor" href="#src-209815712"></a>Field converters</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>To provide a smooth transition from <em>Magnolia 5</em> to <em>Magnolia 6 UI</em>, a
+number of field converters have been introduced since Magnolia 6.2.
+These converters allow you to take a <em>Magnolia 5 UI</em> definition,
+transform it into a model on the fly and delegate to the updated
+implementation.</p>
+</div>
+<div class="paragraph">
+<p>For a list of all Magnolia fields in both frameworks, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition+-+5+UI#Fielddefinition-5UI-Fieldtypes">Field
+types for <em>Magnolia 5 UI</em></a> and
+<a href="Field_definition.html#src-196596352_Fielddefinition-Fieldtypes">Field
+types for <em>Magnolia 6 UI</em></a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-209815712_Fieldconverters-Examplefieldconverter"><a class="anchor" href="#src-209815712_Fieldconverters-Examplefieldconverter"></a>Example field converter</h3>
+<div class="paragraph">
+<p>To convert a <em>Magnolia 5 UI</em> dialog definition to <em>Magnolia 6 UI</em>, use
+the
+<code>info.magnolia.ui.dialog.action.CompatibilityOpenDialogActionDefinition</code>
+class in your action definition.</p>
+</div>
+<div class="paragraph">
+<p><code>convertDialog:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.ui.dialog.action.CompatibilityOpenDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  dialogId: contacts:renameContact`</p>
+</div>
+<div class="paragraph">
+<p>`  icon: icon-edit`</p>
+</div>
+<div class="paragraph">
+<p>Conversion is done automatically for every action using
+<code>info.magnolia.ui.dialog.actions.OpenDialogActionDefinition</code> when the
+<code>magnolia-ui-framework-compatibility</code> module is included in your webapp.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209815712_Fieldconverters-Supportedfields"><a class="anchor" href="#src-209815712_Fieldconverters-Supportedfields"></a>Supported fields</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><em>Magnolia 5 UI</em> definition</th>
+<th class="tableblock halign-left valign-top"><em>Magnolia 6 UI</em> equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.BasicUploadFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.UploadFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.CheckboxFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.CheckBoxFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.CodeFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.CodeFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.CompositeFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.CompositeFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.DateFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.DateFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.HiddenFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.HiddenFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.LinkFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.LinkFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.MultiValueFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.MultiFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.field.CheckBoxGroupFieldDefinition</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui.field.RadioButtonGroupFieldDefinition</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.RichTextFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.RichTextFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.SelectFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.ComboBoxFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.StaticFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.StaticFieldViewDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.SwitchableFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.ConfiguredSwitchableFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.TextFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.TextFieldDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.form.field.definition.TwinColSelectFieldDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.TwinColSelectFieldDefinition</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-209815712_Fieldconverters-Knownlimitations"><a class="anchor" href="#src-209815712_Fieldconverters-Knownlimitations"></a>Known limitations</h3>
+<div class="paragraph">
+<p>A field converter falls back to an empty field for any <em>Magnolia 5 UI</em>
+definition that is not supported.</p>
+</div>
+<div class="sect3">
+<h4 id="src-209815712_Fieldconverters-Fielddefinitions"><a class="anchor" href="#src-209815712_Fieldconverters-Fielddefinitions"></a>Field definitions</h4>
+<div class="paragraph">
+<p>The following <em>Magnolia 5 UI</em> definitions cannot be converted:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.ui.form.field.definition.PasswordFieldDefinition</code></p>
+</li>
+<li>
+<p>Those brought in by modules other than
+<code>magnolia-ui-framework-compatibility</code> (for example,
+<code>info.magnolia.dam.app.ui.field.definition.DamUploadFieldDefinition</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In addition, custom fields cannot be converted as they must first be
+migrated to <em>Magnolia 6 UI</em>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Link fields can only be converted <em>without</em> the capability to preview
+content.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209815712_Fieldconverters-Validatordefinitions"><a class="anchor" href="#src-209815712_Fieldconverters-Validatordefinitions"></a>Validator definitions</h4>
+<div class="paragraph">
+<p>Only
+<code>info.magnolia.ui.form.validator.definition.EmailValidatorDefinition</code>
+and
+<code>info.magnolia.ui.form.validator.definition.RegexpValidatorDefinition</code>
+in <em>Magnolia 5 UI</em> can be converted.</p>
+</div>
+<div class="paragraph">
+<p>Custom validators cannot be converted as they must first be migrated to
+<em>Magnolia 6 UI</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209815712_Fieldconverters-Vaadinconverters"><a class="anchor" href="#src-209815712_Fieldconverters-Vaadinconverters"></a>Vaadin converters</h4>
+<div class="paragraph">
+<p>Only Vaadin 7 converter classes with corresponding classes in Vaadin 8
+can be converted.</p>
+</div>
+<div class="paragraph">
+<p>Custom fields</p>
+</div>
+<div class="paragraph">
+<p>Field validators</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Directives - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Directives.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Directives.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Directives.html">Directives - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Directives - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Template_scripts.html">Template scripts</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596470"><a class="anchor" href="#src-196596470"></a>Directives</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Directives are a collection of templating statements and commands that
+simplify scripting.
+<a href="#src-196596470_Directives-StandardFreeMarkerdirectives">FreeMarker</a>
+offers it&#8217;s own directives and key templating features are available as
+<a href="#src-196596470_Directives-CustomMagnoliadirectives">custom Magnolia
+directives</a>. Directives are quick to type but can render complex output.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596470_Directives-StandardFreeMarkerdirectives"><a class="anchor" href="#src-196596470_Directives-StandardFreeMarkerdirectives"></a>Standard FreeMarker directives</h3>
+<div class="paragraph">
+<p>Here are the most useful FreeMarker directives with sample code:</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_safe-id-RGlyZWN0aXZlcy1pZixlbHNlYW5kZWxzZWlm"><a class="anchor" href="#src-196596470_safe-id-RGlyZWN0aXZlcy1pZixlbHNlYW5kZWxzZWlm"></a>if, else and elseif</h4>
+<div class="paragraph">
+<p>Common operators (` &amp;&amp;, ||, !, ==, !=, &gt;, &lt;, &gt;=, &#8656; `) are supported</p>
+</div>
+<div class="paragraph">
+<p>Boolean test</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> content.header?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p>`   &lt;h1&gt;${content.header}&lt;/h1&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>else</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>`   DO_SOMETHING_ELSE`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>Value comparison</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> content.imageLocation == <code>"top"</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>`   …`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>Alternatives</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> content.date?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p>`   ${content.date?time?string.<code>short</code>}`</p>
+</div>
+<div class="paragraph">
+<p><code>[#elseif content.endDate?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p>`   ${content.endDate?time?string.<code>short</code>}`</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>else</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>`   No date is set!`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-list"><a class="anchor" href="#src-196596470_Directives-list"></a>list</h4>
+<div class="paragraph">
+<p>Can iterate over any collection that extends a Java collection.</p>
+</div>
+<div class="paragraph">
+<p><code>[#list model.getSomeList() as elem]</code></p>
+</div>
+<div class="paragraph">
+<p>`   &lt;li&gt;${elem.title!}&lt;/li&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`[/#list] `</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-assign"><a class="anchor" href="#src-196596470_Directives-assign"></a>assign</h4>
+<div class="paragraph">
+<p>Assign allows you to define variables. Any object except null can be
+passed to a variable.</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign title = content.title!content.<code>@name</code>]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign hasDate = content.date?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign dateShort = content.date?time?string.<code>short</code>]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign events = model.events]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign stringgy = <code>"Some direct string data"</code>]</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-include"><a class="anchor" href="#src-196596470_Directives-include"></a>include</h4>
+<div class="paragraph">
+<p>The include directive includes a FreeMarker template script.</p>
+</div>
+<div class="paragraph">
+<p><code>[#include <code>"/my-module/templates/myScript.ftl"</code>]</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-macros"><a class="anchor" href="#src-196596470_Directives-macros"></a>macros</h4>
+<div class="paragraph">
+<p>Macros allow you to reuse snippets of FreeMarker code.</p>
+</div>
+<div class="paragraph">
+<p><code>[#macro test foo bar=<code>"Bar"</code> baaz=-<code>1</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>`    Test text, and the params: ${foo}, ${bar}, ${baaz}`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#macro]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@test</code> foo=<code>"a"</code> bar=<code>"b"</code> baaz=<code>5</code>*<code>5</code>-<code>2</code>/]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@test</code> foo=<code>"a"</code> bar=<code>"b"</code>/]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@test</code> foo=<code>"a"</code> baaz=<code>5</code>*<code>5</code>-<code>2</code>/]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@test</code> foo=<code>"a"</code>/]</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596470_Directives-CustomMagnoliadirectives"><a class="anchor" href="#src-196596470_Directives-CustomMagnoliadirectives"></a>Custom Magnolia directives</h3>
+<div class="paragraph">
+<p>Magnolia provides three custom directives:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cms:area</code> renders an <a href="Area_definition.html">area</a> .</p>
+</li>
+<li>
+<p><code>cms:component</code> renders a <a href="Component_definition.html">component</a> .</p>
+</li>
+<li>
+<p><code>cms:block</code> renders a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Block+definition">block</a>.</p>
+</li>
+<li>
+<p><code>cms:page</code> enables the <a href="Page_definition.html">page</a> dialog.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These directives are implemented by the Directives class. This class is
+configured in
+<code>modules/rendering/renderers/freemarker/contextAttributes/cms/componentClass</code>.</p>
+</div>
+<div class="paragraph">
+<p>Standard FreeMarker directives start with the # character and custom
+directives with the @ character followed by <code>cms</code>, a dot character, the
+name of the macro, and any parameters.</p>
+</div>
+<div class="paragraph">
+<p>Syntax:</p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@cms</code>.&lt;directive name&gt; &lt;attribute&gt;=&lt;value&gt; /]</code></p>
+</div>
+<div class="paragraph">
+<p>Example: Rendering a component</p>
+</div>
+<div class="paragraph">
+<p>Freemarker</p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@cms</code>.component content=component /]</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6YXJlYQ"><a class="anchor" href="#src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6YXJlYQ"></a>cms:area</h4>
+<div class="paragraph">
+<p>The <code>cms:area</code> directive ( AreaDirective ) renders an
+<a href="Area_definition.html">area</a> and any components inside it. Editors
+can add components inside the area. Available components are configured
+in the <a href="Area_definition.html">area definition</a> .</p>
+</div>
+<div class="paragraph">
+<p>Freemarker</p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@cms</code>.area name=<code>"content"</code>/]</code></p>
+</div>
+<div class="paragraph">
+<p>The directive references an area by its name. The area name is the node
+or item that contains the <a href="Area_definition.html">area definition</a> .</p>
+</div>
+<div class="paragraph">
+<p>On the author instance, the result on the page is an area bar and an end
+marker. The <code>title</code> property is rendered in the bar. When editors click
+the Add icon in the New Component box they can add components inside the
+area.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596470/area-bar.png" alt="images/download/attachments/196596470/area-bar.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>name</code></th>
+<th class="tableblock halign-left valign-top">Name of the area definition node.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contextAttributes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A hash of key-value pairs. Any custom attribute and its value as
+retrieved from the current context.</p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@cms</code>.area name=<code>"content"</code> contextAttributes={<code>"divIDPrefix"</code>:divIDPrefix, <code>"componentModel"</code>:model} /]</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6Y29tcG9uZW50"><a class="anchor" href="#src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6Y29tcG9uZW50"></a>cms:component</h4>
+<div class="paragraph">
+<p>The <code>cms:component</code> directive ( ComponentDirective ) renders a
+<a href="Component_definition.html">component</a> . The <code>content</code> attribute
+defines what content the component edits. This tag is commonly used
+inside the <code>list</code> directive to loop through the components in a map.</p>
+</div>
+<div class="paragraph">
+<p>The content to render, and possibly edit in case of an editable
+component, is passed in the <code>content</code> attribute. On the author instance
+the directive renders a component toolbar. The value of the <code>title</code>
+property is rendered in the bar.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596470/component-bar.png" alt="images/download/attachments/196596470/component-bar.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines whether edit icons should be displayed. Mainly
+useful if content is inherited. Default is <code>cmsfn.isFromCurrentPage()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dialog</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opens the specified dialog when editing the component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contextAttributes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A hash of key-value pairs. Any custom attribute and its value as
+retrieved from the current context.</p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@cms</code>.component content=component contextAttributes={<code>"indexString"</code>:indexString, <code>"useIndex"</code>:useIndex}/]</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>[#list components as component ]</code></p>
+</div>
+<div class="paragraph">
+<p>`   [<code>@cms</code>.component content=component /]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#list]</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6YmxvY2s"><a class="anchor" href="#src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6YmxvY2s"></a>cms:block</h4>
+<div class="paragraph">
+<p>The <code>cms:block</code> directive ( BlockDirective ) renders a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Block+definition">block</a>.
+The block directive and its API is provided by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Editor+module">content
+editor module</a> which requires a DX Core license.</p>
+</div>
+<div class="paragraph">
+<p>On the author instance in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Stories+app">Stories app</a> or
+in a custom content editor, the directive provides UI elements to edit
+the content of the block.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596470/block-in-edit-mode.png" alt="images/download/attachments/196596470/block-in-edit-mode.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The directive is commonly used inside the list directive to loop through
+blocks wrapped by a composition node of an article.</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> articleContent?hasContent]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#assign blocks = cmsfn.children(articleContent, <code>"mgnl:block"</code>) /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [#list blocks as block]`</p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.block content=block /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#list]`</p>
+</div>
+<div class="paragraph">
+<p><code>[#/<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>content</code> attribute (see line 4 above) defines the block node to be
+edited or rendered.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6cGFnZQ"><a class="anchor" href="#src-196596470_safe-id-RGlyZWN0aXZlcy1jbXM6cGFnZQ"></a>cms:page</h4>
+<div class="paragraph">
+<p>The <code>cms:page`directive (`PageDirective</code>
+(<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/main/browse/magnolia-templating/src/main/java/info/magnolia/templating/freemarker/PageDirective.java">Git</a>))
+enables the <a href="Page_definition.html">page</a> dialog, if any. The
+directive is added to the head element of the page template.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;head&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.page /]`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/head&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-Commondirectiveattributes"><a class="anchor" href="#src-196596470_Directives-Commondirectiveattributes"></a>Common directive attributes</h4>
+<div class="paragraph">
+<p>The following attributes can be passed with any directive. They define
+which content the element created by the directive should work on.</p>
+</div>
+<div class="paragraph">
+<p>Attributes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>content</code></th>
+<th class="tableblock halign-left valign-top">An item, list or map.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Workspace used if path is defined. Same as of the current
+content</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path in the workspace.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-Contentattribute"><a class="anchor" href="#src-196596470_Directives-Contentattribute"></a>Content attribute</h4>
+<div class="paragraph">
+<p>The <code>content</code> attribute tells a script which item it should operate on.
+Scripts typically operate on the "current" node. For a page-level script
+the current node is the page, for an area-level script the current node
+is the area, and for a component-level script the current node is the
+component. However, there are cases where you want the script to operate
+on a different node. This is where the <code>content</code> attribute is handy.</p>
+</div>
+<div class="paragraph">
+<p>For example, assuming <code>meta</code> area is a child area of <code>main</code> area, and is
+a <code>noComponent</code> area that has no content or components of its own. The
+area can operate on the page content to render information such as the
+page title. This is achieved using the <code>content</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>In the page script we tell the <code>main</code> area "You should operate on the
+current node, which is a page because I am a page-level script".</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;div id=<code>"wrapper-3"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.area name=<code>"main"</code> content=content/]`</p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.area name=<code>"adverts"</code>/]`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;/div&gt;`</p>
+</div>
+<div class="paragraph">
+<p>In the area script we again pass the same instruction down to the <code>meta</code>
+area: "You should operate on the current node which is (still) the
+page".</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;div id=<code>"main"</code> role=<code>"main"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.area name=<code>"breadcrumb"</code> content=content/]`</p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.area name=<code>"meta"</code> content=content/]`</p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.area name=<code>"content"</code>/]`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/div&gt;&lt;!-- end main -&#8594;</code></p>
+</div>
+<div class="paragraph">
+<p>Now the <code>meta</code> area edits page content. Although it resides inside the
+main area DIV element on the page, the title really belongs to the page.
+It is a property of the page, not of the area, so it makes sense to
+store this property under the page node in the content structure.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596470_Directives-Workspaceattribute"><a class="anchor" href="#src-196596470_Directives-Workspaceattribute"></a>Workspace attribute</h4>
+<div class="paragraph">
+<p>The <code>workspace</code> attribute tells the directive which workspace of the
+<code>magnolia</code> JCR repository the content resides in. This is almost always
+the <code>website</code> workspace and defaults to <code>website</code> automatically if the
+current content resides in the <code>website</code> workspace.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596470_Directives-Exampleofdirectiverendering"><a class="anchor" href="#src-196596470_Directives-Exampleofdirectiverendering"></a>Example of directive rendering</h3>
+<div class="paragraph">
+<p>Here is an example of how directives are included in a page script and
+rendered on the page.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>cms.page</code> directive enables the Page properties dialog.</p>
+</li>
+<li>
+<p>The <code>cms.area</code> directive calls the areas to be rendered. The directive
+identifies area by name. If an area has child areas you need a separate
+script which calls the children to be rendered. However, if the area
+contains only components you don&#8217;t need an area script.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596470/directive-rendering-diagram.png" alt="images/download/attachments/196596470/directive-rendering-diagram.png" height="400"></span></p>
+</div>
+<div class="paragraph">
+<p>Template scripts</p>
+</div>
+<div class="paragraph">
+<p>Templating functions</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Magnolia 6 UI ports of 5 UI field transformer classes - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Magnolia_6_UI_ports_of_5_UI_field_transformer_classes.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Magnolia_6_UI_ports_of_5_UI_field_transformer_classes.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Magnolia_6_UI_ports_of_5_UI_field_transformer_classes.html">Magnolia 6 UI ports of 5 UI field transformer classes - Magnolia 6.2</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Magnolia 6 UI ports of 5 UI field transformer classes - Magnolia 6.2</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Dialog_definition.html">Dialog definition</a></p>
+</li>
+<li>
+<p><a href="Field_definition.html">Field definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204059017"><a class="anchor" href="#src-204059017"></a>Magnolia 6 UI ports of 5 UI field transformer classes</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Transforming+field+values+-+5+UI"><em>Magnolia
+5 UI</em> field transformer classes</a> no longer exist in the <em>Magnolia 6 UI</em>
+framework. The transformer functionality is now distributed among
+different components. The following is a summary of what the components
+do:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Modify the target property name by appending a locale suffix or by
+prepending a field prefix. This is done by concrete <code>PropertySet</code>
+implementations (<code>JcrItemPropertySet</code>) and/or by
+<code>PropertyNameDecorator</code>.</p>
+</li>
+<li>
+<p>Resolve an item data source of complex fields, a functionality usually
+covered by item providers.</p>
+</li>
+<li>
+<p>Manage item data sources of multi-value field entries. This is handled
+by <code>MultiFormView.EntryResolution</code>, which resolves the children and
+binds each of them to the item provider strategy.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Replacementsforfieldtransformers"><a class="anchor" href="#src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Replacementsforfieldtransformers"></a>Replacements for field transformers</h3>
+<div class="sect3">
+<h4 id="src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Defaulttransformerclasses"><a class="anchor" href="#src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Defaulttransformerclasses"></a>Default transformer classes</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong><code>info.magnolia.ui.form.field.transformer.</strong></code>*</th>
+<th class="tableblock halign-left valign-top"><em>Magnolia 6 UI</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>basic.BasicTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not needed. Its functions are obsolete; some
+are taken over by Vaadin
+<a href="https://vaadin.com/api/framework/8/com/vaadin/data/class-use/PropertySet.html">PropertySet</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>composite.CompositeTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use
+<code>info.magnolia.ui.editor.CurrentItemProvider</code> and set
+<code>propertyNameDecorator</code> to <code>info.magnolia.ui.field.PrefixNameDecorator</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>composite.SwitchableTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use
+<code>info.magnolia.ui.editor.CurrentItemProvider</code> and set
+<code>propertyNameDecorator</code> to <code>info.magnolia.ui.field.PrefixNameDecorator</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Othertransformerclasses"><a class="anchor" href="#src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Othertransformerclasses"></a>Other transformer classes</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>info.magnolia.ui.form.field.transformer.*</code></th>
+<th class="tableblock halign-left valign-top"><em>Magnolia 6 UI</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>composite.DelegatingCompositeFieldTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use
+<code>info.magnolia.ui.editor.CurrentItemProvider</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>composite.NoOpCompositeTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not needed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.DelegatingMultiValueFieldTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use
+<code>info.magnolia.ui.editor.CurrentItemProvider</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.DelegatingMultiValueSubnodeTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Use <code>info.magnolia.ui.editor.JcrChildNodeProvider</code> and set:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>supportI18N</code> to <code>false</code></p>
+</li>
+<li>
+<p><code>entryResolution</code> to
+<code>info.magnolia.ui.editor.MultiFieldEntryResolution$Definition</code></p>
+</li>
+<li>
+<p><code>propertyNameDecorator</code> to
+<code>info.magnolia.ui.field.AlwaysEmptyPrefixNameDecorator</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.MultiValueChildNodeTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated, no automatic
+conversion.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.MultiValueChildrenNodeTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated, no automatic
+conversion.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.MultiValueJSONTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated, no automatic conversion.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.MultiValueSubChildrenNodePropertiesTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Use <code>info.magnolia.ui.editor.JcrChildNodeProvider</code> and set:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>supportI18N</code> to <code>false</code></p>
+</li>
+<li>
+<p><code>entryResolution</code> to the now deprecated
+<code>info.magnolia.ui.editor.ByLexicographicallyIndexedChildNodes$Definition</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multi.MultiValueSubChildrenNodeTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated, no automatic
+conversion.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204059017_safe-id-TWFnbm9saWE2VUlwb3J0c29mNVVJZmllbGR0cmFuc2Zvcm1lcmNsYXNzZXMtUGVyc29uYWxpemF0aW9uKHRyYWl0KXRyYW5zZm9ybWVycw"><a class="anchor" href="#src-204059017_safe-id-TWFnbm9saWE2VUlwb3J0c29mNVVJZmllbGR0cmFuc2Zvcm1lcmNsYXNzZXMtUGVyc29uYWxpemF0aW9uKHRyYWl0KXRyYW5zZm9ybWVycw"></a>Personalization (trait) transformers</h3>
+<div class="paragraph">
+<p>Transformers with
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>-related
+functions still use the <em>Magnolia 5 UI</em> framework
+(<code>magnolia-personalization-compatibility</code>).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong><code>info.magnolia.personalization.</strong></code>*</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cookie.CookieFieldTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom transformer for cookie traits.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ui.SimpleTraitValueTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Now functions as the default trait
+transformer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>visitor.transformer.VisitorTraitListToSetTransformer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Still exists,
+but is no longer needed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Exampletransformerdefinitions"><a class="anchor" href="#src-204059017_Magnolia6UIportsof5UIfieldtransformerclasses-Exampletransformerdefinitions"></a>Example transformer definitions</h3>
+<div class="paragraph">
+<p>The following configurations in both frameworks will produce the same
+results.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><em>Magnolia 5 UI</em></th>
+<th class="tableblock halign-left valign-top"><em>Magnolia 6 UI</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabSwitch`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: switchable`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: switchable`</p>
+</div>
+<div class="paragraph">
+<p>`          options:`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`              value: text`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: richText`</p>
+</div>
+<div class="paragraph">
+<p>`              value: richText`</p>
+</div>
+<div class="paragraph">
+<p>`          fields:`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`              fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: richText`</p>
+</div>
+<div class="paragraph">
+<p>`              fieldType: richText`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabMultiBasic`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: multitext`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: multiValue`</p>
+</div>
+<div class="paragraph">
+<p>`          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueFieldTransformer`</p>
+</div>
+<div class="paragraph">
+<p>`          field:`</p>
+</div>
+<div class="paragraph">
+<p>`            name: text`</p>
+</div>
+<div class="paragraph">
+<p>`            fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabMultiDeleg`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: items`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: multiValue`</p>
+</div>
+<div class="paragraph">
+<p>`          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer`</p>
+</div>
+<div class="paragraph">
+<p>`          field:`</p>
+</div>
+<div class="paragraph">
+<p>`            name: itemComposite`</p>
+</div>
+<div class="paragraph">
+<p>`            fieldType: composite`</p>
+</div>
+<div class="paragraph">
+<p>`            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer`</p>
+</div>
+<div class="paragraph">
+<p>`            fields:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`                fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: link`</p>
+</div>
+<div class="paragraph">
+<p>`                fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabMultiLex`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: itemsLex`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: multiValue`</p>
+</div>
+<div class="paragraph">
+<p>`          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer`</p>
+</div>
+<div class="paragraph">
+<p>`          field:`</p>
+</div>
+<div class="paragraph">
+<p>`            name: itemComposite`</p>
+</div>
+<div class="paragraph">
+<p>`            fieldType: composite`</p>
+</div>
+<div class="paragraph">
+<p>`            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer`</p>
+</div>
+<div class="paragraph">
+<p>`            fields:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`                fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: link`</p>
+</div>
+<div class="paragraph">
+<p>`                fieldType: text`</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    switchable:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: switchableField`</p>
+</div>
+<div class="paragraph">
+<p>`      field:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: radioButtonGroupField`</p>
+</div>
+<div class="paragraph">
+<p>`        datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`          $type: optionListDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`          options:`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`              value: text`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: richText`</p>
+</div>
+<div class="paragraph">
+<p>`              value: richText`</p>
+</div>
+<div class="paragraph">
+<p>`      itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: currentItemProvider`</p>
+</div>
+<div class="paragraph">
+<p>`      propertyNameDecorator: info.magnolia.ui.field.PrefixNameDecorator`</p>
+</div>
+<div class="paragraph">
+<p>`      forms:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`          properties:`</p>
+</div>
+<div class="paragraph">
+<p>`            text:`</p>
+</div>
+<div class="paragraph">
+<p>`              $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: richText`</p>
+</div>
+<div class="paragraph">
+<p>`          properties:`</p>
+</div>
+<div class="paragraph">
+<p>`            richText:`</p>
+</div>
+<div class="paragraph">
+<p>`              $type: richTextField`</p>
+</div>
+<div class="paragraph">
+<p>`    multitext:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jcrMultiField`</p>
+</div>
+<div class="paragraph">
+<p>`      itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: currentItemProvider`</p>
+</div>
+<div class="paragraph">
+<p>`      field:`</p>
+</div>
+<div class="paragraph">
+<p>`        name: text`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`    items:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jcrMultiField`</p>
+</div>
+<div class="paragraph">
+<p>`      itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: jcrChildNodeProvider`</p>
+</div>
+<div class="paragraph">
+<p>`        supportI18N: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`      entryResolution:`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>class</code>: info.magnolia.ui.editor.MultiFieldEntryResolution$Definition`</p>
+</div>
+<div class="paragraph">
+<p>`        propertyNameDecorator: info.magnolia.ui.field.AlwaysEmptyPrefixNameDecorator`</p>
+</div>
+<div class="paragraph">
+<p>`      field:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: compositeField`</p>
+</div>
+<div class="paragraph">
+<p>`        properties:`</p>
+</div>
+<div class="paragraph">
+<p>`          text:`</p>
+</div>
+<div class="paragraph">
+<p>`            $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`          link:`</p>
+</div>
+<div class="paragraph">
+<p>`            $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`    itemsLex:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jcrMultiField`</p>
+</div>
+<div class="paragraph">
+<p>`      itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: jcrChildNodeProvider`</p>
+</div>
+<div class="paragraph">
+<p>`        supportI18N: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`      entryResolution:`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>class</code>: info.magnolia.ui.editor.ByLexicographicallyIndexedChildNodes$Definition`</p>
+</div>
+<div class="paragraph">
+<p>`      field:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: compositeField`</p>
+</div>
+<div class="paragraph">
+<p>`        properties:`</p>
+</div>
+<div class="paragraph">
+<p>`          text:`</p>
+</div>
+<div class="paragraph">
+<p>`            $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`          link:`</p>
+</div>
+<div class="paragraph">
+<p>`            $type: textField`</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Item providers</p>
+</div>
+<div class="paragraph">
+<p>Site definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Form definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Form_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Form_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Form_definition.html">Form definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Form definition - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Dialog_definition.html">Dialog definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596351"><a class="anchor" href="#src-196596351"></a>Form definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Forms define fields and similar components as well as their layout. Form
+definition is used in dialogs and the detail subapps of content apps.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This form definition is part of the <em>Magnolia 6 UI</em> framework. The fully
+qualified class name is <code>info.magnolia.ui.editor.FormDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Form+definition+-+5+UI">Form
+definition for <em>Magnolia 5 UI</em></a> instead.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596351_Formdefinition-Exampleformdefinition"><a class="anchor" href="#src-196596351_Formdefinition-Exampleformdefinition"></a>Example form definition</h3>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    salutation:`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Salutation`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`      i18n: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    firstName:`</p>
+</div>
+<div class="paragraph">
+<p>`      label: First name`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`      required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    lastName:`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Last name`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`      required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    email:`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Email`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`      required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`      validators:`</p>
+</div>
+<div class="paragraph">
+<p>`        email:`</p>
+</div>
+<div class="paragraph">
+<p>`          $type: emailValidator`</p>
+</div>
+<div class="paragraph">
+<p>The <code>properties</code> list here is defined with the YAML list syntax.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When a property type is defined as a list in the corresponding Java
+class, you can use the YAML map syntax or list syntax.
+Map2BeanTransformer converts YAML in both cases correctly.</p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML#YAML-anc-map-and-list-syntax-for-list-properties">YAML:
+Defining a list property via YAML map or list syntax</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596351_Formdefinition-Formproperties"><a class="anchor" href="#src-196596351_Formdefinition-Formproperties"></a>Form properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>properties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A list of editor property definition items (typically, a list of
+fields).</p>
+</div>
+<div class="paragraph">
+<p>See <a href="Field_definition.html">Field definition</a> for more information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>layout</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is
+`info.magnolia.ui.framework.layout.FormLayoutDefinition`</em></p>
+</div>
+<div class="paragraph">
+<p>Defines the form layout. The value must be a subtype of
+<code>info.magnolia.ui.framework.layout.LayoutDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="#src-196596351_Formdefinition-Layouttypes">Layout types</a> for
+more information.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596351_Formdefinition-Layouttypes"><a class="anchor" href="#src-196596351_Formdefinition-Layouttypes"></a>Layout types</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>declarativeLayout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.framework.layout.DeclarativeLayoutDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>form</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.framework.layout.FormLayoutDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>horizontal</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.framework.layout.HorizontalLayoutDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tabbedLayout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.framework.layout.TabbedLayoutDefinition</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196596351_Formdefinition-Defaultlayout"><a class="anchor" href="#src-196596351_Formdefinition-Defaultlayout"></a>Default layout</h4>
+<div class="paragraph">
+<p>With the default layout, it is not possible to configure anything. Use
+this layout when there is no need for customization.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+From Magnolia 6.2.1, <code>FormLayoutDefinition</code> has replaced the deprecated
+<code>PlainFormLayoutDefinition</code> as the default layout.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596351_Formdefinition-Tabbedlayout"><a class="anchor" href="#src-196596351_Formdefinition-Tabbedlayout"></a>Tabbed layout</h4>
+<div class="paragraph">
+<p>With the tabbed layout, you can add or remove tabs and fields. It is not
+possible to change how any tabs and fields are rendered.</p>
+</div>
+<div class="paragraph">
+<p>Example tabbed layout definition</p>
+</div>
+<div class="paragraph">
+<p><code>layout:</code></p>
+</div>
+<div class="paragraph">
+<p>`  $type: tabbedLayout`</p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    personal:`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: salutation`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: firstName`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: lastName`</p>
+</div>
+<div class="paragraph">
+<p>`    details:`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: email`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: phone`</p>
+</div>
+<div class="paragraph">
+<p>`    address:`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: streetAddress`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: postalCode`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: city`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: country`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596351_Formdefinition-Horizontallayout"><a class="anchor" href="#src-196596351_Formdefinition-Horizontallayout"></a>Horizontal layout</h4>
+<div class="paragraph">
+<p>With the horizontal layout, you can order components horizontally. To
+disable spacing between components, set the <code>spacing</code> property to
+<code>false</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+<code>HorizontalLayoutDefinition</code> has been introduced since Magnolia 6.2.1.</p>
+</div>
+<div class="paragraph">
+<p>Example horizontal layout definition</p>
+</div>
+<div class="paragraph">
+<p><code>composite:</code></p>
+</div>
+<div class="paragraph">
+<p>`  $type: compositeField`</p>
+</div>
+<div class="paragraph">
+<p>`  label: Name`</p>
+</div>
+<div class="paragraph">
+<p>`  layout: horizontal`</p>
+</div>
+<div class="paragraph">
+<p>`  fields:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: salutation`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Salutation`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: select`</p>
+</div>
+<div class="paragraph">
+<p>`      options:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: Mr.`</p>
+</div>
+<div class="paragraph">
+<p>`          value: Mr.`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Mr.`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: Mrs.`</p>
+</div>
+<div class="paragraph">
+<p>`          value: Mrs.`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Mrs.`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: firstName`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: text`</p>
+</div>
+<div class="paragraph">
+<p>`      label: First name`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: lastName`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: text`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Last name`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596351_Formdefinition-Declarativelayout"><a class="anchor" href="#src-196596351_Formdefinition-Declarativelayout"></a>Declarative layout</h4>
+<div class="paragraph">
+<p>With the declarative layout, you can create form entries in an arbitrary
+Vaadin component container using the
+<a href="https://vaadin.com/docs/framework/application/application-declarative.html">Vaadin
+declarative syntax</a>. Use this layout for full customization.</p>
+</div>
+<div class="paragraph">
+<p>Example declarative layout definition</p>
+</div>
+<div class="paragraph">
+<p><code>layout:</code></p>
+</div>
+<div class="paragraph">
+<p>`  $type: declarativeLayout`</p>
+</div>
+<div class="paragraph">
+<p>`  template: /contacts/layouts/edit-contact.html`</p>
+</div>
+<div class="paragraph">
+<p>To render the layout, a <code>template</code> property is <strong>required</strong>. Because the
+Vaadin declarative syntax is used to design custom layouts, the
+declarative template has to be an HTML document.</p>
+</div>
+<div class="paragraph">
+<p>In the template, the tag of a component element can have one of the
+following prefixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>vaadin-</code>: Vaadin core component.</p>
+</li>
+<li>
+<p><code>mgnl-</code>: Magnolia predefined or user-defined component. To define a
+mapping between a tag prefix and the Java package of the component, see
+the "Component Prefix to Package Mapping" section of
+<a href="https://vaadin.com/docs/framework/application/application-declarative.html">Designing
+UIs Declaratively</a>. The following Magnolia predefined components are
+available:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;mgnl-separator/&gt;</code>: horizontal line to separate content.</p>
+</li>
+<li>
+<p><code>&lt;mgnl-group caption=""&gt;</code>: group header with a <code>caption</code> attribute to
+separate content.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>form-</code>: Magnolia property as defined in YAML.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can always use Magnolia predefined or user-defined components and
+Magnolia properties with Vaadin core components.</p>
+</div>
+<div class="paragraph">
+<p>Example declarative template</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>html</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>meta</code> <code>name</code>=<code>`"package-mapping"</code></p>
+</div>
+<div class="paragraph">
+<p>`              <code>content</code>=<code>"custom:info.magnolia.contacts.layout"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>custom</code>-vertical-layout <code>spacing</code>=<code>"false"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>vaadin</code>-vertical-layout <code>spacing</code>=<code>"false"</code> <code>style-name</code>=<code>"my-container"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>vaadin</code>-label width-auto&gt;Hello declarative layout&lt;/<code>vaadin</code>-label&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>mgnl</code>-separator/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>vaadin</code>-label width-auto&gt;${i18n.get("contacts.label")}&lt;/<code>vaadin</code>-label&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>vaadin</code>-vertical-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>mgnl</code>-group <code>caption</code>=<code>'${i18n.get("contacts.personal")}'</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>vaadin</code>-form-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-salutation/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-firstName/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-lastName/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;/<code>vaadin</code>-form-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>mgnl</code>-group&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>mgnl</code>-group <code>caption</code>=<code>"Details"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>vaadin</code>-form-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-email/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-phone/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;/<code>vaadin</code>-form-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>mgnl</code>-group&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>mgnl</code>-group <code>caption</code>=<code>"Address"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>vaadin</code>-form-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-streetAddress/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-postalCode/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-city/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>form</code>-country/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;/<code>vaadin</code>-form-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>mgnl</code>-group&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>custom</code>-vertical-layout&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>html</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>It is recommended that Magnolia properties be nested inside a
+<code>&lt;vaadin-form-layout&gt;</code> tag. If you insert a Magnolia property inside a
+<code>&lt;vaadin-vertical-layout&gt;</code> tag, the component will not be rendered as
+nicely.</p>
+</div>
+<div class="paragraph">
+<p>src/main/resources/info/magnolia/contacts/layout/my-style.css</p>
+</div>
+<div class="paragraph">
+<p><code>.my-container {</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>background-color</code>: <code>#93bbc4</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>src/main/java/info/magnolia/contacts/layout/VerticalLayout.java</p>
+</div>
+<div class="paragraph">
+<p><code>package`</code> info.magnolia.contacts.layout;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> com.vaadin.annotations.StyleSheet;`</p>
+</div>
+<div class="paragraph">
+<p><code>@StyleSheet<code>(</code>"my-style.css"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> VerticalLayout </code>extends`</code> com.vaadin.ui.VerticalLayout {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If <code>VerticalLayout.java</code> is stored in
+<code>src/main/java/info/magnolia/contacts/layout</code>, <code>my-style.css</code> should be
+added to <code>src/main/resources/info/magnolia/contacts/layout</code>.</p>
+</div>
+<div class="paragraph">
+<p>Dialog types</p>
+</div>
+<div class="paragraph">
+<p>Field definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

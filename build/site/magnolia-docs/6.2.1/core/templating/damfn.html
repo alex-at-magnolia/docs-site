@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>damfn - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/damfn.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="damfn.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="damfn.html">damfn - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">damfn - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Template_scripts.html">Template scripts</a></p>
+</li>
+<li>
+<p><a href="Templating_functions.html">Templating functions</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596484"><a class="anchor" href="#src-196596484"></a>damfn</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">Digital
+asset management</a></p>
+</li>
+<li>
+<p><a href="Templating_functions.html">About templating functions</a></p>
+</li>
+<li>
+<p><a href="Templating_function_arguments_and_return_types.html">Arguments and
+return types</a></p>
+</li>
+<li>
+<p>Javadoc DamTemplatingFunctions</p>
+</li>
+<li>
+<p><a href="How_to_work_with_images_using_damfn.html">How to work with images
+using damfn</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>damfn</code> templating functions provides access to digital assets such as
+images. Use these functions to get an asset from Magnolia&#8217;s built-in DAM
+or other asset providers. DAM functions also create asset renditions and
+links to assets.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596484_damfn-Getasset"><a class="anchor" href="#src-196596484_damfn-Getasset"></a>Get asset</h3>
+<div class="paragraph">
+<p>Retrieves an <code>Asset</code> by <code>itemKey</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Methodsignature"><a class="anchor" href="#src-196596484_damfn-Methodsignature"></a>Method signature</h4>
+<div class="paragraph">
+<p><code>Asset getAsset(String itemKey)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Arguments"><a class="anchor" href="#src-196596484_damfn-Arguments"></a>Arguments</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A key that uniquely identifies an asset. The key is composed of an asset
+provider ID and a provider-specific asset ID.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Returns"><a class="anchor" href="#src-196596484_damfn-Returns"></a>Returns</h4>
+<div class="paragraph">
+<p><code>Asset</code></p>
+</div>
+<div class="paragraph">
+<p>An asset by the given itemKey.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Usage"><a class="anchor" href="#src-196596484_damfn-Usage"></a>Usage</h4>
+<div class="paragraph">
+<p><code>damfn.getAsset(itemKey)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign itemKey = cmsfn.asContentMap(componentNode).image]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myAsset = damfn.getAsset(itemKey)]</code></p>
+</div>
+<div class="paragraph">
+<p>In this example <code>componentNode</code> is the node of a Text and Image
+component.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Relatedfunctions"><a class="anchor" href="#src-196596484_damfn-Relatedfunctions"></a>Related functions</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Asset getAsset(String providerId, String assetPath)</code>. Returns an
+asset from a given asset provider. The asset provider does not have to
+be Magnolia JCR.</p>
+</li>
+<li>
+<p><code>Asset getAssetForAbsolutePath(String providerId, String absoluteAssetPath)</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596484_damfn-Getfolder"><a class="anchor" href="#src-196596484_damfn-Getfolder"></a>Get folder</h3>
+<div class="paragraph">
+<p>Gets a <code>Folder</code> based on an <code>itemKey</code>. Deleted or hidden folders are not
+returned.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Methodsignature.1"><a class="anchor" href="#src-196596484_damfn-Methodsignature.1"></a>Method signature</h4>
+<div class="paragraph">
+<p><code>Folder getFolder(String itemKey)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Arguments.1"><a class="anchor" href="#src-196596484_damfn-Arguments.1"></a>Arguments</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A key that uniquely identifies an asset. The key is composed of an asset
+provider ID and a provider-specific asset ID.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Returns.1"><a class="anchor" href="#src-196596484_damfn-Returns.1"></a>Returns</h4>
+<div class="paragraph">
+<p><code>Folder</code>.</p>
+</div>
+<div class="paragraph">
+<p>A folder by the given item key.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Usage.1"><a class="anchor" href="#src-196596484_damfn-Usage.1"></a>Usage</h4>
+<div class="paragraph">
+<p><code>damfn.getFolder(itemKey)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign contentPageNode = cmsfn.root(currentNode).getNode("home")]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign componentNode = contentPageNode.getNode("main/0") ]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign folderItemKey = cmsfn.asContentMap(componentNode).image]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myAsset = damfn.getFolder(folderItemKey)]</code></p>
+</div>
+<div class="paragraph">
+<p><code>folder-name: ${myAsset.name}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Relatedfunctions.1"><a class="anchor" href="#src-196596484_damfn-Relatedfunctions.1"></a>Related functions</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Folder getFolder(String providerId, String folderPath)</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596484_damfn-Getassetrendition"><a class="anchor" href="#src-196596484_damfn-Getassetrendition"></a>Get asset rendition</h3>
+<div class="paragraph">
+<p>Gets the <code>AssetRendition</code> for a given <code>itemKey</code> and <code>renditionName</code>. If
+the Asset exists but the rendition is not defined, it returns "default"
+rendition which is the same as the original asset.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Methodsignature.2"><a class="anchor" href="#src-196596484_damfn-Methodsignature.2"></a>Method signature</h4>
+<div class="paragraph">
+<p><code>AssetRendition getRendition(String itemKey, String renditionName)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Arguments.2"><a class="anchor" href="#src-196596484_damfn-Arguments.2"></a>Arguments</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Composite key that identifies the asset&#8217;s provider ID and
+provider-specific ID.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>renditionName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the rendition.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Returns.2"><a class="anchor" href="#src-196596484_damfn-Returns.2"></a>Returns</h4>
+<div class="paragraph">
+<p><code>AssetRendition</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Usage.2"><a class="anchor" href="#src-196596484_damfn-Usage.2"></a>Usage</h4>
+<div class="paragraph">
+<p><code>damfn.getRendition(itemKey, renditionName)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign itemKey = cmsfn.asContentMap(componentNode).image]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myRendition = damfn.getRendition(itemKey, <code>"small-square"</code>)!]</code></p>
+</div>
+<div class="paragraph">
+<p>The example above assumes that you have defined a rendition (image
+variation) named <code>small-square</code> in your <a href="Theme.html">Theme</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Relatedfunctions.2"><a class="anchor" href="#src-196596484_damfn-Relatedfunctions.2"></a>Related functions</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AssetRendition getRendition(Asset asset, String renditionName)</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596484_damfn-Createassetpropertymap"><a class="anchor" href="#src-196596484_damfn-Createassetpropertymap"></a>Create asset property map</h3>
+<div class="paragraph">
+<p>Creates a map for a given <code>Asset</code> or a given <code>itemKey</code> containing all
+the bean properties of the asset. Additionally the map may contain
+further nested maps with the properties of classes implementing
+AssetMetadata . The metadata submaps are collected under the key
+<code>metadata</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Methodsignature.3"><a class="anchor" href="#src-196596484_damfn-Methodsignature.3"></a>Method signature</h4>
+<div class="paragraph">
+<p><code>Map&lt;String, Object&gt; getAssetMap(Asset asset)</code></p>
+</div>
+<div class="paragraph">
+<p><code>Map&lt;String, Object&gt; getAssetMap(String itemKey)</code></p>
+</div>
+<div class="paragraph">
+<p><code>Map&lt;String, Object&gt; getAssetMapForAssetId(String itemKey)</code> *</p>
+</div>
+<div class="paragraph">
+<p>*) getAssetMapForAssetId(String itemKey) and getAssetMap(String itemKey)
+are both identical.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Arguments.3"><a class="anchor" href="#src-196596484_damfn-Arguments.3"></a>Arguments</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asset</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>Asset</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The composed item key.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Returns.3"><a class="anchor" href="#src-196596484_damfn-Returns.3"></a>Returns</h4>
+<div class="paragraph">
+<p><code>Map&lt;String, Object&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>A map with the properties of an asset.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Usage.3"><a class="anchor" href="#src-196596484_damfn-Usage.3"></a>Usage</h4>
+<div class="paragraph">
+<p><code>damfn.getAssetMap(asset)</code> or <code>damfn.getAssetMap(itemKey)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myAsset = damfn.getAsset("jcr", "photos/pool.jpg")!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myAssetMap = damfn.getAssetMap(myAsset)]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#-- assign myAssetMap = damfn.getAssetMap("jcr:20d6e4e3-fe53-4b23-8d64-6e67a1c1667f")--]</code></p>
+</div>
+<div class="paragraph">
+<p><code>fileSize: ${myAssetMap.fileSize}</code></p>
+</div>
+<div class="paragraph">
+<p><code>name: ${myAssetMap.name}</code></p>
+</div>
+<div class="paragraph">
+<p><code>title: ${myAssetMap.title}</code></p>
+</div>
+<div class="paragraph">
+<p><code>width: ${myAssetMap.metadata.mgnl.width}</code></p>
+</div>
+<div class="paragraph">
+<p><code>format: ${myAssetMap.metadata.dc.format}</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 3 shows an alternative for line 1-2.</p>
+</li>
+<li>
+<p>The existance of the metadata submaps (see lines 7, 8) depends on the
+implementation of your AssetProvider (see
+<a href="Templating_function_arguments_and_return_types.html#src-196596496_Templatingfunctionargumentsandreturntypes-Mapofanassetanditsmetadata">Map
+of an asset and its metadata</a>). When JcrAssetProvider (fetching assets
+for the workspace dam) metadata.mgnl and metadata.dc are available.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596484_damfn-Getlinkforasset"><a class="anchor" href="#src-196596484_damfn-Getlinkforasset"></a>Get link for asset</h3>
+<div class="paragraph">
+<p>Gets a link to an <code>Asset</code> . Returns null if <code>Asset</code> is not found or in
+case of an exception.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Methodsignature.4"><a class="anchor" href="#src-196596484_damfn-Methodsignature.4"></a>Method signature</h4>
+<div class="paragraph">
+<p><code>String getAssetLink(String itemKey)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Arguments.4"><a class="anchor" href="#src-196596484_damfn-Arguments.4"></a>Arguments</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Composite key that identifies the asset&#8217;s provider ID and
+provider-specific ID.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Returns.4"><a class="anchor" href="#src-196596484_damfn-Returns.4"></a>Returns</h4>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+<div class="paragraph">
+<p>The link to an asset by a given asset key.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Usage.4"><a class="anchor" href="#src-196596484_damfn-Usage.4"></a>Usage</h4>
+<div class="paragraph">
+<p><code>damfn.getAssetLink(itemKey)</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>img</code> <code>src</code>=<code>"${damfn.getAssetLink("</code>jcr:324aa329-7acc-4a21-a05e-d5f9b69bf7e4")}"/&gt;`</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596484_damfn-Getlinkforassetrendition"><a class="anchor" href="#src-196596484_damfn-Getlinkforassetrendition"></a>Get link for asset rendition</h3>
+<div class="paragraph">
+<p>Gets the link to the <code>AssetRendition</code> for a given <code>itemKey</code> and
+<code>renditionName</code> . Returns null in the case of an exception or if Asset
+or AssetRendition are not found. If the Asset exists but the rendition
+is not defined, it returns the link to the "default" rendition which is
+the same as the original asset.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Methodsignature.5"><a class="anchor" href="#src-196596484_damfn-Methodsignature.5"></a>Method signature</h4>
+<div class="paragraph">
+<p><code>String getAssetLink(String itemKey, String renditionName)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Arguments.5"><a class="anchor" href="#src-196596484_damfn-Arguments.5"></a>Arguments</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Composite key that identifies the asset&#8217;s provider ID and
+provider-specific ID.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>renditionName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the rendition.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Returns.5"><a class="anchor" href="#src-196596484_damfn-Returns.5"></a>Returns</h4>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+<div class="paragraph">
+<p>The link to an asset rendition by given item key and rendition name.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Usage.5"><a class="anchor" href="#src-196596484_damfn-Usage.5"></a>Usage</h4>
+<div class="paragraph">
+<p><code>damfn.getAssetLink(itemKey, renditionName)</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>img</code> <code>src</code>=<code>"${damfn.getAssetLink("</code>jcr:324aa329-7acc-4a21-a05e-d5f9b69bf7e4", "small-square")}"/&gt;`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596484_damfn-Relatedfunctions.3"><a class="anchor" href="#src-196596484_damfn-Relatedfunctions.3"></a>Related functions</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>String getAssetLink(Asset asset, String renditionName)</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>cmsfn</p>
+</div>
+<div class="paragraph">
+<p>imgfn</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

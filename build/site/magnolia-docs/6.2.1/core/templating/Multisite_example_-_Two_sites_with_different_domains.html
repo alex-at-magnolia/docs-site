@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Multisite example - Two sites with different domains - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Multisite_example_-_Two_sites_with_different_domains.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Multisite_example_-_Two_sites_with_different_domains.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Multisite_example_-_Two_sites_with_different_domains.html">Multisite example - Two sites with different domains - Magnolia 6.2</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Multisite example - Two sites with different domains - Magnolia 6.2</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Site_definition.html">Site definition</a></p>
+</li>
+<li>
+<p><a href="How_to_use_Multisite.html">How to use Multisite</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681"><a class="anchor" href="#src-196596681"></a>Multisite example - Two sites with different domains</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page contains an example of how to configure multiple sites to
+manage different websites mapped to different domains.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example scenario</strong>: Eric has a store where he sells comic books and
+vinyl records. He wants different sites for his products. Comic books
+are his main business.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Settingupdomains"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Settingupdomains"></a>Setting up domains</h3>
+<div class="paragraph">
+<p>Eric has registered two domains: one for comics and one for vinyl. Since
+comics is his primary business, he registered the domain
+`www.best-comics.net `for the comics first, so this will be his <em>main</em>
+domain.</p>
+</div>
+<div class="paragraph">
+<p>author instance</p>
+</div>
+<div class="paragraph">
+<p>public instance</p>
+</div>
+<div class="paragraph">
+<p><em>comics</em></p>
+</div>
+<div class="paragraph">
+<p>author.best-comics.net</p>
+</div>
+<div class="paragraph">
+<p>www.best-comics.net</p>
+</div>
+<div class="paragraph">
+<p><em>vinyl</em></p>
+</div>
+<div class="paragraph">
+<p>www.best-vinyl.net</p>
+</div>
+<div class="paragraph">
+<p>Use only one domain - a subdomain of the main domain - to access the
+author instance (see
+<a href="How_to_use_Multisite.html#src-196596675_HowtouseMultisite-Magnoliasetupanddomainsinaproductionenvironment">Magnolia
+setup and domains</a>).</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596681_Multisiteexample-Twositeswithdifferentdomains-content-setup]</mark>#</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Settingupcontent"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Settingupcontent"></a>Setting up content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Eric has created a lot of pages. When simplified, his website workspace
+has a structure with two pages in root directory as shown below. The two
+pages act as the home pages for the two different websites (both have
+many subpages not shown here).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Page</th>
+<th class="tableblock halign-left valign-top">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vinyl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best vinyl</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[<mark>src-196596681_Multisiteexample-Twositeswithdifferentdomains-site-definitions-setup]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Settingupsitedefinitions"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Settingupsitedefinitions"></a>Setting up site definitions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This table shows the configuration of the site definitions required by
+Eric.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fallback</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../comics-site</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comics-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prototype</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">best-comics</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.best-comics.net</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vinyl-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/vinyl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">best-vinyl</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.best-vinyl.net</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note the following points which reflect common practice and the
+scenario:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>We have a main site definition - here it is <code>comics-site</code> - that
+defines a <a href="Template_prototype.html">prototype</a>.</p>
+</li>
+<li>
+<p>The <code>fallback</code> site:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Extends the main site by using <code>@extends=../comics-site</code>.</p>
+</li>
+<li>
+<p><em>mappings</em> does <em>not</em> inherit from the main site because we use
+<code>@extends=override</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596681_Multisiteexample-Twositeswithdifferentdomains-remove-unwanted-virtualURIMapping-on-public-context]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-RemovingunwantedvirtualURIMappingonpubliccontext"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-RemovingunwantedvirtualURIMappingonpubliccontext"></a>Removing unwanted virtualURIMapping on public context</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Request the URL <a href="http://www.best-comics.net" class="bare">http://www.best-comics.net</a>. If you are redirected to the
+admin login page (<a href="http://www.best-comics.net/.magnolia/admincentral" class="bare">http://www.best-comics.net/.magnolia/admincentral</a>),
+the public context contains a virtualURIMapping. This URI mapping is
+fine for an author context but not for the public context.</p>
+</div>
+<div class="paragraph">
+<p>To remove the mapping:</p>
+</div>
+<div class="paragraph">
+<p>Use the <a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a>
+to search for <code>virtualURIMapping</code> in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+app">Configuration
+app</a>.</p>
+</div>
+<div class="paragraph">
+<p>On a standard Magnolia bundle you typically find the following node:
+<code>/modules/ui-admincentral/virtualURIMapping.</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualURIMapping</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Delete this node on the public instance</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.multisite.MultiSiteRootVirtualURIMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromURI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toURI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">redirect:/.magnolia/admincentral</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Delete the node <code>/modules/ui-admincentral/virtualURIMapping/default</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-CheckingtheaccessURLs"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-CheckingtheaccessURLs"></a>Checking the access URLs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Test the setup. Make sure you have pages shown in
+<a href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-content-setup">content
+setup</a> in both the author and public instances.</p>
+</div>
+<div class="paragraph">
+<p>URL</p>
+</div>
+<div class="paragraph">
+<p>website on browser</p>
+</div>
+<div class="paragraph">
+<p>rendered page node</p>
+</div>
+<div class="paragraph">
+<p><strong>Public instance</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.best-comics.net">www.best-comics.net</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596681/PUB_best-comics-root-page.png.png" alt="images/download/attachments/196596681/PUB_best-comics-root-page.png.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>/comics</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.best-vinyl.net/">www.best-vinyl.net</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596681/PUB_best-vinyl-root-page.png.png" alt="images/download/attachments/196596681/PUB_best-vinyl-root-page.png.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>/vinyl</p>
+</div>
+<div class="paragraph">
+<p><strong>Author instance</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="http://author.best-comics.net/comics-site">author.best-comics.net/comics-site</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596681/author_best-comics-root-page.png" alt="images/download/attachments/196596681/author_best-comics-root-page.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>/comics</p>
+</div>
+<div class="paragraph">
+<p><a href="http://author.best-comics.net/vinyl-site">author.best-comics.net/vinyl-site</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596681/author_best-vinyl-root-page.png.png" alt="images/download/attachments/196596681/author_best-vinyl-root-page.png.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>/vinyl</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Onauthorinstance"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Onauthorinstance"></a>On author instance</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">URL</th>
+<th class="tableblock halign-left valign-top">website on browser</th>
+<th class="tableblock halign-left valign-top">rendered page node</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://author.best-comics.net/comics-site">author.best-comics.net/comics-site</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596681/author_best-comics-root-page.png" alt="images/download/attachments/196596681/author_best-comics-root-page.png" height="250"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://author.best-comics.net/vinyl-site">author.best-comics.net/vinyl-site</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596681/author_best-vinyl-root-page.png.png" alt="images/download/attachments/196596681/author_best-vinyl-root-page.png.png" height="250"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/vinyl</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To access the root page of a site in the author instance, which is
+accessed on a domain that is <em>not</em> mapped to a site, use the following
+URL:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;protocol&gt;://&lt;author-domain&gt;/&lt;context&gt;/&lt;site-definition-name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Note that Magnolia creates these links automatically, for example, when
+you open the <strong>Preview</strong> tab in the author instance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Managingcross-sitelinks"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Managingcross-sitelinks"></a>Managing cross-site links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Imagine that Eric wants to advertise his vinyl records store from the
+comic book store and vice versa. So he creates links from pages on the
+<code>comics-site</code> to the <code>vinyl-site</code> and vice versa.</p>
+</div>
+<div class="paragraph">
+<p>Use the
+<a href="Templates_in_MTK.html#src-196596719_TemplatesinMTK-Link">link
+component from mtk</a> (<code>mtk:components/link</code>) in your page template to add
+links:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596681/cross-site-link_linkBrowser.png" alt="images/download/attachments/196596681/cross-site-link_linkBrowser.png"></span></p>
+</div>
+<div class="paragraph">
+<p>In this example, on the root page of the <code>comics-site</code> we add a link to
+the root page of the <code>vinyl-site</code>.</p>
+</div>
+<div class="paragraph">
+<p>When Magnolia resolves links in a multisite context, it creates links
+that start with the domain:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596681/cross-site-linl-with-domain.png" alt="images/download/attachments/196596681/cross-site-linl-with-domain.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Managingcross-siteaccess"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Managingcross-siteaccess"></a>Managing cross-site access</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can access a site using the
+<a href="How_to_use_Multisite.html#src-196596675_HowtouseMultisite-Sitedefinitionname">site-definition-name</a>.
+The full pattern of this kind of URL looks like this:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;protocol&gt;://&lt;domain&gt;:&lt;port&gt;/&lt;context&gt;/&lt;site-definition-name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Note that this only works if the <em>domain</em> is different from the domain
+which is mapped to the site of the given site-definition-name.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Intheauthorinstance"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Intheauthorinstance"></a>In the author instance</h3>
+<div class="paragraph">
+<p>This way of accessing a site and its pages is necessary in the author
+instance. It is the usual way to access a site in the author instance,
+since the domain of the author instance usually is different from the
+domains mapped to the public instance and mapped to the sites. In this
+scenario, the access URLs of the sites on author are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://author.best-comics.net/comics-site">author.best-comics.net/comics-site</a></p>
+</li>
+<li>
+<p><a href="http://author.best-comics.net/vinyl-site">author.best-comics.net/vinyl-site</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596681_Multisiteexample-Twositeswithdifferentdomains-Inthepublicinstance-preventingit"><a class="anchor" href="#src-196596681_Multisiteexample-Twositeswithdifferentdomains-Inthepublicinstance-preventingit"></a>In the public instance - preventing it</h3>
+<div class="paragraph">
+<p>Following the above URL pattern, you can access the sites in the public
+instance using:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.best-comics.net/vinyl-site">www.best-comics.net/vinyl-site</a></p>
+</li>
+<li>
+<p><a href="http://www.best-vinyl.net/comics-site">www.best-vinyl.net/comics-site</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that the first URL accesses the vinyl site via the comic site
+domain and the second URL accesses the comic site via the vinyl site
+domain.</p>
+</div>
+<div class="paragraph">
+<p>This type of access should be avoided in a public instance because:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The same content is served from different URLs. This has a negative
+impact in the context of SEO
+(<a href="https://en.wikipedia.org/wiki/Search_engine_optimization">Search engine
+optimization</a>) and may decrease the Google ranking.</p>
+</li>
+<li>
+<p>Content rendered by the "wrong" site may appear with "wrong" styling
+or may have missing web resources due to different themes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To prevent this:</p>
+</div>
+<div class="paragraph">
+<p>Disable the <code>uri-starts-with-sitename</code> rule in the public context.</p>
+</div>
+<div class="paragraph">
+<p>Add an additional voter AdminOnlyMatcher to the rule. This way you can
+use the same configuration on both the author and public instances.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri-starts-with-sitename</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">matchers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.multisite.sites.matchers.SiteNameMatcher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.multisite.sites.matchers.AdminOnlyMatcher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">multipleMatchesPossible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Matcher <code>0</code> is set by default in the <code>uri-starts-with-sitename</code> rule.
+Add AdminOnlyMatcher as a second matcher to ensure the rule is applied
+in the author instance only.</p>
+</div>
+<div class="paragraph">
+<p>Multisite example - Minisite using URL prefix and domain</p>
+</div>
+<div class="paragraph">
+<p>Template prototype</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

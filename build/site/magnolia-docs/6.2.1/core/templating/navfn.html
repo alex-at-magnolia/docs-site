@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>navfn - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/navfn.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="navfn.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="navfn.html">navfn - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">navfn - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Template_scripts.html">Template scripts</a></p>
+</li>
+<li>
+<p><a href="Templating_functions.html">Templating functions</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596487"><a class="anchor" href="#src-196596487"></a>navfn</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Templating_functions.html">About templating functions</a></p>
+</li>
+<li>
+<p><a href="Templating_function_arguments_and_return_types.html">Arguments and
+return types</a></p>
+</li>
+<li>
+<p>Javadoc NavigationTemplatingFunctions</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>navfn</code> templating functions allow you to create navigation for your
+site. There are methods to access standard pages and also content stored
+in apps and rendered on virtual pages. The <code>navfn</code> templating function
+library is included in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module">MTE module</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596487_navfn-Accessingancestors"><a class="anchor" href="#src-196596487_navfn-Accessingancestors"></a>Accessing ancestors</h3>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Gettingtherootpage"><a class="anchor" href="#src-196596487_navfn-Gettingtherootpage"></a>Getting the root page</h4>
+<div class="paragraph">
+<p>Returns the highest ancestor page of type <em>mgnl:page</em> for the provided
+content - which is the root page.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature"><a class="anchor" href="#src-196596487_navfn-Methodsignature"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>ContentMap rootPage(ContentMap content)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument"><a class="anchor" href="#src-196596487_navfn-Argument"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The node whose ancestors you want to get.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns"><a class="anchor" href="#src-196596487_navfn-Returns"></a>Returns</h5>
+<div class="paragraph">
+<p><code>ContentMap</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage"><a class="anchor" href="#src-196596487_navfn-Usage"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.rootPage(content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign navigationRootPage = navfn.rootPage(content)!]</code></p>
+</div>
+<div class="paragraph">
+<p>Returns the ancestor of the provided content at the specified depth if
+the ancestor is of type <em>mgnl:page</em>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.1"><a class="anchor" href="#src-196596487_navfn-Methodsignature.1"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>ContentMap ancestorPageAtLevel(ContentMap content, int depth)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.1"><a class="anchor" href="#src-196596487_navfn-Argument.1"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The node whose ancestors you want to get.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>depth</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page depth.</p>
+</div>
+<div class="paragraph">
+<p>An ancestor of depth x is the page that is x levels down along the path
+from the root page to this page. e.g. depth == 1 would return the root
+page of this page, depth == 2 would return the child page of the root
+page to this page, etc.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.1"><a class="anchor" href="#src-196596487_navfn-Returns.1"></a>Returns</h5>
+<div class="paragraph">
+<p><code>ContentMap</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.1"><a class="anchor" href="#src-196596487_navfn-Usage.1"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.ancestorPageAtLevel(content, depth)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign subNavigationRootPage = navfn.ancestorPageAtLevel(content, 2)!]</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596487_navfn-Accessingchildren"><a class="anchor" href="#src-196596487_navfn-Accessingchildren"></a>Accessing children</h3>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Gettingchildpagesofapage"><a class="anchor" href="#src-196596487_navfn-Gettingchildpagesofapage"></a>Getting child pages of a page</h4>
+<div class="paragraph">
+<p>Returns the list of child nodes of type <em>mgnl:page</em> which aren&#8217;t hidden
+in navigation of the the provided page as a list of content maps.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.2"><a class="anchor" href="#src-196596487_navfn-Methodsignature.2"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>List&lt;ContentMap&gt; navItems(ContentMap page)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.2"><a class="anchor" href="#src-196596487_navfn-Argument.2"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page whose child pages you want to get.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.2"><a class="anchor" href="#src-196596487_navfn-Returns.2"></a>Returns</h5>
+<div class="paragraph">
+<p><code>List&lt;ContentMap&gt;</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.2"><a class="anchor" href="#src-196596487_navfn-Usage.2"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.navItems(page)</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;!-- render links to all pages on "level 1" -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign navParentItem = navfn.rootPage(content)!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navParentItem??]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#assign navItems = navfn.navItems(navParentItem)]`</p>
+</div>
+<div class="paragraph">
+<p>`  [#list navItems as navItem]`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>a</code> <code>href</code>=<code>"${cmsfn.link(navItem)!}"</code>&gt;${navItem.navigationTitle!navItem.title!navItem.@name}&lt;/<code>a</code>&gt; |`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#list]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_safe-id-bmF2Zm4tR2V0dGluZ2NoaWxkbm9kZXNieXdvcmtzcGFjZSxwYXRoYW5kbm9kZXR5cGU"><a class="anchor" href="#src-196596487_safe-id-bmF2Zm4tR2V0dGluZ2NoaWxkbm9kZXNieXdvcmtzcGFjZSxwYXRoYW5kbm9kZXR5cGU"></a>Getting child nodes by workspace, path and node type</h4>
+<div class="paragraph">
+<p>Returns the list of child nodes with specific node type which aren&#8217;t
+hidden in navigation from a defined parent as a list of content maps.
+The workspace and parent path define the location of the parent. Use
+this method to render navigations for content stored in content apps on
+workspaces distinct from website.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.3"><a class="anchor" href="#src-196596487_navfn-Methodsignature.3"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>List&lt;ContentMap&gt; navItemsFromApp(String workspace, String parentPath, String nodeType)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.3"><a class="anchor" href="#src-196596487_navfn-Argument.3"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The workspace of the parent node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parentPath</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The path of the parent node whose children you want to get.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The node type of the children you want to get.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.3"><a class="anchor" href="#src-196596487_navfn-Returns.3"></a>Returns</h5>
+<div class="paragraph">
+<p><code>List&lt;ContentMap&gt;</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.3"><a class="anchor" href="#src-196596487_navfn-Usage.3"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.navItemsFromApp(workspace, parentPath, nodeType)</code></p>
+</div>
+<div class="paragraph">
+<p>`[#assign navContentItems = navfn.navItemsFromApp("contacts", "/", "mgnl:contact")] `</p>
+</div>
+<div class="paragraph">
+<p><code>[#list navContentItems as navItem]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#-- do something with the navItem here  --]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#list]</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596487_navfn-Checkingtemplates"><a class="anchor" href="#src-196596487_navfn-Checkingtemplates"></a>Checking templates</h3>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingforaspecifiedtemplate"><a class="anchor" href="#src-196596487_navfn-Checkingforaspecifiedtemplate"></a>Checking for a specified template</h4>
+<div class="paragraph">
+<p>Checks whether the given page has the specified template.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.4"><a class="anchor" href="#src-196596487_navfn-Methodsignature.4"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean hasTemplate(ContentMap page, String template)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.4"><a class="anchor" href="#src-196596487_navfn-Argument.4"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page whose template you want to check.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>template</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The template to check for.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.4"><a class="anchor" href="#src-196596487_navfn-Returns.4"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.4"><a class="anchor" href="#src-196596487_navfn-Usage.4"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.hasTemplate(page, template)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.hasTemplate(content, "mtk:pages/contacts")]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#-- do something here --]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingforaspecifiedtemplatetype"><a class="anchor" href="#src-196596487_navfn-Checkingforaspecifiedtemplatetype"></a>Checking for a specified template type</h4>
+<div class="paragraph">
+<p>Checks whether the given page has the specified template type.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.5"><a class="anchor" href="#src-196596487_navfn-Methodsignature.5"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean hasTemplateType(ContentMap page, String templateType)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.5"><a class="anchor" href="#src-196596487_navfn-Argument.5"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page whose template you want to check.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>templateType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The template type to check for.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.5"><a class="anchor" href="#src-196596487_navfn-Returns.5"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.5"><a class="anchor" href="#src-196596487_navfn-Usage.5"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.hasTemplateType(ContentMap page, String templateType)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.hasTemplateType(content, "section")]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#-- do something here --]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingforspecifiedtemplatesubtype"><a class="anchor" href="#src-196596487_navfn-Checkingforspecifiedtemplatesubtype"></a>Checking for specified template subtype</h4>
+<div class="paragraph">
+<p>Checks whether the given page has the specified template subtype.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.6"><a class="anchor" href="#src-196596487_navfn-Methodsignature.6"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean hasTemplateSubtype(ContentMap page, String templateSubtype)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.6"><a class="anchor" href="#src-196596487_navfn-Argument.6"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page whose template you want to check.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>templateSubType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The sub-template type to check for.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.6"><a class="anchor" href="#src-196596487_navfn-Returns.6"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.6"><a class="anchor" href="#src-196596487_navfn-Usage.6"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.hasTemplateSubtype(page, templateSubtype)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.hasTemplateSubtype(navItem, "contactsOverview")]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#-- do something here --]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596487_navfn-AccessingURLs"><a class="anchor" href="#src-196596487_navfn-AccessingURLs"></a>Accessing URLs</h3>
+<div class="sect3">
+<h4 id="src-196596487_navfn-GettingapageURLwithaselector"><a class="anchor" href="#src-196596487_navfn-GettingapageURLwithaselector"></a>Getting a page URL with a selector</h4>
+<div class="paragraph">
+<p>Returns a page URL with a selector (delimited by the ~ [tilde]
+character) identifying the content to be rendered. This relies on
+Magnolia&#8217;s
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Location%2C+location%2C+location#Location,location,location-Selectors">selector
+mechanism</a>, for example
+<code><a href="https://demopublic.magnolia-cms.com/tour-type" class="bare">https://demopublic.magnolia-cms.com/tour-type</a><sub>beach</sub>.html</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.7"><a class="anchor" href="#src-196596487_navfn-Methodsignature.7"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>String linkWithSelector(ContentMap page, ContentMap content)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.7"><a class="anchor" href="#src-196596487_navfn-Argument.7"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page whose URL you want to get.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The content from the content app. For example contact, tour, etc.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.7"><a class="anchor" href="#src-196596487_navfn-Returns.7"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.7"><a class="anchor" href="#src-196596487_navfn-Usage.7"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.linkWithSelector(page, content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>a</code> <code>href</code>=<code>"${navfn.linkWithSelector(page, navContentItem)!"</code>#"}"&gt;${navContentItem.lastName!navContentItem.@name}&lt;/<code>a</code>&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-GettingapageURLwithaparameter"><a class="anchor" href="#src-196596487_navfn-GettingapageURLwithaparameter"></a>Getting a page URL with a parameter</h4>
+<div class="paragraph">
+<p>Returns a page url with a parameter identifying the content to be
+rendered.<br>
+A link of this type is produced
+<code><a href="http://mysite/mypage.html?parameterName=mycontent" class="bare">http://mysite/mypage.html?parameterName=mycontent</a></code> where 'mypage' is
+the node name of the target page, 'mycontent' the node name of the
+content.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.8"><a class="anchor" href="#src-196596487_navfn-Methodsignature.8"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>String linkWithParameter(ContentMap page, ContentMap content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String linkWithParameter(ContentMap page, ContentMap content, String parameterName)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.8"><a class="anchor" href="#src-196596487_navfn-Argument.8"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>page</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The page whose URL you want to get.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The content from the content app. For example contact, tour, etc.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parameterName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default</em> is &lt;workspace-name&gt;</p>
+</div>
+<div class="paragraph">
+<p>The parameter name.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.8"><a class="anchor" href="#src-196596487_navfn-Returns.8"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.8"><a class="anchor" href="#src-196596487_navfn-Usage.8"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.linkWithParameter(page, content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>a</code> <code>href</code>=<code>"${navfn.linkWithParameter(page, navContentItem)!"</code>#"}"&gt;${navContentItem.lastName!navContentItem.@name}&lt;/<code>a</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>navfn.linkWithParameter(page, content, parameterName)</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>a</code> <code>href</code>=<code>"${navfn.linkWithParameter(page, navContentItem, "</code>contacts")!"#"}"&gt;${navContentItem.lastName!navContentItem.@name}&lt;/<code>a</code>&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-GettingaURLforprovidedcontent"><a class="anchor" href="#src-196596487_navfn-GettingaURLforprovidedcontent"></a>Getting a URL for provided content</h4>
+<div class="paragraph">
+<p>Returns a URL for the provided content.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.9"><a class="anchor" href="#src-196596487_navfn-Methodsignature.9"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>String link(ContentMap content)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.9"><a class="anchor" href="#src-196596487_navfn-Argument.9"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The content for which you want to get URL.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.9"><a class="anchor" href="#src-196596487_navfn-Returns.9"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.9"><a class="anchor" href="#src-196596487_navfn-Usage.9"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.link(content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>a</code> <code>href</code>=<code>"${navfn.link(navigationItem)!"</code>#"}"&gt;${navigationItem.navigationTitle!navigationItem.title!navigationItem.@name}&lt;/<code>a</code>&gt;</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596487_navfn-Checkingnavigationitems"><a class="anchor" href="#src-196596487_navfn-Checkingnavigationitems"></a>Checking navigation items</h3>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingforcurrentpage"><a class="anchor" href="#src-196596487_navfn-Checkingforcurrentpage"></a>Checking for current page</h4>
+<div class="paragraph">
+<p>Checks whether navigation item is the currently displayed content.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.10"><a class="anchor" href="#src-196596487_navfn-Methodsignature.10"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean isActive(ContentMap content, ContentMap navigationItem)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.10"><a class="anchor" href="#src-196596487_navfn-Argument.10"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The current content node (page/area/component).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navigationItem</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The navigation item.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.10"><a class="anchor" href="#src-196596487_navfn-Returns.10"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.10"><a class="anchor" href="#src-196596487_navfn-Usage.10"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.isActive(content, navigationItem)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.isActive(content, navItem)]</code></p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingforancestorofanavitem"><a class="anchor" href="#src-196596487_navfn-Checkingforancestorofanavitem"></a>Checking for ancestor of a nav item</h4>
+<div class="paragraph">
+<p>Checks whether navigation item is the ancestor of the current page.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.11"><a class="anchor" href="#src-196596487_navfn-Methodsignature.11"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean isOpen(ContentMap content, ContentMap navigationItem)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.11"><a class="anchor" href="#src-196596487_navfn-Argument.11"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The current content node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navigationItem</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The navigation item.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.11"><a class="anchor" href="#src-196596487_navfn-Returns.11"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.11"><a class="anchor" href="#src-196596487_navfn-Usage.11"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.isOpen(content, navigationItem)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.isOpen(content, navItem)]</code></p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingifcontentshouldbehiddeninnavigation"><a class="anchor" href="#src-196596487_navfn-Checkingifcontentshouldbehiddeninnavigation"></a>Checking if content should be hidden in navigation</h4>
+<div class="paragraph">
+<p>Checks whether the given content should be hidden in navigation. The
+<code>hideInNav</code> property of the given content is used.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.12"><a class="anchor" href="#src-196596487_navfn-Methodsignature.12"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean isHiddenInNav(ContentMap content)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.12"><a class="anchor" href="#src-196596487_navfn-Argument.12"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The content node.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.12"><a class="anchor" href="#src-196596487_navfn-Returns.12"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.12"><a class="anchor" href="#src-196596487_navfn-Usage.12"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.isHiddenInNav(content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if !navfn.isHiddenInNav(navItem)]</code></p>
+</div>
+<div class="paragraph">
+<p>`   &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`[/#if] `</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingifcontentshouldnotbehiddeninnavigation"><a class="anchor" href="#src-196596487_navfn-Checkingifcontentshouldnotbehiddeninnavigation"></a>Checking if content should not be hidden in navigation</h4>
+<div class="paragraph">
+<p>Checks whether the given content should not be hidden in navigation. The
+<code>hideInNav</code> property of the given content is used.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.13"><a class="anchor" href="#src-196596487_navfn-Methodsignature.13"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean isNotHiddenInNav(ContentMap content)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.13"><a class="anchor" href="#src-196596487_navfn-Argument.13"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The content node.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.13"><a class="anchor" href="#src-196596487_navfn-Returns.13"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.13"><a class="anchor" href="#src-196596487_navfn-Usage.13"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.isNotHiddenInNav(content)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.isNotHiddenInNav(navigationItem)]</code></p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596487_navfn-Checkingforpropertyvalues"><a class="anchor" href="#src-196596487_navfn-Checkingforpropertyvalues"></a>Checking for property values</h4>
+<div class="paragraph">
+<p>This is small helper method which checks if a given property is true or
+false. The method is needed because in a FreeMarker template you don&#8217;t
+know if a property is stored as boolean or a string or if it exists at
+all.</p>
+</div>
+<div class="paragraph">
+<p>The method avoids using checks like:</p>
+</div>
+<div class="paragraph">
+<p><code>[#if navItem.showInNav?has_content &amp;&amp; navItem.showInNav?string == "true"]</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Methodsignature.14"><a class="anchor" href="#src-196596487_navfn-Methodsignature.14"></a>Method signature</h5>
+<div class="paragraph">
+<p><code>boolean isTrue(ContentMap content, String propertyName)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Argument.14"><a class="anchor" href="#src-196596487_navfn-Argument.14"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The content node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>propertyName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The property name.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Returns.14"><a class="anchor" href="#src-196596487_navfn-Returns.14"></a>Returns</h5>
+<div class="paragraph">
+<p><code>boolean</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596487_navfn-Usage.14"><a class="anchor" href="#src-196596487_navfn-Usage.14"></a>Usage</h5>
+<div class="paragraph">
+<p><code>navfn.isTrue(content, propertyName)</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if navfn.isTrue(navItem, "showInNav")]</code></p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+<div class="paragraph">
+<p>jsonfn</p>
+</div>
+<div class="paragraph">
+<p>resfn</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

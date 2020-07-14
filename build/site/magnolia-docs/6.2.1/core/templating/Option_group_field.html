@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Option group field - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/templating/Option_group_field.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Option_group_field.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Option_group_field.html">Option group field - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Option group field - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Dialog_definition.html">Dialog definition</a></p>
+</li>
+<li>
+<p><a href="Field_definition.html">Field definition</a></p>
+</li>
+<li>
+<p><a href="List_of_fields.html">List of fields</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204059538"><a class="anchor" href="#src-204059538"></a>Option group field</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>AbstractOptionGroupFieldDefinition is a base definition class for option
+group select fields. It extends the AbstractSelectFieldDefinition class.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This option group field definition is part of the <em>Magnolia 6 UI</em>
+framework. Use any of the following concrete implementations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.ui.field.CheckBoxGroupFieldDefinition</code></p>
+</li>
+<li>
+<p><code>info.magnolia.ui.field.RadioButtonGroupFieldDefinition</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Option+group+field+-+5+UI">Option
+group field for <em>Magnolia 5 UI</em></a> instead.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204059538_Optiongroupfield-Optiongroupfieldproperties"><a class="anchor" href="#src-204059538_Optiongroupfield-Optiongroupfieldproperties"></a>Option group field properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>layout</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional,</strong> <em>default is `vertical`</em></p>
+</div>
+<div class="paragraph">
+<p>Specifies the layout orientation of the field. Another possible value is
+<code>horizontal</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>See also
+<a href="Select_field.html#src-204058900_Selectfield-Selectfieldproperties">select
+field</a> and
+<a href="Field_definition.html#src-196596352_Fielddefinition-Commonfieldproperties">common
+field</a> properties.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204059538_Optiongroupfield-Checkboxgroupfield"><a class="anchor" href="#src-204059538_Optiongroupfield-Checkboxgroupfield"></a>Checkbox group field</h3>
+<div class="paragraph">
+<p>CheckBoxGroupFieldDefinition renders multiple checkboxes where more than
+one can be selected.</p>
+</div>
+<div class="sect3">
+<h4 id="src-204059538_Optiongroupfield-Exampledefinition"><a class="anchor" href="#src-204059538_Optiongroupfield-Exampledefinition"></a>Example definition</h4>
+<div class="paragraph">
+<p>This will create a number of checkboxes corresponding to a preset list
+of options.</p>
+</div>
+<div class="paragraph">
+<p><code>checkboxGroup:</code></p>
+</div>
+<div class="paragraph">
+<p>`  $type: checkBoxGroupField`</p>
+</div>
+<div class="paragraph">
+<p>`  defaultValue: # an alternative way of setting multiple <code>default</code> values`</p>
+</div>
+<div class="paragraph">
+<p>`    - Mahler`</p>
+</div>
+<div class="paragraph">
+<p>`    - Bach`</p>
+</div>
+<div class="paragraph">
+<p>`  datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: optionListDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`    options:`</p>
+</div>
+<div class="paragraph">
+<p>`      - name: Vivaldi`</p>
+</div>
+<div class="paragraph">
+<p>`        value: Vivaldi`</p>
+</div>
+<div class="paragraph">
+<p>`      - name: Bach`</p>
+</div>
+<div class="paragraph">
+<p>`        value: Bach`</p>
+</div>
+<div class="paragraph">
+<p>`      - name: Bartok`</p>
+</div>
+<div class="paragraph">
+<p>`        value: Bartok`</p>
+</div>
+<div class="paragraph">
+<p>`      - name: Stravinsky`</p>
+</div>
+<div class="paragraph">
+<p>`        value: Stravinsky`</p>
+</div>
+<div class="paragraph">
+<p>`      - name: Mahler`</p>
+</div>
+<div class="paragraph">
+<p>`        value: Mahler`</p>
+</div>
+<div class="paragraph">
+<p>For properties, see
+<a href="#src-204059538_Optiongroupfield-Optiongroupfieldproperties">option
+group field</a>,
+<a href="Select_field.html#src-204058900_Selectfield-Selectfieldproperties">select
+field</a> and
+<a href="Field_definition.html#src-196596352_Fielddefinition-Commonfieldproperties">common
+field</a> properties.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204059538_Optiongroupfield-Radiobuttongroupfield"><a class="anchor" href="#src-204059538_Optiongroupfield-Radiobuttongroupfield"></a>Radio button group field</h3>
+<div class="paragraph">
+<p>RadioButtonGroupFieldDefinition renders multiple radio buttons where
+only one can be selected.</p>
+</div>
+<div class="sect3">
+<h4 id="src-204059538_Optiongroupfield-Exampledefinition.1"><a class="anchor" href="#src-204059538_Optiongroupfield-Exampledefinition.1"></a>Example definition</h4>
+<div class="paragraph">
+<p>This will let you choose an item corresponding to a node from the
+configured JCR workspace.</p>
+</div>
+<div class="paragraph">
+<p><code>radioGroup:</code></p>
+</div>
+<div class="paragraph">
+<p>`  $type: radioButtonGroupField`</p>
+</div>
+<div class="paragraph">
+<p>`  datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: jcrDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`    workspace: contacts`</p>
+</div>
+<div class="paragraph">
+<p>`    describeByProperty: lastName`</p>
+</div>
+<div class="paragraph">
+<p>`    allowedNodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`      - mgnl:contact`</p>
+</div>
+<div class="paragraph">
+<p>For properties, see
+<a href="#src-204059538_Optiongroupfield-Optiongroupfieldproperties">option
+group field</a>,
+<a href="Select_field.html#src-204058900_Selectfield-Selectfieldproperties">select
+field</a> and
+<a href="Field_definition.html#src-196596352_Fielddefinition-Commonfieldproperties">common
+field</a> properties.</p>
+</div>
+<div class="paragraph">
+<p>Multi field</p>
+</div>
+<div class="paragraph">
+<p>Rich text field</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
