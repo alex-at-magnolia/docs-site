@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solr module release notes - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Solr_module_release_notes.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Solr_module_release_notes.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Solr_module_release_notes.html">Solr module release notes - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Solr module release notes - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597439"><a class="anchor" href="#src-196597439"></a>Solr module release notes</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Installing_Apache_Solr.html">Installing Apache Solr</a></p>
+</li>
+<li>
+<p><a href="Indexing_and_crawling_a_website_with_Solr.html">Indexing and
+crawling a website with Solr</a></p>
+</li>
+<li>
+<p><a href="App_configuration_with_Solr.html">App configuration with Solr</a></p>
+</li>
+<li>
+<p><a href="Providing_a_Solr_search.html">Providing a Solr search</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Jackrabbit+search">Jackrabbit
+search</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/Step-by-step+integrating+Solr+in+Magnolia+and+generating+custom+sitemap">Creating
+a sitemap with Solr</a> (Community Wiki)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The latest version of the Solr module is 5.2.3.*<br>
+*</p>
+</div>
+<div class="paragraph">
+<p><strong>Solr module compatibility with Apache Solr</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From version 5.2 the module supports Solr 7.x.</p>
+</li>
+<li>
+<p>From version 5.0 it is compatible with Solr 5.x.</p>
+</li>
+<li>
+<p>Older versions of the module are compatible with Solr 4.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196597439_Solrmodulereleasenotes-Version5.2"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Version5.2"></a>Version 5.2</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This version contains changes in <code>solrconfig.xml</code> and <code>managed-schema</code>.
+Please read the notes below before updating.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597439_Solrmodulereleasenotes-Newfeatures"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Newfeatures"></a>New features</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for Solr 7.x. Magnolia&#8217;s solr-search-provider module uses
+solrj 7.3.0.<br>
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-129?src=confmacro"><</a> - Update to solrj 7.3.0 <span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>The solrconfig.xml and managed-schema configuration files are
+compatible with Solr 7.x.<br>
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-127?src=confmacro"><</a> - Sample magnolia solr configuration for version 7.x
+<span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>New sub module <code>magnolia-solr-workbench</code>. It provides a SolrContainer
+for list, search and thumbnail views in the content apps.<br>
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-120?src=confmacro"><</a> - Use Solr for search indexing a large number of content
+items <span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>Support from multiple Solr servers (cores).<br>
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-54?src=confmacro"><</a> - Support multiple cores/servers
+<span class="status  green  subtle">Closed</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597439_Solrmodulereleasenotes-ChangesinSolr5.xconfigurationfiles"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-ChangesinSolr5.xconfigurationfiles"></a>Changes in Solr 5.x configuration files</h4>
+<div class="sect4">
+<h5 id="src-196597439_Solrmodulereleasenotes-managed-schema"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-managed-schema"></a>managed-schema</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>New fields:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>jcrname</code> <strong>(</strong>
+<code>&lt;field name="jcrname" type="string" stored="true" indexed="true"/&gt;</code>).</p>
+</li>
+<li>
+<p><code>nodetype</code>
+(<code>&lt;field name="nodetype" type="string" stored="true" indexed="true"/&gt;</code>).</p>
+</li>
+<li>
+<p>(dynamic) <code>asset_*</code> (
+<code>&lt;dynamicField name="asset_*" type="text_general" indexed="true" stored="true" multiValued="false"/&gt;</code>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Removed:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;copyField source="*" dest="<em>text</em>"/&gt;</code> (replaced by
+<code>CloneFieldUpdateProcessorFactory</code> in <code>solrconfig.xml</code>, see also below).</p>
+</li>
+<li>
+<p>Dynamic field <code>*_point</code> (in collision with the <code>*_point</code> fields when
+parsed by <a href="https://tika.apache.org/">Apache Tika</a> in documents).</p>
+</li>
+<li>
+<p>Dynamic field <code>*_id (Indonesian)</code> <strong>(</strong>in collision with the <code>*_id</code>
+fields when parsed by <a href="https://tika.apache.org/">Apache Tika</a> in
+documents).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597439_Solrmodulereleasenotes-solrconfig.xml"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-solrconfig.xml"></a>solrconfig.xml</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Changes in <code>ExtractingRequestHandler</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>By default only document content is indexed (into the <code>asset_content</code>
+field).</p>
+</li>
+<li>
+<p>All fields that are not defined in the schema are ignored
+(<code>&lt;str name="uprefix"&gt;ignored_&lt;/str&gt;</code>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The <code>CloneFieldUpdateProcessorFactory</code> was added into the
+<code>add-unknown-fields-to-the-schema</code> update request processor chain. This
+replaces <code>&lt;copyField source="*" dest="<em>text</em>"/&gt;</code>, which was removed from
+the <code>managed-schema</code>.</p>
+</li>
+<li>
+<p>The <code>uuid</code>, <code><em>version</em></code>, <code>id</code>, <code>path</code>, <code>workspace</code>, <code>nodetype</code>,
+<code>assetproviderid</code>, <code>url</code>, <code>type</code> and all <code>ignored_*</code> fields are by
+default excluded from copying to the <code><em>text</em></code> field.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597439_Solrmodulereleasenotes-Updatingto5.2"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Updatingto5.2"></a>Updating to 5.2</h4>
+<div class="paragraph">
+<p>To update to version 5.2, refer to the <em>Installing Apache Solr</em> page.
+After a successful installation of Solr 7, retrigger the indexers
+(<code>/modules/content-indexer/config/indexers/&lt;indexer_name&gt;</code>) by changing
+their property indexed to <code>false</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597439_Solrmodulereleasenotes-Version5.0.2"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Version5.0.2"></a>Version 5.0.2</h4>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This version contains changes in <code>solrconfig.xml</code> and <code>managed-schema</code>
+please read the notes before update to 5.0.2.</p>
+</div>
+<div class="paragraph">
+<p>Fixed na issue of two indexers/crawlers mutually overwriting the
+resulting index when indexing the same content. For example when one
+indexer was for indexing the English translation and other one for
+indexing the German translation.
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-102?src=confmacro"><</a> - It&#8217;s not possible index same content by different
+indexers <span class="status  green  subtle">Closed</span></p>
+</div>
+<div class="paragraph">
+<p>Problem was caused by using jcr uuid(indexers) and url(crawlers) as
+unique identifier for solr indexes. To fix this issue changes in
+<code>solrconfig.xml</code> and <code>managed-schema</code> were required.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;uniqueKey&gt;</code> in <code>managed-schema</code> was changed to <code>uuid</code>.</p>
+</li>
+<li>
+<p>The ddefault value for unique key field was changed to <code>uuid</code> in
+<code>info.magnolia.search.solrsearchprovider.logic.providers.FacetedSolrSearchProvider</code>.</p>
+</li>
+<li>
+<p><code>solrconfig.xml</code> now generates the <code>uuid</code> field from a combination of
+<code>type</code> and <code>id</code> fields. The
+<a href="https://wiki.apache.org/solr/Deduplication">deduplication</a> method is used
+to generate the uuid. For more details see the change in code
+<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/solr-search-provider/commits/1bdde7eb1df4db7c2d755146ed517a60e6339fd6#magnolia-solr-search-provider/src/main/resources/solr-config-files/solrconfig.xml">diff</a>.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196597439_Solrmodulereleasenotes-Updatingto5.0.2"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Updatingto5.0.2"></a>Updating to 5.0.2</h5>
+<div class="paragraph">
+<p><strong>Option 1:</strong></p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t plan to index same content by two different indexers or
+crawlers then you don&#8217;t need to update your <code>solrconfig.xml</code> and
+<code>managed-schema</code> for your solr core. Only change what you need to do is
+add <code>uniqueKeyField</code> property with value <code>id</code> into your solr sear result
+page.</p>
+</div>
+<div class="paragraph">
+<p><strong>Option 2:</strong></p>
+</div>
+<div class="paragraph">
+<p>Use new
+<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/solr-search-provider/raw/magnolia-solr-search-provider/src/main/resources/solr-config-files/managed-schema?at=refs%2Ftags%2Fmagnolia-solr-search-provider-5.0.2">managed-schema</a>
+and
+<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/solr-search-provider/raw/magnolia-solr-search-provider/src/main/resources/solr-config-files/solrconfig.xml?at=refs%2Ftags%2Fmagnolia-solr-search-provider-5.0.2">solrconfig.xml</a>
+configuration files for your solr core and for
+<code>$SOLR_HOME/server/solr/configsets/magnolia_data_driven_schema_config</code>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s needed to recreate all Solr indexes, because of the changes in
+configuration files. Probably the easiest way to do it is recreate the
+solr core and then retrigger indexing in Magnolia.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use new <code>solrconfig.xml</code> and <code>managed-schema</code> configuration files for
+<code>$SOLR_HOME/server/solr/configsets/magnolia_data_driven_schema_config</code>
+Magnolia config set.</p>
+</li>
+<li>
+<p>Delete <code>magnolia</code> core an create it again</p>
+<div class="paragraph">
+<p><code>cd<code> $SOLR_HOME</code>/bin</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>.<code>/solr</code> delete -c magnolia</code></p>
+</div>
+<div class="paragraph">
+<p><code>.<code>/solr</code> create_core -c magnolia -d magnolia_data_driven_schema_configs</code>
+. Retrigger the indexers, by changing their property <code>indexed</code> to
+<code>false</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597439_Solrmodulereleasenotes-Version5.0"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Version5.0"></a>Version 5.0</h4>
+<div class="paragraph">
+<p>Solr Search Provider module version 5.0 brings support to Solr 5
+(officially tested with version 5.3.1).</p>
+</div>
+<div class="paragraph">
+<p>Full changelog for version 5.0
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR/fixforversion/18141" class="bare">https://jira.magnolia-cms.com/browse/MGNLEESOLR/fixforversion/18141</a></p>
+</div>
+<div class="paragraph">
+<p>Regarding the changes in the module it&#8217;s recommended completely recreate
+the Solr indexes after to upgrade to version 5.0.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196597439_Solrmodulereleasenotes-APIchanges"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-APIchanges"></a>API changes</h5>
+<div class="paragraph">
+<p>org.apache.solr.client.solrj.SolrServer is deprecated and was replaced
+by org.apache.solr.client.solrj.SolrClient in solr-solrj 5.x library.
+Because of that
+info.magnolia.search.solrsearchprovider.MagnoliaSolrBridge#getSolrServer
+method was changed to
+info.magnolia.search.solrsearchprovider.MagnoliaSolrBridge#getSolrClient
+method.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597439_Solrmodulereleasenotes-Version3.0"><a class="anchor" href="#src-196597439_Solrmodulereleasenotes-Version3.0"></a>Version 3.0</h4>
+<div class="paragraph">
+<p>Solr Search Provider module version 3.0 delivers the following key fixes
+and enhancements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Module doesn&#8217;t depend on STK anymore and can be used also with MTE
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-66?src=confmacro"><</a> - Free the solr-search-provider modules from STK
+<span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>magnolia-solr-search-provider-theme module has gone
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-66?src=confmacro"><</a> - Free the solr-search-provider modules from STK
+<span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>Improve search performance
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-64?src=confmacro"><</a> - FacetedSolrSearchProvider#removeOutdatedIndexes
+performs really slow for us resulting in dramatic search performance
+<span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>Connect Crawlers with activation process
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-77?src=confmacro"><</a> - Introduce possibility to connect crawlers with
+activation process <span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>Ability to use different implementation of
+edu.uci.ics.crawler4j.crawler.WebCrawler and different triggering
+command for every Crawler
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-61?src=confmacro"><</a> - Ability to implement own crawler implementation
+<span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>Search results are now configured at the page level instead of the
+component level
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-70?src=confmacro"><</a> - Pagination, filtering, field boosting can be ignored
+when facet component is used <span class="status  green  subtle">Closed</span></p>
+</li>
+<li>
+<p>Don&#8217;t ignore the Robots Meta Tag
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR-72?src=confmacro"><</a> - Crawler ignores robots meta-tag from the page
+<span class="status  green  subtle">Closed</span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Full changelog for version 3.0
+<a href="https://jira.magnolia-cms.com/browse/MGNLEESOLR/fixforversion/17434" class="bare">https://jira.magnolia-cms.com/browse/MGNLEESOLR/fixforversion/17434</a></p>
+</div>
+<div class="paragraph">
+<p>Regarding the changes in the module it&#8217;s recommended completely recreate
+the Solr indexes after to upgrade to version 3.0. <br></p>
+</div>
+<div class="paragraph">
+<p>Providing a Solr search</p>
+</div>
+<div class="paragraph">
+<p>Synchronization module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

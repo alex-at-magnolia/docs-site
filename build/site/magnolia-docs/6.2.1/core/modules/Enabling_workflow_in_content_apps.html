@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Enabling workflow in content apps - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Enabling_workflow_in_content_apps.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Enabling_workflow_in_content_apps.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Enabling_workflow_in_content_apps.html">Enabling workflow in content apps - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Enabling workflow in content apps - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Workflow_module.html">Workflow module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597469"><a class="anchor" href="#src-196597469"></a>Enabling workflow in content apps</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597469_Enablingworkflowincontentapps-Publishingcontent"><a class="anchor" href="#src-196597469_Enablingworkflowincontentapps-Publishingcontent"></a>Publishing content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To launch the publication of content in content apps, trigger the
+<code>publish</code> action in your app&#8217;s actionbar. Configure the action in the
+module configuration under
+<code>/modules/&lt;module-name&gt;/apps/&lt;app-name&gt;/subApps/browser/actions</code>. The
+configuration should look similar to the Assets app, for example.</p>
+</div>
+<div class="paragraph">
+<p>This is what a non-workflow configuration looks like. The configuration
+launches the <code>activate</code> command inside the <code>versioned</code> catalog which is
+part of the Activation module. The action creates a new version of the
+published item and and activates it to the public instance but does not
+trigger a workflow.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-03-07_at_16.27.42.png" alt="images/download/attachments/196597469/Screen_Shot_2014-03-07_at_16.27.42.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Properties related to publishing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>class</code>: Specifies an action definition class.</p>
+</li>
+<li>
+<p><code>catalog</code>: References a command
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands#Commands-Catalogs">catalog</a>.</p>
+</li>
+<li>
+<p><code>command</code>: A
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">command</a> to be
+launched inside the catalog.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Extendable action skeleton</p>
+</div>
+<div class="paragraph">
+<p>Before you change the action to trigger a workflow, look at the
+available configuration in the workflow module.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.13.18.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.13.18.png"></span></p>
+</div>
+<div class="paragraph">
+<p>You can choose from two action configurations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>publish</code>: Launches the workflow directly. Use this action when you do
+not want to give an editor the possibility to schedule publishing to a
+future date or add a comment.</p>
+</li>
+<li>
+<p><code>schedulePublication</code>: Opens a dialog where the editor can add a
+publication date and a comment.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The command name is the same, <code>activate</code>, but the commands reside in
+different catalogs. The default non-workflow action launches an
+<code>activate</code> command from the <code>versioned</code> catalog in the Activation
+module. The other <code>activate</code> command is in the <code>workflow</code> catalog in the
+Workflow module.</p>
+</div>
+<div class="paragraph">
+<p>Use the <code>publish</code> and <code>schedulePublication</code> actions to configure
+workflow for any content app or extend them in your own action
+configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597469_Enablingworkflowincontentapps-Addingfieldstopublicationdialog"><a class="anchor" href="#src-196597469_Enablingworkflowincontentapps-Addingfieldstopublicationdialog"></a>Adding fields to publication dialog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When using workflow, the editor can add a comment and set the
+publication to a future date. The publication dialog provides fields for
+enter this information.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_11.32.15.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_11.32.15.png"></span></p>
+</div>
+<div class="paragraph">
+<p>To open the dialog,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition#Dialogdefinition-Referencingdialogs">reference</a>
+the dialog definition in the <code>dialogName</code> property. Here is an example
+from the <code>schedulePublication</code> action:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_11.37.04.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_11.37.04.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The <code>formTypes</code> configuration tells the form builder what type of input
+is expected in the form fields. The types are then mapped to the form
+configuration using the node name such as <code>publicationDate</code> and
+<code>comment</code>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_11.35.27.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_11.35.27.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The <code>presenterClass</code> inside the dialogs definition extends the
+<code>FormDialogPresenter</code> by the necessary functionality for this manual
+mapping.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597469_Enablingworkflowincontentapps-Addingcustomparameters"><a class="anchor" href="#src-196597469_Enablingworkflowincontentapps-Addingcustomparameters"></a>Adding custom parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can pass custom parameters from your action definition into the
+process using the <code>params</code> node in the action configuration. You can
+reference the parameters in the process as described in
+<a href="Workflow_processes.html">Input and output parameters</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.15.34.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.15.34.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597469_Enablingworkflowincontentapps-Example"><a class="anchor" href="#src-196597469_Enablingworkflowincontentapps-Example"></a>Example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this example we enable workflow in the Assets app. Almost all
+properties are already defined in the configuration.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Remove all properties from our activate action inside the assets app.</p>
+</li>
+<li>
+<p>Add an <code>extends</code> property. Set its value to the <code>schedulePublication</code>
+action.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.09.50.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.09.50.png"></span></p>
+</div>
+</li>
+<li>
+<p>Change the three remaining publication related actions. Extend the
+<code>activate</code> action you already did. Override properties to change the
+default behavior.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.11.37.png" alt="images/download/attachments/196597469/Screen_Shot_2014-07-14_at_12.11.37.png"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Magnolia four eye workflow</p>
+</div>
+<div class="paragraph">
+<p>Enabling workflow in content apps with YAML</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

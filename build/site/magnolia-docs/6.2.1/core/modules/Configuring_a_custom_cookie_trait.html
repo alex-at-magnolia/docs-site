@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuring a custom cookie trait - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Configuring_a_custom_cookie_trait.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Configuring_a_custom_cookie_trait.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Configuring_a_custom_cookie_trait.html">Configuring a custom cookie trait - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Configuring a custom cookie trait - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Personalization_module.html">Personalization module</a></p>
+</li>
+<li>
+<p><a href="Creating_custom_traits_without_Java.html">Creating custom traits
+without Java</a></p>
+</li>
+<li>
+<p><a href="Creating_a_custom_cookie_trait_without_Java.html">Creating a
+custom cookie trait without Java</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597181"><a class="anchor" href="#src-196597181"></a>Configuring a custom cookie trait</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Creating_custom_traits_without_Java.html">Creating custom traits
+without Java</a></p>
+</li>
+<li>
+<p><a href="Cookies_trait_configuration.html">Cookies trait configuration</a></p>
+</li>
+<li>
+<p><a href="Setting_and_reading_a_custom_cookie.html">Setting and reading a
+custom cookie</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">Personalization</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+personalization">Component
+personalization</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This first step in creating a custom cookie trait is to add custom
+options and values to the preconfigured cookies trait in the
+<a href="Personalization_module.html">Personalization Traits module</a>.</p>
+</div>
+<div class="paragraph">
+<p>The cookies trait is configured in
+<code>/modules/personalization-traits/traits/cookies</code> and the configuration
+includes a
+<a href="#src-196597181_Configuringacustomcookietrait-Configuringtherulefield">rule</a>
+and
+<a href="#src-196597181_Configuringacustomcookietrait-Configuringthevaluefield">value</a>
+field.</p>
+</div>
+<div class="paragraph">
+<p>This page of the tutorial shows you how to configure these fields for a
+cookie named <strong><em>visits</em></strong>. Please read
+<a href="Cookies_trait_configuration.html">Cookies trait configuration</a>
+before you begin.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Importing+and+exporting+JCR+data+for+bootstrapping">import</a>
+the XML files provided in the
+<a href="#src-196597181_Configuringacustomcookietrait-Downloadconfigurationfiles">Download
+configuration files</a> section if you prefer not to configure manually.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597181_Configuringacustomcookietrait-Configuringtherulefield"><a class="anchor" href="#src-196597181_Configuringacustomcookietrait-Configuringtherulefield"></a>Configuring the rule field</h3>
+<div class="paragraph">
+<p>The rule field defines values for the trait when you
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Choosinganaudience">choose
+an audience</a>. The input entered into the rule field(s) is used to
+construct a <a href="https://wiki.magnolia-cms.com/display/DOCS62/Voters">voter</a>.
+The voter decides if the visitor or visit matches the rule. When the
+rule is met, Magnolia delivers personalized content.</p>
+</div>
+<div class="paragraph">
+<p>The rule field options display in the Choose audience dialog in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+app">Pages app</a>. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+personalization#Componentpersonalization-Personalizingacomponent">Personalizing
+a component</a> for how to access the dialog.</p>
+</div>
+<div class="paragraph">
+<p>There are two steps to configuring the rule field:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the new cookie as an option in the
+<a href="#src-196597181_Configuringacustomcookietrait-Addingtheswitchablefieldoption">switchable
+field</a>.</p>
+</li>
+<li>
+<p>Add the new cookie options in the
+<a href="#src-196597181_Configuringacustomcookietrait-Addingtheselectfieldoptions">select
+field</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Here is the final rule field that the configurations below produce.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597181/choose-audience-dialog.png" alt="images/download/attachments/196597181/choose-audience-dialog.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196597181_Configuringacustomcookietrait-Addingtheswitchablefieldoption"><a class="anchor" href="#src-196597181_Configuringacustomcookietrait-Addingtheswitchablefieldoption"></a>Adding the switchable field option</h4>
+<div class="paragraph">
+<p>Options in the switchable field display in the Choose audience dialog
+when the user selects Visits in the Cookie field.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To activate the switchable field, in the dialog click <strong>Pick trait &gt;
+Cookie</strong> or <strong>+ &gt; Cookie</strong> (if an additional trait exists).</p>
+</div>
+<div class="paragraph">
+<p>To add the <code>visits</code> option in
+<code>/modules/personalization-traits/traits/cookies/ruleField/options</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add a new content node, <code>visits</code>. This is the internal name of the
+switchable field option.</p>
+</li>
+<li>
+<p>Add two properties to the <code>visits</code> node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>label</code>= <code>Visits</code>: The label displayed in the field.</p>
+</li>
+<li>
+<p><code>value</code>= <code>visits</code>: The option value stored in the repository.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The configuration should look like this:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cookies</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ruleField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visits</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">weatherLocality</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tourType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597181_Configuringacustomcookietrait-Addingtheselectfieldoptions"><a class="anchor" href="#src-196597181_Configuringacustomcookietrait-Addingtheselectfieldoptions"></a>Adding the select field options</h4>
+<div class="paragraph">
+<p>Options in the select field display in the dropdown in the Visits field.</p>
+</div>
+<div class="paragraph">
+<p>To add the <code>visits</code> options, in
+<code>/modules/personalization-traits/traits/cookies/ruleField/fields</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add a <code>visits/options</code> node structure.</p>
+</li>
+<li>
+<p>In the <code>/options</code> node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Add one content node for each option. Our options are <code>one</code>, <code>two</code>,
+<code>three</code>, <code>four</code> and <code>any</code>. These are the internal names of the options.</p>
+</li>
+<li>
+<p>Add two properties to each option node:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p><code>label</code>= <code>&lt;Option label&gt;</code>: The label displayed in the field.</p>
+</li>
+<li>
+<p><code>value</code>= <code>&lt;Option value&gt;</code>: The option value stored in the
+repository.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Optionally, add a <code>sortOptions</code> property to <code>/visits</code> node and set the
+value to <code>false</code>. This ensures that the options render in configuration
+order and not alphabetically.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The configuration should look like this:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cookies</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ruleField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">one</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">One</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">two</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Two</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">three</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Three</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">four</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Four</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.SelectFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultValue</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sortOptions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tourType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">weatherLocality</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.SwitchableFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transformerClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.personalization.cookie.CookieFieldTransformer</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597181_Configuringacustomcookietrait-Configuringthevaluefield"><a class="anchor" href="#src-196597181_Configuringacustomcookietrait-Configuringthevaluefield"></a>Configuring the value field</h3>
+<div class="paragraph">
+<p>The value field defines the options that display in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Preview+app">Preview app</a>.
+The field is used to preview
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Variantsarealternativecontent">variants</a>
+when testing personalized content delivery.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s the final value field that the configuration below produces.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597181/preview-app.png" alt="images/download/attachments/196597181/preview-app.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The value field is an
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Option+group+field">Option
+group field</a>. The option values should match the option configurations
+in the
+<a href="#src-196597181_Configuringacustomcookietrait-Configuringtherulefield">rule
+field</a>.</p>
+</div>
+<div class="paragraph">
+<p>To add the value field options, in
+<code>/modules/personalization-traits/traits/cookies/valueField</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add one content node for each option configured in the rule field.
+These are the internal names of the options. The node name is arbitrary.
+Configure one option for each option configured in the
+<a href="#src-196597181_Configuringacustomcookietrait-Configuringtherulefield">rule
+field</a></p>
+</li>
+<li>
+<p>Add two properties to each option node:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>label</code>= <code>&lt;Option label&gt;</code>: The label displayed in the field.</p>
+</li>
+<li>
+<p><code>value</code>= <code><a href="#Rule field name&gt;:&lt;Rule field option value">[Rule field name&gt;:&lt;Rule field option value]</a></code>: The option
+value stored in the repository.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Optionally, add a <code>sortOptions</code> property to <code>/valueField</code> node and set
+the value to <code>false</code>. This ensures that the options render in
+configuration order and not alphabetically.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The configuration should look like this:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cookie</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ruleField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">valueField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">options</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitsOne</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visits: One</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits=1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitsTwo</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visits: Two</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits=2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitsThree</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visits: Three</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits=3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitsFour</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visits: Four</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits=4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitsAny</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visits: Any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visits=any</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tourTypeAny</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.OptionGroupFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">multiselect</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sortOptions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597181_Configuringacustomcookietrait-Downloadconfigurationfiles"><a class="anchor" href="#src-196597181_Configuringacustomcookietrait-Downloadconfigurationfiles"></a>Download configuration files</h3>
+<div class="paragraph">
+<p>As an alternative to manual configuration you can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Importing+and+exporting+JCR+data+for+bootstrapping">import</a>
+these XMLs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-196597181_Configuringacustomcookietrait-Addingtheswitchablefieldoption"><code>visits</code>
+ruleField option</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="attachments_196597190_1_config.modules.personalization-traits.traits.cookies.ruleField.options.visits.xml">config.modules.personalization-traits.traits.cookies.ruleField.options.visits.xml</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#src-196597181_Configuringacustomcookietrait-Addingtheselectfieldoptions"><code>visits</code>
+ruleField field options</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="attachments_196597189_1_config.modules.personalization-traits.traits.cookies.ruleField.fields.visits.xml">config.modules.personalization-traits.traits.cookies.ruleField.fields.visits.xml</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="#src-196597181_Configuringacustomcookietrait-Configuringthevaluefield"><code>visits</code>
+valueField options</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="attachments_196597187_1_config.modules.personalization-traits.traits.cookies.valueField.options.visitsOne.xml">config.modules.personalization-traits.traits.cookies.valueField.options.visitsOne.xml</a></p>
+</li>
+<li>
+<p><a href="attachments_196597188_1_config.modules.personalization-traits.traits.cookies.valueField.options.visitsTwo.xml">config.modules.personalization-traits.traits.cookies.valueField.options.visitsTwo.xml</a></p>
+</li>
+<li>
+<p><a href="attachments_196597191_1_config.modules.personalization-traits.traits.cookies.valueField.options.visitsThree.xml">config.modules.personalization-traits.traits.cookies.valueField.options.visitsThree.xml</a></p>
+</li>
+<li>
+<p><a href="attachments_196597184_1_config.modules.personalization-traits.traits.cookies.valueField.options.visitsFour.xml">config.modules.personalization-traits.traits.cookies.valueField.options.visitsFour.xml</a></p>
+</li>
+<li>
+<p><a href="attachments_196597186_1_config.modules.personalization-traits.traits.cookies.valueField.options.visitsAny.xml">config.modules.personalization-traits.traits.cookies.valueField.options.visitsAny.xml</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="attachments_196597183_1_visits.zip">visits.zip</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Creating a custom cookie trait without Java</p>
+</div>
+<div class="paragraph">
+<p>Setting and reading a custom cookie</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

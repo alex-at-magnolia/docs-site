@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content Importer module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Content_Importer_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Content_Importer_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Content_Importer_module.html">Content Importer module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Content Importer module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596858"><a class="anchor" href="#src-196596858"></a>Content Importer module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLCI">MGNLCI</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/modules/content-importer/">Content
+Importer</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Bootstrapping+in+light+modules">Bootstrapping
+in light modules</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Content Importer module allows you to bootstrap content from the
+file system into the JCR. The module adds bootstrapping capabilities for
+light modules. You can import content during development, distribution
+and deployment of light modules. For example, import sample content for
+a new template so authors can immediately see how the template works.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia monitors the <a href="#">bootstrap directory</a> on the file system.
+When Magnolia detects a change, it sends a message to the Tasks app to
+the superuser account. The superuser can then import the content. This
+allows you to import content in a controlled way, ensuring that no
+existing content is overridden by accident.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596858_ContentImportermodule-Installing"><a class="anchor" href="#src-196596858_ContentImportermodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.content&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-content-importer&lt;/artifactId&gt;
+  &lt;version&gt;1.0.3&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596858_ContentImportermodule-Howcontentimportworks"><a class="anchor" href="#src-196596858_ContentImportermodule-Howcontentimportworks"></a>How content import works</h3>
+<div class="paragraph">
+<p>To demonstrate how content import works, we bootstrap a <code>cruise-manager</code>
+page into the <code>/travel/about/careers</code> section in the Pages app.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To create a bootstrap file for testing, create a page in the Pages app,
+export it and save the file to a temporary location on your computer.
+Next, delete the page in the Pages app and then add the file to your
+bootstrap directory on the file system. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Importing+and+exporting+JCR+data+for+bootstrapping">Importing
+and exporting JCR data for bootstrapping</a> for more.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s how bootstrapping files from the file system works in the UI:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>An XML file is added to the bootstrap directory. See
+<a href="#src-196596858_ContentImportermodule-Settingthebootstrapdirectory">Setting
+the bootstrap directory</a>.<br>
+<strong>Example</strong> : Add <code>website.travel.about.careers.cruise-manager.xml</code> to
+<code>/magnoliaAuthor/data</code>.</p>
+<div class="paragraph">
+<p><code>└─&lt;magnoliaAuthor&gt;</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>`  └─data`</p>
+</div>
+<div class="paragraph">
+<p>`      └─website.travel.about.careers.cruise-manager.xml`
+. A message is logged to the user:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>2019-03-28 14:27:06,676 INFO  gnolia.content.observer.TaskCreatorWatcherCallback: File change detected at '/magnoliaAuthor/data/website.travel.about.careers.cruise-manager.xml', pulse task has been sent.</code>
+. A task is sent to the Tasks app.<br>
+<strong>Example</strong>: Import request task and Import action for <code>cruise-manager</code>
+page in the Tasks app.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596858/6-1-contentImporterModule.png" alt="images/download/attachments/196596858/6-1-contentImporterModule.png"></span>
+. <code>superuser</code> assigns himself the task and clicks <strong>Import</strong> to import the
+content into the corresponding workspace in the repository. He can also
+<strong>Reject</strong> or <strong>Abort</strong> the import.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596858/6-1-contentImporterModule-import.png" alt="images/download/attachments/196596858/6-1-contentImporterModule-import.png"></span>
+. The bootstrapped content is available in the relevant app.<br>
+<strong>Example</strong>: Cruise Manager page in the Pages app.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596858/6-1-contentImporterModule-imported.png" alt="images/download/attachments/196596858/6-1-contentImporterModule-imported.png"></span></p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596858/6-1-contentImporterModule-CMpage.png" alt="images/download/attachments/196596858/6-1-contentImporterModule-CMpage.png"></span>
+. The bootstrap directory is monitored and a new task sent to the Tasks
+app when a change in the XML is detected.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Observation only occurs if the
+<a href="#src-196596858_ContentImportermodule-Settingthebootstrapdirectory">bootstrap
+directory is set</a> in the <code>magnolia.properties</code> file.</p>
+</li>
+<li>
+<p>Bootstrap files are only detected on a running instance. The directory
+is not observed on startup. Only add bootstraps after starting Magnolia.</p>
+</li>
+<li>
+<p>Deletions are not removed automatically. To remove content, delete it
+in the JCR and the bootstrap directory.</p>
+</li>
+<li>
+<p>Only XML files are observed. All other extensions are filtered out.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596858_ContentImportermodule-Settingthebootstrapdirectory"><a class="anchor" href="#src-196596858_ContentImportermodule-Settingthebootstrapdirectory"></a>Setting the bootstrap directory</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Prerequisites:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install the <a href="#">Content Importer module</a>.</p>
+</li>
+<li>
+<p>Set the content bootstrap directory. Observation will not take place
+until the property is added.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To set the bootstrap directory add the <code>magnolia.content.bootstrap.dir</code>
+property in the <code>magnolia.properties</code> file. The bootstrap directory can
+reside anywhere on the file system and can be named anything you like.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Setting the bootstrap directory as a subdirectory of the
+resources directory.</p>
+</div>
+<div class="paragraph">
+<p><code># The directory to expose file system resources from</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.resources.dir=${magnolia.home}/modules</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code># The directory to <code>import</code> file system XML files from</code></p>
+</div>
+<div class="paragraph">
+<p>` magnolia.content.bootstrap.dir=${magnolia.resources.dir}/data`</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Subdirectories of the bootstrap directory are also monitored. You can
+structure your bootstrap files within the bootstrap directory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596858_ContentImportermodule-Configuration"><a class="anchor" href="#src-196596858_ContentImportermodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The module is configured in <code>/modules/content-importer</code>.</p>
+</div>
+<div class="paragraph">
+<p>No configuration changes are required unless you customize the
+implementation.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596858_ContentImportermodule-ContentImportRequesttask"><a class="anchor" href="#src-196596858_ContentImportermodule-ContentImportRequesttask"></a>Content Import Request task</h4>
+<div class="paragraph">
+<p>The Content Import Request
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Tasks">task</a> displays in the
+Tasks app.</p>
+</div>
+<div class="paragraph">
+<p>This task is configured in <code>/modules/content-importer/tasks</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content-importer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tasks</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">users</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">superuser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">superuser</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">eric</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groups</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-editors</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-editors</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">viewMapping</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">taskView</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content-importer:content</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content Import Request</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tasks</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Tasks folder.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Task name.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>users</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Users who can view and assign tasks.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+Please note that at least one user or one group (see the next property)
+should be defined for bootstrap messages to be displayed. The default
+configuration comes with <code>superuser</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groups</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>User groups who can view and assign tasks.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>viewMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Message view displayed in detail view.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>taskView</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>content</code>
+<a href="#src-196596858_ContentImportermodule-ContentImportRequestmessageview">message
+view</a> definition.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Task title.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596858_ContentImportermodule-ContentImportRequestmessageview"><a class="anchor" href="#src-196596858_ContentImportermodule-ContentImportRequestmessageview"></a>Content Import Request message view</h4>
+<div class="paragraph">
+<p>The Content Import Request message view is displayed to the user who
+opens a task. The view is mapped to the
+<a href="#src-196596858_ContentImportermodule-ContentImportRequesttask">Content
+Import Request task</a> in the <code>taskView</code> property (above).</p>
+</div>
+<div class="paragraph">
+<p>The <strong>Import</strong> (<code>approve</code>) action uses a custom action implementation
+class that is responsible for importing the bootstrap file into the JCR.
+With this exception, it is a standard
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Message+view+definition">message
+view definition</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>content</code> message view is configured in
+<code>/modules/content-importer/messageViews/content</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content-importer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">messageViews</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availability</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.admincentral.shellapp.pulse.task.action.ResolveTaskActionDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">decision</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-publish</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">implementationClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.content.action.BootstrapAction</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">confirmRejection</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">retry</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">claim</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">archive</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abort</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actionbar</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>messageViews</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Message views folder.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>content</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Message view name.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>form</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Form definition node.</p>
+</div>
+<div class="paragraph">
+<p>Text fields (read only):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>content.repository</code>: Target workspace.</p>
+</li>
+<li>
+<p><code>content.path</code>: File source path.</p>
+</li>
+<li>
+<p><code>content.modificationDate</code>: Modification date.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>actions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Actions definition node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;action definitions&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Configured actions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>approve</code>:<br>
+Properties:</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>availability</code> |<strong>optional</strong><br>
+Availability rules node.</p>
+</div>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required<br>
+</strong>Action definition class.</p>
+</div>
+<div class="paragraph">
+<p>ResolveTaskActionDefinition : Action for resolving a task.</p>
+</div>
+<div class="paragraph">
+<p>|<code>decision</code> |<strong>required</strong><br>
+Decision.</p>
+</div>
+<div class="paragraph">
+<p>|<code>icon</code> |<strong>optional</strong><br>
+Action icon.</p>
+</div>
+<div class="paragraph">
+<p>|<code>implementationClass</code> |<strong>optional<br>
+</strong>Implementation class.BootstrapAction : Executes bootstrap import
+action and resolves task by delegating to <code>ResolveTaskAction</code> .</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* <code>confirmRejection</code>: <strong>Reject</strong> action definition. Opens the <code>reject</code>
+dialog (configured in the module <code>dialogs</code> folder) that allows the user
+to leave a comment.
+* <code>retry</code>: <strong>Retry import task</strong> action definition.
+* <code>claim</code>: <strong>Assign to me</strong> action definition.
+* <code>archive</code>: <strong>Remove from list</strong> action definition.
+* <code>abort</code>: <strong>Abort</strong> action definition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>actionbar</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>required</strong></p>
+<p class="tableblock">Action bar definition.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Content Editor module</p>
+</div>
+<div class="paragraph">
+<p>Content Tags module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

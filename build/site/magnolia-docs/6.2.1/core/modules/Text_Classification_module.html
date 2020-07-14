@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Text Classification module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Text_Classification_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Text_Classification_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Text_Classification_module.html">Text Classification module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Text Classification module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204051151"><a class="anchor" href="#src-204051151"></a>Text Classification module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#src-204051151_TextClassificationmodule-Installing">Multiple
+submodules</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/TXTREC">TXTREC</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.enterprise.sites/enterprise/text-classification/">Text
+Classification</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+classification">Text
+classification</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+tagging">Content
+tagging</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">Definition
+decoration</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Text Classification module uses the Amazon Comprehend service to
+analyze and tag your text content. Amazon Comprehend is a natural
+language processing (NLP) service that uses machine learning to find
+insights and relationships in text. Magnolia uses the AWS
+<a href="https://docs.aws.amazon.com/comprehend/latest/dg/how-key-phrases.html">Key
+Phrases service</a> (BatchDetectKeyPhrases) to detect key phrases in your
+content during the classification process.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>A <em>key phrase</em> is a string containing a noun phrase that describes a
+particular thing. It generally consists of a noun and the modifiers that
+distinguish it. For example, "day" is a noun; "a beautiful day" is a
+noun phrase that includes an article ("a") and an adjective
+("beautiful"). Each key phrase includes a score that indicates the level
+of confidence that Amazon Comprehend has that the string is a noun
+phrase. You can use the score to determine if the detection has high
+enough confidence for your application.</p>
+</div>
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="src-204051151_TextClassificationmodule-Modulestructure"><a class="anchor" href="#src-204051151_TextClassificationmodule-Modulestructure"></a>Module structure</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-text-classification-parent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent reactor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-text-classification</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the text classification module
+and service.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-text-classification-api</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides an API to classify text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-amazon-text-classification</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides functionality to
+classify text via <a href="https://aws.amazon.com/comprehend/">Amazon Comprehend</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-pages-content-tags-integration</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides functionality to
+integrate
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+tagging">content
+tags</a> and the text classification service using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">decorations</a>
+in the Pages app.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-pages-content-tags-integration-compatibility</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia 6.2
+compatibility submodule that provides the
+<code>CompatibilityPageTextAggregator</code>. This text aggregator gathers texts
+according to both old and new API dialogs of page areas and components.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-204051151_TextClassificationmodule-Installing"><a class="anchor" href="#src-204051151_TextClassificationmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the modules. Add the following
+dependencies to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">webapp</a>.
+All other necessary dependencies will be brought in automatically:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.ai.text&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-text-classification&lt;/artifactId&gt;
+  &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.ai.text&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-text-classification-api&lt;/artifactId&gt;
+  &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.ai.text&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-amazon-text-classification&lt;/artifactId&gt;
+  &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.ai.text&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-pages-content-tags-integration&lt;/artifactId&gt;
+  &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.ai.text&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-pages-content-tags-integration-compatibility&lt;/artifactId&gt;
+  &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051151_TextClassificationmodule-Configuration"><a class="anchor" href="#src-204051151_TextClassificationmodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>When using our out-of-the-box solution:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>pages-content-tags-integration</code> submodule brings the content-tags
+functionality to the Pages app and handles aggregating text from the
+<code>website</code> workspace.</p>
+</li>
+<li>
+<p>The <code>magnolia-amazon-text-classification</code> submodule provides an
+out-of-the-box implementation to use Amazon Comprehend.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This solution is straightforward to configure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure the connection to the Amazon Comprehend classification
+service.</p>
+</li>
+<li>
+<p>Configure the <code>aggregateDefinition</code> for the Pages app (<code>website</code>
+workspace) to specify:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The field types to be aggregated.</p>
+</li>
+<li>
+<p>Any terms you want to blacklist. For example, you may want to filter
+out your company name.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Adjust the <code>minConfidence</code> property to change the classification
+confidence score.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you so require, you can also write:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your own text aggregator implementation to run text classification on
+a custom content app.</p>
+</li>
+<li>
+<p>Your own text classifier implementation to use another third-party
+text classification service to classify and tag your content.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-204051151_TextClassificationmodule-AmazonComprehendservice"><a class="anchor" href="#src-204051151_TextClassificationmodule-AmazonComprehendservice"></a>Amazon Comprehend service</h4>
+<div class="sect4">
+<h5 id="src-204051151_TextClassificationmodule-AWSservicepermissions"><a class="anchor" href="#src-204051151_TextClassificationmodule-AWSservicepermissions"></a>AWS service permissions</h5>
+<div class="paragraph">
+<p>First, make sure that you have acquired appropriate permissions for the
+service in the
+<a href="https://console.aws.amazon.com/iam/home?region=us-east-2#/users">Amazon
+IAM Management Console.</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/204051151/aws-aim-console-users-focus-blur.png" alt="images/download/attachments/204051151/aws-aim-console-users-focus-blur.png"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-204051151_TextClassificationmodule-AddyoursecuritycredentialstoMagnolia"><a class="anchor" href="#src-204051151_TextClassificationmodule-AddyoursecuritycredentialstoMagnolia"></a>Add your security credentials to Magnolia</h5>
+<div class="paragraph">
+<p>You need an AWS secret access key to make secure REST requests to the
+Amazon Comprehend API. Access keys consist of two parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Access Key ID</p>
+</li>
+<li>
+<p>Secret Access Key</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Generate the key in the security credentials section of the
+<a href="https://console.aws.amazon.com/iam/home?region=us-east-2#/users">Amazon
+IAM Management Console</a>. (In the navigation bar on the upper right,
+choose your user name, and then choose My Security Credentials.)</p>
+</div>
+<div class="paragraph">
+<p>Add the two parts of the key to your Magnolia instance in the
+<a href="Password_Manager_module.html">Password manager app</a> using the
+following names:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>aws-credentials</code></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/204051151/padlock.gif" alt="images/download/attachments/204051151/padlock.gif" height="25"></span>
+<code>aws_access_key_id</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/204051151/padlock.gif" alt="images/download/attachments/204051151/padlock.gif" height="25"></span>
+<code>aws_secret_access_key</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>For more information about the key, see
+<a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys">Understanding
+and Getting Your Security Credentials</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-204051151_TextClassificationmodule-Configuringtheservice"><a class="anchor" href="#src-204051151_TextClassificationmodule-Configuringtheservice"></a>Configuring the service</h5>
+<div class="paragraph">
+<p>Under <code>/amazon-text-classification/config.yaml</code>, you must configure the
+following properties for the classification service:</p>
+</div>
+<div class="paragraph">
+<p><code>region:</code></p>
+</div>
+<div class="paragraph">
+<p>`  name: your_aws_region_name`</p>
+</div>
+<div class="paragraph">
+<p><code>languageCode: en</code></p>
+</div>
+<div class="paragraph">
+<p><code>minConfidence: ``0.85</code></p>
+</div>
+<div class="sect5">
+<h6 id="src-204051151_TextClassificationmodule-Properties"><a class="anchor" href="#src-204051151_TextClassificationmodule-Properties"></a>Properties</h6>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>region</code></p>
+</div>
+<div class="paragraph">
+<p><code>name</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Label designating a regional endpoint to which the text classification
+service connects, such as <code>eu-west-1</code>.</p>
+</div>
+<div class="paragraph">
+<p>You must set a region name to configure the Amazon Comprehend service in
+Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>To reduce data latency, AWS offers several regional endpoints. Each of
+the endpoints can be referred to in service configurations by a region
+name, for example <code>eu-west-1</code>. Note that if you pick a region that does
+not support this service, you may get erratic results.</p>
+</div>
+<div class="paragraph">
+<p>For a list of available regions and labels, see
+<a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#comprehend_region" class="bare">https://docs.aws.amazon.com/general/latest/gr/rande.html#comprehend_region</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>languageCode</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <em>default is `en`</em></p>
+</div>
+<div class="paragraph">
+<p>The language of the input documents. You can specify any of the primary
+languages supported by Amazon Comprehend: German ("de"), English ("en"),
+Spanish ("es"), French ("fr"), Italian ("it"), or Portuguese ("pt"). All
+documents must be in the same language.</p>
+</div>
+<div class="paragraph">
+<p>Amazon Comprehend can perform text analysis on English, French, German,
+Italian, Portuguese, and Spanish texts.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minConfidence</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <em>default is `0.85`</em></p>
+</div>
+<div class="paragraph">
+<p>The confidence score of the classification.</p>
+</div>
+<div class="paragraph">
+<p>A decimal value between 0 and 1. The filter drops the tags with a
+confidence score lower than the value of this property.</p>
+</div>
+<div class="paragraph">
+<p>The Amazon Comprehend solution returns a confidence score for each key
+phrase tag. Tags with a confidence score lower than the value of the
+minConfidence property are dropped.</p>
+</div>
+<div class="paragraph">
+<p>Setting the value higher usually results in fewer key phrase tags being
+returned for your content. A higher confidence score means that the tag
+more correctly describes the text.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-204051151_TextClassificationmodule-Configuringtextaggregators"><a class="anchor" href="#src-204051151_TextClassificationmodule-Configuringtextaggregators"></a>Configuring text aggregators</h4>
+<div class="paragraph">
+<p>The <code>pages-content-tags-integration</code> module brings the content-tags
+functionality to the Pages app and handles aggregating text from the
+<code>website</code> workspace out-of-the-box.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>pages-content-tags-integration-compatibility</code> module handles
+aggregating text for both the legacy
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Changes+in+Magnolia+6+UI">Magnolia
+5 UI Pages app and the new 6 UI Pages app</a>.</p>
+</div>
+<div class="paragraph">
+<p>Text aggregators collect and aggregate the content that the
+classification service analyzes and generates tags from. You can specify
+from which field types content should be taken in the text aggregator
+configuration.</p>
+</div>
+<div class="sect4">
+<h5 id="src-204051151_TextClassificationmodule-Definingfieldtypes"><a class="anchor" href="#src-204051151_TextClassificationmodule-Definingfieldtypes"></a>Defining field types</h5>
+<div class="paragraph">
+<p>By default, the text aggregator for the Pages app gathers text from
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text</a>,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rich+text+field">rich text</a>,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Composite+field">composite</a>
+and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Switchable+field">switchable</a>
+field types.</p>
+</div>
+<div class="paragraph">
+<p>text-classification/src/main/resources/text-classification/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>aggregateDefinition:</code></p>
+</div>
+<div class="paragraph">
+<p>`  fieldTypes: [text, textField, richText, richTextField, composite, compositeField, switchable, switchableField]`</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-204051151_TextClassificationmodule-Excludingtermsfromtheclassificationtags"><a class="anchor" href="#src-204051151_TextClassificationmodule-Excludingtermsfromtheclassificationtags"></a>Excluding terms from the classification tags</h5>
+<div class="paragraph">
+<p>You can blacklist the terms you do not want to appear in your tags. For
+example, you may want to exclude your company name.</p>
+</div>
+<div class="paragraph">
+<p>To do so, go to the Resource files app, under
+<code>/text-classification/config.yaml</code> and add comma-separated terms to the
+<code>excludedTerms</code> list. In this example, the words <em>ACME</em>, <em>corporation</em>
+and <em>coyote</em> are excluded:</p>
+</div>
+<div class="paragraph">
+<p>text-classification/src/main/resources/text-classification/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>termFilteringDefinition:</code></p>
+</div>
+<div class="paragraph">
+<p>`  excludedTerms: [ACME, corporation, coyote]`</p>
+</div>
+<div class="paragraph">
+<p>Note that the blacklist is case insensitive.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-204051151_TextClassificationmodule-Creatingcustomcontentapptextaggregators"><a class="anchor" href="#src-204051151_TextClassificationmodule-Creatingcustomcontentapptextaggregators"></a>Creating custom content app text aggregators</h4>
+<div class="paragraph">
+<p>If you want to run text classification on a custom content app, you must
+write your own text aggregator implementation.</p>
+</div>
+<div class="paragraph">
+<p>To do so:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Implement the <code>TextAggregator</code> interface.</p>
+</li>
+<li>
+<p>TextAggregator uses multi-binding so you must annotate it with
+<code>@Multibinding</code> and add it to the module descriptor as a component for
+injection. For example, see
+<code>pages-content-tags-integration/src/main/resources/META-INF/magnolia/pages-content-tags-integration.xml</code>.</p>
+</li>
+<li>
+<p>Decorate the text-classification configuration file, for example:</p>
+<div class="paragraph">
+<p>customModule-content-tags-integration/decorations/text-classification/config/config.yaml</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>workspaceClassificationConfigurations:</code></p>
+</div>
+<div class="paragraph">
+<p>`  website:`</p>
+</div>
+<div class="paragraph">
+<p>`    textAggregatorClassName: info.magnolia.ai.text.YourTextAggregator`</p>
+</div>
+<div class="paragraph">
+<p>`    workspace: yourworkspace`</p>
+</div>
+<div class="paragraph">
+<p>`    nodeType: mgnl:yournodetype`</p>
+</div>
+<div class="sect4">
+<h5 id="src-204051151_TextClassificationmodule-Properties.1"><a class="anchor" href="#src-204051151_TextClassificationmodule-Properties.1"></a>Properties</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>workspaceClassificationConfigurations</code></th>
+<th class="tableblock halign-left valign-top"><strong>required</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>website</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Arbitrary, unique name for the decoration configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>textAggregatorClassName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Fully qualified classname for your text aggregator.</p>
+</div>
+<div class="paragraph">
+<p>Example: <code>info.magnolia.ai.text.PageTextAggregator</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The workspace where the content to be analyzed is stored.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the JCR node type for storing an item of the given content
+type.</p>
+</div>
+<div class="paragraph">
+<p>Example: <code>mgnl:page</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051151_TextClassificationmodule-Creatingcustomtextclassifiers"><a class="anchor" href="#src-204051151_TextClassificationmodule-Creatingcustomtextclassifiers"></a>Creating custom text classifiers</h3>
+<div class="paragraph">
+<p>The <code>magnolia-amazon-text-classification</code> submodule provides an
+out-of-the-box implementation to use Amazon Comprehend.</p>
+</div>
+<div class="paragraph">
+<p>However, if you want to use another third-party text classification
+service to classify and tag your content, you can write your own custom
+text classifier implementation.</p>
+</div>
+<div class="paragraph">
+<p>Before configuring the text classifier, make sure you have administrator
+access to your third-party classification service, including the API
+documentation.</p>
+</div>
+<div class="paragraph">
+<p>To create a custom text classifier you must implement the
+<code>info.magnolia.ai.text.TextClassifier</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>Note that you can inject the <code>TextClassifier</code> interface as a component
+in any running instance of Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>` * Commons interface to classify text.`</p>
+</div>
+<div class="paragraph">
+<p>` */`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface`</code> TextClassifier {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Takes a {@link String text} as parameter and returns a {@link Collection collection}`</p>
+</div>
+<div class="paragraph">
+<p>`     * of {@link TextLabel Text label}s as output.`</p>
+</div>
+<div class="paragraph">
+<p>`     *`</p>
+</div>
+<div class="paragraph">
+<p>`     * &lt;p&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     *     Returns empty collection for the cases below:`</p>
+</div>
+<div class="paragraph">
+<p>`     *     &lt;li&gt;Upon exception&lt;/li&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     *     &lt;li&gt;Text couldn&#8217;t be classified&lt;/li&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     * &lt;/p&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    Collection&lt;TextLabel&gt; classify(String text);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Takes a collection containing the text of the input documents as a parameter.`</p>
+</div>
+<div class="paragraph">
+<p>`     *`</p>
+</div>
+<div class="paragraph">
+<p>`     * @param texts`</p>
+</div>
+<div class="paragraph">
+<p>`     *        A collection containing the text of the input documents.`</p>
+</div>
+<div class="paragraph">
+<p>`     * @return Returns a {@link Map map} where keys are input texts, values are {@link Collection collection}s of detected {@link TextLabel Text label}s`</p>
+</div>
+<div class="paragraph">
+<p>`     *         for the input text or empty collections if an error occurs while processing the input text.`</p>
+</div>
+<div class="paragraph">
+<p>`     *         The returned map preserves the order of the texts in the input collection.`</p>
+</div>
+<div class="paragraph">
+<p>`     *`</p>
+</div>
+<div class="paragraph">
+<p>`     * &lt;p&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     *     Returns an empty map for the cases below:`</p>
+</div>
+<div class="paragraph">
+<p>`     *     &lt;li&gt;Input {@link Collection collection} is null or empty&lt;/li&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     *     &lt;li&gt;All documents in input {@link Collection collection} are processed with an error&lt;/li&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     * &lt;/p&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>default</code> Map&lt;String, Collection&lt;TextLabel&gt;&gt; classify(Collection&lt;String&gt; texts) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (CollectionUtils.isNotEmpty(texts)) {`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> texts.stream()`</p>
+</div>
+<div class="paragraph">
+<p>`                    .collect(Collectors.toMap(mapper &#8594; mapper, <code>this</code>::classify));`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> Collections.emptyMap();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Only one <code>TextClassifier</code> should be used in a Magnolia instance. Remove
+the out-of-the-box <code>AmazonTextClassifier</code> if you choose to implement
+your own.</p>
+</div>
+<div class="paragraph">
+<p>If you have more than one module that specifies the TextClassifier
+implementation in the module class, the TextClassifier from the module
+that was started last is used.</p>
+</div>
+<div class="paragraph">
+<p>See the following files for an example implementation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.ai.text.amazon.AmazonTextClassifier</code></p>
+</li>
+<li>
+<p><code>META-INF/magnolia/amazon-text-classification.xml</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051151_TextClassificationmodule-Runningtextclassification"><a class="anchor" href="#src-204051151_TextClassificationmodule-Runningtextclassification"></a>Running text classification</h3>
+<div class="paragraph">
+<p>The text classification and tagging action are executed during the
+startup of the author instance. You can also trigger the action manually
+in the Pages app by selecting one or more pages and clicking the <strong>Run
+classification</strong> action.</p>
+</div>
+<div class="paragraph">
+<p>Pages that have already been tagged are marked as such using a JCR
+property called <code>lastTaggingAttemptDateByTextClassifier</code>. Executing the
+manual classification action forces a new tag to be set even if the
+content was previously tagged.</p>
+</div>
+<div class="paragraph">
+<p>The text classification feature is available only on author instances.</p>
+</div>
+<div class="sect3">
+<h4 id="src-204051151_TextClassificationmodule-Removingtags"><a class="anchor" href="#src-204051151_TextClassificationmodule-Removingtags"></a>Removing tags</h4>
+<div class="paragraph">
+<p>Once a page has been tagged, you can remove some or all of the tags by
+selecting the page and clicking the <strong>Modify tags</strong> action in the Pages
+app.</p>
+</div>
+<div class="paragraph">
+<p>In the dialog box that opens, you can remove individual tags or click
+<strong>Remove all tags</strong>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Note that content tagging currently has an issue when creating tags of
+words with accented characters. For example, <em>Genève</em> is tagged as
+<code>Gen-ve</code>. This means that searching for the tag Geneve or Genève will
+not return any results. The issue is being tracked here:
+<a href="https://jira.magnolia-cms.com/browse/CONTTAGS-69?src=confmacro"><</a> - No support of special characters
+<span class="status  grey  subtle">Selected</span></p>
+</div>
+<div class="paragraph">
+<p>Synchronization REST module</p>
+</div>
+<div class="paragraph">
+<p>Tools module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

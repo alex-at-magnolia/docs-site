@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>jBPM runtime - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/jBPM_runtime.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="jBPM_runtime.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="jBPM_runtime.html">jBPM runtime - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">jBPM runtime - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Workflow_module.html">Workflow module</a></p>
+</li>
+<li>
+<p><a href="jBPM_integration.html">jBPM integration</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597515"><a class="anchor" href="#src-196597515"></a>jBPM runtime</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Please take some time to read through the official documentation of
+jBPM&#8217;s
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMCoreEngine.html">Core
+Engine API</a> before proceeding here.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597515_jBPMruntime-RuntimeManager"><a class="anchor" href="#src-196597515_jBPMruntime-RuntimeManager"></a>RuntimeManager</h3>
+<div class="paragraph">
+<p>Magnolia&#8217;s jBPM integration takes advantage of the new Runtime Manager
+concept.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>RuntimeManager has been introduced to simplify and empower usage of
+knowledge API especially in context of processes. It provides
+configurable strategies that control actual runtime execution (how
+KieSessions are provided) and by default provides following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Singleton - runtime manager maintains single KieSession regardless of
+number of processes available</p>
+</li>
+<li>
+<p>Per Request - runtime manager delivers new KieSession for every
+request</p>
+</li>
+<li>
+<p>Per Process Instance - runtime manager maintains mapping between
+process instance and KieSession and always provides same KieSession
+whenever working with given process instance</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Runtime Manager is primary responsible for managing and delivering
+instances of RuntimeEngine to the caller.</p>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMCoreEngine.html#d0e1916">jBPM
+Core Engine: RuntimeManager</a></p>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Magnolia uses a
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMCoreEngine.html#d0e1975">Singleton
+strategy</a>, which means the RuntimeManager maintains a single instance of
+RuntimeEngine and in turn a single instance of KieSession (and
+TaskService). This is the easiest approach and how it used to work in
+jBPM 5.x. But it comes with a performance penalty because of the
+synchronized access to the RuntimeEngine.</p>
+</div>
+<div class="paragraph">
+<p>An alternative to this would be the
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMCoreEngine.html#d0e1975">per
+process strategy</a> where the RuntimeManager maintains a strict
+relationship between KieSession and ProcessInstance. Currently the
+underlying JCR persistence is lacking the possibility to store this
+relationship using the so called
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMPersistence.html#d0e4042">Correlation
+Key</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597515_jBPMruntime-RuntimeEnvironment"><a class="anchor" href="#src-196597515_jBPMruntime-RuntimeEnvironment"></a>RuntimeEnvironment</h3>
+<div class="paragraph">
+<p>In jBPM the Runtime Environment is used by the RuntimeManager and
+encapsulates all important configuration that it requires for execution.
+It has to be fully instantiated and configured before the manager gets
+started and should not be altered afterwards.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia has its own implementation of the RuntimeEnvironment which
+takes care of the following during initialization:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configure JCR persistence related classes.</p>
+</li>
+<li>
+<p>Load process definitions</p>
+</li>
+<li>
+<p>Provide the necessary implementations used by the runtime (see
+Magnolia&#8217;s implementation of <code>RegisterableItemsFactory</code>) such as:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Workitem handlers</p>
+</li>
+<li>
+<p>Process event listeners</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MgnlRuntimeEnvironment</p>
+</div>
+<div class="paragraph">
+<p><code>@Singleton</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> MgnlRuntimeEnvironment </code>extends`</code> SimpleRuntimeEnvironment {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MgnlRuntimeEnvironment(WorkflowDefinitionRegistry workflowRegistry, RegisterableItemsFactory registerableItemsFactory, ComponentProvider componentProvider) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(registerableItemsFactory);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> init() {`</p>
+</div>
+<div class="paragraph">
+<p>`        addToConfiguration(<code>"drools.workItemManagerFactory"</code>, JcrWorkItemManagerFactory.<code>class</code>.getName());`</p>
+</div>
+<div class="paragraph">
+<p>`        addToConfiguration(<code>"drools.processInstanceManagerFactory"</code>, JcrProcessInstanceManagerFactory.<code>class</code>.getName());`</p>
+</div>
+<div class="paragraph">
+<p>`        addToConfiguration(<code>"drools.processSignalManagerFactory"</code>, JcrSignalManagerFactory.<code>class</code>.getName());`</p>
+</div>
+<div class="paragraph">
+<p>`        addToConfiguration(<code>"drools.commandService"</code>,SimpleSessionCommandService.<code>class</code>.getName());`</p>
+</div>
+<div class="paragraph">
+<p>`        addToEnvironment(EnvironmentName.PERSISTENCE_CONTEXT_MANAGER, componentProvider.newInstance(JcrProcessPersistenceContextManager.<code>class</code>));`</p>
+</div>
+<div class="paragraph">
+<p>`        loadFlows();`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>.init();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597515_jBPMruntime-Classdiagram"><a class="anchor" href="#src-196597515_jBPMruntime-Classdiagram"></a>Class diagram</h3>
+<div class="paragraph">
+<p>The most important classes involved in setting up the jBPM Runtime and
+communicating with the engine.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597515/UML_runtime.png" alt="images/download/attachments/196597515/UML_runtime.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597515_jBPMruntime-StartingthejBPMengine"><a class="anchor" href="#src-196597515_jBPMruntime-StartingthejBPMengine"></a>Starting the jBPM engine</h3>
+<div class="paragraph">
+<p>This sequence diagram illustrates how the Runtime is initialized during
+module startup. After startup the WorkflowManager has a fully
+initialized RuntimeManager which allows communicating with the engine.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597515/module_start.png" alt="images/download/attachments/196597515/module_start.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597515_jBPMruntime-Launchingaprocess"><a class="anchor" href="#src-196597515_jBPMruntime-Launchingaprocess"></a>Launching a process</h3>
+<div class="paragraph">
+<p>This sequence diagram shows how a process gets launched using the
+LaunchWorkflowCommand.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597515/launch_process.png" alt="images/download/attachments/196597515/launch_process.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Human Tasks</p>
+</div>
+<div class="paragraph">
+<p>JCR persistence</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

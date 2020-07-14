@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JSON data source - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/JSON_data_source.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="JSON_data_source.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="JSON_data_source.html">JSON data source - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">JSON data source - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="REST_Client_module.html">REST Client module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204057205"><a class="anchor" href="#src-204057205"></a>JSON data source</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>The JSON data source provides information about what REST client, REST
+call and path expressions to use.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The JSON data source is part of the <code>magnolia-rest-client-ui</code> extension
+module for the <em>Magnolia 6 UI</em> framework. The fully qualified class name
+is <code>info.magnolia.rest.ui.JsonDatasourceDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+connector+-+5+UI">Content
+connector</a> instead.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The JSON data source, which provides the ability to use REST clients in
+the UI, is a DX Core feature that is not available in the Community
+Edition.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204057205_JSONdatasource-Exampledefinition"><a class="anchor" href="#src-204057205_JSONdatasource-Exampledefinition"></a>Example definition</h3>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  name: rest`</p>
+</div>
+<div class="paragraph">
+<p>`  $type: jsonDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`  restClient: countries`</p>
+</div>
+<div class="paragraph">
+<p>`  restCall: allCountries`</p>
+</div>
+<div class="paragraph">
+<p>`  jsonPathExpressions:`</p>
+</div>
+<div class="paragraph">
+<p>`    itemId: <code>&#8217;$.name'</code></p>
+</div>
+<div class="paragraph">
+<p>`    items: <code>&#8217;$.*'</code></p>
+</div>
+<div class="paragraph">
+<p>`    describeBy: <code>&#8217;$.name'</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204057205_JSONdatasource-Listofproperties"><a class="anchor" href="#src-204057205_JSONdatasource-Listofproperties"></a>List of properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code> or <code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Use <code>info.magnolia.rest.ui.JsonDatasourceDefinition</code> for the <code>class</code>
+property or <code>jsonDatasource</code> for the <code>$type</code> shortcut.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restClient</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specifies the REST client to be used.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restCall</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>REST call configuration. Must use the entity class
+<code>com.fasterxml.jackson.databind.JsonNode</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonPathExpressions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Simplifies data selection from REST responses. See
+JsonPathExpressionsDefinition for more information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>itemId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Unique identifier of the item.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>items</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>List of items to be used by the data provider.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>describeBy</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Describes (in the status bar) the selected item.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>preview</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Provides preview of the selected item.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>properties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Mapping to get values using path expressions. Useful for values deep in
+the hierarchy.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional,</strong> <em>default is `rest`</em></p>
+</div>
+<div class="paragraph">
+<p>Name of the data source.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pagination</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines a pagination strategy for the list presenter. Must implement the
+PaginationStrategyDefinition interface.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+When the JSON data source is paginated, sorting is disabled for lists
+and the items appear in the order delivered by the REST API.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-204057205_JSONdatasource-Datasourcecomponents"><a class="anchor" href="#src-204057205_JSONdatasource-Datasourcecomponents"></a>Data source components</h3>
+<div class="paragraph">
+<p>Module component mappings can be defined in the context of the current
+data source (a component section should have an id in the form of
+<code>&lt;id&gt;datasource-&lt;ds-name&gt;&lt;/id&gt;</code>, where <code>&lt;ds-name&gt;</code> is configured in the
+definition).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Implementation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.RestClientInvoker</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.RestClientInvoker</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Helper class for making
+calls to REST clients.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonDataProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonDataProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data provider implementation
+using REST client.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.datasource.ItemResolver</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonItemResolver</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts path to actual item
+and back.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.browser.preview.PreviewProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.preview.JsonPreviewProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides preview
+of selected item (for example, content of a binary node or link to an
+image).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.datasource.PropertySetFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonPropertySetFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reads and writes
+properties from/to item in form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.SelectFieldSupport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonSelectFieldSupport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides delegates
+required by select fields.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.HealthCheck</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.HealthCheck</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether REST call is
+available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.field.factory.JsonLinkFieldFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.field.factory.JsonLinkFieldFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Factory
+class that creates/initializes JsonLinkFieldDefinition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.field.factory.JsonComboBoxFieldFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.field.factory.JsonComboBoxFieldFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Factory
+class that creates/initializes JsonComboBoxFieldDefinition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.browser.StatusBar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonStatusBar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays description for
+selected item(s) at the bottom of app.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.browser.ListPresenter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.rest.ui.JsonListPresenter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays items as list.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Component mappings in module descriptor</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>components</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>id</code>&gt;datasource-rest&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.rest.ui.RestClientInvoker&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.RestClientInvoker&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>scope</code>&gt;singleton&lt;/<code>scope</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.rest.ui.JsonDataProvider&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.JsonDataProvider&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.datasource.ItemResolver&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.JsonItemResolver&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.preview.PreviewProvider&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.preview.JsonPreviewProvider&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.datasource.PropertySetFactory&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.JsonPropertySetFactory&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.field.SelectFieldSupport&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.JsonSelectFieldSupport&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.rest.ui.HealthCheck&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.HealthCheck&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.rest.ui.field.factory.JsonLinkFieldFactory&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.field.factory.JsonLinkFieldFactory&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.rest.ui.field.factory.JsonComboBoxFieldFactory&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.field.factory.JsonComboBoxFieldFactory&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.StatusBar&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.JsonStatusBar&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.ListPresenter&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.rest.ui.JsonListPresenter&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>components</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Getting and using REST client instances</p>
+</div>
+<div class="paragraph">
+<p>RSS Aggregator module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

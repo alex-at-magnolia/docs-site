@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>App configuration with Solr - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/App_configuration_with_Solr.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="App_configuration_with_Solr.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="App_configuration_with_Solr.html">App configuration with Solr - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">App configuration with Solr - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597405"><a class="anchor" href="#src-196597405"></a>App configuration with Solr</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Installing_Apache_Solr.html">Installing Apache Solr</a></p>
+</li>
+<li>
+<p><a href="Indexing_and_crawling_a_website_with_Solr.html">Indexing and
+crawling a website with Solr</a></p>
+</li>
+<li>
+<p><a href="Providing_a_Solr_search.html">Providing a Solr search</a></p>
+</li>
+<li>
+<p><a href="Solr_module_release_notes.html">Solr module release notes</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Jackrabbit+search">Jackrabbit
+search</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/Step-by-step+integrating+Solr+in+Magnolia+and+generating+custom+sitemap">Creating
+a sitemap with Solr</a> (Community Wiki)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Solr Workbench submodule of the Magnolia <a href="Solr_module.html">Solr
+module</a> provides a Magnolia Solr container that can be used instead of
+the JCR container for list, search and thumbnail views in a content app.
+This page describes how to configure the submodule to use Solr&#8217;s
+functionality in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Assets+app">Assets app</a> and
+for indexing of
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+assets">the assets
+it manages</a>.</p>
+</div>
+<div class="paragraph">
+<p>The Solr container, which fetches data indexed in the
+<a href="http://lucene.apache.org/solr/">Apache Solr</a> search platform, is
+recommended to be used when handling large numbers of assets.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><strong>A note about search containers</strong></p>
+</div>
+<div class="paragraph">
+<p>Magnolia uses the following search containers that backup the search
+view in the UI:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.ui.workbench.search.SearchJcrContainer</code> for Jackrabbit.</p>
+</li>
+<li>
+<p><code>info.magnolia.search.solrsearchprovider.workbench.SolrContainer</code> for
+Solr.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In general you can use these containers in any JCR based
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Parts+of+a+content+app+-+5+UI">Content
+App</a>. Similarly, indexing is workspace-based and hence one workspace may
+use Jackrabbit&#8217;s indexing functionality, another one Solr&#8217;s indexing
+functionality.</p>
+</div>
+<div class="paragraph">
+<p>You can also define and use your own custom container, especially in
+case you need to use both Jackrabbit and Solr together in one workspace.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597405_AppconfigurationwithSolr-InstallingSolr"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-InstallingSolr"></a>Installing Solr</h3>
+<div class="paragraph">
+<p>To install Solr follow the instructions on the
+<a href="Installing_Apache_Solr.html">Installing Apache Solr</a> page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597405_AppconfigurationwithSolr-CreatingadedicatedcorefortheDAMapp"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-CreatingadedicatedcorefortheDAMapp"></a>Creating a dedicated core for the DAM app</h3>
+<div class="paragraph">
+<p>With Apache Solr running create a new core called <code>dam_wokbench</code> for the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Assets+app">Assets app</a>:</p>
+</div>
+<div class="paragraph">
+<p><code>.<code>/solr</code> create_core -c dam_workbench -d magnolia_data_driven_schema_configs</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597405_AppconfigurationwithSolr-DAMworkspaceindexers"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-DAMworkspaceindexers"></a>DAM workspace indexers</h3>
+<div class="paragraph">
+<p>The Solr Wokbench module comes with two preconfigured DAM workspace
+indexers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>damWorkbenchAssets</code></p>
+</li>
+<li>
+<p><code>damWorkbenchFolders</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To enable them, set to <code>true</code> the following properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/modules/content-indexer/config/indexers/damWorkbenchAssets@enabled</code></p>
+</li>
+<li>
+<p><code>/modules/content-indexer/config/indexers/damWorkbenchFolders@enabled</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information about configuring indexers see
+<a href="Indexing_and_crawling_a_website_with_Solr.html#src-196597404_IndexingandcrawlingawebsitewithSolr-Indexerconfiguration">Indexer
+configuration</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can see the preconfigured configuration by clicking at the following
+links:</p>
+</div>
+<div class="paragraph">
+<p>damWorkbenchAssets indexer configuration</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">damWorkbenchAssets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam_workbench</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam_workbench</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">caption</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_caption</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributor</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_contributor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">copyright</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_copyright</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">coverage</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_coverage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_extension</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fileName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_filename</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">languages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_languages</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">publisher</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_publisher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">relation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_relation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_source</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_subject</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset_title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodeType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:asset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pull</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rootNode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam-workbench</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>dmaWorkbenchFolders indexer configuration</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">damWorkbenchFolders</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam_workbench</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam_workbench</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodeType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:folder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pull</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rootNode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam-workbench</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597405_AppconfigurationwithSolr-DAMappconfiguration"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-DAMappconfiguration"></a>DAM app configuration</h3>
+<div class="sect3">
+<h4 id="src-196597405_AppconfigurationwithSolr-Contentconnector"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-Contentconnector"></a>Content connector</h4>
+<div class="paragraph">
+<p>The Solr Workbench module introduces
+<code>info.magnolia.search.solrsearchprovider.workbench.SolrJcrContentConnectorDefinition</code>
+which allows you to specify which
+<a href="Providing_a_Solr_search.html#src-196597425_ProvidingaSolrsearch-ConfiguringtheSolrclients">client</a>
+should be used.</p>
+</div>
+<div class="paragraph">
+<p>The configuration snippet below shows how to use
+<code>SolrJcrContentConnectorDefinition</code> in the DAM app:*YAML file*</p>
+</div>
+<div class="paragraph">
+<p>/&lt;light_module&gt;/decorations/dam-app/apps/assets.subApps.browser.contentConnector.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.search.solrsearchprovider.workbench.SolrJcrContentConnectorDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>client: dam_workbench</code></p>
+</div>
+<div class="paragraph">
+<p><strong>JCR nodes</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentConnector</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodeTypes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.search.solrsearchprovider.workbench.SolrJcrContentConnectorDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">client</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam_workbench</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultOrder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jcrName</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rootPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The definition by YAML is a decoration, whereas the definition by JCR is
+a full configuration.</p>
+</div>
+<div class="paragraph">
+<p>For more about content connectors, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+connector+-+5+UI">Content
+connector configuration</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597405_AppconfigurationwithSolr-ContentView"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-ContentView"></a>Content View</h4>
+<div class="paragraph">
+<p>The submodule provides presenter and definition classes for list, search
+and thumbnail views. The configuration snippet below shows SOLR-based
+content view definitions for the list, thumbnail and search views in the
+DAM app&#8217;s browser:*YAML file*</p>
+</div>
+<div class="paragraph">
+<p>/&lt;light_module&gt;/decorations/dam-app/apps/assets.subApps.browser.workbench.contentViews.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>list:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.search.solrsearchprovider.workbench.SolrListPresenterDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>search:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.search.solrsearchprovider.workbench.SolrSearchPresenterDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>thumbnail:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.search.solrsearchprovider.workbench.SolrThumbnailPresenterDefinition`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR nodes</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.search.solrsearchprovider.workbench.SolrListPresenterDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">columns</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">search</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.search.solrsearchprovider.workbench.SolrSearchPresenterDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">columns</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thumbnail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.search.solrsearchprovider.workbench.SolrThumbnailPresenterDefinition</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The above definition by YAML is a decoration.</p>
+</div>
+<div class="paragraph">
+<p>For more information about configuring content view definitions, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+view+definition">Content
+view definition configuration</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597405_AppconfigurationwithSolr-dam-solr-workbenchlightmodule"><a class="anchor" href="#src-196597405_AppconfigurationwithSolr-dam-solr-workbenchlightmodule"></a>dam-solr-workbench light module</h4>
+<div class="paragraph">
+<p>To use the Solr Workbench submodule in the DAM app, you can get a
+pre-configured light module from git:
+<a href="https://git.magnolia-cms.com/projects/LIGHT-MODULES/repos/dam-solr-workbench">dam-solr-workbench</a>.</p>
+</div>
+<div class="paragraph">
+<p>Indexing and crawling a website with Solr</p>
+</div>
+<div class="paragraph">
+<p>Providing a Solr search</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

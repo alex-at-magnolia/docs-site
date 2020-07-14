@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Indexing and crawling a website with Solr - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Indexing_and_crawling_a_website_with_Solr.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Indexing_and_crawling_a_website_with_Solr.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Indexing_and_crawling_a_website_with_Solr.html">Indexing and crawling a website with Solr - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Indexing and crawling a website with Solr - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597404"><a class="anchor" href="#src-196597404"></a>Indexing and crawling a website with Solr</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Installing_Apache_Solr.html">Installing Apache Solr</a></p>
+</li>
+<li>
+<p><a href="App_configuration_with_Solr.html">App configuration with Solr</a></p>
+</li>
+<li>
+<p><a href="Providing_a_Solr_search.html">Providing a Solr search</a></p>
+</li>
+<li>
+<p><a href="Solr_module_release_notes.html">Solr module release notes</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Jackrabbit+search">Jackrabbit
+search</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/Step-by-step+integrating+Solr+in+Magnolia+and+generating+custom+sitemap">Creating
+a sitemap with Solr</a> (Community Wiki)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes how to configure the Content Indexer submodule of
+the Magnolia <a href="Solr_module.html">Solr module</a> to index Magnolia
+workspaces and crawl a website. Solr module allows you to use
+<a href="http://lucene.apache.org/solr/">Apache Solr</a>, a standalone
+enterprise-grade search server with a REST-like API, for indexing and
+crawling Magnolia content, especially if you need to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+assets">manage
+assets</a> in high volumes (100,000+ DAM assets).</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597404_IndexingandcrawlingawebsitewithSolr-ConfiguringSolrclients"><a class="anchor" href="#src-196597404_IndexingandcrawlingawebsitewithSolr-ConfiguringSolrclients"></a>Configuring Solr clients</h3>
+<div class="paragraph">
+<p>From version 5.2 the Solr module supports multiple Solr servers/cores.
+You can configure a <code>client</code> for every server/core under <strong>Configuration
+&gt;</strong> <code>/modules/solr-search-provider/config/solrClientConfigs</code>. It&#8217;s
+recommended to have one client named <code>default</code>. This default client is
+used when no specific client is defined for the indexer, crawler, or
+search result page template.</p>
+</div>
+<div class="paragraph">
+<p>If you need to have more servers/cores, duplicate the <code>default</code> client
+and change the <code>baseURL</code> property to point to another server/core.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> solr-search-provider</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> solrClientConfigs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> allowCompression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> baseURL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://localhost:8983/solr/magnolia" class="bare">http://localhost:8983/solr/magnolia</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> connectionTimeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"> soTimeout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1,000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The value entered for the <code>baseURL</code> property should conform with the
+following syntax:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;protocol&gt;://&lt;domain_name&gt;:&lt;port&gt;/solr/&lt;solr_core_name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>If the Solr server is installed as described in
+<a href="Installing_Apache_Solr.html">Installing Apache Solr</a>, then the value
+is `http://localhost:8983/solr/magnolia `. For a description of the
+other properties see the
+<a href="https://lucene.apache.org/solr/7_3_0/solr-solrj/org/apache/solr/client/solrj/impl/HttpSolrClient.Builder.html">HttpSolrClient.Builder</a>
+Javadoc and
+<a href="https://lucene.apache.org/solr/guide/7_3/using-solrj.html#common-configuration-options">Using
+SolrJ - Common Configuration Options</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597404_IndexingandcrawlingawebsitewithSolr-IndexingMagnoliaworkspaces"><a class="anchor" href="#src-196597404_IndexingandcrawlingawebsitewithSolr-IndexingMagnoliaworkspaces"></a>Indexing Magnolia workspaces</h3>
+<div class="paragraph">
+<p>The Content Indexer module is a recursive repository indexer and an
+event based indexer. You can configure multiple indexers for different
+sites and document types. The content indexer also allows you to crawl
+external websites using JSoup and CSS selectors. You then define
+different field mappings that will be obtained for each node and indexed
+in the Solr index.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597404_IndexingandcrawlingawebsitewithSolr-IndexService"><a class="anchor" href="#src-196597404_IndexingandcrawlingawebsitewithSolr-IndexService"></a>IndexService</h4>
+<div class="paragraph">
+<p>Both the indexer and the crawler use the IndexService to handle the
+indexing of a content. A basic implementation is configured by default:
+<code>info.magnolia.search.solrsearchprovider.logic.indexer.BasicSolrIndexService</code>.
+You can define and configure your own IndexService for specific needs.</p>
+</div>
+<div class="paragraph">
+<p>Implement the <code>IndexService</code> interface:</p>
+</div>
+<div class="paragraph">
+<p>IndexService</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> I18nIndexerService </code>implements`</code> info.magnolia.module.indexer.indexservices.IndexService {`</p>
+</div>
+<div class="paragraph">
+<p>`   <code>private</code> <code>static</code> <code>final</code> Logger log = LoggerFactory.getLogger(I18nIndexerService.<code>class</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`   <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`   <code>public</code> <code>boolean</code> index(Node node, IndexerConfig config) {`</p>
+</div>
+<div class="paragraph">
+<p>`      &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>For a globally configured indexing service, register the IndexService in
+the configuration of the Content Indexer module. For your custom
+indexing service, use the `indexServiceClass `(see above in the
+properties table):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content-indexer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">indexServiceClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.search.solrsearchprovider.logic.indexer.BasicSolrIndexService</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597404_IndexingandcrawlingawebsitewithSolr-Indexerconfiguration"><a class="anchor" href="#src-196597404_IndexingandcrawlingawebsitewithSolr-Indexerconfiguration"></a>Indexer configuration</h4>
+<div class="paragraph">
+<p>You can configure an indexer in <strong>Configuration &gt;</strong>
+<code>/modules/content-indexer/config/indexers</code>. See
+<a href="App_configuration_with_Solr.html#src-196597405_AppconfigurationwithSolr-DAMworkspaceindexers">an
+example configuration for indexing assets and folders in the DAM
+workspace</a> or the below example configuration for indexing of content in
+the <code>website</code> workspace:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content-indexer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">indexers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">websiteIndexer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abstract</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abstract</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">author</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">teaserAbstract</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlmeta_teaserAbstract</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">indexed</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pull</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rootNode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>true</code> enables the indexer configuration. <code>false</code> disables the indexer
+configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>indexed</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Indicates whether indexing was done. When Solr finishes indexing
+content-indexer will set this property to <code>true</code>. You can set it to
+<code>false</code> to trigger re-indexing.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `mgnl:page`</em></p>
+</div>
+<div class="paragraph">
+<p>JCR <a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types">node type</a>
+to index. For example, if you were indexing assets in the Magnolia DAM
+you would set this to <code>mgnl:asset</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pull</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is <code>false</code> (push)</em></p>
+</div>
+<div class="paragraph">
+<p>Pull URLs instead of pushing. When <code>true</code> Solr will use Tika to extract
+information from a document, for instance a PDF. When <code>false</code> it will
+push the collected information using a Solr document.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>assetProviderId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is `jcr`</em></p>
+</div>
+<div class="paragraph">
+<p>If <code>pull</code> is set to true, specify an assetProviderId to obtain an asset
+correctly.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rootNode</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Node in the workspace where indexing starts. Use this property to limit
+indexing to a particular site branch.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Sets the type of the indexed content such as <code>website</code> or <code>documents</code>.
+When you search the index you can filter results by type.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Workspaces">Workspace</a> to
+index.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>indexServiceClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> (Solr module version 5.2+)</p>
+</div>
+<div class="paragraph">
+<p>Custom
+<a href="#src-196597404_IndexingandcrawlingawebsitewithSolr-IndexService">IndexService</a>
+used by this indexer. If not defined, the global one is used.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fieldMappings</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Field mappings defines how fields in Magnolia content are mapped to Solr
+fields. Left side is Magnolia, right side is Solr.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Magnolia_field&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>&lt;Solr_field&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>You can use the fields available in the schema. If a field does not
+exist in Solr&#8217;s schema you can use a dynamic field <code>mgnlmeta_*</code> . For
+instance if you have information nested in a deep leaf of your page
+stored with property <code>specComponentAbstract</code> , you can map this field
+with <code>mgnlmeta_specComponentAbstract</code> . The indexer contains a recursive
+call which will explore the node&#8217;s child leaves until it finds the
+property.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clients</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, ** <em>default is _`default`_</em> (Solr module version 5.2+)</p>
+</div>
+<div class="paragraph">
+<p>Solr clients which will be used by this indexer. Allows to index content
+for multiple instances of Solr.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;client-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the client.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597404_IndexingandcrawlingawebsitewithSolr-Crawlingawebsite"><a class="anchor" href="#src-196597404_IndexingandcrawlingawebsitewithSolr-Crawlingawebsite"></a>Crawling a website</h4>
+<div class="paragraph">
+<p>The crawler mechanism uses the <a href="Scheduler_module.html">Scheduler</a> to
+crawl a site periodically.</p>
+</div>
+<div class="paragraph">
+<p>From version 3.0 Crawlers can be also connected with activation process
+by adding
+<code>info.magnolia.module.indexer.crawler.commands.CrawlerIndexerActivationCommand</code>
+into command chain with activation command. By default this is done for
+these commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you are using the <a href="Publishing_module.html">Publishing module</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>catalog: default, command: publish - configured under
+<code>/modules/publishing-core/commands/default/publish</code></p>
+</li>
+<li>
+<p>catalog: default, command: unpublish - configured under
+<code>/modules/publishing-core/commands/default/unpublish</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If you are using the <a href="Activation_module.html">Activation module</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>catalog: default, command: activation - configured under
+<code>/modules/activation/commands/default/activate/activate</code></p>
+</li>
+<li>
+<p>catalog: default, command: deactivate - configured under
+<code>/modules/activation/commands/default/deactivate</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>catalog: default, command: personalizationActivation - configured
+under
+<code>/modules/personalization-integration/commands/default/personalizationActivation</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you are using custom activation command and you wish to connect it
+with crawler mechanism, you can use
+<code>info.magnolia.module.indexer.setup.AddCrawlerIntoCommandChainTask</code>
+install/update task for it.</p>
+</div>
+<div class="paragraph">
+<p>Example: Configuration to crawl www.bbc.co.uk</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bbc_co_uk</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sites</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bbc</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.bbc.co.uk/" class="bare">http://www.bbc.co.uk/</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">abstract</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">#story_continues_1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keywords</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">meta[name=keywords] attr(0,content)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">depth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nbrCrawlers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">news</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>true</code> enables the crawler. <code>false</code> disables the crawler.</p>
+</div>
+<div class="paragraph">
+<p>When a crawler is enabled
+<code>info.magnolia.module.indexer.CrawlerIndexerFactory</code> registers a new
+scheduler job for the crawler automatically.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>depth</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The max depth of a page in terms of distance in clicks from the root
+page. This should not be too high, ideally 2 or 3 max.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nbrCrawlers</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The max number of simultaneous crawler threads that crawl a site. 2 or 3
+is enough.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>crawlerClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional, since version 3.0,</strong> <em>default value is
+info.magnolia.module.indexer.crawler.MgnlCrawler</em></p>
+</div>
+<div class="paragraph">
+<p>Implementation of <code>edu.uci.ics.crawler4j.crawler.WebCrawler</code> which is
+used by the Crawler to crawl sites.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>catalog</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional, since version 3.0,</strong> <em>default value is content-indexer</em></p>
+</div>
+<div class="paragraph">
+<p>Name of the catalog where the command resides.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>command</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional, since version 3.0,</strong> <em>default value is crawlerIndexer</em></p>
+</div>
+<div class="paragraph">
+<p>Command which is used to instantiate and trigger the Crawler.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>activationOnly</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional, since version 3.0</strong></p>
+</div>
+<div class="paragraph">
+<p>If it&#8217;s set to true then crawler should be triggered only during
+activation. No scheduler job will be registered for this crawler.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The <code>jcrItems</code> property (see below) has to be configured too for this
+feaure to work.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delayAfterActivation</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional, since version 3.0,</strong> <em>default value is 5s</em></p>
+</div>
+<div class="paragraph">
+<p>Defines the delay (in seconds) after which crawler should start when
+activation is done. Default value is 5s.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is every hour `0 0 0/1 1/1 * ? *`</em></p>
+</div>
+<div class="paragraph">
+<p>A CRON expression that specifies how often the site will be crawled.
+<a href="http://www.cronmaker.com/">CronMaker</a> is a useful tool for building
+expressions.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Sets the type of the crawled content such as <code>news</code>. When you search the
+index you can filter results by type.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>indexServiceClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional<strong>, since version 5.2</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Custom
+<a href="#src-196597404_IndexingandcrawlingawebsitewithSolr-IndexService">IndexService</a>
+used by this crawler. If not defined, the global one is used.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clients</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional<strong>, since version 5.2</strong></strong> , <em>default is _`default` client_</em></p>
+</div>
+<div class="paragraph">
+<p>Solr clients which will be used by this indexer. Allows index content
+into multiple Solr instances.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;client-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the client.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fieldMappings</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Field mappings defines how fields parsed from the site pages are mapped
+to Solr fields. Left side is Solr field, right side is the crawled site.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;site_field&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>You can use any <a href="http://www.w3schools.com/cssref/css_selectors.asp">CSS
+selector</a> to target an element on the page. For example,
+<code>#story_continues_1</code> targets an element by ID.</p>
+</div>
+<div class="paragraph">
+<p>You can also use custom syntax to get content inside attributes. For
+example, meta keywords are extracted using
+<code>meta[name=keywords] attr(0,content)</code>. This will extract first value of
+keywords meta element. If you don&#8217;t specify anything after the CSS
+selector then the text contained in the element is indexed.
+<code>meta[name=keywords]</code> would return an empty string because a meta
+element does contain any text, keywords are in the attributes. To get
+the value of a specific attribute specify
+<code>attr(&lt;index&gt;,&lt;Solr_field_name&gt;)</code>. If you set <code>index=-1</code> then all
+attributes are extracted and separated by a semicolon <code>;</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrItems</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional <strong>, since version 3.0</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>List of JCR items. If any of this items is activated crawler will be
+triggered.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;item_name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional<strong>, since version 3.0</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the JCR item.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version 3.0</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Workspace where JCR item is stored.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version 3.0</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Path of the JCR item.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>siteAuthenticationConfig</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional <strong>, since version 5.0.2</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Authentication information to allow crawling password restricted area.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version 5.0.2</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Username which is used for login into restricted area.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version 5.0.2</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>User&#8217;s password used for login into restricted area.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loginUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version 5.0.2</strong></strong></p>
+</div>
+<div class="paragraph">
+<p>Url to page with login form.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>usernameField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version 5.0.2,</strong></strong> <em>default value is mgnlUserID</em></p>
+</div>
+<div class="paragraph">
+<p>Name of input field for entering the username in login form.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>passwordField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, since version 5.0.2,<strong> <em></strong></em>default value is
+mgnlUserPSWD__</p>
+</div>
+<div class="paragraph">
+<p>Name of input field for entering the password in login form.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logoutUrlIdentifier</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required<strong>, since version</strong> 5.0.2</strong>, <em>default value is mgnlLogout</em></p>
+</div>
+<div class="paragraph">
+<p>String which identifies the logout Url. Crawler doesn&#8217;t crawl over the
+urls which contains logoutUrlIdentifier to avoid logout.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="src-196597404_IndexingandcrawlingawebsitewithSolr-CreatingasitemapwithSolr"><a class="anchor" href="#src-196597404_IndexingandcrawlingawebsitewithSolr-CreatingasitemapwithSolr"></a>Creating a sitemap with Solr</h5>
+<div class="paragraph">
+<p>To create a custom sitemap with Solr in four easy steps, please refer to
+the page called
+<a href="https://wiki.magnolia-cms.com/display/WIKI/Step-by-step+integrating+Solr+in+Magnolia+and+generating+custom+sitemap">Step-by-step
+integrating Solr in Magnolia and generating custom sitemap</a> available on
+the Magnolia Community Wiki.</p>
+</div>
+<div class="paragraph">
+<p>Installing Apache Solr</p>
+</div>
+<div class="paragraph">
+<p>App configuration with Solr</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
