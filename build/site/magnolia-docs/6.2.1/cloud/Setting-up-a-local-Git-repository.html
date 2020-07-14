@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Setting up a local Git repository - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/cloud/Setting-up-a-local-Git-repository.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Setting-up-a-local-Git-repository.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Setting-up-a-local-Git-repository.html">Setting up a local Git repository - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Setting up a local Git repository - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
+in the cloud</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321178"><a class="anchor" href="#src-215321178"></a>Setting up a local Git repository</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Every cloud-based Magnolia package is connected to a Git repository. You
+have to clone this repository to your local computer. The Git repository
+must contain a folder named <code>light-modules</code> - this is the place where
+you add new code for new features. You then promote your code to the
+remote repository to make it available in the cloud-based Magnolia
+package.</p>
+</div>
+<div class="paragraph">
+<p>This page explains how to set up a local light module folder structure
+and synchronize your local folder structure with your Magnolia package
+using Git. You therefore need some working knowledge of using
+<a href="https://git-scm.com">Git</a>. If you are not familiar with Git, learn a few
+basic Git commands such as <code>clone</code>, <code>pull</code>, <code>add</code>, <code>commit</code> and <code>push</code>.</p>
+</div>
+<div class="paragraph">
+<p>Have a look at the
+<a href="Developing-for-Magnolia-in-the-cloud.html#src-215321175_DevelopingforMagnoliainthecloud-localdevprereqs">prerequisites</a>
+before you get started.</p>
+</div>
+<div class="paragraph">
+<p>The Git commands we describe below are presented in command line use.
+You can, however, use an application providing a graphical user
+interface for Git usage such as
+<a href="https://www.sourcetreeapp.com/">SourceTree</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>We assume you are using one Git repository: the one connected to your
+Magnolia package. In a more advanced Git setup, you could use multiple
+Git repositories: one for development only and another one connected to
+Magnolia for deployment.</p>
+</div>
+<div class="sect2">
+<h3 id="src-215321178_SettingupalocalGitrepository-Settingupalocallight-modulerepository"><a class="anchor" href="#src-215321178_SettingupalocalGitrepository-Settingupalocallight-modulerepository"></a>Setting up a local light-module repository</h3>
+<div class="paragraph">
+<p>Log in to the Magnolia <a href="Cockpit.html">cockpit</a> to obtain the
+<a href="Cockpit.html#src-215321133_Cockpit-Additionalinformation">URL of the
+Git repository</a> connected to your Magnolia package. This information is
+in the <strong>Additional information</strong> section of the <strong>Package overview</strong>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321178/AdditionalInformation.png" alt="images/download/attachments/215321178/AdditionalInformation.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Open your shell, <code>cd</code> into a directory of your choice and clone the
+Magnolia repository. Use a directory that does not contain special
+characters or spaces within the complete absolute path:</p>
+</div>
+<div class="paragraph">
+<p><code>cd<code> ~</code>/dev/repo/mgnl-cloud-packages</code></p>
+</div>
+<div class="paragraph">
+<p><code>git clone https:<code>//</code>&lt;username&gt;@git.magnolia-cms.com<code>/scm/odc/magnolia-docs</code>.git</code></p>
+</div>
+<div class="paragraph">
+<p>The local repository is the location where you will hold your newly
+developed or updated code. It must create a <code>light-modules</code> directory to
+hold your work. For example:</p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-docs/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── content/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── light-modules/</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── btk/`</p>
+</div>
+<div class="paragraph">
+<p><code>└── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+Both the Git URL (<code>git.magnolia-cms.com/scm/odc/magnolia-docs.git</code> ) and
+the name of the directory (<code>magnolia-docs</code>) created as a result of the
+clone operation are just example names.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321178_SettingupalocalGitrepository-Locallight-modulesfolderpath"><a class="anchor" href="#src-215321178_SettingupalocalGitrepository-Locallight-modulesfolderpath"></a>Local light-modules folder path</h3>
+<div class="paragraph">
+<p>You must know the path to your <code>light-modules</code> directory. All the code
+you develop will go into this directory. You need to know the absolute
+path when setting up the Magnolia local development bundle. Typical
+paths are:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mac</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/Users/&lt;username&gt;/dev/repo/mgnl-cloud-packages/magnolia-docs/light-modules/</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/home/&lt;username&gt;/dev/repo/mgnl-cloud-packages/magnolia-docs/light-modules/</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>C:\Users\&lt;username&gt;\dev\repo\mgnl-cloud-packages\magnolia-docs\light-modules\</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Next: *
+<a href="Setting-up-a-Magnolia-bundle-for-local-development.html">Setting up
+a Magnolia bundle for local development</a></p>
+</div>
+<div class="paragraph">
+<p>Creating and deploying custom cloud bundles</p>
+</div>
+<div class="paragraph">
+<p>Setting up a Magnolia bundle for local development</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

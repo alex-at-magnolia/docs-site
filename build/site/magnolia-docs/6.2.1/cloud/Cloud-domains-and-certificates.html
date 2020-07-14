@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cloud domains and certificates - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/cloud/Cloud-domains-and-certificates.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Cloud-domains-and-certificates.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Cloud-domains-and-certificates.html">Cloud domains and certificates - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Cloud domains and certificates - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Onboarding-to-Magnolia-Cloud.html">Onboarding to Magnolia Cloud</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-217721207"><a class="anchor" href="#src-217721207"></a>Cloud domains and certificates</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Cockpit.html">Cockpit</a></p>
+</li>
+<li>
+<p><a href="Multisite-in-Magnolia-in-the-cloud.html">Multisite in Magnolia in
+the cloud</a></p>
+</li>
+<li>
+<p><a href="Configuring-domain-redirect-rules.html">Configuring domain
+redirect rules</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once you have received your subscription package information, it is
+important to understand how domains and certificates are managed in
+Magnolia Cloud.</p>
+</div>
+<div class="paragraph">
+<p>There are two main approaches available in Magnolia Cloud for domain and
+certificate management.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have a relatively <strong>simple setup</strong> and leave the management of your
+single domain and certificate to Magnolia, with limited redirects in
+place. Your involvement is limited to registering your domains and
+requesting your domain mappings via the Cloud Helpdesk.</p>
+</li>
+<li>
+<p>You have a <strong>complex scenario</strong> involving multiple domains, your own
+pre-existing infrastructure or regulatory constraints. You prefer to
+keep full ownership and control of your domain and certificate
+management.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-217721207_Clouddomainsandcertificates-Magnolia-managedsetup"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Magnolia-managedsetup"></a>Magnolia-managed setup</h3>
+<div class="paragraph">
+<p>In a simple setup, Magnolia manages your domain and certificates.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud subscriptions have one <em>root</em> domain (also known as base,
+bare, naked, apex root or zone apex domain). By default, these are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mycompany.com</code> — Root domain.</p>
+</li>
+<li>
+<p><code>www.mycompany.com</code> — Subdomain.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud completely manages the root domain and its certificate.</p>
+</div>
+<div class="paragraph">
+<p>You, or your chosen cloud partner, are responsible for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maintaining the <strong>Domain Name System (DNS) records</strong> on your chosen DNS
+provider infrastructure and adding any entries needed for Magnolia Cloud
+to verify ownership and certificate validation challenges.</p>
+</li>
+<li>
+<p>Verifying and updating your <strong>Certification Authority Authorization
+(CAA) records</strong> if you use them. This is so that certificate validation
+requests can succeed.</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Certificate authorities implementing CAA perform a DNS lookup for CAA
+resource records, and if any are found, ensure that they are listed as
+an authorized party before issuing a digital certificate.</p>
+</div>
+<div class="paragraph">
+<p><em>Source:
+<a href="https://en.wikipedia.org/wiki/DNS_Certification_Authority_Authorization">Wikipedia</a></em></p>
+</div>
+</blockquote>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-WhatMagnoliaprovides"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-WhatMagnoliaprovides"></a>What Magnolia provides</h4>
+<div class="paragraph">
+<p>In a managed setup, Magnolia provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A redirect service with a fixed IP at: <code>3.121.148.202</code></p>
+</li>
+<li>
+<p>Two possible ways to point your domains to the Magnolia Cloud Live
+environment:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Preferred</strong> — A subdomain to point your subdomain/s as CNAME entries
+to: <code>public-live-&lt;subscription-code&gt;.de.magnolia-cloud.com</code></p>
+</li>
+<li>
+<p><strong>Alternative</strong> required for root domains — A pair of fixed public IPs,
+provided by AWS Global Accelerator service, belonging to your
+subscription (each subscription has a unique pair of IPs) to point the
+root domain/s as A entries.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A DNS entry to verify ownership of the domain and validate certificate
+requests: <code>example-hash.amazon.verify</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following restrictions apply:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Magnolia only manages the main domain and certificate for public, live
+instances.</p>
+</li>
+<li>
+<p>The certificate cannot be used outside of Magnolia Cloud.</p>
+</li>
+<li>
+<p>The root domain must be part of the certificate, regardless of whether
+it is used as a site domain or for a 301 redirection.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-Multisitedomains"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Multisitedomains"></a>Multisite domains</h4>
+<div class="paragraph">
+<p>Domains used by the Multisite module must be terminated on the instance.
+Make sure that your redirects point to the IP or the CNAME with no
+redirects in between.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="Multisite-in-Magnolia-in-the-cloud.html">Multisite in Magnolia in
+the cloud</a>.</p>
+</div>
+<div class="paragraph">
+<p>Managed and unmanaged Multisite domains and certificates</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The solutions and restrictions for multisite domains and certificate
+management are the same as those described in
+<a href="#src-217721207_Clouddomainsandcertificates-Magnolia-manageddomainandcertificates">Magnolia-managed
+domain and certificates</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-217721207_Clouddomainsandcertificates-Unmanagedsetup"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Unmanagedsetup"></a>Unmanaged setup</h3>
+<div class="paragraph">
+<p>If you already have infrastructure supporting your enterprise domain
+management system or need to comply with specific regulatory or security
+constraints, you may choose to manage your own domains and certificates.</p>
+</div>
+<div class="paragraph">
+<p>SLA</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>In an unmanaged setup, note that your Magnolia SLA and availability and
+uptime checks and monitors of the subscription are affected.</p>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-Unmanagedcertificates"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Unmanagedcertificates"></a>Unmanaged certificates</h4>
+<div class="paragraph">
+<p>When Magnolia does not manage the creation of certificates, we offer a
+manual import of the certificate for the root domain.</p>
+</div>
+<div class="paragraph">
+<p>Once the initial certificate import is done, you or your cloud partner
+are responsible for installing renewed certificates via the Cloud
+Helpdesk. Magnolia does <em>not</em> oversee this process.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-Unmanageddomains"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Unmanageddomains"></a>Unmanaged domains</h4>
+<div class="paragraph">
+<p>Managing your own domains gives you the most flexibility but you must
+have your own infrastructure or service to do so.</p>
+</div>
+<div class="paragraph">
+<p>If you or your cloud partner decide to manage your own domains and
+certificates, Magnolia only provides the CNAME entries and the
+associated public IPs for the Magnolia cloud instances, such as
+`[public|author]-&lt;environment&gt;-&lt;subscription-code&gt;.magnolia-cloud.com `.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-217721207_Clouddomainsandcertificates-Redirects"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Redirects"></a>Redirects</h3>
+<div class="paragraph">
+<p>Magnolia Cloud offers 301 redirects for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The root domain.</p>
+</li>
+<li>
+<p>Multisite module domains.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-company.com</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>www.</strong>my-company.com</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If you need other redirects, you or your cloud partner are responsible
+for their implementation.</p>
+</div>
+<div class="paragraph">
+<p>For example, you or your cloud partner would be responsible for the
+following redirects:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-company.com</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.com</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-company.de</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.com</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.ch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.com</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.li</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.com</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.li</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.mycompany.com</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.co.uk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.com</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.my-company.co.uk</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mycompany.com</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You may consider these possible solutions to manage your own redirects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Redirects on the domain registrar — Modern domain registrars support
+URL redirects. This would save the certificate management for those
+domains.</p>
+</li>
+<li>
+<p>Use your own account with API Gateway Service or external forwarding
+service (proxy) contracted directly by yourself or partner (services
+such as Kong, Tyk, Apigee or sub-services of CDN providers such as
+Akamai).<br>
+With this approach, you can configure all your domains, redirects and
+certificates while fully owning and not sharing the certificates and
+point those to the Magnolia-provided default domain and certificate.
+While this setup requires you to manage domains separately from the
+cloud, it also provides you with the most flexibility concerning domain
+configuration. It also removes the need for sharing certificates for the
+domain with Magnolia thus providing the highest level of security for
+domain-certified content.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-Pathredirects"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Pathredirects"></a>Path redirects</h4>
+<div class="paragraph">
+<p>If you want to do path redirects, you or partner must configure them in
+the
+<a href="https://wiki.magnolia-cms.com/display/DOCS61/Virtual+URI+mapping">Virtual
+URI mapping module</a> or using other equivalent Magnolia functionalities.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.mycompany.com<strong>/old-path-to-content</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.mycompany.com<strong>/content</strong></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-Contextpath"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-Contextpath"></a>Context path</h4>
+<div class="paragraph">
+<p>Magnolia Cloud always deploys to the ROOT context. It is not possible to
+change this.</p>
+</div>
+<div class="paragraph">
+<p>For scenarios where adaptations to the context path are needed, we
+recommend you use a reverse proxy or an API Gateway to give you the most
+flexibility.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-217721207_Clouddomainsandcertificates-SEOrecommendations"><a class="anchor" href="#src-217721207_Clouddomainsandcertificates-SEOrecommendations"></a>SEO recommendations</h4>
+<div class="paragraph">
+<p>Only root and multisite domains should be terminated on the load
+balancers or instances. This means all other domains should be 301
+redirected before to root or multisite ones. Magnolia does not offer
+this service. We recommend you use a solution such as an API Gateway
+Service.</p>
+</div>
+<div class="paragraph">
+<p>Onboarding to Magnolia Cloud</p>
+</div>
+<div class="paragraph">
+<p>Cloud user management</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

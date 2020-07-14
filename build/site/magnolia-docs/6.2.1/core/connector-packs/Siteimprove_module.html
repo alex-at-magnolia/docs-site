@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Siteimprove module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/connector-packs/Siteimprove_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Siteimprove_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Siteimprove_module.html">Siteimprove module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Connector_Packs.html">Connector Packs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Siteimprove module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Optimization_Connector_Pack.html">Optimization Connector Pack</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819280"><a class="anchor" href="#src-209819280"></a>Siteimprove module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.incubator.releases//info/magnolia/seo/magnolia-siteimprove/1.1.5/magnolia-siteimprove-1.1.5.jar">magnolia-siteimprove.jar</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connector Pack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optimization Connector Pack</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/projects/SIMPROVE/summary">SIMPROVE</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.incubator.releases/info/magnolia/seo/">Siteimprove</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.1.5</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Siteimprove connector enables you to perform SEO checks by using the
+cloud-based application <a href="https://siteimprove.com/">Siteimprove</a>. It is a
+tool to help you score higher ranking in search engines and check how
+your content is performing over all.</p>
+</div>
+<div class="sect2">
+<h3 id="src-209819280_Siteimprovemodule-Modulestructure"><a class="anchor" href="#src-209819280_Siteimprovemodule-Modulestructure"></a>Module structure</h3>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 55%;">
+<col style="width: 45%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-siteimprove</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a default implementation to connect to
+<a href="https://siteimprove.com/">Siteimprove</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-209819280_Siteimprovemodule-Installing"><a class="anchor" href="#src-209819280_Siteimprovemodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the modules. Add the following
+dependencies to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">webapp</a>.
+All the other necessary dependencies will be brought in automatically:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.seo&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-siteimprove&lt;/artifactId&gt;
+  &lt;version&gt;1.1.5&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819280_Siteimprovemodule-Configuration"><a class="anchor" href="#src-209819280_Siteimprovemodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The module provides two configuration options.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mapperClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>defaults to
+`info.magnolia.connector.siteimprove.mapper.SiteDefinitionDomainMapper`</em></p>
+</div>
+<div class="paragraph">
+<p>The default mapping implementation relies on the related site definition
+domain. You can add your custom implementation of the page mapping by
+implementing
+<code>info.magnolia.connector.siteimprove.mapper.SiteImproveMapper</code> and
+changing the related configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>token</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Token provided by Siteimprove. The first time Siteimprove is contacted
+the token is stored here. There is no need to set the token manually.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-209819280_Siteimprovemodule-Usage"><a class="anchor" href="#src-209819280_Siteimprovemodule-Usage"></a>Usage</h3>
+<div class="paragraph">
+<p>Using the Siteimprove connector helps you fix and improve website
+accessibility, SEO, content quality and more. Siteimprove crawls
+websites through public URLs, which means that all pages are indexed
+from their public addresses.</p>
+</div>
+<div class="sect3">
+<h4 id="src-209819280_Siteimprovemodule-AccessingtheSiteimprovedashboard"><a class="anchor" href="#src-209819280_Siteimprovemodule-AccessingtheSiteimprovedashboard"></a>Accessing the Siteimprove dashboard</h4>
+<div class="paragraph">
+<p>To access the Siteimprove dashboard for the first time:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log into Magnolia.</p>
+</li>
+<li>
+<p>Open a page in the Pages app.</p>
+</li>
+<li>
+<p>Click the Siteimprove icon
+<span class="image"><img src="../../_images/images/download/attachments/209819280/siteimprove-icon.gif" alt="images/download/attachments/209819280/siteimprove-icon.gif"></span>
+to the right of the page.</p>
+</li>
+<li>
+<p>In the pop up window that opens, enter your Siteimprove credentials.<br>
+The Siteimprove dashboard then displays the SEO results for the page you
+have open (and site the page belongs to).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/209819280/site-improve.png" alt="images/download/attachments/209819280/site-improve.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Once you have logged in for the first time, the Siteimprove dashboard
+remains available via the icon for each page you open.</p>
+</div>
+<div class="paragraph">
+<p>If the Siteimprove icon is greyed out, log out of Magnolia and back in
+again.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819280_Siteimprovemodule-Settingyourwebsitetobeobserved"><a class="anchor" href="#src-209819280_Siteimprovemodule-Settingyourwebsitetobeobserved"></a>Setting your website to be observed</h4>
+<div class="paragraph">
+<p>Before any SEO check can be performed, you must set your website to be
+observed by Siteimprove. You can do this in the
+<a href="https://my2.siteimprove.com/Settings/Sites/Index">Siteimprove
+application</a> itself.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/209819280/site-improve-observed-website.png" alt="images/download/attachments/209819280/site-improve-observed-website.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819280_Siteimprovemodule-PerforminganSEOcheck"><a class="anchor" href="#src-209819280_Siteimprovemodule-PerforminganSEOcheck"></a>Performing an SEO check</h4>
+<div class="paragraph">
+<p>To perform an SEO check on your site, tree or page, click <strong>Check page</strong>
+in the Siteimprove dashboard. Siteimprove analyzes the page&#8217;s content
+and displays results such as the DCI page score, number of broken links,
+misspellings and more.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819280_Siteimprovemodule-Releasehistory"><a class="anchor" href="#src-209819280_Siteimprovemodule-Releasehistory"></a>Release history</h3>
+<div class="sect3">
+<h4 id="src-209819280_Siteimprovemodule-Siteimprovemodule1.1.5"><a class="anchor" href="#src-209819280_Siteimprovemodule-Siteimprovemodule1.1.5"></a>Siteimprove module 1.1.5</h4>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/SIMPROVE-3?src=confmacro"><</a> - SiteDefinitionDomainMapper does not handle all site
+definition properties <span class="status  green  subtle">Closed</span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819280_Siteimprovemodule-Siteimprovemodule1.1.4"><a class="anchor" href="#src-209819280_Siteimprovemodule-Siteimprovemodule1.1.4"></a>Siteimprove module 1.1.4</h4>
+<div class="paragraph">
+<p>The <a href="#">Siteimprove module</a> is now part of the Optimization Connector
+Pack. Siteimprove enables you to perform SEO checks using the
+cloud-based application <a href="https://siteimprove.com/">Siteimprove</a>. It is a
+tool to help you score higher ranking in search engines and check how
+your content is performing over all.</p>
+</div>
+<div class="paragraph">
+<p>Before 1.1.4 this module was in the Incubator. Click here to see the
+release history.</p>
+</div>
+<div class="paragraph">
+<p>For documentation for these legacy versions of Siteimprove, see
+<a href="https://wiki.magnolia-cms.com/display/SERVICES/Siteimprove">Incubator -
+Siteimprove</a>.</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819280_Siteimprovemodule-Version1.1"><a class="anchor" href="#src-209819280_Siteimprovemodule-Version1.1"></a>Version 1.1</h5>
+<div class="paragraph">
+<p>Updated for Magnolia 6.0 compatibility.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-209819280_Siteimprovemodule-Version1.0.4"><a class="anchor" href="#src-209819280_Siteimprovemodule-Version1.0.4"></a>Version 1.0.4</h5>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/SIMPROVE-1?src=confmacro"><</a> - Failed to retrieve the token from SiteImprove
+<span class="status  green  subtle">Closed</span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-209819280_Siteimprovemodule-Version1.0.3"><a class="anchor" href="#src-209819280_Siteimprovemodule-Version1.0.3"></a>Version 1.0.3</h5>
+<div class="paragraph">
+<p>Initial release of the Extensions version of the module.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819280_Siteimprovemodule-Siteimprovemodulecompatibility"><a class="anchor" href="#src-209819280_Siteimprovemodule-Siteimprovemodulecompatibility"></a>Siteimprove module compatibility</h3>
+<div class="paragraph">
+<p>Siteimprove module version</p>
+</div>
+<div class="paragraph">
+<p>Magnolia version</p>
+</div>
+<div class="paragraph">
+<p><strong>1.1.5</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>6.1, 6.2</strong></p>
+</div>
+<div class="paragraph">
+<p>1.1.4</p>
+</div>
+<div class="paragraph">
+<p>6.1</p>
+</div>
+<div class="paragraph">
+<p>In versions predating 1.1.4, this module was in the
+<a href="https://wiki.magnolia-cms.com/display/SERVICES/Incubator">Incubator</a>.</p>
+</div>
+<div class="paragraph">
+<p>Uninstall previous versions before installing 1.1.4</p>
+</div>
+<div class="paragraph">
+<p><em>1.1</em></p>
+</div>
+<div class="paragraph">
+<p><em>6.0</em></p>
+</div>
+<div class="paragraph">
+<p><em>1.0.4</em></p>
+</div>
+<div class="paragraph">
+<p><em>5.6.5</em></p>
+</div>
+<div class="paragraph">
+<p><em>1.0.3</em></p>
+</div>
+<div class="paragraph">
+<p><em>5.6.4</em></p>
+</div>
+<div class="paragraph">
+<p>Optimization Connector Pack</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

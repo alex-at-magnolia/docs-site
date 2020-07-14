@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Magnolia cockpit concepts - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/cloud/Magnolia-cockpit-concepts.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Magnolia-cockpit-concepts.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Magnolia-cockpit-concepts.html">Magnolia cockpit concepts - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Magnolia cockpit concepts - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Cockpit.html">Cockpit</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321159"><a class="anchor" href="#src-215321159"></a>Magnolia cockpit concepts</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This pages explains how the different elements you see in the cockpit
+fit together:</p>
+</div>
+<div class="sect2">
+<h3 id="src-215321159_Magnoliacockpitconcepts-Cockpit"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Cockpit"></a>Cockpit</h3>
+<div class="paragraph">
+<p>The
+<em><a href="https://documentation.magnolia-cms.com/display/DOCS/Cockpit">cockpit</a></em>
+is the user interface to view and manage Magnolia cloud-based packages
+and provide actions to update the environments in them.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321159_Magnoliacockpitconcepts-Contentglossary-content"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Contentglossary-content"></a><span id="src-215321159_Magnoliacockpitconcepts-glossary-content " class="confluence-anchor-link">#</span>#Content</h3>
+<div class="paragraph">
+<p>By <em>content</em>, we refer to both:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Editor-created content such as web pages, images, documents, which are
+stored in the Magnolia JCR
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Repositories">repository</a>
+workspaces such as <code>website</code>, <code>dam</code>, <code>contacts</code>, and so on.</p>
+</li>
+<li>
+<p>Administrator-created configuration content such as module and server
+configuration data, users, groups and roles, which are stored in the
+<code>config</code>, <code>users</code>, <code>usergroups</code> and <code>userroles</code> workspaces.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321159_Magnoliacockpitconcepts-Packageglossary-package"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Packageglossary-package"></a><span id="src-215321159_Magnoliacockpitconcepts-glossary-package " class="confluence-anchor-link">#</span>#Package</h3>
+<div class="paragraph">
+<p>A <em>package</em> is a group of <em>_ cloud-based _environments</em> which belong
+together.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/thumbnails/165413033/gloss-site.png" alt="images/download/thumbnails/165413033/gloss-site.png" width="200"></span></p>
+</div>
+<div class="paragraph">
+<p>An example of this is a group of environments and their spaces used to
+build, test and deliver a corporate website.</p>
+</div>
+<div class="sect3">
+<h4 id="src-215321159_Magnoliacockpitconcepts-Snapshot"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Snapshot"></a>Snapshot</h4>
+<div class="paragraph">
+<p>A <em>snapshot</em> is created based on development changes pushed to the
+cloud-based Magnolia Git repository. You create a snapshot to transfer
+and apply these changes to the Integration environment. You can then
+wrap one or more snapshots into a <em>release</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321159_Magnoliacockpitconcepts-Release"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Release"></a>Release</h4>
+<div class="paragraph">
+<p>A <em>release</em> is created based on one or several <em>snapshots</em>. When you
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Defining+a+release">define
+a release</a>, you give the release a name and a description. You
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Installing+a+release+in+UAT">install
+the release</a> in the Integration environment and then in the UAT and Live
+<em>environments</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321159_Magnoliacockpitconcepts-Releaseversion"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Releaseversion"></a>Release version</h4>
+<div class="paragraph">
+<p>The Magnolia cockpit system automatically assigns a version to every
+release created. The version has the pattern <code>v&lt;index&gt;</code>, where the index
+is a number starting with 1. The index is incremented with every new
+version resulting in v1, v2, v3, and so on.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321159_Magnoliacockpitconcepts-Environmentanc-glossary-environment"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Environmentanc-glossary-environment"></a><span id="src-215321159_Magnoliacockpitconcepts-anc-glossary-environment " class="confluence-anchor-link">#</span>#Environment</h3>
+<div class="paragraph">
+<p>A cloud-based package is made up of three default <em>environments</em>. An
+environment consists of one or several __ spaces.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/165413020/gloss-env.png" alt="images/download/attachments/165413020/gloss-env.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>The default Magnolia
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Managing+environments+using+the+Magnolia+cockpit">environments</a>
+in the cloud are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Live environment: delivers an approved version of the site to
+customers.</p>
+</li>
+<li>
+<p>UAT (User Acceptance Testing) environment: allows developers to make
+the next version of the site available to editors and managers for
+testing and review.</p>
+</li>
+<li>
+<p>Integration environment: helps developers to try out ideas and
+solutions with Magnolia.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Depending on your subscription package, the environments available to
+you may differ.</p>
+</div>
+<div class="paragraph">
+<p>For example, you may have only a single Live environment available, or
+only a UAT and a Live environment. In these cases, you can
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Installing+a+snapshot">install
+a development snapshot</a> directly in the Live or in the UAT environment
+respectively.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321159_Magnoliacockpitconcepts-Space"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Space"></a>Space</h3>
+<div class="paragraph">
+<p>A <em>space</em> exists in an <em>environment</em> and groups together related
+functionality needed to build or deliver a site. Which systems a space
+actually contains and how they are connected is defined by the
+<em><a href="#src-215321159_Magnoliacockpitconcepts-Spacesetup">space&#8217;s setup</a></em>.
+A space is a container for one or more instances of Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/165413050/gloss-space.png" alt="images/download/attachments/165413050/gloss-space.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>Examples of spaces are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Live environment is typically split into two spaces:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Author space: The authoring space is where editors work on content.
+It contains mainly the cloud-based Magnolia back-end.</p>
+</li>
+<li>
+<p>Public space: The live space is where content is being delivered. It
+contains a larger set of cloud-based Magnolia instances, load balancers,
+caches, etc.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The UAT environment often contains two spaces (one public, one author,
+with one instance each) where new developments are tested and reviewed
+by managers and editors.</p>
+</li>
+<li>
+<p>The Integration environment consists of a single space. In this
+environment the separation between delivery and authoring is not
+important so a single space suffices.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-215321159_Magnoliacockpitconcepts-Spacesetup"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Spacesetup"></a>Space setup</h4>
+<div class="paragraph">
+<p>A <em>space setup</em> defines how a <em>space</em> is technically set up with
+Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>It contains one or several Magnolia instances of the same or different
+type, in addition to other systems required to fulfil the purpose of the
+space.</p>
+</div>
+<div class="paragraph">
+<p>Examples of space setups are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Since delivery is separated from authoring in a production environment
+and they are in different networks requiring different attention, they
+are defined as one space each.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The live space setup of a high-traffic content product contains many
+public instances plus a load-balancer, and possibly advanced caches.</p>
+</li>
+<li>
+<p>The authoring space setup of a typical website product consists only
+of a single instance.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The setup of a review and testing space may initially only consist of
+a single author instance, as this is sufficient to test all aspects of a
+new release. It may eventually contain one or two public instances
+eventually to test some specifics such as a new version of Public User
+Registration.</p>
+</li>
+<li>
+<p>The space dedicated to development and POCs is probably the least
+defined, since its setup depends largely on the requirements of the
+development work done.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321159_Magnoliacockpitconcepts-Instance"><a class="anchor" href="#src-215321159_Magnoliacockpitconcepts-Instance"></a>Instance</h3>
+<div class="paragraph">
+<p><em>Instances</em> exist in a <em>space</em>. An instance is a Java webapp running in
+a servlet container.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/165413030/gloss-instances.png" alt="images/download/attachments/165413030/gloss-instances.png" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>There are two kinds of instance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Author instance</strong> - Author instances are where editors work. This
+instance typically resides in a secure location behind a corporate
+firewall, inaccessible from the Internet. The author instance publishes
+content to one or more public instances.</p>
+</li>
+<li>
+<p><strong>Public instance</strong> - Public instances receive content from an author
+instance and serves it to visitors on the Web. No authoring occurs here.
+This instance resides in a publicly reachable location. You can have
+more than one public instance serving the same or different content. In
+a typical deployment you have at least two public instances.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Read more about
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Instances">instances</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cockpit</p>
+</div>
+<div class="paragraph">
+<p>Managing subscribers</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

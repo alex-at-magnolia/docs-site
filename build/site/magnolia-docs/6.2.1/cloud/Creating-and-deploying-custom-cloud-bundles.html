@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Creating and deploying custom cloud bundles - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/cloud/Creating-and-deploying-custom-cloud-bundles.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Creating-and-deploying-custom-cloud-bundles.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Creating-and-deploying-custom-cloud-bundles.html">Creating and deploying custom cloud bundles - Magnolia 6.2</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Creating and deploying custom cloud bundles - Magnolia 6.2</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
+in the cloud</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-219777739"><a class="anchor" href="#src-219777739"></a>Creating and deploying custom cloud bundles</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>If you have decided to use the
+<a href="Supported-modules-in-the-cloud.html">custom cloud bundle variant</a>,
+your site is hosted in Magnolia Cloud and you, or your cloud partner,
+must create and deploy the custom bundle.</p>
+</div>
+<div class="paragraph">
+<p>To successfully deploy custom bundles to Magnolia Cloud, certain best
+practices must be followed when creating your project and when deploying
+it the first time or continuously thereafter.</p>
+</div>
+<div class="sect2">
+<h3 id="src-219777739_Creatinganddeployingcustomcloudbundles-Creatingyourcustombundle"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Creatingyourcustombundle"></a>Creating your custom bundle</h3>
+<div class="paragraph">
+<p>Magnolia provides a
+<a href="https://git.magnolia-cms.com/projects/BUILD/repos/maven-archetypes/browse/magnolia-cloud-project-archetype/src/main/resources/archetype-resources/README.md">cloud-specific
+option</a> in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+use+Magnolia+Maven+archetypes">Magnolia
+Maven Archetype</a> to bootstrap a new project.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You receive your <strong>subscription-code</strong> and <strong>access keys</strong> during the
+Magnolia Cloud onboarding process.</p>
+</div>
+<div class="paragraph">
+<p>The <code>magnolia-cloud-project-archetype</code> is supported with version 1.3+ of
+the Magnolia Maven Archetype.</p>
+</div>
+<div class="sect3">
+<h4 id="src-219777739_Creatinganddeployingcustomcloudbundles-Usage"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Usage"></a>Usage</h4>
+<div class="paragraph">
+<p>`mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeCatalog=https:<code>//nexus</code>.magnolia-cms.com<code>/content/groups/public/</code> `</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>6: https:<code>//nexus</code>.magnolia-cms.com<code>/content/repositories/magnolia</code>.public.snapshots &#8594; info.magnolia.maven.archetypes:magnolia-cloud-project-archetype (Automates the creation of a Magnolia Cloud project: parent pom and webapp)</code></p>
+</div>
+<div class="paragraph">
+<p><code>Choose a number or apply filter (<code>format</code>: [groupId:]artifactId, <code>case</code> sensitive contains): : 6</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'groupId'</code>: : com.mycompany.project</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'artifactId'</code>: : web-project-xyz</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'version'</code>:  1.0-SNAPSHOT: :</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'package'</code>:  com.mycompany.project: :</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'cloud-subscription-code'</code>: : mycompany-project</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'magnolia-bundle-version'</code>: : 6.2.1</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value <code>for</code> property <code>'project-name'</code>:  web-project-xyz: :</code></p>
+</div>
+<div class="paragraph">
+<p><code>Confirm properties configuration:</code></p>
+</div>
+<div class="paragraph">
+<p><code>groupId: com.mycompany.project</code></p>
+</div>
+<div class="paragraph">
+<p><code>artifactId: web-project-xyz</code></p>
+</div>
+<div class="paragraph">
+<p><code>version: 1.0-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p><code>package: com.mycompany.project</code></p>
+</div>
+<div class="paragraph">
+<p><code>cloud-subscription-code: mycompany-project</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-bundle-version: 6.2.1</code></p>
+</div>
+<div class="paragraph">
+<p><code>project-name: web-project-xyz</code></p>
+</div>
+<div class="paragraph">
+<p>` Y: : Y`</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] project created from Archetype <code>in</code> <code>dir</code>: `</code>/Users/user/dev/web-project-xyz`</p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] BUILD SUCCESS</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Total <code>time</code>:  02:18 min</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Finished at: 2020-04-23T13:12:46+02:00</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p>Further instructions and best practice information are provided in your
+project&#8217;s <code>README.md</code>.</p>
+</div>
+<div class="paragraph">
+<p>The Magnolia Maven Archetype generates a best-practice project skeleton.
+For example:</p>
+</div>
+<div class="paragraph">
+<p><code>my-mgnl-cloud-webapp/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── pom.xml</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── src</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── main`</p>
+</div>
+<div class="paragraph">
+<p>`        └── webapp`</p>
+</div>
+<div class="paragraph">
+<p>`            └── WEB-INF`</p>
+</div>
+<div class="paragraph">
+<p>`                └── config`</p>
+</div>
+<div class="paragraph">
+<p>`                    └── dev`</p>
+</div>
+<div class="paragraph">
+<p>`                    │   └── README.md`</p>
+</div>
+<div class="paragraph">
+<p>`                    │   └── magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>`                    └── shared`</p>
+</div>
+<div class="paragraph">
+<p>`                        └── README.md`</p>
+</div>
+<div class="paragraph">
+<p>`                        └── magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>Note that upon creation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Two default profiles are generated: <code>dev</code> and <code>shared</code>. These profiles
+have their own <code>magnolia.properties</code> files.</p>
+</li>
+<li>
+<p>During packaging, the <code>dev</code> profile is excluded. The <code>shared</code> profile
+is included and deployed to Magnolia Cloud.</p>
+</li>
+<li>
+<p>You can add local developer credentials to the <code>dev</code> profile to be
+used instead of the typical Magnolia superuser/superuser, which is
+<a href="Cloud-user-management.html">disabled in the cloud</a>.</p>
+</li>
+<li>
+<p>In the <code>shared</code> profile, you can create specific <code>.properties</code> files
+for each cloud environment. This can be used, for example, to test the
+integration of a third-party tool in the UAT environment without
+affecting your Live environment.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you created a custom bundle before Magnolia 6.2.1 with <code>.properties</code>
+file changes, please check your customizations carefully and adhere to
+the structure shown above.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-219777739_Creatinganddeployingcustomcloudbundles-Continuousintegrationanddeploymentofcustombundles"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Continuousintegrationanddeploymentofcustombundles"></a>Continuous integration and deployment of custom bundles</h3>
+<div class="paragraph">
+<p>You must use the
+<a href="https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-maven-plugin/browse/README.md">Magnolia
+Cloud Maven Plugin</a> for the continuous integration and deployment
+(CI/CD) of custom bundles to Magnolia Cloud. The plugin validates and
+uploads your custom cloud bundle and deploys it to Magnolia&#8217;s pipelines.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Make sure you use the latest version of the Magnolia Cloud Maven Plugin
+when deploying a new bundle to Magnolia Cloud: v1.0-RC6.</p>
+</div>
+<div class="paragraph">
+<p>More information can be found in the readme here:
+<a href="https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-maven-plugin/browse/README.md" class="bare">https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-maven-plugin/browse/README.md</a></p>
+</div>
+<div class="sect3">
+<h4 id="src-219777739_Creatinganddeployingcustomcloudbundles-Validationofthecustombundle"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Validationofthecustombundle"></a>Validation of the custom bundle</h4>
+<div class="paragraph">
+<p>The plugin performs validation checks against the built artifact
+(webapp) to ensure compatibility with the Magnolia Cloud infrastructure:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Basic checks for required configuration in the <code>web.xml</code> and
+<code>magnolia.properties</code> files.</p>
+</li>
+<li>
+<p>Inspection of required and blacklisted modules/jars.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219777739_Creatinganddeployingcustomcloudbundles-DeploymentoftheWARfile"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-DeploymentoftheWARfile"></a>Deployment of the WAR file</h4>
+<div class="paragraph">
+<p>The plugin uploads the built artifact to the entry point for Magnolia
+Cloud&#8217;s deployment pipelines. It also collects meta-information about
+the artifact for debugging purposes.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-219777739_Creatinganddeployingcustomcloudbundles-MagnoliaCloudSimulator"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-MagnoliaCloudSimulator"></a>Magnolia Cloud Simulator</h3>
+<div class="paragraph">
+<p>We recommend you test your custom bundle in a simulated cloud
+environment before deploying it.</p>
+</div>
+<div class="paragraph">
+<p>To do so, we offer a docker-compose based setup:
+<a href="https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-simulator/browse/README.md">Magnolia
+Cloud Simulator</a>.</p>
+</div>
+<div class="paragraph">
+<p>Developing for Magnolia in the cloud</p>
+</div>
+<div class="paragraph">
+<p>Setting up a local Git repository</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

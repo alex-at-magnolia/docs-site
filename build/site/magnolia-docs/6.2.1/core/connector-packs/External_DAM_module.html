@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>External DAM module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/connector-packs/External_DAM_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="External_DAM_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="External_DAM_module.html">External DAM module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Connector_Packs.html">Connector Packs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">External DAM module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="DAM_Connector_Pack.html">DAM Connector Pack</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819680"><a class="anchor" href="#src-209819680"></a>External DAM module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Install</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#src-209819680_ExternalDAMmodule-Installing">Multiple
+modules</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connector Pack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAM Connector Pack</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/EXTDAM">EXTDAM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.addons.releases/info/magnolia/external/dam/">external-dam</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="DAM_Connector_Pack.html">DAM Connector Pack</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Assets+app">Assets app</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">Digital
+asset management</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The DAM Connector Pack modules allow you to connect to your external DAM
+and make your existing assets, including videos, PDFs and images,
+available directly within Magnolia.</p>
+</div>
+<div class="sect2">
+<h3 id="src-209819680_ExternalDAMmodule-Modulestructure"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Modulestructure"></a>Module structure</h3>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 55%;">
+<col style="width: 45%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-external-dam-parent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent reactor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-external-dam</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the foundation for integrating with
+S3 and Bynder and a sample component for using assets in the Pages app.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-external-dam-bynder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a default implementation to
+connect to
+<a href="https://www.bynder.com/en/features/digital-asset-management/">Bynder</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-external-dam-s3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a default implementation to
+connect to <a href="https://aws.amazon.com/s3/">Amazon S3</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-209819680_ExternalDAMmodule-Installing"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the modules. Add the following
+dependencies to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">webapp</a>.
+All the other necessary dependencies will be brought in automatically:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.external.dam&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-external-dam&lt;/artifactId&gt;
+  &lt;version&gt;1.0.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.external.dam&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-external-dam-bynder&lt;/artifactId&gt;
+  &lt;version&gt;1.0.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.external.dam&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-external-dam-s3&lt;/artifactId&gt;
+  &lt;version&gt;1.0.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819680_ExternalDAMmodule-Configuration"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>This section explains how to configure the connection between the
+External DAM module and your external asset management solution.
+Essentially, you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide connection credentials for your external solution.</p>
+</li>
+<li>
+<p>Configure the cache if necessary.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can create or edit the configuration in the JCR or the File System
+(YAML) under <code>&lt;module-name&gt;/external-dams/&lt;definition-name&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Before you configure the connection, make sure you know:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Which solution you want to connect to. Default implementations are
+provided for:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS S3</p>
+</li>
+<li>
+<p>Bynder</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Connection credentials for your solution.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-209819680_ExternalDAMmodule-AWSS3connectionconfiguration"><a class="anchor" href="#src-209819680_ExternalDAMmodule-AWSS3connectionconfiguration"></a>AWS S3 connection configuration</h4>
+<div class="paragraph">
+<p>To use AWS S3 assets in Magnolia, you must have a working AWS account.</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819680_ExternalDAMmodule-Credentials"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Credentials"></a>Credentials</h5>
+<div class="paragraph">
+<p>You need AWS S3 credentials to connect your S3 buckets and display their
+content in Magnolia. Credentials consist of two parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AWS access key ID</p>
+</li>
+<li>
+<p>AWS secret access key</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Add these credentials to your Magnolia instance in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Passwords+app">Password
+manager app</a>. For example:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>aws-credentials</code></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/209819680/padlock.gif" alt="images/download/attachments/209819680/padlock.gif" height="25"></span>
+<code>aws_access_key_id</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/209819680/padlock.gif" alt="images/download/attachments/209819680/padlock.gif" height="25"></span>
+<code>aws_secret_access_key</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>magnolia-aws-foundation</code> module handles all Amazon connections from
+Magnolia. This module is installed automatically by Maven when you
+install the External DAM module.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-209819680_ExternalDAMmodule-ConfiguringanAWSS3bucketwhitelist"><a class="anchor" href="#src-209819680_ExternalDAMmodule-ConfiguringanAWSS3bucketwhitelist"></a>Configuring an AWS S3 bucket whitelist</h5>
+<div class="paragraph">
+<p>By default, all the buckets in the S3 account you connect to are
+displayed. If you do not want to display all your buckets, you can
+configure a whitelist under <code>/dam-s3/config.yaml</code> using regex.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="paragraph">
+<p><code>whitelistedBuckets:</code></p>
+</div>
+<div class="paragraph">
+<p><code>- ``"^a.*"</code></p>
+</div>
+<div class="paragraph">
+<p><code>- a-particular-bucket</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819680_ExternalDAMmodule-Bynderconnectionconfiguration"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Bynderconnectionconfiguration"></a>Bynder connection configuration</h4>
+<div class="paragraph">
+<p>To use Bynder assets in Magnolia, you must have a working Bynder
+account.</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819680_ExternalDAMmodule-APItoken"><a class="anchor" href="#src-209819680_ExternalDAMmodule-APItoken"></a>API token</h5>
+<div class="paragraph">
+<p>You need a permanent OAuth 2.0 API token from Bynder to access the
+assets.</p>
+</div>
+<div class="paragraph">
+<p>To generate a token, see this Bynder documentation:
+<a href="https://help.bynder.com/system/oauth2-permanent-tokens.htm" class="bare">https://help.bynder.com/system/oauth2-permanent-tokens.htm</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can use the token value directly in the yaml configuration or add
+the permanent token to your Magnolia instance in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Passwords+app">Password
+manager app</a> and reference the path in the configuration. For example:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>bynder-credentials</code></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/209819680/padlock.gif" alt="images/download/attachments/209819680/padlock.gif" height="25"></span>
+<code>bynder_permanent_token</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-209819680_ExternalDAMmodule-Connecting"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Connecting"></a>Connecting</h5>
+<div class="paragraph">
+<p>Add your connection configuration under <code>/dam-bynder/config.yaml</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>bynderPortalURL: https:`</code>//magnoliaintegration.getbynder.com`</p>
+</div>
+<div class="paragraph">
+<p><code>permanentToken: &lt;client_secret_or_path_to_password_manager&gt;</code></p>
+</div>
+<div class="sect5">
+<h6 id="src-209819680_ExternalDAMmodule-Connectionproperties"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Connectionproperties"></a>Connection properties</h6>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 28%;">
+<col style="width: 72%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bynderPortalURL</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>URL to your Bynder service.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>permanentToken</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A <a href="https://help.bynder.com/system/oauth2-permanent-tokens.htm">permanent
+OAuth 2.0 API token from Bynder</a> or the path to the Passwords app where
+the token is stored.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819680_ExternalDAMmodule-Configuringthecache"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Configuringthecache"></a>Configuring the cache</h4>
+<div class="paragraph">
+<p>This connector pack uses
+<a href="https://github.com/ben-manes/caffeine">Caffeine</a>, a high-performance Java
+cache library, to manage caching for external assets via a Magnolia
+helper module called <code>magnolia-addon-commons-cache</code>.</p>
+</div>
+<div class="paragraph">
+<p>For Bynder and S3 caching, you can specify the behavior of the caches.
+Essentially, you can configure all the parameters available in
+<a href="https://github.com/ben-manes/caffeine/blob/e8ff6d3261e7f5666d2b486352cc04b2874d70ed/caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java">CaffeineSpec</a>.
+For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set a maximum cache size.</p>
+</li>
+<li>
+<p>Define how often the cache expires.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable or disable the cache.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You configure caching through
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">decoration</a>
+under <code>/&lt;dam-connector&gt;/decorations/addon-commons-cache/config.yaml</code>.</p>
+</div>
+<div class="paragraph">
+<p>Bynder default configuration</p>
+</div>
+<div class="paragraph">
+<p>/dam-bynder/decorations/addon-commons-cache/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cacheConfigurations:</code></p>
+</div>
+<div class="paragraph">
+<p>`  bynder:`</p>
+</div>
+<div class="paragraph">
+<p>`    caches:`</p>
+</div>
+<div class="paragraph">
+<p>`      bynder-media: maximumSize=<code>500</code>, expireAfterAccess=10m`</p>
+</div>
+<div class="paragraph">
+<p>`      bynder-all: expireAfterAccess=60m`</p>
+</div>
+<div class="paragraph">
+<p>`    enabled: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>S3 default configuration</p>
+</div>
+<div class="paragraph">
+<p>/dam-s3/decorations/addon-commons-cache/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cacheConfigurations:</code></p>
+</div>
+<div class="paragraph">
+<p>`  s3:`</p>
+</div>
+<div class="paragraph">
+<p>`    caches:`</p>
+</div>
+<div class="paragraph">
+<p>`      s3-objects: maximumSize=<code>500</code>, expireAfterAccess=10m`</p>
+</div>
+<div class="paragraph">
+<p>`      s3-buckets: expireAfterAccess=60m`</p>
+</div>
+<div class="paragraph">
+<p>`    enabled: <code>`true</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-209819680_ExternalDAMmodule-Cacheconfigurationproperties"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Cacheconfigurationproperties"></a>Cache configuration properties</h5>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 84%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>caches</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Use CaffeineSpec properties to specify the cache behavior such as the
+maximum size of the cache and when cache entries expire for each cache.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine/latest/com/github/benmanes/caffeine/cache/Caffeine.html#maximumSize-long-">maximumSize</a>:
+default is 500</p>
+</li>
+<li>
+<p><a href="https://www.javadoc.io/doc/com.github.ben-manes.caffeine/caffeine/latest/com/github/benmanes/caffeine/cache/Caffeine.html#expireAfterAccess-java.time.Duration-">expireAfterAccess</a>:
+default is 10m</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;cacheName-1&gt;: maximumSize=500, expireAfterAccess=10m</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;cacheName-2&gt;: expireAfterAccess=60m</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <code>true</code> by default</p>
+</div>
+<div class="paragraph">
+<p>Set to <code>false</code> to disable caching.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Bynder loading times</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Note that the Bynder API may be very slow in some regions. For example,
+one image upload may take up to 20 seconds in EU regions. This may cause
+some actions to fail in the Magnolia UI and the cache to be
+invalidated.<br>
+For more information, see
+<a href="https://github.com/Bynder/bynder-js-sdk/issues/43" class="bare">https://github.com/Bynder/bynder-js-sdk/issues/43</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819680_ExternalDAMmodule-Usage"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Usage"></a>Usage</h3>
+<div class="paragraph">
+<p>The <code>magnolia-external-dam</code> submodule provides a sample <strong>Text and
+external image</strong> page component so that editors and marketers can select
+and use external assets in the
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Pages+app">Pages
+app</a>. See <a href="DAM_Connector_Pack.html">DAM Connector Pack</a> for an
+example.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819680_ExternalDAMmodule-Releasehistory"><a class="anchor" href="#src-209819680_ExternalDAMmodule-Releasehistory"></a>Release history</h3>
+<div class="sect3">
+<h4 id="src-209819680_ExternalDAMmodule-ExternalDAMmodule1.0.1"><a class="anchor" href="#src-209819680_ExternalDAMmodule-ExternalDAMmodule1.0.1"></a>External DAM module 1.0.1</h4>
+<div class="paragraph">
+<p>Released on June 22nd, 2020.</p>
+</div>
+<div class="paragraph">
+<p>This release brings compatibility for Magnolia 6.2.1 and a number of
+minor improvements and bug fixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-105">EXTDAM-105</a>] -
+(Bynder) Allow upload another image when editing</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-106">EXTDAM-106</a>] -
+(Bynder) Set the asset&#8217;s name with the name of the upload file</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-121">EXTDAM-121</a>] - Cache
+is not applied when browsing through app-chooser</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-119">EXTDAM-119</a>] - Adjust
+to Periscope changes in 6.2.1</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-104">EXTDAM-104</a>] - Show
+notification to the user when an async action started</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-108">EXTDAM-108</a>] -
+(Bynder) Correct notify message with apostrophe</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-112">EXTDAM-112</a>] -
+(Bynder) Edit asset fails with exception</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-113">EXTDAM-113</a>] -
+(Bynder) Changing the image is not reflected in the tree unless the name
+is updated</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-114">EXTDAM-114</a>] -
+Periscope search is case sensitive</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-115">EXTDAM-115</a>] - (S3)
+Double click on bucket or folder opens the editor</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-116">EXTDAM-116</a>] - (S3)
+Strange behaviour deleting a folder</p>
+</li>
+<li>
+<p>[<a href="https://jira.magnolia-cms.com/browse/EXTDAM-120">EXTDAM-120</a>] -
+(Bynder) The item deletion does not happen immediately</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819680_ExternalDAMmodule-ExternalDAMmodule1.0"><a class="anchor" href="#src-209819680_ExternalDAMmodule-ExternalDAMmodule1.0"></a>External DAM module 1.0</h4>
+<div class="paragraph">
+<p>Released on April 6, 2020.</p>
+</div>
+<div class="paragraph">
+<p>Initial release of the DAM Connector Pack for integrating with Bynder
+and Amazon S3, so that you can use your assets directly in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="DAM_Connector_Pack.html">DAM Connector Pack</a> for an overview of
+the functionality provided.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819680_ExternalDAMmodule-DAMConnectorPackcompatibility"><a class="anchor" href="#src-209819680_ExternalDAMmodule-DAMConnectorPackcompatibility"></a>DAM Connector Pack compatibility</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 67%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module version</th>
+<th class="tableblock halign-left valign-top">Magnolia CMS version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>6.2.1</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A note about connector compatibilty</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The third-party versions listed below are the versions Magnolia has
+<em>developed and tested against</em>. If you don’t see a particular version
+listed, it simply means that we do not routinely test on it.</p>
+</div>
+<div class="paragraph">
+<p>If you are using another version of the third-party tool and run into
+compatibility issues, please contact our
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Support">Support team</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 67%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module version</th>
+<th class="tableblock halign-left valign-top">Bynder SDK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tested against <strong>2.2.0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 67%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module version</th>
+<th class="tableblock halign-left valign-top">AWS Java SDK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0.1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 2.13.25 *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tested against 2.9.7</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>DAM Connector Pack</p>
+</div>
+<div class="paragraph">
+<p>Marketing Automation Connector Pack</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
