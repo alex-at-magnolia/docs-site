@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Modules - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Modules :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/modules/Modules.html">
     <meta name="generator" content="Antora 2.3.3">
 <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -121,41 +121,8 @@
 </div>
 <main>
 <article class="doc">
-    <h1 class="page">Modules - Magnolia 6.2 documentation</h1>
+    <h1 class="page">Modules</h1>
     <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Modules.html" class="bare">Modules.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196596732"><a class="anchor" href="#src-196596732"></a>Modules</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Magnolia has a modular architecture. A module can perform a task,
@@ -165,12 +132,15 @@ should use the module mechanism to package and deploy your own site&#8217;s
 configuration and functionality.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/download/attachments/196596732/modular-architecture.png" alt="images/download/attachments/196596732/modular-architecture.png"></span></p>
+<p><span class="image"><img src="../../_images/modules/modular-architecture.png" alt="modules/modular-architecture.png"></span></p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596732_Modules-Terminology"><a class="anchor" href="#src-196596732_Modules-Terminology"></a>Terminology</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="src-196596732_Modules-Terminology"><a class="anchor" href="#src-196596732_Modules-Terminology"></a>Terminology</h3>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Magnoliamodule"><a class="anchor" href="#src-196596732_Modules-Magnoliamodule"></a>Magnolia module</h4>
+<h3 id="src-196596732_Modules-Magnoliamodule"><a class="anchor" href="#src-196596732_Modules-Magnoliamodule"></a>Magnolia module</h3>
 <div class="paragraph">
 <p>In Magnolia documentation, the terms <em>module</em> and <em>project module</em>
 always refer to a Magnolia module.</p>
@@ -199,8 +169,8 @@ together with other files.</p>
 templates, another module for content, a third for a theme and so on.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Mavenmodule"><a class="anchor" href="#src-196596732_Modules-Mavenmodule"></a>Maven module</h4>
+<div class="sect2">
+<h3 id="src-196596732_Modules-Mavenmodule"><a class="anchor" href="#src-196596732_Modules-Mavenmodule"></a>Maven module</h3>
 <div class="paragraph">
 <p><a href="http://maven.apache.org/">Maven</a> also uses the term module but it means
 something different. When a Maven module is meant, we write <em>Maven
@@ -209,8 +179,8 @@ module</em>. You can make the Magnolia module folder
 would build a JAR file and deploy it to your webapp.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Lightmodule"><a class="anchor" href="#src-196596732_Modules-Lightmodule"></a>Light module</h4>
+<div class="sect2">
+<h3 id="src-196596732_Modules-Lightmodule"><a class="anchor" href="#src-196596732_Modules-Lightmodule"></a>Light module</h3>
 <div class="paragraph">
 <p>You don&#8217;t need to know Java or Maven to create a perfectly valid
 Magnolia module. Put your project files into a file-system directory to
@@ -239,7 +209,6 @@ any Magnolia instance. If you already have a light modules directory you
 want to use, edit the
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/_What+is+magnolia.resources.dir">magnolia.resources.dir</a>
 property in your magnolia.properties file to point to it.</p>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -394,8 +363,9 @@ Light module</th>
 <p>These two folder trees show typical folder structures rather than
 structures with <em>all</em> folders possible.</p>
 </div>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Folders"><a class="anchor" href="#src-196596732_Modules-Folders"></a>Folders</h4>
+</div>
+<div class="sect2">
+<h3 id="src-196596732_Modules-Folders"><a class="anchor" href="#src-196596732_Modules-Folders"></a>Folders</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -512,7 +482,6 @@ requests to the actual content locations.</p>
 information.</p>
 </div>
 </div>
-</div>
 <div class="sect2">
 <h3 id="src-196596732_safe-id-TW9kdWxlcy1Vc2luZ01hdmVuYW5kYWRkaW5nSmF2YWNsYXNzZXM_"><a class="anchor" href="#src-196596732_safe-id-TW9kdWxlcy1Vc2luZ01hdmVuYW5kYWRkaW5nSmF2YWNsYXNzZXM_"></a>Using Maven and adding Java classes?</h3>
 <div class="paragraph">
@@ -529,8 +498,10 @@ module and add the classes to <code>src/main/java</code>.</p>
 </div>
 <div class="sect2">
 <h3 id="src-196596732_Modules-Configurationanddefinitionitems"><a class="anchor" href="#src-196596732_Modules-Configurationanddefinitionitems"></a>Configuration and definition items</h3>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Moduleconfiguration"><a class="anchor" href="#src-196596732_Modules-Moduleconfiguration"></a>Module configuration</h4>
+
+</div>
+<div class="sect2">
+<h3 id="src-196596732_Modules-Moduleconfiguration"><a class="anchor" href="#src-196596732_Modules-Moduleconfiguration"></a>Module configuration</h3>
 <div class="paragraph">
 <p>If you are using Java and a module class, the class can have bean
 properties which can be loaded at module startup with values from
@@ -541,15 +512,14 @@ node. For further information, see <a href="Module_configuration.html">Module
 configuration</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Definitionitems"><a class="anchor" href="#src-196596732_Modules-Definitionitems"></a>Definition items</h4>
+<div class="sect2">
+<h3 id="src-196596732_Modules-Definitionitems"><a class="anchor" href="#src-196596732_Modules-Definitionitems"></a>Definition items</h3>
 <div class="paragraph">
 <p>Magnolia modules can define a number of items as parts of the module,
 for example, apps, commands, dialogs, fields, message views, renderers,
 templates, traits and virtual URI mappings. See
 <a href="Module_definition_items.html">Module definition items</a> for further
 information.</p>
-</div>
 </div>
 </div>
 <div class="sect2">
@@ -559,16 +529,17 @@ information.</p>
 defines a module. When you start Magnolia, the system identifies
 available modules by locating each module&#8217;s descriptor file.</p>
 </div>
-<div class="sect3">
-<h4 id="src-196596732_Modules-InMagnoliaMavenmodules"><a class="anchor" href="#src-196596732_Modules-InMagnoliaMavenmodules"></a>In Magnolia Maven modules</h4>
+</div>
+<div class="sect2">
+<h3 id="src-196596732_Modules-InMagnoliaMavenmodules"><a class="anchor" href="#src-196596732_Modules-InMagnoliaMavenmodules"></a>In Magnolia Maven modules</h3>
 <div class="paragraph">
 <p>Magnolia Maven-based modules must provide a module descriptor. It is
 located at <code>src/main/resources/META-INF/magnolia/&lt;module-name&gt;.xml</code>. See
 <a href="XML-based_module_descriptor.html">XML-based module descriptor</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196596732_Modules-Inlightmodules"><a class="anchor" href="#src-196596732_Modules-Inlightmodules"></a>In light modules</h4>
+<div class="sect2">
+<h3 id="src-196596732_Modules-Inlightmodules"><a class="anchor" href="#src-196596732_Modules-Inlightmodules"></a>In light modules</h3>
 <div class="paragraph">
 <p>In a Magnolia file-based module (light module), the descriptor is
 located at <code>$magnolia.resources.dir/example-light-module/module.yaml</code>.
@@ -601,7 +572,6 @@ modular architecture diagram.
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>
