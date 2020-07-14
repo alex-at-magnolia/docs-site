@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to upgrade from CE to DX Core - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/How-to-upgrade-from-CE-to-DX-Core.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="How-to-upgrade-from-CE-to-DX-Core.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="How-to-upgrade-from-CE-to-DX-Core.html">How to upgrade from CE to DX Core - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">How to upgrade from CE to DX Core - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204050472"><a class="anchor" href="#src-204050472"></a>How to upgrade from CE to DX Core</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>If you have already started your Magnolia project on Community Edition
+then it&#8217;s simple to upgrade that project to DX Core (aka Enterprise
+Edition). Doing so will require that you have a license available to run
+the all the modules you would like to install. Magnolia developer trial
+licenses can be requested
+<a href="https://www.magnolia-cms.com/get-started/developer-trial.html">here</a> for
+a term of 30 days.</p>
+</div>
+<div class="paragraph">
+<p>No matter how your project is currently built or maintained this
+tutorial will try and consolidate all possible approaches into a single
+best practice approach. In some cases you might have to adjust these
+instructions to suit your needs or deployment scenario. Enterprise
+customers (or potential customers) can always seek help from our
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Support">Support</a>
+channel by requesting the credentials from Sales. If you are considering
+moving a Community project the best place to start is by
+<a href="https://www.magnolia-cms.com/contact.html">contacting</a> out sales team.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204050472_HowtoupgradefromCEtoDXCore-Gettingstarted"><a class="anchor" href="#src-204050472_HowtoupgradefromCEtoDXCore-Gettingstarted"></a>Getting started</h3>
+<div class="paragraph">
+<p>It really does not matter how you currently deploy Magnolia. All you
+really need is to have an understanding of what modules you currently
+have installed. Anything custom you have added will need some special
+considerations as you move your project.</p>
+</div>
+<div class="paragraph">
+<p>As an example, let&#8217;s consider the scenario where I am currently running
+in production the travel website on Magnolia 5.6.8 CE. My target is to
+bring the project up to Magnolia 6.2 DX Core.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Versions prior to 5.6 should migrate to 5.6 first. 5.6 requires Vaadin 8
+and log4j2 upgrades. See the
+<a href="https://documentation.magnolia-cms.com/display/DOCS56/Release+notes+for+Magnolia+CORE+5.6">Release
+notes</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-204050472_HowtoupgradefromCEtoDXCore-Mavenproject"><a class="anchor" href="#src-204050472_HowtoupgradefromCEtoDXCore-Mavenproject"></a>Maven project</h4>
+<div class="paragraph">
+<p>In some cases users of Magnolia have downloaded our
+<a href="https://download.magnolia-cms.com">pre-assembled Tomcat bundles</a> and used
+those as the basis for deployment. Adding modules manually to the libs
+folder prior to deployment. If this is how you currently deploy Magnolia
+then take this opportunity to begin using Maven to manage your war files
+instead.</p>
+</div>
+<div class="paragraph">
+<p>I will start under the condition that I have downloaded a pre-assembled
+bundle and deployed my travel website. Since I was new to Magnolia I
+have also deployed under the default conditions of using H2 as my
+production database. Now would be a good time to change that so I am
+using something more appropriate like MySQL.</p>
+</div>
+<div class="paragraph">
+<p>This means I need to complete the following steps.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a maven project for 5.6.8 CE</p>
+</li>
+<li>
+<p>Transfer the data from my H2 database to the new MySQL database</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204050472_HowtoupgradefromCEtoDXCore-Usethearchetype"><a class="anchor" href="#src-204050472_HowtoupgradefromCEtoDXCore-Usethearchetype"></a>Use the archetype</h3>
+<div class="paragraph">
+<p>If you are not familiar with Maven then I would suggest you see
+<a href="https://wiki.magnolia-cms.com/display/DEV/Maven+setup">Maven setup</a>
+and/or <a href="How-to-use-Magnolia-Maven-archetypes.html">How to use
+Magnolia Maven archetypes</a>. You don&#8217;t need to know a lot about Maven to
+be proficient. Just have it installed and configured so that you can use
+it at the command line to build the project. See
+<a href="https://wiki.magnolia-cms.com/display/wiki/module+quickstart">Module
+Quickstart</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you already have a maven project then you can skip this step.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>From the command line.</p>
+<div class="paragraph">
+<p><code>florida:Upgrade rgange$ mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeCatalog=https://nexus.magnolia-cms.com/content/groups/public/</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Scanning for projects&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] No archetype defined. Using maven-archetype-quickstart (org.apache.maven.archetypes:maven-archetype-quickstart:1.0)</code></p>
+</div>
+<div class="paragraph">
+<p><code>Choose archetype:</code></p>
+</div>
+<div class="paragraph">
+<p><code>1: <a href="https://nexus.magnolia-cms.com/content/groups/public/" class="bare">https://nexus.magnolia-cms.com/content/groups/public/</a> &#8594; info.magnolia.maven.archetypes:magnolia-theme-archetype (An archetype to create STK Theme modules)</code></p>
+</div>
+<div class="paragraph">
+<p><code>2: <a href="https://nexus.magnolia-cms.com/content/groups/public/" class="bare">https://nexus.magnolia-cms.com/content/groups/public/</a> &#8594; info.magnolia.maven.archetypes:magnolia-project-archetype (An archetype to create a Magnolia project (a parent pom and a webapp))</code></p>
+</div>
+<div class="paragraph">
+<p><code>3: <a href="https://nexus.magnolia-cms.com/content/groups/public/" class="bare">https://nexus.magnolia-cms.com/content/groups/public/</a> &#8594; info.magnolia.maven.archetypes:magnolia-module-archetype (An archetype to create basic Magnolia modules)</code></p>
+</div>
+<div class="paragraph">
+<p><code>4: <a href="https://nexus.magnolia-cms.com/content/groups/public/" class="bare">https://nexus.magnolia-cms.com/content/groups/public/</a> &#8594; info.magnolia.maven.archetypes:magnolia-forge-module-archetype (An archetype to create a Magnolia module to be hosted on the Magnolia Forge)</code></p>
+</div>
+<div class="paragraph">
+<p><code>5: <a href="https://nexus.magnolia-cms.com/content/groups/public/" class="bare">https://nexus.magnolia-cms.com/content/groups/public/</a> &#8594; info.magnolia.maven.archetypes:magnolia-blossom-module-archetype (An archetype to create Magnolia modules using Blossom)</code></p>
+</div>
+<div class="paragraph">
+<p><code>Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 2</code></p>
+</div>
+<div class="paragraph">
+<p>`Choose info.magnolia.maven.archetypes:magnolia-project-archetype version: `</p>
+</div>
+<div class="paragraph">
+<p><code>1: 1.1.0</code></p>
+</div>
+<div class="paragraph">
+<p><code>2: 1.2.0</code></p>
+</div>
+<div class="paragraph">
+<p><code>3: 1.2.1</code></p>
+</div>
+<div class="paragraph">
+<p><code>4: 1.2.2</code></p>
+</div>
+<div class="paragraph">
+<p><code>5: 1.2.3</code></p>
+</div>
+<div class="paragraph">
+<p><code>6: 1.2.4</code></p>
+</div>
+<div class="paragraph">
+<p><code>7: 1.2.5</code></p>
+</div>
+<div class="paragraph">
+<p><code>8: 1.2.6-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p><code>Choose a number: 8: 6</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value for property 'groupId': : info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value for property 'artifactId': : magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p><code>Define value for property 'version':  1.0-SNAPSHOT: : 5.6.8-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p>`Define value for property 'package':  info.magnolia.webapps: : `</p>
+</div>
+<div class="paragraph">
+<p><code>Define value for property 'magnolia-bundle-version': : 5.6.8</code></p>
+</div>
+<div class="paragraph">
+<p>`Define value for property 'project-name':  magnolia-cms: : `</p>
+</div>
+<div class="paragraph">
+<p><code>Confirm properties configuration:</code></p>
+</div>
+<div class="paragraph">
+<p><code>groupId: info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>artifactId: magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p><code>version: 5.6.8-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p><code>package: info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-bundle-version: 5.6.8</code></p>
+</div>
+<div class="paragraph">
+<p><code>project-name: magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p>` Y: : Y`</p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ----------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Using following parameters for creating project from Archetype: magnolia-project-archetype:1.2.4</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ----------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: groupId, Value: info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: artifactId, Value: magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: version, Value: 5.6.8-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: package, Value: info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: packageInPathFormat, Value: info/magnolia/webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: magnolia-bundle-version, Value: 5.6.8</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: package, Value: info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: version, Value: 5.6.8-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: groupId, Value: info.magnolia.webapps</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: project-name, Value: magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parameter: artifactId, Value: magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Parent element not overwritten in /Users/rgange/Upgrade/magnolia-cms/magnolia-cms-webapp/pom.xml</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] project created from Archetype in dir: /Users/rgange/Upgrade/magnolia-cms</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] BUILD SUCCESS</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Total time: 52.829 s</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Finished at: 2019-09-27T11:33:56+02:00</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] Final Memory: 14M/170M</code></p>
+</div>
+<div class="paragraph">
+<p><code>[INFO] ------------------------------------------------------------------------</code></p>
+</div>
+<div class="paragraph">
+<p>`florida:Upgrade rgange$ `
+. Update the webapp pom.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>&lt;!-- option ii - magnolia-community-webapp -&#8594;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -&#8594;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;magnolia-community-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;magnolia-community-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code>
+. Build the project.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>florida:magnolia-cms rgange$ mvn clean install</code></p>
+</div>
+<div class="paragraph">
+<p>+
+Result:<span class="image"><img src="../../_images/images/download/attachments/204050472/create-project.png" alt="images/download/attachments/204050472/create-project.png"></span>
+. Check for differences in your libraries.</p>
+</div>
+<div class="paragraph">
+<p>+
+[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Print to a file the WEB-INF/lib folder of the bundle and compare that
+with a file from the Maven built project.</p>
+</div>
+<div class="paragraph">
+<p>+
+`florida:lib rgange$ diff libs-maven.txt libs-bundle.txt `</p>
+</div>
+<div class="paragraph">
+<p><code>180a181</code></p>
+</div>
+<div class="paragraph">
+<p><code>&gt; magnolia-module-public-user-registration-2.7.jar</code></p>
+</div>
+<div class="paragraph">
+<p><code>198a200</code></p>
+</div>
+<div class="paragraph">
+<p><code>&gt; magnolia-sample-app-5.6.7.jar</code></p>
+</div>
+<div class="paragraph">
+<p><code>207a210,211</code></p>
+</div>
+<div class="paragraph">
+<p><code>&gt; magnolia-travel-demo-1.2.5.jar</code></p>
+</div>
+<div class="paragraph">
+<p><code>&gt; magnolia-travel-tours-1.2.5.jar</code></p>
+</div>
+<div class="paragraph">
+<p><code>222a227</code></p>
+</div>
+<div class="paragraph">
+<p><code>&gt; mail-1.4.5.jar</code></p>
+</div>
+<div class="paragraph">
+<p><code>253c258</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt; libs-maven.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>---</code></p>
+</div>
+<div class="paragraph">
+<p><code>&gt; libs-bundle.txt</code></p>
+</div>
+<div class="paragraph">
+<p>+
+The bundle contains a few modules that are not included in the Maven
+project.
+. Update the webapp pom to include any missing libraries.</p>
+</div>
+<div class="paragraph">
+<p>+
+`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-community-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-community-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Include the travel demo -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- By including travel demo it brings in the PUR and mail modules -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.demo&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-travel-demo&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.demo&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-travel-tours&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Include the sample app -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- This could also represent a custom module in your project -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.sample&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-sample-app&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204050472_HowtoupgradefromCEtoDXCore-UpgradetoDXCore"><a class="anchor" href="#src-204050472_HowtoupgradefromCEtoDXCore-UpgradetoDXCore"></a>Upgrade to DX Core</h3>
+<div class="paragraph">
+<p>In this scenario the original instance was using H2 embedded database. A
+simple copy of the repositories folder will be enough to move the data
+to the new Maven based setup. If you are using another database then
+make sure the correct repo-confg file is located under
+<code>WEB-INF/config/repoconfg</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/204050472/repo-config.png" alt="images/download/attachments/204050472/repo-config.png"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>(Optional) Copy the repositories folder from the bundle instance over
+to the location of the Maven instance. This optional step only applies
+to setups which use an embedded database like H2 or Derby.</p>
+</li>
+<li>
+<p>Make sure you have the appropriate
+<a href="https://wiki.magnolia-cms.com/display/WIKI/Jackrabbit+Repository+Configuration+File">repository
+config</a> file in your project. Also be sure the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Configuration+management">magnolia.properties</a>
+file is configured to use the that repo config file.</p>
+</li>
+<li>
+<p>Update the parent pom to use 6.2</p>
+<div class="paragraph">
+<p><code>&lt;<code>project</code> <code>xmlns</code>=<code>"http://maven.apache.org/POM/4.0.0"</code> <code>xmlns:xsi</code>=<code>"http://www.w3.org/2001/XMLSchema-instance"</code> <code>xsi:schemaLocation</code>=<code>"http://maven.apache.org/POM/4.0.0 <a href="http://maven.apache.org/maven-v4_0_0.xsd"" class="bare">http://maven.apache.org/maven-v4_0_0.xsd"</a></code>&gt;</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>modelVersion</code>&gt;4.0.0&lt;/<code>modelVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;info.magnolia.webapps&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;magnolia-cms&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>name</code>&gt;magnolia-cms (parent pom)&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;!-- Update here -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>version</code>&gt;6.2-SNAPSHOT&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;!-- <strong><strong></strong><strong></strong></strong>* -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>packaging</code>&gt;pom&lt;/<code>packaging</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>properties</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Update here -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>magnoliaBundleVersion</code>&gt;6.2&lt;/<code>magnoliaBundleVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- <strong><strong></strong><strong></strong></strong>* -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>javaVersion</code>&gt;1.8&lt;/<code>javaVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>properties</code>&gt;`
+. Update the parent pom to use DX Core.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>&lt;<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;info.magnolia.dx&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;magnolia-dx-core-parent&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>version</code>&gt;${magnoliaBundleVersion}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>scope</code>&gt;import&lt;/<code>scope</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code>
+. Update the webapp pom to use DX Core.</p>
+</div>
+<div class="paragraph">
+<p>+
+`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.dx&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-dx-core-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.dx&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-dx-core-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Include the travel demo -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- By including travel demo it brings in the PUR and mail modules -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.demo&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-travel-demo&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.demo&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-travel-tours&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Include the sample app -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- This could also represent a custom module in your project -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.sample&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-sample-app&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`
+. (Optional) Upgrade to <a href="https://tomcat.apache.org/download-90.cgi">Tomcat
+9</a>.
+. With the classpath updated for 6.2 DX Core and the repository copied
+over from the 5.6.8 CE start up the instance to trigger the upgrade.</p>
+</div>
+<div class="paragraph">
+<p>+
+[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>No matter which database you use its best to make a copy to test the
+upgrade with. If you are using an external DB, such as MySQL, you will
+need to copy all tables as well repository folder.</p>
+</div>
+<div class="paragraph">
+<p>+
+``
+. Trigger the update by going to
+<a href="http://localhost:8080/magnolia-cms-webapp" class="bare">http://localhost:8080/magnolia-cms-webapp</a></p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/204050472/ce-ee-upgrade-install-screen-6.2.png" alt="images/download/attachments/204050472/ce-ee-upgrade-install-screen-6.2.png" height="250"></span>
+. Once the upgrade is completed apply the license via the registration
+form.</p>
+</div>
+<div class="paragraph">
+<p>+
+[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If the installation encounters a problem
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Support#Support-ReportingviaJira">open
+a support ticket</a> and attach the entire log file from the upgrade.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204050472_HowtoupgradefromCEtoDXCore-Migratethedata"><a class="anchor" href="#src-204050472_HowtoupgradefromCEtoDXCore-Migratethedata"></a>Migrate the data</h3>
+<div class="paragraph">
+<p>The original project was using H2 database. This is an embedded database
+and typically not ideal in a production environment. Mostly because the
+application would need to share memory with the database. Here we will
+migrate the data from H2 and move it to a MySQL instance.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you do not need to Migrate to a different database then you can skip
+this step.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start the author instance using the database you wish to migrate data
+from. In this case its H2 database but it could be any database. The
+source database used does not matter.</p>
+</li>
+<li>
+<p>Using the Magnolia
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Backup+module">Backup
+module</a>, take a manual backup of the current instance.</p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The Backup module is not part of community edition. Community edition
+users can make use of the
+<a href="https://academy.magnolia-cms.com/display/WIKI/Groovy+Shell+Scripts#GroovyShellScripts-MigrationfromoneDBsystemtoanother">migration
+groovy script</a>.
+. Restore the instance to the target MySQL database using the restore
+script provided by the Backup module. The instructions
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Backup+module#Backupmodule-Restoringabackup">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>How to create and use a custom Magnolia Maven module for custom Java
+components</p>
+</div>
+<div class="paragraph">
+<p>How to use Magnolia Maven archetypes</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

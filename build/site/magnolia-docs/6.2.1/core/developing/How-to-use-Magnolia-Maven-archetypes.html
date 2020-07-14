@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to use Magnolia Maven archetypes - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/How-to-use-Magnolia-Maven-archetypes.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="How-to-use-Magnolia-Maven-archetypes.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="How-to-use-Magnolia-Maven-archetypes.html">How to use Magnolia Maven archetypes - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">How to use Magnolia Maven archetypes - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596447"><a class="anchor" href="#src-196596447"></a>How to use Magnolia Maven archetypes</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DEV/Maven+setup">Magnolia Maven
+setup</a></p>
+</li>
+<li>
+<p><a href="Creating-a-custom-webapp-with-Maven.html">Creating a custom webapp
+with Maven</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+and+deploying+custom+cloud+bundles">Creating
+and deploying custom cloud bundles</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Apache Maven documentation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://maven.apache.org/guides/introduction/introduction-to-archetypes.html">Introduction
+to archetypes</a></p>
+</li>
+<li>
+<p><a href="https://maven.apache.org/archetype/maven-archetype-plugin/index.html">Maven
+archetype plugin</a> (concept page)</p>
+</li>
+<li>
+<p><a href="https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html">archetype:generate</a>
+(reference page)</p>
+</li>
+<li>
+<p>Maven archetype
+<a href="https://maven.apache.org/archetype/maven-archetype-plugin/usage.html">Project
+creation</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page explains how to use Magnolia-specific Maven archetypes to
+jumpstart development of Magnolia Maven modules and projects.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you want to generate a Magnolia Cloud project archetype to create a
+custom cloud bundle, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+and+deploying+custom+cloud+bundles">Creating
+and deploying custom cloud bundles</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596447_HowtouseMagnoliaMavenarchetypes-Requirements"><a class="anchor" href="#src-196596447_HowtouseMagnoliaMavenarchetypes-Requirements"></a>Requirements</h3>
+<div class="paragraph">
+<p>You need Maven to generate Magnolia project archetypes. To setup Maven,
+follow the procedure described on our
+<a href="https://wiki.magnolia-cms.com/display/DEV/Maven+setup">Maven setup</a> page.
+During the setup, the <code>settings.xml</code> file is created.</p>
+</div>
+<div class="paragraph">
+<p>Depending on whether you are a user of the Community Edition or DX Core,
+check that the file contains the following snippet. If it does not, add
+it to the file, before the <code>profiles</code> section.</p>
+</div>
+<div class="paragraph">
+<p>Community Edition</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>mirrors</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>mirror</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>id</code>&gt;magnolia.nexus.public&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>url</code>&gt;<code><a href="https://nexus.magnolia-cms.com/content/groups/public" class="bare">https://nexus.magnolia-cms.com/content/groups/public</a></code>&lt;/<code>url</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>mirrorOf</code>&gt;archetype&lt;/<code>mirrorOf</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>mirror</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>mirrors</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>DX Core</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>mirrors</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>mirror</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>id</code>&gt;magnolia.nexus.enterprise&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>url</code>&gt;<code><a href="https://nexus.magnolia-cms.com/content/groups/enterprise/" class="bare">https://nexus.magnolia-cms.com/content/groups/enterprise/</a></code>&lt;/<code>url</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>mirrorOf</code>&gt;archetype&lt;/<code>mirrorOf</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>mirror</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>mirrors</code>&gt; `</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596447_HowtouseMagnoliaMavenarchetypes-TheArchetypeplugin"><a class="anchor" href="#src-196596447_HowtouseMagnoliaMavenarchetypes-TheArchetypeplugin"></a>The Archetype plugin</h3>
+<div class="paragraph">
+<p>The <a href="https://maven.apache.org/archetype/maven-archetype-plugin/">Maven
+Archetype Plugin</a> allows you to create a Maven project from an
+<em>archetype</em> – an existing template (a skeleton of files and
+directories).</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The base plugin command is <code>mvn archetype:generate</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For an overview of the parameters it accepts, see the
+<a href="https://maven.apache.org/archetype/maven-archetype-plugin/generate-mojo.html">archetype:generate</a>
+page on the Apache Maven Project website.</p>
+</li>
+<li>
+<p>For details on how the command works and how to use the interactive
+mode, see the
+<a href="https://maven.apache.org/archetype/maven-archetype-plugin/usage.html">Usage</a>
+page on the site.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196596447_HowtouseMagnoliaMavenarchetypes-OptionA"><a class="anchor" href="#src-196596447_HowtouseMagnoliaMavenarchetypes-OptionA"></a>Option A</h4>
+<div class="paragraph">
+<p>If you already know which Magnolia archetype you want to generate, the
+fastest way is to supply the archetype&#8217;s
+<a href="https://maven.apache.org/pom.html#Maven_Coordinates">Maven coordinates</a>
+(GAV) to the command line. For example:</p>
+</div>
+<div class="paragraph">
+<p><code>mvn archetype:generate -DarchetypeGroupId=info.magnolia.maven.archetypes -DarchetypeArtifactId=magnolia-project-archetype -DarchetypeVersion=RELEASE</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you omit the <code>archetypeVersion</code>, the plugin automatically picks the
+oldest version.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596447_HowtouseMagnoliaMavenarchetypes-OptionB"><a class="anchor" href="#src-196596447_HowtouseMagnoliaMavenarchetypes-OptionB"></a>Option B</h4>
+<div class="paragraph">
+<p>By default, the archetype plugin collects a list of all possible
+archetypes, including those found at Maven Central. The list can be very
+long and it may take some time to generate it. To reduce the list only
+to available Magnolia archetypes, use the plugin command with the
+following <code>filter</code> option:</p>
+</div>
+<div class="paragraph">
+<p><code>mvn archetype:generate -Dfilter=info.magnolia.maven.archetypes:magnolia</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/lightbulb_on.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/lightbulb_on.svg"></span>
+If you need to interrupt the command, press <code>CTRL + C</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596447_safe-id-SG93dG91c2VNYWdub2xpYU1hdmVuYXJjaGV0eXBlcy1XaGljaE1hZ25vbGlhYXJjaGV0eXBldG91c2U_"><a class="anchor" href="#src-196596447_safe-id-SG93dG91c2VNYWdub2xpYU1hdmVuYXJjaGV0eXBlcy1XaGljaE1hZ25vbGlhYXJjaGV0eXBldG91c2U_"></a>Which Magnolia archetype to use?</h3>
+<div class="paragraph">
+<p>Magnolia provides the following archetypes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>magnolia-project-archetype</code>, generates a Magnolia project with a
+parent POM and a <a href="Creating-a-custom-webapp-with-Maven.html">Magnolia
+webapp</a>.</p>
+</li>
+<li>
+<p>The <code>magnolia-module-archetype</code>, generates a Magnolia Maven module.
+For details, please refer to the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules">Modules</a> page.</p>
+</li>
+<li>
+<p>The <code>magnolia-blossom-module-archetype</code>, generates a Magnolia Maven
+module with support for the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Blossom+module">Blossom
+module</a>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Before generating a project, the archetypes ask you to supply values for
+the following parameters:</p>
+</div>
+<div class="paragraph">
+<p>Required parameters</p>
+</div>
+<div class="paragraph">
+<p>Example value</p>
+</div>
+<div class="paragraph">
+<p>Explanation</p>
+</div>
+<div class="paragraph">
+<p>Maven <code>groupId</code></p>
+</div>
+<div class="paragraph">
+<p><code>com.example</code></p>
+</div>
+<div class="paragraph">
+<p>Typically, it reflects the name or domain of your organization.</p>
+</div>
+<div class="paragraph">
+<p>Maven <code>artifactId</code></p>
+</div>
+<div class="paragraph">
+<p><code>custom-project</code></p>
+</div>
+<div class="paragraph">
+<p>Project-specific identifier.</p>
+</div>
+<div class="paragraph">
+<p>Maven <code>version</code></p>
+</div>
+<div class="paragraph">
+<p><code>1.0-SNAPSHOT</code></p>
+</div>
+<div class="paragraph">
+<p>Project version. When creating a new project, use the value suggested by
+Maven, for example <code>1.0-SNAPSHOT</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>package</code></p>
+</div>
+<div class="paragraph">
+<p><code>com.example</code></p>
+</div>
+<div class="paragraph">
+<p>Package name for Java classes reflecting both your organization and the
+specific project.</p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-bundle-version</code></p>
+</div>
+<div class="paragraph">
+<p><code>6.1</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia version to be used in your custom project.</p>
+</div>
+<div class="paragraph">
+<p><code>project-name</code></p>
+</div>
+<div class="paragraph">
+<p><code>Custom Project</code></p>
+</div>
+<div class="paragraph">
+<p>A human-readable version of the <code>artifactId</code>, Title case and spaces are
+allowed.</p>
+</div>
+<div class="paragraph">
+<p><em>Additional parameters</em></p>
+</div>
+<div class="paragraph">
+<p><code>module-class-name</code></p>
+</div>
+<div class="paragraph">
+<p><code>FoobarModule</code></p>
+</div>
+<div class="paragraph">
+<p>The Java class name of the generated module class (for module archetypes
+only).</p>
+</div>
+<div class="paragraph">
+<p><code>blossom-version</code></p>
+</div>
+<div class="paragraph">
+<p><code>3.2.1</code></p>
+</div>
+<div class="paragraph">
+<p>The version of the Magnolia Blossom module (for the blossom module
+archetype only).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596447_HowtouseMagnoliaMavenarchetypes-Discontinuedarchetypes"><a class="anchor" href="#src-196596447_HowtouseMagnoliaMavenarchetypes-Discontinuedarchetypes"></a>Discontinued archetypes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As of version 1.2.5, the following archetypes have been discontinued.
+Older versions may still appear if you use the filter option.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>magnolia-forge-module-archetype</code>, used to create a Magnolia
+module for the former Magnolia Forge (moved to
+<a href="https://github.com/magnolia-community">GitHub: Magnolia Forge</a>).</p>
+</li>
+<li>
+<p>The <code>magnolia-theme-archetype</code>, used to create an STK (deprecated)
+theme module.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596447_HowtouseMagnoliaMavenarchetypes-anc-choosing-archetype-version]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596447_safe-id-SG93dG91c2VNYWdub2xpYU1hdmVuYXJjaGV0eXBlcy1XaGljaGFyY2hldHlwZXZlcnNpb25zaG91bGRJdXNlPw"><a class="anchor" href="#src-196596447_safe-id-SG93dG91c2VNYWdub2xpYU1hdmVuYXJjaGV0eXBlcy1XaGljaGFyY2hldHlwZXZlcnNpb25zaG91bGRJdXNlPw"></a>Which archetype version should I use?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the latest archetype release: <code>1.3 `. Exceptionally, Enterprise
+Edition projects for use with Magnolia 5.7 or lower should be generated
+with version `1.2.4</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596447_HowtouseMagnoliaMavenarchetypes-Generatedskeletons"><a class="anchor" href="#src-196596447_HowtouseMagnoliaMavenarchetypes-Generatedskeletons"></a>Generated skeletons</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A creation of a <em>project</em> typically results in the following skeleton,
+with a few more files created in <code>src/main/webapp</code>. For details, see
+<a href="Creating-a-custom-webapp-with-Maven.html">Creating a custom webapp
+with Maven</a>.</p>
+</div>
+<div class="paragraph">
+<p><code>custom-project/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── custom-project-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── pom.xml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── src</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── main</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── webapp</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── pom.xml</code></p>
+</div>
+<div class="paragraph">
+<p>On the other hand, if you create a <em>module</em>, the skeleton will have a
+simpler structure (no multi-module Maven reactor), with a pre-generated
+Magnolia module descriptor and Java module class. See also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+structure">Module
+structure</a>.</p>
+</div>
+<div class="paragraph">
+<p><code>custom-module/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── pom.xml</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── src</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── main`</p>
+</div>
+<div class="paragraph">
+<p>`    │   ├── java`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── resources`</p>
+</div>
+<div class="paragraph">
+<p>`    │       └── META-INF`</p>
+</div>
+<div class="paragraph">
+<p>`    │           └── magnolia`</p>
+</div>
+<div class="paragraph">
+<p>`    │               └── custom-module.xml`</p>
+</div>
+<div class="paragraph">
+<p>`    └── test`</p>
+</div>
+<div class="paragraph">
+<p>How to upgrade from CE to DX Core</p>
+</div>
+<div class="paragraph">
+<p>How to work with JavaScript models</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

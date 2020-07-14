@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Defining JCR node types and workspaces - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/Defining-JCR-node-types-and-workspaces.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Defining-JCR-node-types-and-workspaces.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Defining-JCR-node-types-and-workspaces.html">Defining JCR node types and workspaces - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Defining JCR node types and workspaces - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596316"><a class="anchor" href="#src-196596316"></a>Defining JCR node types and workspaces</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types+module">Content
+Types module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+definition">Content
+type definition</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+Model+definition">Content
+type Model definition</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+Data+source+definition">Content
+type Data source definition</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page provides an overview of all ways to define custom
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types">JCR node types</a>
+and create new workspaces with Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Even though it has always been possible to define node types and create
+workspaces within
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules#Modules-Mavenmodule">Magnolia
+Maven modules</a>, the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types+module">Content
+Types module</a> brings this functionality also to the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+modules">light
+modules</a>. Both approaches are valid.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Whichever approach you choose, we recommend <em>not</em> to develop and refine
+these definitions in a productive environment.</p>
+</div>
+<div class="paragraph">
+<p>Editing node type and workspace definitions can lead to new node type
+definitions and workspaces which are registered again, whereas the
+system keeps the "old" ones which become obsolete.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596316_DefiningJCRnodetypesandworkspaces-Withcontenttypes"><a class="anchor" href="#src-196596316_DefiningJCRnodetypesandworkspaces-Withcontenttypes"></a>With content types</h3>
+<div class="paragraph">
+<p>By utilizing the <code>magnolia-content-types</code> module you can define custom
+JCR content types and workspaces within light modules.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Defining content types within light modules can be accomplished on a
+running Magnolia system without redeploying the WAR file of your
+Magnolia instances and without restarting the instance or a module. This
+makes it a perfect approach if you have a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+Cloud">Magnolia
+Cloud</a> subscription package.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596316_DefiningJCRnodetypesandworkspaces-Acontenttypedefinitioninonefile"><a class="anchor" href="#src-196596316_DefiningJCRnodetypesandworkspaces-Acontenttypedefinitioninonefile"></a>A content type definition in one file</h4>
+<div class="paragraph">
+<p>You can define all of the following in just one file:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>JCR workspace</p>
+</li>
+<li>
+<p>JCR nodetype<br>
+This node type inherits from the Magnolia node type <code>mgnl:content</code>. To
+define more sophisticated node types, you can create a
+<a href="#src-196596316_DefiningJCRnodetypesandworkspaces-anc-node-type-defining-file-in-lightmodule">node
+type definition file in a light module</a>.</p>
+</li>
+<li>
+<p>JCR namespace</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: tourguides`</p>
+</div>
+<div class="paragraph">
+<p>`  namespaces:`</p>
+</div>
+<div class="paragraph">
+<p>`    mt: https:``//www.magnolia-travel.com/jcr/1.0/mt`</p>
+</div>
+<div class="paragraph">
+<p>`  autoCreate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`  `</p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: mt:tourGuide`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: birthday`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Date`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: gender`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: shortBio`</p>
+</div>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>If a node type inheriting from <code>mgnl:content</code> complies with your
+requirements, we recommend defining all of the items – namespace, node
+type and workspace – in the content type definition, all in one file.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596316_DefiningJCRnodetypesandworkspaces-anc-node-type-defining-file-in-lightmoduleDefiningandusinganodetypedefinition"><a class="anchor" href="#src-196596316_DefiningJCRnodetypesandworkspaces-anc-node-type-defining-file-in-lightmoduleDefiningandusinganodetypedefinition"></a><span id="src-196596316_DefiningJCRnodetypesandworkspaces-anc-node-type-defining-file-in-lightmodule " class="confluence-anchor-link">#</span>#Defining and using a node type definition</h4>
+<div class="paragraph">
+<p>You can define JCR namespaces and nodetypes in a CND file.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Compact Namespace and Node Type Definition</em> (CND) notation provides
+a compact standardized syntax for defining node types and making
+namespace declarations. The notation is intended both for documentation
+and for programmatically registering node types. See
+<a href="http://jackrabbit.apache.org/jcr/node-type-notation.html" class="bare">http://jackrabbit.apache.org/jcr/node-type-notation.html</a> for more
+details.</p>
+</div>
+<div class="paragraph">
+<p>While XML-based node type definitions are still supported, we recommend
+using CND.</p>
+</div>
+<div class="paragraph">
+<p>Since this definition must be readable as a <a href="Resources.html">Magnolia
+Resource</a>, it can be a file in a light module or in a JAR file or in the
+<code>resources</code> JCR workspace.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The CND node type definition resource is loaded only if the CND resource
+is referenced in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+Data+source+definition">Content
+type Data source definition</a> of a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+definition">Content
+type definition</a>.</p>
+</div>
+<div class="paragraph">
+<p>Once the resource is loaded, the system registers the defined JCR node
+types and namespaces. If required and Jackrabbit allows it, the system
+may update the definitions.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a CND file in your light module and define a namespace and node
+types:</p>
+<div class="paragraph">
+<p>/content-type-examples/jcr-node-type-files/travellers-node-types.cnd</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>&lt;mt = 'http://www.magnolia.info/jcr/mt'&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[mt:traveller] &gt; mgnl:content</code></p>
+</div>
+<div class="paragraph">
+<p>` orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mt:tourGuide] &gt; mt:traveller</code></p>
+</div>
+<div class="paragraph">
+<p>` orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mt:happyCustomer] &gt; mt:traveller</code></p>
+</div>
+<div class="paragraph">
+<p>` orderable`
+. Reference the node type definition from a content type definition:</p>
+</div>
+<div class="paragraph">
+<p>+
+/content-type-examples/contentTypes/happyCustomer.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: happycustomers`</p>
+</div>
+<div class="paragraph">
+<p>`  autoCreate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeTypeDefinition: /content-type-examples/jcr-node-type-files/travellers-node-types.cnd`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: mt:happyCustomer`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: country`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: age`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Double`</p>
+</div>
+<div class="paragraph">
+<p>+
+Line 4: References the node type definition resource via
+<code>nodeTypeDefinition</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596316_DefiningJCRnodetypesandworkspaces-WithaMagnoliaMavenmoduledescriptor"><a class="anchor" href="#src-196596316_DefiningJCRnodetypesandworkspaces-WithaMagnoliaMavenmoduledescriptor"></a>With a Magnolia Maven module descriptor</h3>
+<div class="paragraph">
+<p>With
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules#Modules-Mavenmodule">Magnolia
+Maven modules</a> you can register new JCR workspaces and node types. The
+registration involves the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/XML-based+module+descriptor">XML-based
+module descriptor</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Magnolia registers workspaces and node types during a module&#8217;s start-up
+phase in case they have not yet been registered.</p>
+</div>
+<div class="paragraph">
+<p><span id="src-196596316_DefiningJCRnodetypesandworkspaces-XML-module-descriptor-complete-file">#</span>#Example
+of a module descriptor:</p>
+</div>
+<div class="paragraph">
+<p>my-maven-module/src/main/resources/META-INF/magnolia/my-module.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE module SYSTEM "module.dtd" &gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>module</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>name</code>&gt;my-module&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>displayName</code>&gt;${project.name}&lt;/<code>displayName</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>description</code>&gt;${project.description}&lt;/<code>description</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>class</code>&gt;com.example.magnolia.myModule.MyModuleDefinition&lt;/<code>class</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>versionHandler</code>&gt;com.example.magnolia.myModule.setup.MyModuleVersionHandler&lt;/<code>versionHandler</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>version</code>&gt;${project.version}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;core&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>version</code>&gt;6.0/*&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>repositories</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;magnolia&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>workspaces</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>workspace</code>&gt;products&lt;/<code>workspace</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>workspaces</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>nodeTypeFile</code>&gt;/mgnl-nodetypes/products-nodetypes.cnd&lt;/<code>nodeTypeFile</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>repositories</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>module</code>&gt;</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596316_DefiningJCRnodetypesandworkspaces-Workspaces"><a class="anchor" href="#src-196596316_DefiningJCRnodetypesandworkspaces-Workspaces"></a>Workspaces</h4>
+<div class="paragraph">
+<p>In the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/XML-based+module+descriptor">XML-based
+module descriptor</a> you can add a <code>&lt;workspace /&gt;</code> section in
+<code>/repositories/repository/workspaces</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>workspaces</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>workspace</code>&gt;products&lt;/<code>workspace</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>workspaces</code>&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596316_DefiningJCRnodetypesandworkspaces-Nodetypes"><a class="anchor" href="#src-196596316_DefiningJCRnodetypesandworkspaces-Nodetypes"></a>Node types</h4>
+<div class="paragraph">
+<p>To define and register new node types requires two things:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Creating a node type definition file (CND or XML) where you define the
+required node types and name spaces. Create the file in the
+<code>my-maven-module/src/main/resources/mgnl-nodetypes/</code> folder.<br>
+Example:</p>
+<div class="paragraph">
+<p>my-maven-module/src/main/resources/mgnl-nodetypes/my-node-types.cnd</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>&lt;'mgnl' = &#8216;`http://www.magnolia.info/jcr/mgnl</code>&#8217;&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[mt:product] &gt; mgnl:content</code></p>
+</div>
+<div class="paragraph">
+<p>` orderable`
+. Referencing the node type file in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/XML-based+module+descriptor">XML-based
+module descriptor</a>:<br>
+Example:</p>
+</div>
+<div class="paragraph">
+<p>+
+my-maven-module/src/main/resources/META-INF/magnolia/my-module.xml
+(fragment)</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>nodeTypeFile</code>&gt;/mgnl-nodetypes/my-node-types.cnd&lt;/<code>nodeTypeFile</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Part II - Complex content types and security set up</p>
+</div>
+<div class="paragraph">
+<p>Definition decoration</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Attaching an SPA project to Magnolia - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/Attaching-an-SPA-project-to-Magnolia.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Attaching-an-SPA-project-to-Magnolia.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Attaching-an-SPA-project-to-Magnolia.html">Attaching an SPA project to Magnolia - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Attaching an SPA project to Magnolia - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="SPA-development-and-Magnolia.html">SPA development and Magnolia</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-213516657"><a class="anchor" href="#src-213516657"></a>Attaching an SPA project to Magnolia</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Single-page+applications">Single-page
+applications</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+module">Pages
+module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes how you can attach a Single-Page Application (SPA)
+project to Magnolia so that its content could be edited in the author
+instance of Magnolia. The SPA project used as an example on this page is
+called <code>angular-minimal</code> and is assembled from two page templates
+provided by a light module <code>angular-magnolia-int</code>, which is part of the
+project.</p>
+</div>
+<div class="paragraph">
+<p>We only showcase a project built in the Angular framework. However, a
+similar result could also be achieved with the ReactJS framework, a
+second front-end framework currently supported by Magnolia
+<a href="Magnolia-front-end-helpers-for-SPA.html">SPA front-end helper
+libraries</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-213516657_AttachinganSPAprojecttoMagnolia-Prerequisites"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-Prerequisites"></a>Prerequisites</h3>
+<div class="sect3">
+<h4 id="src-213516657_safe-id-QXR0YWNoaW5nYW5TUEFwcm9qZWN0dG9NYWdub2xpYS1Ob2RlLmpzLG5wbWFuZE1hZ25vbGlh"><a class="anchor" href="#src-213516657_safe-id-QXR0YWNoaW5nYW5TUEFwcm9qZWN0dG9NYWdub2xpYS1Ob2RlLmpzLG5wbWFuZE1hZ25vbGlh"></a>Node.js, npm and Magnolia</h4>
+<div class="paragraph">
+<p>For development and testing, you need to install:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Node.js</p>
+</li>
+<li>
+<p>npm</p>
+</li>
+<li>
+<p>Java (JRE or JDK)</p>
+</li>
+<li>
+<p>Magnolia</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you haven&#8217;t installed them yet, go to the page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Installing+Magnolia+through+npm+CLI">Installing
+Magnolia through npm CLI</a> and complete the steps described there.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+For now, skip the step asking you to start Magnolia by entering the
+<code>mgnl start</code> command.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-213516657_AttachinganSPAprojecttoMagnolia-AngularnpmCLI"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-AngularnpmCLI"></a>Angular npm CLI</h4>
+<div class="paragraph">
+<p>Make sure that the <code>@angular/cli</code> npm package is installed as well. If
+it is not, you can install it by executing the following command:<br>
+<br>
+<code>sudo npm install -g @angular/cli</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-213516657_AttachinganSPAprojecttoMagnolia-CreatinganAngularworkspace"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-CreatinganAngularworkspace"></a>Creating an Angular workspace</h4>
+<div class="paragraph">
+<p>Create a folder called <code>dev</code> , preferably at the same level as the
+<code>magnolia</code> directory. Change to the new folder and create the
+<code>spa-angular-minimal</code> workspace in it by cloning it from our
+repository:<br>
+<br>
+<code>git clone <a href="https://git.magnolia-cms.com/scm/~rsiska/spa-angular-minimal.git" class="bare">https://git.magnolia-cms.com/scm/~rsiska/spa-angular-minimal.git</a></code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-213516657_AttachinganSPAprojecttoMagnolia-Linkingthelight-modulesfoldertoMagnolia"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-Linkingthelight-modulesfoldertoMagnolia"></a>Linking the light-modules folder to Magnolia</h4>
+<div class="paragraph">
+<p>The workspace contains the <code>light-modules</code> folder, which you need to
+link up with the Magnolia installation.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the <code>magnolia</code> folder, where you installed Magnolia.</p>
+</li>
+<li>
+<p>Delete the existing <code>light-modules</code> folder.</p>
+</li>
+<li>
+<p>Create a symbolic link to the <code>/dev/spa-angular-minimal/light-modules</code>
+folder. On a Linux machine, the command to do this would be:<br>
+<br>
+<code>ln -s /home/&lt;user-name&gt;/dev/spa-angular-minimal/light-modules /home/&lt;user-name&gt;/magnolia/light-modules</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-213516657_AttachinganSPAprojecttoMagnolia-Configuration"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-Configuration"></a>Configuration</h3>
+<div class="sect3">
+<h4 id="src-213516657_AttachinganSPAprojecttoMagnolia-SettingserverURLfortheapplicationenvironment"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-SettingserverURLfortheapplicationenvironment"></a>Setting server URL for the application environment</h4>
+<div class="paragraph">
+<p>In the <code>dev</code> folder, navigate to <code>spa-angular-minimal/src/environments</code>
+and in the <code>environments.ts</code> file, check that the first line contains
+the following:</p>
+</div>
+<div class="paragraph">
+<p><code>const<code> SERVER = </code>'http://localhost:8080/magnoliaAuthor'`</code>;`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-213516657_AttachinganSPAprojecttoMagnolia-GrantingtheanonymoususerRESTaccess"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-GrantingtheanonymoususerRESTaccess"></a>Granting the anonymous user REST access</h4>
+<div class="paragraph">
+<p>In Magnolia, you must allow anonymous access to <code>/.rest/*</code>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start Magnolia by executing <code>mgnl start</code>.</p>
+</li>
+<li>
+<p>Login to the Magnolia author instance.</p>
+</li>
+<li>
+<p>In the App launcher, open the Security app.</p>
+</li>
+<li>
+<p>Under the <strong>Roles</strong> tab, highlight the <code>anonymous</code> user and click <strong>Edit
+role</strong> in the Action bar.</p>
+</li>
+<li>
+<p>Under <strong>Web access</strong>, add a new <code>/.rest/<strong></code> access path and click *Save
+changes</strong>:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/213516657/6-2&#8212;&#8203;AttachingAnSPApagetoMagnolia_restWebAccess.png" alt="images/download/attachments/213516657/6-2&#8212;&#8203;AttachingAnSPApagetoMagnolia_restWebAccess.png"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-213516657_AttachinganSPAprojecttoMagnolia-Installingandbuildingtheproject"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-Installingandbuildingtheproject"></a>Installing and building the project</h3>
+<div class="paragraph">
+<p>In this step, you install all of the dependencies that are listed in the
+project&#8217;s <code>package.json</code>, then build the project and serve it through a
+local Angular server.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <code>/dev/spa-angular-minimal/</code> folder, enter the following
+commands:<br>
+<br>
+<code>npm install</code><br>
+<code>npm run build</code></p>
+</li>
+<li>
+<p>In the same location, start the local Angular server by executing the
+<code>ng serve</code> command.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-213516657_AttachinganSPAprojecttoMagnolia-Samplepagecontent"><a class="anchor" href="#src-213516657_AttachinganSPAprojecttoMagnolia-Samplepagecontent"></a>Sample page content</h3>
+<div class="paragraph">
+<p>To access an example SPA page utilizing the project&#8217;s templates:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the Pages app.</p>
+</li>
+<li>
+<p>Use the <strong>Import</strong> action of the Action bar to import page content from
+the <code>website.angular-minimal.yaml</code> file. You can find it in the
+<code>content-importer</code> subfolder of the <code>spa-angular-minimal</code> workspace.</p>
+</li>
+<li>
+<p>You should now see two new pages in the Pages app, <code>angular-minimal</code>
+and <code>about</code>:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/213516657/6-2&#8212;&#8203;AttachingAnSPApagetoMagnolia_pageEditor.png" alt="images/download/attachments/213516657/6-2&#8212;&#8203;AttachingAnSPApagetoMagnolia_pageEditor.png"></span></p>
+</div>
+<div class="paragraph">
+<p>To view the result SPA page in Magnolia, highlight the <code>angular-minimal</code>
+page and click the <strong>Preview</strong> action:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/213516657/6-2-AttachingAnSPAProjectToMagnolia_8080author.png" alt="images/download/attachments/213516657/6-2-AttachingAnSPAProjectToMagnolia_8080author.png"></span></p>
+</div>
+<div class="paragraph">
+<p>To view the page as served by the <code>ng</code> server, open a new browser window
+and enter <code>localhost:4200</code>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/213516657/6-2-AttachingAnSPAProjectToMagnoliaangularMinimal_4200.png" alt="images/download/attachments/213516657/6-2-AttachingAnSPAProjectToMagnoliaangularMinimal_4200.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Editor context of an SPA page</p>
+</div>
+<div class="paragraph">
+<p>YAML</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

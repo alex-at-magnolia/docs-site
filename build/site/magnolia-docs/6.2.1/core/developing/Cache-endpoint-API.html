@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cache endpoint API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/Cache-endpoint-API.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Cache-endpoint-API.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Cache-endpoint-API.html">Cache endpoint API - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Cache endpoint API - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="API.html">API</a></p>
+</li>
+<li>
+<p><a href="REST-API.html">REST API</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596268"><a class="anchor" href="#src-196596268"></a>Cache endpoint API</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This page is in progress. We will not publish it together with the 5.6
+release. It is visible for Magnolians only for the time being.</p>
+</div>
+<div class="paragraph">
+<p>This page describes the <code>cache</code> endpoint, which can be used to access
+and manipulate the cache.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596268_CacheendpointAPI-GET"><a class="anchor" href="#src-196596268_CacheendpointAPI-GET"></a>GET</h3>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-Ping"><a class="anchor" href="#src-196596268_CacheendpointAPI-Ping"></a>Ping</h4>
+<div class="paragraph">
+<p>Checks if the service is alive.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-RequestURL"><a class="anchor" href="#src-196596268_CacheendpointAPI-RequestURL"></a>Request URL</h5>
+<div class="paragraph">
+<p><code>/.rest/cache/v1/ping</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-Example"><a class="anchor" href="#src-196596268_CacheendpointAPI-Example"></a>Example</h5>
+<div class="paragraph">
+<p><code>curl -X GET http:`</code>//localhost:8080/magnoliaPublic/.rest/cache/v1/ping \`</p>
+</div>
+<div class="paragraph">
+<p>` -u superuser:superuser`</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-Getall"><a class="anchor" href="#src-196596268_CacheendpointAPI-Getall"></a>Get all</h4>
+<div class="paragraph">
+<p>Returns all cache keys from the specified cache.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-RequestURL.1"><a class="anchor" href="#src-196596268_CacheendpointAPI-RequestURL.1"></a>Request URL</h5>
+<div class="paragraph">
+<p><code>/.rest/cache/v1/{cacheName}/getAll</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-Parameters"><a class="anchor" href="#src-196596268_CacheendpointAPI-Parameters"></a>Parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Parameter type</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specify the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Cache+core#Cachecore-Configuration">cache
+by name</a>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-Example.1"><a class="anchor" href="#src-196596268_CacheendpointAPI-Example.1"></a>Example</h5>
+<div class="paragraph">
+<p><code>curl -X GET http:`</code>//localhost:7070/magnoliaPublic/.rest/cache/v1/defaultPageCache/getAll \`</p>
+</div>
+<div class="paragraph">
+<p><code>-u superuser:superuser</code></p>
+</div>
+<div class="paragraph">
+<p>Click to see the response</p>
+</div>
+<div class="paragraph">
+<p>`{  `</p>
+</div>
+<div class="paragraph">
+<p>`   <code>"@type"</code>:<code>"java.util.ArrayList"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`   <code>"@items"</code>:[  `</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/.resources/defaultMagnoliaLoginForm/css/fonts/DINWebPro.woff"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      },`</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/.resources/defaultMagnoliaLoginForm/img/logo-magnolia.svg"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      },`</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/.resources/defaultMagnoliaLoginForm/img/favicon.ico"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      },`</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/.resources/defaultMagnoliaLoginForm/css/login.css"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      },`</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/.resources/defaultMagnoliaLoginForm/css/reset.css"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      },`</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/.resources/defaultMagnoliaLoginForm/css/fonts.css"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      },`</p>
+</div>
+<div class="paragraph">
+<p>`      {  `</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"@type"</code>:<code>"info.magnolia.module.cache.cachekey.DefaultCacheKey"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"isSecured"</code>:<code>false</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"uri"</code>:<code>"/"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"serverName"</code>:<code>"localhost"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"channel"</code>:<code>"all"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"locale"</code>:<code>"en"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"method"</code>:<code>"get"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"params"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         },`</p>
+</div>
+<div class="paragraph">
+<p>`         <code>"additionalAttributes"</code>:{  `</p>
+</div>
+<div class="paragraph">
+<p>`            <code>"@type"</code>:``"java.util.Collections$UnmodifiableMap"`</p>
+</div>
+<div class="paragraph">
+<p>`         }`</p>
+</div>
+<div class="paragraph">
+<p>`      }`</p>
+</div>
+<div class="paragraph">
+<p>`   ]`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-Get"><a class="anchor" href="#src-196596268_CacheendpointAPI-Get"></a>Get</h4>
+<div class="paragraph">
+<p>Get cache keys based on an offset and page length.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-RequestURL.2"><a class="anchor" href="#src-196596268_CacheendpointAPI-RequestURL.2"></a>Request URL</h5>
+<div class="paragraph">
+<p><code>/.rest/cache/v1/{cacheName}/get</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-Parameters.1"><a class="anchor" href="#src-196596268_CacheendpointAPI-Parameters.1"></a>Parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Parameter type</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specify the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Cache+core#Cachecore-Configuration">cache
+by name</a>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>offset</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `0`</em></p>
+</div>
+<div class="paragraph">
+<p>Reduce the number of results with an offset.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>int</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pageLength</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Page length must be greater 0.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>int</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sortOrder</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional,</strong> <em>must also supply a sortProperty</em></p>
+</div>
+<div class="paragraph">
+<p>The direction of the sort in respect to the <code>sortProperty</code>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sortProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional,</strong> _must also supply a sortOrder<br>
+_</p>
+</div>
+<div class="paragraph">
+<p>Property to sort on (i.e. uri, channel, locale, method, &#8230;&#8203;).</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>URI "extension" is also possible.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-Size"><a class="anchor" href="#src-196596268_CacheendpointAPI-Size"></a>Size</h4>
+<div class="paragraph">
+<p>Returns cache size for a specified cache.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-RequestURL.3"><a class="anchor" href="#src-196596268_CacheendpointAPI-RequestURL.3"></a>Request URL</h5>
+<div class="paragraph">
+<p><code>/.rest/cache/v1/{cacheName}/size</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-Parameters.2"><a class="anchor" href="#src-196596268_CacheendpointAPI-Parameters.2"></a>Parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Parameter type</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specify the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Cache+core#Cachecore-Configuration">cache
+by name</a>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-Download"><a class="anchor" href="#src-196596268_CacheendpointAPI-Download"></a>Download</h4>
+<div class="paragraph">
+<p>Return cache content for the specified cache key.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-RequestURL.4"><a class="anchor" href="#src-196596268_CacheendpointAPI-RequestURL.4"></a>Request URL</h5>
+<div class="paragraph">
+<p><code>/.rest/cache/v1/{cacheName}/download</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596268_CacheendpointAPI-Parameters.3"><a class="anchor" href="#src-196596268_CacheendpointAPI-Parameters.3"></a>Parameters</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Parameter type</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specify the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Cache+core#Cachecore-Configuration">cache
+by name</a>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The entire cache key provided in JSON.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596268_CacheendpointAPI-DELETE"><a class="anchor" href="#src-196596268_CacheendpointAPI-DELETE"></a>DELETE</h3>
+<div class="paragraph">
+<p>Deletes an item from the cache based on the passed cache key.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-RequestURL.5"><a class="anchor" href="#src-196596268_CacheendpointAPI-RequestURL.5"></a>Request URL</h4>
+<div class="paragraph">
+<p><code>/.rest/cache/v1/{cacheName}/delete</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596268_CacheendpointAPI-Parameters.4"><a class="anchor" href="#src-196596268_CacheendpointAPI-Parameters.4"></a>Parameters</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Parameter type</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specify the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Cache+core#Cachecore-Configuration">cache
+by name</a>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The entire cache key provided in JSON.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Commands endpoint API</p>
+</div>
+<div class="paragraph">
+<p>REST API error handling</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

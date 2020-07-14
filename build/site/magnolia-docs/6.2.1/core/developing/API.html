@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/API.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="API.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="API.html">API - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">API - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240"><a class="anchor" href="#src-196596240"></a>API</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>These are the essential interfaces and classes in the Magnolia API. See
+also full API <a href="Javadoc.html">Javadoc</a>.</p>
+</div>
+<div class="paragraph">
+<p>UI</p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Appframework"> App framework </a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-UIframework"> UI framework </a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Renderingandtemplating">Rendering and templating</a></p>
+</div>
+<div class="paragraph">
+<p>Core</p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Node2Bean">Node2Bean</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Commands">Commands</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-JCRutilities">JCR utilities</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Modulemanagement">Module management</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Filterchain">Filter chain</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-Context">Context</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596240_API-JCR">JCR</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-Appframework"><a class="anchor" href="#src-196596240_API-Appframework"></a>App framework</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>App: Main interface for apps. Apps are started and managed by the
+AppController.</p>
+</li>
+<li>
+<p>AppDescriptor: Describes an app.</p>
+</li>
+<li>
+<p>SubApp: Represents a view open in a tab within an app.</p>
+</li>
+<li>
+<p>SubAppDescriptor. Describes a subapp.</p>
+</li>
+<li>
+<p>AppContext. Provides functionality used by an app to interact with the
+Magnolia shell.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>sendLocalMessage(Message message)</code>. Sends a message to the current
+user.</p>
+</li>
+<li>
+<p><code>sendUserMessage(String user, Message message)</code>. Sends a message to a
+named user.</p>
+</li>
+<li>
+<p><code>broadcastMessage(Message message)</code>. Sends a message to all users.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>SubAppContext. Provides functionality used by a sub app to interact
+with the Magnolia shell.</p>
+</li>
+<li>
+<p>ContentApp. Extends the BaseApp by the ability to open a choose
+dialog.</p>
+</li>
+<li>
+<p>BrowserSubApp. Base implementation of a content subApp.</p>
+</li>
+<li>
+<p>BrowserSubAppDescriptor. Describes a browser subapp.</p>
+</li>
+<li>
+<p>DetailSubApp. Base implementation of an item subApp.</p>
+</li>
+<li>
+<p>DetailSubAppDescriptor. Descriptor for Item subApps. Holds the form
+definition to build a form and needed fields to create a new node.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-UIframework"><a class="anchor" href="#src-196596240_API-UIframework"></a>UI framework</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The UI Framework is a collection of components for building the user
+interface in apps.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-UIcontext"><a class="anchor" href="#src-196596240_API-UIcontext"></a>UI context</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>UiContext. Represents a UI context and allows components, views and
+presenters to interact with the context that contains them.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Workbench"><a class="anchor" href="#src-196596240_API-Workbench"></a>Workbench</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>WorkbenchDefinition. Defines a workbench. Contains all elements which
+define a workbench configuration.</p>
+</li>
+<li>
+<p>WorkbenchView. Displays a workbench.</p>
+</li>
+<li>
+<p>TreePresenter. Responsible for creating, configuring and updating a
+tree of items according to the workbench definition.</p>
+</li>
+<li>
+<p>ListPresenter. Responsible for creating, configuring and updating a
+list of items according to the workbench definition.</p>
+</li>
+<li>
+<p>ThumbnailPresenter. Responsible for creating, configuring and updating
+a thumbnail grid of items according to the workbench definition.</p>
+</li>
+<li>
+<p>ColumnDefinition. Defines a column in a workbench.</p>
+</li>
+<li>
+<p>ColumnFormatter. Defines how a column&#8217;s value is displayed in the UI.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Action"><a class="anchor" href="#src-196596240_API-Action"></a>Action</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Action. An action is executed in response to user interaction with the
+UI. For instance clicking on an item in a menu.</p>
+</li>
+<li>
+<p>ActionDefinition. Action definitions are used to configure actions in
+many parts of the UI. The definition holds a name which is used to
+identify the action within a certain scope, for instance within a sub
+app.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Actionbar"><a class="anchor" href="#src-196596240_API-Actionbar"></a>Action bar</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>ActionbarDefinition. The definition for an action bar, made of
+sections and groups of actions.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Form"><a class="anchor" href="#src-196596240_API-Form"></a>Form</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>FormDefinition. Defines a form.</p>
+</li>
+<li>
+<p>TabDefinition. Defines a tab within a form. Holds a list of fields
+contained in this tab.</p>
+</li>
+<li>
+<p>FieldDefinition. Defines a field within a dialog.</p>
+</li>
+<li>
+<p>FieldFactory. Responsible for creating Vaadin fields based on their
+<code>FieldDefinition</code>.</p>
+</li>
+<li>
+<p>FieldValidatorDefinition. Defines a validator for field values.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Locationandnavigation"><a class="anchor" href="#src-196596240_API-Locationandnavigation"></a>Location and navigation</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Location. Represents a location within the application, such as the
+open view and the selected item.</p>
+</li>
+<li>
+<p>LocationController. Manages the user&#8217;s location in the application and
+controls location changes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Shell"><a class="anchor" href="#src-196596240_API-Shell"></a>Shell</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Shell. Decouples the presenters and the Vaadin application. Provides
+methods to show messages and configuration dialogs.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Message"><a class="anchor" href="#src-196596240_API-Message"></a>Message</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Message. Models a message.</p>
+</li>
+<li>
+<p>MessagesManager. Manages user messages.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Event"><a class="anchor" href="#src-196596240_API-Event"></a>Event</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>EventBus. Fires events to a set of registered handlers.</p>
+</li>
+<li>
+<p>ContentChangedEvent. Event fired when content is changed in a
+workspace. Holds an itemId of an item that is related to the changes
+made. If the change was a deletion the itemId is the parent of the
+deleted item. If something was added the itemId is for the new item.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-Context"><a class="anchor" href="#src-196596240_API-Context"></a>Context</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Context is an abstraction layer representing the environment of the
+current process which can be a request process, a scheduled task or a
+command execution in the workflow. The context provides access to the
+most important components such as hierarchy managers jcr session,
+current user, context attributes and parameters, response object and so
+on. The context is initialized at the beginning of each process. Context
+attributes will have a different meaning based on the environment. In
+case of a request, the attributes are request attributes and request
+parameters. Magnolia implements context using a thread-local class.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>MgnlContext. This static helper class is the programmer&#8217;s entry point
+to work with the current context.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getInstance()</code> Returns the current context.</p>
+</li>
+<li>
+<p><code>getUser()</code> Returns the current user.</p>
+</li>
+<li>
+<p><code>getJCRSession(String workspacename)</code>. Returns a JCR session to the
+provided workspace.</p>
+</li>
+<li>
+<p><code>getAttribute(name)</code> Returns a named context attribute. In case of a
+request, this can be a request parameter, request attribute or session
+attribute.</p>
+</li>
+<li>
+<p><code>getWebContext()</code> Returns the Web context if the current thread is
+processing a request.</p>
+</li>
+<li>
+<p><code>getAggregationState()</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>WebContext. Context interface specialized for servlet requests; knows
+about HttpServletRequest and HttpServletResponse. Should be used as
+little as possible as it makes the calling code dependent on the servlet
+API. Use MgnlContext instead if possible.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getRequest()</code> Returns the current servlet request object.</p>
+</li>
+<li>
+<p><code>getResponse()</code> Returns the current servlet response object.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>AggregationState. Contains information about the current request and
+rendering process. It is initialized by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/_REST+delivery+endpoint+v2+filter+examples">ContentTypeFilter</a>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getOriginalURI()</code> Original URI is the URI as requested by the
+client.</p>
+</li>
+<li>
+<p><code>getCurrentURI()</code> URI as mapped by Magnolia at a given point in
+processing. This value is for instance changed by the i18n filter,
+virtual URI mapping etc.</p>
+</li>
+<li>
+<p><code>getMainContentNode()</code> The content with which we start the rendering
+process. In general this is the page node.</p>
+</li>
+<li>
+<p><code>getCurrentContentNode()</code> The content that is processed at the
+moment. First this is typically the page, then a component and so on.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-Renderingandtemplating"><a class="anchor" href="#src-196596240_API-Renderingandtemplating"></a>Rendering and templating</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>RenderingEngine. Entry point for the rendering.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>render(javax.jcr.Node content, OutputProvider out)</code> Renders the
+content with its assigned template.</p>
+</li>
+<li>
+<p><code>render(javax.jcr.Node content, RenderableDefinition definition, Map&lt;String,Object&gt; contextObjects, OutputProvider out)</code>
+Uses a specific RenderableDefinition to render the content and exposes
+the given context objects to the template script.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>RenderableDefinition. Abstract rendering definition used for templates
+and components.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getName()</code> Name of the template definition.</p>
+</li>
+<li>
+<p><code>getRenderType()</code> Defines the renderer to use, for instance
+FreeMarker.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>TemplateDefinition. A <code>RenderableDefinition</code> which supports editing in
+the page editor and can define their areas.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getDialog()</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>AreaDefinition</p>
+</li>
+<li>
+<p>RenderingModel. The model used in the rendering process. It is
+instantiated for each rendering and ties the current content and
+rendering definition together. Concrete classes provide helper methods
+used in the template script. The <code>execute</code> method is executed before the
+rendering starts, a useful place to execute any business logic. The
+model is available in the template script under the named model.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getParent()</code> Parent model. Most often the model of the page
+rendering.</p>
+</li>
+<li>
+<p><code>getNode()</code> The content node tied to this model.</p>
+</li>
+<li>
+<p><code>getContent()</code> Map representation of the content node tied to this
+model.</p>
+</li>
+<li>
+<p><code>getDefinition()</code> The renderable (template, area or component) tied
+to this model.</p>
+</li>
+<li>
+<p><code>execute()</code> Called after all properties were set.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Renderer. Responsible for generating the actual response from request
+data and a template. You can bind a specific implementation to a
+template type.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>render(RenderingContext ctx, Map&lt;String,Object&gt; contextObjects)</code>
+Called by <code>RenderingEngine</code> after it has setup the <code>RenderingContext</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>RenderingContext. Provides all information needed in the rendering
+process.</p>
+</li>
+<li>
+<p>ContentMap. Map based representation of JCR content. This class is
+used in template scripts to allow notations like
+<code>content.&lt;property name&gt;</code>. It first tries to read a property with name
+(key) and, if not present, checks for the presence of a child node.
+Special property names map to JCR methods:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@name</code></p>
+</li>
+<li>
+<p><code>@id</code></p>
+</li>
+<li>
+<p><code>@path</code></p>
+</li>
+<li>
+<p><code>@level</code></p>
+</li>
+<li>
+<p><code>@nodeType</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating+functions">Templating
+functions</a></p>
+</li>
+<li>
+<p>TemplatingFunctions. An object that exposes methods useful for
+templates. The object is exposed to template scripts as <code>cmsfn</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>children(javax.jcr.Node content)</code></p>
+</li>
+<li>
+<p><code>parent(javax.jcr.Node content)</code></p>
+</li>
+<li>
+<p><code>isEditMode()</code></p>
+</li>
+<li>
+<p><code>isPublicInstance()</code></p>
+</li>
+<li>
+<p><code>language()</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>LinkUtil. Utility methods for link transformations and handling.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>createLink(javax.jcr.Node node)</code></p>
+</li>
+<li>
+<p><code>createAbsoluteLink(javax.jcr.Node node)</code></p>
+</li>
+<li>
+<p><code>makePathRelative(String url, String absolutePath)</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Site. Site configuration Java bean. Default site configuration merged
+with the user-defined site.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getI18n()</code></p>
+</li>
+<li>
+<p><code>getTheme()</code></p>
+</li>
+<li>
+<p><code>getVariations()</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-Commands"><a class="anchor" href="#src-196596240_API-Commands"></a>Commands</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>CommandsManager</p>
+</li>
+<li>
+<p>Command</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-Filterchain"><a class="anchor" href="#src-196596240_API-Filterchain"></a>Filter chain</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>MgnlFilter. Interface for filters managed by Magnolia, exposing
+support for the bypass mechanism.</p>
+</li>
+<li>
+<p>AbstractMgnlFilter. A Magnolia filter configured in the <code>config</code>
+repository. This filter is bypassable.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-Modulemanagement"><a class="anchor" href="#src-196596240_API-Modulemanagement"></a>Module management</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>ModuleRegistry. Holds instances and definitions of modules.</p>
+</li>
+<li>
+<p>ModuleVersionHandler. Provides deltas to be applied to
+install/update/uninstall modules. A module that needs to handle its own
+install/updates should provide an implementation of this interface.</p>
+</li>
+<li>
+<p>ModuleLifecycle. Manages the lifecyle of an installed instance of a
+Magnolia Module. Implementing this interface is optional.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-JCR"><a class="anchor" href="#src-196596240_API-JCR"></a>JCR</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="src-196596240_API-Session"><a class="anchor" href="#src-196596240_API-Session"></a>Session</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Session.html">Session</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getNode(java.lang.String absPath)</code>. Returns the node at the
+specified absolute path in the workspace.</p>
+</li>
+<li>
+<p><code>getNodeByIdentifier(java.lang.String id)</code> Returns the node specified
+by the given identifier.</p>
+</li>
+<li>
+<p><code>save()</code>. Validates all pending changes currently recorded in this
+Session.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Node"><a class="anchor" href="#src-196596240_API-Node"></a>Node</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html">Node</a>.
+Represents a node in the repository.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getNode(java.lang.String relPath)</code>. Returns the node at <code>relPath</code>
+relative to this node.</p>
+</li>
+<li>
+<p><code>getNodes()</code> Returns all child nodes of this node accessible through
+the current <code>Session</code>.</p>
+</li>
+<li>
+<p><code>getNodes(java.lang.String namePattern)</code> Gets all child nodes of this
+node accessible through the current <code>Session</code> that match <code>namePattern</code>.</p>
+</li>
+<li>
+<p><code>getProperty(java.lang.String relPath)</code> Returns the property at
+relPath relative to this node.</p>
+</li>
+<li>
+<p><code>setProperty(java.lang.String name, Value value)</code> Sets the
+single-value property of this node called name to the specified value.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Property.html">Property</a>.
+A `Property`object represents the smallest granularity of content
+storage.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getLong()</code></p>
+</li>
+<li>
+<p><code>getString()</code></p>
+</li>
+<li>
+<p><code>getBinary()</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596240_API-JCRutilities"><a class="anchor" href="#src-196596240_API-JCRutilities"></a>JCR utilities</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>NodeUtil. Utility methods to collect data from JCR repository.</p>
+</li>
+<li>
+<p>PropertyUtil. Property-related utility methods.</p>
+</li>
+<li>
+<p>SessionUtil. Session-related utility methods.</p>
+</li>
+<li>
+<p>JcrFunctions. Functions for working with JCR items without catching
+repository exceptions.</p>
+</li>
+<li>
+<p>NodeBuilder. Entry point for using the node builder API. Also see the
+NodeBuilderTask and ModuleNodeBuilderTask classes for usage of the node
+builder API in ModuleVersionHandler.</p>
+</li>
+<li>
+<p>ContentDecorator. Applies custom behavior in a graph of JCR objects by
+wrapping objects. Allows for expressing the logic in a single place.</p>
+</li>
+<li>
+<p>NodeTypes. Magnolia-defined node types and their properties and
+convenience methods.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Created</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>getCreated(javax.jcr.Node node)</code> Returns the creation date of a
+node or null if creation date isn&#8217;t set.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196596240_API-Node2Bean"><a class="anchor" href="#src-196596240_API-Node2Bean"></a>Node2Bean</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Node2BeanProcessor. Transforms nodes to beans or maps. The transformer
+is use to resolve classes or to instantiate beans.</p>
+</li>
+<li>
+<p>Node2BeanTransformer. Contract for transformation from node to java
+beans.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>YAML</p>
+</div>
+<div class="paragraph">
+<p>Javadoc</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

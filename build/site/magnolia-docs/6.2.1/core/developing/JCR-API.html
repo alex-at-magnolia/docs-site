@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JCR API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/developing/JCR-API.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="JCR-API.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="JCR-API.html">JCR API - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/dump/Magnolia-Cloud.html">Dump Index</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Administration</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">JCR API - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="API.html">API</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596243"><a class="anchor" href="#src-196596243"></a>JCR API</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>See
+<a href="https://documentation.magnolia-cms.com/display/WIKI/JCR+Query+Cheat+Sheet">JCR
+Query Cheat Sheet</a> for example queries.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="jcr-api"><a class="anchor" href="#jcr-api"></a>JCR API</h3>
+<div class="paragraph">
+<p>Magnolia relies on the <a href="http://jackrabbit.apache.org/jcr-api.html">JCR
+API</a> to manage its data, with security handled by JCR.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-ImportantUtilclasses"><a class="anchor" href="#src-196596243_JCRAPI-ImportantUtilclasses"></a>Important Util classes</h4>
+<div class="paragraph">
+<p>For your convenience, four <code>Util</code> classes have been implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NodeUtil</p>
+</li>
+<li>
+<p>PropertyUtil</p>
+</li>
+<li>
+<p>NodeTypes</p>
+</li>
+<li>
+<p>JcrFunctions</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These are <code>Util</code> classes that mainly catch exceptions or wrap some JCR
+API calls.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-Accessingaworkspace"><a class="anchor" href="#src-196596243_JCRAPI-Accessingaworkspace"></a>Accessing a workspace</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Access a workspace with <code>javax.jcr.Session</code>:</p>
+<div class="paragraph">
+<p><code>Session session = MgnlContext.getJCRSession(<code>"workspaceName"</code>);</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>Session session = someNode.getSession();</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-Gettingjavax.jcr.Nodeorjavax.jcr.Property"><a class="anchor" href="#src-196596243_JCRAPI-Gettingjavax.jcr.Nodeorjavax.jcr.Property"></a>Getting javax.jcr.Node or javax.jcr.Property</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Access a specific node or property with the JCR session:*<br>
+*</p>
+<div class="paragraph">
+<p><code>Node foundNode = session.getNodeByIdentifier(<code>"identifier"</code>);</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>Node foundNode = session.getNode(<code>"absolutePath"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p><code>Property foundProperty = session.getProperty(<code>"absolutePath"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>Node foundNode = NodeUtil.getNodeByIdentifier(<code>"workspaceName"</code>, <code>"identifier"</code>);</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-Operationsonjavax.jcr.Node"><a class="anchor" href="#src-196596243_JCRAPI-Operationsonjavax.jcr.Node"></a>Operations on javax.jcr.Node</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Get a node&#8217;s name:*<br>
+*</p>
+<div class="paragraph">
+<p><code>String name = someNode.getName();</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>String name = NodeUtil.getName(someNode);</code>
+* Get all child nodes together:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>NodeIterator childrenIterator = someNode.getNodes();</code></p>
+</div>
+<div class="paragraph">
+<p><code>Iterable&lt;Node&gt; childrenIterable = NodeUtil.asIterable(childrenIterator);</code></p>
+</div>
+<div class="paragraph">
+<p><code>List&lt;Node&gt; childrenList = NodeUtil.asList(childrenIterable);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>Iterable&lt;Node&gt; childrenIterable = NodeUtil.collectAllChildren(someNode);</code></p>
+</div>
+<div class="paragraph">
+<p><code>List&lt;Node&gt; childrenList = NodeUtil.asList(childrenIterable);</code>
+* Get a specific child node by name:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>Node childNode = someNode.getNode(<code>"relativePath"</code>);</code>
+* Get a node property by name:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>Property nodeProperty = someNode.getProperty(<code>"relativePath"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>Property foundProperty = PropertyUtil.getProperty(someNode, <code>"relativePath"</code>);</code>
+* Get a node&#8217;s path:*<br>
+*</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>String pathToNode = someNode.getPath();</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>String pathToNode = NodeUtil.getNodePathIfPossible(someNode);</code>
+* Create a property and set its value for a specific node:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>someNode.setProperty(<code>"propertyName"</code>, <code>"propertyValue"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>PropertyUtil.setProperty(someNode, <code>"propertyName"</code>, <code>"propertyValue"</code>);</code>
+* Create a subnode:*<br>
+*</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>someNode.addNode(<code>"relativePath"</code>, primaryNodeTypeName);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>NodeUtil.createPath(parent, <code>"relativePath"</code>, primaryNodeTypeName)</code>
+* Get a session from a node and save changes:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>//Get a session from a node and save changes</code></p>
+</div>
+<div class="paragraph">
+<p><code>someNode.getSession().save();</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>//If you already have the session</code></p>
+</div>
+<div class="paragraph">
+<p><code>session.save()</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-Contentnodemetadata"><a class="anchor" href="#src-196596243_JCRAPI-Contentnodemetadata"></a>Content node metadata</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Examples of content node metadata with NodeTypes:</p>
+<div class="paragraph">
+<p><code>NodeTypes.Activatable.getActivationStatus(node);</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>NodeTypes.Activatable.update(node, <code>"username"</code>, isActivated);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>NodeTypes.Renderable.getTemplate(node);</code></p>
+</div>
+<div class="paragraph">
+<p><code>NodeTypes.Renderable.set(node, <code>"template id"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>NodeTypes.LastModified.getLastModified(node);</code></p>
+</div>
+<div class="paragraph">
+<p><code>NodeTypes.LastModified.update(node);</code></p>
+</div>
+<div class="paragraph">
+<p><code>NodeTypes.LastModified.update(node, <code>"username"</code>, date);</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-Operationsonjavax.jcr.Property"><a class="anchor" href="#src-196596243_JCRAPI-Operationsonjavax.jcr.Property"></a>Operations on javax.jcr.Property</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Get a property&#8217;s name:</p>
+<div class="paragraph">
+<p>`String name = nodeProperty.getName(); `</p>
+</div>
+</li>
+<li>
+<p>Get a property&#8217;s path:</p>
+<div class="paragraph">
+<p><code>String pathToProperty = nodeProperty.getPath();</code></p>
+</div>
+</li>
+<li>
+<p>Get a property&#8217;s parent node:</p>
+<div class="paragraph">
+<p><code>Node parentNode = nodeProperty.getParent();</code></p>
+</div>
+</li>
+<li>
+<p>Get a value from a property:</p>
+<div class="paragraph">
+<p><code>String stringValue = nodeProperty.getString()</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>Calendar dateValue = nodeProperty.getDate();</code></p>
+</div>
+<div class="paragraph">
+<p><code>Double doubleValue = nodeProperty.getDouble();</code></p>
+</div>
+<div class="paragraph">
+<p><code>Long longValue = nodeProperty.getLong();</code></p>
+</div>
+<div class="paragraph">
+<p><code>Binary forBinaryNodeData = nodeProperty.getBinary();</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>PropertyUtil.getString(someNode, propertyName);</code></p>
+</div>
+<div class="paragraph">
+<p><code>PropertyUtil.getDate(someNode, propertyName);</code></p>
+</div>
+<div class="paragraph">
+<p>`PropertyUtil.getBoolean(someNode, propertyName, defaultValue) `
+* Set the value of a property:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>nodeProperty.setValue(booleanValue);</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeProperty.setValue(calendarObject);</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeProperty.setValue(longValue);</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeProperty.setValue(doubleValue);</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeProperty.setValue(intValueWillBeStoredAsLong);</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeProperty.setValue(booleanValue);</code></p>
+</div>
+<div class="paragraph">
+<p>`nodeProperty.setValue(inputStreamForBinary); `</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596243_JCRAPI-Exception-freeJCRoperations"><a class="anchor" href="#src-196596243_JCRAPI-Exception-freeJCRoperations"></a>Exception-free JCR operations</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Use JcrFunctions to work with JCR items without catching repository
+exceptions:</p>
+<div class="paragraph">
+<p><code>Set&lt;Node&gt; parents = getValueContext().get()</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>`                .map(JcrFunctions::getParent)`</p>
+</div>
+<div class="paragraph">
+<p>`                .collect(Collectors.toSet());`</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596243_JCRAPI-ProvidinganodeasContentMaptoscripts"><a class="anchor" href="#src-196596243_JCRAPI-ProvidinganodeasContentMaptoscripts"></a>Providing a node as ContentMap to scripts</h3>
+<div class="paragraph">
+<p>It is not recommended that you operate in template scripts directly on a
+JCR Node. <a href="https://wiki.magnolia-cms.com/display/DOCS62/cmsfn">cmsfn</a>
+provides all scripts with any node transformed into ContentMap. That
+way, it is much easier to access a node&#8217;s data. <code>ContentMap</code> provides
+the following special attributes that are not properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>@name</p>
+</li>
+<li>
+<p>@path</p>
+</li>
+<li>
+<p>@id</p>
+</li>
+<li>
+<p>@depth</p>
+</li>
+<li>
+<p>@nodeType<br>
+In Java:</p>
+<div class="paragraph">
+<p><code>ContentMap nodeAsContentMap = <code>new</code> ContentMap(someNode);</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>`Node backToNode = nodeAsContentMap.getJCRNode(); `</p>
+</div>
+<div class="paragraph">
+<p>+
+In Freemarker:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>${cmsfn.asJCRNode(aContentMap)}</code></p>
+</div>
+<div class="paragraph">
+<p>`${cmsfn.asContentMap(aJCRNode)} `</p>
+</div>
+<div class="paragraph">
+<p>+
+See <a href="https://wiki.magnolia-cms.com/display/DOCS62/cmsfn">cmsfn</a> for more
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating+functions">templating
+functions</a> operating on the JCR API.</p>
+</div>
+<div class="paragraph">
+<p>Javadoc</p>
+</div>
+<div class="paragraph">
+<p>REST API</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
