@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Part I - Installing and setting up the CLI and Magnolia - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <title>Part I - Installing and setting up the CLI and Magnolia :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/cli/Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">
     <meta name="generator" content="Antora 2.3.3">
 <link rel="stylesheet" href="../../../_/css/site.css">
@@ -58,7 +58,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">Part I - Installing and setting up the CLI and Magnolia - Magnolia 6.2</a></li>
+    <li><a href="Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">Part I - Installing and setting up the CLI and Magnolia</a></li>
   </ul>
 </nav>
 </div>
@@ -154,7 +154,22 @@
     <a class="nav-link" href="../apps/Apps.html">Apps</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#core/cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#core/cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#core/cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#core/cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
@@ -178,44 +193,8 @@
 </div>
 <main>
 <article class="doc">
-    <h1 class="page">Part I - Installing and setting up the CLI and Magnolia - Magnolia 6.2</h1>
+    <h1 class="page">Part I - Installing and setting up the CLI and Magnolia</h1>
     <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-CLI.html" class="bare">Magnolia-CLI.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-CLI.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196598544"><a class="anchor" href="#src-196598544"></a>Part I - Installing and setting up the CLI and Magnolia</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Related topics:</p>
@@ -223,7 +202,7 @@ Please enable JavaScript and reload the page.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="Magnolia-CLI.html">Magnolia CLI</a></p>
+<p><a href="Magnolia-CLI.adoc">Magnolia CLI</a></p>
 </li>
 <li>
 <p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
@@ -240,8 +219,11 @@ and sharing light modules</a></p>
 set up Magnolia. You also create a prototype variant to later create a
 light module.</p>
 </div>
-<div class="sect2">
-<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallNode.js"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallNode.js"></a>Install Node.js</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallNode.js"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallNode.js"></a>Install Node.js</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Magnolia CLI is an <a href="https://www.npmjs.com/">npm</a> package providing a
 command line interface (CLI) tool to set up and facilitate light
@@ -258,8 +240,10 @@ command in a shell:</p>
 <p><code>node -v</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliaCLI"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliaCLI"></a>Install Magnolia CLI</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliaCLI"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliaCLI"></a>Install Magnolia CLI</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Run the following command in a shell to install
 <a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
@@ -385,8 +369,10 @@ the following command in the shell:</p>
 <p>`  mgnl: <code>3.1</code>.<code>0</code> node: v8.<code>10.0</code> os: linux`</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliausingtheCLI"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliausingtheCLI"></a>Install Magnolia using the CLI</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliausingtheCLI"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliausingtheCLI"></a>Install Magnolia using the CLI</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Use the <code>jumpstart</code> command to install Magnolia. This command downloads,
 unpacks and pre-configures a Magnolia bundle of your choice.</p>
@@ -478,8 +464,10 @@ The following files and folders are created:</p>
 <p><code>└── downloads/</code></p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototype"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototype"></a>Create your prototype</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototype"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototype"></a>Create your prototype</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>When you run <code>create</code> commands from the CLI, the new files are created
 based on prototype files. So for example, if you want to create a new
@@ -487,8 +475,11 @@ page template then the basis for the template is specified by the
 prototype. Essentially, the prototype is the copy-base for new
 templates.</p>
 </div>
-<div class="sect3">
-<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Globalvslocal"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Globalvslocal"></a>Global vs local</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Globalvslocal"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Globalvslocal"></a>Global vs local</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Prototypes can be global or local.</p>
 </div>
@@ -512,8 +503,10 @@ to suit your needs.</p>
 prototypes</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Prototypevariants"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Prototypevariants"></a>Prototype variants</h4>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Prototypevariants"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Prototypevariants"></a>Prototype variants</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Different prototype variants are available depending on what you are
 creating.</p>
@@ -535,8 +528,10 @@ variants. The easiest way of doing this is to copy and paste one of the
 existing prototype variants.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createthelocalprototypeconfigurationfiles"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createthelocalprototypeconfigurationfiles"></a>Create the local prototype configuration files</h4>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createthelocalprototypeconfigurationfiles"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createthelocalprototypeconfigurationfiles"></a>Create the local prototype configuration files</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Create the local prototype configuration files by running the following
 CLI command in a shell:</p>
@@ -897,8 +892,10 @@ just extracted to your <code>dev</code> directory.</p>
 <p>`            └── <em>name</em>.yaml`</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototypevariants"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototypevariants"></a>Create your prototype variants</h4>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototypevariants"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototypevariants"></a>Create your prototype variants</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Now you create prototype variants for the <code>create-page</code> and
 <code>create-component</code> commands based on the <code>_default</code> prototype you just
@@ -1018,8 +1015,10 @@ folder and paste it at the same level. Rename your copy to
 <p>`└── virtual-uri `</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Edityourvariantfiles"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Edityourvariantfiles"></a>Edit your variant files</h4>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Edityourvariantfiles"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Edityourvariantfiles"></a>Edit your variant files</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Now you will edit your prototype files in your variant so that:</p>
 </div>
@@ -1038,8 +1037,8 @@ and a description.</p>
 </li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-AddaCSSfile"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-AddaCSSfile"></a>Add a CSS file</h5>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-AddaCSSfile"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-AddaCSSfile"></a>Add a CSS file</h3>
 <div class="paragraph">
 <p>In the <code>mgnl-cli-prototypes/page/my-page-prototype/</code> folder, create the
 following folders and file <code>/webresources/css/<em>name</em>.css</code></p>
@@ -1069,8 +1068,8 @@ following folders and file <code>/webresources/css/<em>name</em>.css</code></p>
 <p><code>}</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-page-prototypevariant"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-page-prototypevariant"></a>Edit the my-page-prototype variant</h5>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-page-prototypevariant"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-page-prototypevariant"></a>Edit the my-page-prototype variant</h3>
 <div class="paragraph">
 <p>In the <code>mgnl-cli-prototypes/page/my-page-prototype/dialogs/pages</code>
 folder, open <code><em>name</em>.yaml</code> and replace the definition with the
@@ -1178,8 +1177,8 @@ reduced version:</p>
 path to the light module folder and the name of the CSS file.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-component-prototypevariant"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-component-prototypevariant"></a>Edit the my-component-prototype variant</h5>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-component-prototypevariant"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-component-prototypevariant"></a>Edit the my-component-prototype variant</h3>
 <div class="paragraph">
 <p>Next, in the
 <code>mgnl-cli-prototypes/component/my-component-prototype/dialogs/components</code>
@@ -1277,8 +1276,9 @@ reduced version:</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-StartMagnolia"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-StartMagnolia"></a>Start Magnolia</h3>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-StartMagnolia"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-StartMagnolia"></a>Start Magnolia</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Now you are ready to start Magnolia and begin developing your light
 module.</p>
@@ -1297,8 +1297,10 @@ CLI</a> <code>start</code> command:</p>
 automatically installs all its modules.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-LogintoMagnolia"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-LogintoMagnolia"></a>Log in to Magnolia</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-LogintoMagnolia"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-LogintoMagnolia"></a>Log in to Magnolia</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Go to <code><a href="http://localhost:8080/magnoliaAuthor" class="bare">http://localhost:8080/magnoliaAuthor</a></code> and sign in as:</p>
 </div>
@@ -1328,7 +1330,6 @@ light module</a></p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>
