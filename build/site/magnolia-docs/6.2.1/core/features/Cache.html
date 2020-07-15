@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cache :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/features/Cache.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Cache.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Cache.html">Cache</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#features/Features.adoc">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Cache</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Modules/List+of+modules/Cache+modules">Cache modules</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Advanced+cache+modules">Advanced cache
+modules</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/High+performance+caching+modules">High
+performance caching modules</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Cache+modules/Caching+arbitrary+objects">Caching
+arbitrary objects</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page summarizes the features of Magnolia cache, lists the modules
+involved, and explains what is available in Community Edition and DX
+Core. It also proposes alternatives for some of the third-party
+libraries.</p>
+</div>
+<div class="paragraph">
+<p>The need to cache content is very different in developing, staging or
+production environments. If your system relies heavily on cache for
+performance, the system may be misconfigured or suffer from undersized
+servers.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_caching_features_by_edition"><a class="anchor" href="#_caching_features_by_edition"></a>Caching features by edition</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Cache feature</th>
+<th class="tableblock halign-left valign-top">Community</th>
+<th class="tableblock halign-left valign-top">DX Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#caching-arbitrary-objects">Caching arbitrary objects</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#page-caching">Page caching</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#web-resources-caching">Web resources caching</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#asset-caching">Asset caching</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#granular-cache-policy-configuration">Granular cache policy
+configuration</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#granular-flush-policy-configuration-">Granular flush policy
+configuration</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#gzip-compression-">GZip compression</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#Ehcacheimplementation">Can use Ehcache</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#memcached-implementation">Can use Memcached implementation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#cache-browser-app">Cache Browser app</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/Modules/List+of+modules/Advanced+cache+modules/Advanced+Cache+Policies+module">Advanced
+Cache Policies module</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#personalized-variant-caching">Personalized variant caching</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dynamic-page-caching">Dynamic page caching</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="/Modules/List+of+modules/High+performance+caching+modules/SiteMesh+module">SiteMesh
+decoration framework</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_caching_arbitrary_objects"><a class="anchor" href="#_caching_arbitrary_objects"></a>Caching arbitrary objects</h3>
+<div class="paragraph">
+<p>With Magnolia, you can cache basically every object beyond the
+well-known page caching. See
+<a href="/Modules/List+of+modules/Cache+modules/Caching+arbitrary+objects">caching
+arbitrary objects</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_page_caching"><a class="anchor" href="#_page_caching"></a>Page caching</h3>
+<div class="paragraph">
+<p>Magnolia caches content on a page level by default. This means that a
+page is the smallest unit you can cache with the standard Cache module.
+The <a href="#DynamicPageCaching">Dynamic Page Caching</a> add-on allows you to
+cache fragments of a page.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_web_resources_caching"><a class="anchor" href="#_web_resources_caching"></a>Web resources caching</h3>
+<div class="paragraph">
+<p>Static Web resources such as CSS and JavaScript as well as aggregations
+of such resources are cached.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_asset_caching"><a class="anchor" href="#_asset_caching"></a>Asset caching</h3>
+<div class="paragraph">
+<p>Magnolia has a separate <a href="/Features/Digital+asset+management">Digital
+asset management</a> module. Assets (such as images) and asset renditions
+served directly from Magnolia are cached by default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_granular_cache_policy_configuration"><a class="anchor" href="#_granular_cache_policy_configuration"></a>Granular cache policy configuration</h3>
+<div class="paragraph">
+<p>The cache policy - what should be cached and what not - is highly
+customizable according to your requirements.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_granular_flush_policy_configuration"><a class="anchor" href="#_granular_flush_policy_configuration"></a>Granular flush policy configuration</h3>
+<div class="paragraph">
+<p>You can define flush policies - rules when the cache must be flushed.
+For instance, you can make the flush procedure depend on changes on JCR
+repositories.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gzip_compression"><a class="anchor" href="#_gzip_compression"></a>GZip compression</h3>
+<div class="paragraph">
+<p>The cache module comes with a configurable GZip filter to enable
+<a href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">Gzip
+compression</a>. To serve content compressed in the GZip format is a common
+and widespread approach to decrease network demands. All text-based
+files (HTML, CSS, JavaScript) are compressed by default.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ehcache_implementation"><a class="anchor" href="#_ehcache_implementation"></a>Ehcache implementation</h3>
+<div class="paragraph">
+<p>Ehcache is Magnolia’s default third-party low-level cache
+implementation. <a href="#StandardimplementationEhcache">See below</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_memcached_implementation"><a class="anchor" href="#_memcached_implementation"></a>Memcached implementation</h3>
+<div class="paragraph">
+<p>Alternative third-party low-level cache implementation.
+<a href="#AlternativeMemCache">See below</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cache_browser_app"><a class="anchor" href="#_cache_browser_app"></a>Cache Browser app</h3>
+<div class="paragraph">
+<p>The <a href="/Modules/List+of+modules/Cache+modules/Cache+Browser+app">Cache
+Browser app</a> runs on an author instance and allows you to delete cache
+items on a granular level. The app deletes cached items on all the
+public instances, independent of your public instances setup - be it a
+single instance or a complex cluster.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_personalized_variant_caching"><a class="anchor" href="#_personalized_variant_caching"></a>Personalized variant caching</h3>
+<div class="paragraph">
+<p>When using <a href="/Features/Personalization">Personalization</a>, pages that
+have personalized content are not cached by default. You can enable
+caching with
+<a href="/Modules/List+of+modules/High+performance+caching+modules/Advanced+Cache+for+Personalization">Advanced
+Cache for Personalization</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dynamic_page_caching"><a class="anchor" href="#_dynamic_page_caching"></a>Dynamic page caching</h3>
+<div class="paragraph">
+<p><a href="/Modules/List+of+modules/High+performance+caching+modules/Advanced+Cache+Dynamic+Page+Caching">Dynamic
+page caching</a> allows you to cache fragments of a page that also contains
+parts that cannot be cached. DCP uses the
+<a href="/Modules/List+of+modules/High+performance+caching+modules/SiteMesh+module">SiteMesh
+module</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cache_implementations"><a class="anchor" href="#_cache_implementations"></a>Cache implementations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia cache uses established third-party libraries for the low-level
+functions. Depending on your production environment, one cache
+implementation may fit better than another. Please
+<a href="mailto:info@magnolia-cms.com">contact</a> Magnolia Services to get the best
+cache strategy for your project and server setup.</p>
+</div>
+<div class="sect2">
+<h3 id="_default_implementation_ehcache_3"><a class="anchor" href="#_default_implementation_ehcache_3"></a><span id="impl-ehcache">#</span>#Default implementation: Ehcache 3</h3>
+<div class="paragraph">
+<p>By default Magnolia uses <a href="http://ehcache.org/">Ehcache</a>. The third-party
+library is provided by and configured with the
+<a href="/Modules/List+of+modules/Cache+modules/Ehcache+3+module">Magnolia
+Ehcache 3</a> module. Ehcache is a robust, proven and full-featured cache
+product which has made it the most widely used Java cache. It provides
+off-heap storage capabilities and is fully compatible with javax.cache
+API (<a href="https://www.jcp.org/en/jsr/detail?id=107">JSR-107</a>).</p>
+</div>
+<div class="paragraph">
+<p>Ehcache 3.x always keeps cached content on the disk as long as flushing
+is not proactively requested. Cached content is also retained if you
+must restart the system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_alternative_implementation_memcached"><a class="anchor" href="#_alternative_implementation_memcached"></a>Alternative implementation: Memcached</h3>
+<div class="paragraph">
+<p><a href="http://memcached.org/">Memcached</a> is a high-performance, distributed
+memory object caching system. Magnolia’s
+<a href="/Modules/List+of+modules/Cache+modules/Memcached+implementation">Memcached
+implementation</a> brings you the advantages of a distributed cache:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sharing of cache items between multiple instances of Magnolia.</p>
+</li>
+<li>
+<p>Cached items persist restart of Magnolia instance.</p>
+</li>
+<li>
+<p>Memcached servers may run on any server in the network and so do not
+consume your server memory.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_list_of_modules_involved"><a class="anchor" href="#_list_of_modules_involved"></a>List of modules involved</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Community Edition:</p>
+</div>
+<div class="paragraph">
+<p><a href="!children">/Modules/List+of+modules/Cache+modules</a></p>
+</div>
+<div class="paragraph">
+<p>DX Core:</p>
+</div>
+<div class="paragraph">
+<p><a href="!children">/Modules/List+of+modules/Advanced+cache+modules</a></p>
+</div>
+<div class="paragraph">
+<p><a href="!children">/Modules/List+of+modules/High+performance+caching+modules</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

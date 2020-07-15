@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Component personalization :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/features/component-personlization.html">
+    <meta name="keywords" content="personalization">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="component-personlization.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="component-personlization.html">Component personalization</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#features/Features.adoc">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Component personalization</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Features/Personalization">Personalization</a></p>
+</li>
+<li>
+<p><a href="/Apps/List+of+apps/Preview+app">Preview app</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Personalization+module/My+first+personalized+campaign">My
+first personalized campaign</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Personalization+module/Creating+custom+traits">Creating
+custom traits</a></p>
+</li>
+<li>
+<p><a href="/Templating/Template+definition/Component+definition">Component
+availability</a></p>
+</li>
+<li>
+<p><a href="/Templating/Template+definition/Component+definition">Component
+definition</a></p>
+</li>
+<li>
+<p><a href="/Features/Personalization#caching-in-dx-core">Caching in DX Core</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/YouTube-social-icon_dark_24px.gif" alt="image"></span> Webinar:
+<a href="https://youtu.be/J5YP_aeHL3g">Component personalization in Magnolia</a></p>
+</div>
+<div class="paragraph">
+<p>This page describes component personalization, adapting the content of a
+component to the visitor according to his or her personal preferences,
+needs and capabilities. <a href="/Features/Personalization">Personalization</a>
+at the level of components works the same way as page personalization
+except that you are personalizing a smaller item.</p>
+</div>
+<div class="paragraph">
+<p>You can personalize a page and its components at the same time. The
+feature is disabled by default. To enable it, set
+<code>/modules/personalization-components/config/allowNestedVariants</code> to
+<code>true</code>.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personalizing_a_component"><a class="anchor" href="#_personalizing_a_component"></a>Personalizing a component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Component personalization is possible through the following actions in
+the Component action bar:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add component variant</p>
+</li>
+<li>
+<p>Choose audience</p>
+</li>
+<li>
+<p>Hide/Show original</p>
+</li>
+<li>
+<p>Delete component variant</p>
+</li>
+<li>
+<p>Delete all component variants</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_adding_a_variant"><a class="anchor" href="#_adding_a_variant"></a>Adding a variant</h3>
+<div class="paragraph">
+<p>If the selected component hasn’t been personalized yet, only the <strong>Add
+component</strong> <strong>variant</strong> option will be available:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-pages-app-add-comp-variant-action.png" alt="image" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>To add a new variant to a component, click <strong>Add component variant</strong>. The
+variant icon <span class="image"><img src="../../_images/6-0-variants-icon.gif" alt="image" height="22"></span> and the
+default label <strong>variant-0</strong> appear in the component bar:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-pages-app-component-variant-bar.png" alt="image" height="35"></span></p>
+</div>
+<div class="paragraph">
+<p>The original component content is renamed to <code>Original''. Click on the
+<strong>variant-0</strong> label to view and access the list of variants and the
+original from the pop-up menu that appears. If not associated with any
+target <a href="/Features/Personalization#choosing-an-audience">audience</a>,
+the newly added variant of the component is named automatically by
+Magnolia (</code>variant-0''). Once the target audience is defined and
+associated with the variant, the name of the audience is displayed in
+place of the automatically generated name. This version of the component
+will be displayed to page visitors if no audience trait can be matched
+with the personalization properties assigned to the other variant(s) of
+the component.</p>
+</div>
+<div class="paragraph">
+<p>Adding a variant to a component will affect its publishing status as
+well as the publishing status of its parent area and parent page: all of
+these are changed to ``modified'' (yellow) because creating a variant is
+considered an edit action on the component.</p>
+</div>
+<div class="paragraph">
+<p>When a page has content variants for some of its components, the
+variants icon <span class="image"><img src="../../_images/6-0-variants-icon.gif" alt="image" height="22"></span> appears in
+the top bar of the page in the Edit and Preview views and next to the
+name of the page in the page tree view.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_choosing_an_audience"><a class="anchor" href="#_choosing_an_audience"></a>Choosing an audience</h3>
+<div class="paragraph">
+<p>Select the <strong>Choose audience</strong> option in the Action bar to choose the
+<a href="/Features/Personalization#choosing-an-audience">target audience</a> for
+a component variant. Selecting a component variant is a prerequisite to
+choosing an audience for the variant.</p>
+</div>
+<div class="paragraph">
+<p>version of the component.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hiding_the_original"><a class="anchor" href="#_hiding_the_original"></a>Hiding the original</h3>
+<div class="paragraph">
+<p>The <code>Original'' content of a component can be marked as </code>ORIGINAL –
+HIDDEN''. When marked as hidden, the content associated with the
+``ORIGINAL'' will only be visible in the page Edit view.</p>
+</div>
+<div class="paragraph">
+<p>Why hide the original? Hiding the original can be useful in a scenario
+in which the content is exclusive, targeting a particular audience. If
+no variants match, the original (fallback) content will be hidden. To
+hide/show the content of a component, select the <strong>Hide/Show original</strong>
+option in the Action bar.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changing_the_template_of_a_personalized_component"><a class="anchor" href="#_changing_the_template_of_a_personalized_component"></a>Changing the template of a personalized component</h3>
+<div class="paragraph">
+<p>You can serve different content to different audiences by changing the
+template used in a personalized component. This enables you to serve
+text to one audience, an image to another audience, video to a third
+audience and so on. To change the template of a component variant,
+select the variant you want to change in the component bar and click
+<strong>Change template</strong> in the Action bar. A dialog opens where you can choose
+the template you want to apply to the component variant.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deleting_a_variant_or_all_variants"><a class="anchor" href="#_deleting_a_variant_or_all_variants"></a>Deleting a variant or all variants</h3>
+<div class="paragraph">
+<p>There are three ways to delete a variant:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the component variant you want to delete in the variant pop-up
+menu and click on <strong>Delete component variant</strong>.</p>
+</li>
+<li>
+<p><strong>Delete all component variants</strong>.</p>
+</li>
+<li>
+<p>Delete the component itself. However, in this case, also any other
+variant of the component is also deleted. This deletion can only be
+undone by restoring an earlier version of the page.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>After the deletion of the component, the publishing status of the parent
+area and the parent page change to modified (yellow) because deleting a
+component is considered an edit action on the page.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_permissions"><a class="anchor" href="#_permissions"></a>Permissions</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_disable_personalization_in_a_component_template"><a class="anchor" href="#_disable_personalization_in_a_component_template"></a>Disable personalization in a component template</h3>
+<div class="paragraph">
+<p>Set the
+<a href="/Templating/Template+definition/Component+definition"><code>personalizable</code></a>
+property to <code>false</code> in the component template to disable
+personalization. This disables the <strong>Add component variant</strong> action. You
+may disable personalization in components that must display the exact
+same content such as legal boilerplate text to all visitors. All
+components can be personalized by default.</p>
+</div>
+<div class="paragraph">
+<p>YAML file (fragment) JCR node</p>
+</div>
+<div id="YAMLfilefragment30" class="paragraph">
+<p>my-module/templates/components/html.yaml</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">renderType: freemarker
+templateScript: /my-module/components/html.ftl
+dialog: my-module:components/html
+deletable: false
+writable: false
+moveable: false
+personalizable: false</code></pre>
+</div>
+</div>
+<table id="JCRnode30" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="n">html</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#deletable</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#writable</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#moveable</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#personalizable</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#dialog</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:components/html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#renderType</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.p]#templateScript</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/components/html.ftl</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_grant_component_personalization_permission_to_a_role"><a class="anchor" href="#_grant_component_personalization_permission_to_a_role"></a>Grant component personalization permission to a role</h3>
+<div class="paragraph">
+<p>Define which roles are allowed personalize components. Name the roles in
+your
+<a href="/Templating/Template+availability#restricting-component-actions-in-an-area-template">area
+definition</a>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-js hljs" data-lang="js">areas:
+  myArea:
+    availableComponents:
+      myComponent:
+        id: my-module:components/myComponent
+        permissions:
+          write:
+            roles: [editors, superuser]
+          move:
+            roles: [senior-editor, superuser]
+          delete:
+            roles: [editors, superuser]
+          personalize:
+            roles: [senior-editor, superuser]</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enable_personalized_components_in_personalized_pages"><a class="anchor" href="#_enable_personalized_components_in_personalized_pages"></a>Enable personalized components in personalized pages</h3>
+<div class="paragraph">
+<p>You can personalize a page and its components at the same time. This
+feature is disabled by default. To enable it, set
+<code>/modules/personalization-components/config/allowNestedVariants</code> to
+<code>true</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">modules</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.f]#personalization-components</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.f]#config</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.p]#allowNestedVariants</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="content">
+<pre>+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
