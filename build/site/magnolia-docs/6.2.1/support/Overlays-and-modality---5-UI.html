@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Overlays and modality - 5 UI - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/support/Overlays-and-modality---5-UI.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Overlays-and-modality---5-UI.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Overlays-and-modality---5-UI.html">Overlays and modality - 5 UI - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Support.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Overlays and modality - 5 UI - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Support.html" class="bare">Support.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Support.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Magnolia-5-UI-documentation.html">Magnolia 5 UI documentation</a></p>
+</li>
+<li>
+<p><a href="Content-apps---5-UI.html">Content apps - 5 UI</a></p>
+</li>
+<li>
+<p><a href="Developing-an-app---5-UI.html">Developing an app - 5 UI</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598450"><a class="anchor" href="#src-196598450"></a>Overlays and modality - 5 UI</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p><span class="status  red">DEPRECATED</span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Overlays and modality have been deprecated since Magnolia 6.0. They are
+part of the <em>Magnolia 5 UI</em> framework.</p>
+</div>
+<div class="paragraph">
+<p>For the updated implementation, see the <code>light</code> property in
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">Dialog
+definition for <em>Magnolia 6 UI</em></a> instead.</p>
+</div>
+<div class="paragraph">
+<p>Information requiring the input from a user is presented in an overlay.
+Overlays are the container for standard dialogs and messages. Typically,
+overlays display a <a href="Model-view-presenter-pattern---5-UI.html">view</a>.
+The key benefit of the overlay framework is that it allows a user to
+work in multiple dialogs in different locations simultaneously. For
+example, a user editing a component on a page can open another component
+dialog on a different page without closing the first dialog.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598450_Overlaysandmodality-5UI-Modality"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-Modality"></a>Modality</h3>
+<div class="paragraph">
+<p>A modal dialog is one that blocks interaction with other parts of the
+interface. The user is in the "mode" of the interface that is requesting
+information and is forced to close it before moving on to other tasks.
+The rest of the interface remains non-functional while the modal dialog
+is open.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598450_Overlaysandmodality-5UI-Domain"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-Domain"></a>Domain</h4>
+<div class="paragraph">
+<p>There are three modality domains. The domains represent what will be
+blocked by the opened dialog:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Shell</strong> overlay prevents interaction with the entire UI. Dialogs
+relevant to the entire AdminCentral interface are modal to the shell.</p>
+</li>
+<li>
+<p><strong>App</strong> overlay prevents interaction with the app. Users can still work
+with other apps and the shell. Used to display a settings pertaining to
+the app.</p>
+</li>
+<li>
+<p><strong>Subapp</strong> overlay prevents interaction with the subapp. Users can still
+interact with other subapps and other apps. Used in the page editor.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/196598450/6-1-OverlaysAndModality-domain.png" alt="images/download/attachments/196598450/6-1-OverlaysAndModality-domain.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598450_Overlaysandmodality-5UI-Level"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-Level"></a>Level</h4>
+<div class="paragraph">
+<p>Overlays can present their modality in three ways.</p>
+</div>
+<div class="paragraph">
+<p><strong>Strong</strong>: The overlay has a dark curtain behind it that blocks
+interaction with the part of the interface it covers. Standard
+<a href="Dialog-definition---5-UI.html">dialogs</a> use this.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/196598450/6-1-overlaysAndModality-strong.png" alt="images/download/attachments/196598450/6-1-overlaysAndModality-strong.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Light</strong>: The overlay has a light wide border and a light or invisible
+curtain behind it that blocks interaction with the part of the interface
+it covers.
+<a href="Dialog-types---5-UI.html#src-215320360_Dialogtypes-5UI-Lightdialog">Light
+dialogs</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Message+types#Messagetypes-Alerts">alerts</a>
+use this.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/196598450/6-1-overlaysAndModality-light.png" alt="images/download/attachments/196598450/6-1-overlaysAndModality-light.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Non-modal</strong>: The overlay has no curtain and does not block interaction
+with the part of the interface it covers.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Message+types#Messagetypes-Pop-ups">Pop-ups</a>
+use this.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/196598450/6-1-overlaysAndModality-nonmodal.png" alt="images/download/attachments/196598450/6-1-overlaysAndModality-nonmodal.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598450_Overlaysandmodality-5UI-Usage"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-Usage"></a>Usage</h3>
+<div class="paragraph">
+<p>Classes that can host overlays implement the <code>OverlayLayer</code> interface.
+The interface provides methods to open overlays. <code>OverlayLayer</code> is
+implemented by the contexts: shell, app and subapp.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Each implementor sets the modality domain to the appropriate level for
+its context.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598450_Overlaysandmodality-5UI-Openinganoverlay"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-Openinganoverlay"></a>Opening an overlay</h4>
+<div class="paragraph">
+<p><code>subAppContext.openOverlay(myView);</code></p>
+</div>
+<div class="paragraph">
+<p>You probably do not need to call <code>openOverlay</code> yourself because there
+are convenience methods for
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Showing+notifications">showing
+messages</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>OverlayLayer.openAlert(&#8230;&#8203;);</code></p>
+</li>
+<li>
+<p><code>OverlayLayer.openConfirmation(&#8230;&#8203;);</code></p>
+</li>
+<li>
+<p><code>OverlayLayer.openNotification(&#8230;&#8203;);</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These methods take a <code>view</code> that allows an implementor to add any Vaadin
+component to the overlay. For example you could add a form. The most
+common use case is to simply provide a string.</p>
+</div>
+<div class="paragraph">
+<p>Callbacks enable code to take action based on user interaction in the
+overlay:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>openConfirmation</code> takes a <code>ConfirmationCallback</code> with methods:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>onSuccess()</code></p>
+</li>
+<li>
+<p><code>onCancel()</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>openAlert</code> takes an <code>AlertCallback</code> with an optional implementation
+of method <code>onOk()</code>.</p>
+</li>
+<li>
+<p><code>openNotification</code> takes an optional <code>NotificationCallback</code> with
+method <code>onLinkClick()</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Other classes take an <code>OverlayLayer</code> implementor as a parameter so that
+they can open an <code>Overlay</code> in the proper modality domain.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Choose-dialog---5-UI.html">Choose dialogs</a> can be opened on a
+<a href="Parts-of-a-content-app---5-UI.html">content app</a> with
+<code>openChooseDialog()</code>.</p>
+</li>
+<li>
+<p><a href="Dialog-definition---5-UI.html">Dialogs</a> are opened with
+<code>FormDialogPresenter</code> with <code>start()</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598450_Overlaysandmodality-5UI-GettinganOverlayLayerimplementor"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-GettinganOverlayLayerimplementor"></a>Getting an OverlayLayer implementor</h4>
+<div class="paragraph">
+<p>To display an overlay you need an <code>OverlayLayer</code> implementor. The one
+you use determines the modality domain of your overlay. You can get a
+<code>Shell</code>, <code>AppContext</code> or <code>SubAppContext</code> via dependency injection.</p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="https://git.magnolia-cms.com/gitweb/?p=magnolia_ui.git;a=blob;f=magnolia-ui-api/src/main/java/info/magnolia/ui/api/context/UiContext.java;h=c6ee942ba053ce611aec161cd954cdde45b2e712;hb=HEAD"><code>UiContext</code></a>
+interface provides a way to get an <code>OverlayLayer</code>. <code>UiContext</code> extends
+<code>OverlayLayer</code>. A class with an injected <code>UiContext</code> always contains the
+context in which the class was created. In a class, if you are unsure in
+which context you should create the overlay, inject the <code>UiContext</code>. For
+example, the <code>BasicUploadFieldBuilder</code> gets the <code>UiContext</code> injected
+because the field could be created in an app or in a subapp, the code
+does not know this.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598450_Overlaysandmodality-5UI-Examples"><a class="anchor" href="#src-196598450_Overlaysandmodality-5UI-Examples"></a>Examples</h3>
+<div class="paragraph">
+<p>Here are a few code examples that you can adapt to suit.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example 1</strong></p>
+</div>
+<div class="paragraph">
+<p>Overlay in subapp context</p>
+</div>
+<div class="paragraph">
+<p>`View myView = <code>new</code> View() { `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Component asVaadinComponent() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>new</code> Button(<code>"Look ma, no hands!"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>};</code></p>
+</div>
+<div class="paragraph">
+<p><code>OverlayCloser myOverlay = subAppContext.openOverlay(myView);</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example 2</strong></p>
+</div>
+<div class="paragraph">
+<p>Closing the overlay with a button</p>
+</div>
+<div class="paragraph">
+<p><code>final<code> Button myComponent = </code>new<code> Button(</code>"Look ma, no hands!"`</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`  View myView = <code>new</code> View() {        `</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`      <code>public</code> Component asVaadinComponent() {`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>return</code> myComponent;`</p>
+</div>
+<div class="paragraph">
+<p>`      };`</p>
+</div>
+<div class="paragraph">
+<p>`      };`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>final</code> OverlayCloser myOverlay = subAppContext.openOverlay(myView);`</p>
+</div>
+<div class="paragraph">
+<p>`  myComponent.addClickListener( <code>new</code> Button.ClickListener() {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`      <code>public</code> <code>void</code> buttonClick(ClickEvent event) {`</p>
+</div>
+<div class="paragraph">
+<p>`          myOverlay.close();`</p>
+</div>
+<div class="paragraph">
+<p>`      };`</p>
+</div>
+<div class="paragraph">
+<p>`  });`</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>+
+Example 3**To display a modal dialog with a different modality level,
+you can specify a <code>ModalityLevel</code> as the second parameter:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>myOverlay = subAppContext.openOverlay(myView,ModalityLevel.STRONG);</code></p>
+</li>
+<li>
+<p><code>myOverlay = subAppContext.openOverlay(myView,ModalityLevel.LIGHT);</code></p>
+</li>
+<li>
+<p><code>myOverlay = subAppContext.openOverlay(myView,ModalityLevel.NON_MODAL);</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Light modality level in subapp context</p>
+</div>
+<div class="paragraph">
+<p>`View myView = <code>new</code> View() {            `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> Component asVaadinComponent() {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>return</code> <code>new</code> Button(<code>"Look ma, no hands!"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p><code>};</code></p>
+</div>
+<div class="paragraph">
+<p><code>OverlayCloser myOverlay = subAppContext.openOverlay(myView,ModalityLevel.LIGHT);</code></p>
+</div>
+<div class="paragraph">
+<p>Model-view-presenter pattern - 5 UI</p>
+</div>
+<div class="paragraph">
+<p>User interface frameworks - 5 UI</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rich text field - 5 UI - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/support/Rich-text-field---5-UI.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Rich-text-field---5-UI.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Rich-text-field---5-UI.html">Rich text field - 5 UI - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Support.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Rich text field - 5 UI - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Support.html" class="bare">Support.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Support.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Magnolia-5-UI-documentation.html">Magnolia 5 UI documentation</a></p>
+</li>
+<li>
+<p><a href="Dialog-definition---5-UI.html">Dialog definition - 5 UI</a></p>
+</li>
+<li>
+<p><a href="Field-definition---5-UI.html">Field definition - 5 UI</a></p>
+</li>
+<li>
+<p><a href="List-of-fields---5-UI.html">List of fields - 5 UI</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215320447"><a class="anchor" href="#src-215320447"></a>Rich text field - 5 UI</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p><span class="status  red">DEPRECATED</span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This rich text field definition has been deprecated since Magnolia 6.0.
+It is part of the <em>Magnolia 5 UI</em> framework.</p>
+</div>
+<div class="paragraph">
+<p>For the updated implementation, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rich+text+field">Rich text
+field for <em>Magnolia 6 UI</em></a> instead.</p>
+</div>
+<div class="paragraph">
+<p>RichTextFieldDefinition renders a rich text editor. This is a
+<a href="Custom-fields---5-UI.html">custom Magnolia field</a> that implements
+the <a href="http://docs.ckeditor.com/">CKEditor</a> component.</p>
+</div>
+<div class="paragraph">
+<p>class: <code>info.magnolia.ui.form.field.definition.RichTextFieldDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>fieldType: <code>richText</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215320447/6-0-textAndImage.png" alt="images/download/attachments/215320447/6-0-textAndImage.png"></span></p>
+</div>
+<div class="sect2">
+<h3 id="src-215320447_Richtextfield-5UI-RichTextfieldproperties"><a class="anchor" href="#src-215320447_Richtextfield-5UI-RichTextfieldproperties"></a>Rich Text field properties</h3>
+<div class="paragraph">
+<p>Simple rich text field definition.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabText`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Text`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: text`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: richText`</p>
+</div>
+<div class="paragraph">
+<p>`          tables: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          height: 500`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Text Editor`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tabs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tabText</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">richText</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tables</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text Editor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>See <a href="Referencing-fields---5-UI.html">Referencing fields</a> for further
+information.</p>
+</div>
+<div class="paragraph">
+<p>Field-specific properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>alignment</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Text alignment for paragraphs. When set to <code>true</code>, this option adds
+alignment buttons (left, center, right, justify) in the toolbar.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>colors</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Colors displayed in the color selectors. Comma-separated a string of
+hexadecimal color codes without the <code><mark></code> prefix, for example
+<code>00923E,F8C100,28166F</code> . See
+<a href="http://docs.ckeditor.com/" class="bare">http://docs.ckeditor.com/</a></mark>!/api/CKEDITOR.config-cfg-colorButton_colors[CKEditor
+documentation] for more.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>configJsFile</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Location of a custom CKEditor configuration file, e.g.
+<code>/.resources/ckeditor/config-magnolia.js</code>. You can link to a file in the
+<code>resources</code> workspace, filesystem or classpath. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Origins and
+loading order</a> for more.</p>
+</div>
+<div class="paragraph">
+<p>The default configuration files can be found in
+<code>magnolia-ui-framework/src/main/resources/mgnl-resources/ckeditor/</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>config-magnolia.js</code>
+(<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ui.pub/browse/magnolia-ui-framework/src/main/resources/mgnl-resources/ckeditor/config-magnolia.js">Git</a>):
+Magnolia default configuration file.</p>
+</li>
+<li>
+<p><code>config-default.js</code>
+(<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ui.pub/browse/magnolia-ui-framework/src/main/resources/mgnl-resources/ckeditor/config-default.js">Git</a>):
+CKEditor configuration file.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you use a custom configuration file Magnolia will ignore all other
+configured properties.</p>
+</div>
+<div class="paragraph">
+<p>A custom configuration allows you control over the <code>config.extraPlugins</code>
+setting, but also means you need to the <code>magnolialink</code> and
+<code>magnoliaFileBrowser</code> plugins into your file. See the default
+<code>config-magnolia.js</code> for how to include the plugins.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fonts</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>List of font names displayed in the Font selector in the toolbar, for
+example <code>Arial/Arial,sans-serif;Times New Roman/Times New Roman,serif</code> .
+Separate entries with a semi-colon (;). It&#8217;s possible to have more than
+one font for each entry separated by comma. A display name may be
+optionally defined by prefixing the entries with the name and the slash
+character. See</p>
+</div>
+<div class="paragraph">
+<p><a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-font_names">CKEditor
+documentation</a> for more.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fontSizes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>List of fonts size displayed in the Font selector in the toolbar, for
+example <code>16/16px;24/24px;48/48px</code>. Separate entries with a semi-colon
+(;). Any CSS-supported size can be used: <code>12px</code>, <code>2.3em</code>, <code>130%</code>,
+<code>larger</code> or <code>x-small</code>. A display name may be optionally defined by
+prefixing the entries with the name and the slash character. For
+example, <code>Bigger Font/14px</code> will be displayed as <strong>Bigger Font</strong> in the
+list, but will be outputted as <code>14px</code>. See
+<a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-fontSize_sizes">CKEditor
+documentation</a> for more.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `300`</em></p>
+</div>
+<div class="paragraph">
+<p>The height of the editing area, including the toolbar, for example
+<code>500</code>. This configuration option accepts an integer (to denote a value
+in pixels) or any CSS-defined length unit except percent (%) values.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>images</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Allows images to be added from the DAM. When set to <code>true</code>, this option
+adds an image button in the toolbar. A user can define the size and
+alignment of the image, and some metadata.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>lists</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Allows bulleted and numbered lists. When set to <code>false</code>, this option
+removes list buttons from the toolbar.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>source</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Allows toggling between text and HTML editing. When set to <code>true</code>, this
+option adds a source button to the toolbar.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tables</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Allows tables to be added. When set to <code>true</code>, this option adds a tables
+button in the toolbar.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="Field-definition---5-UI.html#src-215320376_Fielddefinition-5UI-Commonfieldproperties">Common
+field properties</a>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>fieldType</code></p>
+</div>
+<div class="paragraph">
+<p>or</p>
+</div>
+<div class="paragraph">
+<p><code>class</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the field type via either a field alias name or a
+fully-qualified field definition class name. See
+<a href="Field-definition---5-UI.html#src-215320376_Fielddefinition-5UI-Fieldtypes">Field
+definition: Field types</a>.</p>
+</div>
+<div class="paragraph">
+<p>To check the correct form of the name, use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
+app</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultValue</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Pre-filled default value displayed in the field. The value can be
+overwritten by the user. Use alphanumeric characters.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+Applied only when creating a new item, not for already existing items.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Help text displayed when the user clicks the help icon. The value can be
+literal or retrieved from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">message
+bundle</a> with a key. Use alphanumeric characters in literal values. Not
+applicable to the <a href="Static-field---5-UI.html">static</a> field.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>i18n</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Enables
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Language+configuration">i18n
+authoring support</a> which allows editors to write foreign-language or
+regionally targeted content. A two-letter language identifier (en, de,
+fr etc.) is displayed on controls where <code>i18n</code> is set to <code>true</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>i18nBasename</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is the message bundle defined in the dialog
+definition</em></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">Message
+bundle</a> such as <code>com.example.messages</code> for localized field labels. You
+can set this property in the parent
+<a href="Dialog-definition---5-UI.html">dialog</a>,
+<a href="Form-definition---5-UI.html">form</a> or tab definition. Child fields
+will inherit the bundle.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Field label displayed to editors. The value can be literal such as
+<code>Product name</code> or retrieved from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">message
+bundle</a> with a key such as <code>products.product.label</code>. Use alphanumeric
+characters in literal values.</p>
+</div>
+<div class="paragraph">
+<p>If you do not provide the property, Magnolia will fall back to a
+generated i18n key and display the key in the UI.</p>
+</div>
+<div class="paragraph">
+<p>If you do not want a label at all, define the property and set its value
+to a blank space such as <code>label: " "</code> in YAML.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is the name of the field&#8217;s parent node</em></p>
+</div>
+<div class="paragraph">
+<p>Name of the node where the value is saved. The name <code>jcrName</code> is
+reserved. Use alphanumeric characters.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>placeholder</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Placeholder text to be displayed when the field is empty. The value is
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">i18n</a>-able.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Applicable to <a href="Text-field---5-UI.html">text</a>,
+<a href="Link-field---5-UI.html">link</a> and combobox fields.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>readOnly</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Makes the field uneditable. Adding this property has the same effect as
+creating a <a href="Static-field---5-UI.html">static</a> field.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>required</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Makes the field required (mandatory). An asterisk is displayed next to
+the field label. See also
+<a href="Field-validators---5-UI.html#src-215320418_Fieldvalidators-5UI-Checkingfornullvalues">Checking
+for null values</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredErrorMessage</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is `"This field is required"`</em></p>
+</div>
+<div class="paragraph">
+<p>Error message displayed when required is true and the user saves an
+empty field. The value can be literal or retrieved from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">message
+bundle</a> with a key such as <code>validation.message.required</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>styleName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Adds one or more style names to this component. Multiple styles can be
+specified as a space-separated list of style names such as
+<code>checkbox disabled</code>. The style name will be rendered as an HTML class
+name, which can be used in a CSS definition. The class name is added to
+the field by calling the Vaadin method
+<a href="https://vaadin.com/api/com/vaadin/ui/AbstractComponent.html#addStyleName%28java.lang.String%29">addStyleName</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transformerClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Property transformer classes define how field values are stored in the
+repository. Each field has a default transformer class. You don&#8217;t need
+to define a class unless you want to override the default. The value is
+a fully-qualified class name.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Complex field definitions may define a different default transformer in
+their constructor. See
+<a href="Transforming-field-values---5-UI.html">Transforming field values</a>
+for more.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, most fields set a default value automatically</em></p>
+</div>
+<div class="paragraph">
+<p>JCR property type of the stored value such as <code>String</code>, <code>Boolean</code>,
+<code>Date</code> or any other supported and defined data type.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-215320447_Richtextfield-5UI-Linkbuttons"><a class="anchor" href="#src-215320447_Richtextfield-5UI-Linkbuttons"></a>Link buttons</h3>
+<div class="paragraph">
+<p>There are three link buttons:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="../_images/images/download/attachments/215320447/6-0-richTextField-linkIconExt.gif" alt="images/download/attachments/215320447/6-0-richTextField-linkIconExt.gif"></span>
+Links to external pages</p>
+</li>
+<li>
+<p><span class="image"><img src="../_images/images/download/attachments/215320447/6-0-richTextField-linkIconInt.gif" alt="images/download/attachments/215320447/6-0-richTextField-linkIconInt.gif"></span>
+Links to internal pages</p>
+</li>
+<li>
+<p><span class="image"><img src="../_images/images/download/attachments/215320447/6-0-richTextField-linkIconDam.gif" alt="images/download/attachments/215320447/6-0-richTextField-linkIconDam.gif"></span>
+Links to documents in the DAM</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215320447_Richtextfield-5UI-Loadingorderforcustomconfiguration"><a class="anchor" href="#src-215320447_Richtextfield-5UI-Loadingorderforcustomconfiguration"></a>Loading order for custom configuration</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Note that any configuration done in a RichTextFieldFactory will override
+configuration settings from the <code>config.js</code> file. This is why we ignore
+other properties in the field definition as soon as a <code>configJsFile</code> is
+configured.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215320447_Richtextfield-5UI-Decodetext"><a class="anchor" href="#src-215320447_Richtextfield-5UI-Decodetext"></a>Decode text</h3>
+<div class="paragraph">
+<p>CKEditor produces HTML such as <code>&lt;p&gt;</code> elements for paragraphs. However,
+text stored in JCR usually escapes HTML code. To render text which
+originates from a rich text field you need to decode the stored content
+to make sure the HTML tags are rendered properly again.</p>
+</div>
+<div class="paragraph">
+<p>Decode the <code>content</code> object and then get the desired property from it:</p>
+</div>
+<div class="paragraph">
+<p><code>${cmsfn.decode(content).text!<code>""</code>}</code></p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/cmsfn#cmsfn-DecodeHTML"><code>cmsfn</code>
+decodeHtml</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215320447_Richtextfield-5UI-Impactonthesearchindex"><a class="anchor" href="#src-215320447_Richtextfield-5UI-Impactonthesearchindex"></a>Impact on the search index</h3>
+<div class="paragraph">
+<p>Keep in mind that using the RTE introduces HTML into your content. The
+impact of this is that the HTML will be indexed along with the content.</p>
+</div>
+<div class="paragraph">
+<p>Password field - 5 UI</p>
+</div>
+<div class="paragraph">
+<p>Select field - 5 UI</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

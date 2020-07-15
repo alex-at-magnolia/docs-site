@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Retrieving light modules - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/support/Retrieving-light-modules.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Retrieving-light-modules.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Retrieving-light-modules.html">Retrieving light modules - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Support.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Retrieving light modules - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Support.html" class="bare">Support.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Support.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Contribute.html">Contribute</a></p>
+</li>
+<li>
+<p><a href="Finding-and-sharing-light-modules.html">Finding and sharing light
+modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598638"><a class="anchor" href="#src-196598638"></a>Retrieving light modules</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598638_Retrievinglightmodules-Findinglightmodules"><a class="anchor" href="#src-196598638_Retrievinglightmodules-Findinglightmodules"></a>Finding light modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Since all light modules are shared on npm, and include the keyword
+<code>magnolia-light-module</code>, they are easy to find:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you have
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
+CLI</a>, use the <code>mgnl search</code> command.</p>
+</li>
+<li>
+<p>Alternatively, visit:
+<a href="https://www.npmjs.com/search?q=magnolia-light-module" class="bare">https://www.npmjs.com/search?q=magnolia-light-module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because magnolia developers <a href="Open-sourcing-a-light-module.html">pay
+attention to good module design and README files</a>, you can quickly see
+if there is a module that matches your requirements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598638_Retrievinglightmodules-Gettinglightmodules"><a class="anchor" href="#src-196598638_Retrievinglightmodules-Gettinglightmodules"></a>Getting light modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are several ways of getting light modules.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598638_Retrievinglightmodules-Fromnpm"><a class="anchor" href="#src-196598638_Retrievinglightmodules-Fromnpm"></a>From npm</h3>
+<div class="paragraph">
+<p>The packaged light modules on npm are ready to use.</p>
+</div>
+<div class="paragraph">
+<p>If you have
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
+CLI</a>, use the <code>mgnl install</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can use the command <code>npm install &lt;package name&gt;</code> in
+your terminal to install an npm package.</p>
+</div>
+<div class="paragraph">
+<p>A few warnings will be printed because npm expects a package.json file
+in the directory where you run <code>npm install</code>.</p>
+</div>
+<div class="paragraph">
+<p>The light module is downloaded into the <code>node_modules</code> directory. Move
+the light module into your Magnolia resources directory (aka
+<code>light-modules</code>), and delete the <code>node_modules</code> directory.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598638_Retrievinglightmodules-FromGithub"><a class="anchor" href="#src-196598638_Retrievinglightmodules-FromGithub"></a>From Github</h3>
+<div class="paragraph">
+<p>The <a href="http://npmjs.com">npmjs.com</a> search results also include links to the
+Github repository (or other source control repository). You can clone or
+download the light module source with the information provided there.</p>
+</div>
+<div class="paragraph">
+<p>Github contains the complete light module project. Check the README
+file, it may be necessary to build the project to get or build the
+required web resources. By convention they can be built with
+<code>npm run build</code> in the terminal.</p>
+</div>
+<div class="paragraph">
+<p>The project may contain other useful files, like tests and demos that
+you should not include in your production light module. Delete these
+files when you deploy the module to the Magnolia resources directory.
+This typically concerns the <code>_dev</code> and <code>node_modules</code> directories. You
+can check the <code>.npmignore</code> file for all things that do not belong in the
+'built' light module.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598638_Retrievinglightmodules-Fromannpmproject"><a class="anchor" href="#src-196598638_Retrievinglightmodules-Fromannpmproject"></a>From an npm project</h3>
+<div class="paragraph">
+<p>A benefit of having light modules on npm is that you can use its
+dependency resolution system to get all the modules you need into your
+project.</p>
+</div>
+<div class="paragraph">
+<p>This can be useful in a Magnolia project based entirely on light
+modules. In the most basic version, you can define a package.json file
+which lists all of the light modules that you want. Anyone can then run
+<code>npm install</code> to retrieve all of the modules.</p>
+</div>
+<div class="paragraph">
+<p>Please see this
+<a href="https://wiki.magnolia-cms.com/display/PMTEAM/Sharing+modules+-+Advanced+Topics#Sharingmodules-AdvancedTopics-LightProject:Frontendbuildonentireproject">section
+on light projects</a> for more information and some example projects hosted
+on github.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598638_Retrievinglightmodules-ThroughMaven"><a class="anchor" href="#src-196598638_Retrievinglightmodules-ThroughMaven"></a>Through Maven</h3>
+<div class="paragraph">
+<p>If you are a java developer, you can retrieve light modules in your
+Maven based java projects via the <code>maven-frontend-plugin</code>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/eirslett/frontend-maven-plugin" class="bare">https://github.com/eirslett/frontend-maven-plugin</a></p>
+</div>
+<div class="paragraph">
+<p>This plugin enables you to configure a complete, self contained,
+front-end build environment and specify a package.json file with the
+desired light modules as dependencies.</p>
+</div>
+<div class="paragraph">
+<p>Some example pom.xml configuration:</p>
+</div>
+<div class="paragraph">
+<p>Fragment from Maven pom.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>build</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;org.apache.maven.plugins&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;maven-clean-plugin&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>filesets</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;!-- One directory, one fileset: -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>fileset</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;!-- NPM will install all dependencies in 'node_modules' directory, thus we should add it to the`</p>
+</div>
+<div class="paragraph">
+<p>`            clean phase -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>directory</code>&gt;node_modules&lt;/<code>directory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;/<code>fileset</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>fileset</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;!-- The NPM build tools will copy the Magnolia light modules in there -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>directory</code>&gt;light-modules&lt;/<code>directory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;/<code>fileset</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>fileset</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;!-- This will also clean the tmp directory of cargo install -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>directory</code>&gt;tmp&lt;/<code>directory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;/<code>fileset</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>filesets</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>build</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>profiles</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>profile</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>id</code>&gt;get-light-modules&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>build</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>groupId</code>&gt;com.github.eirslett&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>artifactId</code>&gt;frontend-maven-plugin&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>executions</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;!-- First: install node and npm -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>execution</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>id</code>&gt;install-node-and-npm&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>goals</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>goal</code>&gt;install-node-and-npm&lt;/<code>goal</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;/<code>goals</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>nodeVersion</code>&gt;v5.3.0&lt;/<code>nodeVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>npmVersion</code>&gt;3.3.12&lt;/<code>npmVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;!-- optional: where to install node and npm. Defaults to the working directory,`</p>
+</div>
+<div class="paragraph">
+<p>`                 but we like it to be in target so that mvn clean removes the install again -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>installDirectory</code>&gt;target&lt;/<code>installDirectory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;/<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>execution</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;!-- Second: install package.json (i.e. download all given light-modules) -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>execution</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>id</code>&gt;npm-install&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>goals</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>goal</code>&gt;npm&lt;/<code>goal</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;/<code>goals</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;!-- Optional configuration which provides for running any npm command -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>arguments</code>&gt;install --registry=${npmRegistry}&lt;/<code>arguments</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>installDirectory</code>&gt;target&lt;/<code>installDirectory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;/<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>execution</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;!-- Third: run the magnolia-build script to look for light modules in node_modules and copy them over`</p>
+</div>
+<div class="paragraph">
+<p>`            light-modules -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;<code>execution</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>id</code>&gt;npm-build&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>goals</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>goal</code>&gt;npm&lt;/<code>goal</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;/<code>goals</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>arguments</code>&gt;run build&lt;/<code>arguments</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>installDirectory</code>&gt;target&lt;/<code>installDirectory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`              &lt;/<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            &lt;/<code>execution</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;/<code>executions</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>build</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>profile</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>profiles</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    `</p>
+</div>
+<div class="paragraph">
+<p>package.json</p>
+</div>
+<div class="paragraph">
+<p><code>{</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>"name"</code>: <code>"demo-maven"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"version"</code>: <code>"0.0.1t"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"private"</code>: <code>true</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"description"</code>: <code>"Grab light modules via maven"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"main"</code>: <code>"index.js"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"scripts"</code>: {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"build"</code>: <code>`"magnolia-build"</code></p>
+</div>
+<div class="paragraph">
+<p>`  },`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"dependencies"</code>: {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"calculator-magnolia"</code>: <code>`"latest"</code></p>
+</div>
+<div class="paragraph">
+<p>`  },`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"devDependencies"</code>: {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"@magnolia/magnolia-build"</code>: <code>`"latest"</code></p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Open-sourcing a light module</p>
+</div>
+<div class="paragraph">
+<p>Sharing light modules - advanced topics</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

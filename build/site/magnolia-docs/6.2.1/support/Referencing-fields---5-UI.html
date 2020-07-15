@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Referencing fields - 5 UI - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/support/Referencing-fields---5-UI.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Referencing-fields---5-UI.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Referencing-fields---5-UI.html">Referencing fields - 5 UI - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Support.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Referencing fields - 5 UI - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Support.html" class="bare">Support.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Support.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Magnolia-5-UI-documentation.html">Magnolia 5 UI documentation</a></p>
+</li>
+<li>
+<p><a href="Dialog-definition---5-UI.html">Dialog definition - 5 UI</a></p>
+</li>
+<li>
+<p><a href="Field-definition---5-UI.html">Field definition - 5 UI</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596658"><a class="anchor" href="#src-196596658"></a>Referencing fields - 5 UI</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p><span class="status  red">DEPRECATED</span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This way of referencing fields has been deprecated since Magnolia 6.0.
+It is part of the <em>Magnolia 5 UI</em> framework.</p>
+</div>
+<div class="paragraph">
+<p>For the updated implementation, see the <code>$type</code> property in
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition">Field
+definition for <em>Magnolia 6 UI</em></a> instead.</p>
+</div>
+<div class="paragraph">
+<p>This page describes how to define the type of a field in a
+<a href="Form-definition---5-UI.html">form</a>, using one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fieldType</code> property.</p>
+</li>
+<li>
+<p><code>class</code> property (used until Magnolia 5.7).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When creating a form for a <a href="Dialog-definition---5-UI.html">dialog</a>
+tab, you typically want it to contain some fields. The fields are the
+core building blocks of the form&#8217;s functionality for user tasks such as
+entering a text and sending it to a server after the user hits the
+form&#8217;s submit button.</p>
+</div>
+<div class="paragraph">
+<p>Fields are defined using a <a href="Field-definition---5-UI.html">field
+definition</a>, which must contain at least one property telling Magnolia
+what type of field it should render in the dialog.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596658_Referencingfields-5UI-UsingthefieldTypepropertyandshortfieldnames"><a class="anchor" href="#src-196596658_Referencingfields-5UI-UsingthefieldTypepropertyandshortfieldnames"></a>Using the fieldType property and short field names</h3>
+<div class="paragraph">
+<p>Use the <code>fieldType</code> property for better legibility, ease of development,
+and to make field names easier to remember. Provide the field&#8217;s name as
+the value of the <code>fieldType</code> property. Refer to the
+<a href="#src-196596658_Referencingfields-5UI-Shortfieldnames">Short
+field names</a> table for a list of field names. You do not need to specify
+the field type using a fully qualified class name.</p>
+</div>
+<div class="paragraph">
+<p>An example of configuration using the short <code>fieldType</code> property:</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabText`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: title`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>To check you are using the correct short field names, look at the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
+app</a>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/196596658/6-1-referencingFields-defApp.png" alt="images/download/attachments/196596658/6-1-referencingFields-defApp.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596658_Referencingfields-5UI-RelevanceforcustomfieldsextendingordecoratingMagnoliafields"><a class="anchor" href="#src-196596658_Referencingfields-5UI-RelevanceforcustomfieldsextendingordecoratingMagnoliafields"></a>Relevance for custom fields extending or decorating Magnolia fields</h3>
+<div class="paragraph">
+<p>Short field naming affects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The origin of the definition.</strong> The fields are defined from YAML
+files. (They were previously JCR nodes under
+<code>/modules/&lt;module-name&gt;/fieldTypes</code> folders.)<br>
+Example showing the <code>damUpload</code> YAML definition:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/196596658/6-1-referencingFields-damUpload.png" alt="images/download/attachments/196596658/6-1-referencingFields-damUpload.png"></span></p>
+</div>
+</li>
+<li>
+<p><strong>The file names.</strong> If a field was previously defined in a YAML file,
+the file&#8217;s name has changed to the new short name. For example, the
+definition of the <a href="Expanding-text-field---5-UI.html">Expanding text
+field</a> is: <code>/content-editor/fieldTypes/expandingText.yaml</code>.<br>
+(Was previously <code>/content-editor/fieldTypes/expandingTextField.yaml`</code>.`)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you have custom fields which reuse an existing Magnolia configuration
+via
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Reusing+configuration#Reusingconfiguration-YAMLinclude">YAML
+include</a>,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Reusing+configuration#Reusingconfiguration-YAMLinherit">YAML
+inherit</a>,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Reusing+configuration#Reusingconfiguration-JCRextends">JCR
+extends</a> or by
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">decoration</a>,
+your custom definition may be broken if you reference a field which has
+changed its name.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596658_Referencingfields-5UI-Shortfieldnames"><a class="anchor" href="#src-196596658_Referencingfields-5UI-Shortfieldnames"></a>Short field names</h3>
+<div class="paragraph">
+<p>Old name (Magnolia pre-5.7)</p>
+</div>
+<div class="paragraph">
+<p>New name</p>
+</div>
+<div class="paragraph">
+<p><strong><em>UI module</em></strong></p>
+</div>
+<div class="paragraph">
+<p>basicTextCodeField</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Removed, previously deprecated.</p>
+</div>
+<div class="paragraph">
+<p><a href="Code-field---5-UI.html">code</a></p>
+</div>
+<div class="paragraph">
+<p>basicUploadField</p>
+</div>
+<div class="paragraph">
+<p><a href="Basic-upload-field---5-UI.html">basicUpload</a></p>
+</div>
+<div class="paragraph">
+<p>checkBoxField</p>
+</div>
+<div class="paragraph">
+<p><a href="Checkbox-field---5-UI.html">checkbox</a></p>
+</div>
+<div class="paragraph">
+<p>compositeField</p>
+</div>
+<div class="paragraph">
+<p><a href="Composite-field---5-UI.html">composite</a></p>
+</div>
+<div class="paragraph">
+<p>dateField</p>
+</div>
+<div class="paragraph">
+<p><a href="Date-field---5-UI.html">date</a></p>
+</div>
+<div class="paragraph">
+<p>hiddenField</p>
+</div>
+<div class="paragraph">
+<p><a href="Hidden-field---5-UI.html">hidden</a></p>
+</div>
+<div class="paragraph">
+<p>linkField</p>
+</div>
+<div class="paragraph">
+<p><a href="Link-field---5-UI.html">link</a></p>
+</div>
+<div class="paragraph">
+<p>linkFieldSelect</p>
+</div>
+<div class="paragraph">
+<p>linkFieldSelection</p>
+</div>
+<div class="paragraph">
+<p>multiField</p>
+</div>
+<div class="paragraph">
+<p><a href="Multivalue-field---5-UI.html">multiValue</a></p>
+</div>
+<div class="paragraph">
+<p>nodeTypeField</p>
+</div>
+<div class="paragraph">
+<p>nodeTypeSelect</p>
+</div>
+<div class="paragraph">
+<p>optionsField</p>
+</div>
+<div class="paragraph">
+<p><a href="Option-group-field---5-UI.html">optionGroup</a></p>
+</div>
+<div class="paragraph">
+<p>passwordField</p>
+</div>
+<div class="paragraph">
+<p><a href="Password-field---5-UI.html">password</a></p>
+</div>
+<div class="paragraph">
+<p>selectField</p>
+</div>
+<div class="paragraph">
+<p><a href="Select-field---5-UI.html">select</a></p>
+</div>
+<div class="paragraph">
+<p>staticField</p>
+</div>
+<div class="paragraph">
+<p><a href="Static-field---5-UI.html">static</a></p>
+</div>
+<div class="paragraph">
+<p>switchableField</p>
+</div>
+<div class="paragraph">
+<p><a href="Switchable-field---5-UI.html">switchable</a></p>
+</div>
+<div class="paragraph">
+<p>textArea</p>
+</div>
+<div class="paragraph">
+<p><a href="Rich-text-field---5-UI.html">richText</a></p>
+</div>
+<div class="paragraph">
+<p>textField</p>
+</div>
+<div class="paragraph">
+<p><a href="Text-field---5-UI.html">text</a></p>
+</div>
+<div class="paragraph">
+<p>twinColSelectField</p>
+</div>
+<div class="paragraph">
+<p><a href="Twin-column-field---5-UI.html">twinColSelect</a></p>
+</div>
+<div class="paragraph">
+<p>workbenchField</p>
+</div>
+<div class="paragraph">
+<p>workbench</p>
+</div>
+<div class="paragraph">
+<p><strong><em>DAM module</em></strong></p>
+</div>
+<div class="paragraph">
+<p>damUploadField</p>
+</div>
+<div class="paragraph">
+<p><a href="DAM-upload-field---5-UI.html">damUpload</a></p>
+</div>
+<div class="paragraph">
+<p>damWorkbenchField</p>
+</div>
+<div class="paragraph">
+<p>damWorkbench</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Content tags module</em></strong></p>
+</div>
+<div class="paragraph">
+<p>tagField</p>
+</div>
+<div class="paragraph">
+<p>tag</p>
+</div>
+<div class="paragraph">
+<p>taggingAwareDependenciesField</p>
+</div>
+<div class="paragraph">
+<p>taggingAwareDependencies</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Content dependencies module</em></strong></p>
+</div>
+<div class="paragraph">
+<p>referenceField</p>
+</div>
+<div class="paragraph">
+<p>dependencies</p>
+</div>
+<div class="paragraph">
+<p><strong><em>Content editor module</em></strong></p>
+</div>
+<div class="paragraph">
+<p>articleBlockPicker</p>
+</div>
+<div class="paragraph">
+<p>blockPicker</p>
+</div>
+<div class="paragraph">
+<p>collapsibleCompositeField</p>
+</div>
+<div class="paragraph">
+<p><a href="Collapsible-composite-field---5-UI.html">collapsibleComposite</a></p>
+</div>
+<div class="paragraph">
+<p>expandingLinkField</p>
+</div>
+<div class="paragraph">
+<p>expandingLink</p>
+</div>
+<div class="paragraph">
+<p>expandingTextField</p>
+</div>
+<div class="paragraph">
+<p><a href="Expanding-text-field---5-UI.html">expandingText</a></p>
+</div>
+<div class="paragraph">
+<p>peekField</p>
+</div>
+<div class="paragraph">
+<p>peek</p>
+</div>
+<div class="paragraph">
+<p>refreshableTextField</p>
+</div>
+<div class="paragraph">
+<p>refreshableText</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596658_Referencingfields-5UI-Usingtheclassproperty"><a class="anchor" href="#src-196596658_Referencingfields-5UI-Usingtheclassproperty"></a>Using the class property</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Until Magnolia 5.7, the only way to specify the type of a field was to
+state its fully qualified class name. For example, to create a simple
+<a href="Text-field---5-UI.html">text field</a> named <code>title</code> in a dialog&#8217;s tab
+called <code>tabText</code>, you had to create the following configuration:</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabText`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: title`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.ui.form.field.definition.TextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If your project uses the older <code>class</code> property in many places, you can
+continue to use the <code>class</code>. The feature is backward compatible. The
+<a href="#src-196596658_Referencingfields-5UI-Shortfieldnames">Short
+field names</a> list shows which fields are affected.</p>
+</div>
+<div class="paragraph">
+<p>Transforming field values - 5 UI</p>
+</div>
+<div class="paragraph">
+<p>Choose dialog - 5 UI</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
