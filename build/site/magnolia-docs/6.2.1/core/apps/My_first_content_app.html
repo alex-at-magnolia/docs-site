@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My first content app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/apps/My_first_content_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="My_first_content_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="My_first_content_app.html">My first content app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/apps/apps.adoc">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">My first content app - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598201"><a class="anchor" href="#src-196598201"></a>My first content app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="App_configuration.html">App configuration</a></p>
+</li>
+<li>
+<p><a href="How_to_add_SVG_icons_for_apps.html">How to add SVG icons for apps</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types">Content
+Types</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
+development in Magnolia</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/My+first+translation">My
+first translation</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This tutorial guides you through the process of creating a content app
+in Magnolia. The app you create is called the Bookshelf app and you
+create it as a Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+modules">light module</a>
+from a custom
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types">content type</a>
+definition.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598201_Myfirstcontentapp-Tutorialoverview"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Tutorialoverview"></a>Tutorial overview</h3>
+<div class="paragraph">
+<p>The tutorial consists of three pages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>My first content app – This page, which describes the Bookshelf app.</p>
+</li>
+<li>
+<p><a href="Part_I_-_Creating_a_basic_content_app.html">Part I - Creating a
+basic content app</a> – Shows how to install Magnolia with
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
+CLI</a> and create the basic Bookshelf app from a content type definition.</p>
+</li>
+<li>
+<p><a href="Part_II_-_Fine-tuning_a_basic_content_app.html">Part II -
+Fine-tuning a basic content app</a> – Provides instructions to turn the
+basic app into the final and ready-to-use Bookshelf app.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Going through the tutorial you learn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>How to define content types and use them to quickly create a content
+app.</p>
+</li>
+<li>
+<p>The basics of configuring
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/List+of+fields">fields</a> and
+setting
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+validators">field
+validators</a>.</p>
+</li>
+<li>
+<p>How to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML+inherit+and+include#YAMLinheritandinclude-YAMLoverride">override</a>
+configuration properties.</p>
+</li>
+<li>
+<p>How to make the elements of the app&#8217;s UI ready for
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">internationalization</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you want to skip the tutorial and install the final app immediately,
+clone the repository containing the ready-made Bookshelf app as a light
+module directly into your Magnolia light module folder with the command:</p>
+</div>
+<div class="paragraph">
+<p><code>git clone -b release/<code>6.2</code> --single-branch https:`</code>//git.magnolia-cms.com/scm/documentation/bookshelf.git`</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196598201_Myfirstcontentapp-anc-bookshelf-app-design]</mark>#</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598201_Myfirstcontentapp-Bookshelfappusecase"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Bookshelfappusecase"></a>Bookshelf app use case</h3>
+<div class="paragraph">
+<p>The Bookshelf app you create in this tutorial is an example of content
+app. It is a simple book catalog allowing the user to store
+bibliographic data about each book: its title, the names of the
+author(s), publisher&#8217;s name and the ISBN-13 number. The app also allows
+you to group selected book items into folders called <em>shelves</em> in the
+app.</p>
+</div>
+<div class="paragraph">
+<p>What is a content app?</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>A Content app is a specialized app type for managing structured content.
+The content app user interface consists of a browser subapp and one or
+more detail subapps. Content apps make it easy to enter items such as
+products or events. Many native Magnolia apps such as
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Demo">Tours</a> and
+<a href="Contacts_app.html">Contacts</a> are content apps. Because this app
+style is used often, the framework provides convenience classes to make
+building a content app faster.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598201_Myfirstcontentapp-Bookshelfappsubapps"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Bookshelfappsubapps"></a>Bookshelf app subapps</h4>
+<div class="paragraph">
+<p>The Bookshelf app consists of two subapps.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196598201_Myfirstcontentapp-Bookbrowser"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Bookbrowser"></a>Book browser</h5>
+<div class="paragraph">
+<p>In the <strong>Book Browser</strong> subapp, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Browse in the book catalog.</p>
+</li>
+<li>
+<p>Add, rename and delete books.</p>
+</li>
+<li>
+<p>Add, rename and delete shelves (folders for organizing books).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598201/6-1-myFirstContentApp-browser.png" alt="images/download/attachments/196598201/6-1-myFirstContentApp-browser.png"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598201_Myfirstcontentapp-Bookdetail"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Bookdetail"></a>Book detail</h5>
+<div class="paragraph">
+<p>The <strong>Book Detail</strong> subapp is a place where you can create and edit a
+book&#8217;s bibliographic properties using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text</a> fields and
+a <a href="https://wiki.magnolia-cms.com/display/DOCS62/Checkbox+field">checkbox</a>
+field.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598201/6-1-myFirstContentApp-detail.png" alt="images/download/attachments/196598201/6-1-myFirstContentApp-detail.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196598201_Myfirstcontentapp-anc-bookshelf-props]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598201_Myfirstcontentapp-Bookproperties"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Bookproperties"></a>Book properties</h4>
+<div class="paragraph">
+<p>For each book item, the Bookshelf app can store and retrieve the
+following content properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Short cataloging name (a required content property).</p>
+</li>
+<li>
+<p>Full book title.</p>
+</li>
+<li>
+<p>Author(s)' name(s).</p>
+</li>
+<li>
+<p>Whether the author(s) role is editorial or not.</p>
+</li>
+<li>
+<p>Book description.</p>
+</li>
+<li>
+<p>Publisher&#8217;s name.</p>
+</li>
+<li>
+<p>Book publication date.</p>
+</li>
+<li>
+<p>ISBN-13 number.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598201_Myfirstcontentapp-BookshelfappandMagnoliacontenttypes"><a class="anchor" href="#src-196598201_Myfirstcontentapp-BookshelfappandMagnoliacontenttypes"></a>Bookshelf app and Magnolia content types</h4>
+<div class="paragraph">
+<p>The Bookshelf app is based on Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types">content
+types</a>. Expand the following link to see more details about the app&#8217;s
+design parameters.</p>
+</div>
+<div class="paragraph">
+<p>Click to see details.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196598201_Myfirstcontentapp-Thebooksworkspace"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Thebooksworkspace"></a>The books workspace</h5>
+<div class="paragraph">
+<p>Magnolia stores content in the <code>magnolia</code> repository, a
+<a href="https://en.wikipedia.org/wiki/Content_repository_API_for_Java">JCR
+repository</a> that is divided into
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workspaces">workspaces</a>. The
+Bookshelf app is to store all books in a new workspace called <code>books</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598201_safe-id-TXlmaXJzdGNvbnRlbnRhcHAtQ3VzdG9tbGliOmJvb2tub2RldHlwZQ"><a class="anchor" href="#src-196598201_safe-id-TXlmaXJzdGNvbnRlbnRhcHAtQ3VzdG9tbGliOmJvb2tub2RldHlwZQ"></a>Custom lib:book node type</h5>
+<div class="paragraph">
+<p>In the <code>books</code> workspace, each book is a custom <code>lib:book</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types">node type</a>
+defined for this tutorial.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598201_Myfirstcontentapp-Contentproperties"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Contentproperties"></a>Content properties</h5>
+<div class="paragraph">
+<p>Each book of the <code>lib:book</code> type can have the following content
+properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">Restriction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>authors</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name(s) of the author(s) of the book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ed</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The property to store the <code>true</code> value if the primary role of the
+Author(s) is editorial.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Official book title.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description of what the book is about.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5000
+characters max.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publisher</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Book publisher&#8217;s name.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publish_date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date of publication of the book.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Display format:</p>
+</div>
+<div class="paragraph">
+<p><code>YYYY-MM-DD</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isbn13</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">International Standard Book Number in the 13-character
+variant.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>13 characters</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The first 12 characters can only be numerals, the last character can
+be a numeral or "X".</p>
+</li>
+<li>
+<p>The first three numerals can only be either "978" or "979".</p>
+</li>
+<li>
+<p>We don&#8217;t need to perform the validity check against the number&#8217;s
+checksum digit.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5">
+<h6 id="src-196598201_Myfirstcontentapp-Thenameproperty"><a class="anchor" href="#src-196598201_Myfirstcontentapp-Thenameproperty"></a>The name property</h6>
+<div class="paragraph">
+<p>When you create an app from a content type definition, the <code>name</code>
+property is generated automatically. Then the JCR node name is
+automatically deduced from the name.</p>
+</div>
+<div class="paragraph">
+<p>We make use of this auto-generated <code>name</code> property in the Bookshelf app
+by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Setting it to be a required property.</p>
+</li>
+<li>
+<p>Referring to it via the Cataloging name label in user dialogs.</p>
+</li>
+<li>
+<p>Using it for creating a short and hyphenated book identifier (JCR node
+name) such as:</p>
+<div class="paragraph">
+<p><code>Hawking-<code>2005</code>-God-Created-the-Integers</code></p>
+</div>
+<div class="paragraph">
+<p>Therefore, in the Bookshelf app, the data in the <strong>Cataloging name</strong> field
+must be entered using the following syntax:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;first-author<code>'s-surname&gt; &lt;publication-year&gt; &lt;short-form-of-the-book'</code>s-full-title&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="paragraph">
+<p><code>Hawking <code>2005</code> God Created the Integers</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia automatically replaces the spaces with hyphens when creating a
+node name from the <code>name</code> property.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On <a href="Part_I_-_Creating_a_basic_content_app.html">the next page</a>, you
+create a basic Bookshelf app.</p>
+</div>
+<div class="paragraph">
+<p>Visitors app</p>
+</div>
+<div class="paragraph">
+<p>Part I - Creating a basic content app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

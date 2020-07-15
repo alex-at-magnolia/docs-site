@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Assets app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/apps/Assets_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Assets_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Assets_app.html">Assets app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/apps/apps.adoc">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Assets app - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_apps.html">List of apps</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597774"><a class="anchor" href="#src-196597774"></a>Assets app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This page describes the old Assets app, configurable using the
+<a href="Configuration_app.html">Configuration app</a> (<code>/modules/dam-app</code>). By
+default, this app is hidden in the UI.</p>
+</div>
+<div class="paragraph">
+<p>The app that is accessible in the Applauncher is also called the Assets
+app but its configuration is stored in a YAML file
+(<code>/dam-app-jcr/decorations/dam-assets-app/apps/dam.subApps.yaml</code>) and
+editable using the <a href="Resource_Files_app.html">Resource Files</a> app.
+There is an ongoing effort to create a documentation page for this app.</p>
+</div>
+<div class="paragraph">
+<p>The Assets app allows you to manage media assets in Magnolia&#8217;s
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">digital
+asset management system (DAM)</a>. You can upload original assets into the
+system, organize them, perform basic image manipulation operations such
+as cropping. The assets can be used on the website.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597774/6-2-1-oldAssetsApp.png" alt="images/download/attachments/196597774/6-2-1-oldAssetsApp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">Digital
+asset management</a> on how to use the app. The Assets app is installed by
+the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+Asset+Management+module">DAM
+App module</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597774_Assetsapp-Configuration"><a class="anchor" href="#src-196597774_Assetsapp-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The app is based on the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Parts+of+a+content+app+-+5+UI">content
+app framework</a> so its configuration is typical of any content app.</p>
+</div>
+<div class="paragraph">
+<p>The app is configured at <code>/modules/dam-app/apps/assets</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam-app</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">assets</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196597774_Assetsapp-TurningtheimagethumbnailsoffintheBrowsersubapp"><a class="anchor" href="#src-196597774_Assetsapp-TurningtheimagethumbnailsoffintheBrowsersubapp"></a>Turning the image thumbnails off in the Browser subapp</h4>
+<div class="paragraph">
+<p>By default image thumbnails are displayed next to the asset names in the
+workbench of the Browser subapp:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597774/browser_listview551_detail_scope_on.png" alt="images/download/attachments/196597774/browser_listview551_detail_scope_on.png"></span></p>
+</div>
+<div class="paragraph">
+<p>This behavior can be changed by setting the <code>thumbnails</code> property to
+<code>false</code> under the
+<code>/modules/dam-app/apps/assets/subApps/browser/workbench/contentViews/list/columns/asset</code>
+node. An icon is then displayed next to the asset name instead of the
+thumbnail:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597774/browser_listview551_detail_scope_off.png" alt="images/download/attachments/196597774/browser_listview551_detail_scope_off.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The default value is set to <code>true</code> in the definition class. This means
+that if you do not set the value to <code>false</code> in the app configuration,
+the value is <code>true</code> and the thumbnails are displayed.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597774_Assetsapp-Workspace"><a class="anchor" href="#src-196597774_Assetsapp-Workspace"></a>Workspace</h4>
+<div class="paragraph">
+<p>The Assets app operates on the <code>dam</code> workspace. The <code>dam</code> workspace
+stores the uploaded original assets and variations created with image
+operations such as cropping.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597774_Assetsapp-Nodetypes"><a class="anchor" href="#src-196597774_Assetsapp-Nodetypes"></a>Node types</h4>
+<div class="paragraph">
+<p>The DAM App module registers a custom <code>mgnl:asset</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types">node type</a>. The
+Assets app operates on nodes of this type and on folders.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597774_Assetsapp-Editinganduploadconfiguration"><a class="anchor" href="#src-196597774_Assetsapp-Editinganduploadconfiguration"></a>Editing and upload configuration</h4>
+<div class="paragraph">
+<p>Icons, thumbnail images, preview images and supported media types are
+configured in <code>/dam-app/config/editAssetAppConfigurations</code>. The
+configurations define the supported media types and asset preview
+configurations for each asset category. For images, the edit
+configuration is also configured.</p>
+</div>
+<div class="paragraph">
+<p>Based on the <code>SupportedMediaType</code> related to the <code>Asset</code>, the
+corresponding EditAssetAppConfiguration is retrieved during the
+rendering of the <code>detail</code> subapp. Only appropriate actions are displayed
+and can be executed in the <code>detail</code> subapp. For example, users have the
+option to open the image editor and edit images, but this is not
+possible for other media types.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s the configuration for images:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam-app</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">editAssetAppConfigurations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imageUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">previewConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iconStyleName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-search</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">previewComponentProviderClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.app.ui.field.configuration.image.ImagePreviewComponentProvider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">editConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iconStyleName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-edit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mediaEditorId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supportedMediaTypes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image/*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thumbnailComponentProviderClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.app.ui.field.configuration.image.ImageThumbnailComponentProvider</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Nodes and properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>imageUploadConfiguration</code></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>previewConfig</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the action configuration to execute if a
+preview of the asset is required. Previews are only configured for
+images.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iconStyleName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon-search</code> displays search icon below the preview
+image on the left. The icon opens the image in the lightbox.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>previewComponentProviderClass</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagePreviewComponentProvider is the
+image implementation of the PreviewComponentProvider interface. This
+implementation open a <code>OverlayCloser</code> containing an image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editConfig</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the action configuration to call the image editor
+configured in <code>/modules/ui-mediaeditor/mediaEditors/image</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iconStyleName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon-edit</code> displays edit icon below the preview image
+on the right. The icon opens the image image editor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mediaEditorId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Media editor ID.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>supportedMediaTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Media types are configured as a list of <code>String</code>
+properties that are a representation of the corresponding <code>MediaType</code>
+(see below).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>image</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">By default all image formats are supported.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>thumbnailComponentProviderClass</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImageThumbnailComponentProvider
+creates a thumbnail image. You can extend this for other media types by
+installing the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+Preview+module">Dam
+Preview module</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s an image in the Asset dialog.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597774/image-upload-configuration.png" alt="images/download/attachments/196597774/image-upload-configuration.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>For other assets only the <code>supportedMediaTypes</code> and
+<code>thumbnailComponentProviderClass</code> nodes are configured. With one
+exception, they all use the same thumbnail provider class that displays
+an icon, and all media types are supported by default. SVG images use
+the image thumbnail component provider class. An image thumbnail
+displays but these images cannot be edited in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Here are the configurations in
+<code>/modules/dam-app/config/editAssetAppConfigurations</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam-app</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">editAssetAppConfigurations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imageUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">audioUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">videoUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supportedMediaTypes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">video</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">video/*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thumbnailComponentProviderClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.app.ui.field.configuration.icon.IconThumbnailComponentProvider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flashUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">applicationUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">documentUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">svgUploadConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supportedMediaTypes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image/svg+xml</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thumbnailComponentProviderClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.app.ui.field.configuration.image.ImageThumbnailComponentProvider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Nodes and properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>&lt;upload configuration name&gt;</code></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>supportedMediaTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Media types are configured as a list of <code>String</code>
+properties that are a representation of the corresponding <code>MediaType</code>
+(see below).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;media type&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">By default all asset formats are supported.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>thumbnailComponentProviderClass</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IconThumbnailComponentProvider
+creates an icon&#8217;s thumbnail related to the file media type.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s a video in the Asset dialog.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597774/video-icon-asset-dialog.png" alt="images/download/attachments/196597774/video-icon-asset-dialog.png"></span></p>
+</div>
+<div class="paragraph">
+<p><code>MediaTypes</code> in the <code>SupportedMediaTypes</code> node are configured as a list
+of <code>String</code> properties. These <code>String</code> properties are a representation
+of the corresponding <code>MediaType</code>:</p>
+</div>
+<div class="paragraph">
+<p>`    String incommingMimeType = <code>"image/png"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// 'image/*' is the string to be put in configuration if the config has to support all images</code></p>
+</div>
+<div class="paragraph">
+<p>`    MediaType allImage = MediaType.parse(<code>"image/*"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// 'image/Jpeg' is the string to be put in configuration if the config has to support only jpeg</code></p>
+</div>
+<div class="paragraph">
+<p>`    MediaType onlyJpeg = MediaType.parse(<code>"image/jpeg"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// RETURN TRUE</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>boolean</code> isImage = MediaType.parse(incommingMimeType).is(allImage);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// RETURN FALSE</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>boolean</code> isJpeg = MediaType.parse(incommingMimeType).is(onlyJpeg);`</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597774_Assetsapp-Usingtheapp"><a class="anchor" href="#src-196597774_Assetsapp-Usingtheapp"></a>Using the app</h3>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">Digital
+asset management</a> for how to use the Assets app to store and use your
+media files.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The DAM can handle a very large number of assets. However, if you have
+more than 20.000 assets, you should organize them into folders. Avoid
+storing too many assets in the same folder. Instead, create subfolders
+and organize your assets. Storing too many assets within the same folder
+may lead to performance issues. If you need a large and unstructured
+flat list of assets, disable the thumbnail and list views.</p>
+</div>
+<div class="paragraph">
+<p>Activation Tools app</p>
+</div>
+<div class="paragraph">
+<p>Backup app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

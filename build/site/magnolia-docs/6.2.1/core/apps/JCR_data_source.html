@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JCR data source - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/apps/JCR_data_source.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="JCR_data_source.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="JCR_data_source.html">JCR data source - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/apps/apps.adoc">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">JCR data source - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="App_configuration.html">App configuration</a></p>
+</li>
+<li>
+<p><a href="Data_source_definition.html">Data source definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596356"><a class="anchor" href="#src-196596356"></a>JCR data source</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>The JCR data source provides a flat or hierarchical structure of JCR
+nodes from a given JCR workspace in a specified root path.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The JCR data source is part of the <em>Magnolia 6 UI</em> framework. The fully
+qualified class name is
+<code>info.magnolia.ui.datasource.jcr.JcrDatasourceDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+connector+-+5+UI">Content
+connector</a> instead.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596356_JCRdatasource-Exampledefinition"><a class="anchor" href="#src-196596356_JCRdatasource-Exampledefinition"></a>Example definition</h3>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  $type: jcrDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`  workspace: contacts`</p>
+</div>
+<div class="paragraph">
+<p>`  includeProperties: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`  preview:`</p>
+</div>
+<div class="paragraph">
+<p>`    nodeName: photo`</p>
+</div>
+<div class="paragraph">
+<p>`  allowedNodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`    - mgnl:contact`</p>
+</div>
+<div class="paragraph">
+<p>`    - mgnl:folder`</p>
+</div>
+<div class="paragraph">
+<p>`  describeByProperty: lastName #will display a contact last name instead of its JCR path, e.g. Bach instead of /jsbach`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596356_JCRdatasource-Listofproperties"><a class="anchor" href="#src-196596356_JCRdatasource-Listofproperties"></a>List of properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code> or <code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Use <code>info.magnolia.ui.datasource.jcr.JcrDatasourceDefinition</code> for the
+<code>class</code> property or <code>jcrDatasource</code> for the <code>$type</code> shortcut.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>preview</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Specifies the parameters for JcrPreviewProvider.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="JCR_preview_definition.html">JCR preview definition</a> for more
+information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workspaces">workspace</a> in
+the <code>magnolia</code> repository you want to browse.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional,</strong> <em>default is `jcr`</em></p>
+</div>
+<div class="paragraph">
+<p>Name of the data source.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rootPath</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `/`</em></p>
+</div>
+<div class="paragraph">
+<p>Path configured as the root of the workspace. Only content below the
+path is operated on.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>includeProperties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Shows JCR properties of the node when set to <code>true</code>. Only nodes and
+subnodes are displayed when <code>false</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>allowedNodeTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>List of node types the data source operates on. If no value is
+specified, the data source will operate on all node types.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>describeByProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Value must be a JCR property present on the nodes of the corresponding
+workspace. If the node does not contain the given property, the node
+path will be used instead.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sortable</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>When set to <code>true</code>, the list of nodes can be sorted.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sortByProperties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>List of JCR properties the data source sorts by. For this to work, you
+have to set <code>sortable</code> to <code>true</code>. If no value is specified,
+<code>describeByProperty</code> will be used instead.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596356_JCRdatasource-Datasourcecomponents"><a class="anchor" href="#src-196596356_JCRdatasource-Datasourcecomponents"></a>Data source components</h3>
+<div class="paragraph">
+<p>Module component mappings can be defined in the context of the current
+data source (a component section should have an id in the form of
+<code>&lt;id&gt;datasource-&lt;ds-name&gt;&lt;/id&gt;</code>, where <code>&lt;ds-name&gt;</code> is configured in the
+definition).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Implementation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.SelectFieldSupport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.field.JcrSelectFieldSupport</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides delegates
+required by select fields.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.datasource.ItemResolver</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.JcrNodeResolver</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts path to actual
+item and back.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.version.VersionResolver</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.version.JcrVersionResolver</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Looks up
+version of selected item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.browser.preview.PreviewProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.preview.JcrPreviewProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides
+preview of selected item (for example, content of a binary node or link
+to an image).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.datasource.PropertySetFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.JcrPropertySetFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reads and writes
+properties from/to item in form.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.Datasource</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.datasource.jcr.JcrDatasource</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modifies items in grid
+for JCR data source.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.availability.AvailabilityChecker</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.availability.JcrAvailabilityChecker</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks whether
+items comply with the criteria defined in AvailabilityDefinition.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.observation.DatasourceObservation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.observation.JcrDataSourceObservation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observation utility wrapper used in UI framework.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.browser.ItemInteractionAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.JcrItemInteractionAvailability</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checks
+whether item is available for interaction (selection, editing, etc).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.ItemDescriber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.JcrItemDescriber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays description
+for selected item(s) at the bottom of app.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.contentapp.browser.ListPresenter</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui.contentapp.browser.TreePresenter</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui.contentapp.browser.ThumbnailPresenter</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.contentapp.JcrListPresenter</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui.contentapp.JcrTreePresenter</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui.contentapp.JcrThumbnailPresenter</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays items as list, tree or thumbnails. See also
+<a href="#src-196596356_JCRdatasource-JCRcomponentfiltering">JCR component
+filtering</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Component mappings in module descriptor</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>components</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>id</code>&gt;datasource-jcr&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.field.SelectFieldSupport&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.field.JcrSelectFieldSupport&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.datasource.ItemResolver&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrNodeResolver&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.version.VersionResolver&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.version.JcrVersionResolver&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.preview.PreviewProvider&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.preview.JcrPreviewProvider&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.datasource.PropertySetFactory&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrPropertySetFactory&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.Datasource&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.datasource.jcr.JcrDatasource&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.availability.AvailabilityChecker&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.availability.JcrAvailabilityChecker&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.observation.DatasourceObservation&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.observation.JcrDataSourceObservation&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.ItemInteractionAvailability&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrItemInteractionAvailability&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.ItemDescriber&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrItemDescriber&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.ListPresenter&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrListPresenter&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.TreePresenter&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrTreePresenter&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>type</code>&gt;info.magnolia.ui.contentapp.browser.ThumbnailPresenter&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>implementation</code>&gt;info.magnolia.ui.contentapp.JcrThumbnailPresenter&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>type</code>-mapping&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>components</code>&gt;</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596356_JCRdatasource-JCRcomponentfiltering"><a class="anchor" href="#src-196596356_JCRdatasource-JCRcomponentfiltering"></a>JCR component filtering</h3>
+<div class="paragraph">
+<p>In <a href="Column_definition.html">columns</a>, JcrDataProvider supports
+filtering by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Node name (JcrTitleColumnDefinition)</p>
+</li>
+<li>
+<p>Node path (JcrPathColumnDefinition)</p>
+</li>
+<li>
+<p>Activation status (JcrStatusColumnDefinition)</p>
+</li>
+<li>
+<p>Any other JCR property value</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the <a href="Content_view_definition.html">tree view</a>, an item will not be
+filtered if the name of the item or any of its children matches the
+filter name. This might have a performance impact for items with
+thousands of subnodes. Depending on how fast you expect filtering to be,
+you may want to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide only the list view</p>
+</li>
+<li>
+<p>Skip filter components in your custom apps for huge workspaces</p>
+</li>
+<li>
+<p>Disable filter components by decorating out-of-the-box apps</p>
+<div class="paragraph">
+<p><code>filterComponent:</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>`  $type: hiddenField`</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Because filter objects are shared between views, the same filter
+components should be available in both tree and list views (except for
+JcrPathColumnDefinition, which is expected to be only in the list view).</p>
+</div>
+<div class="paragraph">
+<p>Data source definition</p>
+</div>
+<div class="paragraph">
+<p>JCR preview definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

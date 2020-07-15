@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Developing a custom content editor app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/apps/Developing_a_custom_content_editor_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Developing_a_custom_content_editor_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Developing_a_custom_content_editor_app.html">Developing a custom content editor app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/apps/apps.adoc">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Developing a custom content editor app - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598278"><a class="anchor" href="#src-196598278"></a>Developing a custom content editor app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+editor">Content
+editor</a></p>
+</li>
+<li>
+<p><a href="Stories_app.html">Stories app</a></p>
+</li>
+<li>
+<p><a href="Developing_and_rendering_custom_content_blocks.html">Developing
+and rendering custom content blocks</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Editor+module">Content
+Editor module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes how to develop a custom content editor app based on
+the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+editor">Content
+editor</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598278_Developingacustomcontenteditorapp-Beforeyoustart"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Beforeyoustart"></a>Before you start</h3>
+<div class="paragraph">
+<p>This section mentions what you should be aware of before creating an
+implementation of the content editor.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_safe-id-RGV2ZWxvcGluZ2FjdXN0b21jb250ZW50ZWRpdG9yYXBwLVVuZGVyc3RhbmRpbmd0aGVjb250ZW50bW9kZWw6YmxvY2ssY29tcG9zaXRpb24"><a class="anchor" href="#src-196598278_safe-id-RGV2ZWxvcGluZ2FjdXN0b21jb250ZW50ZWRpdG9yYXBwLVVuZGVyc3RhbmRpbmd0aGVjb250ZW50bW9kZWw6YmxvY2ssY29tcG9zaXRpb24"></a>Understanding the content model: block, composition</h4>
+<div class="paragraph">
+<p>A <em>block</em> is a well-defined page section which, together with other
+blocks and additional meta information, can form a single content
+<em>composition</em>.</p>
+</div>
+<div class="paragraph">
+<p>In the context of the content editor app, each item (e.g. a story in the
+stories-app) is a <em>composition</em> of N <em>blocks</em> of editable content, such
+as headings and paragraphs, complemented by meta information such as the
+required fields for the <em>lead</em> and <em>title</em> of the story:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598278/6-1-developingCustomEditor-storyExample.png" alt="images/download/attachments/196598278/6-1-developingCustomEditor-storyExample.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196598278_Developingacustomcontenteditorapp-node-types]</mark>#</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_Developingacustomcontenteditorapp-Requirednodetypes"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Requirednodetypes"></a>Required node types</h4>
+<div class="paragraph">
+<p>The content editor UI expects nodes of the type <code>mgnl:composition</code> and
+<code>mgnl:block</code>. These node types are defined in the file
+<code>content-editor-nodetypes.xml</code> which resides in the
+<code>magnolia-content-editor</code> submodule.</p>
+</div>
+<div class="paragraph">
+<p>Hoewever, registration of these node types is handled by the
+<code>stories-app</code> or the <code>article-editor</code> via the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/XML-based+module+descriptor">XML-based
+module descriptor</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_Developingacustomcontenteditorapp-Dependenciesonthecontenteditormodules"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Dependenciesonthecontenteditormodules"></a>Dependencies on the content editor modules</h4>
+<div class="paragraph">
+<p>In any case, your implementation of the content editor depends on the
+following modules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>magnolia-content-editor</code></p>
+</li>
+<li>
+<p><code>magnolia-block-api</code></p>
+</li>
+<li>
+<p><code>magnolia-block-templating</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Besides the requirement for these "base modules", you must also ensure
+that the system registers the
+<a href="#src-196598278_Developingacustomcontenteditorapp-node-types">required
+node types</a>.</p>
+</div>
+<div class="paragraph">
+<p>If your custom content editor is created with a light module, your
+bundle must contain either the <code>stories-app</code> or the <code>article-editor</code>
+module. If created with a Magnolia Maven module, you can register the
+node types within your custom module.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you are using a preconfigured DX Core webapp or bundle (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps#Bundlesandwebapps-ListofpreconfiguredMagnoliabundles">the
+list of preconfigured Magnolia bundles</a>), it already contains the
+<code>stories-app</code> and all the required modules.</p>
+</div>
+<div class="paragraph">
+<p>Read
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Editor+module#ContentEditormodule-Installing">Content
+Editor module - Installing</a> for a deeper understanding of the
+dependencies between the content editor submodules.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_Developingacustomcontenteditorapp-Workspace"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Workspace"></a>Workspace</h4>
+<div class="paragraph">
+<p>To store new content items with your custom content editor, you can use</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <code>stories</code> workspace provided by the <code>stories-app</code> module,</p>
+</li>
+<li>
+<p>the <code>articles</code> workspace provided by the <code>article-editor</code> module,</p>
+</li>
+<li>
+<p>or a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workspaces#Workspaces-Addingacustomworkspace">custom
+workspace</a> defined by your custom module.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_Developingacustomcontenteditorapp-Multilingualcontent"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Multilingualcontent"></a>Multilingual content</h4>
+<div class="paragraph">
+<p>The Content editor and the Stories app don&#8217;t yet support multi-language
+content.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598278_Developingacustomcontenteditorapp-Definingacustomcontenteditorapp"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Definingacustomcontenteditorapp"></a>Defining a custom content editor app</h3>
+<div class="paragraph">
+<p>Developing a custom content editor app is similar to creating a
+<a href="My_first_content_app.html">content app</a> because it is also based on
+the <code>info.magnolia.ui.contentapp.ContentApp</code> app class.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can build your custom content editor app within a light module.</p>
+</div>
+<div class="paragraph">
+<p>Here is an overview how to define a content editor app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a YAML <a href="App_descriptor.html">app descriptor</a> with its
+subapps.</p>
+</li>
+<li>
+<p>Make sure the <code>contentConnector</code> is using the <code>mgnl:composition</code>
+nodetype.</p>
+</li>
+<li>
+<p>Specifiy the <code>contentDefinition</code> with the outline and the blocks
+section.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_Developingacustomcontenteditorapp-Creatingthedescriptorandsubapps"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-Creatingthedescriptorandsubapps"></a>Creating the descriptor and subapps</h4>
+<div class="paragraph">
+<p>Create a YAML <a href="App_descriptor.html">app descriptor</a>.</p>
+</div>
+<div class="paragraph">
+<p>Typically, you need at least the following two subapps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Parts+of+a+content+app+-+5+UI#Partsofacontentapp-5UI-Browsersubapp">browser
+subapp</a>. Use a regular browser subapp class
+<code>info.magnolia.ui.contentapp.browser.BrowserSubApp</code> .</p>
+</li>
+<li>
+<p>The editor subapp, which is a variant of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Parts+of+a+content+app+-5+UI#Partsofacontentapp-5UI-Detailsubapp[detail
+subapp]. It implements content editor's
+`info.magnolia.editor.app.ContentEditorSubAppDescriptor` class (see also
+https://wiki.magnolia-cms.com/display/DOCS62/ContentEditorSubApp+descriptor-+5+UI">ContentEditorSubApp
+descriptor</a>).<br>
+The editor subapp must also implement the `ActionDefinition `of the
+Content Editor module.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>ContentEditorSubAppDescriptor and ActionDefinition(s)</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  close:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.editor.action.CloseContentEditorActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  save:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.editor.action.SaveContentActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  saveAndPublish:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.editor.action.SaveContentActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`    onSuccessAction:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.ui.framework.action.ActivationActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`      command: activate`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_safe-id-RGV2ZWxvcGluZ2FjdXN0b21jb250ZW50ZWRpdG9yYXBwLVVzaW5ndGhlbWdubDpjb21wb3NpdGlvbm5vZGV0eXBlaW50aGVjb250ZW50Q29ubmVjdG9y"><a class="anchor" href="#src-196598278_safe-id-RGV2ZWxvcGluZ2FjdXN0b21jb250ZW50ZWRpdG9yYXBwLVVzaW5ndGhlbWdubDpjb21wb3NpdGlvbm5vZGV0eXBlaW50aGVjb250ZW50Q29ubmVjdG9y"></a>Using the mgnl:composition nodetype in the contentConnector</h4>
+<div class="paragraph">
+<p>Set the <code>mgnl:composition</code> nodetype for the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+connector+-+5+UI"><code>contentConnector</code></a>
+property in the <a href="Subapp_descriptor.html">subapp descriptors</a> of your
+content editor:</p>
+</div>
+<div class="paragraph">
+<p>contentConnector of the browser subapp</p>
+</div>
+<div class="paragraph">
+<p><code>contentConnector:</code></p>
+</div>
+<div class="paragraph">
+<p>`  includeProperties: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: &lt;workspace-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  rootPath: /`</p>
+</div>
+<div class="paragraph">
+<p>`  defaultOrder: jcrName`</p>
+</div>
+<div class="paragraph">
+<p>`  nodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`    - icon: icon-node-content`</p>
+</div>
+<div class="paragraph">
+<p>`      name: mgnl:composition`</p>
+</div>
+<div class="paragraph">
+<p>`      strict: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    - icon: icon-folder-l`</p>
+</div>
+<div class="paragraph">
+<p>`      name: mgnl:folder`</p>
+</div>
+<div class="paragraph">
+<p>`      strict: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>contentConnector of the editor subapp</p>
+</div>
+<div class="paragraph">
+<p><code>contentConnector:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: &lt;workspace-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  nodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`    - icon: icon-node-content`</p>
+</div>
+<div class="paragraph">
+<p>`      name: mgnl:composition`</p>
+</div>
+<div class="paragraph">
+<p>`      strict: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    - icon: icon-folder-l`</p>
+</div>
+<div class="paragraph">
+<p>`      name: mgnl:folder`</p>
+</div>
+<div class="paragraph">
+<p>`      strict: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>Instead of &lt;workspace-name&gt; use <code>stories</code>, <code>articles</code> or the name of
+your custom workspace.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598278_Developingacustomcontenteditorapp-SettingthecontentDefinitionproperties"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-SettingthecontentDefinitionproperties"></a>Setting the contentDefinition properties</h4>
+<div class="paragraph">
+<p>Add the <code>contentDefiniton</code> node to your editor subapp&#8217;s descriptor and
+define in it what content is allowed (i.e. editable).</p>
+</div>
+<div class="paragraph">
+<p>You must specify <code>outlineFields</code>, <code>initialBlock</code>, <code>defaultBlock</code> and
+<code>linkableApps</code> .</p>
+</div>
+<div class="sect4">
+<h5 id="src-196598278_Developingacustomcontenteditorapp-outlineFields"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-outlineFields"></a>outlineFields</h5>
+<div class="paragraph">
+<p>With <code>outlineFields</code> you define the static, structured information which
+you want on every content item.</p>
+</div>
+<div class="paragraph">
+<p>The example below has the following properties: <code>title</code>, <code>lead</code>,
+<code>image</code>, <code>created</code>, <code>author</code> and <code>jcrName</code> .</p>
+</div>
+<div class="paragraph">
+<p>`      outlineFields:`</p>
+</div>
+<div class="paragraph">
+<p>`        title:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.editor.app.field.ExpandingTextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          styleName: title`</p>
+</div>
+<div class="paragraph">
+<p>`        lead:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.editor.app.field.ExpandingTextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          rows: <code>`3</code></p>
+</div>
+<div class="paragraph">
+<p>`          required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          styleName: lead-text`</p>
+</div>
+<div class="paragraph">
+<p>`        image:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.ui.form.field.definition.LinkFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          targetWorkspace: dam`</p>
+</div>
+<div class="paragraph">
+<p>`          appName: assets`</p>
+</div>
+<div class="paragraph">
+<p>`          identifierToPathConverter:`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>class</code>: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator`</p>
+</div>
+<div class="paragraph">
+<p>`          contentPreviewDefinition:`</p>
+</div>
+<div class="paragraph">
+<p>`            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent`</p>
+</div>
+<div class="paragraph">
+<p>`        entryMetaData:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.editor.app.field.CollapsibleCompositeFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          collapsed: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          fields:`</p>
+</div>
+<div class="paragraph">
+<p>`            created:`</p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.ui.form.field.definition.DateFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              time: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`              required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`            author:`</p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.editor.app.field.PlaceholderTextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`            jcrName:`</p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.editor.app.field.PlaceholderTextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p><code># eof: outlineFields</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598278_Developingacustomcontenteditorapp-blocks"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-blocks"></a>blocks</h5>
+<div class="paragraph">
+<p>This property defines the block types that are allowed.</p>
+</div>
+<div class="paragraph">
+<p>Example definition of allowed blocks</p>
+</div>
+<div class="paragraph">
+<p><code>blocks:</code></p>
+</div>
+<div class="paragraph">
+<p>`  - text`</p>
+</div>
+<div class="paragraph">
+<p>`  - image`</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The Content Editor module comes with four predefined types of block you
+can use in your editor: <code>text</code>, <code>image</code>, <code>video</code> and <code>externalLink</code> .
+You can also
+<a href="Developing_and_rendering_custom_content_blocks.html">define your own
+content block(s)</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598278_Developingacustomcontenteditorapp-initialBlock"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-initialBlock"></a>initialBlock</h5>
+<div class="paragraph">
+<p>Specifies what will be created as the initial, automatically added block
+when creating new content (or when no block is available).</p>
+</div>
+<div class="paragraph">
+<p>Example definition of the initialBlock</p>
+</div>
+<div class="paragraph">
+<p><code>initialBlock: text</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598278/6-1-developingCustomContentEditor-initialBlockText.png" alt="images/download/attachments/196598278/6-1-developingCustomContentEditor-initialBlockText.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Example definition of the initialBlock</p>
+</div>
+<div class="paragraph">
+<p><code>initialBlock: image</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598278/6-1-developingCustomContentEditor-initialBlockImage.png" alt="images/download/attachments/196598278/6-1-developingCustomContentEditor-initialBlockImage.png" height="250"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598278_Developingacustomcontenteditorapp-defaultBlock"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-defaultBlock"></a>defaultBlock</h5>
+<div class="paragraph">
+<p>Defines the block type which will be pre-selected by BlockPickerField.</p>
+</div>
+<div class="paragraph">
+<p>Example definition of the defaultBlock</p>
+</div>
+<div class="paragraph">
+<p><code>defaultBlock: image</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598278/6-1-developingCustomContentEditor-defaultBlockImage.png" alt="images/download/attachments/196598278/6-1-developingCustomContentEditor-defaultBlockImage.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Example definition of the defaultBlock</p>
+</div>
+<div class="paragraph">
+<p><code>defaultBlock: text</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598278/6-1-developingCustomContentEditor-defaultBlockText.png" alt="images/download/attachments/196598278/6-1-developingCustomContentEditor-defaultBlockText.png"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598278_Developingacustomcontenteditorapp-linkableApp"><a class="anchor" href="#src-196598278_Developingacustomcontenteditorapp-linkableApp"></a>linkableApp</h5>
+<div class="paragraph">
+<p>Defines the app(s) whose resources you can link to from the
+<a href="Developing_and_rendering_custom_content_blocks.html#src-196598292_Developingandrenderingcustomcontentblocks-Blocktypes"><code>text</code></a>
+block.</p>
+</div>
+<div class="paragraph">
+<p>Example definition of the linkableApps</p>
+</div>
+<div class="paragraph">
+<p><code>linkableApps:</code></p>
+</div>
+<div class="paragraph">
+<p>`  - pages`</p>
+</div>
+<div class="paragraph">
+<p>`  - assets`</p>
+</div>
+<div class="paragraph">
+<p>`  - contacts`</p>
+</div>
+<div class="paragraph">
+<p>Action bar definition</p>
+</div>
+<div class="paragraph">
+<p>Developing and rendering custom content blocks</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

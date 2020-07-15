@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Message types - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/apps/Message_types.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Message_types.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Message_types.html">Message types - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/apps/apps.adoc">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Message types - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Developing_an_app.html">Developing an app</a></p>
+</li>
+<li>
+<p><a href="Messages.html">Messages</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598466"><a class="anchor" href="#src-196598466"></a>Message types</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>You can show information to users in three basic types: Notifications,
+alerts and pop-ups.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598466_Messagetypes-Messageurgencylevels"><a class="anchor" href="#src-196598466_Messagetypes-Messageurgencylevels"></a>Message urgency levels</h3>
+<div class="paragraph">
+<p>All message types have at least the following levels of urgency, as
+defined in MessageType:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ERROR</code> messages report a severe problem that has occurred.</p>
+</li>
+<li>
+<p><code>WARNING</code> messages warn the user that the system has detected a
+condition which requires the user&#8217;s attention.</p>
+</li>
+<li>
+<p><code>INFO</code> messages simply inform the user about a change or a situation.</p>
+</li>
+<li>
+<p><code>WORKITEM</code> is a special type reserved for workflow messages.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598466_Messagetypes-Notifications"><a class="anchor" href="#src-196598466_Messagetypes-Notifications"></a>Notifications</h3>
+<div class="paragraph">
+<p>Notifications are banner-type messages that inform the user about system
+and app events. Notifications are displayed prominently at the top of
+the Magnolia UI. They capture the user&#8217;s attention effectively but do
+not interrupt what the user is currently working on. Notifications are
+the only persistent message type. The user can safely close the
+notification banner and read the full message in the
+<a href="Notifications_app.html">Notifications app</a> later.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Behavior"><a class="anchor" href="#src-196598466_Messagetypes-Behavior"></a>Behavior</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Notifications must be closed by the user. A notification stays on the
+page until the user clicks it.</p>
+</li>
+<li>
+<p>Not displayed modally. Does not interrupt what the user is currently
+working on.</p>
+</li>
+<li>
+<p>Persistent. The message is <a href="Message_storage.html">stored in the
+<code>messages</code> workspace</a>.</p>
+</li>
+<li>
+<p>Only the title and an optional short description is displayed in the
+notification. Full message is in the
+<a href="Notifications_app.html">Notifications app</a>.</p>
+</li>
+<li>
+<p>Clicking the <strong>Read more</strong> button on the notification opens the message
+in the Notifications app.</p>
+</li>
+<li>
+<p>Notification messages can be displayed to the current user, a specific
+named user, a group of users, or broadcast to all users.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Examples"><a class="anchor" href="#src-196598466_Messagetypes-Examples"></a>Examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>An error captures an exception that occurred in an app and which was
+not foreseen. (<code>ERROR</code> message sent by an app)</p>
+</li>
+<li>
+<p>A warning is sent since the license of a particular app is about to
+expire. (<code>WARNING</code> message sent by an app)</p>
+</li>
+<li>
+<p>A warning is sent to an administrator that the license of a particular
+Magnolia instance is about to expire. (<code>WARNING</code> message sent by the
+system)</p>
+</li>
+<li>
+<p>An administrator is informed that a new version of a particular app is
+available. (<code>INFO</code> message sent by an app)</p>
+</li>
+<li>
+<p>An administrator sends an instance-wide message to all users that the
+instance will be taken down and restarted in an hour. (<code>INFO</code> message
+defined by and sent to all users by an admin app)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Lookslike"><a class="anchor" href="#src-196598466_Messagetypes-Lookslike"></a>Looks like</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598466/6-1-1-messageTypes-warningNotifExample.png" alt="images/download/attachments/196598466/6-1-1-messageTypes-warningNotifExample.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Error</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598789/6-1-errorNotification.png" alt="images/download/attachments/196598789/6-1-errorNotification.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Warning</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598789/6-1-warningNotification.png" alt="images/download/attachments/196598789/6-1-warningNotification.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Info</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598789/6-1-infoNotification.png" alt="images/download/attachments/196598789/6-1-infoNotification.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Howtoshow"><a class="anchor" href="#src-196598466_Messagetypes-Howtoshow"></a>How to show</h4>
+<div class="paragraph">
+<p>See <a href="Showing_notifications.html">Showing notifications</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598466_Messagetypes-Alerts"><a class="anchor" href="#src-196598466_Messagetypes-Alerts"></a>Alerts</h3>
+<div class="paragraph">
+<p>Alerts are modal messages that show up in the context the user is
+currently working in. You can use alerts to confirm that an action
+should be executed, inform the user of harmful consequences, or report
+the progress of a long-running action. Since alerts are modal they block
+the user interface.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Do not use alerts to gather any user input. For quick input, use a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+types">light dialog</a>
+instead. Light dialogs are meant to carry a small set of form fields and
+still resemble regular dialogs. For complex input, use a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+types">regular
+dialog</a>. Dialogs should be used when presenting the forms for adjusting
+the page properties or the settings in the user profile. You might even
+want to use a wizard dialog, if you have to guide your user through
+multiple steps.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Behavior.1"><a class="anchor" href="#src-196598466_Messagetypes-Behavior.1"></a>Behavior</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Alerts are displayed in the context the user currently works in. They
+don&#8217;t make much sense outside of context.</p>
+</li>
+<li>
+<p>Transient. Alerts are not stored and thus they do not show up in the
+Notifications app.</p>
+</li>
+<li>
+<p>Sent by apps, subapps or shell apps. Alerts often originate from a
+particular UI element within an app.</p>
+</li>
+<li>
+<p>Modal. Alerts block the UI element they originate from.</p>
+</li>
+<li>
+<p>Personal. Displayed only to the user who triggers the alert. Alerts
+cannot be sent to other users.</p>
+</li>
+<li>
+<p>Don&#8217;t collect user input with alerts. Simple button answers only:
+Yes/No, OK/Cancel.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Whentouse"><a class="anchor" href="#src-196598466_Messagetypes-Whentouse"></a>When to use</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Yes-No question</strong>: an alert asks the user whether an action should
+proceed or not.</p>
+</li>
+<li>
+<p><strong>Confirmation</strong>: an alert informs the user of an important fact and
+requires that the user confirm it was read and understood.</p>
+</li>
+<li>
+<p><strong>Cancel confirmation</strong>: an alert confirms that an action was
+successfully aborted by the user and informs about the consequences.</p>
+</li>
+<li>
+<p><strong>Progress report</strong>: an alert reports the progress of a long-running
+action that needs to block the UI - or at least major parts of it.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Examples.1"><a class="anchor" href="#src-196598466_Messagetypes-Examples.1"></a>Examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>A user deletes one or more contacts. An alert asks the user to confirm
+the deletion because it cannot be undone. (Yes-No question)</p>
+</li>
+<li>
+<p>A user aborts a simultaneous publication of several pages. An alert
+confirms that the action was canceled and lists pages that were already
+activated as well as those that were not. (Cancel confirmation)</p>
+</li>
+<li>
+<p>An alert asks the user to confirm a publication request. The same
+message allows the user to also publish all subitems as well by checking
+a box. (simple form + Yes-No question)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Lookslike.1"><a class="anchor" href="#src-196598466_Messagetypes-Lookslike.1"></a>Looks like</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598466/6-1-messageTypes-alertExample.png" alt="images/download/attachments/196598466/6-1-messageTypes-alertExample.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Howtoshow.1"><a class="anchor" href="#src-196598466_Messagetypes-Howtoshow.1"></a>How to show</h4>
+<div class="paragraph">
+<p>See <a href="Showing_alerts.html">Showing alerts</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598466_Messagetypes-Pop-ups"><a class="anchor" href="#src-196598466_Messagetypes-Pop-ups"></a>Pop-ups</h3>
+<div class="paragraph">
+<p>Pop-ups are non-intrusive messages that inform the user whether an
+action was completed or aborted successfully. Typically they confirm
+something. Pop-ups look like Post-IT notes. They go away automatically
+and don&#8217;t require user action. Use pop-ups to confirm what the user did
+and provide them with confidence and assurance.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Behavior.2"><a class="anchor" href="#src-196598466_Messagetypes-Behavior.2"></a>Behavior</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Inform that an action was or currently is being executed. Pop-ups may
+also inform that an action failed to properly perform its task.</p>
+</li>
+<li>
+<p>Displayed in the context the user currently works in. They don&#8217;t make
+much sense outside of context.</p>
+</li>
+<li>
+<p>Transient. Pop-ups are not stored and thus they do not show up in the
+Notifications app.</p>
+</li>
+<li>
+<p>Sent by apps, subapps or shell apps.</p>
+</li>
+<li>
+<p>Non-modal. pop-ups don&#8217;t block the UI and they go away automatically
+after 3 seconds.</p>
+</li>
+<li>
+<p>Personal. Displayed only to the user who triggers the pop-up. Pop-ups
+cannot be sent to other users.</p>
+</li>
+<li>
+<p>Don&#8217;t collect user input with pop-ups. Just inform the user of
+changes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Whentouse.1"><a class="anchor" href="#src-196598466_Messagetypes-Whentouse.1"></a>When to use</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Success confirmation</strong>: a pop-up confirms that an action was executed
+successfully.</p>
+</li>
+<li>
+<p><strong>Cancel confirmation</strong>: a pop-up confirms that an action was
+successfully aborted by a user.</p>
+</li>
+<li>
+<p><strong>Progress report</strong>: a pop-up reports the progress of a long-running,
+non-blocking action.</p>
+</li>
+<li>
+<p><strong>Quick info</strong>: a pop-up reports that an event has occurred that affects
+what the user is currently working on.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Examples.2"><a class="anchor" href="#src-196598466_Messagetypes-Examples.2"></a>Examples</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>A user publishes many pages at once. A pop-up reports on how far the
+publication has proceeded and how long it still takes to complete.
+(Progress report)</p>
+</li>
+<li>
+<p>At the end of a long publication process, a pop-up confirms that all
+20 pages were published successfully. (Success confirmation)</p>
+</li>
+<li>
+<p>During an image upload, a pop-up signals the upload progress using a
+progress bar. (Progress report)</p>
+</li>
+<li>
+<p>A user aborts an image upload. A pop-up confirms that the upload was
+canceled. (Cancel confirmation)</p>
+</li>
+<li>
+<p>Another user has just started to edit the same item as you. A pop-up
+tells you are now working on the same content. (Quick info)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Lookslike.2"><a class="anchor" href="#src-196598466_Messagetypes-Lookslike.2"></a>Looks like</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598466/6-1-messageTypes-popupExample.png" alt="images/download/attachments/196598466/6-1-messageTypes-popupExample.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598466_Messagetypes-Howtoshow.2"><a class="anchor" href="#src-196598466_Messagetypes-Howtoshow.2"></a>How to show</h4>
+<div class="paragraph">
+<p>See <a href="Showing_pop-ups.html">Showing pop-ups</a></p>
+</div>
+<div class="paragraph">
+<p>Messages</p>
+</div>
+<div class="paragraph">
+<p>Showing notifications</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
