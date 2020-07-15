@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Image recognition :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/image-recognition.html">
+    <meta name="keywords" content="image-recognition, ai, feature">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="image-recognition.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/image-recognition.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="image-recognition.html">Image recognition</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Image recognition</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Modules/List+of+modules/Image+Recognition+module">Image
+Recognition module</a></p>
+</li>
+<li>
+<p><a href="/Features/Find+Bar">Find Bar</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Periscope+module">Periscope module</a></p>
+</li>
+<li>
+<p><a href="/Features/Content+tagging">Content tagging</a></p>
+</li>
+<li>
+<p><a href="/Features/Digital+asset+management">Digital asset management</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia image recognition extends the search capabilities of the Find
+bar by automatically recognizing and tagging the content of image
+assets, allowing you to get more relevant results when searching.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_in_an_image"><a class="anchor" href="#_whats_in_an_image"></a>What’s in an image?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>How can Magnolia’s image recognition feature help your content editors?
+Consider the following example image that depicts the
+<a href="https://en.wikipedia.org/wiki/Mount_Bromo">Mount Bromo volcano</a>, a
+popular tourist attraction in East Java, Indonesia.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/flickr_indonesia_michael_day_2564067897_8d17df6972_b.jpg" alt="image" width="300"></span></p>
+</div>
+<div class="paragraph">
+<p>The image is used as a signature image for the <strong>Island hopping in
+Indonesia</strong> example tour in Magnolia’s
+<a href="/Getting+started+with+Magnolia/Demo/Travel+demo+-+for+editors">Travel
+Demo</a> and is stored as an asset in the <code>dam</code> workspace.</p>
+</div>
+<div class="paragraph">
+<p>Imagine the editor is at the beginning of the writing process. Only the
+tour’s title <strong>Island hopping in Indonesia</strong> has been chosen and now an
+image with a volcano would be useful to accompany the tour’s
+description.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Would searching for the term <em>volcano</em> in the assets produce a result
+like this image?</p>
+</li>
+<li>
+<p>What would assist the editor in deciding whether an image is suitable
+for the story?</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_image_recognition_and_tagging"><a class="anchor" href="#_image_recognition_and_tagging"></a>Image recognition and tagging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia’s image recognition feature automatically tags image assets in
+the <code>dam</code> workspace, helping you obtain a more informed view of the
+content of each asset stored in the workspace:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-jcrApp-volcanoAWStags.png" alt="image" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>The tags are then available for use in any other Magnolia content app or
+your custom content apps (the Assets app is shown below):</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-assetsApp-volcanoAWStags.png" alt="image" width="600"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_integration_with_find_bar"><a class="anchor" href="#_integration_with_find_bar"></a>Integration with Find Bar</h3>
+<div class="paragraph">
+<p>Magnolia’s image recognition and tagging make it easy to search for
+specific images among your assets:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-findBar-volcano.png" alt="image" height="250"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_recognition_services"><a class="anchor" href="#_recognition_services"></a>Recognition services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The image recognition service used depends on the module you
+<a href="/Modules/List+of+modules/Image+Recognition+module">install</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Local image recognition uses a custom-built neural network.</p>
+</li>
+<li>
+<p>If you need a more advanced image recognition solution to generate a
+more refined set of image tags, you can configure the feature to use
+Amazon Rekognition.</p>
+</li>
+<li>
+<p>The Image Recognition module can also be configured for use with any
+other image recognition solution through the <code>ImageRecogniser</code>
+interface.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_when_is_recognition_executed"><a class="anchor" href="#_when_is_recognition_executed"></a>When is recognition executed?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The image recognition and tagging action is executed during the startup
+of the author instance and every time you upload a new image asset.</p>
+</div>
+<div class="paragraph">
+<p>You can also trigger the action manually in the Assets app by selecting
+one or more assets and clicking the <strong>Run recognition</strong> action.</p>
+</div>
+<div class="paragraph">
+<p>Images that have already been tagged are marked as such using a JCR
+property called <code>lastTaggingAttemptDate</code>. Executing the manual <strong>Run
+recognition</strong> action forces a new tag to be set even if the image was
+previously tagged.</p>
+</div>
+<div class="paragraph">
+<p>The image recognition feature is available only on author instances.</p>
+</div>
+<hr>
+<div class="sect2">
+<h3 id="_image_credits"><a class="anchor" href="#_image_credits"></a>Image credits</h3>
+<div class="paragraph">
+<p>Michael Day,
+<a href="https://www.flickr.com/photos/whoisthatfreakwiththecamera/2564067897" class="bare">https://www.flickr.com/photos/whoisthatfreakwiththecamera/2564067897</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

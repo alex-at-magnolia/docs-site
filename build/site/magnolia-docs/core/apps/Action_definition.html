@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Action definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Action_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Action_definition.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Action_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Action_definition.html">Action definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Action definition - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="App_configuration.html">App configuration</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204050559"><a class="anchor" href="#src-204050559"></a>Action definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Action definitions configure actions in the UI. They are used in apps,
+forms and dialogs. The action name is the definition content node name.</p>
+</div>
+<div class="paragraph">
+<p>Each action has an action definition class that implements the
+ActionDefinition interface. Some
+<a href="#src-204050559_Actiondefinition-Generalactiondefinitionclasses">definition
+classes</a> allow for additional properties and call more classes to
+execute logic.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can reuse existing Magnolia actions in your own app. Many actions
+are so basic that you can just copy their definitions. For actions that
+have their own properties, you may need to set the properties for the
+actions to work.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>These action definitions are part of the <em>Magnolia 6 UI</em> framework.</p>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Action+definition+-+5+UI">Action
+definition for <em>Magnolia 5 UI</em></a> instead.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204050559_Actiondefinition-Generalactions"><a class="anchor" href="#src-204050559_Actiondefinition-Generalactions"></a>General actions</h3>
+<div class="paragraph">
+<p>Here is an <code>addNodeAction</code> definition. A user can execute the action in
+the action bar or the action popup.</p>
+</div>
+<div class="paragraph">
+<p><code>subApps:</code></p>
+</div>
+<div class="paragraph">
+<p>`  browser:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.contentapp.configuration.BrowserDescriptor`</p>
+</div>
+<div class="paragraph">
+<p>`    actions:`</p>
+</div>
+<div class="paragraph">
+<p>`      addFolder:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: addNodeAction`</p>
+</div>
+<div class="paragraph">
+<p>`        icon: icon-add-folder`</p>
+</div>
+<div class="paragraph">
+<p>`        nodeType: mgnl:content`</p>
+</div>
+<div class="paragraph">
+<p>`        availability:`</p>
+</div>
+<div class="paragraph">
+<p>`          root: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          nodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`            - mgnl:content`</p>
+</div>
+<div class="paragraph">
+<p>You can use the following properties for all actions.</p>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Generalactionproperties"><a class="anchor" href="#src-204050559_Actiondefinition-Generalactionproperties"></a>General action properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;action name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the action. The name is used in
+<a href="Action_bar_definition.html">action bar definition</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> (unless <code>$type</code> is used)</p>
+</div>
+<div class="paragraph">
+<p><a href="#src-204050559_Actiondefinition-Generalactiondefinitionclasses">Action
+definition class</a> that reads the configuration properties and can supply
+additional properties to the action. The class must implement the
+ActionDefinition interface. Set the value to the fully qualified class
+name.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>You can use this as a shortcut for <code>class</code> if the definition class is
+annotated with <code>info.magnolia.ui.api.action.ActionType</code>. The proper
+value is defined by the annotation.</p>
+</div>
+<div class="paragraph">
+<p>Example class annotation</p>
+</div>
+<div class="paragraph">
+<p><code>@ActionType<code>(</code>"addNodeAction"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> AddNodeActionDefinition </code>extends`</code> ConfiguredActionDefinition {`</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>To use the <code>$type</code> property in YAML, see
+<a href="#src-204050559_Actiondefinition-Generalactions">General actions</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Label displayed to users in the action bar or context menu.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>implementationClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Implementation class that executes the action. A default implementation
+class is typically hard-coded in the definition class. You only need to
+add this property if you want to override the default implementation.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>CSS class that identifies an icon used on the action. For available
+names, see <a href="Icons.html">Icons</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>availability</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines whether the action is permitted on the selected item.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="#src-204050559_Actiondefinition-Actionavailability">Action
+availability</a>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Some
+<a href="#src-204050559_Actiondefinition-Generalactiondefinitionclasses">action
+definition classes</a> support additional properties such as <code>appName</code>,
+<code>subAppName</code>, <code>dialogId</code> and <code>nodeType</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Generalactiondefinitionclasses"><a class="anchor" href="#src-204050559_Actiondefinition-Generalactiondefinitionclasses"></a>General action definition classes</h4>
+<div class="paragraph">
+<p>You can use these common classes in general action definition. They all
+implement the ActionDefinition interface.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">class</th>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenDialogActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openDialogAction</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Opens a dialog. Uses the <code>dialogId</code> property.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+<code>info.magnolia.ui.editor.FormView</code> is automatically populated whenever
+OpenDialogActionDefinition is configured. This can trigger exceptions in
+some cases where there is no initial value to populate the form with. To
+disable this default behavior, you can set the <code>populate</code> property to
+<code>false</code> in YAML. Here is an <code>openDialogAction</code> definition from the
+<a href="Resource_Files_app.html">Resource Files app</a>:</p>
+</div>
+<div class="paragraph">
+<p><code>addFile:</code></p>
+</div>
+<div class="paragraph">
+<p>`  icon: icon-add-file`</p>
+</div>
+<div class="paragraph">
+<p>`  $type: openDialogAction`</p>
+</div>
+<div class="paragraph">
+<p>`  populate: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`  dialogId: resources-app:addFile`</p>
+</div>
+<div class="paragraph">
+<p>`  availability:`</p>
+</div>
+<div class="paragraph">
+<p>`    root: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    rules:`</p>
+</div>
+<div class="paragraph">
+<p>`      IsResourceFolderRule: &amp;isResourceFolder`</p>
+</div>
+<div class="paragraph">
+<p>`        implementationClass: info.magnolia.resources.app.availability.IsResourceFolderRule`</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ConfirmationActionDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>confirmationAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opens a dialog to
+confirm a previous action.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DeleteNodesConfirmationActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteNodesConfirmationAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opens a dialog to confirm deleting an
+item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ChooseActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selects an item in a dialog.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MoveActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>moveAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Moves an item in a dialog.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CommitActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>commitAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saves and closes a dialog.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CloseActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>closeAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cancels and closes a dialog.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OpenDetailSubappActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>openDetailSubappAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Opens the
+detail subapp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ShowVersionActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showVersionAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows the selected
+version of an item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RestoreJcrVersionActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restoreJcrVersionAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restores
+the selected version of an item and its children.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ShowPreviousJcrVersionActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>showPreviousJcrVersionAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Shows the previous version of an item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RestorePreviousJcrVersionActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restorePreviousJcrVersionAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restores the previous version of an
+item and its children.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AddNodeActionDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addNodeAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds an item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DuplicateNodeActionDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>duplicateNodeAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Duplicates an
+item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CopyContentActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>copyContentAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copies an item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CutContentActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cutContentAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cuts an item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PasteContentActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pasteContentAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pastes an item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ChainedActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chainedAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a chain of actions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SetDataFilterActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sets a data filter.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204050559_Actiondefinition-Commandactions"><a class="anchor" href="#src-204050559_Actiondefinition-Commandactions"></a>Command actions</h3>
+<div class="paragraph">
+<p>For more complicated tasks, an action can trigger a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">command</a>. For
+example, the <code>publish</code> command publishes content from the author
+instance to public instances and versions the content.</p>
+</div>
+<div class="paragraph">
+<p>Each command action used in the UI has its own action definition class
+that extends CommandActionDefinition. To implement your own command,
+create an
+<a href="#src-204050559_Actiondefinition-Generalactiondefinitionclasses">action
+definition class</a> that extends CommandActionDefinition and an action
+implementation class that extends CommandAction.</p>
+</div>
+<div class="paragraph">
+<p>Commands can perform tasks within Magnolia or connect to external
+resources. Commands may run for a long time; additional properties allow
+you to control whether command actions are run asynchronously without
+blocking the UI.</p>
+</div>
+<div class="paragraph">
+<p>Here is a <code>publish</code> command action definition from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+DAM+JCR+implementation">Magnolia
+DAM JCR implementation</a><a href="Contacts_app.html">.</a></p>
+</div>
+<div class="paragraph">
+<p><code>browser:</code></p>
+</div>
+<div class="paragraph">
+<p>`  actions:`</p>
+</div>
+<div class="paragraph">
+<p>`    activate:`</p>
+</div>
+<div class="paragraph">
+<p>`      icon: icon-publish`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jcrCommandAction`</p>
+</div>
+<div class="paragraph">
+<p>`      command: publish`</p>
+</div>
+<div class="paragraph">
+<p>`      catalog: versioned`</p>
+</div>
+<div class="paragraph">
+<p>You can use the following properties as well as
+<a href="#src-204050559_Actiondefinition-Generalactionproperties">general
+action properties</a> for command actions.</p>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Commandactionproperties"><a class="anchor" href="#src-204050559_Actiondefinition-Commandactionproperties"></a>Command action properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;action name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the action.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>command</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>*required<br>
+*</p>
+</div>
+<div class="paragraph">
+<p>Name of the command.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>catalog</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is <code>default</code><strong><br>
+</strong></em></p>
+</div>
+<div class="paragraph">
+<p>Name of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands#Commands-Catalogs">catalog</a>
+where the command resides. You only need this property if you implement
+a command that has the same name as an existing command such as
+<code>publish</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>asynchronous</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong><em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Runs a command asynchronously in the background, which is useful for
+long-running actions. To run a command asynchronously, set the property
+to <code>true</code>.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="#src-204050559_Actiondefinition-Asynchronousactions">Asynchronous
+actions</a>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Some
+<a href="#src-204050559_Actiondefinition-Commandactiondefinitionclasses">command
+action definition classes</a> support additional properties such as
+<code>recursive</code>, <code>modifiedOnly</code> and <code>parentNodeTypeOnly</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Commandactiondefinitionclasses"><a class="anchor" href="#src-204050559_Actiondefinition-Commandactiondefinitionclasses"></a>Command action definition classes</h4>
+<div class="paragraph">
+<p>You can use these common classes in command action definition. They all
+implement the ActionDefinition interface.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">class</th>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrCommandActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrCommandAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delegates the action to
+a named command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MarkAsDeletedCommandActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>markAsDeletedAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marks an
+item as deleted. Uses the <code>markAsDeleted</code> command.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrExportActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exportAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exports an item and its
+children to XML or YAML.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrImportActionDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>importAction</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Imports an XML or YAML file.
+Uses the <code>import</code> command.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Asynchronousactions"><a class="anchor" href="#src-204050559_Actiondefinition-Asynchronousactions"></a>Asynchronous actions</h4>
+<div class="paragraph">
+<p>Setting the <code>asynchronous</code> property to <code>true</code> allows you to run a
+command action asynchronously in the background. Use this feature for
+long-running actions that would otherwise block the UI and prevent the
+user from continuing their work.</p>
+</div>
+<div class="paragraph">
+<p>When a user launches an asynchronous action, Magnolia starts to execute
+the action immediately. If the action is not completed within five
+seconds, the system will notify the user that the action will take a
+while to complete. The execution continues in the background while the
+user works on something else, and the system informs the user when the
+action succeeds or fails. In case of failure, a message in the
+<a href="Notifications_app.html">Notifications app</a> may refer to a log file
+for more details.</p>
+</div>
+<div class="paragraph">
+<p>Recursive <code>publish</code> and <code>delete</code> actions run asynchronously by default.
+Because these actions involve content versioning, they can be
+time-consuming.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204050559_Actiondefinition-Actionavailability"><a class="anchor" href="#src-204050559_Actiondefinition-Actionavailability"></a>Action availability</h3>
+<div class="paragraph">
+<p>Action availability defines whether the action is permitted on the
+selected item.</p>
+</div>
+<div class="paragraph">
+<p>For example, the <code>addNodeAction</code> definition below is permitted when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The action is at the workspace root level (you can create a category
+without selecting an item).</p>
+</li>
+<li>
+<p>The selected item is a category (you can create subcategories).</p>
+</li>
+<li>
+<p>The selected item is a folder.</p>
+</li>
+<li>
+<p>The selected item is not marked for deletion.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Action availability is different from
+<a href="Action_bar_definition.html#src-196598255_Actionbardefinition-Actionbaravailability">action
+bar section availability</a>. Section availability defines whether the
+actions configured within a section are displayed in the action bar. If
+the section is displayed, action availability will be checked for each
+action in the section.</p>
+</div>
+<div class="paragraph">
+<p>You can add multiple availability rule classes. The <code>rules</code> parent node
+contains subnodes, one for each rule. The rules are combined with a
+logical <code>AND</code> operator.</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  addCategory:`</p>
+</div>
+<div class="paragraph">
+<p>`    availability:`</p>
+</div>
+<div class="paragraph">
+<p>`      nodes: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`      root: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`      nodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`        - mgnl:category`</p>
+</div>
+<div class="paragraph">
+<p>`        - mgnl:folder`</p>
+</div>
+<div class="paragraph">
+<p>`      rules:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: isNotDeletedRule`</p>
+</div>
+<div class="paragraph">
+<p>`          $type: jcrIsDeletedRule`</p>
+</div>
+<div class="paragraph">
+<p>`          negate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`        - name: anotherRule`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: com.your.customapp.app.action.availability.AnotherAvailabilityRuleDefinition`</p>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Actionavailabilityproperties"><a class="anchor" href="#src-204050559_Actiondefinition-Actionavailabilityproperties"></a>Action availability properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;action name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the action.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>availability</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Node containing the availability configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>access</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Action is available if the current user has one of the listed roles.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>roles</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Node containing a list of roles.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;role&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Roles+and+access+control+lists">role</a>
+that is permitted to execute the action. Add one property for each role.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Action is available if the selected item belongs to one of the listed
+node types.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;node type&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Valid <a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types">node type</a>
+such as <code>mgnl:folder</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rules</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Action is available if the selected item matches every availability rule
+class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;ruleNodeName&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Gives the node a name that describes the rule class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> (unless <code>$type</code> is used)</p>
+</div>
+<div class="paragraph">
+<p><a href="#src-204050559_Actiondefinition-Actionavailabilitydefinitionclasses">Action
+availability definition class</a>. The class must implement the
+AvailabilityDefinition interface. Set the value to the fully qualified
+class name.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">You can use this as a shortcut for <code>class</code> if the definition
+class is annotated with
+<code>info.magnolia.ui.api.availability.AvailabilityRuleType</code>. The proper
+value is defined by the annotation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>implementationClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Class implementing <code>info.magnolia.ui.availability.rule.AvailabilityRule</code>
+(you can extend
+<code>info.magnolia.ui.availability.rule.AbstractAvailabilityRule</code>). A
+default implementation class is typically hard-coded in the definition
+class. You only need to add this property if you want to override the
+default implementation.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Action is available if the selected item is a node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>root</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Action is available at the workspace root level if <code>true</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>properties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Action is available if the selected item is a property.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiple</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Defines whether the action is available for multiple items.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="#src-204050559_Actiondefinition-Actionsonmultipleitems">Actions on
+multiple items</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>writePermissionRequired</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Set to <code>true</code> if the action requires write permission on the currently
+selected node. The action will be disabled if the user does not have
+write permission.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Actionavailabilitydefinitionclasses"><a class="anchor" href="#src-204050559_Actiondefinition-Actionavailabilitydefinitionclasses"></a>Action availability definition classes</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">class</th>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrIsDeletedRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrIsDeletedRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the
+item is a node of the <code>mgnl:deleted</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types#Nodetypes-Mixinnodetypes">mixin
+type</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrNodeTypeRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the item is a node of
+any of the listed types.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrPropertyRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the item is a
+property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CanCopyContentRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>canCopyContentRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if
+the item can be copied.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CanPasteContentRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>canPasteContentRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if
+the item can be pasted.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CanMoveRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the item can be moved.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrPublishableRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrPublishableRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if
+the item can be published.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrPublishedRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrPublishedRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the
+item is published.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrHasChildrenRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrHasChildrenRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if
+the item has child nodes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrHasVersionsRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrHasVersionsRule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if
+the item has versions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AccessGrantedRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if access can be
+granted to the item.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MultipleItemsRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the action can be
+applied to multiple items.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrRootRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the action is at the
+workspace root level.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JcrWritePermissionRuleDefinition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code> if the user has
+write permission for the item.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-204050559_Actiondefinition-Actionsonmultipleitems"><a class="anchor" href="#src-204050559_Actiondefinition-Actionsonmultipleitems"></a>Actions on multiple items</h4>
+<div class="paragraph">
+<p>Action availability defines whether an action can be executed on
+multiple items. <code>delete</code>, <code>move</code>, <code>publish</code> and <code>unpublish</code> are examples
+of actions that can be executed on multiple items.</p>
+</div>
+<div class="paragraph">
+<p>Here is a <code>publish</code> command action definition supporting multiple items.</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  activate:`</p>
+</div>
+<div class="paragraph">
+<p>`    catalog: versioned`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: jcrCommandAction`</p>
+</div>
+<div class="paragraph">
+<p>`    command: publish`</p>
+</div>
+<div class="paragraph">
+<p>`    icon: icon-publish`</p>
+</div>
+<div class="paragraph">
+<p>`    availability:`</p>
+</div>
+<div class="paragraph">
+<p>`      multiple: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>For a more detailed availability check (such as verifying that all items
+are at the same level or have the same parent), use
+<a href="#src-204050559_Actiondefinition-Actionavailabilitydefinitionclasses">action
+availability rules</a>.</p>
+</div>
+<div class="paragraph">
+<p>When you program an action that supports multiple items, you are
+responsible for handling the items in the correct order and solving
+dependencies. For example, when deleting multiple nodes where one node
+is a child of another, delete the nodes in the correct order to avoid
+exceptions. An action is also responsible for informing the user about
+the result whether it has successfully processed all the items or failed
+on some of them.</p>
+</div>
+<div class="paragraph">
+<p>App launcher layout</p>
+</div>
+<div class="paragraph">
+<p>Action bar definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Providing a Solr search - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Providing_a_Solr_search.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Providing_a_Solr_search.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Providing_a_Solr_search.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Providing_a_Solr_search.html">Providing a Solr search - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Providing a Solr search - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597425"><a class="anchor" href="#src-196597425"></a>Providing a Solr search</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Solr_module.html">Solr module</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Installing_Apache_Solr.html">Installing Apache Solr</a></p>
+</li>
+<li>
+<p><a href="Indexing_and_crawling_a_website_with_Solr.html">Indexing and
+crawling a website with Solr</a></p>
+</li>
+<li>
+<p><a href="App_configuration_with_Solr.html">App configuration with Solr</a></p>
+</li>
+<li>
+<p><a href="Solr_module_release_notes.html">Solr module release notes</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Jackrabbit+search">Jackrabbit
+search</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/Step-by-step+integrating+Solr+in+Magnolia+and+generating+custom+sitemap">Creating
+a sitemap with Solr</a> (Community Wiki)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes the Solr Search Provider submodule of the Magnolia
+<a href="Solr_module.html">Solr module</a>. The submodule contains templates
+allowing you to display search results on a site. It also provides an
+autocomplete bar with search suggestions functionality and also faceted
+search components for additional refining of search results.</p>
+</div>
+<div class="paragraph">
+<p>The Solr module integrates <a href="http://lucene.apache.org/solr/">Apache Solr</a>,
+a standalone enterprise-grade search server with a REST-like API, for
+indexing and crawling of Magnolia content, especially if you need to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+assets">manage
+assets</a> in high volumes (100,000+ DAM assets).</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597425_ProvidingaSolrsearch-Creatingasearchresultspage"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Creatingasearchresultspage"></a>Creating a search results page</h3>
+<div class="paragraph">
+<p>Create a search results page using one of the available templates. Which
+template you use depends on the type of project you have and the modules
+that are installed.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module</th>
+<th class="tableblock halign-left valign-top">Template</th>
+<th class="tableblock halign-left valign-top">Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mte</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/solr-search-provider/browse/magnolia-solr-search-provider/src/main/resources/info/magnolia/module/solr-search-provider/setup/mte"><code>mteSolrSearchResult</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/solr-search-provider/templates/mteSolrSearchResult</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">standard-templating-kit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/solr-search-provider/browse/magnolia-solr-search-provider/src/main/resources/info/magnolia/module/solr-search-provider/setup/standard-templating-kit"><code>solrSearchResult</code></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/solr-search-provider/templates/solrSearchResult</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To try it in the demo travel site:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make the template available in the site definition.</p>
+</li>
+<li>
+<p>Create a page which uses the template.</p>
+</li>
+<li>
+<p>Edit the home
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Editing+pages">page
+properties</a>.</p>
+</li>
+<li>
+<p>Select your Solr results page in the <strong>Search Page</strong> field.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597425_ProvidingaSolrsearch-Searchresultsettings"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Searchresultsettings"></a>Search result settings</h3>
+<div class="paragraph">
+<p>Enter or modify the values in the Search result settings tab of the Page
+properties dialog:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597425/6-1-providingASolrSearch-searchResultsSettings.png" alt="images/download/attachments/196597425/6-1-providingASolrSearch-searchResultsSettings.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196597425_safe-id-UHJvdmlkaW5nYVNvbHJzZWFyY2gtVXNpbmdhc3BlY2lmaWNTb2xyc2V2ZXIvY29yZQ"><a class="anchor" href="#src-196597425_safe-id-UHJvdmlkaW5nYVNvbHJzZWFyY2gtVXNpbmdhc3BlY2lmaWNTb2xyc2V2ZXIvY29yZQ"></a>Using a specific Solr sever/core</h4>
+<div class="paragraph">
+<p>In the <strong>Client</strong> field select which client should be used for search. The
+field displays all clients configured under <strong>Configuration &gt;</strong>
+<code>/modules/solr-search-provider/config/solrClientConfigs</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597425_ProvidingaSolrsearch-Urldomainfiltering"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Urldomainfiltering"></a>Url domain filtering</h4>
+<div class="paragraph">
+<p>You can filter results by a URL domain in the <strong>Filter url prefix</strong> field:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597425/6-1-providingASolrSearch-urlPrefix.png" alt="images/download/attachments/196597425/6-1-providingASolrSearch-urlPrefix.png"></span>
+.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597425_ProvidingaSolrsearch-Fieldboostingforrelevance"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Fieldboostingforrelevance"></a>Field boosting for relevance</h4>
+<div class="paragraph">
+<p>The example query <code>title^100 abstract^0.1</code> set in the <strong>Boost query</strong>
+field will boost the rank for the matches in the <code>title</code> field 1000
+times more than the equivalent matches in the <code>abstract</code> field.</p>
+</div>
+<div class="paragraph">
+<p>The query will return the following results:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597425/resultsboost1.png" alt="images/download/attachments/196597425/resultsboost1.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Conversely, if you decide to boost the <code>abstract</code> field instead of the
+<code>title</code> field, you will get the following results for the same search.
+The snippets returned are now primarily from page titles:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597425/resultsboost2.png" alt="images/download/attachments/196597425/resultsboost2.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597425_ProvidingaSolrsearch-Filteringsearchresults"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Filteringsearchresults"></a>Filtering search results</h4>
+<div class="paragraph">
+<p>In the <strong>Additional filters</strong> field you can define filters to narrow the
+search results, for example filters for <em>positive</em> and <em>negative</em>
+filtering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Positive filtering</strong>: Return only the results where the <code>conference</code>
+keyword is present:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597425/6-1-providingASolrSearch-positiveFiltering.png" alt="images/download/attachments/196597425/6-1-providingASolrSearch-positiveFiltering.png"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Negative filtering</strong>: Don&#8217;t return the results where the <code>conference</code>
+keyword is present:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597425/6-1-providingASolrSearch-negativeFiltering.png" alt="images/download/attachments/196597425/6-1-providingASolrSearch-negativeFiltering.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can use multiple filters. For more information see
+<a href="https://lucene.apache.org/solr/guide/7_3/common-query-parameters.html#fq-filter-query-parameter">Common
+query parameters: filter query parameter</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597425_ProvidingaSolrsearch-Autocompletesearchbar"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Autocompletesearchbar"></a>Autocomplete search bar</h3>
+<div class="paragraph">
+<p>The autocomplete search bar provides suggestions while typing in the
+search field. The <a href="https://jqueryui.com/autocomplete/">jQuery UI
+Autocomplete widget</a> and
+<code>info.magnolia.search.solrsearchprovider.logic.servlets.SearchServlet</code>
+are used for this functionality.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597425_ProvidingaSolrsearch-Configuration"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Configuration"></a>Configuration</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go <a href="http://jqueryui.com/download/">http://jqueryui.com/download</a> and
+download jQuery UI JavaScript for Autocomplete widget and required
+dependencies.</p>
+</li>
+<li>
+<p>In the archive downloaded find jquery-ui.js (or jquery-ui.min.js) and
+jquery.js and add them into Magnolia resources.</p>
+</li>
+<li>
+<p>Link to the jQuery JavaScript libraries from the search results page:</p>
+<div class="paragraph">
+<p>`&lt;<code>script</code> <code>src</code>=<code>"path to jquery.js"</code> <code>type</code>=<code>"text/javascript"</code>&gt;&lt;/<code>script</code>&gt; `</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>script</code> <code>src</code>=<code>"path to jquery-ui.js"</code> <code>type</code>=<code>"text/javascript"</code>&gt;&lt;/<code>script</code>&gt;</code>
+. Add the following small JavaScript snippet into the search results
+page:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>var`</code> jq = jQuery.noConflict();`</p>
+</div>
+<div class="paragraph">
+<p><code>jq(document).ready(<code>function</code> () {</code></p>
+</div>
+<div class="paragraph">
+<p>`    jq(<code>"#searchbar, #nav-search, #search"</code>).autocomplete({`</p>
+</div>
+<div class="paragraph">
+<p>`        open: <code>function</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`            jq(<code>this</code>).autocomplete(<code>'widget'</code>).css(<code>'z-index'</code>, 999);`</p>
+</div>
+<div class="paragraph">
+<p>`        },`</p>
+</div>
+<div class="paragraph">
+<p>`        source: <code>function</code> (request, response) {`</p>
+</div>
+<div class="paragraph">
+<p>`            jq.get(<code>"${contextPath}/searchservlet/&#8220;`, {search: request.term.toLowerCase(), queryType: </code>"SUGGEST"<code>, fields: </code>"collation"<code>, fq: <code>&#8221;*"</code>, client: <code>"default"</code>},</code></p>
+</div>
+<div class="paragraph">
+<p>`                <code>function</code> (data) {`</p>
+</div>
+<div class="paragraph">
+<p>`                    response(data);`</p>
+</div>
+<div class="paragraph">
+<p>`                }, <code>`"json"</code></p>
+</div>
+<div class="paragraph">
+<p>`            );`</p>
+</div>
+<div class="paragraph">
+<p>`        },`</p>
+</div>
+<div class="paragraph">
+<p>`        minLength: 2`</p>
+</div>
+<div class="paragraph">
+<p>`    });`</p>
+</div>
+<div class="paragraph">
+<p><code>});</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597425_ProvidingaSolrsearch-Moreinformationabouttheautocompletefeature"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Moreinformationabouttheautocompletefeature"></a>More information about the autocomplete feature</h4>
+<div class="paragraph">
+<p>For more information about the autocomplete feature see the following
+AUTO-COMPLETE series of Karel de Witte&#8217;s DONE BEFORE YOU TRY blog posts:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://donebeforeyoutry.wordpress.com/2013/04/09/auto-complete-and-suggestions-for-magnolia-cms-with-jquerysolr-part-1-adding-magnolia-content-to-solr/">ADDING
+MAGNOLIA CONTENT TO SOLR</a></p>
+</li>
+<li>
+<p><a href="https://donebeforeyoutry.wordpress.com/2013/04/09/auto-complete-and-suggestions-for-magnolia-cms-with-jquerysolr-part-2-solr-suggestion-handler/">SOLR
+SUGGESTION HANDLER</a></p>
+</li>
+<li>
+<p><a href="https://donebeforeyoutry.wordpress.com/2013/04/10/auto-complete-and-suggestions-for-magnolia-cms-with-jquerysolr-part-35-adding-the-solr-servlet-logic-to-magnolia/">ADDING
+THE SOLR SERVLET LOGIC TO MAGNOLIA</a></p>
+</li>
+<li>
+<p><a href="https://donebeforeyoutry.wordpress.com/2013/04/12/auto-complete-and-suggestions-for-magnolia-cms-with-jquerysolr-part-45-adding-the-css-to-show-the-autocomplete/">ADDING
+THE CSS TO SHOW THE AUTOCOMPLETE</a></p>
+</li>
+<li>
+<p><a href="https://donebeforeyoutry.wordpress.com/2013/04/12/auto-complete-and-suggestions-for-magnolia-cms-with-jquerysolr-part-55-adding-the-jquery-script-to-show-the-autocomplete-2/">ADDING
+THE JQUERY SCRIPT TO SHOW THE AUTOCOMPLETE</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Please be aware that these posts may refer to old versions of Solr and
+Magnolia&#8217;s Solr module. Some examples described in the post may
+therefore not work with the latest version. However, the examples are
+still inspirational and worth reading.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597425_ProvidingaSolrsearch-Otherfeatures"><a class="anchor" href="#src-196597425_ProvidingaSolrsearch-Otherfeatures"></a>Other features</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Pagination</p>
+</li>
+<li>
+<p>Faceting on all fields</p>
+</li>
+<li>
+<p>Ranged faceting</p>
+</li>
+<li>
+<p>Similar search</p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/Localized+Search+with+Apache+Solr">Localized
+search</a> (a page at Magnolia Community Wiki)</p>
+</li>
+<li>
+<p>Suggestions</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>App configuration with Solr</p>
+</div>
+<div class="paragraph">
+<p>Solr module release notes</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

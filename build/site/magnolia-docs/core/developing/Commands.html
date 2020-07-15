@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Commands - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/Commands.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Commands.html">master</a>
+    <a class="version" href="../../6.2.1/core/developing/Commands.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Commands.html">Commands - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Commands - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596278"><a class="anchor" href="#src-196596278"></a>Commands</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Magnolia uses commands to publish and unpublish content, send email,
+flush cache, take backups, import and export data and for many other
+tasks. Commands can perform duties within the system or connect to
+external resources. Commands are typically executed by
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+action+definition+-+5+UI">actions</a>
+or scheduled for execution by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Scheduler+module">Scheduler
+module</a>.</p>
+</div>
+<div class="paragraph">
+<p>Characteristics of commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Independent of the UI</p>
+</li>
+<li>
+<p>Back-end executable</p>
+</li>
+<li>
+<p>Executed by UI (for example by an
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+action+definition+-+5+UI">action</a>),
+Web services or other modules such as the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workflow+module">Workflow</a>
+and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Scheduler+module">Scheduler</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can write your own
+<a href="#src-196596278_Commands-Customcommands">custom commands</a> and execute
+them on-demand or scheduled.</p>
+</div>
+<div class="paragraph">
+<p>Commands consist of a
+<a href="#src-196596278_Commands-Commanddefinition">command definition</a> and
+<a href="#src-196596278_Commands-CommandbusinesslogicJava">Java business
+logic</a>. Since the business logic is written in Java, you can perform
+basically any task that Java allows.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Commanddefinition"><a class="anchor" href="#src-196596278_Commands-Commanddefinition"></a>Command definition</h3>
+<div class="paragraph">
+<p>A command definition makes the command available to the system.</p>
+</div>
+<div class="paragraph">
+<p>Here are the command definitions for the basic commands that are used
+throughout Magnolia, configured in <strong>Configuration &gt;</strong>
+<code>/modules/ui-admincentral/commands/default</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ui-admincentral</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">markAsDeleted</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.commands.impl.MarkNodeAsDeletedCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">export</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.importexport.command.JcrExportCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">import</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.importexport.command.JcrImportCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deactivate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.activation.commands.DeactivationCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delete</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.commands.impl.DeleteCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">restorePreviousVersion</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.commands.impl.RestorePreviousVersionCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exportYaml</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.commands.ExportJcrNodeToYamlCommand</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Catalogs"><a class="anchor" href="#src-196596278_Commands-Catalogs"></a>Catalogs</h3>
+<div class="paragraph">
+<p>Commands are organized into <em>catalogs</em>. A catalog is an intermediate
+folder in the configuration hierarchy. It resides under the <code>commands</code>
+folder and contains commands. Catalogs are used to distinguish multiple
+commands with the same name. For example, the <code>activation</code> module has
+two command catalogs: <code>default</code> and <code>versioned</code>. This configuration is
+in the <strong>Configuration</strong> app &gt; <code>/modules/activation/commands</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">versioned</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deactivate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The advantage of using a catalog is that you can have identically named
+commands. You might want two <code>activate</code> commands – one for pages and
+another for assets. To call a command that resides in a catalog, use the
+catalog name followed by a hyphen, then the command name. For example,
+you would distinguish the two activate commands by calling one with
+<code>workflow-activate</code> and the other with <code>default-activate</code>.</p>
+</div>
+<div class="paragraph">
+<p>Catalog names have to be unique across the system. Magnolia will not
+merge commands with same name from various catalogs. It will load
+commands only from one of them. Since the <code>ui-admininterface</code> module has
+a <code>default</code> catalog, the name is already taken. If you created a
+<code>default</code> catalog the names would conflict and the system would not load
+your command. Choose a catalog name that characterizes its commands,
+such as &#8220;messaging&#8221; for commands that send emails and notifications.
+See
+<a href="#src-196596278_Commands-Queryingforexistingcatalogsandcommands">Querying
+for catalogs and commands</a> how to check for currently used names.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Chainingcommands"><a class="anchor" href="#src-196596278_Commands-Chainingcommands"></a>Chaining commands</h3>
+<div class="paragraph">
+<p>Commands can be grouped and executed as a chain. When you call the
+parent node its child commands are executed one-by-one in the node order
+from top down.</p>
+</div>
+<div class="paragraph">
+<p>The <code>activate</code> command in the <code>versioned</code> catalog is an example of this.
+This configuration is in the <strong>Configuration</strong> app &gt;
+<code>/modules/activation/commands/versioned</code>.</p>
+</div>
+<div class="paragraph">
+<p>It is a group of two commands that are executed one after the other.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>version</code> creates a new version of the node.</p>
+</li>
+<li>
+<p><code>activate</code> delegates to the <code>activate</code> command configured in the
+<code>default</code> catalog.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Note the use of the <code>commandName</code> property in the
+<code>&lt;catalog&gt;-&lt;command name&gt;</code> format.</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.activation.commands.ActivationCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deactivate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">versioned</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">version</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.commands.impl.VersionCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.commands.DelegateCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commandName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default-activate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deactivate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196596278_Commands-Executingcommandswithactions"><a class="anchor" href="#src-196596278_Commands-Executingcommandswithactions"></a>Executing commands with actions</h4>
+<div class="paragraph">
+<p>In the UI, commands are executed by actions. Here is an example action
+definition for the <code>activate</code> action in the Pages app. You can find it
+in <strong>Configuration</strong> &#8594;
+<code>/modules/pages/apps/pages/subApps/browser/actions/activate</code>. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Action+definition">Action
+definition</a> for the properties and their values.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subApps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">browser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">catalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.framework.action.ActivationActionDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">command</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-publish</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Scheduling"><a class="anchor" href="#src-196596278_Commands-Scheduling"></a>Scheduling</h3>
+<div class="paragraph">
+<p>You can use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Scheduler+module">Scheduler
+module</a> to execute commands at a given time. You could for example
+activate a press release on a certain day, take a weekly backup of
+content, or synchronize a taxonomy of terms with an external source.
+There is an example configuration in the <strong>Configuration</strong> app &gt;
+<code>/modules/scheduler/config/jobs/demo</code> that you can adapt to suit your
+needs</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>params</code>: Parameters passed to the command. Depends on the command.
+For example, the <code>activate</code> command expects to receive a <code>repository</code>
+name and a content <code>path</code> as parameters.</p>
+</li>
+<li>
+<p><code>catalog</code>: Name of the <a href="#src-196596278_Commands-Catalogs">catalog</a>
+where your command resides.</p>
+</li>
+<li>
+<p><code>command</code>: Name of the command.</p>
+</li>
+<li>
+<p><code>description</code>: Describes the job, for example "Send an email message
+on the hour"</p>
+</li>
+<li>
+<p><code>cron</code>: Schedule that indicates the execution time, written as a
+<a href="http://en.wikipedia.org/wiki/CRON_expression">CRON expression</a>. For
+example <code>0 0 1 5 11 ? 2010</code> means "run on November 5 at 01:00 am".
+<a href="http://www.cronmaker.com/">Cronmaker</a> is a useful tool for building
+expressions.</p>
+</li>
+<li>
+<p><code>active</code>: Set value to <code>true</code> to activate the job.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">scheduler</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jobs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">demo</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">params</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/news</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">active</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">catalog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">command</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cron</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0 0 * * * *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate each hour the page news.html</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Observation"><a class="anchor" href="#src-196596278_Commands-Observation"></a>Observation</h3>
+<div class="paragraph">
+<p>You can use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Observation+module">Observation
+module</a> to listen to events in the repository and execute a command in
+reaction.</p>
+</div>
+<div class="paragraph">
+<p>Use observation to automate tasks such as publishing newly added assets
+or sending an email notification when a comment is added.</p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Observation+module">Observation
+module</a> for usage examples.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Queryingforexistingcatalogsandcommands"><a class="anchor" href="#src-196596278_Commands-Queryingforexistingcatalogsandcommands"></a>Querying for existing catalogs and commands</h3>
+<div class="paragraph">
+<p>To query for existing commands:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <strong>JCR Tools</strong> app.</p>
+</li>
+<li>
+<p>In the <strong>Query</strong> tab, select <code>config</code> workspace, <code>sql</code> query language
+and <code>nt:base</code> result item type.</p>
+</li>
+<li>
+<p>Paste the following query into the Statement box:
+&#8220;select * from nt:base where jcr:path like '%/commands/%'&#8221;.</p>
+</li>
+<li>
+<p>Click <strong>Execute</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The result looks like this. Path notation:
+<code>/modules/moduleName/commands/catalog/command</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>101`</code> nodes returned in 24ms`</p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/``default</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/<code>default</code>/publish</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/<code>default</code>/unpublish</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/<code>default</code>/activate</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/<code>default</code>/deactivate</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/publish</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/publish/version</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/publish/publish</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/unpublish</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/unpublish/version</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/unpublish/unpublish</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/activate</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/publishing-core/commands/versioned/deactivate</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/activate</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/activate/access</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/activate/access/roles</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/markAsDeleted</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/markAsDeleted/access</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/markAsDeleted/access/roles</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/backup</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/backup/access</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/backup/access/roles</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/ui-framework/commands/``default</code></p>
+</div>
+<div class="paragraph">
+<p><code>/modules/ui-framework/commands/<code>default</code>/importZip</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;.</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-ExecutingacommandintheGroovyconsole"><a class="anchor" href="#src-196596278_Commands-ExecutingacommandintheGroovyconsole"></a>Executing a command in the Groovy console</h3>
+<div class="paragraph">
+<p>Use the Groovy console to execute command business logic manually, in ad
+hoc fashion. This is a quick way to test a custom command before you
+compile it as a Java class. Both of the two options below publish the
+page <code>/travel/about/careers</code> . You can test it by making a small change
+on the careers page, executing the Groovy commands, and viewing the
+modified history page on the public instance.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the Groovy app.</p>
+</li>
+<li>
+<p>Issue the following commands in the console:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Option A</strong> - Calling the
+<code>info.magnolia.commands.CommandsManager.executeCommand()</code>:</p>
+<div class="paragraph">
+<p><code>map  = <code>new</code> java.util.LinkedHashMap&lt;String, String&gt;()</code></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>map.put(<code>"path"</code>, <code>"/travel/about/careers"</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>map.put(<code>"repository"</code>, <code>"website"</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>cm = info.magnolia.commands.CommandsManager.getInstance()</code></p>
+</div>
+<div class="paragraph">
+<p><code>cm.executeCommand(<code>'default'</code>,<code>'publish'</code>,map)</code>
+<strong>* *Option B</strong> - Passing a <code>SimpleContextobject</code> to the <code>execute()</code>
+method:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>cm = info.magnolia.commands.CommandsManager.getInstance()</code></p>
+</div>
+<div class="paragraph">
+<p><code>command = cm.getCommand(<code>'activate'</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>command.setRepository(<code>'website'</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>command.setPath(<code>'/travel/about/careers'</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>command.setRecursive(<code>true</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>command.execute(<code>new</code> info.magnolia.context.SimpleContext())</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-ExecutingacommandasaGroovyscript"><a class="anchor" href="#src-196596278_Commands-ExecutingacommandasaGroovyscript"></a>Executing a command as a Groovy script</h3>
+<div class="paragraph">
+<p>You can also save a command as a Groovy script. This is more comfortable
+than writing and executing one line at a time in the console. Groovy
+scripts can be run from the dialog used to edit them.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the Groovy app.</p>
+</li>
+<li>
+<p>Click <strong>New Script</strong>.</p>
+</li>
+<li>
+<p>Double-click the script name to change it.</p>
+</li>
+<li>
+<p>Double-click the script icon to edit it.</p>
+</li>
+<li>
+<p>Paste the example activation commands from above into the <strong>Source</strong>
+box.</p>
+</li>
+<li>
+<p>Check the <strong>Is a script?</strong> box.</p>
+</li>
+<li>
+<p>Check the <strong>Enabled</strong> box.</p>
+</li>
+<li>
+<p>Click <strong>Run</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596278_Commands-Creatingacustomcommand"><a class="anchor" href="#src-196596278_Commands-Creatingacustomcommand"></a>Creating a custom command</h3>
+<div class="paragraph">
+<p>You can write your own custom commands and execute them either on demand
+or scheduled. For example, you could execute the standard Magnolia
+<code>sendMail</code> command when a page is activated. This way you can send an
+email notification to a user who needs to review the page.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596278_Commands-Definition"><a class="anchor" href="#src-196596278_Commands-Definition"></a>Definition</h4>
+<div class="paragraph">
+<p>To create a command definition:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a <code>commands</code> folder in the configuration hierarchy of your
+module.</p>
+</li>
+<li>
+<p>Create a <code>catalog</code> subfolder under the <code>commands</code> folder. Choose a
+catalog name that characterizes its commands, such as <code>messaging</code> for
+commands that send emails and notifications.</p>
+</li>
+<li>
+<p>Create a content node under the catalog. This is the name of your
+command in Magnolia. If you did not create a catalog make sure that your
+command name is unique across Magnolia.</p>
+</li>
+<li>
+<p>Create a <code>class</code> property. Set its value to the fully-qualified name
+of the Java class that contains the command logic such as
+<code>info.magnolia.module.mail.commands.MailCommand</code>. The Java class should
+reside inside the module JAR.</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">myModule</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">myCatalog</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">myCommand</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.modules.acme.commands.MyCommand</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You don&#8217;t necessarily need to create a new module if you just want to
+add a command. You can put the command definition into any existing
+module and copy the class file to <code>WEB-INF/classes</code> under the Magnolia
+webapp. However, it is easier to maintain your own classes, templates
+and configuration when you organize them in a module rather than leaving
+them scattered around.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596278_Commands-Class"><a class="anchor" href="#src-196596278_Commands-Class"></a>Class</h4>
+<div class="paragraph">
+<p>A command is typically implemented as a Java class. You probably want to
+extend BaseRepositoryCommand which provides useful methods for working
+with the repository.</p>
+</div>
+<div class="paragraph">
+<p>MyCommand.java</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> MyCommand </code>extends`</code> BaseRepositoryCommand {`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>boolean</code> execute(Context context) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// Your command logic goes here.</code></p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>See the commands in the `info.magnolia.commands.impl `package for
+examples.</p>
+</div>
+<div class="paragraph">
+<p>Creating a DX Core webapp with Maven</p>
+</div>
+<div class="paragraph">
+<p>Content Types tutorial</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

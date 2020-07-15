@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Multisite in Magnolia in the cloud - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Multisite-in-Magnolia-in-the-cloud.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Multisite-in-Magnolia-in-the-cloud.html">master</a>
+    <a class="version" href="../6.2.1/cloud/Multisite-in-Magnolia-in-the-cloud.html">6.2.1</a>
+    <a class="version is-missing" href="../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Multisite-in-Magnolia-in-the-cloud.html">Multisite in Magnolia in the cloud - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Multisite in Magnolia in the cloud - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Supported-modules-in-the-cloud.html">Supported modules in the
+cloud</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321300"><a class="anchor" href="#src-215321300"></a>Multisite in Magnolia in the cloud</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics in Magnolia documentation</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+definition">Site
+definition</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Multisite+module">Multisite
+module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+use+Multisite">How
+to use Multisite</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Multisite+module">Multisite
+module</a> allows you to administer multiple websites from a single
+Magnolia subscription package.</p>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtQXV0b21hdGljYWxseWFzc2lnbmVkKHRlY2huaWNhbClkb21haW5z"><a class="anchor" href="#src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtQXV0b21hdGljYWxseWFzc2lnbmVkKHRlY2huaWNhbClkb21haW5z"></a>Automatically assigned (technical) domains</h3>
+<div class="paragraph">
+<p>Magnolia automatically assigns a technical domain to each
+<em><a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-Space">space</a></em>.
+These domains are used, for example, in the cockpit to create links to
+the AdminCentral UI of Magnolia and to view the public space of an
+environment. For example:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Environment</th>
+<th class="tableblock halign-left valign-top">Technical domain assigned to the public space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.integration.magnolia-docs.staging.now.magnolia-cms.com">public.integration.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UAT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.uat.magnolia-docs.staging.now.magnolia-cms.com">public.uat.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Live</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.live.magnolia-docs.staging.now.magnolia-cms.com">public.live.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You should provide access to your websites in the Live environment using
+your own registered domain names. For example:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 56.9999%;">
+<col style="width: 33.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Environment</th>
+<th class="tableblock halign-left valign-top">Technical domain assigned to the public space</th>
+<th class="tableblock halign-left valign-top">Your domain
+names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Live</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.live.magnolia-docs.staging.now.magnolia-cms.com">public.live.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="http://www.winter-cloudy.com/">www.my-company.com</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.summer-cloudy.com/">www.mycompany.com</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_MultisiteinMagnoliainthecloud-AddingCNAMErecordsforyourowndomainnames"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-AddingCNAMErecordsforyourowndomainnames"></a>Adding CNAME records for your own domain names</h3>
+<div class="paragraph">
+<p>You must register <em>at least one</em> CNAME record to provide access to the
+public space of the Live environment under your own (registered) domain
+name. If you have configured multiple site definitions in order to run
+multiple websites, register a CNAME record for each domain.</p>
+</div>
+<div class="paragraph">
+<p>You can register one or more CNAME records for each public space of the
+environments you have. However, in many cases, it is sufficient to have
+at least one record for the public space of the Live environment.</p>
+</div>
+<div class="paragraph">
+<p>You are asked to provide your registered domain names during the
+Magnolia Cloud subscription process.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Create a
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6">Helpdesk
+ticket</a> to request your domain mapping setup.</p>
+</div>
+<div class="paragraph">
+<p>Below is an example of a CNAME record for one domain mapped to the
+public space of a Live environment.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Hostname</th>
+<th class="tableblock halign-left valign-top">IP / Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.winter-cloudy.com/">www.my-company.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.live.magnolia-docs.staging.now.magnolia-cms.com">public.live.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can usually edit your CNAME records in the web interface of the
+domain name registrar you used to register your own domain name(s).</p>
+</div>
+<div class="paragraph">
+<p>This page explains how to use the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Multisite+module">Multisite
+module</a> on your Magnolia cloud platform. This module allows you to
+administer multiple websites from a single Magnolia subscription
+package. If you manage just one website from the subscription package,
+please read at least the section about
+<a href="#src-215321300_MultisiteinMagnoliainthecloud-add-cname-records">adding
+CNAME records</a> for your own domains and the
+<a href="#src-215321300_MultisiteinMagnoliainthecloud-site-config-minimal-setup">minimal
+setup</a> section.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_MultisiteinMagnoliainthecloud-Sitedefinitions"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-Sitedefinitions"></a>Site definitions</h3>
+<div class="paragraph">
+<p>A Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+definition">site
+definition</a> is a configurable set of things such as a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">theme</a>, a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+prototype">template
+prototype</a>, a set of locales, and so on, applied to a defined set of
+content nodes which are typically mapped to a domain. The content which
+belongs to a site definition is sometimes referred to as "site".</p>
+</div>
+<div class="paragraph">
+<p>The Multisite module allows you to configure multiple site definitions
+to manage multiple websites that can be accessed via distinct domains
+but in a single Magnolia package.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtV2hhdGNhbnlvdWRvd2l0aG11bHRpc2l0ZT8"><a class="anchor" href="#src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtV2hhdGNhbnlvdWRvd2l0aG11bHRpc2l0ZT8"></a>What can you do with multisite?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Run multiple websites with completely different purposes and domains.</p>
+</li>
+<li>
+<p>Launch minisites and run campaigns.</p>
+</li>
+<li>
+<p>Provide different websites for subsidiaries and country branches.</p>
+</li>
+<li>
+<p>Serve localized versions of the same website.</p>
+</li>
+<li>
+<p>Use handles and URI prefixes to get shorter URLs.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_MultisiteinMagnoliainthecloud-UsingCNAMErecordstoenablepublicdomainnames"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-UsingCNAMErecordstoenablepublicdomainnames"></a>Using CNAME records to enable public domain names</h3>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>A Canonical Name record (abbreviated as CNAME record) is a type of
+resource record in the Domain Name System (DNS) used to specify that a
+domain name is an alias for another domain, which is the "canonical"
+domain.</p>
+</div>
+<div class="paragraph">
+<p>(Source: <a href="https://en.wikipedia.org/wiki/CNAME_record">Wikipedia</a>)</p>
+</div>
+</blockquote>
+</div>
+<div class="sect3">
+<h4 id="src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtQXV0b21hdGljYWxseWFzc2lnbmVkKHRlY2huaWNhbClkb21haW5zLjE"><a class="anchor" href="#src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtQXV0b21hdGljYWxseWFzc2lnbmVkKHRlY2huaWNhbClkb21haW5zLjE"></a>Automatically assigned (technical) domains</h4>
+<div class="paragraph">
+<p>During the setup of a Magnolia cloud package, the system automatically
+assigns a technical domain to each
+<em><a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-Space">space</a></em>.
+These domains are used, for instance, in the cockpit to create links to
+the AdminCentral UI of Magnolia and to view the public space of an
+environment. The following table shows a list of example domains
+assigned as technical domains to the public spaces of a Magnolia cloud
+package:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Environment</th>
+<th class="tableblock halign-left valign-top">Technical domain assigned to the public space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Integration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.integration.magnolia-docs.staging.now.magnolia-cms.com">public.integration.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UAT</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.uat.magnolia-docs.staging.now.magnolia-cms.com">public.uat.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Live</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.live.magnolia-docs.staging.now.magnolia-cms.com">public.live.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>While such domains may be acceptable for internal usage, you should
+provide access to your websites in Live environment via domain names you
+have registered yourself:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 56.9999%;">
+<col style="width: 33.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Environment</th>
+<th class="tableblock halign-left valign-top">Technical domain assigned to the public space</th>
+<th class="tableblock halign-left valign-top">Your domain
+names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Live</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.live.magnolia-docs.staging.now.magnolia-cms.com">public.live.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.winter-cloudy.com/">www.winter-cloudy.com</a>,<br>
+<a href="http://www.summer-cloudy.com/">www.summer-cloudy.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The domain names <em>www.winter-cloudy.com</em> and <em>www.summer-cloudy.com</em> are
+just examples. You have to register the name(s) you want to use with a
+domain name registrar.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321300_MultisiteinMagnoliainthecloud-add-cname-recordsAddingCNAMErecordsforyourowndomainnames"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-add-cname-recordsAddingCNAMErecordsforyourowndomainnames"></a><span id="src-215321300_MultisiteinMagnoliainthecloud-add-cname-records " class="confluence-anchor-link">#</span>#Adding CNAME records for your own domain names</h4>
+<div class="paragraph">
+<p>You can register one or more CNAME records for each public space of the
+three Magnolia environments. However, in many cases, it is sufficient to
+have at least one record for the public space of the Live environment.</p>
+</div>
+<div class="paragraph">
+<p>You must register <em>at least one</em> CNAME record to provide access to the
+public space of the Live environment under your own (registered) domain
+name. If you have configured multiple site definitions in order to run
+multiple websites, register one CNAME record for each domain.</p>
+</div>
+<div class="paragraph">
+<p>To use your own domain name in the current release of the Magnolia cloud
+offer, you should ideally own the domain <em>before</em> subscribing to and
+onboarding a Magnolia PaaS plan.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Create a
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6">Helpdesk
+ticket</a> to request your domain mapping setup.</p>
+</div>
+<div class="paragraph">
+<p>Below is an example of a CNAME record for one domain mapped to the
+public space of a Live environment.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Hostname</th>
+<th class="tableblock halign-left valign-top">IP / Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.winter-cloudy.com/">www.winter-cloudy.com</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://public.live.magnolia-docs.staging.now.magnolia-cms.com">public.live.magnolia-docs.staging.cloud.magnolia-cms.com</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can usually edit your CNAME records in the web interface of the
+domain name registrar you used to register your own domain name(s).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_MultisiteinMagnoliainthecloud-Howtousemultisite"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-Howtousemultisite"></a>How to use multisite</h3>
+<div class="paragraph">
+<p>If you only manage a single website from your Magnolia subscription
+package, you should read at least the
+<a href="#src-215321300_MultisiteinMagnoliainthecloud-site-config-minimal-setup">minimal
+setup</a> section.</p>
+</div>
+<div class="paragraph">
+<p>The following points summarize what you need to do to set up a multisite
+environment:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create trees or subtrees of JCR nodes (usually pages) with different
+purposes.</p>
+</li>
+<li>
+<p>Configure site definitions. For each one, define:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A mapping pointing to the tree or subtree of JCR nodes (usually
+pages).</p>
+</li>
+<li>
+<p>A domain mapping to map a domain to the site.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Access the distinct content (sub)trees via distinct domains.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Read
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+use+Multisite">How to
+use Multisite</a> for more details about its setup, configuration and
+examples.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321300_MultisiteinMagnoliainthecloud-Configuration"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>Use the <a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+app">Site app</a>
+to edit site definitions.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Edit or create a site definition in the Author space of an environment.
+When you have finished the configuration, use the <strong>Publish incl.
+subnodes</strong> action to enable the configuration in the Public space.</p>
+</div>
+<div class="sect3">
+<h4 id="src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtc2l0ZS1jb25maWctbWluaW1hbC1zZXR1cEFtaW5pbWFsKGRlZmF1bHQpc2V0dXBmb3Jhc2luZ2xlZG9tYWlu"><a class="anchor" href="#src-215321300_safe-id-TXVsdGlzaXRlaW5NYWdub2xpYWludGhlY2xvdWQtc2l0ZS1jb25maWctbWluaW1hbC1zZXR1cEFtaW5pbWFsKGRlZmF1bHQpc2V0dXBmb3Jhc2luZ2xlZG9tYWlu"></a><span id="src-215321300_MultisiteinMagnoliainthecloud-site-config-minimal-setup " class="confluence-anchor-link">#</span>#A minimal (default) setup for a single domain</h4>
+<div class="paragraph">
+<p>Note that the Multisite module is always enabled.</p>
+</div>
+<div class="sect4">
+<h5 id="src-215321300_MultisiteinMagnoliainthecloud-Sitedefinition"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-Sitedefinition"></a>Site definition</h5>
+<div class="paragraph">
+<p>The module provides a default site configuration named <code>fallback</code>:</p>
+</div>
+<div class="paragraph">
+<p>Click here to see the default fallback site configuration</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fallback</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-215321300_MultisiteinMagnoliainthecloud-VirtualURImappingonthepublicinstance"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-VirtualURImappingonthepublicinstance"></a>Virtual URI mapping on the public instance</h5>
+<div class="paragraph">
+<p>The default Magnolia cloud setup defines a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/URI+mapping">URI mapping</a>
+which redirects requests to <code>/home</code> in the root of your domain on every
+public instance:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">request</th>
+<th class="tableblock halign-left valign-top">redirection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;your-domain&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;your-domain&gt;/home</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you intend to keep this default configuration, you must have a page
+named <code>home</code> in your <code>website</code> workspace.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Page</th>
+<th class="tableblock halign-left valign-top">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">home</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;Some title&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321300_MultisiteinMagnoliainthecloud-Customsitedefinitionsetup"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-Customsitedefinitionsetup"></a>Custom site definition setup</h4>
+<div class="paragraph">
+<p>The preceding section explained that a single-domain minimal (default)
+setup relies on a page node called <code>home</code>, and that requests to the root
+of your domain (<code>/</code>) are always redirected to <code>&lt;your-domain&gt;/home</code>.</p>
+</div>
+<div class="paragraph">
+<p>Below we provide an example showing how to serve pages directly from the
+root of your domain without such a redirection. This requires a site
+definition with a correct configuration in the <code>mappings</code> and <code>domains</code>
+sections of the site configuration.</p>
+</div>
+<div class="paragraph">
+<p>For our example we assume that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have a
+<a href="#src-215321300_MultisiteinMagnoliainthecloud-add-cname-records">CNAME
+record</a> for a domain called
+<a href="http://www.winter-cloudy.com/">www.winter-cloudy.com</a>, a registered
+domain assigned to the technical domain of the public space in the Live
+environment of your Magnolia package.</p>
+</li>
+<li>
+<p>You have the following page nodes in the root of your <code>website</code>
+workspace:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Page</th>
+<th class="tableblock halign-left valign-top">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">winter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Welcome to the winter cloud</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">summer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Welcome to the summer cloud</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-215321300_MultisiteinMagnoliainthecloud-Siteconfiguration"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-Siteconfiguration"></a>Site configuration</h5>
+<div class="paragraph">
+<p>The following table shows the configuration for a site definition which
+serves the page <code>/winter</code> from the root of the
+<a href="http://www.winter-cloudy.com/">www.winter-cloudy.com</a> domain.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 66%;">
+<col style="width: 34%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">winter-cloudy-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/winter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">winter-cloudyhttp://www.winter-cloudy.com[]</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">www.winter-cloudy.com</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The name for the site definition (<code>winter-cloudy-site</code>) is arbitrary.
+Alternatively, you can edit the <code>fallback</code> site, but we recommend you
+create a new custom site definition.</p>
+</div>
+<div class="paragraph">
+<p>You can add as many site definitions as needed. For example, you could
+add <code>summer-cloudy-site</code> to map another domain, such as
+<a href="http://www.summer-cloudy.com">www.summer-cloudy.com</a>, to serve the page
+node
+<code>/summer</code>.[<mark>src-215321300_MultisiteinMagnoliainthecloud-disable-unwanted-virtual-URI-mappings]</mark>#</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321300_MultisiteinMagnoliainthecloud-DisableunwantedvirtualURImappings"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-DisableunwantedvirtualURImappings"></a>Disable unwanted virtual URI mappings</h5>
+<div class="paragraph">
+<p>Magnolia&#8217;s default installation in the cloud configures a virtual URI
+mapping in the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Glossary#Glossary-Space">space</a>
+of every
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Glossary#Glossary-Environment">environment</a>
+to redirect from <code>/</code> to <code>home</code>. When using custom (multi)site
+configurations, you should change this redirection in the spaces,
+otherwise the site configurations will not work correctly.</p>
+</div>
+<div class="paragraph">
+<p>The mapping to be updated is on the
+<code>/modules/magnolia-now-sample/virtualURIMapping/default</code> node.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>By default, the AdminCentral of a public instance in the Live
+environment is not accessible due to security reasons.</p>
+</div>
+<div class="paragraph">
+<p>To be able to access it in the Live environment and update the
+redirection configuration, you need to obtain access rights. Yo can ask
+for them via the <a href="http://mgnl.io/cloud-helpdesk">HD portal</a>.</p>
+</div>
+<div class="paragraph">
+<p>We recommend the following procedure:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Login to the AdminCentral of the instance where you want to update the
+configuration.</p>
+</li>
+<li>
+<p>In the Configuration app, update the value of this property:<br>
+<code>/modules/magnolia-now-sample/virtualURIMapping/default@toURI</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321300_MultisiteinMagnoliainthecloud-MultisiteconfigurationsindifferentMagnoliacloud-basedenvironments"><a class="anchor" href="#src-215321300_MultisiteinMagnoliainthecloud-MultisiteconfigurationsindifferentMagnoliacloud-basedenvironments"></a>Multisite configurations in different Magnolia cloud-based environments</h4>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>In most use cases it is sufficient to configure your custom (multiple)
+sites just for the Live
+<a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-Environment">environment</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you want to test your site configurations in the UAT environment, be
+aware of the following points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each Magnolia
+<a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-Space">cloud-based
+space</a> has its own domain. With regard to domain mappings, this means
+that site configurations are therefore slightly different in every
+environment.</p>
+</li>
+<li>
+<p>The <a href="Copying-content-for-testing.html">copy content for testing</a>
+action overrides the whole <code>configuration</code> workspace (except the
+<code>/server/activation/subscribers</code> node). Therefore the multisite
+configuration must be adjusted again after this action.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Supported modules in the cloud</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

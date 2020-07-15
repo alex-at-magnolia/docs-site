@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Workflow processes - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Workflow_processes.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Workflow_processes.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Workflow_processes.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Workflow_processes.html">Workflow processes - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Workflow processes - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Workflow_module.html">Workflow module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597496"><a class="anchor" href="#src-196597496"></a>Workflow processes</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>jBPM documentation on
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMBPMN2.html">Processes</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>jBPM6 allows you to execute processes defined using the BPMN 2.0 XML
+format. That means that you can use all the different jBPM6 tooling to
+model, execute, manage and monitor your business processes using the
+BPMN 2.0 format for specifying your executable business processes.
+Actually, the full BPMN 2.0 specification also includes details on how
+to represent things like choreographies and collaboration. The jBPM
+project however focuses on that part of the specification that can be
+used to specify executable processes.</p>
+</div>
+<div class="paragraph">
+<p>Executable processes in BPMN consist of a different types of nodes being
+connected to each other using sequence flows. The BPMN 2.0 specification
+defines three main types of nodes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Events: They are used to model the occurrence of a particular event.
+This could be a start event (that is used to indicate the start of the
+process), end events (that define the end of the process, or of that
+subflow) and intermediate events (that indicate events that might occur
+during the execution of the process).</p>
+</li>
+<li>
+<p>Activities: These define the different actions that need to be
+performed during the execution of the process. Different types of tasks
+exist, depending on the type of activity you are trying to model (e.g.
+human task, service task, etc.) and activities could also be nested
+(using different types of sub-processes).</p>
+</li>
+<li>
+<p>Gateways: Can be used to define multiple paths in the process.
+Depending on the type of gateway, these might indicate parallel
+execution, choice, etc.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>jBPM6 does not implement all elements and attributes as defined in the
+BPMN 2.0 specification. We do however support a significant subset,
+including the most common node types that can be used inside executable
+processes.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Please read the whole
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMBPMN2.html">Processes</a>
+chapter in jBPM documentation.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597496_Workflowprocesses-Visualrepresentationofaprocess"><a class="anchor" href="#src-196597496_Workflowprocesses-Visualrepresentationofaprocess"></a>Visual representation of a process</h3>
+<div class="paragraph">
+<p>BPMN2 files are XML files. You can model them in a visual modeler.</p>
+</div>
+<div class="paragraph">
+<p>Here is a visual representation of a simple process consisting only of
+start and end events and one executable task.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597496/BPMN-visual-process-representation.png" alt="images/download/attachments/196597496/BPMN-visual-process-representation.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597496_Workflowprocesses-Recommendedmodeler"><a class="anchor" href="#src-196597496_Workflowprocesses-Recommendedmodeler"></a>Recommended modeler</h3>
+<div class="paragraph">
+<p>jBPM can execute any process that is described using the standard BPMN
+2.0 XML format. You can use any modeler application that supports the
+format. As always with standardized formats and their implementations,
+there are shortcomings no matter which one you choose. At Magnolia we
+use the <a href="http://eclipse.org/bpmn2-modeler/">Eclipse BPMN2 modeler plugin.</a>
+Feel free to add other recommendations as comments in this document.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597496_Workflowprocesses-Loadingaprocess"><a class="anchor" href="#src-196597496_Workflowprocesses-Loadingaprocess"></a>Loading a process</h3>
+<div class="paragraph">
+<p>Magnolia provides a configurable registry for processes under the
+<code>workflows</code> folder in a module. Add
+<a href="Creating_a_custom_workflow_process.html">custom workflow process</a>
+definitions in the <code>workflows</code> folder. All processes defined under the
+folder will be loaded by the jBPM engine upon restart.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Restart Magnolia when you add a new workflow process.</p>
+</div>
+<div class="paragraph">
+<p><strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>&lt;module name&gt;/workflows/activate.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>id: com.example.workflow.CustomActivation</code></p>
+</div>
+<div class="paragraph">
+<p><code>name: activate</code></p>
+</div>
+<div class="paragraph">
+<p><code>resourcePath: CustomActivation.bpmn</code></p>
+</div>
+<div class="paragraph">
+<p><code>type: bpmn</code></p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;your-module&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workflows</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.workflow.CustomActivation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourcePath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CustomActivation.bpmn</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bpmn</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workflows</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The folder which contains a list of workflow definitions. The name of
+the folder must be <code>workflows</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;workflow-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the workflow. The name is arbitrary but must be unique.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Used for identifying processes inside jBPM.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name used in Magnolia to identify the process. This is called from
+your command launching the workflow.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourcePath</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Path to the .bpmn file inside your module&#8217;s resource directory.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Magnolia currently only loads processes of type <code>bpmn</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>definition</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Instead of using the resource path you can use the XML definition
+directly. This will override the <code>resourcePath</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597496_Workflowprocesses-Launchingaprocess"><a class="anchor" href="#src-196597496_Workflowprocesses-Launchingaprocess"></a>Launching a process</h3>
+<div class="paragraph">
+<p>Workflow processes are launched using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">commands</a>. As an
+example we have two commands defined inside the <code>workflow</code> command
+catalog.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597496/activate-workflow-command.png" alt="images/download/attachments/196597496/activate-workflow-command.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The <code>activate</code> command chain inside the <code>workflow</code> catalog consists of
+two commands: <code>version</code> and <code>activate</code>. When you launch this chain the
+content is first versioned and then activated. The <code>activate</code> command
+launches the activate workflow.</p>
+</div>
+<div class="paragraph">
+<p>The <code>workflow</code> property defines which workflow is launched. The property
+maps to the name of the registered process in the
+<a href="#src-196597496_Workflowprocesses-process-registry">process
+registry</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597496_Workflowprocesses-Commands"><a class="anchor" href="#src-196597496_Workflowprocesses-Commands"></a>Commands</h4>
+<div class="paragraph">
+<p>Magnolia comes with two commands for launching workflows. Both commands
+can be configured in the <code>class</code> property of your command configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.module.workflow.commands.LaunchWorkflowCommand</code>: Use
+this command to launch arbitrary processes not related to content and
+publishing. This command launches the configured workflow and passes
+parameters from the context to jBPM engine, including the current user.
+The command also checks permissions and enforces the user to have write
+permission in the <code>workflow</code> workspace.</p>
+</li>
+<li>
+<p><code>info.magnolia.module.workflow.commands.PublicationWorkflowCommand</code>:
+Extends the first command and is intended for publication processes.
+This command allows you to configure a workflow mapping. It enforces the
+current user to have read permission on the content node being
+published.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196597496_Workflowprocesses-Publicationcommand"><a class="anchor" href="#src-196597496_Workflowprocesses-Publicationcommand"></a>Publication command</h5>
+<div class="paragraph">
+<p>While the publication process is launched by the
+<code>PublicationWorkflowCommand</code>.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>commandName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the command to be called upon acceptance from the reviewer.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is true</em></p>
+</div>
+<div class="paragraph">
+<p>Enabled or disable the configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parameterMapName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the map object to be sent to the workflow. See Input and
+output parameters section.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is /</em></p>
+</div>
+<div class="paragraph">
+<p>Map the process to a path.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>repository</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is website</em></p>
+</div>
+<div class="paragraph">
+<p>Map the process to a path.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workflow</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the workflow to be called.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196597496_Workflowprocesses-Exampleconfiguration"><a class="anchor" href="#src-196597496_Workflowprocesses-Exampleconfiguration"></a>Example configuration</h5>
+<div class="paragraph">
+<p>The process itself will again launch a command for the actual
+publication. By default this is the <code>activate</code> command from the default
+<code>catalog</code> defined inside the <a href="Activation_module.html">Activation
+module</a> or in case
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>
+is installed it uses the <code>personalizationActivation</code> command. The
+command is configurable.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597496/publication-workflow-command.png" alt="images/download/attachments/196597496/publication-workflow-command.png"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597496_Workflowprocesses-Workflowmappings"><a class="anchor" href="#src-196597496_Workflowprocesses-Workflowmappings"></a>Workflow mappings</h5>
+<div class="paragraph">
+<p>You can define different processes to be launched based on sub paths of
+your node. So in case you want to handle the publication of some content
+inside your tree differently you can configure this inside your command
+definition, like this:</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When there is a <code>mappings</code> node defined the mappings are checked first.
+If no mapping is found the default configuration is used.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is true</em></p>
+</div>
+<div class="paragraph">
+<p>Enabled or disable the configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is /</em></p>
+</div>
+<div class="paragraph">
+<p>Map the process to a path.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workflow</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the workflow to be called.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597496/workflow-mappings.png" alt="images/download/attachments/196597496/workflow-mappings.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When configuring a workflow mapping create a new catalog inside your
+app. Otherwise the mapping is applicable for the publication of all
+content.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597496_Workflowprocesses-Inputandoutputparameters"><a class="anchor" href="#src-196597496_Workflowprocesses-Inputandoutputparameters"></a>Input and output parameters</h4>
+<div class="paragraph">
+<p>Modeling of a process is mostly about defining flows of executable
+tasks. However, it all boils down to working with data. Data can be
+passed as parameters into the process from the very beginning and has to
+carefully be mapped and manipulated from one task to another.</p>
+</div>
+<div class="paragraph">
+<p>Use Magnolia&#8217;s commands to launch a process. This allows you to pass
+parameters to the process using command context attributes consisting of
+the parameters passed to the following call:</p>
+</div>
+<div class="paragraph">
+<p>Passing parameters using the CommandsManager</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.commands.CommandsManager#executeCommand(<code>final</code> String catalogName, <code>final</code> String commandName, <code>final</code> Map&lt;String, Object&gt; params)</code></p>
+</div>
+<div class="paragraph">
+<p>Furthermore, you can consolidate parameters into a named map which you
+can reference from within jBPM. Add the <code>parameterMapName</code> property
+under the commands configuration:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597496/parameterMapName-property.png" alt="images/download/attachments/196597496/parameterMapName-property.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s how you can reference the map in the BPMN2 modeler:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597496/referencing-a-map-in-BPMN2-modeler.png" alt="images/download/attachments/196597496/referencing-a-map-in-BPMN2-modeler.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Please refer to the tutorial for a step-by-step explanation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597496_Workflowprocesses-Tutorial"><a class="anchor" href="#src-196597496_Workflowprocesses-Tutorial"></a>Tutorial</h3>
+<div class="paragraph">
+<p>We have put together a
+<a href="Creating_a_custom_workflow_process.html">step-by-step tutorial</a> on
+how to create, load and launch custom process.</p>
+</div>
+<div class="paragraph">
+<p>User tasks</p>
+</div>
+<div class="paragraph">
+<p>jBPM integration</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Personalization :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/Personalization.html">
+    <meta name="keywords" content="personalization, key-topic">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Personalization.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/Personalization.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Personalization.html">Personalization</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Personalization</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Modules/List+of+modules/Personalization+module/My+first+personalized+campaign">My
+first personalized campaign</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Personalization+module/Creating+custom+traits">Creating
+custom traits</a></p>
+</li>
+<li>
+<p><a href="/Features/Personalization/Component+personalization">Component
+personalization</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Personalization+module">Personalization
+module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Personalization means adapting content to the visitor according to his
+or her personal preferences, needs and capabilities. A personalized
+website is more relevant and engaging than a static non-personalized
+site. Personalization turns a static pull experience into an interactive
+push relationship – the visitor indicates their interest and the website
+pushes matching content. Of all possible content variants that could be
+offered, personalization helps you serve the content that fits best.
+Content tailored to the visitor has a better chance of making a sale or
+persuading the visitor to stay longer.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_variants_are_alternative_content"><a class="anchor" href="#_variants_are_alternative_content"></a>Variants are alternative content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="!include">/_i/_What+is+a+variant</a></p>
+</div>
+<div class="sect2">
+<h3 id="_page_personalization"><a class="anchor" href="#_page_personalization"></a>Page personalization</h3>
+<div class="paragraph">
+<p>Variants are created in the same app where the original content element
+was created. For example, page variants are created in the Pages app.</p>
+</div>
+<div class="paragraph">
+<p>Here are three variants of the
+<a href="/Getting+started+with+Magnolia/Demo">Travel demo</a> Contacts page.
+Each variant targets users from a different region. The original page
+has a special variant icon <span class="image"><img src="../../_images/6-0-variants-icon.gif" alt="image" height="22"></span>
+which tells you this content has alternatives.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-personalization-variants-tree.png" alt="image" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>not children. They are copies. Variants don’t inherit inheritable
+components from the original page, for example. Think of variants as
+``swaps'' that take the place of the original page when personalization
+rules match.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_component_personalization"><a class="anchor" href="#_component_personalization"></a>Component personalization</h3>
+<div class="paragraph">
+<p>Content variants are not limited to pages only. You may also create a
+variant of a component within a page.
+<a href="/Features/Personalization/Component+personalization">Component
+personalization</a> makes personalizing content easier because it allows
+the editor to personalize content in a scalable way. A page may in some
+cases feel like too big an item to personalize. Personalizing the whole
+page would mean copying a lot of redundant content if only a small
+portion of the page content has to be personalized.</p>
+</div>
+<div class="paragraph">
+<p>For example, the page editor may want to set different contact hours for
+the visitors from Europe+Africa and for the visitors from the Middle
+East by adding just one short line of text to the whole page. This can
+be achieved by creating two variants of the Text and image component
+which forms a part of the Contact page in the Travel demo:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-contact-page-component-variant-EU.png" alt="image" height="250"></span><span class="image"><img src="../../_images/6-0-contact-page-component-variant-Americas.png" alt="image" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>The page containing the component variants is then marked with the
+variant icon <span class="image"><img src="../../_images/6-0-variants-icon.gif" alt="image" height="22"></span>.</p>
+</div>
+<div class="paragraph">
+<p>Adding content variants to a page component does not produce a copy of
+the whole page.</p>
+</div>
+<div class="paragraph">
+<p>Personalization of components is enabled in DX Core by default but you
+can
+<a href="/Features/Personalization/Component+personalization#Restrictingcomponentpersonalization">disable
+or restrict</a> it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_traits_describe_the_visitors"><a class="anchor" href="#_traits_describe_the_visitors"></a>Traits describe the visitors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to personalize content, you need to know something about the
+visitor. In Magnolia, we call that something a trait. A trait is an
+attribute of the visitor or visit that you can detect and assign a value
+to. For example, age is a trait. It tells you if the content is
+appropriate for the visitor.</p>
+</div>
+<div class="paragraph">
+<p>Think of traits as characteristics of the visitor’s persona:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Yên is an 18-year-old Vietnamese speaker.</p>
+</li>
+<li>
+<p>John is a music-loving shopaholic.</p>
+</li>
+<li>
+<p>Carlo is a Boston-based marketing manager whose Honda Accord has
+50,000 miles on the odometer.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/personalization-traits.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Here are some traits commonly used for personalization:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Age</p>
+</li>
+<li>
+<p>Gender</p>
+</li>
+<li>
+<p>Interests</p>
+</li>
+<li>
+<p>Date of visit</p>
+</li>
+<li>
+<p>Location of visit</p>
+</li>
+<li>
+<p>Language set in browser</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Best practice</strong></p>
+</div>
+<div id="create-traits-that-have-a-clear-set-of-allowed-values" class="paragraph">
+<p>Every trait has inherent allowed values. For example, locations are
+countries, ages are numbers, and genders are either male or female.
+Create traits that have a clear set of allowed values. Traits that have
+vague values are difficult to detect and assign. Also, make sure the
+trait applies to the majority of your audience. ``New vs. returning
+visitor'' is a good trait because the values are easy to detect and it
+applies to every visitor.</p>
+</div>
+<div class="sect2">
+<h3 id="_default_traits"><a class="anchor" href="#_default_traits"></a>Default traits</h3>
+<div class="paragraph">
+<p>Magnolia provides four traits out of the box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Date</strong>: Allows you to serve content based on the current date. For
+example, run a Valentine’s Day campaign the week before February 14.</p>
+</li>
+<li>
+<p><strong>Country</strong>: Allows you to target visitors from a particular country.
+For example, show product prices in pounds to U.K. visitors.</p>
+</li>
+<li>
+<p><strong>Visitor</strong>: Allows you to detect if a visitor is new, registered or
+logged in. For example, greet a logged-in visitor by their name.</p>
+</li>
+<li>
+<p><strong>Cookie</strong>: Allows you to detect browser cookies and compare their
+values to traits. For example, show a weather forecast for the holiday
+destination the user searched for. The cookie trait makes simple
+``equals'' string comparison between the trait and the cookie value.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">modules</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.f]#personalization-traits</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.f]#traits</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#date</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#country</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]</span>#<mark>#visitor</mark></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]</span>#<mark>#cookie</mark></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can also
+<a href="/Modules/List+of+modules/Personalization+module/Creating+custom+traits">create
+your own traits</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_explicit_and_implicit_personalization"><a class="anchor" href="#_explicit_and_implicit_personalization"></a>Explicit and implicit personalization</h3>
+<div class="paragraph">
+<p>You may have heard about explicit and implicit personalization. In
+Magnolia, you can do both. It depends on the trait.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Explicit personalization</strong> is based on traits that visitors declare
+and choose themselves. Explicit traits are typically stored in profile
+attributes such as age, gender and language. Visitors populate the
+profile knowingly, usually by filling in a form. You can then connect
+traits to the profile attributes. In this type of personalization the
+website pushes content in which the user has an explicit interest.</p>
+</li>
+<li>
+<p><strong>Implicit personalization</strong> is based on tracking user behavior as they
+navigate the site. Implicit traits may also be stored in a user profile
+but the difference is that these traits are not known to the user. Over
+time you learn more about the visitor as they click links and view
+pages. In this type of personalization the website pushes content that
+matches the visitor’s past behavior.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can mix explicit and implicit traits. For example, you can ask users
+to declare their gender explicitly but then use implicit behavioral
+analysis to find out what products they like. Similarly, you can collect
+a given trait using either method: you could analyze visitor behavior to
+figure out if they are interested in movies or you could just ask them.
+The difference between explicit and implicit traits is really just
+academic.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rules_filter_content"><a class="anchor" href="#_rules_filter_content"></a>Rules filter content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia’s personalization is rule-based. Rules push relevant content to
+the front and filter irrelevant content out. Rules can be based on any
+trait you can reliably detect and analyze, such as profile attributes,
+preferences, past behavior, search terms, or interests.</p>
+</div>
+<div class="paragraph">
+<p>To create a rule, define permitted values for a trait. For example,
+``Age &gt;= 18'' is a rule. When a visitor is 20 years old, the rule is met
+and personalized content is served.</p>
+</div>
+<div class="paragraph">
+<p>Examples of rules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Age &gt;= 18</p>
+</li>
+<li>
+<p>Gender = female</p>
+</li>
+<li>
+<p>Interests include movies</p>
+</li>
+<li>
+<p>Date of visit = 2/14</p>
+</li>
+<li>
+<p>Location of visit = China</p>
+</li>
+<li>
+<p>Language set in browser = English</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/personalization-rule.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_choosing_an_audience_choose_audience"><a class="anchor" href="#_choosing_an_audience_choose_audience"></a>Choosing an audience [<mark>choose-audience]</mark>#</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can choose the audience for a content variant in two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Local rule</strong>: The simplest way to choose an audience is to pick a
+trait and define permitted values for it. This creates a local rule. In
+the example below, the date-based local rule serves this content for the
+days around Mother’s Day. Start your personalization experiments with a
+local rule because it is transparent and easy to understand.</p>
+</li>
+<li>
+<p><strong>Segment</strong>: Once you know your audience well divide it into segments.
+Choose a segment as the audience when you want to target the variant to
+visitors who have responded to personalization well in the past. In the
+example below, the segment ``Economic-regions - Americas'' serves this
+content variant only to visitors from the Americas.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-choose-audience-dialog.png" alt="image" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>You can use segments and local rules at the same time. One of the
+segments and all the local rules must be true for the audience to match.
+Then the content variant is served.</p>
+</div>
+<div class="paragraph">
+<p>Think of segments having an OR condition and local rules an AND
+condition.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">audience matches IF
+   date = 2019-05-015 AND
+   weather = sunny AND
+   (segment = "Americas visitors" OR segment = "Returning visitors")</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_segmentation"><a class="anchor" href="#_segmentation"></a>Segmentation</h3>
+<div class="paragraph">
+<p>To simplify the process of assigning rules, you can divide the entire
+visitor population into segments. A segment is all the visitors who meet
+a given rule. This means that people in the segment have common needs
+and priorities. It must be large enough to be measurable, stable over
+time, reachable and responsive. These qualities make the segment a
+meaningful target audience for repeated campaigns.</p>
+</div>
+<div class="paragraph">
+<p>Examples of segments and the rules that define them:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Chinese moviegoers</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Age &gt;= 18</p>
+</li>
+<li>
+<p>Interests include movies</p>
+</li>
+<li>
+<p>Location of visit = China</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Returning marketing managers</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Job title = <code>Marketing Manager'' OR </code>CMO''</p>
+</li>
+<li>
+<p>Type of visitor = returning</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Shutterbugs</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Interests include photography</p>
+</li>
+<li>
+<p>Has Flickr account = true</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/personalization-segment.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Best practice</strong></p>
+</div>
+<div id="create-a-segment-only-when-you-know-your-audience-well" class="paragraph">
+<p>Create a segment only when you know your audience well and have targeted
+at least one successful campaign to them using local rules. Visitors who
+share a combination of traits are good candidates for segmentation if
+they respond well to personalization. For example, add visitors who
+previously bought a product to a ``Previous buyers'' segment and offer
+them a discount as a reward for return business. Segmentation helps you
+repeat successful personalization experiments. Start with local rules,
+move to segmentation later.</p>
+</div>
+<div class="paragraph">
+<p>The traits of a segment can be combined with either a logical AND or a
+logical OR:</p>
+</div>
+<div class="paragraph">
+<p>AND constraint</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">segment matches IF
+   trait 1 matches AND
+   trait 2 matches AND
+   trait 3 matches ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>OR constraint</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">segment matches IF
+   trait 1 matches OR
+   trait 2 matches OR
+   trait 3 matches ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A segment defined in the following way will make the content available
+only if ALL of the following three traits match (i.e. the user has
+logged in, comes from the United States, and accesses the content on 4
+July 2020):</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-segmentation-app-traits.png" alt="image" width="500"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personas"><a class="anchor" href="#_personas"></a>Personas</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Persona is a hypothetical visitor who represents the target audience.
+The persona has the same goals as other visitors in a segment group. Use
+personas together with segmentation to test content variants. If a
+variant makes sense for the persona then it is suitable for everybody in
+the same segment.</p>
+</div>
+<div class="paragraph">
+<p>Describe the persona in a short paragraph that explains their behavior,
+needs and goals. Add a few fictional personal details to make the
+persona a realistic character. A realistic persona belongs to more than
+one segment at the same time. For example, a persona can be interested
+in both music and technology at the same time.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-persona-app-sara.png" alt="image" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Use personas to preview content variants. Personas are helpful because
+they put a personal human face on otherwise abstract data about
+visitors. By thinking about the needs of a fictional persona you can
+better infer what a real person might need.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-page-preview-person-sara.png" alt="image" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_caching_of_personalized_content"><a class="anchor" href="#_caching_of_personalized_content"></a>Caching of personalized content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Cache_%28computing%29">Caching</a> ``realizes
+a performance increase for transfers of data that is being repeatedly
+transferred''. In Magnolia, caching of personalized pages and pages with
+personalized components is possible in DX Core with the
+<a href="/Modules/List+of+modules/High+performance+caching+modules/Advanced+Cache+for+Personalization">Advanced
+Cache for Personalization</a> (ACP) module. The module caches content
+variants automatically.</p>
+</div>
+<div class="paragraph">
+<p>Without the ACP module, cache is bypassed for any content that has
+variants. The
+<a href="/Modules/List+of+modules/Personalization+module">Personalization</a>
+module changes cache configuration during installation. It creates a
+<code>/modules/cache/config/contentCaching/defaultPageCache/cachePolicy/ttlVoters/PersonalizedContentTtlVoter@class</code>
+property and sets it to
+<code>info.magnolia.personalization.cache.PersonalizedContentTtlVoter</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_caching_in_dx_core"><a class="anchor" href="#_caching_in_dx_core"></a>Caching in DX Core</h3>
+<div class="paragraph">
+<p>In DX Core, page variants are cached automatically. Magnolia generates
+cache entries for each page variant by including trait information in
+the cache keys. Component variants are cached with the Advanced Cache
+module.</p>
+</div>
+<div class="paragraph">
+<p>Caching of a page containing component variants means that a separate
+version of the page is cached for each component variant when the
+component variant is requested. For example, if a page contains two
+personalized components (A and B), each component has two variants (A1,
+A2, B1, B2), and if the combination A1 + B2 is valid for a visitor, this
+combination will be stored in the cache.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_overview_of_caching_and_personalization_features_by_editions"><a class="anchor" href="#_overview_of_caching_and_personalization_features_by_editions"></a>Overview of caching and personalization features by editions</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Cache feature</th>
+<th class="tableblock halign-left valign-top">CE</th>
+<th class="tableblock halign-left valign-top">DX Core</th>
+<th class="tableblock halign-left valign-top">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Caching of normal pages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Caching of personalized pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core 6.0+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Caching of pages with personalized components</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:heavy_check_mark:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX
+Core 6.0+</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preview"><a class="anchor" href="#_preview"></a>Preview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="!include">/_i/_What+is+the+Preview+app</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-page-preview-person-wang.png" alt="image" width="500"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_variant_resolving"><a class="anchor" href="#_variant_resolving"></a>Variant resolving</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>First matching variant wins</strong>. If two or more variants match the rules,
+Magnolia serves whatever variant is first under the parent page. This is
+important to understand when troubleshooting why your variant is not
+served. Is another matching variant in a higher position? Move your
+variant higher.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting"><a class="anchor" href="#_troubleshooting"></a>Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A page and its variants are linked via UUID. Each variant has a
+<code>mgnl:variationOf</code> property whose value is the parent page UUID. The
+property links a variant to its parent. This is important to understand
+when you export variants to other Magnolia instances for testing. <strong>The
+page you export from and the page you import to must have the same
+UUID</strong>, meaning the original page must exist in the target instance.
+Publish or export the original page to the target environment first.</p>
+</div>
+<div class="paragraph">
+<p>Pages that have variants have a special mixinType <code>mgnl:hasVariant</code>.
+<strong>You can only import variants to a page that already has variants.</strong> The
+<code>variants</code> node must exist under the target page. You cannot import a
+variant under a page that has no existing variants as it won’t have the
+necessary mixinType <code>mgnl:hasVariant</code>.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

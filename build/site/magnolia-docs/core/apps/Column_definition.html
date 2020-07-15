@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Column definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Column_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Column_definition.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Column_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Column_definition.html">Column definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Column definition - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="App_configuration.html">App configuration</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204048702"><a class="anchor" href="#src-204048702"></a>Column definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Columns define what content is displayed in tree and list views in the
+browser subapp.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This column definition is part of the <em>Magnolia 6 UI</em> framework. The
+fully qualified class name is
+<code>info.magnolia.ui.contentapp.configuration.column.ColumnDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Column+definition+-+5+UI">Column
+definition for <em>Magnolia 5 UI</em></a> instead.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204048702_Columndefinition-Examplecolumndefinition"><a class="anchor" href="#src-204048702_Columndefinition-Examplecolumndefinition"></a>Example column definition</h3>
+<div class="paragraph">
+<p><code>columns: &amp;columns</code></p>
+</div>
+<div class="paragraph">
+<p>`  - name: jcrName`</p>
+</div>
+<div class="paragraph">
+<p>`    label: name`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: jcrTitleColumn`</p>
+</div>
+<div class="paragraph">
+<p>`    nodeTypeToIcon:`</p>
+</div>
+<div class="paragraph">
+<p>`      mgnl:contact: icon-people`</p>
+</div>
+<div class="paragraph">
+<p>`      mgnl:content: icon-folder`</p>
+</div>
+<div class="paragraph">
+<p>`    filterComponent:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`    editable: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    editor:`</p>
+</div>
+<div class="paragraph">
+<p>`      availability:`</p>
+</div>
+<div class="paragraph">
+<p>`        nodes: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`        properties: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`  - name: value`</p>
+</div>
+<div class="paragraph">
+<p>`    label: value`</p>
+</div>
+<div class="paragraph">
+<p>`    editable: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    editor:`</p>
+</div>
+<div class="paragraph">
+<p>`      availability:`</p>
+</div>
+<div class="paragraph">
+<p>`        nodeTypes: mgnl:contact`</p>
+</div>
+<div class="paragraph">
+<p>`  - name: jcrPath`</p>
+</div>
+<div class="paragraph">
+<p>`    label: path`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: jcrPathColumn`</p>
+</div>
+<div class="paragraph">
+<p>`  - name: status`</p>
+</div>
+<div class="paragraph">
+<p>`    label: status`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: jcrStatusColumn`</p>
+</div>
+<div class="paragraph">
+<p>`  - name: mgnl:created`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: dateColumn`</p>
+</div>
+<div class="paragraph">
+<p>`    label: date`</p>
+</div>
+<div class="paragraph">
+<p>`    editable: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    editor:`</p>
+</div>
+<div class="paragraph">
+<p>`      availability:`</p>
+</div>
+<div class="paragraph">
+<p>`        nodeTypes:`</p>
+</div>
+<div class="paragraph">
+<p>`          - mgnl:contact`</p>
+</div>
+<div class="paragraph">
+<p>`        nodes: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`        properties: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`      field:`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`        converterClass: com.vaadin.data.converter.StringToDateConverter`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204048702_Columndefinition-Columnproperties"><a class="anchor" href="#src-204048702_Columndefinition-Columnproperties"></a>Column properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> (unless <code>$type</code> is used)</p>
+</div>
+<div class="paragraph">
+<p>The column definition class reads the column configuration and displays
+the column accordingly. The class must implement the ColumnDefinition
+interface. You can write your own class or use one of the ready-made
+classes. See <a href="#src-204048702_Columndefinition-Columntypes">Column
+types</a> for possible values.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>You can use this as a shortcut for <code>class</code> if the definition class is
+annotated with
+<code>info.magnolia.ui.contentapp.configuration.column.ColumnType</code>. The
+proper value is defined by the annotation.</p>
+</div>
+<div class="paragraph">
+<p>Example class annotation</p>
+</div>
+<div class="paragraph">
+<p><code>@ColumnType<code>(</code>"dateColumn"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> DateColumnDefinition </code>extends`</code> ConfiguredColumnDefinition&lt;Date&gt; {`</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>To use the <code>$type</code> property in YAML, see
+<a href="#src-204048702_Columndefinition-Examplecolumndefinition">Example
+column definition</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <em>default is `java.lang.String`</em></p>
+</div>
+<div class="paragraph">
+<p>Model type of the column. Use the fully qualified class name. See
+<a href="https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html">PropertyType</a>
+for possible values.</p>
+</div>
+<div class="paragraph">
+<p>A default type is typically hard-coded in each definition class. You
+only need to add this property if you want to override the default
+implementation (for example, with <code>java.lang.Long</code>).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is parent node name</em></p>
+</div>
+<div class="paragraph">
+<p>Name of the column.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>descriptionGenerator</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Generates a description for the column.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editable</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>When set to <code>true</code>, the column can be edited inline. You can
+double-click a cell to edit its value.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+You cannot define <code>defaultAction</code> and use inline editing at the same
+time.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editor</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the inline editor component. For this to work, you have to set
+<code>editable</code> to <code>true</code>. See the ColumnEditorDefinition interface.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>field</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <em>default is `textField`</em></p>
+</div>
+<div class="paragraph">
+<p>Type of the field definition item. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fieldtypes">Field
+types</a> for possible values.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>availability</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Outlines when inline editing is permitted. See
+<a href="Action_definition.html#src-204050559_Actiondefinition-Actionavailability">Action
+availability</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Availability is resolved against the selected row, not the selected
+column or property.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expandRatio</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the ratio with which the column expands. By default, all columns
+expand equally.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filterComponent</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Adds a filter field to the column. In theory, all
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fieldtypes">field
+types</a> are supported. For properties, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/List+of+fields">field-specific</a>
+and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Commonfieldproperties">common
+field</a> properties.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Currently, column filtering is not supported in REST-based elements of
+the UI.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Text displayed in the column heading. The value can be literal or a
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>
+of a
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagebundle">message
+bundle</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you do not provide the property, Magnolia will fall back to a
+generated i18n key.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maximumWidth</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the maximum allowed pixel width of the column when it is set to
+expand.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minimumWidth</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the minimum guaranteed pixel width of the column when it is set
+to expand.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>minimumWidthFromContent</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Sets whether the width of the content in the column is the minimum width
+of the column. When <code>false</code>, the column shrinks down to the width
+defined in <code>minimumWidth</code> if necessary.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>renderer</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `com.vaadin.ui.renderers.TextRenderer`</em></p>
+</div>
+<div class="paragraph">
+<p>Class extending Vaadin <code>AbstractRenderer</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>valueProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Class extending Vaadin <code>ValueProvider</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the width (in pixels). When set, overrides any configuration
+from <code>expandRatio</code>, <code>maximumWidth</code> and <code>minimumWidth</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-204048702_Columndefinition-Columntypes"><a class="anchor" href="#src-204048702_Columndefinition-Columntypes"></a>Column types</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dateColumn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.configuration.column.DateColumnDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iconAndValueColumn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.configuration.column.icon.IconAndValueColumnDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>iconColumn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.configuration.column.icon.IconColumnDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrPathColumn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.column.jcr.JcrPathColumnDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrStatusColumn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.column.jcr.JcrStatusColumnDefinition</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrTitleColumn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ui.contentapp.column.jcr.JcrTitleColumnDefinition</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Content view definition</p>
+</div>
+<div class="paragraph">
+<p>App launcher layout</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

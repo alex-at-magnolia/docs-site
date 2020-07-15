@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content editor :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/content-editor.html">
+    <meta name="keywords" content="content-editor">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="content-editor.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/content-editor.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="content-editor.html">Content editor</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Content editor</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Apps/List+of+apps/Stories+app">Stories app</a> (for authors)</p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Content+Editor+module">Content Editor
+module</a></p>
+</li>
+<li>
+<p><a href="/Apps/Developing+a+custom+content+editor+app">Developing a custom
+content editor app</a></p>
+</li>
+<li>
+<p><a href="/Apps/Developing+a+custom+content+editor+app/Developing+and+rendering+custom+content+blocks">Developing
+and rendering custom content blocks</a></p>
+</li>
+<li>
+<p><a href="/Apps/Developing+a+custom+content+editor+app/Block+definition">Block
+definition</a></p>
+</li>
+<li>
+<p><a href="/WIKIARCHIVE/Content+Editor+I18n+Support">Content Editor I18n
+Support</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Content Editor module delivers a framework for producing interfaces
+to allow authors to quickly create flexible content in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>The Stories app provides an example of how you can implement the content
+editor framework. The example is further extended by the Magnolia
+<a href="/Apps/List+of+apps/Stories+app#demo-stories">demo</a>. You can
+customize the app to suit your needs or use it as a blueprint to create
+your own custom content editor app.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_flexibility_and_control"><a class="anchor" href="#_flexibility_and_control"></a>Flexibility and control</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Content strategists often have to decide between
+<a href="https://en.wikipedia.org/wiki/Structured_content">structured</a> and
+<a href="https://en.wikipedia.org/wiki/Unstructured_data">unstructured</a> content
+editing interfaces. Structured forms do not have enough flexibility, for
+example, to manage articles composed of multiple parts that vary from
+one article to another. Unstructured content, on the other hand, gives
+authors a lot of freedom but makes it virtually impossible to reuse and
+control the output.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia gives you control over a combination of the two: structured
+fields for the content that is needed every time, and flexible blocks
+for the content that is variable.</p>
+</div>
+<div class="paragraph">
+<p>In the <a href="/Apps/List+of+apps/Stories+app">Stories app</a>, as in your own
+custom content apps built on the basis of the Content Editor module, you
+can predefine:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The static, structured information you require (<em>outline</em>).</p>
+</li>
+<li>
+<p>The types of content authors can use (<em>blocks</em>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Authors can then use the set of well-defined blocks provided to freely
+create their content, such as products, articles, press releases, blog
+posts or job postings.</p>
+</div>
+<div class="paragraph">
+<p>The flexible combination of both structured and free-form content means
+your content can be repurposed and published to multiple platforms.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fast_iterative_publishing"><a class="anchor" href="#_fast_iterative_publishing"></a>Fast, iterative publishing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With a custom content editor app, there is no need to wait until the
+final content is complete before publishing.</p>
+</div>
+<div class="paragraph">
+<p>For example in the Stories app, authors can enter content into the first
+few fields and quickly publish a preliminary version. Then, as more
+content unfolds, authors can repeatedly use the <strong>Save and publish</strong>
+button to publish changes in one click. Stories are rendered
+automatically by just a few pages. This caters well to the media
+industry where being first to publish on breaking news is critical.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_author_experience"><a class="anchor" href="#_author_experience"></a>Author experience</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Custom content editor apps offer a user-friendly and spacious editor.</p>
+</div>
+<div class="paragraph">
+<p>For example, in the Stories app, authors can create and reorder blocks
+of content using convenient keyboard
+<a href="/Apps/List+of+apps/Stories+app#stories-shortcuts">shortcuts</a>. Any
+external links authors add, such as to websites, videos or tweets, are
+automatically unfurled to show a preview.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-content-editor-author.png" alt="image" width="400"></span><span class="image"><img src="../../_images/6-0-content-editor-public.png" alt="image" width="400"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_content_curation"><a class="anchor" href="#_content_curation"></a>Content curation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use a custom content editor app to not only create content but
+also to select, organize, and present it.</p>
+</div>
+<div class="paragraph">
+<p>A custom content editor app can be created to allow authors to select
+all the images and videos related to a given subject from the
+<a href="/Features/Digital+asset+management">DAM</a> app so that this content
+could be delivered through multiple channels. The author in this example
+is not creating content but instead curating and publishing it through
+the content editor framework.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

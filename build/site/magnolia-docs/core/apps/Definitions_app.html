@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Definitions app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Definitions_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Definitions_app.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Definitions_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Definitions_app.html">Definitions app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Definitions app - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_apps.html">List of apps</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597826"><a class="anchor" href="#src-196597826"></a>Definitions app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+App+module">Definitions
+App module</a></p>
+</li>
+<li>
+<p><a href="Resource_Files_app.html">Resource Files App</a></p>
+</li>
+<li>
+<p><a href="Configuration_app.html">Configuration App</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Definitions app is the single place to find all definitions loaded
+by Magnolia through the Registry API.</p>
+</div>
+<div class="paragraph">
+<p>The app displays active definitions from all sources - JCR and YAML -
+and origins - classpath, JCR and file system.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
+development</a> introduced an additional configuration source in Magnolia
+and the app provides an overview of both JCR and file-based definitions.
+At a glance, back and front-end developers can see the definition
+sources.</p>
+</div>
+<div class="paragraph">
+<p>In the Definitions app users can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-196597826_Definitionsapp-Viewingdefinitions">View</a>,
+<a href="#src-196597826_Definitionsapp-Searchingandfilteringdefinitions">search
+and filter</a> definitions by multiple criteria.</p>
+</li>
+<li>
+<p><a href="#src-196597826_Definitionsapp-Accessingdefinitions">Access
+definitions</a> in either the <a href="Configuration_app.html">Configuration</a> or
+<a href="Resource_Files_app.html">Resource files</a> app directly from the
+Definitions app.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The app also shows
+<a href="#src-196597826_Definitionsapp-Decorateddefinitions">definition
+decorations</a> and
+<a href="#src-196597826_Definitionsapp-Definitionerrors">configuration
+errors</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-definitionsApp.png" alt="images/download/attachments/196597826/6-1-definitionsApp.png"></span></p>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Definitiontypes"><a class="anchor" href="#src-196597826_Definitionsapp-Definitiontypes"></a>Definition types</h3>
+<div class="paragraph">
+<p>The app includes all definitions that are bound to a Registry (for
+example TemplateDefinitionRegistry ).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/templates-icon.gif" alt="images/download/attachments/196597826/templates-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Templates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition">Template
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/dialog-icon.gif" alt="images/download/attachments/196597826/dialog-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Dialogs</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">Dialog
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/app-icon.gif" alt="images/download/attachments/196597826/app-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Apps</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="App_configuration.html">App definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Themes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">Theme
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Renderers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Renderers">Renderer
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Fieldtypes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Custom+fields">Field type
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Mediaeditors</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/UI+Media+Editor+module">Media
+editor definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MessageViews</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="Message_view_definition.html">Message view
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Workflows</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Workflow+processes">Workflow
+definitions</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196597826/other-icon.gif" alt="images/download/attachments/196597826/other-icon.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Workitemhandlers</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/User+tasks">Workitem
+handler definitions</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Searchingandfilteringdefinitions"><a class="anchor" href="#src-196597826_Definitionsapp-Searchingandfilteringdefinitions"></a>Searching and filtering definitions</h3>
+<div class="paragraph">
+<p>The column headers offer numerous filtering options to allow you to
+quickly find what you are looking for. The following filters are
+available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Title</em>: Type search term.</p>
+</li>
+<li>
+<p><em>Type</em>: Select
+<a href="#src-196597826_Definitionsapp-Definitiontypes">definition type</a>.</p>
+</li>
+<li>
+<p><em>Module</em>: Select a module. The field displays all modules.</p>
+</li>
+<li>
+<p><em>Origin</em> (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources#Resources-Originsandloadingorder">Resources:
+Origin and loading order</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>jcr</em></p>
+</li>
+<li>
+<p><em>file</em></p>
+</li>
+<li>
+<p><em>code</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>Decorated</em> (See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">Definition
+decoration</a>)</p>
+</li>
+<li>
+<p><em>Problem severity</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>SEVERE</em></p>
+</li>
+<li>
+<p><em>MAJOR</em></p>
+</li>
+<li>
+<p><em>DEPRECATED</em></p>
+</li>
+<li>
+<p><em>MINOR</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Title</em>: Image</p>
+</li>
+<li>
+<p><em>Type</em>: templates</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-definitionsApp-exampleSearch.png" alt="images/download/attachments/196597826/6-1-definitionsApp-exampleSearch.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Viewingdefinitions"><a class="anchor" href="#src-196597826_Definitionsapp-Viewingdefinitions"></a>Viewing definitions</h3>
+<div class="paragraph">
+<p>You can expand any definition node to view a representation of the full
+configuration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: File-based <code>textImage</code> component in the MTK module.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-textImage.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-textImage.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196597826_Definitionsapp-Accessingdefinitions]</mark>#</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Accessingdefinitions"><a class="anchor" href="#src-196597826_Definitionsapp-Accessingdefinitions"></a>Accessing definitions</h3>
+<div class="paragraph">
+<p>Dedicated actions allow you to access a definition for editing in either
+the <a href="Resource_Files_app.html">Resource files</a> or
+<a href="Configuration_app.html">Configuration</a> app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Show in Resources app</strong> displays for file-based definitions. The
+action opens the file in read only mode in the Resource files app. You
+can choose to hotfix the definition in the app or edit it on the file
+system.<br>
+<strong>Example</strong>: <code>textImage</code> component definition from the Travel demo in the
+Definitions and Resources apps.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-textImageTD.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-textImageTD.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-textImageTD-hotfixing.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-textImageTD-hotfixing.png"></span></p>
+</div>
+</li>
+<li>
+<p><strong>Show in Configuration app</strong> displays for JCR-based definitions. The
+action opens the definition in the Configuration app where you can edit
+the definition in the JCR.<br>
+<strong>Example</strong>: <code>login</code> component definition from the Public User
+Registration module in the Definitions and Configuration apps.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-loginComponentPUR.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-loginComponentPUR.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-loginComponentPUR-configApp.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-loginComponentPUR-configApp.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>All YAML definitions display in the <strong>Origin</strong> column as <em>file</em>. The
+origin of these definitions could be the file system or the classpath.
+You can see each origin in the Resource files app.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Decorateddefinitions"><a class="anchor" href="#src-196597826_Definitionsapp-Decorateddefinitions"></a>Decorated definitions</h3>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">Decorated
+definitions</a> are marked in the <strong>Decorated</strong> column. The <strong>Show definition
+decorators</strong> action opens the <strong>Applied definition decorators</strong> popup which
+shows the source file and the decorated path of each decorator. Click
+<span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-RscAppIcon.gif" alt="images/download/attachments/196597826/6-1-DefinitionsApp-RscAppIcon.gif" height="20"></span>
+to access the source file in the Resource files app.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>home</code> template from the Travel Demo (DX Core version).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-homeTemplateTD.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-homeTemplateTD.png"></span><br>
+<span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-homeTemplateDecorations.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-homeTemplateDecorations.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Definitionerrors"><a class="anchor" href="#src-196597826_Definitionsapp-Definitionerrors"></a>Definition errors</h3>
+<div class="paragraph">
+<p>The app makes it easy to find problematic definitions:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-severeProblem.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-severeProblem.png"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the Problems tab all problematic definitions display:</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597826/6-1-DefinitionsApp-SEVEREinProblemsTAb.png" alt="images/download/attachments/196597826/6-1-DefinitionsApp-SEVEREinProblemsTAb.png" height="400"></span><br>
+<br>
+The app also shows deprecated definitions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Deprecated classes used by any definition.</p>
+</li>
+<li>
+<p>Deprecated or non-existing templates used by block definitions.</p>
+</li>
+<li>
+<p>Deprecated or non-existing page template definitions referenced from
+site definitions.</p>
+</li>
+<li>
+<p>Deprecated or non-existing theme definitions referenced from site
+definitions.</p>
+</li>
+<li>
+<p>Template references:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Deprecated or non-existing dialogs.</p>
+</li>
+<li>
+<p>Deprecated or non-existing component definitions used in page
+definitions.</p>
+</li>
+<li>
+<p>Non-existing template script paths.</p>
+</li>
+<li>
+<p>Configured but non-existing renderer.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597826_Definitionsapp-Configuration"><a class="anchor" href="#src-196597826_Definitionsapp-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The app is based on the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Parts+of+a+content+app+-+5+UI">content
+app framework</a> and configured in YAML on the classpath at
+<code>/src/main/resources/definitions-app/apps/definitions-app.yaml</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The app requires NO additional configuration and it is NOT advisable to
+make any changes to the configuration file.</p>
+</div>
+<div class="paragraph">
+<p>Click here to see configuration</p>
+</div>
+<div class="paragraph">
+<p><code>appClass: info.magnolia.ui.contentapp.ContentApp</code></p>
+</div>
+<div class="paragraph">
+<p><code>icon: icon-definitions-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.ui.contentapp.ContentAppDescriptor`</p>
+</div>
+<div class="paragraph">
+<p><code>theme: definitions-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>subApps:</code></p>
+</div>
+<div class="paragraph">
+<p>`  overview:`</p>
+</div>
+<div class="paragraph">
+<p>`    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor`</p>
+</div>
+<div class="paragraph">
+<p>`    contentConnector:`</p>
+</div>
+<div class="paragraph">
+<p>`      implementationClass: info.magnolia.definitions.app.overview.DefinitionsContentConnector`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.ui.vaadin.integration.contentconnector.ContentConnectorDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`    workbench:`</p>
+</div>
+<div class="paragraph">
+<p>`      contentTools:`</p>
+</div>
+<div class="paragraph">
+<p>`        definitionsTools:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.definitions.app.overview.toolbar.FilterToolbarDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`      contentViews:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: views`</p>
+</div>
+<div class="paragraph">
+<p>`          implementationClass: info.magnolia.definitions.app.overview.tree.DefinitionsTreePresenter`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.ui.workbench.tree.TreePresenterDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          columns:`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: title`</p>
+</div>
+<div class="paragraph">
+<p>`              expandRatio: <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              sortable: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`            - name: value`</p>
+</div>
+<div class="paragraph">
+<p>`              expandRatio: <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              sortable: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`            - name: type`</p>
+</div>
+<div class="paragraph">
+<p>`              expandRatio: <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              sortable: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`            - name: module`</p>
+</div>
+<div class="paragraph">
+<p>`              expandRatio: <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              sortable: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`            - name: origin`</p>
+</div>
+<div class="paragraph">
+<p>`              expandRatio: <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p>`              <code>class</code>: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`              sortable: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`    actions:`</p>
+</div>
+<div class="paragraph">
+<p>`      showFile:`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>class</code>: info.magnolia.definitions.app.overview.actions.OpenDefinitionActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`        implementationClass: info.magnolia.definitions.app.overview.actions.OpenResourceDefinitionAction`</p>
+</div>
+<div class="paragraph">
+<p>`        appName: resources`</p>
+</div>
+<div class="paragraph">
+<p>`        subAppId: detail`</p>
+</div>
+<div class="paragraph">
+<p>`        icon: icon-resource-files-app`</p>
+</div>
+<div class="paragraph">
+<p>`      showConfig:`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>class</code>: info.magnolia.definitions.app.overview.actions.OpenDefinitionActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`        appName: configuration`</p>
+</div>
+<div class="paragraph">
+<p>`        subAppId: browser`</p>
+</div>
+<div class="paragraph">
+<p>`        icon: icon-configuration-app`</p>
+</div>
+<div class="paragraph">
+<p>`    actionbar:`</p>
+</div>
+<div class="paragraph">
+<p>`      sections:`</p>
+</div>
+<div class="paragraph">
+<p>`        group:`</p>
+</div>
+<div class="paragraph">
+<p>`          availability:`</p>
+</div>
+<div class="paragraph">
+<p>`            rules:`</p>
+</div>
+<div class="paragraph">
+<p>`              IsDefinitionGroupRule:`</p>
+</div>
+<div class="paragraph">
+<p>`                implementationClass: info.magnolia.definitions.app.overview.availability.IsDefinitionGroupRule`</p>
+</div>
+<div class="paragraph">
+<p>`        file:`</p>
+</div>
+<div class="paragraph">
+<p>`          groups:`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>default</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`              items:`</p>
+</div>
+<div class="paragraph">
+<p>`                - name: showFile`</p>
+</div>
+<div class="paragraph">
+<p>`          availability:`</p>
+</div>
+<div class="paragraph">
+<p>`            rules:`</p>
+</div>
+<div class="paragraph">
+<p>`              IsFileDefinitionRule:`</p>
+</div>
+<div class="paragraph">
+<p>`                implementationClass: info.magnolia.definitions.app.overview.availability.IsFileBasedDefinitionRule`</p>
+</div>
+<div class="paragraph">
+<p>`        config:`</p>
+</div>
+<div class="paragraph">
+<p>`          groups:`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>default</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`              items:`</p>
+</div>
+<div class="paragraph">
+<p>`                - name: showConfig`</p>
+</div>
+<div class="paragraph">
+<p>`          availability:`</p>
+</div>
+<div class="paragraph">
+<p>`            rules:`</p>
+</div>
+<div class="paragraph">
+<p>`              IsConfigDefinitionRule:`</p>
+</div>
+<div class="paragraph">
+<p>`                implementationClass: info.magnolia.definitions.app.overview.availability.IsJcrConfigWorkspaceDefinitionRule`</p>
+</div>
+<div class="paragraph">
+<p>Cookies app</p>
+</div>
+<div class="paragraph">
+<p>Definitions data source</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

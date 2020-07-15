@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Workspaces - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Workspaces.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Workspaces.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/Workspaces.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Workspaces.html">Workspaces - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Workspaces - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Architecture.html">Architecture</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595734"><a class="anchor" href="#src-196595734"></a>Workspaces</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Magnolia stores content in the <code>magnolia</code> repository. The repository is
+further divided into workspaces.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595734_Workspaces-Listofworkspaces"><a class="anchor" href="#src-196595734_Workspaces-Listofworkspaces"></a>List of workspaces</h3>
+<div class="paragraph">
+<p>Workspaces in the <code>magnolia</code> repository:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workspace</th>
+<th class="tableblock halign-left valign-top">What it contains</th>
+<th class="tableblock halign-left valign-top">How to view it</th>
+<th class="tableblock halign-left valign-top">Created by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>category</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories assigned to content.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categories app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categorization module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>config</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration for Magnolia and all modules.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Config app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contacts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sample contacts used in the Contacts app.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contacts module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dam</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Digital asset management system storage for images and video.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assets app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Digital Asset Management module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forum</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page comments and forum posts.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forums app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forum module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>googleSitemaps</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sitemap data</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Sitemap app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Google Sitemap
+module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamically created images used in teasers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR Browser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Imaging module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keystore</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Passwords managed by the Passwords manager module.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR
+browser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Password manager module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>marketing-tags</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marketing tags – snippets of code inserted on Web
+pages.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marketing Tags app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marketing Tags module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>messages</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Messages such as publication request approvals.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tasks app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AdminCentral module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MgnlSystem</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System information for Magnolia internal use.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MgnlVersion</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Versioning information for Magnolia internal use.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>profiles</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usage metrics acknowledgement status.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR Browser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AdminCentral module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CSS files, JavaScript files</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resources app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resources
+module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rss</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RSS feeds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feeds app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RSS Aggregator module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>scripts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groovy scripts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groovy app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groovy module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stories</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sample blogposts used in the Stories app.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stories app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stories app</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tags</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content tags – keywords or terms assigned to an item of
+content.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tags app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content Tags module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tasks</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Tasks">Tasks</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tasks app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task Management module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>templates</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(typically nothing, legacy workspace for in-place
+templates)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR Browser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In-place Templating module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tours</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tours of the travel demo.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tours app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tours module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>users</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">System, admin and public users.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>userroles</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User roles and ACLs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>usergroups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User groups.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>visitors</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visitor information for GDPR compliance.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visitors app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>website</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Web pages, areas and components.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pages app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+In Magnolia we sometimes refer to a workspace as a "repository" for
+historical reasons. But it really is a workspace.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595734_Workspaces-Addingacustomworkspace"><a class="anchor" href="#src-196595734_Workspaces-Addingacustomworkspace"></a>Adding a custom workspace</h3>
+<div class="sect3">
+<h4 id="src-196595734_Workspaces-WithMagnoliaContentTypes"><a class="anchor" href="#src-196595734_Workspaces-WithMagnoliaContentTypes"></a>With Magnolia Content Types</h4>
+<div class="paragraph">
+<p>By utilizing the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types+module">Content
+Types module</a> you can define custom JCR content types and workspaces
+within light modules.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Defining content types within light modules can be accomplished on a
+running Magnolia system without redeploying the WAR file of your
+Magnolia instances and without restarting the instance or a module. This
+makes it a perfect approach if you have a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+Cloud">Magnolia
+Cloud</a> subscription package.</p>
+</div>
+<div class="paragraph">
+<p>In just one YAML file you can define a JCR workspace, a node type and
+namespaces.</p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: tourguides`</p>
+</div>
+<div class="paragraph">
+<p>`  namespaces:`</p>
+</div>
+<div class="paragraph">
+<p>`    mt: https:``//www.magnolia-travel.com/jcr/1.0/mt`</p>
+</div>
+<div class="paragraph">
+<p>`  autoCreate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: mt:tourGuide`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: birthday`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Date`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: gender`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: shortBio`</p>
+</div>
+<div class="paragraph">
+<p>Line 2: When the definition item is loaded, and if there is no workspace
+registered by the given name and the <code>autoCreate</code> property is set to
+<code>true</code>, the system will register the workspace.</p>
+</div>
+<div class="paragraph">
+<p>For further details about the ways to define a JCR workspace and node
+types please refer to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Defining+JCR+node+types+and+workspaces">Defining
+JCR node types and workspaces</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+Data+source+definition">Content
+type Data source definition</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Part+I+-+My+first+content+type">Part
+I - My first content type</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595734_Workspaces-WithaMagnoliaMavenmoduledescriptor"><a class="anchor" href="#src-196595734_Workspaces-WithaMagnoliaMavenmoduledescriptor"></a>With a Magnolia Maven module descriptor</h4>
+<div class="paragraph">
+<p>To add your own workspace:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules#Modules-Moduledescriptor">module
+descriptor</a>.</p>
+</li>
+<li>
+<p>Add a <code>repositories</code> section, a <code>workspaces</code> section, and register
+your workspace inside it.</p>
+</li>
+<li>
+<p>Optional: To register custom node types, add a <code>nodeTypeFile</code> section
+and provide a relative path to the XML file that defines the node types.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: The Contacts app module registers a workspace named
+<code>contacts</code> in the <code>magnolia</code> repository. It also registers a custom node
+type which is defined in a
+<a href="http://git.magnolia-cms.com/gitweb/?p=modules/contacts-app.git;a=blob;f=src/main/resources/mgnl-nodetypes/magnolia-contacts-nodetypes.xml;hb=HEAD">separate
+XML file</a>. This is an abbreviated snippet from the complete
+<a href="http://git.magnolia-cms.com/gitweb/?p=modules/contacts-app.git;a=blob;f=src/main/resources/META-INF/magnolia/contacts.xml">Contacts
+app module descriptor</a>.</p>
+</div>
+<div class="paragraph">
+<p>contacts.xml module descriptor</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;?xml version=<code>"1.0"</code> encoding=<code>"UTF-8"</code>?&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE module SYSTEM <code>"module.dtd"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;module&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;name&gt;contacts&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;displayName&gt;Contacts App&lt;/displayName&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;description&gt;Contacts App&lt;/description&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;version&gt;${project.version}&lt;/version&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;dependencies&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;dependency&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;name&gt;ui-admincentral&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;version&gt;<code>5.1</code>/*&lt;/version&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/dependency&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/dependencies&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;repositories&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;repository&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;name&gt;magnolia&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;workspaces&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;workspace&gt;contacts&lt;/workspace&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/workspaces&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;nodeTypeFile&gt;/mgnl-nodetypes/magnolia-contacts-nodetypes.xml&lt;/nodeTypeFile&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/repository&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/repositories&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/module&gt;</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595734_Workspaces-Namingtheworkspace"><a class="anchor" href="#src-196595734_Workspaces-Namingtheworkspace"></a>Naming the workspace</h3>
+<div class="paragraph">
+<p>Magnolia uses a defined workspace name also for creating a backend
+database table, which means that you must follow table naming rules for
+your database.</p>
+</div>
+<div class="paragraph">
+<p>In <a href="http://h2database.com">H2</a>, the default JCR persistency layer in
+Magnolia 5.5+, the name (non-quoted)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Must begin with a character from the A-Z range or with an undescore
+character.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In case of the <a href="https://wiki.magnolia-cms.com/db.apache.org/derby/">Derby</a>
+database, which was the default JCR persistency layer before the release
+of Magnolia 5.5, the ordinary identifier (i.e. the non-quoted name)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Must begin with a letter and, contain only letters, underscore
+characters (_), and digits.</p>
+</li>
+<li>
+<p>The permitted letters and digits include all Unicode letters and
+digits, but Derby does not attempt to ensure that the characters in
+identifiers are valid in the database&#8217;s locale.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see also</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.h2database.com/html/grammar.html#name">SQL Grammar: Name</a>
+(H2 site)</p>
+</li>
+<li>
+<p><a href="https://db.apache.org/derby/docs/10.13/ref/crefsqlj1003454.html">Rules
+for SQL identifiers</a> (Derby site)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Webapp</p>
+</div>
+<div class="paragraph">
+<p>Custom error page</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

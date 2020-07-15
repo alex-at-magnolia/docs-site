@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Template definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Template_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Template_definition.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Template_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Template_definition.html">Template definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Template definition - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596456"><a class="anchor" href="#src-196596456"></a>Template definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Page_definition.html">Page definition</a></p>
+</li>
+<li>
+<p><a href="Area_definition.html">Area definition</a></p>
+</li>
+<li>
+<p><a href="Component_definition.html">Component definition</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A template definition gives a template a name and makes it available to
+the system. At a minimum a template definition must specify a
+<a href="Template_scripts.html">script</a> and a <a href="Renderers.html">renderer</a>.
+You can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+configuration#Moduleconfiguration-ConfiguringinJCRvsYAML">configure
+a template in a YAML file or a JCR node.</a></p>
+</div>
+<div class="sect2">
+<h3 id="src-196596456_Templatedefinition-Templatedefinitiontypes"><a class="anchor" href="#src-196596456_Templatedefinition-Templatedefinitiontypes"></a>Template definition types</h3>
+<div class="paragraph">
+<p>Magnolia has three types of template definitions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Page_definition.html">Page definition</a> defines a page template.
+Pages are divided into areas.</p>
+</li>
+<li>
+<p><a href="Area_definition.html">Area definition</a> defines an area template.
+An area is configured in a page definition. Areas typically contain
+components.</p>
+</li>
+<li>
+<p><a href="Component_definition.html">Component definition</a> defines a
+component template.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
+CLI</a> offers the <code>create-page</code> and <code>create-component</code> commands that
+automatically create basic scripts, template definitions and dialog
+definitions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596456_Templatedefinition-Commontemplateproperties"><a class="anchor" href="#src-196596456_Templatedefinition-Commontemplateproperties"></a>Common template properties</h3>
+<div class="paragraph">
+<p>Simple template definition:*YAML file*</p>
+</div>
+<div class="paragraph">
+<p>/my-module/templates/pages/home.yaml</p>
+</div>
+<div class="paragraph">
+<p>`renderType: freemarker `</p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /my-module/templates/pages/home.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: my-module:pages/homePageProperties</code></p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: com.example.templates.CustomTemplateDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>modelClass: com.example.templates.HomePageModel</code></p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">home</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.templates.CustomTemplateDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dialog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:pages/homePageProperties</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.templates.HomePageModel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/templates/pages/home.ftl</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can use common template properties in
+<a href="Page_definition.html">page</a>, <a href="Area_definition.html">area</a> and
+<a href="Component_definition.html">component</a> definitions. Each template
+type has its own specific properties too.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>renderType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="Renderers.html">Renderer</a> to use. Magnolia supports <code>freemarker</code> and
+<code>jsp</code> renderers by default.</p>
+</div>
+<div class="paragraph">
+<p>If you have the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+module">Site module</a>
+you can set <code>renderType=site</code>, then define a common <code>templateScript</code> in
+the <a href="Template_prototype.html">template prototype</a> to use on all pages
+of the site.</p>
+</div>
+<div class="paragraph">
+<p>You can also
+<a href="Renderers.html#src-196596690_Renderers-Creatingacustomrenderer">create
+a custom renderer</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>templateScript</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Path to the template script as <code>/&lt;module&gt;/templates/&lt;type&gt;/&lt;file&gt;.&lt;ext&gt;</code>
+format. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Resources</a> for
+more about script storage locations.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dialog</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Dialog definition ID in <code>&lt;module-name&gt;:&lt;path to dialog definition&gt;</code>
+format.</p>
+</div>
+<div class="paragraph">
+<p>The ID has two parts, separated by a colon:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>&lt;module-name&gt;</code> : The name of the module which contains the dialog
+definition.</p>
+</li>
+<li>
+<p><code>&lt;path&gt;</code>: Relative path to the dialog definition inside <code>dialogs</code> root
+item. For example the dialog ID <code>my-module:pages/homePageProperties</code>
+either points to the YAML file
+<code>$magnolia.home/my-module/dialogs/homePageProperties.yaml</code> or to the JCR
+node <code>/modules/my-module/dialogs/homePageProperties</code> in the
+configuration workspace.</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>i18nBasename</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagebundle">Message
+bundle</a> such as <code>com.example.templates.messages</code>. You don&#8217;t need to set
+this property if your message bundle is in the <code>i18n</code> directory (the
+<code>mgnl-i18n</code> directory in Magnolia 5.4.5 and earlier) inside the module.
+Magnolia will find the bundle automatically. Only set the property if
+you put the bundle somewhere else.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Title of the template
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Types+of+translatable+text#Typesoftranslatabletext-Templatelabels">displayed
+to editors</a>. The value can be literal or retrieved from a message bundle
+(which is defined in i18nBasename) with a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>.
+Use alphanumeric characters in literal values.</p>
+</div>
+<div class="paragraph">
+<p>Displayed in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Page_definition.html">Pages</a>: Template dropdown in the Pages app.</p>
+</li>
+<li>
+<p><a href="Area_definition.html">Areas</a>: Area toolbar in the page editor.</p>
+</li>
+<li>
+<p><a href="Component_definition.html">Components</a>: Component toolbar in the
+page editor.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Template description displayed to editors. The value can be literal or
+retrieved from the message bundle (specified by <code>i18nBasename</code>) with a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The fully-qualified class name for the Java bean representing the
+definition data of this item. The default class is TemplateDefinition .</p>
+</div>
+<div class="paragraph">
+<p>Only set the value when using custom definition class. Example:
+<code>com.example.templates.CustomTemplateDefinition</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modelClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>A model class that contains business logic for the template. The model
+class needs to implement the RenderingModel interface. The renderer
+creates a bean based on the <code>modelClass</code>. Current content, definition
+and the parent model are passed to the constructor. This object is
+instantiated for each rendering of a page or component.</p>
+</div>
+<div class="paragraph">
+<p>A Groovy model class can be referenced from a YAML template definition.</p>
+</div>
+<div class="paragraph">
+<p>Current limitations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A Groovy model cannot be supplied as a file, you can only reference a
+Groovy model stored in JCR. (See the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Groovy+module#Groovymodule-UseGroovyclassesinsteadofJavaclasses">Groovy
+module</a>.)</p>
+</li>
+<li>
+<p>The reference path cannot include the hyphen character.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Value:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java models: Fully-qualified class name. Example:
+<code>com.example.templates.HomePageModel</code>.</p>
+</li>
+<li>
+<p>Groovy models: Path to the model using dot notation such as
+<code>myModule.templates.components.LinkModel.</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parameters</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196596456_Templatedefinition-Customtemplateproperties">Custom
+template properties</a> that you can access from a script without having to
+write a class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>extends</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional,</strong> <em>in JCR node configuration only</em></p>
+</div>
+<div class="paragraph">
+<p>Inherits the configuration from another template definition. The value
+is a valid Magnolia path. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Reusing+configuration">Reusing
+configuration</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>variations</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Merges template definition with the variation having the same name of
+the channel - if available.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596456_Templatedefinition-Customtemplateproperties"><a class="anchor" href="#src-196596456_Templatedefinition-Customtemplateproperties"></a>Custom template properties</h3>
+<div class="paragraph">
+<p>Use a <code>parameters</code> item in any template definition to add custom
+properties without having to write a custom class. Access the properties
+from your script using the <code>def.parameters.&lt;parameter-name&gt;</code> notation.
+See
+link:Rendering_context_objects.html#src-196596497_Renderingcontextobjects-def<strong class="def.">YAML
+file</strong></p>
+</div>
+<div class="paragraph">
+<p><code>parameters:</code></p>
+</div>
+<div class="paragraph">
+<p>`  example: my-value`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;template name&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">example</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-value</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To access the <code>example</code> parameter in a Freemarker script, use:</p>
+</div>
+<div class="paragraph">
+<p><code>${def.parameters.example!}</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596456_Templatedefinition-Referencingtemplates"><a class="anchor" href="#src-196596456_Templatedefinition-Referencingtemplates"></a>Referencing templates</h3>
+<div class="paragraph">
+<p>Other configuration nodes can reference templates. The property used in
+the referencing configuration depends on the mechanism that is used.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596456_Templatedefinition-Referencingtemplateswithidproperty"><a class="anchor" href="#src-196596456_Templatedefinition-Referencingtemplateswithidproperty"></a>Referencing templates with id property</h4>
+<div class="paragraph">
+<p>The template <code>id</code> property is used for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Component_definition.html#src-196596467_Componentdefinition-Componentavailability">Component
+availability</a> in an area definition.</p>
+</li>
+<li>
+<p><a href="Template_availability.html#src-196596706_Templateavailability-Option1Definepagetemplatesexplicitly">Template
+availability</a> in a site definition.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>main</code> area definition referencing the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/MTK+module">MTK&#8217;s</a>
+<code>textImage</code> and <code>linkList</code> components in the <code>availableComponents</code>
+node.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>my-module/templates/pages/myTemplate</p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /my-module/templates/pages/my-template.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents: `</p>
+</div>
+<div class="paragraph">
+<p>`      textImage:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/textImage`</p>
+</div>
+<div class="paragraph">
+<p>`      linkList:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/linkList`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">textImage</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mtk:components/textImage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">linkList</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mtk:components/linkList</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>ID of the template definition in
+<code>&lt;module name&gt;:&lt;path to page definition&gt;</code> format.</p>
+</div>
+<div class="paragraph">
+<p>The ID has two parts separated by a colon:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;module-name&gt;</code> : Name of the module which contains the template
+definition.</p>
+</li>
+<li>
+<p><code>&lt;path&gt;</code>: Relative path to the template definition inside the
+<code>templates</code> folder. For example, the page ID <code>my-module:pages/home</code>
+either points to a YAML file
+<code>$magnolia.resources.dir/my-module/templates/pages/home.yaml</code> or to a
+JCR node <code>/modules/my-module/templates/pages/home</code> in the <code>config</code>
+workspace.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can reference templates from any module</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>id</code> property is not a general property. It can only be used when it
+is supported by the referencing configuration.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596456_Templatedefinition-Referencingtemplatesusingpath"><a class="anchor" href="#src-196596456_Templatedefinition-Referencingtemplatesusingpath"></a>Referencing templates using path</h4>
+<div class="paragraph">
+<p>Various Magnolia mechanisms use the path to the template definition to
+reference templates. These mechanisms allow you to reuse configurations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML#YAML&#8212;&#8203;Includemechanism">Include mechanism</a>:
+Is used in YAML definitions to include a referenced file. The
+Magnolia-specific <code>!include</code> directive uses the absolute path to
+reference the file.</p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Reusing+configuration#Reusingconfiguration-extendsmechanisminJCRnodebasedconfiguration">Extends
+mechanism</a>: Is used in JCR node configuration to extend another
+configuration. The <code>extends</code> property references the source
+configuration by its path. The target configuration inherits everything
+from the source and adds its own exceptions.</p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">Definition
+decoration mechanism</a>: Allows you to alter existing configured items,
+such as apps, dialogs, field types, templates and more.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Templating</p>
+</div>
+<div class="paragraph">
+<p>Page definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Templating functions - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Templating_functions.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Templating_functions.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Templating_functions.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Templating_functions.html">Templating functions - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Templating functions - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Template_scripts.html">Template scripts</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596477"><a class="anchor" href="#src-196596477"></a>Templating functions</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Templating_function_arguments_and_return_types.html">Templating
+function arguments and return types</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Templating functions perform typical templating tasks such as creating
+links and navigating content. This page explains where you can use
+templating functions and how to create your own.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596477_Templatingfunctions-Functionsets"><a class="anchor" href="#src-196596477_Templatingfunctions-Functionsets"></a>Function sets</h3>
+<div class="paragraph">
+<p>Templating functions are grouped into sets according to their purpose:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Function set</th>
+<th class="tableblock halign-left valign-top">Purpose</th>
+<th class="tableblock halign-left valign-top">Installed by module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cmsfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Navigate content and create links.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Templating (available in
+every bundle)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>damfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get assets and renditions and create links to assets.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAM
+Templating</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sitefn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get sites and themes.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site 1.0+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create site navigation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Templating essentials (MTE) 0.14+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>catfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get categories (tags) and access content by category.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Categorization 2.4+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search pages and content.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Templating essentials (MTE) 0.6+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>restfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access REST clients.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+Client+module">REST
+Client module</a> 1.0.4+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imgfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get links to images from any workspace.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Imaging+module">Imaging
+module</a> 3.2+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create links to css and js files by given patterns</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources+module">Resources
+module</a> 2.5.1+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate JSON from JCR nodes of any workspace.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://git.magnolia-cms.com/projects/FORGE/repos/magnolia-jsonfn">magnolia-jsonfn</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tagfn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Search tagged content and tags</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Tags+module">Content
+Tags module</a> 1.0+</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Templating function is not available?</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check that the module that includes the function set is installed.</p>
+</li>
+<li>
+<p>Check that the functions are
+<a href="#src-196596477_Templatingfunctions-Configurethefunctionsinarenderer">configured
+in the renderer</a>, especially if you have a custom renderer.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596477_Templatingfunctions-Usingfunctionsintemplatescripts"><a class="anchor" href="#src-196596477_Templatingfunctions-Usingfunctionsintemplatescripts"></a>Using functions in template scripts</h3>
+<div class="paragraph">
+<p>Use templating functions in template scripts for common tasks such as
+navigating content. You typically pass
+<a href="Templating_function_arguments_and_return_types.html">arguments</a> to a
+function and
+<a href="Templating_function_arguments_and_return_types.html">get an object
+in return</a>. You can assign the returned object to a variable to process
+it further.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Getting a page title with the <code>cmsfn.contentByPath</code> function</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myPage = cmsfn.contentByPath("/hello")]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>p</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  ${myPage.title}`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>p</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>In this example we use the <code>contentByPath</code> function in a Freemarker
+script. We pass the path <code>/hello</code> to the function as an argument. At the
+path is a page named <code>hello</code>. The function returns a <code>ContentMap</code> object
+that represents the page node and its properties. We assign the
+ContentMap to the <code>myPage</code> variable. ContentMap provides easy access to
+a node&#8217;s properties. We use the <code>title</code> method to retrieve the page
+title and render it on the page.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="#src-196596477_Templatingfunctions-Functionsets">function
+sets</a> for more examples.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596477_Templatingfunctions-UsingfunctionsinJavaclasses"><a class="anchor" href="#src-196596477_Templatingfunctions-UsingfunctionsinJavaclasses"></a>Using functions in Java classes</h3>
+<div class="paragraph">
+<p>You can also use templating functions in Java classes. This is useful
+when you write your own templating functions or want to use the existing
+functions in a model class.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Injecting <code>TemplatingFunctions</code> into a model class and
+creating a link to the site root page</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> ExampleModel&lt;RD </code>extends<code> TemplateDefinition&gt; </code>extends`</code> RenderingModelImpl&lt;TemplateDefinition&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`   <code>private</code> <code>final</code> TemplatingFunctions templatingFunctions;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> ExampleModel(Node content, TemplateDefinition definition, RenderingModel&lt;?&gt; parent, TemplatingFunctions templatingFunctions) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(content, definition, parent);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.templatingFunctions = templatingFunctions;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String getLinkToRootPage() <code>throws</code> RepositoryException {`</p>
+</div>
+<div class="paragraph">
+<p>`        Node rootPageNode = templatingFunctions.root(getNode());`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> templatingFunctions.link(rootPageNode);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 5: Inject a <code>TemplatingFunctions</code> object in the constructor. All
+Magnolia templating functions can be injected.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Never instantiate a templating function class directly.</p>
+</li>
+<li>
+<p>Lines 11-12: Use the instance in the methods.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596477_Templatingfunctions-Creatingcustomtemplatingfunctions"><a class="anchor" href="#src-196596477_Templatingfunctions-Creatingcustomtemplatingfunctions"></a>Creating custom templating functions</h3>
+<div class="paragraph">
+<p>To create custom templating functions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#src-196596477_Templatingfunctions-Implementatemplatingfunctionclass">Implement
+a templating function class</a>. If you want to use the existing templating
+functions,
+<a href="#src-196596477_Templatingfunctions-UsingfunctionsinJavaclass">inject
+them into a Java class</a>.</p>
+</li>
+<li>
+<p><a href="#src-196596477_Templatingfunctions-Configurethefunctionsinarenderer">Configure
+the functions in a renderer</a>.</p>
+</li>
+<li>
+<p><a href="#src-196596477_Templatingfunctions-EnableinstantiationbyIoC">Enable
+instantiation by IoC</a> of the new custom templating functions class (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dependency+injection+and+inversion+of+control">Dependency
+injection and inversion of control</a>).</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="src-196596477_Templatingfunctions-Implementatemplatingfunctionclass"><a class="anchor" href="#src-196596477_Templatingfunctions-Implementatemplatingfunctionclass"></a>Implement a templating function class</h4>
+<div class="paragraph">
+<p>This example introduces a custom function set <code>examplesfn</code>. It provides
+a function <code>getRandomNumber</code> which returns a random integer.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MyCustomTemplatingFunctions {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>static</code> <code>final</code> String examplesFunctionsName = <code>"examplesfn"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> Random random;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyCustomTemplatingFunctions(){`</p>
+</div>
+<div class="paragraph">
+<p>`        random = <code>new</code> Random();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Returns a random Integer in the range of given min and max value.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Integer getRandomNumber(<code>int</code> min, <code>int</code> max){`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>int</code> randomNum = random.nextInt((max - min) + <code>1</code>) + min;`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> randomNum;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596477_Templatingfunctions-Configurethefunctionsinarenderer"><a class="anchor" href="#src-196596477_Templatingfunctions-Configurethefunctionsinarenderer"></a>Configure the functions in a renderer</h4>
+<div class="paragraph">
+<p>A <a href="Renderers.html">renderer</a> executes a template script and evaluates
+any templating functions in it. Every templating function must therefore
+be configured as a <em>context attribute</em> in the renderer.</p>
+</div>
+<div class="paragraph">
+<p>In order to use your own templating functions with the default
+FreemarkerRenderer , register the functions in the
+<a href="Renderers.html">Freemarker renderer configuration</a>. The Freemarker
+renderer is configured in <code>/modules/rendering/renderers/freemarker</code>.</p>
+</div>
+<div class="paragraph">
+<p>Any module can register templating functions. Magnolia adds the
+functions to the Freemarker renderer configuration during module
+installation. When you add a module that registers functions to your
+webapp bundle, the functions become available to your template scripts.</p>
+</div>
+<div class="paragraph">
+<p>Similarly, if you want to use standard Magnolia function sets such as
+<code>cmsfn</code> in your custom renderer, register them in your renderer
+configuration.</p>
+</div>
+<div class="paragraph">
+<p>In this example, we assume the Site module is installed. We enable the
+custom function class <code>MyCustomTemplatingFunctions</code> in both <code>freemarker</code>
+and <code>site</code> renderers. Use InstallRendererContextAttributeTask in the
+module version handler class of your custom module to add the function
+configuration to the renderers:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> TemplatingExamplesModuleVersionHandler </code>extends`</code> DefaultModuleVersionHandler {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> List&lt;Task&gt; getExtraInstallTasks(InstallContext installContext) {`</p>
+</div>
+<div class="paragraph">
+<p>`        List&lt;Task&gt; extraInstallTasks = <code>new</code> ArrayList&lt;Task&gt;(<code>super</code>.getExtraInstallTasks(installContext));`</p>
+</div>
+<div class="paragraph">
+<p>`        extraInstallTasks.addAll(getFunctionsInstallerTask());`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> extraInstallTasks;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> List&lt;Task&gt; getFunctionsInstallerTask() {`</p>
+</div>
+<div class="paragraph">
+<p>`        List&lt;Task&gt; tasks = <code>new</code> ArrayList&lt;&gt;();`</p>
+</div>
+<div class="paragraph">
+<p>`        tasks.add(<code>new</code> InstallRendererContextAttributeTask(<code>"rendering"</code>, <code>"freemarker"</code>, MyCustomTemplatingFunctions.examplesFunctionsName, MyCustomTemplatingFunctions.<code>class</code>.getName()));`</p>
+</div>
+<div class="paragraph">
+<p>`        tasks.add(<code>new</code> InstallRendererContextAttributeTask(<code>"site"</code>, <code>"site"</code>, MyCustomTemplatingFunctions.examplesFunctionsName, MyCustomTemplatingFunctions.<code>class</code>.getName()));`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> tasks;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>After module installation both renderers are configured with the custom
+functions.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596477/custom-function-on-reemarker_.png" alt="images/download/attachments/196596477/custom-function-on-reemarker_.png" height="150"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196596477/custom-function-on-site_.png" alt="images/download/attachments/196596477/custom-function-on-site_.png" height="150"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596477_Templatingfunctions-EnableinstantiationbyIoC"><a class="anchor" href="#src-196596477_Templatingfunctions-EnableinstantiationbyIoC"></a>Enable instantiation by IoC</h4>
+<div class="paragraph">
+<p>Magnolia uses
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dependency+injection+and+inversion+of+control">Dependency
+injection and inversion of control</a>. Context attributes such as
+templating functions configured in a renderer are instantiated via IoC
+in the RenderingContext . To enable instantiation, make sure your
+templating function class has a public constructor and register the
+class as a component in a module descriptor.</p>
+</div>
+<div class="paragraph">
+<p>Module descriptor</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE module SYSTEM "module.dtd" &gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>module</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>name</code>&gt;documentation-templating-examples&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>displayName</code>&gt;Documentation templatingexamples&lt;/<code>displayName</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>versionHandler</code>&gt;info.magnolia.documentation.templating.setup.TemplatingExamplesModuleVersionHandler&lt;/<code>versionHandler</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>version</code>&gt;${project.version}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>components</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>id</code>&gt;main&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;info.magnolia.documentation.templating.functions.MyCustomTemplatingFunctions&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>implementation</code>&gt;info.magnolia.documentation.templating.functions.MyCustomTemplatingFunctions&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>scope</code>&gt;singleton&lt;/<code>scope</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>components</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;rendering&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>version</code>&gt;5.4/*&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;site&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>version</code>&gt;1.0/*&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>module</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Directives</p>
+</div>
+<div class="paragraph">
+<p>catfn</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

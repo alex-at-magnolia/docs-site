@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Integration points - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/Integration-points.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Integration-points.html">master</a>
+    <a class="version" href="../../6.2.1/core/developing/Integration-points.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Integration-points.html">Integration points - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Integration points - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596341"><a class="anchor" href="#src-196596341"></a>Integration points</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Integration">Integration</a></p>
+</li>
+<li>
+<p><a href="Integration-modules.html">Integration modules</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia is extremely flexible and built for easy integration. You can
+connect Magnolia to multiple third-party systems, tools and data
+sources.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia can be integrated in various ways ranging from filters and
+servlets to full Java framework integration.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-REST"><a class="anchor" href="#src-196596341_Integrationpoints-REST"></a>REST</h3>
+<div class="sect3">
+<h4 id="src-196596341_Integrationpoints-RESTserviceandAPI"><a class="anchor" href="#src-196596341_Integrationpoints-RESTserviceandAPI"></a>REST service and API</h4>
+<div class="paragraph">
+<p>Magnolia <a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+module">REST
+module</a> provides preconfigured <a href="REST-API.html">REST endpoints</a> for
+<code>nodes</code>, <code>properties</code> and <code>commands</code> allowing you to manipulate content
+through a Web API. You can create, read, update and delete nodes and
+properties in any JCR workspace. You can also execute commands to
+activate, export and import content.</p>
+</div>
+<div class="paragraph">
+<p>Use the <a href="Delivery-endpoint-API.html">delivery endpoint API</a> and its
+search, filter and sorting features to get exactly the content you need,
+including linked content with the
+<a href="Resolving-references-with-the-delivery-endpoint.html">reference
+resolving feature</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can control access to REST resources with Magnolia&#8217;s role-based
+security system and configure your
+desiredhttps://wiki.magnolia-cms.com/display/DOCS62/Filters#Filters-AddingHTTPheaders[ CORS
+behavior].</p>
+</div>
+<div class="paragraph">
+<p>The REST modules also facilitates the
+<a href="How-to-create-a-custom-Java-based-REST-endpoint.html">creation of
+custom endpoints</a>: developers can create and maintain their own custom
+delivery APIs via YAML configuration.</p>
+</div>
+<div class="paragraph">
+<p>See also <a href="REST-API.html">REST API</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596341_Integrationpoints-RESTClient"><a class="anchor" href="#src-196596341_Integrationpoints-RESTClient"></a>REST Client</h4>
+<div class="paragraph">
+<p>Use the Magnolia REST Client to centrally manage and supply access to
+external systems. Provide a REST Client with the remote URL and
+necessary credentials and keys, then developers can access the client in
+templates and throughout the system.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+Client+module">REST
+Client module</a> enables easy creation, configuration and usage of REST
+clients. The module uses <a href="http://resteasy.jboss.org/">RESTEasy</a>, provides
+an app to test clients and includes <code>restfn</code> templating functions that
+give access to REST clients within FreeMarker
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">template
+scripts</a>. You also can obtain a REST client within Java to build apps,
+custom fields for dialogs and similar things.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Connectingtonon-JCRdata"><a class="anchor" href="#src-196596341_Integrationpoints-Connectingtonon-JCRdata"></a>Connecting to non-JCR data</h3>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+app+with+non-JCR+content+-5+UI[Content
+app with non-JCR content] tutorial provides a step-by-step guide to
+creating an app that operates on data stored outside the JCR repository.
+The tutorial shows you how to create a custom
+https://wiki.magnolia-cms.com/display/DOCS62/Content+connector-5+UI[content
+connector] which is key to connecting to external content. The example
+app uses the
+https://wiki.magnolia-cms.com/display/DOCS62/Content+app+framework-+5+UI">content
+app framework</a> but stores data on the local file system. It is an
+example of connecting to a custom data source. Editors don&#8217;t have to
+leave Magnolia in order to work on third-party data.</p>
+</div>
+<div class="paragraph">
+<p>The tutorial is supplemented by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS57/Creating+a+custom+content+app">Creating
+a custom content app</a> tutorial that takes you through the process of
+connecting Magnolia to <a href="https://www.flickr.com/">Flickr</a>. This example
+photo app uses <a href="https://www.flickr.com/services/api/">Flickr Web services</a>
+as a remote data source.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Customfilter"><a class="anchor" href="#src-196596341_Integrationpoints-Customfilter"></a>Custom filter</h3>
+<div class="paragraph">
+<p>Additional filters can be added in the filter chain or <code>web.xml</code> file.
+If you add them in the filter chain you benefit from Magnolia features
+such as security and caching. The additional filter can take over the
+handling of the request or delegate it to the remaining filter chain.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596341/filter-chain-integration.png" alt="images/download/attachments/196596341/filter-chain-integration.png"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Custom+filters">Custom
+filters</a> explains how to create and configure a custom Filter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Customservlet"><a class="anchor" href="#src-196596341_Integrationpoints-Customservlet"></a>Custom servlet</h3>
+<div class="paragraph">
+<p>An independent servlet can be registered in the servlet filter. The
+easiest way to do so is to register the servlet in the module
+descriptor. If the servlet maps to the request it will be responsible
+for rendering.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Responding to a request with a servlet:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A request arrives to the Magnolia filter chain.</p>
+</li>
+<li>
+<p>The request is mapped to a servlet (red box).</p>
+</li>
+<li>
+<p>The servlet handles the response.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596341/responding-to-request-with-servlet.png" alt="images/download/attachments/196596341/responding-to-request-with-servlet.png"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Registering+a+servlet">Registering
+a servlet</a> explains how to create and register a servlet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Forwardingarequest"><a class="anchor" href="#src-196596341_Integrationpoints-Forwardingarequest"></a>Forwarding a request</h3>
+<div class="paragraph">
+<p>As the Magnolia main filter is registered on forward, any servlet or
+filter can internally forward to a Magnolia page. This is normally used
+if the servlet executes some business logic but the result should be
+rendered in a Magnolia page. This strategy is often used to combine
+Magnolia with other frameworks. The servlet typically puts the results
+into the request attributes which are exposed in Magnolia through the
+context.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: A servlet within Magnolia (blue box) forwards the request to
+another page:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A request arrives to the Magnolia filter chain.</p>
+</li>
+<li>
+<p>The request is mapped to a servlet.</p>
+</li>
+<li>
+<p>The servlet forwards the request to a different page.</p>
+</li>
+<li>
+<p>The filter chain is re-executed.</p>
+</li>
+<li>
+<p>A page is rendered.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596341/forwarding-a-request.png" alt="images/download/attachments/196596341/forwarding-a-request.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Customrenderer"><a class="anchor" href="#src-196596341_Integrationpoints-Customrenderer"></a>Custom renderer</h3>
+<div class="paragraph">
+<p>A custom renderer is needed if you would like to support different
+template script languages or want to perform additional processing. The
+template definition will then be of custom type. If you need to delegate
+the rendering to a servlet you can use a template definition of type
+<code>servlet</code>.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Renderers">Creating a custom
+renderer</a> explains how to create your own renderer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Models"><a class="anchor" href="#src-196596341_Integrationpoints-Models"></a>Models</h3>
+<div class="paragraph">
+<p>Models can be implemented in Java or in JavaScript following the
+<a href="Light-development-in-Magnolia.html">Light development</a> approach.</p>
+</div>
+<div class="paragraph">
+<p>Model is a Java program that holds your business logic. The model can do
+any task required (such as execute a Google search or calculate an
+insurance policy).<br>
+A template definition can be used to further define a modelClass.</p>
+</div>
+<div class="paragraph">
+<p>Process:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The model holds the results of the logic execution and passes them to
+a renderer.</p>
+</li>
+<li>
+<p>The renderer includes the results on the page as instructed by the
+template script.</p>
+</li>
+<li>
+<p>The script contains placeholders for content attributes (such as
+headings, images and the results of the business logic execution) and
+tells the renderer where to place the content.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With template models, templates can also run server-side code
+(Javascript or Java) before they are rendered. This gives developers a
+useful integration point. For example, a template model can make a REST
+call to an external system to either retrieve or store some information.
+Retrieved information is then displayed during the rendering of the
+component. REST calls can also be made directly from the browser to the
+external system, but with server-side calls no sensitive information is
+exposed to the browser, such as keys or connection information.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://wiki.magnolia-cms.com/display/DOCS62/Model">Model</a> and
+<a href="How-to-work-with-JavaScript-models.html">How to work with JavaScript
+models</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Directcallstorenderingengine"><a class="anchor" href="#src-196596341_Integrationpoints-Directcallstorenderingengine"></a>Direct calls to rendering engine</h3>
+<div class="paragraph">
+<p>Any Java code can call the rendering engine to let it render pages or
+paragraph snippets. The caller will pass a <code>Writer</code> object to which the
+result is written. If you use a <code>ByteArrayOutputStream</code> the result can
+be read into a <code>String</code>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This is only possible if all involved template scripts are FreeMarker
+scripts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_safe-id-SW50ZWdyYXRpb25wb2ludHMtYW5jLWludGVncmF0aW9uLXdlYi1zZXJ2aWNlc1dlYnNlcnZpY2VzLEFKQVhhbmRzbmlwcGV0cw"><a class="anchor" href="#src-196596341_safe-id-SW50ZWdyYXRpb25wb2ludHMtYW5jLWludGVncmF0aW9uLXdlYi1zZXJ2aWNlc1dlYnNlcnZpY2VzLEFKQVhhbmRzbmlwcGV0cw"></a><span id="src-196596341_Integrationpoints-anc-integration-web-services " class="confluence-anchor-link">#</span>#Web services, AJAX and snippets</h3>
+<div class="paragraph">
+<p>Direct component rendering In addition to accessing REST endpoints to
+get raw content from Magnolia, external systems (such as native mobile
+apps) can also use Magnolia&#8217;s DCR (Direct Component Rendering) feature
+to grab the HTML from a specific component or area on a Magnolia page.
+This is a convenient way to access server-rendered content in a
+headless-style scenario where you just want a snippet of HTML for an
+"embed" or other AJAX use-case.</p>
+</div>
+<div class="paragraph">
+<p>External applications can make requests to Magnolia to get rendered
+content/snippets. Magnolia supports for instance direct requests to
+components.</p>
+</div>
+<div class="paragraph">
+<p>For example, to render just the teasers on the About page, request the
+teaser component&#8217;s own URL:</p>
+</div>
+<div class="paragraph">
+<p><code>https:`</code>//demopublic.magnolia-cms.com/travel/about/main/00.html`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Readingcontentdirectly"><a class="anchor" href="#src-196596341_Integrationpoints-Readingcontentdirectly"></a>Reading content directly</h3>
+<div class="paragraph">
+<p>If the Magnolia context is initialized, which is for instance the case
+if the context filter was executed, you can read content directly from
+it: <code>MgnlContext.getJCRSession(String workspaceName)</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Appsandactions"><a class="anchor" href="#src-196596341_Integrationpoints-Appsandactions"></a>Apps and actions</h3>
+<div class="paragraph">
+<p>Apps and actions are the important integration points in the Magnolia
+UI. The Magnolia UI concept is to have one app for one task or domain.</p>
+</div>
+<div class="paragraph">
+<p>An integration module often supplies an app to interact with the
+external system. The apps in Magnolia can be created, modified and
+rearranged all via configuration.</p>
+</div>
+<div class="paragraph">
+<p>There are different types of app:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 12%;">
+<col style="width: 88%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">App Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content app</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The most common app type. Provides browsing, editing,
+ordering, and selection of content. "Action" buttons in the UI run
+"commands"(LINK) on the selected content items. A content app can
+display external content by using a custom content connector.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tool app</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>A tool app can provide a simple form which is a good way
+to enable administrators to configure aspects of an integration via the
+UI.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>IFrame app</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>An IFrame app is a simple way to load external web
+content into the UI. For example, you could load a webpage from the web
+UI of a SaaS product. An IFrame app can also be used to load a custom
+built frontend SPA or even a page rendered by Magnolia.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Custom app<br>
+(Java required)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additionally, it&#8217;s possible to leverage the Magnolia UI
+framework (based on Vaadin) to build a completely custom "native" app.
+But this requires Java development.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Templatesandfront-endresources"><a class="anchor" href="#src-196596341_Integrationpoints-Templatesandfront-endresources"></a>Templates and front-end resources</h3>
+<div class="paragraph">
+<p>Developers can supply front-end resources as files and use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">themes</a> and the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/resfn"><code>resfn</code></a> module to
+include these resources on web pages.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating">Templates</a> allow
+developers to provision reusable page layouts and components for content
+authors. Templates allow developers to integrate existing third party or
+in-house developed component libraries into Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>You can also use component templates to integrate with the massive
+ecosystem of SaaS-based web features such as web forms, maps, live chat,
+commenting features, social widgets, and so on. For these front-end
+integrations, the template script must include the embed code provided
+by the service.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Formprocessors"><a class="anchor" href="#src-196596341_Integrationpoints-Formprocessors"></a>Form processors</h3>
+<div class="paragraph">
+<p>Developers can handle form submissions with server-side code (Javascript
+or Java). Form processors can be used to send emails to the website
+users and to administrators, to make REST calls to external systems or
+to store content to a repository.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-Groovyscripts"><a class="anchor" href="#src-196596341_Integrationpoints-Groovyscripts"></a>Groovy scripts</h3>
+<div class="paragraph">
+<p>For integration use-cases not covered by other mechanisms, developers
+have the option to supply code written in groovy.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia allows groovy scripts to be used anywhere that a Java class can
+be provided in configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596341_Integrationpoints-CustomJavaclasses"><a class="anchor" href="#src-196596341_Integrationpoints-CustomJavaclasses"></a>Custom Java classes</h3>
+<div class="paragraph">
+<p>Additional integration points are available with Java development.
+Because Magnolia is written in Java and is open source, you can build
+your own Magnolia bundle.</p>
+</div>
+<div class="paragraph">
+<p>With custom Java classes, there is no limit to the customisations you
+can implement. You can replace stock classes with your own
+implementation using two mechanisms.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Supply the classpath in the configuration app. These can be changed
+while Magnolia is running.</p>
+</li>
+<li>
+<p>Supply the class or component in the module configuration files. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dependency+injection+and+inversion+of+control">Dependency
+injection and inversion of control</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Integration modules</p>
+</div>
+<div class="paragraph">
+<p>Resources</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

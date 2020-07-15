@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Form module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Form_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Form_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Form_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Form_module.html">Form module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Form module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937"><a class="anchor" href="#src-196596937"></a>Form module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLFORM">MGNLFORM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/modules/magnolia-module-form/">Form</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.5.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="GDPR_and_forms.html">GDPR and forms</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Form module allows you to create Web forms that visitors can fill
+in. The module provides components for easy creation of standard forms,
+like contact forms. You can group related form elements such as address
+fields together visually. Form data can be validated using configurable
+validators. By default, submitted form data is sent by email. You can
+process form data with pluggable data processors which allow
+customization without changing the Magnolia core system. Magnolia forms
+are fully HTML5 compliant.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Please note that the artifact&#8217;s IDs (Maven <code>groupId</code> and <code>artifactId</code>)
+have changed since Magnolia 5.5.</p>
+</div>
+<div class="paragraph">
+<p>If you have custom Java code relying on this module, you need to install
+a compatibility module too.</p>
+</div>
+<div class="paragraph">
+<p>Check
+<a href="https://git.magnolia-cms.com/projects/MODULES/repos/form/browse">Git for
+the new module structure</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596937_Formmodule-Installing"><a class="anchor" href="#src-196596937_Formmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Note the changes in <code>groupId</code> and <code>artifactId</code> since the 2.4 release.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.form&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-form&lt;/artifactId&gt;
+  &lt;version&gt;2.5.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596937_Formmodule-Compatibilitymodule"><a class="anchor" href="#src-196596937_Formmodule-Compatibilitymodule"></a>Compatibility module</h4>
+<div class="paragraph">
+<p>We have been gradually removing the old Content API from our modules
+since Magnolia 5.6. If you have custom code relying on classes from the
+old form module then you must do one of two things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update your code for the
+<a href="https://jira.magnolia-cms.com/browse/MGNLFORM-294">new version of the
+form module</a>.</p>
+</li>
+<li>
+<p>Or you can use the <code>magnolia-form-compatibility</code> module together with
+the <code>magnolia-core-compatibility</code> module.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here to expand to see how to add the compatibility module</p>
+</div>
+<div class="paragraph">
+<p>Add the following snippet to you pom file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.form&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-form-compatibility&lt;/artifactId&gt;
+  &lt;version&gt;2.5.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596937_Formmodule-Mailconfiguration"><a class="anchor" href="#src-196596937_Formmodule-Mailconfiguration"></a>Mail configuration</h3>
+<div class="paragraph">
+<p>The Form module uses the <a href="Mail_module.html">Mail module</a> to send form
+data in emails. See <a href="Mail.html">Configuring SMTP</a> to enable mail
+sending.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596937_Formmodule-Creatingaform"><a class="anchor" href="#src-196596937_Formmodule-Creatingaform"></a>Creating a form</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>See an example form on the
+<a href="https://demopublic.magnolia-cms.com/contact.html">"Contact" page of the
+Travel demo</a>.</p>
+</div>
+<div class="paragraph">
+<p>Note: The DX Core Travel demo uses several
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">GDPR</a>-ready
+form components. The equivalent of the Form component shown below is
+called <strong>(GDPR) Store data form</strong> in it.</p>
+</div>
+<div class="paragraph">
+<p>To create a form:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the Form <a href="#src-196596937_Formmodule-Formcomponents">component</a>
+to any area of a new or existing
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition">template</a>.<br>
+<strong>Example</strong>: Adding <code>form</code> component to <code>main</code> area of a new
+template.<strong>YAML file</strong></p>
+<div class="paragraph">
+<p>/my-module/templates/pages/form.yaml</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /my-module/templates/pages/form-page-template.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>visible: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>title: Form Template</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: my-module:pages/form</code></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`      form:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: form:components/form `</p>
+</div>
+<div class="paragraph">
+<p>+
+<strong>JCR node</strong></p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form:components/form</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dialog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:pages/form</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form Template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/templates/pages/form-page-template.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new page based on the template that contains the Form
+component (created in 1. above).</p>
+</li>
+<li>
+<p>Open the page, add the Form component and
+<a href="#src-196596937_Formmodule-Configuringformsettings">configure the
+form settings</a>. Form settings define the title and name of the form, and
+where the collected information should be submitted.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/6-1-formModule-formDialog.png" alt="images/download/attachments/196596937/6-1-formModule-formDialog.png"></span></p>
+</div>
+</li>
+<li>
+<p>Add a <a href="#src-196596937_Formmodule-Fieldsets">fieldset</a> to the
+form.<br>
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-1-formModule-addFieldset.png" alt="images/download/attachments/196596937/6-1-formModule-addFieldset.png"></span></p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You can have multiple field sets in one form. This helps to groups them
+visually. For example contact details in one set and feedback message in
+another etc.
+. Add a field set.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-1-formModule-addFieldset.png" alt="images/download/attachments/196596937/6-1-formModule-addFieldset.png"></span>
+. Add <a href="#src-196596937_Formmodule-Fields">fields</a> inside the field
+set.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-1-formModule-addField.png" alt="images/download/attachments/196596937/6-1-formModule-addField.png"></span>
+. View the form.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-1-formModule-formPreview.png" alt="images/download/attachments/196596937/6-1-formModule-formPreview.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596937_Formmodule-Creatingformsforhandlingpersonaldata"><a class="anchor" href="#src-196596937_Formmodule-Creatingformsforhandlingpersonaldata"></a>Creating forms for handling personal data</h3>
+<div class="paragraph">
+<p>With Magnolia you can create forms for the purposes of
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">handling
+personal data</a>, for example for the requirements of General Data
+Protection Regulation (GDPR).</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides the following pre-configured GDPR-related form
+templates as samples you can build on:</p>
+</div>
+<div class="paragraph">
+<p>Sample form (GDPR)</p>
+</div>
+<div class="paragraph">
+<p>Use to create</p>
+</div>
+<div class="paragraph">
+<p>Provided by</p>
+</div>
+<div class="paragraph">
+<p>Store data form</p>
+</div>
+<div class="paragraph">
+<p>Double opt-in forms.</p>
+</div>
+<div class="paragraph">
+<p>See an example of creating a form with double opt-in functionality on
+the <a href="GDPR_and_forms.html">Creating a GDPR-compliant form</a> page.</p>
+</div>
+<div class="paragraph">
+<p><code>privacy-sample</code> module</p>
+</div>
+<div class="paragraph">
+<p>Confirm data form</p>
+</div>
+<div class="paragraph">
+<p>Get visitor data form</p>
+</div>
+<div class="paragraph">
+<p>Forms where the user can request a zipped report listing their personal
+data stored by the site.</p>
+</div>
+<div class="paragraph">
+<p><code>privacy-form</code> module</p>
+</div>
+<div class="paragraph">
+<p>Forget me form</p>
+</div>
+<div class="paragraph">
+<p>Forms where the user can request deletion of their personal data.</p>
+</div>
+<div class="paragraph">
+<p>Delete visitor form</p>
+</div>
+<div class="paragraph">
+<p>Forms where the user can confirm a request for deletion of the user&#8217;s
+personal data</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Personaldataformprocessors"><a class="anchor" href="#src-196596937_Formmodule-Personaldataformprocessors"></a>Personal data form processors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To implement the above functions, the <code>magnolia-privacy</code> module provides
+the following form processors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>AddConsentFormProcessor: Updates a visitor&#8217;s consent.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>JcrStoreFormProcessor: Extends the functionality of the
+AddConsentFormProcessor processor. It also stores the data into a JCR
+workspace. The data is stored in an intermediate workspace so that the
+data cannot be used unless the visitor confirms consent. Under the
+processor define:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>workspace</code> - the name of the intermediate workspace.</p>
+</li>
+<li>
+<p><code>nodeNameProperty</code> - the node name of the data to be stored.</p>
+</li>
+<li>
+<p><code>nodeType</code> - the node type of the data to be stored.</p>
+</li>
+<li>
+<p><code>rootPath</code> - the path to the node (default is &#8220;/&#8221;).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>JcrMoveFormProcessor: Moves data from the intermediate workspace to
+the target workspace. Configure the intermediate and target workspaces
+under the processor using the <code>sourceWorkspace</code> and <code>targetWorkspace</code>
+properties.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ConfirmConsentFormProcessor: Confirms a visitor&#8217;s consent.</p>
+</li>
+<li>
+<p>GetVisitorDataFormProcessor: Collects all data belonging to a visitor
+and provides a weblink where the visitor can download this data.</p>
+</li>
+<li>
+<p>DeleteVisitorFormProcessor: Requests the deletion of all a visitor&#8217;s
+data (via a <code>deletionId</code>).</p>
+</li>
+<li>
+<p>ConfirmVisitorDeletionFormProcessor: Confirms the deletion request.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="GDPR_and_forms.html">GDPR and forms</a> too.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Creatingamultistepform"><a class="anchor" href="#src-196596937_Formmodule-Creatingamultistepform"></a>Creating a multistep form</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>See an example multistep form on the
+<a href="https://demopublic.magnolia-cms.com/book-tour.html">"Book your tour" page
+of the Travel demo</a>.</p>
+</div>
+<div class="paragraph">
+<p>Splitting a large form into multiple steps allows the visitor to focus
+on one step at a time. The substeps are detected automatically. Visitors
+can move forward and backwards between steps without losing entered
+data. Each step is validated individually. The form module also allows
+users to upload files, but the upload field should only be included as
+the last step of the process.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the Form Step
+<a href="#src-196596937_Formmodule-Formcomponents">component</a> to an area of a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition">template</a>.<br>
+<strong>Example</strong>: Adding <code>formStep</code> component to <code>main</code> area in a new
+template.<strong>YAML file</strong></p>
+<div class="paragraph">
+<p>/my-module/templates/pages/form.yaml</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /my-module/templates/pages/formStep-page-template.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>visible: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>title: Form Step Template</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: my-module:pages/form</code></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`      form:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: form:components/formStep`</p>
+</div>
+<div class="paragraph">
+<p>+
+<strong>JCR node</strong></p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formStep</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formStep</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form:components/formStep</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dialog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:pages/form</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form Step Template</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/templates/pages/formStep-page-template.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visible</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new page based on a template that contains the
+<a href="#src-196596937_Formmodule-Creatingaform">Form component</a>. This is
+the first page of the form.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Configure the
+<a href="#src-196596937_Formmodule-Configuringformsettings">form settings</a>.</p>
+</li>
+<li>
+<p>Add a <a href="#src-196596937_Formmodule-Fieldsets">field set</a> component</p>
+</li>
+<li>
+<p>Add <a href="#src-196596937_Formmodule-Fields">fields</a> inside the field
+set. The Submit button field will automatically navigate to the next
+step. <a href="#src-196596937_Formmodule-Conditionalsteps">Conditional steps</a>
+can be set in the Next step condition component.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formMOdule-bookTourmain.png" alt="images/download/attachments/196596937/6-0-formMOdule-bookTourmain.png"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Create subpages based on the template that contains the Form Step
+component (created in 1. above) for the subsequent steps of the form.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Add <a href="#src-196596937_Formmodule-Fieldsets">field sets</a> and
+<a href="#src-196596937_Formmodule-Fields">fields</a> on the substep forms.
+Submit button fields will automatically navigate to subsequent or
+<a href="#src-196596937_Formmodule-Conditionalsteps">conditional steps</a> and
+the final button will submit the form.<br>
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-meal.png" alt="images/download/attachments/196596937/6-0-formModule-meal.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-personalDetails.png" alt="images/download/attachments/196596937/6-0-formModule-personalDetails.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-review.png" alt="images/download/attachments/196596937/6-0-formModule-review.png"></span></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Configuringformsettings"><a class="anchor" href="#src-196596937_Formmodule-Configuringformsettings"></a>Configuring form settings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Form settings are configured in the Form component.</p>
+</div>
+<div class="paragraph">
+<p><strong>Form tab</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Field</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title displayed above the form. For example "Contact Us".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal name that allows you to reference the form by name,
+for example from JavaScript.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Introductory text displayed below the form title.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marker for required fields</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Character displayed next to required
+fields. Asterisk by default.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text for required symbol</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text that explains what the required marker
+means, displayed near the top of the form. For example "Required
+fields".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Step-by-step navigation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When checked displays step-by-step breadcrumb
+navigation that allows the user to navigate the steps of
+<a href="#src-196596937_Formmodule-Creatingamultistepform">multistep forms</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Submit settings tab</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Field</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Error title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title displayed when an error occurs, for example "There
+was a problem with your booking."</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Success title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title displayed when the form is submitted successfully,
+for example "Your tour is booked"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text displayed when form is submitted successfully, for example
+"Details are on their way to your inbox."</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page displayed after submission</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select a page to display after
+submission. If no page is selected, the user stays on the current page
+and the success title and text are displayed instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Track mail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logs the information submitted in the form to
+<code>magnolia-form.log</code> file.<br>
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Make sure the <code>trackEMail</code>
+<a href="#src-196596937_Formmodule-Formprocessors">form processor</a> is also
+enabled. See <a href="#src-196596937_Formmodule-Loggingformdata">Logging form
+data</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Email tab</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Field</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email address displayed in the From field of the outgoing
+message. This can be any address as it is not the account used to send
+the mail. The mail is sent using the account in <a href="Mail.html">SMTP
+configuration</a> .</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email address the data is sent to. You can use form field names
+with Freemarker tags. Typically you would ask the submitting user for
+their email address on the form and repeat it here with a Freemarker tag
+such as <code>${email}</code> assuming the email field is named <code>email</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email subject line. You can use form field names with
+Freemarker tags such as <code>${subject</code>}.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Available fields for Freemarker syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form field names that can be
+used in Freemarker tags.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radio button to select the message type for the email body.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text field</a> to
+compose the email template. You can use form field names with Freemarker
+tags such as <code>${subject</code>} and <code>${message</code>} to write the data collected
+on the form into the message.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">html</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rich+text+field">Rich text
+field</a> to compose the email template. You can use markup that will be
+escaped.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Confirmation email tab</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Field</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send confirmation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sends a confirmation mail to the submitting user.<br>
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Make sure the <code>SendConfirmationEMailProcessor</code>
+<a href="#src-196596937_Formmodule-Formprocessors">form processor</a> is also
+enabled.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">From</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email address displayed in the From field of the outgoing
+message. You might want to use a customer support address here in case
+the user has further questions or a no-reply address. You can use form
+field names with Freemarker tags.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email address the data is sent to. You can use form field names
+with Freemarker tags such as <code>${email}</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subject</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email subject line, for example "We have received your
+feedback." You can use form field names with Freemarker tags such as
+<code>${subject</code>}.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Available fields for Freemarker syntax</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form field names that can be
+used in Freemarker tags.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mail type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radio button to select the message type. For code and text
+you can use form field names with Freemarker tags such as <code>${subject</code>}
+and <code>${message</code>} to write the data collected on the form into the
+message. This can be a simple acknowledgement that data was submitted or
+you can summarize the collected data.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Code+field">Code field</a>
+(includes syntax highlighting) to compose the email template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">Text field</a> to
+compose the email template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">page</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A page in the site that the user is sent to after successful
+submission.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Fieldsets"><a class="anchor" href="#src-196596937_Formmodule-Fieldsets"></a>Field sets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The purpose of a field set is to group fields that logically belong
+together:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Before you can add any fields on the form you need to add at least one
+field set component.</p>
+</li>
+<li>
+<p>You can add as many field sets as necessary.</p>
+</li>
+<li>
+<p>Use the Title field to distinguish field sets or include introductory
+text.</p>
+</li>
+<li>
+<p>Individual <a href="#src-196596937_Formmodule-Fields">fields</a> components
+are added as subcomponents in a field set.</p>
+</li>
+<li>
+<p>Component definition: <code>formGroupFields</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-fieldsetscrop.png" alt="images/download/attachments/196596937/6-0-formModule-fieldsetscrop.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Fields"><a class="anchor" href="#src-196596937_Formmodule-Fields"></a>Fields</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Field components are added within a
+<a href="#src-196596937_Formmodule-Fieldsets">field set</a>.</p>
+</div>
+<div class="paragraph">
+<p>Available fields:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Field</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Image</strong></th>
+</tr>
+</thead>
+</table>
+<div class="paragraph">
+<p>|Types |HTML5-compliant input type. |</p>
+</div>
+<div class="paragraph">
+<p>|Color |<code>&lt;input type = color&gt;</code> . To select a color from a pop-up color
+picker
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-color.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-color.png" height="66"></span></p>
+</div>
+<div class="paragraph">
+<p>|Email |<code>&lt;input type = email&gt;</code>. Email field. Most browsers automatically
+validate content. Additionally, you can use E-mail
+<a href="#src-196596937_Formmodule-Fieldvalidators">validator</a>.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-email.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-email.png" height="73"></span></p>
+</div>
+<div class="paragraph">
+<p>|Password |`&lt;input type = password&gt; `. Password field. The characters
+are masked with asterisks or circles.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-password.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-password.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Search |<code>&lt;input type = search&gt;</code>. Search field. Behaves like a regular
+text field. |</p>
+</div>
+<div class="paragraph">
+<p>|Text |<code>&lt;input type = text&gt;</code>. Standard text field. |</p>
+</div>
+<div class="paragraph">
+<p>|Url |<code>&lt;input type = url&gt;</code>. For fields that should contain a URL
+address. Most browsers validate automatically.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-url.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-url.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Attributes | |</p>
+</div>
+<div class="paragraph">
+<p>|Placeholder |Hint that describes the expected value.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-placeholder.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-placeholder.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Pattern a|
+Regular expression that the input value is checked against. For example
+<code>[A-Za-z]{3}</code> for a three letter country code.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Please note that this attribute has no effect at this time. We are aware
+of this issue and working on a bugfix for this.
+<a href="https://jira.magnolia-cms.com/browse/MGNLFORM-296?src=confmacro"><</a> - regex pattern for input field has no effect
+<span class="status  grey  subtle">Open</span></p>
+</div>
+<div class="paragraph">
+<p>As a temporary workaround, you can configure the regex expression as a
+separate validator for the field under</p>
+</div>
+<div class="paragraph">
+<p><code>/modules/form/config/validators</code> .</p>
+</div>
+<div class="paragraph">
+<p>|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-regex.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-regex.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Pattern description |Use the field description to help guide the user
+instead. |</p>
+</div>
+<div class="paragraph">
+<p>|Read only |Boolean attribute that sets the field as read-only.User
+cannot enter input but can tab to it, highlight it, and copy from it. |</p>
+</div>
+<div class="paragraph">
+<p>|Disabled |Boolean attribute that disables the input field. Field is
+unusable and unclickable. Typically used to prevent user from entering
+input until another condition is met.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-disabled.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-disabled.png" height="55"></span></p>
+</div>
+<div class="paragraph">
+<p>|Autofocus |Boolean attribute that places the cursor in the focused
+field on page load. |</p>
+</div>
+<div class="paragraph">
+<p>|Autocomplete |Enables autocomplete which allows the browser to predict
+the value based on earlier typed values. Submit information and then
+reload the page to test.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputField-autocomplete.png" alt="images/download/attachments/196596937/6-0-formModule-inputField-autocomplete.png" height="83"></span></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-inputFieldSet.png" alt="images/download/attachments/196596937/6-0-formModule-inputFieldSet.png"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number or date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Number or date field.</p>
+</li>
+<li>
+<p>Maximum input length option.</p>
+</li>
+<li>
+<p>Component definition: <code>formNumber</code> (extends <code>formEdit)</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Advanced options: <em>Not all input types and attributes are supported in
+all browsers.</em></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|Types |HTML5-compliant input type. |</p>
+</div>
+<div class="paragraph">
+<p>|Date |<code>&lt;input type = date&gt;</code>. To enter or select a date.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-date.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-date.png" height="64"></span></p>
+</div>
+<div class="paragraph">
+<p>|Datetime a|
+<code>&lt;input type = datetime&gt;</code>. To enter or select a date and time with a
+timezone.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+This type is no longer supported by the latest HTML standards, see</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://html.spec.whatwg.org/dev/input.html#the-input-element" class="bare">https://html.spec.whatwg.org/dev/input.html#the-input-element</a></p>
+</li>
+<li>
+<p><a href="https://www.w3.org/TR/html5/sec-forms.html#the-input-element" class="bare">https://www.w3.org/TR/html5/sec-forms.html#the-input-element</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Modern browsers may differ in how they render this type, most of them
+displaying a simple textfield instead.</p>
+</div>
+<div class="paragraph">
+<p>|<span class="image"><img src="../../_images/images/download/attachments/196596937/date-time-input-type.png" alt="images/download/attachments/196596937/date-time-input-type.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Datetime-local |<code>&lt;input type = datetime-local&gt;</code>. To enter or select a
+date and time (no time zone).
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-datetimelocal.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-datetimelocal.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Month |<code>&lt;input type = month&gt;</code>. To enter or select a month and year.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-month.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-month.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Number |<code>&lt;input type = number&gt;</code>. To enter or select a numeric value.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-number.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-number.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Phone number |<code>&lt;input type = tel&gt;</code>. For fields that should contain
+telephone numbers. Only supported in Safari 8. |</p>
+</div>
+<div class="paragraph">
+<p>|Range |<code>&lt;input type = range&gt;</code>. For fields that should contain a value
+within a range.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-range.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-range.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Time |<code>&lt;input type = time&gt;</code>. To select a time (no time zone).
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-time.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-time.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Week |<code>&lt;input type = url&gt;</code>. To select a week and year.
+|<span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-dateField-week.png" alt="images/download/attachments/196596937/6-0-formModule-dateField-week.png"></span></p>
+</div>
+<div class="paragraph">
+<p>|Attributes | |</p>
+</div>
+<div class="paragraph">
+<p>|Read only |See Input field. |</p>
+</div>
+<div class="paragraph">
+<p>|Disabled |See Input field. |</p>
+</div>
+<div class="paragraph">
+<p>|Autofocus |See Input field. |</p>
+</div>
+<div class="paragraph">
+<p>|Autocomplete |See Input field. |</p>
+</div>
+<div class="paragraph">
+<p>|Minimum |Minimum value for the field. |</p>
+</div>
+<div class="paragraph">
+<p>|Maximum |Maximum value for the field. |</p>
+</div>
+<div class="paragraph">
+<p>|Step |Number intervals for the field, for example if step="3", legal
+numbers could be -3, 0, 3, 6, etc.. |</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="src-196596937_Formmodule-" class="exampleblock">
+<div class="content">
+
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text field group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Groups text fields next to each other.</p>
+</li>
+<li>
+<p>The Group dialog has a single field that does not display on the page.
+Assign this name to reference the group with FreeMarker tags.</p>
+</li>
+<li>
+<p>The subcomponents are Text fields, i.e. Input fields without advanced
+options.</p>
+</li>
+<li>
+<p>Component definition: <code>formGroupEdit</code> that nests
+`formGroupEditItem `components.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-textFieldGroup.png" alt="images/download/attachments/196596937/6-0-formModule-textFieldGroup.png"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selection</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Checkbox, select and radio buttons.</p>
+</li>
+<li>
+<p>Multiple selection, default value and orientation options.</p>
+</li>
+<li>
+<p>Component definition: <code>formSelection</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-selection.png" alt="images/download/attachments/196596937/6-0-formModule-selection.png"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Upload file component.</p>
+</li>
+<li>
+<p>In multistep forms this is only available on the last step.</p>
+</li>
+<li>
+<p>Component definition: <code>formFile</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-file.png" alt="images/download/attachments/196596937/6-0-formModule-file.png"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Submit button</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Submits the form.</p>
+</li>
+<li>
+<p>Can be labelled as required.</p>
+</li>
+<li>
+<p>Cancel button and Back button (mulitstep forms) options.</p>
+</li>
+<li>
+<p>Component should be added at the end of the form.</p>
+</li>
+<li>
+<p>Component definition: <code>formSubmit</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-submit.png" alt="images/download/attachments/196596937/6-0-formModule-submit.png"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hidden</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Single hidden line input or text area.</p>
+</li>
+<li>
+<p>Does not display on the page.</p>
+</li>
+<li>
+<p>Used to pass on values to the form processors in the same way as other
+data entered by a user.</p>
+</li>
+<li>
+<p>Component definition: <code>formHidden</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Honeypot</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>This is an invisible field that you can add to the page to intercept
+bot attacks.</p>
+</li>
+<li>
+<p>Component definition: <code>formHoneypot</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-honeyPot.png" alt="images/download/attachments/196596937/6-0-formModule-honeyPot.png"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Form summary</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Displays a table with parameters and/or values of the steps in a
+<a href="#src-196596937_Formmodule-Creatingamultistepform">multistep form</a>.</p>
+</li>
+<li>
+<p>Component definition: <code>formSummary</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Users are allowed to enter HTML-like characters such as ampersand (&amp;)
+into fields. Use the noHTML
+<a href="#src-196596937_Formmodule-Fieldvalidators">validator</a> to prevent
+this. You can control HTML escaping with the <code>escapeHtml</code> property in
+the <a href="#src-196596937_Formmodule-Formcomponents">component definition</a>
+.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+5.4.4+ Password field is deprecated. Use two Input fields with input
+type Password instead. Validate the second field using the Password
+<a href="#src-196596937_Formmodule-Fieldvalidators">validator</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Conditionalsteps"><a class="anchor" href="#src-196596937_Formmodule-Conditionalsteps"></a>Conditional steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Condition list component provides optional, additional business
+logic to a
+<a href="#src-196596937_Formmodule-Creatingamultistepform">multistep form</a> .</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The component is added automatically after a
+<a href="#src-196596937_Formmodule-Fields">Submit button field</a>, as an
+optional area.</p>
+</li>
+<li>
+<p>Allows you to set conditions for subsequent steps in a
+<a href="#src-196596937_Formmodule-Creatingamultistepform">multistep form</a>.</p>
+</li>
+<li>
+<p>Allows you to define the page the user is directed to, dependent on
+their entry in a former step.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/condition-list-component.png" alt="images/download/attachments/196596937/condition-list-component.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/condition-list-dialog.png" alt="images/download/attachments/196596937/condition-list-dialog.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Fieldvalidators"><a class="anchor" href="#src-196596937_Formmodule-Fieldvalidators"></a>Field validators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Validators are used to ensure that form data is entered in the correct
+format. For example, an email address should follow established syntax
+where a local part is followed by the @ character and a domain:
+<code>john.doe@example.com</code>.</p>
+</div>
+<div class="paragraph">
+<p>Choose a validator for appropriate fields in the <strong>Validation</strong> field.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-validator.png" alt="images/download/attachments/196596937/6-0-formModule-validator.png"></span></p>
+</div>
+<div class="paragraph">
+<p>When field validation passes, the value is submitted. When field
+validation fails, the field is highlighted in red and when the user
+attempts to submit the form a notification message identifies the
+problem.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596937/6-0-formModule-validatorExec.png" alt="images/download/attachments/196596937/6-0-formModule-validatorExec.png" height="130"></span></p>
+</div>
+<div class="paragraph">
+<p>Validators are configured in <code>/modules/form/config/validators/</code>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">validators</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">email</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.form.validators.RegexValidator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expression</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(^([a-zA-Z0-9_\.\-])@(([a-zA-Z0-9-])\.)([a-zA-Z0-9]\{2,4})+$)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">number</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noHTML</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.form.validators.NoHTMLValidator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">password</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fileUpload</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">username</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uniqueEmail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">empty</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validators</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Validator configuration node</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;validator name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the validator.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Validator class that performs the validation.<br></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;validator properties&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required/optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Available properties depend on the validator class.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Validator configurations:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>email</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Value needs to be a valid email address.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.form.validators.RegexValidator</code> ( RegexValidator )</p>
+</div>
+<div class="paragraph">
+<p>|<code>expression</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Validity is checked with regular expression
+<code>(^([a-zA-Z0-9_\.\-+])+@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$)</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>number</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Value needs to be a number, specifically an integer. No decimals
+separated with period or comma or fractions are accepted.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.form.validators.RegexValidator</code> ( RegexValidator )</p>
+</div>
+<div class="paragraph">
+<p>|<code>expression</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Validity is checked with regular expression <code>^[0-9]*$</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>noHTML</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Value cannot any have HTML markup. This ensures that users can only
+enter plain text. Creating links and formatting text is prevented.</p>
+</div>
+<div class="paragraph">
+<p>Property:</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.form.validators.NoHTMLValidator</code> ( NoHTMLValidator
+). Custom class that checks for the presence of angle brackets (<code>&lt;</code>
+<code>&gt;</code>).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Validates that the password entered into two password fields match. Used
+to eliminate typos.</p>
+</div>
+<div class="paragraph">
+<p>Property:</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.form.validators.PasswordValidator `(
+PasswordValidator ). The fields should be named `password</code> and
+<code>passwordConfirmation</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fileUpload</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Validates against a list of allowed mime types and a max file size.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.form.validators.FileUploadValidator</code> (
+FileUploadValidator ).</p>
+</div>
+<div class="paragraph">
+<p>| <code>maxFileSize</code> a|
+<strong>optional</strong>, <em>default is `10485760`</em></p>
+</div>
+<div class="paragraph">
+<p>Max file upload size</p>
+</div>
+<div class="paragraph">
+<p>| <code>allowedMimeTypes</code> a|
+<strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Content node for list of allowed mimeTypes. Add a property for each
+additional type. By default, <code>application/pdf</code>, <code>image/gif</code>,
+<code>image/jpeg</code>, <code>image/jpg</code> and <code>image/png</code> are allowed.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>empty</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>No validation. Used for
+<a href="#src-196596937_Formmodule-Honeypotfield">Honeypot field</a> only.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.form.validators.RegexValidator</code> ( RegexValidator
+).</p>
+</div>
+<div class="paragraph">
+<p>|<code>expression</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>-</code> (dash/null)</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies that the entered username does not exist in the system. This
+validator is added by the
+<a href="Public_User_Registration_module.html">Public User Registration
+(PUR)</a> module.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.publicuserregistration.validators.UsernameValidator</code>
+( UsernameValidator ).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uniqueEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Verifies that the entered email does not exist in the system. This
+validator is added by the
+<a href="Public_User_Registration_module.html">Public User Registration
+(PUR)</a> module.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>|<code>class</code> a|
+<strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.publicuserregistration.validators.UniqueEmailValidator</code>
+( UniqueEmailValidator ).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Formprocessors"><a class="anchor" href="#src-196596937_Formmodule-Formprocessors"></a>Form processors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Form processors configured in the module are responsible for sending
+submitted form data by email. The processors are executed when the
+<a href="#src-196596937_Formmodule-Creatingaform">form</a> is submitted. The
+email content corresponds with the
+<a href="#src-196596937_Formmodule-Configuringformsettings">settings
+configured</a> in the relevant tabs of the Form component.</p>
+</div>
+<div class="paragraph">
+<p>Processors are configured in
+<code>/modules/form/templates/components/form/formProcessors</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">components</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formProcessors</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sendContactEmail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.form.processors.SendContactEMailProcessor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sendCofirmationEmail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.form.processors.SendConfirmationEmailProcessor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trackEmail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.form.processors.TrackEmailProcessor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">loggernName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log-form</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formProcessors</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Form processor node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;form processor name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the form processor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.module.form.processors.SendContactEMailProcessor</code>
+(SendContactEMailProcessor): Sends form data in email to the address
+specified in the To field. The processor extracts values from the From,
+To, Subject and Text fields and creates an email message in plain text
+or HTML format depending on
+<a href="#src-196596937_Formmodule-Configuringformsettings">form settings</a>.
+Any uploaded files are sent as attachments.</p>
+</li>
+<li>
+<p><code>info.magnolia.module.form.processors.SendConfirmationEMailProcessor</code>
+(SendConfirmationEMailProcessor): Sends a confirmation email. The
+processor first verifies if the Send confirmation checkbox is checked
+and sends a message to the address specified in the To field. By
+default, this processor is not enabled. This is the case even if the
+Send confirmation checkbox is checked in
+<a href="#src-196596937_Formmodule-Configuringformsettings">form settings</a>.
+To enable it, add an <code>enabled</code> property under the processor and set the
+value to <code>true</code>.</p>
+</li>
+<li>
+<p><code>info.magnolia.module.form.processors.TrackEmailProcessor</code>
+(TrackEmailProcessor): Writes the content of the submitted form to
+<code>magnolia-form.log</code> file if the Track Mail checkbox is checked. By
+default, this processor is not enabled. This is the case even if the
+Track Mail checkbox is checked in
+<a href="#src-196596937_Formmodule-Formsettings">form settings</a>. To enable
+it, add an <code>enabled</code> property under the processor and set the value to
+<code>true</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Enables and disables the processor</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>loggerName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The logger name. Only relevant for <code>trackEmail</code> processor.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="src-196596937_Formmodule-Creatingacustomformprocessor"><a class="anchor" href="#src-196596937_Formmodule-Creatingacustomformprocessor"></a>Creating a custom form processor</h3>
+<div class="paragraph">
+<p>The three example form processors above send the form data in email, but
+you can write a custom form processor to do almost anything. If you need
+to store the data in a database or process it in another way, write your
+own form processor. You can also try the
+<a href="http://wiki.magnolia-cms.com/display/WIKI/Form2DB+App">Form2DB App</a> that
+is a community developed app that saves form data via form processor
+into the JCR and allows for export to XLS.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Create a new form component definition for your custom processor. If you
+simply add the custom processor to the default component definition it
+will be executed for all forms.</p>
+</div>
+<div class="paragraph">
+<p>For more examples see
+<a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/modules/magnolia-module-public-user-registration/2.5.1/magnolia-module-public-user-registration/apidocs/info/magnolia/module/publicuserregistration/processors/package-summary.html">Form
+processors in the PUR module</a>.</p>
+</div>
+<div class="paragraph">
+<p>You can also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+JavaScript+models#HowtoworkwithJavaScriptmodels-CreatingacustomformprocessorwithJavaScript">create
+a form processor with server-side JavaScript</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Formcomponents"><a class="anchor" href="#src-196596937_Formmodule-Formcomponents"></a>Form components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The form components are configured in
+<code>/modules/form/templates/components</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">components</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formFile</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formEdit</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formStep</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formHidden</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formSubmit</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formSummary</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formPassword</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formHoneypot</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formGroupEdit</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formCondition</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formSelection</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formGroupFields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formGroupEditItem</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>escapeHtml</code> property escapes any HTML code entered in a form
+input field. This is a security feature that prevents XSS attacks.
+Default is <code>true</code> for all form fields.</p>
+</li>
+<li>
+<p>AbstractFormModel ensures that pages with forms are not cached.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596937_Formmodule-Loggingformdata"><a class="anchor" href="#src-196596937_Formmodule-Loggingformdata"></a>Logging form data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To log data sent in the contact form:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <a href="#src-196596937_Formmodule-Configuringformsettings">Form
+component</a>, check the <strong>Track mail</strong> checkbox on the Submit settings tab.</p>
+</li>
+<li>
+<p>Enable the <code>trackEmail</code>
+<a href="#src-196596937_Formmodule-Formprocessors">form processor</a>.</p>
+</li>
+<li>
+<p>Submit a form.</p>
+</li>
+<li>
+<p>To view the log:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <strong>Tools &gt; Log</strong> <strong>Viewer</strong>. Select <code>magnolia-form.log</code> and click
+View. OR</p>
+</li>
+<li>
+<p>Open <code>/webapps/&lt;webappName&gt;/logs/magnolia-form.log</code> on the file
+system.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>DAM Preview module</p>
+</div>
+<div class="paragraph">
+<p>Google Analytics Visualization module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

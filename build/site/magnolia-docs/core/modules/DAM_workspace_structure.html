@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DAM workspace structure - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/DAM_workspace_structure.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="DAM_workspace_structure.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/DAM_workspace_structure.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="DAM_workspace_structure.html">DAM workspace structure - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">DAM workspace structure - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Digital_Asset_Management_module.html">Digital Asset Management
+module</a></p>
+</li>
+<li>
+<p><a href="Magnolia_DAM_JCR_implementation.html">Magnolia DAM JCR
+implementation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596935"><a class="anchor" href="#src-196596935"></a>DAM workspace structure</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Magnolia (DAM 2.0) includes a single implementation of the AssetProvider
+interface, JcrAssetProvider , that facilitates working with <code>Assets</code>
+stored in the <code>dam</code> workspace: This page provides the details of this
+implementation.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596935_DAMworkspacestructure-Workspacestructureandnodedefinitions"><a class="anchor" href="#src-196596935_DAMworkspacestructure-Workspacestructureandnodedefinitions"></a>Workspace structure and node definitions</h3>
+<div class="paragraph">
+<p>Here is the hierarchical structure of the <code>dam</code> workspace:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mgnl:folder (nt:folder)</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mgnl:asset (nt:file)</code><br>
+<code>description <code>title </code>&#8230;&#8203;</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mgnl:resource (nt:resource) jcr:data (type="Binary") size &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>mgnl:asset (nt:file )</code></p>
+</li>
+<li>
+<p><code>&#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Note!</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>mgnl:asset `: Contains all `Asset</code> main properties and <code>DublinCore</code>
+properties.</p>
+</li>
+<li>
+<p><code>mgnl:resource `: Contains the binary and `MagnoliaAssetMetadata</code>
+properties.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Refer to <code>AssetNodeTypes</code> to access to the <code>Asset</code> property constant
+definition and utility methods. <code>AssetNodeTypes</code> should be used to refer
+to JCR <code>Asset</code> properties and node structure.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596935_DAMworkspacestructure-AssettoJCRnodemapping"><a class="anchor" href="#src-196596935_DAMworkspacestructure-AssettoJCRnodemapping"></a>Asset to JCR node mapping</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Property Name</th>
+<th class="tableblock halign-left valign-top">Asset Getter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>(not related to a property</p>
+</div>
+<div class="paragraph">
+<p><code>node.getName()</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getName()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR <code>Asset</code> node name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>language</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getLanguage()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String representation
+of local <a href="http://en.wikipedia.org/wiki/ISO_639">ISO 639</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>(not related to a property</p>
+</div>
+<div class="paragraph">
+<p><code>CompositeAssetId</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getItemKey()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Composite Id build using<br>
+<code>new ItemKey(DamConstants.DEFAULT_JCR_PROVIDER_ID, assetNode.getIdentifier())</code>;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getTitle()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title of the <code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getSubject()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Subject of the <code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getDescription()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description of
+the <code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>caption</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getCaption()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Caption of the <code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>copyright</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getCopyright()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Copyright of the
+<code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comment</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getComment()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment defined on the
+<code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:lastModified</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getLastModified()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Last
+modification date of the <code>Asset</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:mimeType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getMimeType()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mime Type of the
+<code>Asset</code>.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>extension</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getFileExtension()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File extension
+of the <code>Asset</code>.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fileName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getFileName()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File name of the
+Asset. This field includes the file extension 'me.tif'.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getFileSize()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Size of the <code>Asset</code> in
+bytes.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getContentStream()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset</code> content
+returned as a <code>java.io.InputStream</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getPath()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset</code>
+path.<br>
+<code>assetNode.getPath()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getAssetProvider()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The related <code>AssetProvider</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.getParent()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns
+the parent <code>Folder</code> . Equivalent to <code>node.getParent()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.isFolder()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns
+<code>false</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Asset.isAsset()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns
+<code>true</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span>
+These fields are required to be at this node level hierarchy
+(` mgnl:asset <code>.</code> jcr:content <code>) by the current implementation of the
+Imaging module. They will be moved under the `mgnl:asset `node level
+when the Imaging module is updated to work with `Assets</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596935_DAMworkspacestructure-FoldertoJCRnodemapping"><a class="anchor" href="#src-196596935_DAMworkspacestructure-FoldertoJCRnodemapping"></a>Folder to JCR node mapping</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Property Name</th>
+<th class="tableblock halign-left valign-top">Asset Getter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>(not related to a property</p>
+</div>
+<div class="paragraph">
+<p><code>node.getName()</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.getName()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR <code>Folder</code> node name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.getPath()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder</code> path.<br>
+<code>folderNode.getPath()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder .getItemKey()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Composite Id built using<br>
+<code>new ItemKey(DamConstants.DEFAULT_JCR_PROVIDER_ID, folderNode.getIdentifier())</code>;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.getItem(String name)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the item directly under this
+folder with the given name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.getChildren()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns an iterator over the direct elements under this folder. Returns
+both <code>Asset</code> and <code>Folder</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.isRoot()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns
+<code>true `if the `folderNode.getDepth()==0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.getAssetProvider()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the related <code>AssetProvider</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.getParent()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns the parent <code>Folder</code>. Equivalent to <code>node.getParent()</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.isFolder()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>true</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl: folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(not related to a property)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Folder.isAsset()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Returns <code>false</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596935_DAMworkspacestructure-AssetMetadatatoJCRnodemapping"><a class="anchor" href="#src-196596935_DAMworkspacestructure-AssetMetadatatoJCRnodemapping"></a>AssetMetadata to JCR node mapping</h3>
+<div class="paragraph">
+<p><code>MagnoliaAssetMetadata</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Property Name</th>
+<th class="tableblock halign-left valign-top">Asset Getter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MagnoliaAssetMetadata.getHeight()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File
+height of the <code>Asset</code> for <code>image</code> <code>MediaType</code>.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MagnoliaAssetMetadata.getWidth()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File width
+of the <code>Asset</code> for <code>image</code> <code>MediaType</code>.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/star_red.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/star_red.svg"></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><code>DublinCore</code></p>
+</div>
+<div class="paragraph">
+<p>For more Information see <a href="http://dublincore.org/documents/dces/">Dublin
+Core Metadata Element Set</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Property Name</th>
+<th class="tableblock halign-left valign-top">Asset Getter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>language</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getLanguage()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned
+value is equivalent to <code>Asset.getLanguage()</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getTitle()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned value is
+equivalent to <code>Asset.getTitle()</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subject</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getSubject()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned value
+is equivalent to <code>Asset.getSubject()</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getDescription()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The
+returned value is equivalent to <code>Asset.getDescription()</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>copyright</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getRight()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned value
+is equivalent to <code>Asset.getCopyright()</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcr:mimeType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getFormat()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned
+value is equivalent to `Asset.getMimeType() `.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>(not related to a property</p>
+</div>
+<div class="paragraph">
+<p><code>CompositeAssetId</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getIdentifier()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned value is equivalent to
+`Asset.getIdentifier() `.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>creator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getCreator()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The entity
+primarily responsible for making the resource.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:lastModified</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getDate()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned
+value is equivalent to `Asset.getLastModified() `.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contributor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getContributor()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The entity
+responsible for making contributing to the resource.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>coverage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getCoverage()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The spatial or
+temporal topic of the resource, the spatial applicability<br>
+of the resource, or the jurisdiction under which the resource is
+relevant.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>publisher</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getPublisher()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The entity
+responsible for making the resource available.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>relation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getRelation()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A related
+resource.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>source</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getSource()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A related resource
+from which the described resource is derived.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:asset</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DublinCore.getType()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The returned value is
+equivalent to <code>Asset.getMediaType() `<br>
+The `MediaType</code> is defined based on the <code>MimeType</code>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Magnolia DAM JCR implementation</p>
+</div>
+<div class="paragraph">
+<p>DAM Preview module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>UI module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/UI_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="UI_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/UI_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="UI_module.html">UI module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">UI module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597446"><a class="anchor" href="#src-196597446"></a>UI module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Download</th>
+<th class="tableblock halign-left valign-top"><a href="#src-196597446_UImodule-Installing">Multiple submodules</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE, Cloud</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLUI">MGNLUI</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/ui">UI</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Magnolia UI module is responsible for the user interface of the
+Magnolia AdminCentral back end. It provides various UI frameworks for
+other parts of Magnolia such as content apps.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597446_UImodule-Installing"><a class="anchor" href="#src-196597446_UImodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>There is usually no need to install the Magnolia UI project. Every
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps#Bundlesandwebapps-anc-artifacts-tableListofpreconfiguredMagnoliabundles">preconfigured
+Magnolia bundle</a> already contains the required UI submodules. The
+Magnolia
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ce/browse/pom.xml#86">BOM
+file</a> manages the versions for dependent UI modules.</p>
+</div>
+<div class="paragraph">
+<p>If you have a custom webapp that is completely independent from any
+preconfigured Magnolia webapp, here is how you should add the UI project
+submodules to it:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your parent POM, import dependency management from the UI project.</p>
+<div class="paragraph">
+<p>your-custom-project/pom.xml (snippet)</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>`&lt;!-- &#8230;&#8203; -&#8594;  `</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>properties</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>magnoliaUiVersion</code>&gt;6.2&lt;/<code>magnoliaUiVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>javaVersion</code>&gt;1.8&lt;/<code>javaVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>properties</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependencyManagement</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>groupId</code>&gt;info.magnolia.ui&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>artifactId</code>&gt;magnolia-ui-project&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>version</code>&gt;${magnoliaUiVersion}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>scope</code>&gt;import&lt;/<code>scope</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependencyManagement</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!-- &#8230;&#8203; -&#8594;</code>
+. In the POM of your webapp, add the UI submodules you rely on. The
+following is a typical configuration (from the <code>magnolia-empty-webapp</code>):</p>
+</div>
+<div class="paragraph">
+<p>+
+your-custom-project/my-custom-webapp/pom.xml (snippet)</p>
+</div>
+<div class="paragraph">
+<p>`&lt;!-- &#8230;&#8203; -&#8594;  `</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependencies</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.ui&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-ui-admincentral&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.admincentral&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-admincentral&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.ui&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-resurface-theme&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.widgetset&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-vaadin-widgetset&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.security&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-security-app&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.task&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-tasks-app&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.about&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-about-app&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;info.magnolia.jcrbrowser&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;magnolia-jcr-browser-app&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependencies</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`&lt;!-- &#8230;&#8203; -&#8594;  `</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597446_UImodule-Modulestructure"><a class="anchor" href="#src-196597446_UImodule-Modulestructure"></a>Module structure</h3>
+<div class="paragraph">
+<p>Here is a list of all modules in version 6.2 of the Magnolia UI project.
+The list includes both the Maven modules and the Magnolia modules.</p>
+</div>
+<div class="paragraph">
+<p>Maven</p>
+</div>
+<div class="paragraph">
+<p><code>groupId</code></p>
+</div>
+<div class="paragraph">
+<p><code>artifactID</code></p>
+</div>
+<div class="paragraph">
+<p>Function</p>
+</div>
+<div class="paragraph">
+<p>Magnolia module name(s)<sup>1</sup></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-project</code></p>
+</div>
+<div class="paragraph">
+<p>Parent reactor</p>
+</div>
+<div class="paragraph">
+<p>—</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-framework</code></p>
+</div>
+<div class="paragraph">
+<p><strong>The primary module/SDK for Magnolia app development</strong></p>
+</div>
+<div class="paragraph">
+<p>This provides (among others) the content app framework, IoC support for
+UI components and scopes, Vaadin 8 data-binding facilities and UI
+view/state management.</p>
+</div>
+<div class="paragraph">
+<p>It also offers convenience builders for selected Magnolia UI components
+(for example, alerts and dialogs).</p>
+</div>
+<div class="paragraph">
+<p><code>ui-framework-core</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-api</code></p>
+</div>
+<div class="paragraph">
+<p>This defines some core components for the UI such as Action, App,
+SubApp, Message and others.</p>
+</div>
+<div class="paragraph">
+<p>—</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-framework-jcr</code></p>
+</div>
+<div class="paragraph">
+<p>JCR implementation of the <em>Magnolia 6 UI</em> framework</p>
+</div>
+<div class="paragraph">
+<p><code>ui-framework-jcr</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.admincentral</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia 6 AdminCentral, an OS-like web application running Magnolia
+apps. This is where authors enter, preview and publish content and where
+administrators configure Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+<strong>This module is considered a private API</strong> and may evolve rapidly without
+any guarantee of backward/binary compatibility. Developers are
+encouraged to use what the UI framework offers instead.</p>
+</div>
+<div class="paragraph">
+<p><code>admincentral</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-resurface-theme</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia 6
+<a href="https://vaadin.com/docs/v8/framework/themes/themes-overview.html">Vaadin
+theme</a> based on
+<a href="https://vaadin.com/docs/v8/framework/themes/themes-valo.html">Valo</a></p>
+</div>
+<div class="paragraph">
+<p>—</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-vaadin-common-widgets</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia custom Vaadin/GWT
+<a href="https://vaadin.com/docs/v8/framework/components/components-overview.html">components</a>
+and
+<a href="https://vaadin.com/docs/v8/framework/components/components-extensions.html">extensions</a></p>
+</div>
+<div class="paragraph">
+<p>This module contains mainly former Magnolia 5 widget implementations.
+For Magnolia 6, most of the components have been reimplemented with
+plain Vaadin. Consequently, this module may be split and partially
+deprecated in any future version.</p>
+</div>
+<div class="paragraph">
+<p>—</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-mediaeditor</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia 6 <a href="UI_Media_Editor_module.html">UI Media Editor</a></p>
+</div>
+<div class="paragraph">
+<p><code>ui-mediaeditor</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Magnolia stock apps</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.about</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-about-app</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/About+Magnolia+app">About
+Magnolia</a> app</p>
+</div>
+<div class="paragraph">
+<p><code>about-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.jcrbrowser</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-jcr-browser-app</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR
+browser</a> app</p>
+</div>
+<div class="paragraph">
+<p><code>jcr-browser-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.messages</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-messages-app</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Messages+app">Messages</a> app</p>
+</div>
+<div class="paragraph">
+<p><code>messages-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.sample</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-sample-app</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Sample+app">Sample</a> app</p>
+</div>
+<div class="paragraph">
+<p><code>sample-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.security</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-security-app</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Security+app">Security</a> app</p>
+</div>
+<div class="paragraph">
+<p><code>security-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.task</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-tasks-app</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Tasks+app">Tasks</a> app</p>
+</div>
+<div class="paragraph">
+<p><code>tasks-app</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Magnolia 5 compatibility</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia 5 AdminCentral</p>
+</div>
+<div class="paragraph">
+<p>Accessible via <code>/.magnolia/admincentral-m5</code> for compatibility and
+migration purposes</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+As of Magnolia 6.2, this module still provides (among others) the app
+launcher configuration, login form and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Users#Users-edit-user-preferences">user
+preferences</a> dialog. These may be replaced or relocated to the new
+<code>magnolia-admincentral</code> module in any future version.</p>
+</div>
+<div class="paragraph">
+<p><code>ui-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-framework-compatibility</code></p>
+</div>
+<div class="paragraph">
+<p><strong>This module brings support for running Magnolia 5 content apps in
+Magnolia 6.</strong></p>
+</div>
+<div class="paragraph">
+<p>In particular, it contains former Magnolia 5 content-app components such
+as the workbench, forms and dialogs or image provider. It also provides
+JCR implementations of the deprecated Vaadin 7 Data API (for example,
+<code>JcrNodeAdapter</code> and <code>HierarchicalJcrContainer</code>).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+The following Magnolia 5 Maven modules have been relocated to this
+module:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>magnolia-ui-actionbar</code></p>
+</li>
+<li>
+<p><code>magnolia-ui-contentapp</code></p>
+</li>
+<li>
+<p><code>magnolia-ui-dialog</code></p>
+</li>
+<li>
+<p><code>magnolia-ui-form</code></p>
+</li>
+<li>
+<p><code>magnolia-ui-imageprovider</code></p>
+</li>
+<li>
+<p><code>magnolia-ui-vaadin-integration</code></p>
+</li>
+<li>
+<p><code>magnolia-ui-workbench</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>ui-contentapp</code></p>
+</div>
+<div class="paragraph">
+<p><code>ui-framework</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ui</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-ui-vaadin-theme</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia 5
+<a href="https://vaadin.com/docs/v8/framework/themes/themes-overview.html">Vaadin
+theme</a></p>
+</div>
+<div class="paragraph">
+<p>—</p>
+</div>
+<div class="paragraph">
+<p><sup>1)</sup> <a href="Modules.html#src-196596732_Modules-Magnoliamodule">Magnolia
+modules</a> that belong to the given Maven submodule</p>
+</div>
+<div class="paragraph">
+<p>REST search result suppliers for Periscope</p>
+</div>
+<div class="paragraph">
+<p>UI Media Editor module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>resfn - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/resfn.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="resfn.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/resfn.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="resfn.html">resfn - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">resfn - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Template_scripts.html">Template scripts</a></p>
+</li>
+<li>
+<p><a href="Templating_functions.html">Templating functions</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596492"><a class="anchor" href="#src-196596492"></a>resfn</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Templating_functions.html">About templating functions</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources+module">Resources
+module</a></p>
+</li>
+<li>
+<p><a href="https://github.com/rah003/neat-resources">neat-resources</a> Git
+repository</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>resfn</code> templating functions allow you to create links to CSS and JS
+resources in templates by a defined pattern or a list of patterns. The
+following methods are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>#css</code></p>
+</li>
+<li>
+<p><code>#cachedCss</code></p>
+</li>
+<li>
+<p><code>#js</code></p>
+</li>
+<li>
+<p><code>#cachedJs</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The functions originate in a project called
+<a href="https://github.com/rah003/neat-resources">neat-resources</a>, hosted on
+GitHub, developed by <em>rah003</em> and integrated in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources+module">magnolia-resources</a>
+module. If you have already used neat-resources, please read
+<a href="#src-196596492_resfn-Fromhcmcfntoresfn">From hcmcfn to resfn</a> below.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596492_resfn-Overview"><a class="anchor" href="#src-196596492_resfn-Overview"></a>Overview</h3>
+<div class="paragraph">
+<p>The purpose of <code>resfn</code> functions is to generate HTML elements that link
+to CSS and JS resource files in your project. You would typically use
+the functions in a FreeMarker template script. The functions create
+<code>&lt;script&gt;</code> and <code>&lt;link&gt;</code> elements for you depending on the file pattern
+(<code>.*js</code>, <code>.*css</code>) you provide and the resources that are available.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: In a FreeMarker template script, the following code&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.css(<code>"/foobar.*css"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.js(<code>"/foobar.*js"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p>renders links to all CSS and JS files in the <code>foobar</code> module if the
+module is part of your bundle:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>script</code> <code>src</code>=<code>"/foobar-module/webresources/js/a.js"</code>&gt;&lt;/<code>script</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>script</code> <code>src</code>=<code>"/foobar-module/webresources/js/b.js"</code>&gt;&lt;/<code>script</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>link</code> <code>rel</code>=<code>"stylesheet"</code> <code>type</code>=<code>"text/css"</code> <code>href</code>=<code>"/foobar-module/webresources/css/style.css"</code> /&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>link</code> <code>rel</code>=<code>"stylesheet"</code> <code>type</code>=<code>"text/css"</code> <code>href</code>=<code>"/foobar-module/webresources/css/style2.css"</code> /&gt;</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-Availableresources"><a class="anchor" href="#src-196596492_resfn-Availableresources"></a>Available resources</h4>
+<div class="paragraph">
+<p>The links are created only for resources which are a part of your
+bundle. This includes all resources visible to the <code>magnolia-resources</code>
+module:
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">resources</a> from
+the file system, from the classpath and JCR-based resources.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-Patternargument"><a class="anchor" href="#src-196596492_resfn-Patternargument"></a>Pattern argument</h4>
+<div class="paragraph">
+<p>Each of the main methods, <code>#css</code>, <code>#cachedCss</code>, <code>#js</code> and <code>#cachedJs</code> ,
+can take a single pattern or a pattern list as its argument:</p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.css(<code>"/foobar/webresources.*css"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.js([<code>"/foobar.*js"</code>, <code>"/travel-demo/.*js"</code>])}</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 1: A single pattern to match all CSS files in the <code>webresources</code>
+subfolder of the <code>foobar</code> module.</p>
+</li>
+<li>
+<p>Line 2: A list of patterns matching all JS files from the <code>foobar</code> and
+<code>travel-demo</code> modules. The list must be in the following format:
+<code>[$pattern1, $pattern2, &#8230;&#8203;]</code> .</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-Cachedornotcached"><a class="anchor" href="#src-196596492_resfn-Cachedornotcached"></a>Cached or not cached</h4>
+<div class="paragraph">
+<p>For CSS and JS you can use <code>resfn</code> to create links for <code>webresources</code>
+which will be served from cache (use <code>#cachedCss</code> and #<code>cachedJs</code>) or
+directly via the resources loading mechanism (via <code>#css</code> and <code>#js</code>). The
+former methods will generate links with <code><sub>$timestamp</sub>cache</code> appended to
+the link name, for example <code>a.css</code> will become
+<code>a<sub>2016-12-08-02-56-06-000</sub>cache.css</code> .</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596492_resfn-Methods"><a class="anchor" href="#src-196596492_resfn-Methods"></a>Methods</h3>
+<div class="sect3">
+<h4 id="src-196596492_resfn-css"><a class="anchor" href="#src-196596492_resfn-css"></a>css</h4>
+<div class="paragraph">
+<p>Creates <code>&lt;link&gt;</code> tags for CSS files.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Methodsignatures"><a class="anchor" href="#src-196596492_resfn-Methodsignatures"></a>Method signatures</h5>
+<div class="paragraph">
+<p><code>String css(String pattern)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String css(String pattern, String otherAttributes)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String css(List&lt;String&gt; patterns)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String css(List&lt;String&gt; patterns, String otherAttributes)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Arguments"><a class="anchor" href="#src-196596492_resfn-Arguments"></a>Arguments</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pattern</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A single pattern or a list of patterns to match the desired resource(s).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>otherAttributes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Other attributes to be added to the generated <code>&lt;link/&gt;</code> tag. If the
+value of this parameter requires quotes, use single quotes (<code>'</code>) or
+escaped double quotes (<code>\"</code>).</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>"title='Basic' media='all'"</code></p>
+</li>
+<li>
+<p><code>"title=\"Basic\" media=\"all\""</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Returns"><a class="anchor" href="#src-196596492_resfn-Returns"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+<div class="paragraph">
+<p>Zero to many <code>&lt;link/&gt;</code> tags, divided by a line separator.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Usage"><a class="anchor" href="#src-196596492_resfn-Usage"></a>Usage</h5>
+<div class="paragraph">
+<p><code>${resfn.css(<code>"/foobar-module.*css"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.css(<code>"/foobar-module.*css"</code>, <code>"media='all'"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.css([<code>"/foobar.*css"</code>, <code>".*magnolia.*css"</code>])}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.css([<code>"/foobar.*css"</code>, <code>".*magnolia.*css"</code>], <code>"media='all'"</code>)}</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-cachedCss"><a class="anchor" href="#src-196596492_resfn-cachedCss"></a>cachedCss</h4>
+<div class="paragraph">
+<p>Creates <code>&lt;link&gt;</code> tags for CSS files which will be served from cache.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Methodsignatures.1"><a class="anchor" href="#src-196596492_resfn-Methodsignatures.1"></a>Method signatures</h5>
+<div class="paragraph">
+<p><code>String cachedCss(String pattern)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String cachedCss(String pattern, String otherAttributes)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String cachedCss(List&lt;String&gt; patterns)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String cachedCss(List&lt;String&gt; patterns, String otherAttributes)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Arguments.1"><a class="anchor" href="#src-196596492_resfn-Arguments.1"></a>Arguments</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pattern</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A single pattern or a list of patterns to match the desired resource(s).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>otherAttributes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Other attributes to be added to the generated <code>&lt;link/&gt;</code> tag. If the
+value of this parameter requires quotes, use single quotes (<code>'</code>) or
+escaped double quotes (<code>\"</code>).</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>"title='Basic' media='all'"</code></p>
+</li>
+<li>
+<p><code>"title=\"Basic\" media=\"all\""</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Returns.1"><a class="anchor" href="#src-196596492_resfn-Returns.1"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+<div class="paragraph">
+<p>Zero to many <code>&lt;link/&gt;</code> tags, divided by a line separator.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Usage.1"><a class="anchor" href="#src-196596492_resfn-Usage.1"></a>Usage</h5>
+<div class="paragraph">
+<p><code>${resfn.cachedCss(<code>"/foobar-module.*css"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.cachedCss(<code>"/foobar-module.*css"</code>, <code>"media='all'"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.cachedCss([<code>"/foobar.*css"</code>, <code>".*magnolia.*css"</code>])}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.cachedCss([<code>"/foobar.*css"</code>, <code>".*magnolia.*css"</code>], <code>"media='all'"</code>)}</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-js"><a class="anchor" href="#src-196596492_resfn-js"></a>js</h4>
+<div class="paragraph">
+<p>Creates <code>&lt;script&gt;</code> tags for JS files.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Methodsignatures.2"><a class="anchor" href="#src-196596492_resfn-Methodsignatures.2"></a>Method signatures</h5>
+<div class="paragraph">
+<p><code>String js(String pattern)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String js(List&lt;String&gt; patterns)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Argument"><a class="anchor" href="#src-196596492_resfn-Argument"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A single pattern or a list of patterns to match the desired resource(s).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Returns.2"><a class="anchor" href="#src-196596492_resfn-Returns.2"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+<div class="paragraph">
+<p>Zero to many &lt;script/&gt; tags divided by line line separator.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Usage.2"><a class="anchor" href="#src-196596492_resfn-Usage.2"></a>Usage</h5>
+<div class="paragraph">
+<p><code>${resfn.js(<code>"/foobar-module.*js"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.js([<code>"/foobar.*css"</code>, <code>".*magnolia.*js"</code>])}</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-cachedJs"><a class="anchor" href="#src-196596492_resfn-cachedJs"></a>cachedJs</h4>
+<div class="paragraph">
+<p>Creates <code>&lt;script&gt;</code> tags for JS files which will be served from cache.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Methodsignatures.3"><a class="anchor" href="#src-196596492_resfn-Methodsignatures.3"></a>Method signatures</h5>
+<div class="paragraph">
+<p><code>String cachedJs(String pattern)</code></p>
+</div>
+<div class="paragraph">
+<p><code>String cachedJs(List&lt;String&gt; patterns)</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Argument.1"><a class="anchor" href="#src-196596492_resfn-Argument.1"></a>Argument</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pattern</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A single pattern or a list of patterns to match the desired resource(s).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Returns.3"><a class="anchor" href="#src-196596492_resfn-Returns.3"></a>Returns</h5>
+<div class="paragraph">
+<p><code>String</code></p>
+</div>
+<div class="paragraph">
+<p>Zero to many <code>&lt;script/&gt;</code> tags divided by a line separator.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596492_resfn-Usage.3"><a class="anchor" href="#src-196596492_resfn-Usage.3"></a>Usage</h5>
+<div class="paragraph">
+<p><code>${resfn.cachedJs(<code>"/foobar-module.*js"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.cachedJs([<code>"/foobar.*css"</code>, <code>".*magnolia.*js"</code>])}</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596492_resfn-Fromhcmcfntoresfn"><a class="anchor" href="#src-196596492_resfn-Fromhcmcfntoresfn"></a>From hcmcfn to resfn</h3>
+<div class="paragraph">
+<p>Version 2.5.1 of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources+module">magnolia-resources</a>
+module adds the templating functions, originally called <code>hcmcfn</code>, from
+<a href="https://github.com/rah003/neat-resources">neat-resources</a> into a new
+submodule called <code>magnolia-resources-templating</code> . With this move the
+resources templating functions have become an official part of Magnolia.
+If you have already been using
+<a href="https://github.com/rah003/neat-resources">neat-resources</a>, you can still
+use them.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><code>resfn</code> , provided by <code>magnolia-resources-templating</code> (version 2.5.1),
+contains exactly the same methods as <code>neat-resources</code> (version 1.0.1).
+However, <code>magnolia-resources-templating</code> may undergo further
+development, whereas the development of <code>neat-resources</code> is pending.</p>
+</div>
+<div class="paragraph">
+<p>There is only one difference: the context attribute registered on the
+FreeMarker renderer has a different name:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 30%;">
+<col style="width: 20%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module</th>
+<th class="tableblock halign-left valign-top">Context attribute</th>
+<th class="tableblock halign-left valign-top">Call example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>neat-resources</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>hcmcfn</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>${hcmcfn.css(<code>"/foobar-module.*css"</code>)}</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-resources-templating</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resfn</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>${resfn.css(<code>"/foobar-module.*css"</code>)}</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To switch from <code>neat-resources</code> to <code>magnolia-resources-templating</code>,
+modify the existing FreeMarker scripts by replacing <code>hcmcfn</code> with
+<code>resfn</code> .</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596492_resfn-Excludingresfnfromyourbundle"><a class="anchor" href="#src-196596492_resfn-Excludingresfnfromyourbundle"></a>Excluding resfn from your bundle</h4>
+<div class="paragraph">
+<p><code>resfn</code> resides in <code>magnolia-resources-templating</code>, which was added to
+<code>magnolia-empty-webapp</code> with version 5.5.1 of Magnolia. Since
+<code>magnolia-empty-webapp</code> itself is the base app of every Magnolia webapp
+and bundle, your bundle will most probably contain also
+<code>magnolia-resources-templating</code>, if your bundle is based on Magnolia
+5.5.1 or higher. However, you may always exclude <code>resfn</code> from your
+bundle by adding the following section to the pom file of your webapp:</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;info.magnolia&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;magnolia-empty-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>exclusions</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>exclusion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.resources&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-resources-templating&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>exclusion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>exclusions</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;info.magnolia&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;magnolia-empty-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>exclusions</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>exclusion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.resources&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-resources-templating&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>exclusion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>exclusions</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>The above snippet is for a webapp which is based directly on
+<code>magnolia-empty-webapp</code> .</p>
+</div>
+<div class="paragraph">
+<p>navfn</p>
+</div>
+<div class="paragraph">
+<p>restfn</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

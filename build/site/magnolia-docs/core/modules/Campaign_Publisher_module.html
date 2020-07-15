@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Campaign Publisher module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Campaign_Publisher_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Campaign_Publisher_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Campaign_Publisher_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Campaign_Publisher_module.html">Campaign Publisher module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Campaign Publisher module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596794"><a class="anchor" href="#src-196596794"></a>Campaign Publisher module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">DX Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLCAMPU">MGNLCAMPU</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.enterprise.sites/magnolia-campaign-publisher/">Campaign
+Publisher</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The Campaign Publisher module and app are not compatible with the apps
+migrated to the 6 UI framework. There is an ongoing effort to convert
+both of them to the framework.<br>
+You can follow the progress on the following ticket:
+<a href="https://jira.magnolia-cms.com/browse/MGNLCAMPU-80?src=confmacro"><</a> - Phase 1 - Migrate module to support new framework apps
+<span class="status  green  subtle">Closed</span></p>
+</div>
+<div class="paragraph">
+<p>The Campaign Publisher module allows you to manage all elements of a
+campaign in one app. Create a campaign and add pages and other dependent
+content such as assets and configuration into the campaign. You can see
+the state of readiness and activation status of each item, preview
+items, and publish the whole campaign with a single click.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596794/6-1-CampaignPublisherModule.png" alt="images/download/attachments/196596794/6-1-CampaignPublisherModule.png"></span></p>
+</div>
+<div class="sect2">
+<h3 id="src-196596794_CampaignPublishermodule-Installing"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.campaign&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-campaign-publisher&lt;/artifactId&gt;
+  &lt;version&gt;1.3.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596794_CampaignPublishermodule-Configuration"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The module is configured in <code>/modules/campaign-publisher</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">campaign-publisher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dialogs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldTypes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596794_CampaignPublishermodule-Creatingandmanagingcampaigns"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Creatingandmanagingcampaigns"></a>Creating and managing campaigns</h3>
+<div class="paragraph">
+<p>Campaigns are created and managed in the Campaign publisher app.
+Campaign
+<a href="#src-196596794_CampaignPublishermodule-Addingcontenttocampaigns">content
+is added</a> to campaigns in the app in which the content is managed. The
+<a href="#src-196596794_CampaignPublishermodule-Addtocampaignaction">Add to
+campaign action</a> is available in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+app">Pages</a>,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Assets+app">Assets</a>,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Contacts+app">Contacts</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/App+configuration">Configuration</a>
+apps by default, but can be
+<a href="#src-196596794_CampaignPublishermodule-AddingAddtocampaignactiontocontentapps">added
+to any content app</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596794_CampaignPublishermodule-Creatingacampaign"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Creatingacampaign"></a>Creating a campaign</h4>
+<div class="paragraph">
+<p>To create a campaign:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the Campaign Publisher app:</p>
+</li>
+<li>
+<p>Click <strong>Add campaign</strong>.</p>
+</li>
+<li>
+<p>Name the campaign</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596794/6-1-CampaignPublisherModule-addCampaign.png" alt="images/download/attachments/196596794/6-1-CampaignPublisherModule-addCampaign.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596794_CampaignPublishermodule-Addingcontenttocampaigns"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Addingcontenttocampaigns"></a>Adding content to campaigns</h4>
+<div class="paragraph">
+<p>Content is added to campaigns in the app where the content is managed,
+such as the Pages, Assets, Contacts or Configuration apps. The same
+content can be added to multiple campaigns.</p>
+</div>
+<div class="paragraph">
+<p>To add content to campaigns:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the app where the content is managed.</p>
+</li>
+<li>
+<p>Select the content and click <strong>Add to campaign</strong>. You can add multiple
+items simultaneously.</p>
+</li>
+<li>
+<p>Select the campaign in the dialog.</p>
+</li>
+<li>
+<p>Check <strong>Dependencies</strong> to include referenced content such as images or
+videos used on a page. This option is only available in the Pages app.</p>
+</li>
+<li>
+<p>Save.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596794/6-1-CampaignPublisherModule-add2Campaign.png" alt="images/download/attachments/196596794/6-1-CampaignPublisherModule-add2Campaign.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can also create a new campaign on-the-fly while adding content to
+campaigns. Select <code>&lt;Create new&gt;</code> in the <strong>Add to campaign</strong> dialog. A new
+campaign named after the content item will be created in the Campaign
+Publisher app and the item and referenced content (if any) will
+simultaneously be added to the campaign.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596794_CampaignPublishermodule-Managingcampaigns"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Managingcampaigns"></a>Managing campaigns</h4>
+<div class="paragraph">
+<p>Campaign managers and team members can interact and see the overall
+state of a campaign in the Campaign Publisher app.</p>
+</div>
+<div class="paragraph">
+<p>Each item shows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Added by</strong>: User who added the item.</p>
+</li>
+<li>
+<p><strong>Ready</strong>: Whether the item is ready for publication.</p>
+</li>
+<li>
+<p><strong>Status</strong>: Publication status of the item.</p>
+</li>
+<li>
+<p><strong>Is reference</strong>: Whether the item is a referenced (dependent) item or
+has been added individually.</p>
+</li>
+<li>
+<p><strong>Item type</strong>: Whether the item is a page, asset, resource or
+configuration. The type displays before the path.</p>
+</li>
+<li>
+<p><strong>Path</strong>: Path to the item,</p>
+</li>
+<li>
+<p><strong>Workspace</strong>: Workspace where the item is located. This displays after
+the word "at" at the end or the path.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596794/6-1-CampaignPublisherModule-campaignBrowser.png" alt="images/download/attachments/196596794/6-1-CampaignPublisherModule-campaignBrowser.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596794_CampaignPublishermodule-Campaignactions"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Campaignactions"></a>Campaign actions</h3>
+<div class="paragraph">
+<p>The app has a number of custom actions to manage campaigns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Campaign actions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Edit campaign</strong>: Opens dialog to rename campaign and archive the
+campaign on completion.</p>
+</li>
+<li>
+<p><strong>Rename campaign</strong>: Opens dialog to rename the campaign.</p>
+</li>
+<li>
+<p><strong>Delete</strong>: Deletes the campaign and all items.</p>
+</li>
+<li>
+<p><strong>Merge campaigns</strong>: Merges multiple campaigns into one. Select the
+campaigns to be merged and click the action. Duplicates are removed
+automatically.</p>
+</li>
+<li>
+<p><strong>Update dependencies</strong>: Refreshes dependent content and adds missing
+dependencies. The action&#8217;s confirmation dialog lists the dependencies
+that will be added or removed.</p>
+</li>
+<li>
+<p><strong>Include unpublished parents</strong>: Adds any unpublished parent items that
+would prevent publishing the campaign.</p>
+</li>
+<li>
+<p><strong>Publish</strong>: Publishes the entire campaign and all campaign items.
+Campaigns are automatically marked as ready when all items have been
+marked as ready. If the campaign is not marked as ready, a warning
+displays in a confirmation dialog prior to publication.</p>
+</li>
+<li>
+<p><strong>Unpublish</strong>: Unpublishes the campaign and all campaign items.</p>
+</li>
+<li>
+<p><strong>Export/Import</strong>: Exports or imports the node in the <code>campaigns</code>
+workspace to or from XML. The underlying content is not imported or
+exported.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Item actions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Mark/Un-mark as ready</strong>: Changes the ready status icon to green
+(ready) or red (unready). If content marked as ready is modified in the
+underlying app the status automatically changes to amber (modified).
+Actions can be executed on multiple items. When all campaign items are
+marked as ready, the status of the campaign node changes to ready
+automatically, and vice versa.</p>
+</li>
+<li>
+<p><strong>Preview</strong>: Opens the item in the app where it is managed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pages open in
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Preview+app">Preview app</a>.</p>
+</li>
+<li>
+<p>Content app items open in the edit dialog in the app where they are
+managed.</p>
+</li>
+<li>
+<p>Action is not available for items managed in custom apps such as the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Travel+demo+-+for+editors">Tours
+app</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Delete</strong>: Removes items from the campaign. It does not result in
+deletion of the actual content. Action can be executed on multiple
+items.</p>
+</li>
+<li>
+<p><strong>Split campaigns</strong>: Splits one campaign into two. Select one or more
+items to be moved and click the action. A new campaign with the same
+name plus a prepended numeral is created, and the selected items are
+moved from the original to the new campaign.</p>
+</li>
+<li>
+<p><strong>Publish/Unpublish</strong>: Publishes and unpublishes the underlying content
+item. Actions can be executed on multiple items.</p>
+</li>
+<li>
+<p><strong>Export/Import</strong>: Exports or imports the node in the <code>campaigns</code>
+workspace to or from XML. The underlying content is not imported or
+exported.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596794_CampaignPublishermodule-Addtocampaignaction"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Addtocampaignaction"></a>Add to campaign action</h3>
+<div class="paragraph">
+<p>The module includes a preconfigured <strong>Add to campaign</strong> action that you
+can add to any content app. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Action+definition">action
+definition</a> for more.</p>
+</div>
+<div class="paragraph">
+<p>The action is configured in
+<code>/modules/campaign-publisher/actions/selectCampaignAction</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">campaign-publisher</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selectCampaignAction</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availability</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">nodeTypes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asset</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:asset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">configuration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:contentNode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">folder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:folder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateOrResource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:content</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">multiple</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">root</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.campaignpublisher.ui.action.OpenMultiEditDialogAction$Definition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dialogName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">campaign-publisher:addToCampaign</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-add-folder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">campaign-publisher.actions.selectCampaignAction.label</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectCampaignAction</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Action name.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>availability</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Availability node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeTypes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Node types node</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;node type mappings&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Node types the action operates on. One for each type.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rules</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Availability rules.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>multiple</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Defines whether the action is available for multiple items.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>root</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Defines whether action is available at the workspace root level.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Action definition class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dialogName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Dialog to open when the action is executed.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>icon</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Action icon.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Action label.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196596794_CampaignPublishermodule-AddingAddtocampaignactiontocontentapps"><a class="anchor" href="#src-196596794_CampaignPublishermodule-AddingAddtocampaignactiontocontentapps"></a>Adding Add to campaign action to content apps</h4>
+<div class="paragraph">
+<p>The easiest way to make the Add to campaign action available in a
+content app is to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">extend</a>
+the
+<a href="#src-196596794_CampaignPublishermodule-Addtocampaignaction">Addtocampaignaction</a>
+in the module.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Adding <code>selectCampaignAction</code> to <code>tours</code> app in
+<code>/modules/tours/apps/tours/subapps/browser/actions</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tours</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tours</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subapps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">browser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selectCampaignAction</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/modules/campaign-publisher/actions/selectCampaignAction</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Next, make the action available in the action bar.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Making <code>selectCampaignAction</code> available in the <code>item</code> section
+of the action bar in
+<code>/modules/tours/apps/tours/subapps/browser/actionbar/sections/item/groups/activationActions</code>.
+See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Action+bar+definition">Action
+bar definition</a> for more.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">browser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actionbar</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sections</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">item</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groups</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activationActions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">items</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deactivate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">selectCampaignAction</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s the action in the Tours app.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596794/6-1-CampaignPublisherModule-addingToApp.png" alt="images/download/attachments/196596794/6-1-CampaignPublisherModule-addingToApp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The Add to campaign action does not work in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Resource files
+app</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596794_CampaignPublishermodule-Settingpermissions"><a class="anchor" href="#src-196596794_CampaignPublishermodule-Settingpermissions"></a>Setting permissions</h3>
+<div class="paragraph">
+<p>The Campaign Publisher app belongs to the Edit app group that has no
+restrictive permissions configured in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/App+launcher+layout">app
+launcher layout</a>.</p>
+</div>
+<div class="paragraph">
+<p>To
+<a href="#src-196596794_CampaignPublishermodule-Addingcontenttocampaigns">add
+content to campaigns</a> and
+<a href="#src-196596794_CampaignPublishermodule-Creatingandmanagingcampaigns">creating
+and managing campaigns</a> in the Campaign Publisher app, editors and
+publishers need read/write permissions in the <code>campaigns</code> workspace.
+Only <code>superuser</code> has these permissions by default.</p>
+</div>
+<div class="paragraph">
+<p>To provide users with the required permissions, create a new role in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Security+app">Security app</a>
+with the permissions in the table below and assign it to the user or
+group.</p>
+</div>
+<div class="paragraph">
+<p>Access control lists</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Workspace</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Permission</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Scope</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Path</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Campaigns</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read/Write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If permissions to the underlying content are restricted, the user will
+still not be able to access or preview the content in the app in which
+the content is managed.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s what example Travel demo tour editor Tina, who does not have
+access to the Pages app, sees in the Campaign Publisher app. The
+activation status indicator and <strong>Preview</strong> action are disabled.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596794/6-1-CampaignPublisherModule-tina.png" alt="images/download/attachments/196596794/6-1-CampaignPublisherModule-tina.png"></span></p>
+</div>
+<div class="paragraph">
+<p>SiteMesh module</p>
+</div>
+<div class="paragraph">
+<p>CAS module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

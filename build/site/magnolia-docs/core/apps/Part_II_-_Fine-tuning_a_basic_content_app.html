@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Part II - Fine-tuning a basic content app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Part_II_-_Fine-tuning_a_basic_content_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Part_II_-_Fine-tuning_a_basic_content_app.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Part_II_-_Fine-tuning_a_basic_content_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Part_II_-_Fine-tuning_a_basic_content_app.html">Part II - Fine-tuning a basic content app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Part II - Fine-tuning a basic content app - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="My_first_content_app.html">My first content app</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598222"><a class="anchor" href="#src-196598222"></a>Part II - Fine-tuning a basic content app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This is the third and final part of the
+<a href="My_first_content_app.html">My first content app</a> tutorial. The
+content type allows you to define the actual content model. Magnolia
+then creates an editing interface automatically, but you have the
+ability to tune every aspect of the interface to its final form as
+required by a specific use case.</p>
+</div>
+<div class="paragraph">
+<p>On this page you fine-tune the app to the requirements ask for by the
+<a href="My_first_content_app.html#src-196598201_Myfirstcontentapp-anc-bookshelf-app-design">use
+case</a> defined for this tutorial. You also add and polish the i18n labels
+and descriptions for the elements of the app&#8217;s UI.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598222_PartII-Fine-tuningabasiccontentapp-Fine-tunetheappdescriptor"><a class="anchor" href="#src-196598222_PartII-Fine-tuningabasiccontentapp-Fine-tunetheappdescriptor"></a>Fine-tune the app descriptor</h3>
+<div class="paragraph">
+<p>First you change the <code>bookshelf-app.yaml</code> app descriptor, to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add an app icon</p>
+</li>
+<li>
+<p>Tailor the properties</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Open the file, located in the <code>bookshelf</code> light module <code>apps</code> folder,
+and edit it as follows and save it:</p>
+</div>
+<div class="paragraph">
+<p>bookshelf-app.yaml (app descriptor)</p>
+</div>
+<div class="paragraph">
+<p><code>!content-type-m5:bookshelf-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>name: bookshelf-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>icon: icon-content-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>subApps:</code></p>
+</div>
+<div class="paragraph">
+<p>`  detail:`</p>
+</div>
+<div class="paragraph">
+<p>`    editor:`</p>
+</div>
+<div class="paragraph">
+<p>`      form:`</p>
+</div>
+<div class="paragraph">
+<p>`        tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>default</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`            name: bookDetailsTab`</p>
+</div>
+<div class="paragraph">
+<p>`            fields:`</p>
+</div>
+<div class="paragraph">
+<p>`              ed:`</p>
+</div>
+<div class="paragraph">
+<p>`                fieldType: checkbox`</p>
+</div>
+<div class="paragraph">
+<p>`              title:`</p>
+</div>
+<div class="paragraph">
+<p>`                rows: <code>`2</code></p>
+</div>
+<div class="paragraph">
+<p>`              description:`</p>
+</div>
+<div class="paragraph">
+<p>`                rows: <code>`5</code></p>
+</div>
+<div class="paragraph">
+<p>`                maxLength: <code>`5000</code></p>
+</div>
+<div class="paragraph">
+<p>`              publish_date:`</p>
+</div>
+<div class="paragraph">
+<p>`                fieldType: date`</p>
+</div>
+<div class="paragraph">
+<p>`              isbn13:`</p>
+</div>
+<div class="paragraph">
+<p>`                maxLength: <code>`13</code></p>
+</div>
+<div class="paragraph">
+<p>`                validators:  `</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: isbn13`</p>
+</div>
+<div class="paragraph">
+<p>`                    <code>class</code>: info.magnolia.ui.form.validator.definition.RegexpValidatorDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`                    pattern: <code>&#8217;97(8|9)[0-9]{9}(\d|X)'</code></p>
+</div>
+<div class="paragraph">
+<p>Click here for a description of the changes made.</p>
+</div>
+<div class="paragraph">
+<p><strong>Changing the app icon</strong></p>
+</div>
+<div class="paragraph">
+<p>On line 3 above, you assign the Bookshelf app a new
+<a href="Icons.html">icon</a> called <code>icon-content-app</code>, which symbolizes a
+bookshelf.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>icon-content-app</code> is one of the icons we provide as part of the UI
+framework and you can see them all here:
+<a href="https://dev.magnolia-cms.com/svg-app-icons-gallery/" class="bare">https://dev.magnolia-cms.com/svg-app-icons-gallery/</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tailoring the properties in the detail subapp</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 10: Give the <code>default</code> tab a new name.<br>
+The app generator creates the <code>default</code> tab in the Book detail subapp.
+You assign the tab (node) a more meaningful name, <code>bookDetailsTab</code>,
+which makes it easier to address the app components and i18n labels.</p>
+</li>
+<li>
+<p>Lines 12 and 13: Change the <code>ed</code> property.<br>
+You change the field type of this property from the default
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text</a> to the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Checkbox+field">checkbox</a>
+field type.</p>
+</li>
+<li>
+<p>Lines 14 and 15: Set the height of the field for the <code>title</code>
+property.<br>
+You set the <code>rows</code> field property of the <code>title</code> content type property
+to <code>2</code>. Some book titles are longer and in most cases a two-row text
+field allows the user to read the whole title compared to just a one-row
+field.</p>
+</li>
+<li>
+<p>Lines 16-18: Define the height and maximum length of the field for the
+<code>description</code> property.<br>
+Similarly, you set the number of rows for the <code>description</code> property to
+<code>5</code>.<br>
+You also limit the maximum length of a description to 5 000 characters
+to comply with data import restrictions of the
+<a href="http://libib.com/">libib.com</a> cloud service, in case the user decides to
+transfer data between the Bookshelf app and
+<a href="http://libib.com/">libib.com</a>.</p>
+</li>
+<li>
+<p>Lines 19-20: Change the <code>publish_date</code> property.<br>
+Set the field type to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Date+field">date</a> to help
+the user find a book publication date with a pull-down calendar.</p>
+</li>
+<li>
+<p>Lines 21-26: Length setting and a validator related to the <code>isbn13</code>
+property.<br>
+We set the <code>maxLength</code> property to <code>13</code> characters to provide the user
+with a digit counter for entering the ISBN-13 number.<br>
+On lines 23-26 we add a regex-based
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+validators">field
+validator</a> for the ISBN-13 field. This validation makes sure that the
+number entered complies with the basic syntax of ISBN-13 numbers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598222_PartII-Fine-tuningabasiccontentapp-Addingani18nmessagebundle"><a class="anchor" href="#src-196598222_PartII-Fine-tuningabasiccontentapp-Addingani18nmessagebundle"></a>Adding an i18n message bundle</h3>
+<div class="paragraph">
+<p>Now add and polish the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">i18n</a>
+labels and descriptions for the elements of the UI in the Bookshelf app.</p>
+</div>
+<div class="paragraph">
+<p>What is a message bundle?</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>A message bundle
+(<a href="http://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html">resource
+bundle</a> in Java) is a collection of <code>.properties</code> files. Each file
+contains key-value pairs of translated user interface text such as
+labels and messages. The keys in all files of the same bundle are
+identical but the values are language specific translations.</p>
+</div>
+<div class="paragraph">
+<p>A message bundle must contain at least one <code>.properties</code> file. The files
+are named after the language (locale):
+<code>&lt;bundle-name&gt;_&lt;locale&gt;.properties</code>, for example
+<code>app-pages-messages_en.properties</code>. Every Magnolia module should provide
+its own message bundle. If a module installs several apps, each app
+should have its own message bundle.</p>
+</div>
+<div class="paragraph">
+<p>Since you&#8217;ve assigned a new name ( <code>bookDetailsTab</code>) to the <code>default</code>
+tab in the detail subapp, you have to create new labels even for the
+message keys that supply label values from the <code>magnolia-ui-framework</code>
+module.</p>
+</div>
+<div class="paragraph">
+<p>In the <code>i18n</code> subfolder, open the <code>bookshelf-messages_en.properties</code>
+file and save it with the following content (click the filename link to
+see the content):</p>
+</div>
+<div class="paragraph">
+<p>bookshelf-messages_en.properties</p>
+</div>
+<div class="paragraph">
+<p><code># App label</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app=Bookshelf</code></p>
+</div>
+<div class="paragraph">
+<p><code># Book browser subapp labels.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.label=Book Browser</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actionbar.sections.root.label=Actions</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actionbar.sections.item.label=Actions</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actionbar.sections.folder.label=Actions</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actionbar.sections.deletedItem.label=Actions</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actionbar.sections.deletedFolder.label=Actions</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.addItem.label=Add book</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.confirmDeletion.label=Delete book</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.editItem.label=Edit book data</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.rename.label=Rename book</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.addFolder.label=Add shelf</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.confirmDeleteFolder.label=Delete shelf</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.editFolder.label=Rename shelf</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.moveFolder=Move shelf</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.confirmDeleteFolder.confirmationHeader=Delete {<code>0</code>,choice,<code>1</code>#<code>this</code> shelf|<code>1</code>&lt; these {<code>1</code>} shelves}?</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.actions.confirmDeleteFolder.confirmationMessage={<code>0</code>,choice,<code>1</code># This shelf|<code>1</code>&lt; These {<code>1</code>} shelves} and all {<code>1</code>,choice,<code>1</code>#its|<code>1</code>&lt; their} sub-items will be marked <code>for</code> deletion.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.views.treeview.name.label=Shelf name or book cataloging name</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.views.listview.name.label=Cataloging name</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.browser.views.listview.path.label=Bookshelf location</code></p>
+</div>
+<div class="paragraph">
+<p><code># Book detail subapp labels and descriptions.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.label=Book Details</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.name.label=Cataloging name</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.name.description=This field is required. Its value is used to create a unique, hyphenated book cataloging name which is visible in the BOOK BROWSER subapp and under which the book is stored in the &lt;i&gt;books&lt;/i&gt; workspace.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.authors.label=Author(s)</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.ed.label=Author(s) in editorial role</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.ed.buttonLabel=</code></p>
+</div>
+<div class="paragraph">
+<p>`bookshelf-app.bookDetailsTab.ed.description=Check off the box <code>if</code> the primary role of the <code>"Author(s)"</code> is editorial. `</p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.title.label=Full title</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.description.label=Description</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.publisher.label=Publisher</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.publish_date.label=Publication date</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.publish_date.description=If you know just the year of publication, enter the date as YYYY-<code>01</code>-<code>01</code>.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.isbn13.label=ISBN-``13</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.isbn13.description=If an ISBN-<code>13</code> is available <code>for</code> the book, enter it without hyphens or spaces.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.bookDetailsTab.isbn13.validation.errorMessage=The ISBN-<code>13</code> number has <code>13</code> characters. The first <code>12</code> characters can only be numerals, the last character can be either a numeral or <code>"X"</code>. The number has to begin with either <code>978</code> or <code>979</code>.</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.detail.actions.cancel=Cancel</code></p>
+</div>
+<div class="paragraph">
+<p><code>bookshelf-app.detail.actions.commit=Save Book Data</code></p>
+</div>
+<div class="paragraph">
+<p>To apply the new labels and descriptions, close and reopen the Bookshelf
+app in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/thumbs_up.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/thumbs_up.svg"></span>
+Congratulations! The Bookshelf is now ready for use.</p>
+</div>
+<div class="paragraph">
+<p>You can tweak the app&#8217;s configuration further to expand its
+capabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Sample book data</strong><br>
+<br>
+If you would like to see some book data in the app, you may either add
+it yourself or download it as a sample file called
+<a href="https://git.magnolia-cms.com/projects/DOCUMENTATION/repos/bookshelf/raw/_sampleContent/books.My-Good-Reads.xml?at=refs%2Fheads%2Fmaster">books.My-Good-Reads.xml</a>
+from the <code>_sampleContent</code> folder in the
+<a href="https://git.magnolia-cms.com/projects/DOCUMENTATION/repos/bookshelf/">bookshelf</a>
+repository. Import the sample data to the Bookshelf app using the
+<strong>Import</strong> action in the Book browser subapp.</p>
+</li>
+<li>
+<p><strong>Compatibility with online library management services</strong><br>
+<br>
+Except for the <code>ed</code> and <code>name</code> content properties, all the other
+properties make the design of the Bookshelf app compatible with the data
+nomenclature used by the <a href="http://libib.com/">libib.com</a> service. This
+makes a file-based or a REST-based exchange of book data between the
+Bookshelf app and the Libib cloud service possible.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Part I - Creating a basic content app</p>
+</div>
+<div class="paragraph">
+<p>App configuration</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

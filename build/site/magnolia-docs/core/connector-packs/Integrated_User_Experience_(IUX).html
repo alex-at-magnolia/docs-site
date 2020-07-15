@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Integrated User Experience (IUX) - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/Integrated_User_Experience_(IUX).html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Integrated_User_Experience_(IUX).html">master</a>
+    <a class="version" href="../../6.2.1/core/connector-packs/Integrated_User_Experience_(IUX).html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Integrated_User_Experience_(IUX).html">Integrated User Experience (IUX) - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Integrated User Experience (IUX) - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Analytics_Connector_Pack.html">Analytics Connector Pack</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-217713291"><a class="anchor" href="#src-217713291"></a>Integrated User Experience (IUX)</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Overview:</p>
+</div>
+<div class="sect2">
+<h3 id="src-217713291_safe-id-SW50ZWdyYXRlZFVzZXJFeHBlcmllbmNlKElVWCktQW5hbHl0aWNzd2hlcmV5b3VuZWVkdGhlbQ"><a class="anchor" href="#src-217713291_safe-id-SW50ZWdyYXRlZFVzZXJFeHBlcmllbmNlKElVWCktQW5hbHl0aWNzd2hlcmV5b3VuZWVkdGhlbQ"></a>Analytics where you need them</h3>
+<div class="paragraph">
+<p>In addition to viewing analytics in the dedicated app, you can display
+them next to the content they apply to in IUX (Integrated User
+eXperience) slots.</p>
+</div>
+<div class="paragraph">
+<p><em>IUX slots</em> are places in the AdminCentral UI where elements from
+integrated applications or other Magnolia content apps can live.
+Analytics elements such as charts and widgets add value to the user&#8217;s
+workflow inside Magnolia. We pull in data from adjacent applications and
+content apps and display it in the right places so that users do not
+need to switch from application to application.</p>
+</div>
+<div class="paragraph">
+<p>The first slot, introduced in Magnolia 6.2, is a wide horizontal slot at
+the top of content apps. Developers can configure this slot to show page
+analytics provided by the Analytics module. For example, in this screen
+shot, users can select a page to see common metrics from the connected
+analytics source directly in the Magnolia UI.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/217713291/6-2-iux-analytics.png" alt="images/download/attachments/217713291/6-2-iux-analytics.png"></span></p>
+</div>
+<div class="paragraph">
+<p>module config:</p>
+</div>
+<div class="paragraph">
+<p>links</p>
+</div>
+<div class="sect3">
+<h4 id="src-217713291_safe-id-SW50ZWdyYXRlZFVzZXJFeHBlcmllbmNlKElVWCktRGlzcGxheWluZ2FuYWx5dGljc2luYW5leHRlbnNpb25wYW5lbA"><a class="anchor" href="#src-217713291_safe-id-SW50ZWdyYXRlZFVzZXJFeHBlcmllbmNlKElVWCktRGlzcGxheWluZ2FuYWx5dGljc2luYW5leHRlbnNpb25wYW5lbA"></a>Displaying analytics in an extension panel</h4>
+<div class="paragraph">
+<p>In addition to viewing analytics charts in the Analytics app, you can
+display them next to the content they apply to in IUX (Integrated User
+eXperience) slots.</p>
+</div>
+<div class="paragraph">
+<p>IUX slots are extension panels in the browser subapp. The panel allows
+you to configure a list of extension views in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workbench+definition">workbench</a>
+and replaces ContentToolDefinitionof
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/UI+framework+and+development+pattern+changes+in+Magnolia+6">Magnolia
+5 UI</a>.</p>
+</div>
+<div class="paragraph">
+<p>The first slot, introduced in Magnolia 6.2, is a wide horizontal slot at
+the top of content apps such as the Pages app.</p>
+</div>
+<div class="paragraph">
+<p>Use decoration to configure the:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Extension panel in the Pages app (see <code>extensionViews</code> for
+configuration and properties).</p>
+</li>
+<li>
+<p>Charts to be displayed.</p>
+</li>
+<li>
+<p>Data suppliers providing the analytics data.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, the configuration in this decoration file (with the
+relevant credentials added) results in charts displayed in an IUX slot
+at the top of the Pages app for the Travel demo pages.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/217713291/6-2-analytics-iux-eg.png" alt="images/download/attachments/217713291/6-2-analytics-iux-eg.png"></span></p>
+</div>
+<div class="paragraph">
+<p>pages-app.subApps.browser.workbench.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>extensionViews:</code></p>
+</div>
+<div class="paragraph">
+<p>`  - name: analytics`</p>
+</div>
+<div class="paragraph">
+<p>`    icon: icon-analytics-app`</p>
+</div>
+<div class="paragraph">
+<p>`    view:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: analytics`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: analyticsView`</p>
+</div>
+<div class="paragraph">
+<p>`      chartDefinitions:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: pageViews`</p>
+</div>
+<div class="paragraph">
+<p>`          label: pages-app.extensionViews.analytics.pageViews.label`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.amcharts.data.AmChartDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier: gaPageViewsSupplier`</p>
+</div>
+<div class="paragraph">
+<p>`          chartType: !include:/analytics-ui/chartTypes/line-and-area/line-different-colors-ups-downs.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            series:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: series`</p>
+</div>
+<div class="paragraph">
+<p>`                dataFields:`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: categoryX`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].dimensions[*]`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: valueY`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].metrics[<strong>].values[</strong>]`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: sessions`</p>
+</div>
+<div class="paragraph">
+<p>`          label: pages-app.extensionViews.analytics.sessions.label`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.amcharts.data.AmChartDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier: gaSessionsSupplier`</p>
+</div>
+<div class="paragraph">
+<p>`          chartType: !include:/analytics-ui/chartTypes/line-and-area/line-different-colors-ups-downs.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            series:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: series`</p>
+</div>
+<div class="paragraph">
+<p>`                dataFields:`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: categoryX`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].dimensions[*]`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: valueY`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].metrics[<strong>].values[</strong>]`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: bounceRate`</p>
+</div>
+<div class="paragraph">
+<p>`          label: pages-app.extensionViews.analytics.bounceRate.label`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.amcharts.data.AmChartDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier: gaBounceRateSupplier`</p>
+</div>
+<div class="paragraph">
+<p>`          chartType: !include:/analytics-ui/chartTypes/line-and-area/line-different-colors-ups-downs.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            series:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: series`</p>
+</div>
+<div class="paragraph">
+<p>`                dataFields:`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: categoryX`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].dimensions[*]`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: valueY`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].metrics[<strong>].values[</strong>]`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: newUsers`</p>
+</div>
+<div class="paragraph">
+<p>`          label: pages-app.extensionViews.analytics.newUsers.label`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.amcharts.data.AmChartDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier: gaNewUsers`</p>
+</div>
+<div class="paragraph">
+<p>`          chartType: !include:/analytics-ui/chartTypes/line-and-area/line-different-colors-ups-downs.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            series:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: series`</p>
+</div>
+<div class="paragraph">
+<p>`                dataFields:`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: categoryX`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].dimensions[*]`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: valueY`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].metrics[<strong>].values[</strong>]`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: returningUsers`</p>
+</div>
+<div class="paragraph">
+<p>`          label: pages-app.extensionViews.analytics.returningUsers.label`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.amcharts.data.AmChartDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier: gaReturningUsers`</p>
+</div>
+<div class="paragraph">
+<p>`          chartType: !include:/analytics-ui/chartTypes/line-and-area/line-different-colors-ups-downs.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            series:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: series`</p>
+</div>
+<div class="paragraph">
+<p>`                dataFields:`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: categoryX`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].dimensions[*]`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: valueY`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.reports[<strong>].data.rows[</strong>].metrics[<strong>].values[</strong>]`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: cityViews`</p>
+</div>
+<div class="paragraph">
+<p>`          label: cityViews`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.amcharts.data.AmChartDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier: demoMatomoSupplier`</p>
+</div>
+<div class="paragraph">
+<p>`          chartType: !include:/analytics-ui/chartTypes/line-and-area/simple-line.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            series:`</p>
+</div>
+<div class="paragraph">
+<p>`              - name: series`</p>
+</div>
+<div class="paragraph">
+<p>`                type: LineSeries`</p>
+</div>
+<div class="paragraph">
+<p>`                dataFields:`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: categoryX`</p>
+</div>
+<div class="paragraph">
+<p>`                    value: city_name`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.[*].city_name`</p>
+</div>
+<div class="paragraph">
+<p>`                  - name: valueY`</p>
+</div>
+<div class="paragraph">
+<p>`                    value: lat`</p>
+</div>
+<div class="paragraph">
+<p>`                    jsonPath: $.[*].lat`</p>
+</div>
+<div class="paragraph">
+<p>`      dataSuppliers:`</p>
+</div>
+<div class="paragraph">
+<p>`        gaPageViewsSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.google.datasource.GoogleDataSupplierWithDateFormatter`</p>
+</div>
+<div class="paragraph">
+<p>`          fromDateFormat: yyyyMMdd`</p>
+</div>
+<div class="paragraph">
+<p>`          toDateFormat: MMM-dd`</p>
+</div>
+<div class="paragraph">
+<p>`          credentials: &amp;googleCredentials`</p>
+</div>
+<div class="paragraph">
+<p>`            applicationName: Magnolia Analytics`</p>
+</div>
+<div class="paragraph">
+<p>`            serviceAccountJsonPath: /analytics-view-example/credential/private_key.json`</p>
+</div>
+<div class="paragraph">
+<p>`          parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`            viewId: <code>`24199737</code></p>
+</div>
+<div class="paragraph">
+<p>`            startDate: 7DaysAgo`</p>
+</div>
+<div class="paragraph">
+<p>`            endDate: today`</p>
+</div>
+<div class="paragraph">
+<p>`            dimensionName: ga:date`</p>
+</div>
+<div class="paragraph">
+<p>`            metricExpression: ga:pageviews`</p>
+</div>
+<div class="paragraph">
+<p>`          filteringSubSetExpression:`</p>
+</div>
+<div class="paragraph">
+<p>`            filtersExpression: ga:pagePath=~%s*`</p>
+</div>
+<div class="paragraph">
+<p>`        demoMatomoSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.matomo.datasource.MatomoDataSupplier`</p>
+</div>
+<div class="paragraph">
+<p>`          credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`            parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`              serverUrl: https:``//demo.matomo.org`</p>
+</div>
+<div class="paragraph">
+<p>`              tokenAuth: anonymous`</p>
+</div>
+<div class="paragraph">
+<p>`          parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`            method: UserCountry.getCity`</p>
+</div>
+<div class="paragraph">
+<p>`            module: API`</p>
+</div>
+<div class="paragraph">
+<p>`            idSite: <code>`3</code></p>
+</div>
+<div class="paragraph">
+<p>`            date: yesterday`</p>
+</div>
+<div class="paragraph">
+<p>`            period: day`</p>
+</div>
+<div class="paragraph">
+<p>`            format: json`</p>
+</div>
+<div class="paragraph">
+<p>`          filteringSubSetExpression:`</p>
+</div>
+<div class="paragraph">
+<p>`            segment: pageUrl=@%s`</p>
+</div>
+<div class="paragraph">
+<p>`        gaSessionsSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.google.datasource.GoogleDataSupplierWithDateFormatter`</p>
+</div>
+<div class="paragraph">
+<p>`          fromDateFormat: yyyyMMdd`</p>
+</div>
+<div class="paragraph">
+<p>`          toDateFormat: dd-MMM-yyyy`</p>
+</div>
+<div class="paragraph">
+<p>`          credentials: *googleCredentials`</p>
+</div>
+<div class="paragraph">
+<p>`          parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`            viewId: <code>`24199737</code></p>
+</div>
+<div class="paragraph">
+<p>`            startDate: 7DaysAgo`</p>
+</div>
+<div class="paragraph">
+<p>`            endDate: today`</p>
+</div>
+<div class="paragraph">
+<p>`            dimensionName: ga:date`</p>
+</div>
+<div class="paragraph">
+<p>`            metricExpression: ga:sessions`</p>
+</div>
+<div class="paragraph">
+<p>`          filteringSubSetExpression:`</p>
+</div>
+<div class="paragraph">
+<p>`            filtersExpression: ga:pagePath=~%s*`</p>
+</div>
+<div class="paragraph">
+<p>`        gaBounceRateSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.google.datasource.GoogleDataSupplierWithDateFormatter`</p>
+</div>
+<div class="paragraph">
+<p>`          fromDateFormat: yyyyMMdd`</p>
+</div>
+<div class="paragraph">
+<p>`          toDateFormat: dd-MMM-yyyy`</p>
+</div>
+<div class="paragraph">
+<p>`          credentials: *googleCredentials`</p>
+</div>
+<div class="paragraph">
+<p>`          parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`            viewId: <code>`24199737</code></p>
+</div>
+<div class="paragraph">
+<p>`            startDate: 7DaysAgo`</p>
+</div>
+<div class="paragraph">
+<p>`            endDate: today`</p>
+</div>
+<div class="paragraph">
+<p>`            dimensionName: ga:date`</p>
+</div>
+<div class="paragraph">
+<p>`            metricExpression: ga:bounceRate`</p>
+</div>
+<div class="paragraph">
+<p>`          filteringSubSetExpression:`</p>
+</div>
+<div class="paragraph">
+<p>`            filtersExpression: ga:pagePath=~%s*`</p>
+</div>
+<div class="paragraph">
+<p>`        gaNewUsers:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.google.datasource.GoogleDataSupplierWithDateFormatter`</p>
+</div>
+<div class="paragraph">
+<p>`          fromDateFormat: yyyyMMdd`</p>
+</div>
+<div class="paragraph">
+<p>`          toDateFormat: dd-MMM-yyyy`</p>
+</div>
+<div class="paragraph">
+<p>`          credentials: *googleCredentials`</p>
+</div>
+<div class="paragraph">
+<p>`          parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`            viewId: <code>`24199737</code></p>
+</div>
+<div class="paragraph">
+<p>`            startDate: 7DaysAgo`</p>
+</div>
+<div class="paragraph">
+<p>`            endDate: today`</p>
+</div>
+<div class="paragraph">
+<p>`            dimensionName: ga:date`</p>
+</div>
+<div class="paragraph">
+<p>`            metricExpression: ga:newUsers`</p>
+</div>
+<div class="paragraph">
+<p>`          filteringSubSetExpression:`</p>
+</div>
+<div class="paragraph">
+<p>`            filtersExpression: ga:pagePath=~%s*`</p>
+</div>
+<div class="paragraph">
+<p>`        gaReturningUsers:`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.analytics.google.datasource.GoogleDataSupplierWithDateFormatter`</p>
+</div>
+<div class="paragraph">
+<p>`          fromDateFormat: yyyyMMdd`</p>
+</div>
+<div class="paragraph">
+<p>`          toDateFormat: dd-MMM-yyyy`</p>
+</div>
+<div class="paragraph">
+<p>`          credentials: *googleCredentials`</p>
+</div>
+<div class="paragraph">
+<p>`          parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`            viewId: <code>`24199737</code></p>
+</div>
+<div class="paragraph">
+<p>`            startDate: 7DaysAgo`</p>
+</div>
+<div class="paragraph">
+<p>`            endDate: today`</p>
+</div>
+<div class="paragraph">
+<p>`            dimensionName: ga:date`</p>
+</div>
+<div class="paragraph">
+<p>`            metricExpression: ga:users`</p>
+</div>
+<div class="paragraph">
+<p>`          filteringSubSetExpression:`</p>
+</div>
+<div class="paragraph">
+<p>`            filtersExpression: ga:pagePath=~%s*`</p>
+</div>
+<div class="paragraph">
+<p>`      filterFields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: startDate`</p>
+</div>
+<div class="paragraph">
+<p>`          $type: dateField`</p>
+</div>
+<div class="paragraph">
+<p>`          type: java.util.Date`</p>
+</div>
+<div class="paragraph">
+<p>`          time: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`          placeholder: Start`</p>
+</div>
+<div class="paragraph">
+<p>`          defaultValue: todayMinus7Days`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: endDate`</p>
+</div>
+<div class="paragraph">
+<p>`          $type: dateField`</p>
+</div>
+<div class="paragraph">
+<p>`          type: java.util.Date`</p>
+</div>
+<div class="paragraph">
+<p>`          time: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`          placeholder: End`</p>
+</div>
+<div class="paragraph">
+<p>`          defaultValue: today`</p>
+</div>
+<div class="paragraph">
+<p>`      multisite:`</p>
+</div>
+<div class="paragraph">
+<p>`        - path: /travel`</p>
+</div>
+<div class="paragraph">
+<p>`          dataSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`            gaPageViewsSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`              credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`                serviceAccountJsonPath: /analytics-view-example/credential/private_key.json`</p>
+</div>
+<div class="paragraph">
+<p>`              parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`                viewId: <code>`110545462</code></p>
+</div>
+<div class="paragraph">
+<p>`            gaSessionsSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`              credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`                serviceAccountJsonPath: /analytics-view-example/credential/private_key.json`</p>
+</div>
+<div class="paragraph">
+<p>`              parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`                viewId: <code>`110545462</code></p>
+</div>
+<div class="paragraph">
+<p>`            gaBounceRateSupplier:`</p>
+</div>
+<div class="paragraph">
+<p>`              credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`                serviceAccountJsonPath: /analytics-view-example/credential/private_key.json`</p>
+</div>
+<div class="paragraph">
+<p>`              parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`                viewId: <code>`110545462</code></p>
+</div>
+<div class="paragraph">
+<p>`            gaNewUsers:`</p>
+</div>
+<div class="paragraph">
+<p>`              credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`                serviceAccountJsonPath: /analytics-view-example/credential/private_key.json`</p>
+</div>
+<div class="paragraph">
+<p>`              parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`                viewId: <code>`110545462</code></p>
+</div>
+<div class="paragraph">
+<p>`            gaReturningUsers:`</p>
+</div>
+<div class="paragraph">
+<p>`              credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`                serviceAccountJsonPath: /analytics-view-example/credential/private_key.json`</p>
+</div>
+<div class="paragraph">
+<p>`              parameters:`</p>
+</div>
+<div class="paragraph">
+<p>`                viewId: <code>`110545462</code></p>
+</div>
+<div class="paragraph">
+<p>Analytics module</p>
+</div>
+<div class="paragraph">
+<p>Commerce Connector Pack</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content type definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Content_type_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Content_type_definition.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Content_type_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Content_type_definition.html">Content type definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Content type definition - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Content_Types_module.html">Content Types module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596897"><a class="anchor" href="#src-196596897"></a>Content type definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Content_Types_module.html">Content Types module</a></p>
+</li>
+<li>
+<p><a href="Content_type_Data_source_definition.html">Content type Data source
+definition</a></p>
+</li>
+<li>
+<p><a href="Content_type_Model_definition.html">Content type Model definition</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types+tutorial">Content
+Types tutorial</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/My+first+content+app">My
+first content app</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Defining+JCR+node+types+and+workspaces">Defining
+JCR node types and workspaces</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Use the Magnolia Content type definition to specify a content type.</p>
+</div>
+<div class="paragraph">
+<p>A Magnolia content type is a formal definition for a type of content in
+Magnolia including the properties the type may contain and its
+relationships to other types of content. A content type is configured in
+a <a href="#">content type definition</a> that includes the
+<a href="Content_type_Data_source_definition.html">data source definition</a>
+and the <a href="Content_type_Model_definition.html">model definition</a>.</p>
+</div>
+<div class="paragraph">
+<p>Content type items can be managed by a content app. The content can be
+embedded into web pages or served via REST in a headless approach.</p>
+</div>
+<div class="paragraph">
+<p>The base interfaces for content type definition are agnostic of data
+source type. However, the <code>magnolia-content-types</code> module provides also
+specific definition classes for JCR data to define custom JCR
+workspaces, node types, and namespaces.</p>
+</div>
+<div class="paragraph">
+<p>The definition item can be supplied via any
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Magnolia Resource
+origin</a>. You can create them in a light module, in a Magnolia Maven
+module or in the JCR <code>configuration</code> workspace (see
+<a href="#src-196596897_Contenttypedefinition-anc-location-of-the-content-type-definitions">Location
+of the content type definitions</a>). New content type definition items are
+detected by the <code>magnolia-content-types</code> module and registered at the
+ContentTypeRegistry using the name of the definition as the ID.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Follow the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types+tutorial">Content
+Types tutorial</a> to learn how to use Magnolia content types, create
+content type definitions and corresponding apps.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596897_Contenttypedefinition-anc-propertiesProperties"><a class="anchor" href="#src-196596897_Contenttypedefinition-anc-propertiesProperties"></a><span id="src-196596897_Contenttypedefinition-anc-properties " class="confluence-anchor-link">#</span>#Properties</h3>
+<div class="paragraph">
+<p>Example configuration:</p>
+</div>
+<div class="paragraph">
+<p>/content-type-examples/contentTypes/tourGuide.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: tourguides`</p>
+</div>
+<div class="paragraph">
+<p>`  namespaces:`</p>
+</div>
+<div class="paragraph">
+<p>`    mt: https:``//www.magnolia-travel.com/jcr/1.0/mt`</p>
+</div>
+<div class="paragraph">
+<p>`  autoCreate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`  `</p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: mt:tourGuide`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: birthday`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Date`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: gender`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: shortBio`</p>
+</div>
+<div class="paragraph">
+<p>Here we only focus on the top level properties of the content type
+definition.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 19%;">
+<col style="width: 81%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>datasource</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the data source. Please read
+<a href="Content_type_Data_source_definition.html">Content type Data source
+definition</a> for further information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>model</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the model of the content type. Please read the
+<a href="Content_type_Model_definition.html">Content type Model definition</a>
+for further information.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The value of the name property is automatically assigned by the name of
+the resource which defines the content type (YAML file name without the
+suffix or JCR node name).</p>
+</div>
+<div class="paragraph">
+<p>Set the property in the content definition to override the automatically
+assigned value.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596897_Contenttypedefinition-anc-location-of-the-content-type-definitionsLocationofcontenttypedefinitions"><a class="anchor" href="#src-196596897_Contenttypedefinition-anc-location-of-the-content-type-definitionsLocationofcontenttypedefinitions"></a><span id="src-196596897_Contenttypedefinition-anc-location-of-the-content-type-definitions " class="confluence-anchor-link">#</span>#Location of content type definitions</h3>
+<div class="paragraph">
+<p>The definition item can be supplied via any
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Magnolia Resource
+origin</a>. You can create them in a light module, in a Magnolia Maven
+module or in the JCR <code>configuration</code> workspace.<strong>Light module</strong></p>
+</div>
+<div class="paragraph">
+<p>Add the configuration to the <code>/&lt;module-name&gt;/contentTypes</code> folder.</p>
+</div>
+<div class="paragraph">
+<p><code>my-light-module/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── contentTypes</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── my-content-type.yaml`</p>
+</div>
+<div class="paragraph">
+<p>Name of the definition: <code>my-content-type</code><strong>Magnolia Maven module</strong></p>
+</div>
+<div class="paragraph">
+<p>Add the configuration to the <code>resources/&lt;module-name&gt;/contentTypes</code>
+folder.</p>
+</div>
+<div class="paragraph">
+<p><code>my-maven-module/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── src</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── main`</p>
+</div>
+<div class="paragraph">
+<p>`        └── resources`</p>
+</div>
+<div class="paragraph">
+<p>`            └── my-maven-module`</p>
+</div>
+<div class="paragraph">
+<p>`                └── contentTypes`</p>
+</div>
+<div class="paragraph">
+<p>`                    └── larrys-content-type.yaml`</p>
+</div>
+<div class="paragraph">
+<p>Name of the definition: <code>larrys-content-type</code><strong>JCR configuration
+workspace</strong></p>
+</div>
+<div class="paragraph">
+<p>Add the configuration to the <code>/modules/&lt;module-name&gt;/contentTypes</code>
+folder.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-custom-module</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentTypes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">boat-content-type</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Name of the definition: <code>boat-content-type</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596897_Contenttypedefinition-Interfaceandclass"><a class="anchor" href="#src-196596897_Contenttypedefinition-Interfaceandclass"></a>Interface and class</h3>
+<div class="paragraph">
+<p>The base interface for a content type definition is
+ContentTypeDefinition. The base implementation class is
+ConfiguredContentTypeDefinition.</p>
+</div>
+<div class="paragraph">
+<p>Content Types module</p>
+</div>
+<div class="paragraph">
+<p>Content type Data source definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

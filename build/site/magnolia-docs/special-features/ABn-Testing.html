@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ABn Testing - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/special-features/ABn-Testing.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="ABn-Testing.html">master</a>
+    <a class="version" href="../6.2.1/special-features/ABn-Testing.html">6.2.1</a>
+    <a class="version is-missing" href="../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="ABn-Testing.html">ABn Testing - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">ABn Testing - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Special-Features.html" class="bare">Special-Features.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Special-Features.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819322"><a class="anchor" href="#src-209819322"></a>ABn Testing</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This is an unpublished, early draft of the ABn feature. The
+functionality has since evolved.</p>
+</div>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Testing-app.html">Testing app</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">Personalization</a></p>
+</li>
+<li>
+<p><a href="AB-Testing-module.html">AB Testing module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia offers native A/B/n (or split testing) functionality to help
+you make decisions about your content based on real data from your
+existing traffic.</p>
+</div>
+<div class="sect2">
+<h3 id="src-209819322_safe-id-QUJuVGVzdGluZy1XaGF0aXNBL0IvbnRlc3Rpbmc_"><a class="anchor" href="#src-209819322_safe-id-QUJuVGVzdGluZy1XaGF0aXNBL0IvbnRlc3Rpbmc_"></a>What is A/B/n testing?</h3>
+<div class="paragraph">
+<p>The goal of testing is to determine which version of a page performs
+better among customers to increase your online conversion rates</p>
+</div>
+<div class="paragraph">
+<p>A/B testing is a testing strategy in which two versions of a page (the
+original version A and a variant version B) are tested against each
+other.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/image2019-12-10_13-0-19.png" alt="images/download/attachments/209819322/image2019-12-10_13-0-19.png"></span></p>
+</div>
+<div class="paragraph">
+<p>A/B/N testing is an extension of A/B testing in which <em>multiple</em>
+versions of a page are compared against each other.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/image2019-12-16_10-41-27.png" alt="images/download/attachments/209819322/image2019-12-16_10-41-27.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819322_ABnTesting-Howresultsarecalculated"><a class="anchor" href="#src-209819322_ABnTesting-Howresultsarecalculated"></a>How results are calculated</h3>
+<div class="paragraph">
+<p>XXX Placeholder section to provide a basic explanation for the method
+used to calculate results once it&#8217;s defined.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819322_ABnTesting-Startwithaproblem"><a class="anchor" href="#src-209819322_ABnTesting-Startwithaproblem"></a>Start with a problem</h3>
+<div class="paragraph">
+<p>Before designing a test, it&#8217;s considered good practice to identify a
+problem you want to solve and define a hypothesis. Existing problems are
+generally identified using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Analytics+Connector+Pack">analytics
+for your site</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/6-2-diagram-abtesting-process.png" alt="images/download/attachments/209819322/6-2-diagram-abtesting-process.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Problem: Form completion for a free trial is very low despite high
+traffic on the page.</p>
+</li>
+<li>
+<p>Hypothesis: By reducing the number of form fields from 15 to 5, we
+will increase the number of forms completed.</p>
+</li>
+<li>
+<p>AB Test: Variant A uses the original 15 field form, variant B uses a
+new, shorter form.</p>
+</li>
+<li>
+<p>The resulting conversion rates show that variant B performs better.
+This page can be selected as the winner.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819322_ABnTesting-DedicatedTestingappinMagnolia"><a class="anchor" href="#src-209819322_ABnTesting-DedicatedTestingappinMagnolia"></a>Dedicated Testing app in Magnolia</h3>
+<div class="paragraph">
+<p>Magnolia provides a marketer-friendly app to enable you to quickly
+create and manage your tests.</p>
+</div>
+<div class="sect3">
+<h4 id="src-209819322_ABnTesting-Clearoverview"><a class="anchor" href="#src-209819322_ABnTesting-Clearoverview"></a>Clear overview</h4>
+<div class="paragraph">
+<p>The Testing app gives you a single location where you can see all your
+tests. The columns show:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The variants involved in the test</p>
+</li>
+<li>
+<p>The start date for the test</p>
+</li>
+<li>
+<p>The state of each test (running, paused, etc.).</p>
+</li>
+<li>
+<p>The conversion rate</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>TODO: update all ss and give more details once dev is complete XXX</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/6-2-testingapp-browser.png" alt="images/download/attachments/209819322/6-2-testingapp-browser.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819322_ABnTesting-Easytestcreation"><a class="anchor" href="#src-209819322_ABnTesting-Easytestcreation"></a>Easy test creation</h4>
+<div class="paragraph">
+<p>Each test you create has a series of tabs to guide you through the
+design and execution process, from the creation of the test to picking
+and directly implementing the winning variant once you have completed
+the test.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/6-2-testingapp-newtest.png" alt="images/download/attachments/209819322/6-2-testingapp-newtest.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819322_ABnTesting-One-clickgoals"><a class="anchor" href="#src-209819322_ABnTesting-One-clickgoals"></a>One-click goals</h4>
+<div class="paragraph">
+<p>Magnolia provides</p>
+</div>
+<div class="paragraph">
+<p>TBD</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819322_ABnTesting-Seamlessvariantselection"><a class="anchor" href="#src-209819322_ABnTesting-Seamlessvariantselection"></a>Seamless variant selection</h4>
+<div class="paragraph">
+<p>Seamlessly select the content you want to test from the Pages app. In
+the same app, you can choose your original variant and create a
+variation to test against directly.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/2019-12-19_11-16-40.png" alt="images/download/attachments/209819322/2019-12-19_11-16-40.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819322_ABnTesting-Audienceandallocation"><a class="anchor" href="#src-209819322_ABnTesting-Audienceandallocation"></a>Audience and allocation</h4>
+<div class="paragraph">
+<p>You can use the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Segmentation">Segments</a>
+to define specific audiences for your test and pick one or all of them
+in the <strong>Audience &amp; Allocation</strong> tab.<br>
+This is also where you decide how much of your traffic you want to
+engage in the test.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/6-2-testingapp-audience.png" alt="images/download/attachments/209819322/6-2-testingapp-audience.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Traffic allocation is set using the slider bar. Your visitors only ever
+interact with one variant.</p>
+</div>
+<div class="paragraph">
+<p>TO BE CONFIRMED</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You have 10 000 visitors to your specialist Kilt ecommerce site.</p>
+</li>
+<li>
+<p>You have defined two segments: visitors from Scotland (8 000) and
+visitors from Ireland (2 000).</p>
+</li>
+<li>
+<p>For your test, you select the segment Scotland as the audience and
+50% traffic allocation.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This means that 4 000 Scottish visitors will be served the original
+variant A and 4 000 will be served variant B.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819322_ABnTesting-Clearresultsimplementedstraightaway"><a class="anchor" href="#src-209819322_ABnTesting-Clearresultsimplementedstraightaway"></a>Clear results implemented straight away</h4>
+<div class="paragraph">
+<p>It&#8217;s clear to see in the Testing app when a test has reached the
+required level of completion.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/image2019-12-19_11-20-46.png" alt="images/download/attachments/209819322/image2019-12-19_11-20-46.png"></span></p>
+</div>
+<div class="paragraph">
+<p>When you open a test with significant results available, the Results tab
+displays a dashboard with key performance information:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/image2019-12-19_11-22-21.png" alt="images/download/attachments/209819322/image2019-12-19_11-22-21.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Based on this concrete information, you can choose to complete the test
+and select the winning variant as the new published content for all your
+traffic.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/209819322/2019-12-19_11-18-46.png" alt="images/download/attachments/209819322/2019-12-19_11-18-46.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Suggested reading about ABn Testing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TBD .</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Special Features</p>
+</div>
+<div class="paragraph">
+<p>AB Testing module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content type Model definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Content_type_Model_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Content_type_Model_definition.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Content_type_Model_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Content_type_Model_definition.html">Content type Model definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Content type Model definition - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Content_Types_module.html">Content Types module</a></p>
+</li>
+<li>
+<p><a href="Content_type_definition.html">Content type definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596899"><a class="anchor" href="#src-196596899"></a>Content type Model definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Content_Types_module.html">Content Types module</a></p>
+</li>
+<li>
+<p><a href="Content_type_definition.html">Content type definition</a></p>
+</li>
+<li>
+<p><a href="Content_type_Data_source_definition.html">Content type Data source
+definition</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A <em>model definition</em>, a subitem of the Magnolia
+<a href="Content_type_definition.html">Content type definition</a>, defines the
+model of a content type.</p>
+</div>
+<div class="paragraph">
+<p>The model describes the properties of a content item such as name,
+description, asset, birthday, and so on. In the default JCR-based
+implementation, the type of the properties can be <code>String</code>, <code>Boolean</code>,
+<code>Decimal</code>, <code>Double</code>, <code>Long</code>, <code>Date</code>, <code>asset</code>, <code>richText</code>, another
+content type or a
+<a href="#src-196596899_ContenttypeModeldefinition-anc-submodels">submodel</a>.
+The model can define a list of submodel definitions.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596899_ContenttypeModeldefinition-anc-model-definition-properties"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-anc-model-definition-properties"></a><span id="src-196596899_ContenttypeModeldefinition-anc-model-definition-properties2 " class="confluence-anchor-link">#</span>#</h3>
+
+</div>
+<div class="sect2">
+<h3 id="src-196596899_ContenttypeModeldefinition-Modeldefinitionproperties"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-Modeldefinitionproperties"></a>Model definition properties</h3>
+<div class="paragraph">
+<p>When designing a model don&#8217;t think about it in terms of UI elements like
+<a href="https://documentation.magnolia-cms.com/display/DOCS/List+of+fields">fields</a>.
+Think in terms of what type of data the field stores. For example, a
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Link+field">link
+field</a> stores a <code>String</code> type (i.e. property) to the JCR. The property
+in the model definition can be decorated in the app definition with
+whatever UI element stores that data type.</p>
+</div>
+<div class="paragraph">
+<p>Example configuration:</p>
+</div>
+<div class="paragraph">
+<p>/content-type-examples/contentTypes/tourGuide.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: tourguides`</p>
+</div>
+<div class="paragraph">
+<p>`  namespaces:`</p>
+</div>
+<div class="paragraph">
+<p>`    mt: https:``//www.magnolia-travel.com/jcr/1.0/mt`</p>
+</div>
+<div class="paragraph">
+<p>`  autoCreate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: mt:tourGuide`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: birthday`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Date`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: gender`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: shortBio`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: contact`</p>
+</div>
+<div class="paragraph">
+<p>`      type: contactData`</p>
+</div>
+<div class="paragraph">
+<p>`  subModels:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: contactData`</p>
+</div>
+<div class="paragraph">
+<p>`      properties:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: email`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: phoneNumber`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: addresses`</p>
+</div>
+<div class="paragraph">
+<p>`          type: address`</p>
+</div>
+<div class="paragraph">
+<p>`          multiple: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    - name: address`</p>
+</div>
+<div class="paragraph">
+<p>`      properties:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: street`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: city`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: postalCode`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: country`</p>
+</div>
+<div class="paragraph">
+<p>The <code>model</code> properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>properties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><span id="src-196596899_ContenttypeModeldefinition-anc-model-properties-list">#</span>#required</strong></p>
+</div>
+<div class="paragraph">
+<p>A list of property definition objects.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;property&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A subdefinition item defining one property of the model. Its definition
+interface is <code>PropertyDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>Read the
+<a href="#src-196596899_ContenttypeModeldefinition-anc-property-definition-properties">property
+definition properties</a> section for all the details of a
+PropertyDefinition object.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>subModels</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><span id="src-196596899_ContenttypeModeldefinition-anc-submodels-property">#</span>#optional</strong></p>
+</div>
+<div class="paragraph">
+<p>A list of submodel definition objects.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;submodel&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A subdefinition item configuring a complete submodel. Its definition
+interface is SubModelDefinition.</p>
+</div>
+<div class="paragraph">
+<p>A <a href="#src-196596899_ContenttypeModeldefinition-anc-submodels">submodel</a>
+has the same properties as a model, but a submodel cannot have
+additional submodels.</p>
+</div>
+<div class="paragraph">
+<p><strong>*[<mark>src-196596899_ContenttypeModeldefinition-anc-submodel-nodeType-property]</mark>#</strong>*If
+<code>nodeType</code> is not provided, the <code>mgnl:contentNode</code> is used by default.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><strong>[<mark>src-196596899_ContenttypeModeldefinition-anc-nodeType-property]</mark>#</strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the JCR node type for storing an item of the given content
+type.</p>
+</div>
+<div class="paragraph">
+<p>If the given node type has not been registered yet, the system
+automatically registers a new node type by the given name. The type
+generated inherits from the Magnolia <code>mgnl:content</code> node type.</p>
+</div>
+<div class="paragraph">
+<p>If <code>nodeType</code> is not provided, <code>mgnl:content</code> is used by default.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596899_ContenttypeModeldefinition-anc-property-definition-properties"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-anc-property-definition-properties"></a><span id="src-196596899_ContenttypeModeldefinition-anc-property-definition-properties2 " class="confluence-anchor-link">#</span>#</h3>
+
+</div>
+<div class="sect2">
+<h3 id="src-196596899_ContenttypeModeldefinition-Propertydefinitionproperties"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-Propertydefinitionproperties"></a>Property definition properties</h3>
+<div class="paragraph">
+<p>This section describes the <code>PropertyDefinition</code> item. Property
+definition items can be defined in the
+<a href="#src-196596899_ContenttypeModeldefinition-anc-model-properties-list"><code>properties</code>
+property</a>, which is a property of the model definition of a
+<a href="Content_type_definition.html">content type definition</a>.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;property&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>name</code></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the property. The name is used for storing values in the
+underlying data source.</p>
+</div>
+<div class="paragraph">
+<p><code>type</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong>, <em>default is `String`</em></p>
+</div>
+<div class="paragraph">
+<p>Possible values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>JCR property types</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>String</code></p>
+</li>
+<li>
+<p><code>Boolean</code></p>
+</li>
+<li>
+<p><code>Decimal</code></p>
+</li>
+<li>
+<p><code>Double</code></p>
+</li>
+<li>
+<p><code>Long</code></p>
+</li>
+<li>
+<p><code>Date</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>richText</code> - creates a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rich+text+field">Rich text</a>
+field, which is a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Custom+fields">custom
+Magnolia field</a> implementing the <a href="http://docs.ckeditor.com/">CKEditor</a>
+component.</p>
+</li>
+<li>
+<p><code>asset</code> - creates a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Link+field">Link field</a> to
+choose an asset.</p>
+</li>
+<li>
+<p>The name of a
+<a href="#src-196596899_ContenttypeModeldefinition-anc-submodels">Submodel</a>.<br>
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+You can only reference submodels defined in the same content type.</p>
+</li>
+<li>
+<p>The name of a <a href="Content_type_definition.html">Content type</a> making a
+reference to another content item. Prefix the value with <code>reference:</code>
+(for example,<br>
+<code>type: reference:tourGuide</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>required</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Makes the property mandatory.</p>
+</div>
+<div class="paragraph">
+<p><code>i18n</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Language+configuration#Languageconfiguration-anc-Enabling-multi-language-content">Enables
+i18n support</a> for the property.</p>
+</div>
+<div class="paragraph">
+<p><code>multiple</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>The <code>true</code> setting allows storing multiple values of the property.</p>
+</div>
+<div class="paragraph">
+<p><code>options</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines a parent node for a list of selectable
+<a href="https://nexus.magnolia-cms.com/service/local/repositories/magnolia.public.releases/archive/info/magnolia/types/magnolia-content-types/1.1/magnolia-content-types-1.1-javadoc.jar/!/info/magnolia/types/model/OptionDefinition.html">options</a>
+rendered as a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Select+field">select field</a>.</p>
+</div>
+<div class="paragraph">
+<p>Example definition. (Click here to expand&#8230;&#8203;)</p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: lib:book`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: category`</p>
+</div>
+<div class="paragraph">
+<p>`      options:`</p>
+</div>
+<div class="paragraph">
+<p>`        fiction:`</p>
+</div>
+<div class="paragraph">
+<p>`          value: catFiction`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Fiction`</p>
+</div>
+<div class="paragraph">
+<p>`        poetry: `</p>
+</div>
+<div class="paragraph">
+<p>`          value: catPoetry`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Poetry`</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596899/6-1-contentTypeModelDefinition-selectBox.png" alt="images/download/attachments/196596899/6-1-contentTypeModelDefinition-selectBox.png" height="156"></span></p>
+</div>
+<div class="paragraph">
+<p>Further customization such as using an alternative control, for example
+a radio button group, is possible by overriding the class or the
+<code>fieldType</code> property in the app descriptor.</p>
+</div>
+<div class="paragraph">
+<p>Note: Currently, the values are saved to the JCR repository only as the
+<code>String</code> type:
+<a href="https://jira.magnolia-cms.com/browse/MGNLCT-132?src=confmacro"><</a> - Type is ignored in Select box and values fallback to
+String <span class="status  grey  subtle">Selected</span> .</p>
+</div>
+<div class="paragraph">
+<p><code>value</code></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Value saved to the repository when selected.</p>
+</div>
+<div class="paragraph">
+<p><code>label</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Option label displayed to the user.</p>
+</div>
+<div class="paragraph">
+<p>Not yet implemented:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;property&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>label</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>A label which is used in the UIs, fo example in a content app. The
+property is annotated with I18nText, and therefore it can be
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/i18n+API">localized</a>.</p>
+</div>
+<div class="paragraph">
+<p><code>defaultValue</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the default value for the property. It is applied when creating
+instances.</p>
+</div>
+<div class="paragraph">
+<p><code>readOnly</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Determines whether the property can be changed.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596899_ContenttypeModeldefinition-anc-submodels]</mark>#</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596899_ContenttypeModeldefinition-Submodels"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-Submodels"></a>Submodels</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use submodels to define complex
+<a href="Content_type_definition.html">content types</a>. Submodels are useful
+whenever you need a group of fields more than once. A <a href="#">content
+type model definition</a> can contain a list of submodel definitions within
+the
+<a href="#src-196596899_ContenttypeModeldefinition-anc-submodels-property"><code>subModels</code>
+property</a>. Submodels can be used only within the content type where they
+have been defined.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>A submodel definition has the
+<a href="#src-196596899_ContenttypeModeldefinition-anc-model-definition-properties">same
+properties as a model</a>, but a submodel cannot have additional submodels.</p>
+</div>
+<div class="paragraph">
+<p>The default <code>nodeType</code> for a submodels is <code>mgnl:contentNode</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596899_ContenttypeModeldefinition-Interfacesandclasses"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-Interfacesandclasses"></a>Interfaces and classes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="src-196596899_ContenttypeModeldefinition-Model"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-Model"></a>Model</h3>
+<div class="paragraph">
+<p>The base interface is ModelDefinition.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides the JcrDataSourceDefinition interface and the
+ConfiguredJcrModelDefinition implementation class to specify the model
+to be mapped to a JCR node.</p>
+</div>
+<div class="paragraph">
+<p>For ModelDefinition, the ConfiguredJcrModelDefinition is set as the
+default implementation class via type mapping on the
+<a href="XML-based_module_descriptor.html">XML-based module descriptor</a> of
+the <code>magnolia-content-types</code> module.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>By default, Magnolia expects you to configure properties for
+JcrModelDefinition to define a model.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596899_ContenttypeModeldefinition-Submodel"><a class="anchor" href="#src-196596899_ContenttypeModeldefinition-Submodel"></a>Submodel</h3>
+<div class="paragraph">
+<p>The submodel item is defined by the SubModelDefinition interface, which
+extends ModelDefinition. The default implementation is
+ConfiguredJcrSubModelDefinition.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>By default, Magnolia expects you to configure properties for
+ConfiguredJcrSubModelDefinition to define a submodel.</p>
+</div>
+<div class="paragraph">
+<p>Content type Data source definition</p>
+</div>
+<div class="paragraph">
+<p>Definitions App module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

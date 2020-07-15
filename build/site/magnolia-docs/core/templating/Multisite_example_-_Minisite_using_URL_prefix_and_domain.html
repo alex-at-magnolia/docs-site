@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Multisite example - Minisite using URL prefix and domain - Magnolia :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Multisite_example_-_Minisite_using_URL_prefix_and_domain.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Multisite_example_-_Minisite_using_URL_prefix_and_domain.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Multisite_example_-_Minisite_using_URL_prefix_and_domain.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Multisite_example_-_Minisite_using_URL_prefix_and_domain.html">Multisite example - Minisite using URL prefix and domain - Magnolia</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Multisite example - Minisite using URL prefix and domain - Magnolia</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Site_definition.html">Site definition</a></p>
+</li>
+<li>
+<p><a href="How_to_use_Multisite.html">How to use Multisite</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596677"><a class="anchor" href="#src-196596677"></a>Multisite example - Minisite using URL prefix and domain</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page provides two examples of how to create minisites:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using a shortened URL to use within an existing domain.</p>
+</li>
+<li>
+<p>Using a sub-domain.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Usecase"><a class="anchor" href="#src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Usecase"></a>Use case</h3>
+<div class="paragraph">
+<p>We have content for a minisite that resides deep in the site hierarchy
+at <code>/comics/belgian-comics/morris/lucky-luke/jolly-jumper</code>. This page
+node and its subpages should be served as a minisite.</p>
+</div>
+<div class="paragraph">
+<p>Assume that there is already a site named site named <code>comics-site</code>,
+mapped to the domain <a href="http://www.best-comics-net./">www.best-comics-net</a>,
+mapped to the content <code>/comics</code>. This means requesting the domain with
+no further paths returns the rendered page of the node <code>/comics</code>. (See
+<a href="Multisite_example_-_Two_sites_with_different_domains.html">Multisite
+example - Two sites with different domains</a>.)</p>
+</div>
+<div class="paragraph">
+<p>Now we look at two solutions for the <code>jolly-jumper</code> minisite:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Shorten the URL and serve
+<code>/comics/belgian-comics/morris/lucky-luke/jolly-jumper</code> from the URL
+<a href="http://www.best-comics.net/jollyjumper">www.best-comics.net/jollyjumper</a></p>
+</li>
+<li>
+<p>Use a new subdomain and serve
+<code>/comics/belgian-comics/morris/lucky-luke/jolly-jumper</code> from
+<a href="http://jollyjumper.best-comics.net/">jollyjumper.best-comics.net</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Settingupcontent"><a class="anchor" href="#src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Settingupcontent"></a>Setting up content</h3>
+<div class="paragraph">
+<p>The tree below shows the page nodes.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Page</th>
+<th class="tableblock halign-left valign-top">Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Best comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">us-comics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">US comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">belgian-comics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Belgian comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">morris</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Morris</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lucky-luke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lucky Luke</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>jolly-jumper</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jolly Jumper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">in-love</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jolly Jumper in love</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">family-tree</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jolly Jumper&#8217;s family tree</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In the following examples we look at the page node
+<code>/comics/belgian-comics/morris/lucky-luke/jolly-jumper</code> and its
+subpages.[<mark>src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-short-URL-with-handle-prefix]</mark>#</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-ShorteningtheURLwithhandlePrefixwithinanexistingsitedefinition"><a class="anchor" href="#src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-ShorteningtheURLwithhandlePrefixwithinanexistingsitedefinition"></a>Shortening the URL with handlePrefix within an existing site definition</h3>
+<div class="paragraph">
+<p>Keep in mind that this example assumes that the site definition
+<code>comics-site</code> already exists. Have a look at the site definition setup
+in
+<a href="Multisite_example_-_Two_sites_with_different_domains.html#src-196596681_Multisiteexample-Twositeswithdifferentdomains-site-definitions-setup">Multisite
+example - Two sites with different domains</a>.</p>
+</div>
+<div class="paragraph">
+<p>This is the existing <code>comics-site</code> site definition with an additional
+node under mappings:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comics-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comics-theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">prototype</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/comics</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/jollyjumper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/comics/belgian-comics/morris/lucky-luke/jolly-jumper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">best-comics</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.best-comics.net">www.best-comics.net</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To get a short URL, we add another node under <code>&lt;site&gt;/mappings</code>. In this
+example, we add the node <code>/comics-site/mappings/jolly-jumper</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>jolly-jumper</code></th>
+<th class="tableblock halign-left valign-top">The mapping node name is arbitrary.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>@URIPrefix=/jollyjumper</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables you to access the content at
+<code>&lt;domain&gt;/jollyjumper</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>@handlePrefix=/comics/belgian-comics/morris/lucky-luke/jolly-jumper</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maps the content node.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>@repository=website</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates the JCR workspace of the mapped
+content.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Now test it:
+<a href="http://www.best-comics.net/jollyjumper">www.best-comics.net/jollyjumper</a>.
+It works!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596677/jolly-jumper-with-shortURL.png" alt="images/download/attachments/196596677/jolly-jumper-with-shortURL.png" height="250"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Usinganewsubdomainwithadistinctsite"><a class="anchor" href="#src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Usinganewsubdomainwithadistinctsite"></a>Using a new subdomain with a distinct site</h3>
+<div class="paragraph">
+<p>In this solution you enable access to the <code>jolly-jumper</code> minisite using
+the subdomain <code>jollyjumper.best-comics.net</code>.</p>
+</div>
+<div class="paragraph">
+<p>To do this, you configure a new site definition:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper-theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/comics/belgian-comics/morris/lucky-luke/jolly-jumper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jollyjumper.best-comics.net</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note that using a distinct site for the minisite means that you can also
+apply another theme to it. In this example, the jolly-jumper-site uses
+the jolly-jumper-theme. The jolly-jumper-theme has a CSS that applies a
+different font (compared to the the comics-theme on the comics-site).</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596677_safe-id-TXVsdGlzaXRlZXhhbXBsZS1NaW5pc2l0ZXVzaW5nVVJMcHJlZml4YW5kZG9tYWluLUV4dGVuZGluZ3RoZWV4aXN0aW5nY29taWNzaXRlOg"><a class="anchor" href="#src-196596677_safe-id-TXVsdGlzaXRlZXhhbXBsZS1NaW5pc2l0ZXVzaW5nVVJMcHJlZml4YW5kZG9tYWluLUV4dGVuZGluZ3RoZWV4aXN0aW5nY29taWNzaXRlOg"></a>Extending the existing comic site:</h4>
+<div class="paragraph">
+<p>If the new <code>jolly-jumper-site</code> should reuse items defined on the
+<code>comics-site</code> - for instance <code>i18n</code> and <code>templates</code> - you can define the
+jolly-jumper-site in a way that it extends the comic-site:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../comics-site</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domains</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jollyjumper.best-comics.net/">jollyjumper.best-comics.net</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">override</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">URIPrefix</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">handlePrefix</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/comics/belgian-comics/morris/lucky-luke/jolly-jumper</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">repository</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">website</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jolly-jumper-theme</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Configuringtheenvironment"><a class="anchor" href="#src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Configuringtheenvironment"></a>Configuring the environment</h4>
+<div class="paragraph">
+<p>To enable accessing the Magnolia instance with the new subdomain - you
+must configure your environment accordingly,
+<a href="How_to_use_Multisite.html#src-196596675_HowtouseMultisite-Mappingmultipledomainstotheapplicationserver">see mapping
+multiple domains to the application server</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you use Apache in front of Tomcat, your httpd-vhosts.conf could look
+like this:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;VirtualHost *:80&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    ServerName www.best-comics.net`</p>
+</div>
+<div class="paragraph">
+<p>`    ProxyPass / ajp:<code>//localhost</code>:8010/`</p>
+</div>
+<div class="paragraph">
+<p>`    ProxyPassReverse / ajp:<code>//localhost</code>:8010/`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>/VirtualHost</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;VirtualHost *:80&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    ServerName www.best-vinyl.net`</p>
+</div>
+<div class="paragraph">
+<p>`  ProxyPass / ajp:<code>//localhost</code>:8010/`</p>
+</div>
+<div class="paragraph">
+<p>`    ProxyPassReverse / ajp:<code>//localhost</code>:8010/`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>/VirtualHost</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;VirtualHost *:80&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    ServerName jollyjumper.best-comics.net`</p>
+</div>
+<div class="paragraph">
+<p>`    ProxyPass / ajp:<code>//localhost</code>:8010/`</p>
+</div>
+<div class="paragraph">
+<p>`    ProxyPassReverse / ajp:<code>//localhost</code>:8010/`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>/VirtualHost</code>&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Testing"><a class="anchor" href="#src-196596677_Multisiteexample-MinisiteusingURLprefixanddomain-Testing"></a>Testing</h4>
+<div class="paragraph">
+<p>Now try to access
+<a href="http://jollyjumper.best-comics.net">jollyjumper.best-comics.net</a>. It
+works!</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596677/jolly-jumperr-via-subdomain.png" alt="images/download/attachments/196596677/jolly-jumperr-via-subdomain.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>How to use Multisite</p>
+</div>
+<div class="paragraph">
+<p>Multisite example - Two sites with different domains</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

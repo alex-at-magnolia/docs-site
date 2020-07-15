@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Caching arbitrary objects - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Caching_arbitrary_objects.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Caching_arbitrary_objects.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Caching_arbitrary_objects.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Caching_arbitrary_objects.html">Caching arbitrary objects - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Caching arbitrary objects - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Cache_modules.html">Cache modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596780"><a class="anchor" href="#src-196596780"></a>Caching arbitrary objects</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page explains how to cache arbitrary objects in Magnolia. You can
+cache basically every object. This takes caching well beyond
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cache#Cache-Pagecaching">page</a>
+and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cache#Cache-Dynamicpagecaching">page fragment</a>
+caching.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596780_Cachingarbitraryobjects-Requiredmodules"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Requiredmodules"></a>Required modules</h3>
+<div class="paragraph">
+<p>The functionality for caching arbitrary objects is provided by at least
+two modules.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Module `magnolia-cache-core `which defines the cache API.</p>
+</li>
+<li>
+<p>A second module which implements the API. Magnolia provides two
+implementations based on established third-party libraries for the
+low-level functions.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>magnolia-cache-ehcache</code> is the default implementation which uses
+<a href="http://www.ehcache.org/">Ehcache</a>.</p>
+</li>
+<li>
+<p><code>magnolia-cache-ehcache3</code> is the default implementation which uses
+<a href="http://www.ehcache.org/">Ehcache3</a>.</p>
+</li>
+<li>
+<p><code>magnolia-cache-memcached</code> is a high-performance, distributed memory
+object caching system which uses <a href="http://memcached.org/">Memcached</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596780_Cachingarbitraryobjects-Thingstonoteaboutarbitraryobjectcaching"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Thingstonoteaboutarbitraryobjectcaching"></a>Things to note about arbitrary object caching</h3>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Speedupservices"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Speedupservices"></a>Speed up services</h4>
+<div class="paragraph">
+<p>The main reason to cache objects is to serve data faster and to save
+resources (cpu, memory, network load, etc.). For instance, use object
+caching when there is heavy request on a Magnolia "service" which must
+provide data from a remote source.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Assuredatavalidity"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Assuredatavalidity"></a>Assure data validity</h4>
+<div class="paragraph">
+<p>When delivering cached data you will probably need a mechanism to ensure
+cached data is valid and not outdated! How to handle this depends on the
+use case.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Restrictthelifetimeofcachedobjects"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Restrictthelifetimeofcachedobjects"></a>Restrict the lifetime of cached objects</h4>
+<div class="paragraph">
+<p>When <a href="#src-196596780_Cachingarbitraryobjects-Puttocache">putting</a>
+objects to the cache you can restrict their lifetime. In this case,
+instead of checking the validity of cached objects, you can simply let
+them expire over time.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596780_Cachingarbitraryobjects-Configurethecache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Configurethecache"></a>Configure the cache</h3>
+<div class="paragraph">
+<p>Magnolia allows to configure a cache factory specifically for each
+cache. For example you could have a specific configuration for
+<code>fooBarCache</code>. When no specific configuration is defined, the <code>default</code>
+factory configuration is used.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Configuration differs depending on which version of Ehcache you use.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Ehcache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Ehcache"></a>Ehcache</h4>
+<div class="paragraph">
+<p>This is an example of how to configure a cache using Ehcache 2.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Ehcache+module">Here</a> you
+will find documentation of all configuration options.</p>
+</div>
+<div class="paragraph">
+<p>Extend the <code>default</code> factory and override the persistence strategy with
+<code>none</code>. This persistence strategy allows to cache non-serializable
+objects.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cacheFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">caches</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fooBarCache</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timeToLiveSeconds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">persistence</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">strategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">none</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The <code>/modules/cache/config/cacheFactory/caches/fooBarCache</code> node defines
+the cache name. <code>fooBarCache</code> is the "name" of the cache which was also
+used <a href="#src-196596780_Cachingarbitraryobjects-Getthecache">above</a> when
+acquiring the Cache object within Java code.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Ehcache3"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Ehcache3"></a>Ehcache3</h4>
+<div class="paragraph">
+<p>This is an example of how to configure a cache using Ehcache 3.
+<a href="https://wiki.magnolia-cms.com/display/DOCS60/Ehcache+3+module">Here</a> you
+will find documentation of all configuration options.</p>
+</div>
+<div class="paragraph">
+<p>Extend the <code>default</code> factory and override the persistence strategy for
+<code>disk</code> set to the value <code>false</code>. This persistence strategy allows to
+cache non-serializable objects.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cacheFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">delegateFactories</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>fooBarCache</strong></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourcePoolsBuilder</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pools</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">disk</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">persistent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">timeToLiveSeconds</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The <code>/modules/cache/config/cacheFactory/delegateFactories/fooBarCache</code>
+node defines the cache name. <code>fooBarCache</code> is the "name" of the cache
+which was also used
+<a href="#src-196596780_Cachingarbitraryobjects-Getthecache">above</a> when
+acquiring the Cache object within Java code.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596780_Cachingarbitraryobjects-Getthecache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Getthecache"></a>Get the cache</h3>
+<div class="paragraph">
+<p>Achieve an instance of Cache. This is your cache to operate on. Give it
+a name which must be unique within the system.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.inject.Inject;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.inject.Provider;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.module.cache.Cache;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.module.cache.inject.CacheFactoryProvider;`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MyClass {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> Provider&lt;CacheFactoryProvider&gt; cacheFactoryProvider;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyClass(Provider&lt;CacheFactoryProvider&gt; cacheFactoryProvider){`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.cacheFactoryProvider = cacheFactoryProvider;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> fooBar(){`</p>
+</div>
+<div class="paragraph">
+<p>`        Cache cache = cacheFactoryProvider.get().get().getCache(<code>"fooBarCache"</code>); `</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lines 2, 4-6: Inject CacheFactoryProvider and keep it as a final
+member of your class.</p>
+</li>
+<li>
+<p>Line 9: Fetch the Cache with its name. The cache provider will always
+return the same instance once it has been created.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All subsequent actions - adding, reading and removing objects - are
+applied on this <code>Cache</code> object.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-CacheInterface"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-CacheInterface"></a>Cache Interface</h4>
+<div class="paragraph">
+<p>info.magnolia.module.cache.Cache</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface`</code> Cache {`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>boolean</code> hasElement(Object key);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>void</code> put(Object key, Object value);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>void</code> put(Object key, Object value, <code>int</code> timeToLiveInSeconds);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    Object get(Object key);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    Object getQuiet(Object key);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>void</code> remove(Object key);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>void</code> clear();`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    String getName();`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>int</code> getSize();`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    Collection&lt;Object&gt; getKeys();`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Puttocache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Puttocache"></a>Put to cache</h4>
+<div class="paragraph">
+<p>Cache knows two methods to append objects.</p>
+</div>
+<div class="paragraph">
+<p><code>void`</code> put(Object key, Object value);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>void<code> put(Object key, Object value, </code>int`</code> timeToLiveInSeconds);`</p>
+</div>
+<div class="paragraph">
+<p>Arguments:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>key</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The identifier of the object to cache</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>value</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The object to cache</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>timeToLiveInSeconds</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The lifetime of the cached object in seconds.</p>
+</div>
+<div class="paragraph">
+<p>Tip: The lifetime also can be configured globally, and you can configure
+a flush policy to clear the cache when some condition is met, or you may
+want to delete cached objects programmatically (see
+<a href="#src-196596780_Cachingarbitraryobjects-Removeasingleitem">#remove</a>
+and
+<a href="#src-196596780_Cachingarbitraryobjects-Clearcompletecache">#clear</a>
+below).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MyClass {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Object put(Object key, Object value){`</p>
+</div>
+<div class="paragraph">
+<p>`        Cache cache = cacheFactoryProvider.get().get().getCache(<code>"fooBarCache"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        cache.put(key, value);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> value;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Object put(Object key, Object value, <code>int</code> timeToLiveInSeconds){`</p>
+</div>
+<div class="paragraph">
+<p>`        Cache cache = cacheFactoryProvider.get().get().getCache(<code>"fooBarCache"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        cache.put(key, value, timeToLiveInSeconds);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> value;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`} `</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596780_Cachingarbitraryobjects-Retrievefromcache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Retrievefromcache"></a>Retrieve from cache</h3>
+<div class="paragraph">
+<p>There are two methods to retrieve an object from cache.</p>
+</div>
+<div class="paragraph">
+<p><code>Object get(Object key);</code></p>
+</div>
+<div class="paragraph">
+<p><code>Object getQuiet(Object key);</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-get"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-get"></a>get</h4>
+<div class="paragraph">
+<p>Returns an object from the cache and blocks all the requests for the
+same key.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> JsonNode getData(String productId) </code>throws`</code> Exception {`</p>
+</div>
+<div class="paragraph">
+<p>`    Cache cache = cacheFactoryProvider.get().get().getCache(CACHEKEY);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>try</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`        JsonNode jsonNode = (JsonNode) cache.get(productId);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (jsonNode != <code>null</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> jsonNode;`</p>
+</div>
+<div class="paragraph">
+<p>`        } <code>else</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`            jsonNode = readJson(productId);`</p>
+</div>
+<div class="paragraph">
+<p>`            cache.put(productId, jsonNode);`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> jsonNode;`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`    } <code>catch</code> (Exception e) {`</p>
+</div>
+<div class="paragraph">
+<p>`        cache.put(productId, <code>null</code>); <code>`//unblock cache!</code></p>
+</div>
+<div class="paragraph">
+<p>`        <code>throw</code> e;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Use <code>#get</code> when you are unsure whether the desired object is already
+cached. If the object is not yet cached, you should acquire it by other
+means and add it to the cache.</p>
+</div>
+<div class="paragraph">
+<p>It is good practice to call <code>#get</code> and <code>#put</code> within the same associated
+try-catch-finally block for the same cache key.</p>
+</div>
+<div class="paragraph">
+<p>If there is no object for a key, add <code>null</code> to the cache anyway. This
+way you can ensure that the service doesn&#8217;t try to read data for a key
+without an existing value more than one time</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-getQuiet"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-getQuiet"></a>getQuiet</h4>
+<div class="paragraph">
+<p>Returns an object from the cache but does NOT block requests for the
+same key.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Use <code>#getQuiet</code> to acquire objects which are already cached.</p>
+</div>
+<div class="paragraph">
+<p>This method is used more to "observe" or manage cached objects than to
+fetch a specific object. The Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS60/Cache+Browser+app">Cache
+Browser app</a> is using #getQuiet, for instance.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>public`</code> List getCachedObjects() {`</p>
+</div>
+<div class="paragraph">
+<p>`    List&lt;Object&gt; cachedObjects = <code>new</code> ArrayList&lt;&gt;();`</p>
+</div>
+<div class="paragraph">
+<p>`    Cache cache = cacheFactoryProvider.get().get().getCache(NAME_OF_CACHE);`</p>
+</div>
+<div class="paragraph">
+<p>`    Collection&lt;Object&gt; keys = cache.getKeys();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>for</code> (Object key : keys) {`</p>
+</div>
+<div class="paragraph">
+<p>`        Object value = cache.getQuiet(key);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (value != <code>null</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`            cachedObjects.add(value);`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>return</code> cachedObjects;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Line 8: Uses <code>#getQuiet</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596780_Cachingarbitraryobjects-Deletefromcache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Deletefromcache"></a>Delete from cache</h3>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Removeasingleitem"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Removeasingleitem"></a>Remove a single item</h4>
+<div class="paragraph">
+<p><code>Cache cache = cacheFactoryProvider.get().get().getCache(<code>"fooBarCache"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p><code>cache.remove(<code>"fb-90270240-xyz"</code>);</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596780_Cachingarbitraryobjects-Clearcompletecache"><a class="anchor" href="#src-196596780_Cachingarbitraryobjects-Clearcompletecache"></a>Clear complete cache</h4>
+<div class="paragraph">
+<p><code>#clear</code> deletes all items of a specific Cache which is identified by
+its "name"</p>
+</div>
+<div class="paragraph">
+<p><code>cacheFactoryProvider.get().get().getCache(<code>"fooBarCache"</code>).clear()</code></p>
+</div>
+<div class="paragraph">
+<p>Memcached implementation</p>
+</div>
+<div class="paragraph">
+<p>Advanced cache modules</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

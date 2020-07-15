@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jackrabbit search :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/managed-schema.html">
+    <meta name="keywords" content="front-end-development">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="managed-schema.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/managed-schema.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="managed-schema.html">Jackrabbit search</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Jackrabbit search</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Features/Search/Solr+search">Solr search</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Solr+module">Solr module</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Modules/List+of+modules/Solr+module/Installing+Apache+Solr">Installing
+Apache Solr</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Solr+module/Indexing+and+crawling+a+website+with+Solr">Indexing
+and crawling a website with Solr</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/WIKI/Step-by-step+integrating+Solr+in+Magnolia+and+generating+custom+sitemap">Creating
+a sitemap with Solr</a> (Community Wiki)</p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Solr+module/App+configuration+with+Solr">App
+configuration with Solr</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Solr+module/Providing+a+Solr+search">Providing
+a Solr search</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Solr+module/Solr+module+release+notes">Solr
+module release notes</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>By default Magnolia’s search functionality is provided by the Jackrabbit
+repository and this page describes the configuration options for
+Jackrabbit-based search. For more advanced search options and especially
+if you need to manage high volumes of
+<a href="/Authoring/Managing+assets">assets</a> you can set up Magnolia to use
+Apache Solr, see <a href="/Features/Search/Solr+search">Solr search</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_search_indexing_works"><a class="anchor" href="#_how_search_indexing_works"></a>How search indexing works</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Indexing is the process of collecting and parsing content, and storing
+the data in an index to make information retrieval fast and accurate.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia search is based on the default
+<a href="http://jackrabbit.apache.org/search-implementation.html">Jackrabbit
+search implementation</a>. Jackrabbit uses an
+<a href="http://lucene.apache.org/">Apache Lucene-based</a> indexer to process the
+data stored in the JCR. An index makes it faster to retrieve requested
+portions of the data. Node names and property values are indexed
+immediately and stored in the repository. Text from documents is
+extracted in a background process which makes document content
+searchable after a short delay.</p>
+</div>
+<div class="paragraph">
+<p>You can find the physical index folders and files on the file system in
+<code>/&lt;CATALINA_HOME&gt;/webapps/&lt;contextPath&gt;/repositories/magnolia/workspaces/*/index</code>.
+See the <a href="http://wiki.apache.org/jackrabbit/Search">Jackrabbit Search wiki</a>
+to learn how to configure search indexing from scratch and more about
+the options available with the implementation. The <code>workspace.xml</code> file
+mentioned on the wiki is in
+<code>/repositories/magnolia/workspaces/&lt;name of workspace&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Typically, each Magnolia instance has its own repository and its own
+index. This means that the author instance index is typically different
+from public instance indexes. Any content that has not been activated to
+a public instance cannot be found when running a search on that public
+instance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_magnolia_index_configuration"><a class="anchor" href="#_magnolia_index_configuration"></a>Magnolia index configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia uses a custom Jackrabbit/Lucene indexing configuration. The
+indexing configuration file is in the Magnolia Core module in
+<code>/src/main/resources/info/magnolia/jackrabbit</code> and
+<code>org.apache.jackrabbit.core.query.lucene.SearchIndex</code> gets it from the
+classpath.</p>
+</div>
+<div class="paragraph">
+<p>The generic indexing configuration used for all
+<a href="/Administration/Architecture/Workspaces">workspaces</a> <em>except</em> the
+<code>website</code> workspace is stored in
+<code>/info/magnolia/jackrabbit/indexing_configuration_default.xml</code>. The
+indexing configuration for the <code>website</code> workspace is in
+<code>/info/magnolia/jackrabbit/indexing_configuration_website.xml</code>. You can
+configure indexing for additional workspaces by setting the workspace
+name in
+<code>&lt;param name="indexingConfiguration" value="/info/magnolia/jackrabbit/indexing_configuration_${wsp.name}.xml"/&gt;</code>
+in the <code>workspace.xml</code> configuration file.</p>
+</div>
+<div class="paragraph">
+<p>later, we recommend you to set the indexing configuration by specifying
+workspace name(s) in the <code>indexingConfiguration</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p>These configurations fine-tune the default
+<a href="https://wiki.apache.org/jackrabbit/Search">Jackrabbit search
+configuration</a> for best results. The sections that follow detail the
+enhancements.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Special characters</strong></p>
+</div>
+<div class="paragraph">
+<p>Jackrabbit stores all character data (node names and values) in Unicode.
+This ensures that special characters such as accents and umlauts are
+indexed and can be used in search. Issues with special characters are
+often due to character set conversion problems in the application
+server. See
+<a href="http://wiki.magnolia-cms.com/display/DEV/URI+encoding+in+Tomcat">URI
+encoding in Tomcat</a> for more.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_excluding_nodes"><a class="anchor" href="#_excluding_nodes"></a>Excluding nodes</h3>
+<div class="paragraph">
+<p>Magnolia typically stores many properties, such as author, modification
+dates, templates etc., that are not relevant in search results. To
+minimize the index and speed-up search, all properties starting with
+<code>jcr:</code> or <code>mgnl:</code> are excluded from the index. This means you get fewer
+results but those results are more relevant.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cnd hljs" data-lang="cnd">&lt;index-rule nodeType="nt:base"&gt;
+    &lt;property isRegexp="true" nodeScopeIndex="false"&gt;mgnl:.*&lt;/property&gt;
+    &lt;property isRegexp="true" nodeScopeIndex="false"&gt;jcr:.*&lt;/property&gt;
+    &lt;property isRegexp="true"&gt;.*:.*&lt;/property&gt;
+&lt;/index-rule&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_boosting_the_title_property"><a class="anchor" href="#_boosting_the_title_property"></a>Boosting the title property</h3>
+<div class="paragraph">
+<p>By default, indexing configuration boosts the <code>title</code> property of the
+<code>mgnl:page</code> node type since page titles are important.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cnd hljs" data-lang="cnd">&lt;index-rule nodeType="mgnl:page"&gt;
+   &lt;property boost="3.0"&gt;title&lt;/property&gt;
+&lt;/index-rule&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_including_areas_and_components"><a class="anchor" href="#_including_areas_and_components"></a>Including areas and components</h3>
+<div class="paragraph">
+<p>The configuration uses
+<a href="http://wiki.apache.org/jackrabbit/IndexingConfiguration">index
+aggregates</a> to ensure area and component content is included in the
+index. The properties of <code>mgnl:area</code> and <code>mgnl:component</code> make up most
+of page content and need to be included explicitly. The aggregate also
+simplifies searching for content within pages.</p>
+</div>
+<div class="paragraph">
+<p>Nested areas are also included using the <code>recursive</code> flag.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-cnd hljs" data-lang="cnd">&lt;aggregate primaryType="mgnl:page"&gt;
+    &lt;include primaryType="mgnl:area"&gt;*&lt;/include&gt;
+    &lt;include primaryType="mgnl:component"&gt;*&lt;/include&gt;
+&lt;/aggregate&gt;
+
+&lt;!-- areas can be nested. See http://wiki.apache.org/jackrabbit/IndexingConfiguration for recursion --&gt;
+&lt;aggregate primaryType="mgnl:area" recursive="true"&gt;
+    &lt;include primaryType="mgnl:component"&gt;*&lt;/include&gt;
+    &lt;include primaryType="mgnl:area"&gt;*&lt;/include&gt;
+&lt;/aggregate&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_providing_excerpts_and_highlighting_search_results"><a class="anchor" href="#_providing_excerpts_and_highlighting_search_results"></a>Providing excerpts and highlighting search results</h3>
+<div class="paragraph">
+<p>The <code>workspace.xml</code> file in each workspace enables highlighting in
+search results and the Jackrabbit HTML
+<a href="http://wiki.apache.org/jackrabbit/ExcerptProvider">excerpt provider</a>
+class. The <code>workspace.xml</code> files are in
+<code>/&lt;CATALINA_HOME&gt;/webapps/&lt;contextPath&gt;/repositories/magnolia/workspaces/&lt;workspace name&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the relevant extract from <code>workspace.xml</code> in the <code>contacts</code>
+workspace.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- needed to highlight the searched term --&gt;
+&lt;param name="supportHighlighting" value="true"/&gt;
+&lt;!-- custom provider for getting an HTML excerpt in a query result with rep:excerpt() --&gt;
+&lt;param name="excerptProviderClass" value="info.magnolia.jackrabbit.lucene.SearchHTMLExcerpt"/&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have <a href="/Apps/My+first+content+app">configured your own app</a>
+that operates on its own workspace and provides content for the website,
+you need to add these parameters to the <code>searchIndex</code> element of your
+<code>workspace.xml</code> file to show excerpts and highlighting in Web search
+results.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you have used fields which allow for the storing of HTML, then that
+HTML will be indexed along with content. There is potential for the
+excerpt to contain HTML tags which are not closed.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementing_search_using_templating_functions"><a class="anchor" href="#_implementing_search_using_templating_functions"></a>Implementing search using templating functions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are many ways to implement search on a site. This section explains
+how to do it using
+<a href="/Templating/Template+scripts/Templating+functions">templating
+functions</a> and uses the Magnolia Travels demo site as an example. If the
+demo modules are not installed your can download the
+<code>magnolia-travel-demo-parent module</code> and
+<a href="/Modules/Installing+a+module">install</a> the demo and tours modules.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="/Modules/List+of+modules/MTE+module">MTE module</a> provides
+<a href="/Templating/Template+scripts/Templating+functions/searchfn">search
+templating functions</a> that allow front-end developers to render search
+results using only a template script. A component model or Java
+knowledge is not required. This is how search is implemented in the
+Magnolia Travels demo site.</p>
+</div>
+<div class="paragraph">
+<p>There are methods for searching pages and other content, such as content
+stored in content apps. The methods are exposed in templates as
+<code>searchfn</code> and you can find templating examples at
+<a href="/Templating/Template+scripts/Templating+functions/searchfn">searchfn</a>.</p>
+</div>
+<div class="paragraph">
+<p>All you need to implement search on a site is a component to retrieve
+the results from the search index and display them on the page.</p>
+</div>
+<div class="paragraph">
+<p>This is how search works on the Magnolia Travels demo site.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>searchResults</code> component
+(<a href="http://git.magnolia-cms.com/gitweb/?p=modules/demo-projects.git;a=blob;f=community/magnolia-travel-demo/src/main/resources/travel-demo/templates/components/searchResults.yaml;h=e84fe8615a2692215e2ede875305b2ddfdcb723a;hb=HEAD">Git</a>)
+searches pages and content apps for relevant results.
+<code>searchResults.ftl</code>
+(<a href="http://git.magnolia-cms.com/gitweb/?p=modules/demo-projects.git;a=blob;f=community/magnolia-travel-demo/src/main/resources/travel-demo/templates/components/searchResults.ftl;h=8d1230074fe230ccefbc31f97802f2613a8b0afa;hb=HEAD">Git</a>)
+renders this component.</p>
+</li>
+<li>
+<p><code>searchResultsPage</code> template
+(<a href="http://git.magnolia-cms.com/gitweb/?p=modules/demo-projects.git;a=blob;f=community/magnolia-travel-demo/src/main/resources/travel-demo/templates/pages/searchResultPage.yaml;h=df589724abcb9a35fd5b8d67f21ac165a712507a;hb=HEAD">Git</a>)
+<a href="/Templating/Template+definition/Area+definition/Component+autogeneration">autogenerates</a>
+the <code>searchResults</code> component.</p>
+</li>
+<li>
+<p>Search results display on the <code>/travel/meta/search-results</code> page that
+is based on the <code>searchResultsPage</code> template.</p>
+</li>
+<li>
+<p><code>/search-results</code> page is assigned as the search page for the site in
+the <code>homePageProperties</code> dialog
+(<a href="http://git.magnolia-cms.com/gitweb/?p=modules/demo-projects.git;a=blob;f=community/magnolia-travel-demo/src/main/resources/travel-demo/dialogs/pages/homePageProperties.yaml;h=52dd8fa78a25b98b86542efe1013b7b41ad7f00b;hb=HEAD">Git</a>)</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_displaying_pages_in_the_website_workspace"><a class="anchor" href="#_displaying_pages_in_the_website_workspace"></a>Displaying pages in the website workspace</h3>
+<div class="paragraph">
+<p>The <code>searchPages</code>
+<a href="/Templating/Template+scripts/Templating+functions/searchfn#Searchpages">method</a>
+displays pages stored in the <code>website</code> workspace in the search results.
+This method retrieves pages whose content (text, image and other
+properties) was added manually in the
+<a href="/Apps/List+of+apps/Pages+app">Pages app</a>, as opposed to content
+retrieved from an app or another source. Set the root path of the site
+to return the relevant items.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the snippet from <code>searchResults.ftl</code> in the travel demo. The root
+path is <code>/travel</code>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[#-------------- ASSIGNMENTS --------------]
+[#assign queryStr = ctx.getParameter('queryStr')!?html]
+
+[#-------------- RENDERING --------------]
+[#if content.headline?has_content]
+    &lt;h2&gt;${content.headline}&lt;/h2&gt;
+[/#if]
+
+[#if queryStr?has_content]
+    [#assign searchResults = searchfn.searchPages(queryStr, '/travel') /]
+    [#assign recordsFound = searchResults?size /]
+
+    &lt;h3&gt;&lt;em&gt;${recordsFound}&lt;/em&gt; ${i18n['search.pagesFoundFor']} "${queryStr}"&lt;/span&gt;&lt;/h3&gt;
+
+    &lt;div class="list-group"&gt;
+        [#if searchResults?has_content]
+            [#list searchResults as item]
+                &lt;a href="${cmsfn.link(item)}" class="list-group-item"&gt;
+                    &lt;h4 class="list-group-item-heading"&gt;${item.title!}&lt;/h4&gt;
+                    &lt;p class="list-group-item-text"&gt;${item.excerpt!}&lt;/p&gt;
+                &lt;/a&gt;
+            [/#list]
+       [/#if]
+    &lt;/div&gt;
+
+    &lt;#-- More processing here, not shown in snippet &gt;
+
+[/#if]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here are the results for the term ``contact''.
+<a href="#providing-excerpts-and-highlighting-search-results">Excerpts and
+highlighting</a> are provided automatically by the
+<a href="#magnolia-index-configuration">indexing configuration</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/search-results-pages.png" alt="image"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_displaying_content_stored_in_apps"><a class="anchor" href="#_displaying_content_stored_in_apps"></a>Displaying content stored in apps</h3>
+<div class="paragraph">
+<p>The <code>searchContent</code>
+<a href="/Templating/Template+scripts/Templating+functions/searchfn#Searchanycontent">method</a>
+allows you to search any content in the JCR. The method is useful to
+display ``pages'' whose content is stored in another workspace. In this
+scenario you need to set the
+<a href="/Administration/Architecture/Workspaces">workspace</a> where the
+content is stored, the parent URL within that workspace and the
+<a href="/Administration/Architecture/Node+types">node type</a>.</p>
+</div>
+<div class="paragraph">
+<p>In the Magnolia Travels demo site all Tour content (text, images and
+more) is entered in the <strong>Tours</strong> app and retrieved by a component that
+displays the content on pages. The app content is stored in the <code>tours</code>
+workspace, under <code>/magnolia-travels</code> and is of node type <code>mgnl:content</code>.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the snippet from <code>searchResults.ftl</code> that retrieves <strong>Tours</strong> app
+content.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[#assign searchResults = searchfn.searchContent('tours', queryStr, '/magnolia-travels', 'mgnl:content') /]
+[#assign recordsFound = searchResults?size /]
+
+    &lt;h3&gt;&lt;em&gt;${recordsFound}&lt;/em&gt; ${i18n['search.toursFoundFor']} "${queryStr}"&lt;/span&gt;&lt;/h3&gt;
+
+    &lt;div class="list-group"&gt;
+    [#if searchResults?has_content]
+        [#list searchResults as item]
+            &lt;a href="${cmsfn.link(item)}" class="list-group-item"&gt;
+               &lt;h4 class="list-group-item-heading"&gt;${item.description!}&lt;/h4&gt;
+               &lt;img src="${damfn.getAssetLink(item.image)}" class="img-responsive img-rounded" height="80" width="160" alt="${item.description!}"/&gt;
+               &lt;p class="list-group-item-text"&gt;${item.excerpt!}&lt;/p&gt;
+            &lt;/a&gt;
+        [/#list]
+    [/#if]
+    &lt;/div&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here are the results for the term ``swiss''.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/search-results-tours.png" alt="image"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uri_mappings"><a class="anchor" href="#_uri_mappings"></a>URI mappings</h3>
+<div class="paragraph">
+<p><strong>Best practice</strong></p>
+</div>
+<div class="paragraph">
+<p>When you display results from content app workspaces, build a link to a
+detail page that displays the content item in question using URI
+mappings.</p>
+</div>
+<div class="paragraph">
+<p>URI mapping is used in the Demo Travels example to display app content
+on pages and ensure that the content is included in the search index.
+URI mapping is a way to redirect incoming requests to the location of
+the content.</p>
+</div>
+<div class="sect3">
+<h4 id="_configuring_uri2repository_mapping"><a class="anchor" href="#_configuring_uri2repository_mapping"></a>Configuring URI2Repository mapping</h4>
+<div class="paragraph">
+<p>The URI2Repository mapping <a href="/Administration/URI+mapping">URI mapping</a>
+mechanism determines which repository node should be served when a
+particular URI is requested.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the URI2Repository mapping for the <code>tours</code> workspace in
+<code>/server/URI2RepositoryMapping/mappings/tours</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">server</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.f]</span>#<mark>#URI2RepositoryMapping</mark></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.n]#mappings</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#tours</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#URIPrefix</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/tours/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#handlePrefix</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#repository</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tours</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties</p>
+</div>
+<div class="paragraph">
+<p><code>tours</code></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>tours</code> URI2Repository mapping node.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>URIPrefix</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Injects the <code>/tours/</code> path into the request URL.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>repository</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Repository the mapping applies to.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_configuring_virtualuri_mapping"><a class="anchor" href="#_configuring_virtualuri_mapping"></a>Configuring VirtualURI mapping</h4>
+<div class="paragraph">
+<p>Virtual URI mapping allows you to create short, convenient URLs.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the virtual URI mapping for the <strong>Tours</strong> app in
+<code>/modules/tours/virtualURIMapping/toursMapping</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">modules</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.f]#tours</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.f]#virtualURIMapping</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#toursMapping</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#class</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.beans.config.RegexpVirtualURIMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#fromURI</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/tours(.*).html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#toURI</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/travel/tour?tour=$1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<div class="paragraph">
+<p><code>toursMapping</code></p>
+</div>
+<div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Tours virtual URI mapping node.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>class</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="!javadoc">info.magnolia.cms.beans.config.RegexpVirtualURIMapping</a>
+allows you to specify a regexp pattern that matches a sequence of
+characters. A pattern can match a variety of URIs.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>fromURI</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Path to tours in the <code>tours</code> workspace as mapped in the
+<a href="#configuring-uri2repository-mapping">URI2Repository mapping
+configuration</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>toURI</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>URI to which tours are forwarded. <code>/travel</code> is the root node of the site
+and <code>/tour</code> is injected by the URI2Repository mapping configuration.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customizing_search"><a class="anchor" href="#_customizing_search"></a>Customizing search</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can customize search by writing your own queries to search the index
+and execute them in code. A query returns a result set which you can
+display on a page.</p>
+</div>
+<div class="paragraph">
+<p>Write queries in a language supported by the JCR repository such as
+SQL-2 (<a href="http://www.h2database.com/jcr/grammar.html">grammar</a>,
+<a href="http://svn.apache.org/viewvc/jackrabbit/trunk/jackrabbit-spi-commons/src/test/resources/org/apache/jackrabbit/spi/commons/query/sql2/test.sql2.txt?view=markup">examples</a>).</p>
+</div>
+<div class="paragraph">
+<p>You can test your queries in the
+<a href="/Apps/List+of+apps/JCR+Tools+app">Query subapp</a>. When you get the
+result set you want, implement the query in code.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-JCR-tools-query-app.png" alt="image" width="500"></span></p>
+</div>
+<div class="sect2">
+<h3 id="_example_queries"><a class="anchor" href="#_example_queries"></a>Example queries</h3>
+<div class="paragraph">
+<p>The following queries are written in SQL-2. See
+<a href="http://wiki.magnolia-cms.com/display/WIKI/JCR+Query+Cheat+Sheet">JCR
+Query Cheat Sheet</a> for more examples.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Find pages that contain the word ``swiss''.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Workspace: <code>website</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT * FROM [mgnl:page] AS t WHERE
+   ISDESCENDANTNODE([/tours]) AND
+   CONTAINS(t.*, 'swiss')</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Find modules that have <a href="/Developing/Commands">commands</a>. This query
+looks for a folder named <code>commands</code> in the module configuration.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Workspace: <code>config</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT * FROM [mgnl:content] AS t WHERE
+   ISDESCENDANTNODE([/modules]) AND
+   name(t) = 'commands'</code></pre>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Find assets that are not JPG images under the <code>/example</code> path in the
+DAM.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Workspace: <code>dam</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">SELECT * FROM [nt:base] AS t WHERE
+   ([jcr:primaryType] = 'mgnl:asset' AND
+   [type] &lt;&gt; 'jpg') AND
+   ISDESCENDANTNODE([/example])
+ORDER BY [t].title asc</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security"><a class="anchor" href="#_security"></a>Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Search within Magnolia is access controlled. Search results include only
+content the user has permission to access. Permissions are controlled
+through <a href="/Administration/Security">Security</a>. When you execute a
+query in Magnolia context
+(<a href="!javadoc">info.magnolia.context.MgnlContext</a>), contextual factors
+such as the current user’s permissions are taken into account. If you do
+not have permission to the items you are querying, they will not show up
+in the results.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_further_resources"><a class="anchor" href="#_further_resources"></a>Further resources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Apache.org</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://jackrabbit.apache.org/jcr/search-implementation.html" class="bare">http://jackrabbit.apache.org/jcr/search-implementation.html</a>[Jackrabbit</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Search implementation]</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="https://wiki.apache.org/jackrabbit/Search">Search</a> (wiki)</p>
+</li>
+<li>
+<p><a href="https://issues.apache.org/jira/browse/JCR">Issues</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em> </em> ]]&gt;</p>
+</div>
+<div class="paragraph">
+<p>Providing excerpts and highlighting search results</p>
+</div>
+<div class="paragraph">
+<p>The workspace.xml file in each workspace enables highlighting in search
+results and the Jackrabbit HTML excerpt provider class. The
+workspace.xml files are in
+/&lt;CATALINA_HOME&gt;/webapps/&lt;contextPath&gt;/repositories/magnolia/workspaces/&lt;workspace
+name&gt;.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the relevant extract from workspace.xml in the contacts
+workspace.</p>
+</div>
+<div class="paragraph">
+<p>xml ]]&gt;</p>
+</div>
+<div class="paragraph">
+<p>If you have<span class="confluence-link"> </span> <span class="confluence-link">configured your
+own app</span> that operates on its own workspace and provides content for the
+website, you need to add these parameters to the searchIndex element of
+your workspace.xml file to show excerpts and highlighting in Web search
+results.</p>
+</div>
+<div class="paragraph">
+<p>If you have used fields which allow for the storing of HTML, then that
+HTML will be indexed along with content. There is potential for the
+excerpt to contain HTML tags which are not closed.</p>
+</div>
+<div class="paragraph">
+<p>Implementing search using templating functions</p>
+</div>
+<div class="paragraph">
+<p>There are many ways to implement search on a site. This section explains
+how to do it using and uses the Magnolia Travels demo site as an
+example. If the demo modules are not installed your can download the
+magnolia-travel-demo-parent module and the demo and tours modules.</p>
+</div>
+<div class="paragraph">
+<p>The provides that allow front-end developers to render search results
+using only a template script. A component model or Java knowledge is not
+required. This is how search is implemented in the Magnolia Travels demo
+site.</p>
+</div>
+<div class="paragraph">
+<p>There are methods for searching pages and other content, such as content
+stored in content apps. The methods are exposed in templates as searchfn
+and you can find templating examples at .</p>
+</div>
+<div class="paragraph">
+<p>All you need to implement search on a site is a component to retrieve
+the results from the search index and display them on the page.</p>
+</div>
+<div class="paragraph">
+<p>This is how search works on the Magnolia Travels demo site.</p>
+</div>
+<div class="paragraph">
+<p>searchResults component (Git) searches pages and content apps for
+relevant results. searchResults.ftl (Git) renders this component.</p>
+</div>
+<div class="paragraph">
+<p>searchResultsPage template (Git) the searchResults component.</p>
+</div>
+<div class="paragraph">
+<p>Search results display on the /travel/meta/search-results page that is
+based on the searchResultsPage template.</p>
+</div>
+<div class="paragraph">
+<p>/search-results page is assigned as the search page for the site in the
+homePageProperties dialog (Git)</p>
+</div>
+<div class="paragraph">
+<p>Displaying pages in the website workspace</p>
+</div>
+<div class="paragraph">
+<p>The searchPages displays pages stored in the website workspace in the
+search results. This method retrieves pages whose content (text, image
+and other properties) was added manually in the , as opposed to content
+retrieved from an app or another source. Set the root path of the site
+to return the relevant items.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the snippet from searchResults.ftl in the travel demo. The root
+path is /travel.</p>
+</div>
+<div class="paragraph">
+<p>xml$\{content.headline}</p>
+</div>
+<div class="paragraph">
+<p>[/#if]</p>
+</div>
+<div class="paragraph">
+<p>[#if queryStr?has_content] [#assign searchResults =
+searchfn.searchPages(queryStr, `/travel') /] [#assign recordsFound =
+searchResults?size /]</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;h3&gt;&lt;em&gt;${recordsFound}&lt;/em&gt; ${i18n['search.pagesFoundFor']} "${queryStr}"&lt;/span&gt;&lt;/h3&gt;
+
+&lt;div class="list-group"&gt;
+    [#if searchResults?has_content]
+        [#list searchResults as item]
+            &lt;a href="${cmsfn.link(item)}" class="list-group-item"&gt;
+                &lt;h4 class="list-group-item-heading"&gt;${item.title!}&lt;/h4&gt;
+                &lt;p class="list-group-item-text"&gt;${item.excerpt!}&lt;/p&gt;
+            &lt;/a&gt;
+        [/#list]
+   [/#if]
+&lt;/div&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>  &lt;#– More processing here, not shown in snippet &gt;   [/#if]]]&gt;</p>
+</div>
+<div class="paragraph">
+<p>Here are the results for the term ``contact''. are provided
+automatically by the .</p>
+</div>
+<div class="paragraph">
+<p>Displaying content stored in apps</p>
+</div>
+<div class="paragraph">
+<p>The searchContent allows you to <span class="confluence-link">search any content</span>
+in the JCR. The method is useful to display ``pages'' whose content is
+stored in another workspace. In this scenario you need to set the where
+the content is stored, the parent URL within that workspace and the .</p>
+</div>
+<div class="paragraph">
+<p>In the Magnolia Travels demo site all Tour content (text, images and
+more) is entered in the Tours app and retrieved by a component that
+displays the content on pages. The app content is stored in the tours
+workspace, under /magnolia-travels and is of node type mgnl:content.</p>
+</div>
+<div class="paragraph">
+<p>Here’s the snippet from searchResults.ftl that retrieves Tours app
+content.</p>
+</div>
+<div class="paragraph">
+<p>xml${recordsFound}
+\(${i18n['search.toursFoundFor'\)} "$]{queryStr}"</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;div class="list-group"&gt;
+[#if searchResults?has_content]
+    [#list searchResults as item]
+        &lt;a href="${cmsfn.link(item)}" class="list-group-item"&gt;
+           &lt;h4 class="list-group-item-heading"&gt;${item.description!}&lt;/h4&gt;
+           &lt;img src="${damfn.getAssetLink(item.image)}" class="img-responsive img-rounded" height="80" width="160" alt="${item.description!}"/&gt;
+           &lt;p class="list-group-item-text"&gt;${item.excerpt!}&lt;/p&gt;
+        &lt;/a&gt;
+    [/#list]
+[/#if]
+&lt;/div&gt;]]&gt;&lt;/ac:plain-text-body&gt;&lt;/ac:structured-macro&gt;&lt;p&gt;Here are the results for the term &amp;quot;swiss&amp;quot;.&lt;/p&gt;&lt;p&gt;&lt;ac:image&gt;&lt;ri:attachment ri:filename="search-results-tours.png" /&gt;&lt;/ac:image&gt;&lt;/p&gt;&lt;h3&gt;URI mappings&lt;/h3&gt;&lt;ac:structured-macro ac:name="info" ac:schema-version="1" ac:macro-id="50cd9e61-42cd-48df-8ec1-cec13733f890"&gt;&lt;ac:parameter ac:name="icon"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="title"&gt;Best practice&lt;/ac:parameter&gt;&lt;ac:rich-text-body&gt;&lt;ac:structured-macro ac:name="excerpt" ac:schema-version="1" ac:macro-id="0cf1ebdc-f3e8-4c1a-9122-d0f44ec54ce7"&gt;&lt;ac:parameter ac:name="atlassian-macro-output-type"&gt;BLOCK&lt;/ac:parameter&gt;&lt;ac:rich-text-body&gt;&lt;p&gt;When you display results from content app workspaces, build a link to a detail page that displays the content item in question using&amp;nbsp;URI mappings.&lt;/p&gt;&lt;/ac:rich-text-body&gt;&lt;/ac:structured-macro&gt;&lt;/ac:rich-text-body&gt;&lt;/ac:structured-macro&gt;&lt;p&gt;URI mapping is used in the Demo Travels example to display app content on pages and ensure that the content is included in the search index. URI mapping is a way to redirect incoming requests to the location of the content.&lt;/p&gt;&lt;h4&gt;Configuring URI2Repository mapping&lt;/h4&gt;&lt;p&gt;The&amp;nbsp;&lt;span class="confluence-link"&gt; &lt;span class="confluence-link"&gt;URI2Repository mapping&lt;/span&gt; &lt;/span&gt; &lt;ac:link&gt;&lt;ri:page ri:content-title="URI mapping" /&gt;&lt;/ac:link&gt; mechanism determines which repository node should be served when a particular URI is requested.&lt;/p&gt;&lt;p&gt;Here's the URI2Repository mapping for the &lt;code&gt;tours&lt;/code&gt; workspace in&amp;nbsp;&lt;code&gt;/server/URI2RepositoryMapping/mappings/tours&lt;/code&gt;.&lt;/p&gt;&lt;ac:structured-macro ac:name="table-plus" ac:schema-version="1" ac:macro-id="97c98835-822d-4bcd-9a49-42986d3c45d7"&gt;&lt;ac:parameter ac:name="heading"&gt;0&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="multiple"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="enableHeadingAttributes"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="enableSorting"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="class"&gt;m5-configuration-tree&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="enableHighlighting"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="atlassian-macro-output-type"&gt;BLOCK&lt;/ac:parameter&gt;&lt;ac:rich-text-body&gt;&lt;table class="wrapped"&gt;&lt;colgroup&gt; &lt;col /&gt; &lt;col /&gt; &lt;/colgroup&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;Node name&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p&gt;&lt;ac:structured-macro ac:name="mgnl-f" ac:schema-version="1" ac:macro-id="233f18e5-e502-4df3-8638-d2ca9a850b0f" /&gt;server&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-f" ac:schema-version="1" ac:macro-id="6ad20ee0-a3dd-4c63-9b4a-b444a32854c4" /&gt; &lt;ac:inline-comment-marker ac:ref="7a404eea-7cb3-45b7-b096-6e70f0b39ff8"&gt;URI2RepositoryMapping&lt;/ac:inline-comment-marker&gt;&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 60.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-n" ac:schema-version="1" ac:macro-id="d0b7642f-c631-4bf2-b8a2-2ad982f7e373" /&gt;mappings&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="1"&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 90.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-n" ac:schema-version="1" ac:macro-id="42a0c40c-9558-49f7-8d94-83f15ab8673f" /&gt;tours&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td colspan="1"&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="1"&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 120.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-p" ac:schema-version="1" ac:macro-id="6e9b6c78-a162-4436-b5b8-6f712fbb4b25" /&gt;URIPrefix&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td colspan="1"&gt;/tours/&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 120.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-p" ac:schema-version="1" ac:macro-id="ca7bf4e2-084e-4a9c-ae15-85f1026ac5b1" /&gt;handlePrefix&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;-&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 120.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-p" ac:schema-version="1" ac:macro-id="26a95f9e-9607-484a-94aa-54467103f9e2" /&gt;repository&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;tours&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/ac:rich-text-body&gt;&lt;/ac:structured-macro&gt;&lt;p&gt;Properties&lt;/p&gt;&lt;table class="wrapped"&gt;&lt;colgroup&gt; &lt;col /&gt; &lt;col /&gt; &lt;/colgroup&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td colspan="1"&gt;&lt;code&gt;tours&lt;/code&gt;&lt;/td&gt;&lt;td colspan="1"&gt;&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;tours&lt;/code&gt; URI2Repository mapping node.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;code&gt;URIPrefix&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Injects the &lt;code&gt;/tours/&lt;/code&gt; path into the request URL.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;code&gt;repository&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Repository the mapping applies to.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h4&gt;Configuring VirtualURI mapping&lt;/h4&gt;&lt;p&gt;Virtual URI mapping allows you to create short, convenient URLs.&lt;/p&gt;&lt;p&gt;Here's the virtual URI mapping for the &lt;strong&gt;Tours&lt;/strong&gt; app in &lt;code&gt;/modules/tours/virtualURIMapping/toursMapping&lt;/code&gt;.&lt;/p&gt;&lt;ac:structured-macro ac:name="table-plus" ac:schema-version="1" ac:macro-id="3e944e30-3be0-4358-8e46-de725afc34f4"&gt;&lt;ac:parameter ac:name="heading"&gt;0&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="multiple"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="enableHeadingAttributes"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="enableSorting"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="class"&gt;m5-configuration-tree&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="enableHighlighting"&gt;false&lt;/ac:parameter&gt;&lt;ac:parameter ac:name="atlassian-macro-output-type"&gt;BLOCK&lt;/ac:parameter&gt;&lt;ac:rich-text-body&gt;&lt;table class="wrapped"&gt;&lt;colgroup&gt; &lt;col /&gt; &lt;col /&gt; &lt;/colgroup&gt;&lt;tbody&gt;&lt;tr&gt;&lt;th&gt;Node name&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p&gt;&lt;ac:structured-macro ac:name="mgnl-f" ac:schema-version="1" ac:macro-id="cdb892b0-aa55-48ca-8081-9b992e5ef05c" /&gt;modules&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-f" ac:schema-version="1" ac:macro-id="841eb55d-4c04-4609-9bed-f09406551c44" /&gt;tours&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 60.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-f" ac:schema-version="1" ac:macro-id="6545392c-cdb5-4462-ac25-52c30f5826dc" /&gt;virtualURIMapping&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="1"&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 90.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-n" ac:schema-version="1" ac:macro-id="12daf6c4-2a03-4b68-ab64-672cc3d32e93" /&gt;toursMapping&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td colspan="1"&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="1"&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 120.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-p" ac:schema-version="1" ac:macro-id="66ecc832-cedf-4a5e-b6c9-6d6b282d52ea" /&gt;class&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td colspan="1"&gt;info.magnolia.cms.beans.config.RegexpVirtualURIMapping&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 120.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-p" ac:schema-version="1" ac:macro-id="12886b65-c740-41ed-9868-d35e2edfbbf7" /&gt;fromURI&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;/tours(.*).html&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p style="margin-left: 120.0px;"&gt;&lt;ac:structured-macro ac:name="mgnl-p" ac:schema-version="1" ac:macro-id="ac9576cd-ea36-4aba-b9f8-366cb4a064d3" /&gt;toURI&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;forward:/travel/tour?tour=$1&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/ac:rich-text-body&gt;&lt;/ac:structured-macro&gt;&lt;p&gt;Properties:&lt;/p&gt;&lt;table class="wrapped"&gt;&lt;colgroup&gt; &lt;col /&gt; &lt;col /&gt; &lt;/colgroup&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;toursMapping&lt;/code&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;optional&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Tours virtual URI mapping node.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;code&gt;class&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;div class="content-wrapper"&gt;&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;ac:structured-macro ac:name="javadoc" ac:schema-version="1" ac:macro-id="3d09caed-7fb6-460a-8952-c294b9d92816"&gt;&lt;ac:parameter ac:name="0"&gt;info.magnolia.cms.beans.config.RegexpVirtualURIMapping&lt;/ac:parameter&gt;&lt;/ac:structured-macro&gt; allows you to specify a&amp;nbsp;regexp pattern that matches a sequence of characters. A pattern can match a variety of URIs.&lt;/p&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;code&gt;fromURI&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Path to tours in the &lt;code&gt;tours&lt;/code&gt; workspace as mapped in the &lt;ac:link ac:anchor="ConfiguringURI2Repositorymapping"&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[URI2Repository mapping configuration]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt;.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;p style="margin-left: 30.0px;"&gt;&lt;code&gt;toURI&lt;/code&gt;&lt;/p&gt;&lt;/td&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;required&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;URI to which tours are forwarded. &lt;code&gt;/travel&lt;/code&gt; is the root node of the site and &lt;code&gt;/tour&lt;/code&gt; is injected by the URI2Repository mapping configuration.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;h2&gt;Customizing search&lt;/h2&gt;&lt;p&gt;You can customize search by writing your own queries to search the index and execute them in code. A query returns a result set which you can display on a page.&lt;/p&gt;&lt;p&gt;Write queries in a language supported by the JCR repository such as SQL-2 (&lt;a href="http://www.h2database.com/jcr/grammar.html"&gt;grammar&lt;/a&gt;, &lt;a href="http://svn.apache.org/viewvc/jackrabbit/trunk/jackrabbit-spi-commons/src/test/resources/org/apache/jackrabbit/spi/commons/query/sql2/test.sql2.txt?view=markup"&gt;examples&lt;/a&gt;).&lt;/p&gt;&lt;p&gt;You can test your queries in the &lt;ac:link&gt;&lt;ri:page ri:content-title="JCR Tools app" /&gt;&lt;ac:plain-text-link-body&gt;&lt;![CDATA[Query subapp]]&gt;&lt;/ac:plain-text-link-body&gt;&lt;/ac:link&gt;. When you get the result set you want, implement the query in code.&lt;/p&gt;&lt;p&gt;&lt;ac:image ac:width="500"&gt;&lt;ri:attachment ri:filename="6-0-JCR-tools-query-app.png" /&gt;&lt;/ac:image&gt;&lt;/p&gt;&lt;h3&gt;Example queries&lt;/h3&gt;&lt;p&gt;The following queries are written in SQL-2.&amp;nbsp;&lt;span&gt;See&amp;nbsp;&lt;/span&gt; &lt;a href="http://wiki.magnolia-cms.com/display/WIKI/JCR+Query+Cheat+Sheet"&gt;JCR Query Cheat Sheet&lt;/a&gt; &lt;span&gt;&amp;nbsp;for more examples.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;1) Find pages that contain the word &amp;quot;swiss&amp;quot;.&lt;/p&gt;&lt;p&gt;Workspace:&amp;nbsp;&lt;code&gt;website&lt;/code&gt;&lt;/p&gt;&lt;ac:structured-macro ac:name="code" ac:schema-version="1" ac:macro-id="1d1b45f8-7500-4139-82af-dd5358aa30a3"&gt;&lt;ac:parameter ac:name="language"&gt;sql&lt;/ac:parameter&gt;&lt;ac:plain-text-body&gt;&lt;![CDATA[SELECT * FROM [mgnl:page] AS t WHERE</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ISDESCENDANTNODE([/tours]) AND CONTAINS(t.*, `swiss') ]]&gt;</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="2">
+<li>
+<p>Find modules that have <span class="confluence-link">commands</span> . This query looks
+for a folder named commands in the module configuration.</p>
+<div class="paragraph">
+<p>+
+Workspace: config</p>
+</div>
+<div class="paragraph">
+<p>+
+sql</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="3">
+<li>
+<p>Find assets that are not JPG images under the /example path in the
+DAM.</p>
+<div class="paragraph">
+<p>Workspace: dam</p>
+</div>
+<div class="paragraph">
+<p>sql `jpg') AND ISDESCENDANTNODE([/example]) ORDER BY [t].title asc]]&gt;</p>
+</div>
+<div class="paragraph">
+<p>Security</p>
+</div>
+<div class="paragraph">
+<p>Search within Magnolia is access controlled. Search results include only
+content the user has permission to access. Permissions are controlled
+through . When you execute a query in Magnolia context
+(info.magnolia.context.MgnlContext), contextual factors such as the
+current user’s permissions are taken into account. If you do not have
+permission to the items you are querying, they will not show up in the
+results.</p>
+</div>
+<div class="paragraph">
+<p>Further resources</p>
+</div>
+<div class="paragraph">
+<p>Apache.org</p>
+</div>
+<div class="paragraph">
+<p>Jackrabbit - Search implementation</p>
+</div>
+<div class="paragraph">
+<p>Search (wiki)</p>
+</div>
+<div class="paragraph">
+<p>Issues</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>–&gt;</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

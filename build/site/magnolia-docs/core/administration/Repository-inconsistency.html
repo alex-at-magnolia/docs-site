@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Repository inconsistency - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Repository-inconsistency.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Repository-inconsistency.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/Repository-inconsistency.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Repository-inconsistency.html">Repository inconsistency - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Repository inconsistency - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Troubleshooting.html">Troubleshooting</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595971"><a class="anchor" href="#src-196595971"></a>Repository inconsistency</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Common causes of corruptions in the repository are incorrect shutdown
+while the repository is writing to the database due to power failure,
+process killed, Runtime.halt() called, VM crash, Failure to finish
+transactions due to JVM errors such as OOME or core dump. Here are
+symptoms that help you identify a corrupt repository and some remedies.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595971_Repositoryinconsistency-Symptoms"><a class="anchor" href="#src-196595971_Repositoryinconsistency-Symptoms"></a>Symptoms</h3>
+<div class="paragraph">
+<p>The following types of messages are symptomatic of corruptions in the
+repository:</p>
+</div>
+<div class="paragraph">
+<p><strong>Orphaned child</strong><br>
+Error:
+<code>NodeState CHILD_UUID references inexistent parent uuid PARENT_UUID</code><br>
+Resolution: Use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Tools+module">Magnolia
+tools</a> to remove the node.</p>
+</div>
+<div class="paragraph">
+<p><strong>Parent referencing inexistent child</strong><br>
+Error:
+<code>NodeState PARENT_UUID references inexistent child {}CHILD_NAME with id CHILD_UUID</code><br>
+Resolution: consistency fix</p>
+</div>
+<div class="paragraph">
+<p><strong>Child referencing invalid parent</strong><br>
+Error:
+<code>ChildNode has invalid parent uuid: INVALID_PARENT_UUID (instead of VALID_PARENT_UUID)</code><br>
+Resolution: Use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Tools+module">Magnolia
+tools</a> to remove the node.</p>
+</div>
+<div class="paragraph">
+<p><strong>Parent not referencing existing child</strong><br>
+Error:
+<code>javax.jcr.ItemNotFoundException: failed to build path of CHILD_UUID: PARENT_UUID has no child entry for CHILD_UUID</code><br>
+Resolution: Use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Tools+module">Magnolia
+tools</a> to remove the node.</p>
+</div>
+<div class="paragraph">
+<p><strong>Node already exists</strong><br>
+Error:
+<code>javax.jcr.ItemExistsException: &lt;node_path&gt; at org.apache.jackrabbit.core.NodeImpl.internalAddChildNode(NodeImpl.java:766)</code><br>
+Resolution: consistency check</p>
+</div>
+<div class="paragraph">
+<p><strong>Search index inconsistency</strong><br>
+Error:
+<code>WARN NodeIteratorImpl: Exception retrieving Node with UUID: 003171fe-e2e8-457b-a3af-f74eed12c1b9: javax.jcr.ItemNotFoundException: 003171fe-e2e8-457b-a3af-f74eed12c1b9</code><br>
+Resolution: recreate search index</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595971_Repositoryinconsistency-Consistencychecksandfixes"><a class="anchor" href="#src-196595971_Repositoryinconsistency-Consistencychecksandfixes"></a>Consistency checks and fixes</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+To obtain a more detailed information about consistency checks in the
+logs, make sure you also have the appropriate setting in the log4j
+configuration file:</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;Logger name=<code>"org.apache.jackrabbit"</code> level=<code>"info"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;AppenderRef ref=<code>"console"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/Logger&gt;  `</p>
+</div>
+<div class="paragraph">
+<p>Together with a consistency check for a workspace enabled (see below),
+the logger would print the following into the log file:</p>
+</div>
+<div class="paragraph">
+<p><code>INFO  org.apache.jackrabbit.core.RepositoryImpl <code>16.10</code>.<code>2018</code> <code>09</code>:<code>48</code>:<code>32</code>&#8201;&#8212;&#8201;initializing workspace <code>'website'</code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>INFO  org.apache.jackrabbit.core.fs.local.LocalFileSystem <code>16.10</code>.<code>2018</code> <code>09</code>:<code>48</code>:<code>32</code>&#8201;&#8212;&#8201;LocalFileSystem initialized at path /m/mgnl-bundles/apache-tomcat/webapps/magnoliaAuthor/repositories/magnolia/workspaces/website/``default</code></p>
+</div>
+<div class="paragraph">
+<p><code>INFO  org.apache.jackrabbit.core.persistence.bundle.ConsistencyCheckerImpl <code>16.10</code>.<code>2018</code> <code>09</code>:<code>48</code>:<code>32</code>&#8201;&#8212;&#8201;website: checked <code>601</code> bundles.</code></p>
+</div>
+<div class="paragraph">
+<p><code>INFO  org.apache.jackrabbit.core.query.lucene.SearchIndex <code>16.10</code>.<code>2018</code> <code>09</code>:<code>48</code>:<code>32</code>&#8201;&#8212;&#8201;Index initialized: /m/mgnl-bundles/apache-tomcat/webapps/magnoliaAuthor/repositories/magnolia/workspaces/website/index Version: ``3</code></p>
+</div>
+<div class="paragraph">
+<p><code>INFO  org.apache.jackrabbit.core.RepositoryImpl <code>16.10</code>.<code>2018</code> <code>09</code>:<code>48</code>:<code>32</code>&#8201;&#8212;&#8201;workspace <code>'website'</code> initialized</code></p>
+</div>
+<div class="paragraph">
+<p>See especially line 3 in the result log.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595971_Repositoryinconsistency-Searchindex"><a class="anchor" href="#src-196595971_Repositoryinconsistency-Searchindex"></a>Search index</h4>
+<div class="paragraph">
+<p>You can run a search index consistency check for each workspace on
+startup. The <code>workspace.xml</code> files are available in
+<code>/&lt;CATALINA_HOME&gt;/webapps/&lt;contextPath&gt;/repositories/magnolia/workspaces/*</code>.</p>
+</div>
+<div class="paragraph">
+<p>In the relevant <code>workspace.xml</code> file add two parameters in the
+<code>&lt;SearchIndex class="&#8230;&#8203;"&gt;</code> element:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;param name=<code>"enableConsistencyCheck"</code> value=<code>"true"</code>/&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;param name=<code>"forceConsistencyCheck"</code> value=<code>"true"</code>/&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>autoRepair</code> parameter controls whether errors should be repaired or
+only logged.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;param name=<code>"autoRepair"</code> value=<code>"false"</code>/&gt; &lt;!-- <code>default</code> is <code>true</code> -&#8594;</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;SearchIndex <code>class</code>=<code>"org.apache.jackrabbit.core.query.lucene.SearchIndex"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param name=<code>"path"</code> value=<code>"${wsp.home}/index"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param name=<code>"enableConsistencyCheck"</code> value=<code>"true"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param name=<code>"forceConsistencyCheck"</code> value=<code>"true"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param name=<code>"autoRepair"</code> value=<code>"true"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/SearchIndex&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595971_Repositoryinconsistency-Workspace"><a class="anchor" href="#src-196595971_Repositoryinconsistency-Workspace"></a>Workspace</h4>
+<div class="paragraph">
+<p>You can run a consistency check for each workspace on startup by
+modifying the individual <code>workspace.xml</code> files. The <code>workspace.xml</code>
+files are in
+<code>/&lt;CATALINA_HOME&gt;/webapps/&lt;contextPath&gt;/repositories/magnolia/workspaces/*</code>.</p>
+</div>
+<div class="paragraph">
+<p>In the relevant <code>workspace.xml</code> file add the following parameter in the
+<code>&lt; PersistenceManager class="&#8230;&#8203;"&gt;</code> element:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;param name=<code>"consistencyCheck"</code> value=<code>"true"</code> /&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Restart Magnolia and the persistence manager will perform a consistency
+check and report the results in a log file.</p>
+</div>
+<div class="paragraph">
+<p>Some inconsistencies can be fixed by adding the following parameter to
+<code>workspace.xml</code> file. This should fix missing children, but will not fix
+missing references or problems caused by missing versions.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;param name=<code>"consistencyFix"</code> value=<code>"true"</code> /&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595971_Repositoryinconsistency-Clusters"><a class="anchor" href="#src-196595971_Repositoryinconsistency-Clusters"></a>Clusters</h4>
+<div class="paragraph">
+<p>In a clustered environment consistency checks and fixes can only run on
+one cluster node at a time. Don&#8217;t start other cluster nodes while the
+consistency fix is running. After it is finished, the other cluster
+nodes can be started.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595971_Repositoryinconsistency-Recreatingsearchindexes"><a class="anchor" href="#src-196595971_Repositoryinconsistency-Recreatingsearchindexes"></a>Recreating search indexes</h3>
+<div class="paragraph">
+<p>Search index folders are at
+<code>/&lt;CATALINA_OUT&gt;/webapps/&lt;contextPath&gt;/repository/magnolia/workspaces/&lt;workspace name&gt;/index</code>.</p>
+</div>
+<div class="paragraph">
+<p>To recreate the search indexes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Stop Magnolia.</p>
+</li>
+<li>
+<p>Make a backup copy of all <code>index</code> folders.</p>
+</li>
+<li>
+<p>Delete all <code>index</code> folders.</p>
+</li>
+<li>
+<p>The indexes will be recreated on startup.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If a workspace performs a re-indexing on startup and finds an
+inconsistency, the re-indexing process will fail. Add the
+<code>OnWorkspaceInconsistency</code> parameter in the <code>workspace.xml</code> file to
+prevent the failure. The process will just log the inconsistency.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;param name=<code>"onWorkspaceInconsistency"</code> value=<code>"log"</code>/&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Non EE receiver or subscriber</p>
+</div>
+<div class="paragraph">
+<p>Debugging package</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

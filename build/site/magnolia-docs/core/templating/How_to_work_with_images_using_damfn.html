@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to work with images using damfn - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/How_to_work_with_images_using_damfn.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="How_to_work_with_images_using_damfn.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/How_to_work_with_images_using_damfn.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="How_to_work_with_images_using_damfn.html">How to work with images using damfn - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">How to work with images using damfn - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Template_scripts.html">Template scripts</a></p>
+</li>
+<li>
+<p><a href="How_to_work_with_images.html">How to work with images</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596501"><a class="anchor" href="#src-196596501"></a>How to work with images using damfn</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page explains how to work with images and other assets stored in
+the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">Digital
+asset management</a> using <code>damfn</code>
+<a href="Templating_functions.html">templating functions</a> in template
+scripts.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596501_Howtoworkwithimagesusingdamfn-Imagingmodules"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Imagingmodules"></a>Imaging modules</h3>
+<div class="paragraph">
+<p>If you use a Magnolia bundle, the required and optional modules are
+already included.</p>
+</div>
+<div class="paragraph">
+<p>If you
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">created
+a custom webapp</a>, add the following modules in the pom file of the
+webapp of your bundle. The modules may have dependencies to other
+modules but these dependencies are handled by Maven dependency
+management.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-Requiredmodules"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Requiredmodules"></a>Required modules</h4>
+<div class="paragraph">
+<p>Modules required for basic image operations.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactId</th>
+<th class="tableblock halign-left valign-top">version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-dam-imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-imaging-support</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-Optionalmodules"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Optionalmodules"></a>Optional modules</h4>
+<div class="paragraph">
+<p>Modules required when using a Rendition of an asset, such as size
+variations of an image. Recommended.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactId</th>
+<th class="tableblock halign-left valign-top">version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-site</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-templating-essentials-imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596501_Howtoworkwithimagesusingdamfn-Selectingtheimageindialogwithalinkfield"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Selectingtheimageindialogwithalinkfield"></a>Selecting the image in dialog with a link field</h3>
+<div class="paragraph">
+<p>To select an image in a dialog use the <a href="Link_field.html">Link field</a>,
+it stores a reference to the selected asset.</p>
+</div>
+<div class="paragraph">
+<p>Example - code fragment from a <a href="Dialog_definition.html">dialog
+definition</a></p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabImage`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: image`</p>
+</div>
+<div class="paragraph">
+<p>`          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          targetWorkspace: dam`</p>
+</div>
+<div class="paragraph">
+<p>`          appName: assets`</p>
+</div>
+<div class="paragraph">
+<p>`          identifierToPathConverter:`</p>
+</div>
+<div class="paragraph">
+<p>`            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator`</p>
+</div>
+<div class="paragraph">
+<p>`          contentPreviewDefinition:`</p>
+</div>
+<div class="paragraph">
+<p>`            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596501_Howtoworkwithimagesusingdamfn-Displayinganimage"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Displayinganimage"></a>Displaying an image</h3>
+<div class="paragraph">
+<p>To render an image, you need to get a link to the asset. Use the link as
+a value in the <code>src</code> attribute of the <code>img</code> element.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-GettinganimagelinkwithanitemKey"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-GettinganimagelinkwithanitemKey"></a>Getting an image link with an itemKey</h4>
+<div class="paragraph">
+<p>Use the <code>#getAssetLink(itemKey)</code> method if you have the
+<a href="Templating_function_arguments_and_return_types.html#src-196596496_Templatingfunctionargumentsandreturntypes-itemKeyofanasset">itemKey</a>
+of the image. See:
+<a href="damfn.html#src-196596484_damfn-Getlinkforasset">Get link for asset</a>.
+For instance, the textImage component stores the itemKey in the <code>image</code>
+property. This is a very common use case.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Getting an image link with an itemKey. Assume that this code
+is executed in a component template. The current <code>content</code> node has a
+property named <code>image</code> where the itemKey is stored.</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign imgItemKey = content.image!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if imgItemKey??]</code></p>
+</div>
+<div class="paragraph">
+<p>`    [#assign imgRef = damfn.getAssetLink(imgItemKey)!]`</p>
+</div>
+<div class="paragraph">
+<p>`    [#if imgRef??]`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>img</code> <code>src</code>=<code>"${imgRef}"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-Gettinganimagelinkforanasset"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Gettinganimagelinkforanasset"></a>Getting an image link for an asset</h4>
+<div class="paragraph">
+<p>Use the <code>#getLink()</code> method if you already have the asset. Since an
+Asset object is a Java bean you can use its public method <code>#getLink()</code>.
+You may even use the dot notation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Getting an image link for an asset</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myAsset = damfn.getAsset(<code>"jcr"</code>,<code>"/photos/pool.jpg"</code>)!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> myAsset??]</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;img src=<code>"${myAsset.getLink()}"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign myAsset = damfn.getAsset(<code>"jcr"</code>,<code>"/photos/dilbert.jpg"</code>)!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> myAsset??]</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;img src=<code>"${myAsset.link}"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596501_Howtoworkwithimagesusingdamfn-Displayingresizedimages"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Displayingresizedimages"></a>Displaying resized images</h3>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>If you need different sizes of the same image, do NOT upload multiple
+copies (variations) of the same image to your DAM repository. Instead,
+upload the image only once and define image size variations in your
+<a href="Theme.html">theme</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-anc-defining-image-variationsDefiningimagevariations"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-anc-defining-image-variationsDefiningimagevariations"></a><span id="src-196596501_Howtoworkwithimagesusingdamfn-anc-defining-image-variations " class="confluence-anchor-link">#</span>#Defining image variations</h4>
+<div class="paragraph">
+<p>Configure your image variations in a theme. Each variation should be a
+node under <code>&lt;my-theme&gt;/imaging/variations</code>. The variation node name such
+as <code>small-square</code> is what you will be referencing in your template
+scripts. It is also known as <em>rendition name</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Defining three image variations in a <a href="Theme.html">theme</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">variations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">small-square</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.variation.SimpleResizeVariation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">crop</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thumbnail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.variation.SimpleResizeVariation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">200</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">medium</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.variation.SimpleResizeVariation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.VariationAwareImagingSupport</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Image variations for the various renditions of an image on the page.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>VariationAwareImagingSupport provides support for variations.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Enables and disables variation support.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>variations</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Map of image variations.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;variation‑name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the variation, a.k.a the rendition name. Choose a name that
+describes the variation. The name is used in template scripts to
+reference the variation. Add one node for every variation.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>You can use one of the available classes or create a custom one. The
+available properties depend on the class used for the variation. Any
+custom class must implement Variation.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia Templating Essentials module provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SimpleResizeVariation that resizes images to a defined size in pixels
+(see below for available properties).</p>
+</li>
+<li>
+<p>ImageOperationProvidingVariation that allows you to create your own
+image operation chain using the <code>mte</code> image generator.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;properties&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add properties that are supported by the class used.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>On the node <code>/modules/site/config/themes/&lt;your-theme&gt;/imaging</code> you must
+specify the class property. The used class must implement
+<a href="https://javadoc.magnolia-cms.com/info.magnolia.imaging.ImagingSupport">ImagingSupport</a>.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module">MTE module</a>
+provides
+<a href="https://javadoc.magnolia-cms.com/info.magnolia.templating.imaging.VariationAwareImagingSupport">VariationAwareImagingSupport</a>
+which is a good choice for our use case here.</p>
+</div>
+<div class="paragraph">
+<p>Add one node for every required variations below
+<code>&lt;your-theme&gt;/imaging/variations</code>. The name of such a node is the name
+of the variation. also known as the rendition name. In the example above
+we have defined the renditions <code>small-square</code>, <code>thumbnail</code> and <code>medium</code>.</p>
+</div>
+<div class="paragraph">
+<p>For every variation you have to configure some properties. The available
+properties depend on the class you use in the variation. You can
+implement your own class. The definition class must implement the
+<a href="https://javadoc.magnolia-cms.com/info.magnolia.imaging.variation.Variation">Variation</a>
+interface.</p>
+</div>
+<div class="paragraph">
+<p>In the example above we use
+<a href="https://javadoc.magnolia-cms.com/info.magnolia.templating.imaging.variation.SimpleResizeVariation">SimpleResizeVariation</a>.
+This class is provided by the <code>magnolia-templating-essentials-imaging</code>
+module. Your webapp bundle must contain the module.</p>
+</div>
+<div class="paragraph">
+<p>Properties of <code>SimpleResizeVariation</code>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Class must implement
+<a href="https://javadoc.magnolia-cms.com/info.magnolia.templating.imaging.variation.SimpleResizeVariation">SimpleResizeVariation</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>*</p>
+</div>
+<div class="paragraph">
+<p>An integer to define the height in pixels. You must configure either
+height or width or both.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>*</p>
+</div>
+<div class="paragraph">
+<p>An integer to define the width in pixels. You must configure either
+height or width or both.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>crop</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Defines whether cropping the image is allowed to fit the desired aspect
+ratio.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: A source image in the DAM is 800x800 px (square). In a
+variation you define the desired target size as 200x100 (rectangle) so
+the aspect ratio changes. By default <code>crop=true</code> which means cropping is
+allowed. Magnolia first resizes the image to 200x200 and then crops
+equally from the top and bottom to reach 200x100. No image distortion
+happens. If you set <code>crop=false</code> Magnolia squishes the image, resulting
+in distortion, to achieve the desired 200x100.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>*</strong>) You must define either width or height. If you do not define
+either, the renderer internally throws an ImagingException but displays
+the default size, the size of the original uploaded image. When you
+define both width and height, the image is resized accordingly and is
+cropped if the ratio does not fit. If you define only width or only
+height, the other property is calculated accordingly based on the ratio
+of the original image.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Make sure the site where you want to display the image variations
+references the theme. In the Site app, the theme <code>name</code> property must be
+the same as the main node of the configured theme, in this example
+<code>my-theme</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-theme</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-Gettinganimagevariation"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Gettinganimagevariation"></a>Getting an image variation</h4>
+<div class="paragraph">
+<p><strong>Example</strong>: Getting an image variation (asset rendition) with an itemKey.
+Assume that <code>content</code> in this example stores the itemKey in the <code>image</code>
+property.</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign imgItemKey = content.image!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#if imgItemKey??]</code></p>
+</div>
+<div class="paragraph">
+<p>`    [#assign myMediumRendition = damfn.getRendition(imgItemKey, "medium")!]`</p>
+</div>
+<div class="paragraph">
+<p>`    [#if myMediumRendition??]`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>img</code> <code>src</code>=<code>"${myMediumRendition.getLink()}"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Getting an image variation (asset rendition) for an asset.</p>
+</div>
+<div class="paragraph">
+<p><code>[#if myAsset?? &amp;&amp; myAsset.isAsset()]</code></p>
+</div>
+<div class="paragraph">
+<p>`    [#assign myThumbnail = damfn.getRendition(myAsset, "thumbnail")!]`</p>
+</div>
+<div class="paragraph">
+<p>`    [#if myThumbnail??]`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>img</code> <code>src</code>=<code>"${myThumbnail.getLink()}"</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596501_Howtoworkwithimagesusingdamfn-Imagevariationcache"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Imagevariationcache"></a>Image variation cache</h4>
+<div class="paragraph">
+<p>Magnolia caches image resources to improve performance. Any dynamic
+images generated by the Imaging module are also cached at two levels: in
+the <code>imaging</code> workspace and in the actual cache like any other page or
+document. This means that once the system generates an image, you keep
+getting the same cached image on subsequent requests.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596501_Howtoworkwithimagesusingdamfn-Disableimagecacheduringdevelopment"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Disableimagecacheduringdevelopment"></a>Disable image cache during development</h5>
+<div class="paragraph">
+<p>During developing it is helpful to disable caching of generated images
+completely. Go to <strong>Configuration &gt;</strong>
+<code>/server/filters/servlets/ImagingServlet/parameters</code>, create a new
+property <code>storeGeneratedImages</code>, and set its value to <code>false</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servlets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagingServlet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">storeGeneratedImages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Remove the property or to set it to <code>true</code> after having finished image
+variation development. Do not use this property in your production
+environment!</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596501_Howtoworkwithimagesusingdamfn-Deletingimagingvariationsintheimagingworkspace"><a class="anchor" href="#src-196596501_Howtoworkwithimagesusingdamfn-Deletingimagingvariationsintheimagingworkspace"></a>Deleting imaging variations in the imaging workspace</h5>
+<div class="paragraph">
+<p>Once image variations are stored in the <code>imaging</code> workspaces, they
+remain there. After you remove the <code>storeGeneratedImages</code> property, any
+cached image variations are served from the <code>imaging</code> workspace again.
+Delete the nodes from the workspace.</p>
+</div>
+<div class="paragraph">
+<p>Option 1: Groovy script. In the script, <code>examples-theme</code> is the name of
+your theme. You can run this script in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Groovy+module">Groovy
+console</a> or add a new script and run it.</p>
+</div>
+<div class="paragraph">
+<p><code>session = MgnlContext.getJCRSession(<code>'imaging'</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>images = session.getNode(<code>'/examples-theme'</code>)</code></p>
+</div>
+<div class="paragraph">
+<p><code>images.remove()</code></p>
+</div>
+<div class="paragraph">
+<p><code>session.save()</code></p>
+</div>
+<div class="paragraph">
+<p>Option 2: Delete the nodes in the <code>imaging</code> workspace in
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR Browser
+app</a>.</p>
+</div>
+<div class="paragraph">
+<p>How to work with images</p>
+</div>
+<div class="paragraph">
+<p>How to work with images using imgfn</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

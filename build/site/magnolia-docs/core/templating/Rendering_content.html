@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rendering content - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Rendering_content.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Rendering_content.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Rendering_content.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Rendering_content.html">Rendering content - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Rendering content - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596694"><a class="anchor" href="#src-196596694"></a>Rendering content</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Rendering is the process of merging templates with content. It generates
+a meaningful stream of HTML that can be displayed in a browser. This is
+the step where content becomes visible to the end user in page context.</p>
+</div>
+<div class="paragraph">
+<p>Advanced topic</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>It is not necessary to use a rendering model in Magnolia templating, but
+it is useful. Before you create your own model class, see if Magnolia&#8217;s
+<a href="Templating_functions.html">templating functions</a> have the logic you
+need. They may save you some effort.</p>
+</div>
+<div class="paragraph">
+<p>Rendering is performed by the RenderingEngine . The engine generates
+HTML output based on templates. The RenderingFilter that is part of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">filter chain</a>
+submits a content node to the engine.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Since submission of content is handled through a filter, an independent
+servlet or Java application can also submit content to the Magnolia
+rendering engine (FreeMarker only). You can trigger the rendering of any
+content node from Java code or template script. This is useful if you
+want to render a node that is not part of the page structure.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-Stepsinvolvedinrenderingcontent"><a class="anchor" href="#src-196596694_Renderingcontent-Stepsinvolvedinrenderingcontent"></a>Steps involved in rendering content</h3>
+<div class="paragraph">
+<p>On submission of content to the engine, the following process kicks off:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Read template definition</strong>: The rendering engine reads the
+<a href="Template_definition.html">template definition</a> assigned to the
+content. The template definition provides the engine with details such
+as a path to the <code>templateScript</code> and the templating language used
+(FreeMarker).</p>
+</li>
+<li>
+<p><strong>Select renderer</strong>: Based on the templating language, the engine
+selects a <a href="#src-196596694_Renderingcontent-Renderers">renderer</a>.
+Magnolia ships with three renderers:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Freemarker renderer.</p>
+</li>
+<li>
+<p>Site aware renderers.</p>
+</li>
+<li>
+<p>SPA renderer. (Uses slightly different rendering techniques.)<br>
+You can also use your own custom renderer.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Execute renderer</strong>: The renderer is executed. If the template
+definition specifies a model class then the renderer instantiates the
+model object from this class. The model is a JavaBean. This is where
+your business logic resides. Before the renderer calls the script, the
+model&#8217;s <code>execute()</code> method is called. The model can execute any Java
+code to retrieve data from the JCR repository or from an external
+source. The return value of the <code>execute</code> method is passed to the
+template script with the <code>actionResult</code> object.</p>
+</li>
+<li>
+<p><strong>Call template script</strong>: The renderer calls the assigned
+<a href="Template_scripts.html">template script</a> and passes the current
+content, the model and all <a href="Rendering_context_objects.html">context
+objects</a> to it. FreeMarker interpolations like <code>${content.title}</code> are
+replaced with actual values and <a href="Directives.html">directives</a> like
+<code>#list</code> are processed. The output of the merge process is an HTML stream
+response that can be displayed in a browser.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596694/rendering-engine.png" alt="images/download/attachments/196596694/rendering-engine.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-Renderers"><a class="anchor" href="#src-196596694_Renderingcontent-Renderers"></a>Renderers</h3>
+<div class="paragraph">
+<p>A renderer is a Java class library that understands a particular
+templating language and produces text output. For example,
+FreemarkerRenderer understands FreeMarker tags and produces output in
+HTML, XML, RTF, Java source code and a few other formats. A renderer is
+not an end-user application but rather something programmers can embed
+into their products. You can register a renderer in your own module
+configuration under a <code>renderers</code> folder. See
+<a href="Renderers.html">Renderers</a> for more.</p>
+</div>
+<div class="paragraph">
+<p>Any renderer that knows how to call a Java method can theoretically be
+used to render authoring UI components. Velocity (similar to FreeMarker
+but lighter) and ColdFusion are examples of popular templating languages
+that have been implemented successfully.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-Renderingorder"><a class="anchor" href="#src-196596694_Renderingcontent-Renderingorder"></a>Rendering order</h3>
+<div class="paragraph">
+<p>Rendering of page content happens in a top-to-bottom fashion. Rendered
+HTML is sent to the output stream as soon as it gets rendered.</p>
+</div>
+<div class="paragraph">
+<p>When a page template script calls an area, and the area in turn calls a
+component, the rendering engine follows referenced scripts down the
+rabbit hole until it finds the last script in the sequence. It then
+moves to the next element on the page, starting where it left off.</p>
+</div>
+<div class="paragraph">
+<p>As a consequence, you cannot redirect in a component model as the
+request was already committed when the rendering of the page started.
+Any operations changing the HTTP response headers (redirects, setting
+cookies&#8230;&#8203;) can only be executed in the page template&#8217;s model.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-Earlyexecutionofcomponents"><a class="anchor" href="#src-196596694_Renderingcontent-Earlyexecutionofcomponents"></a>Early execution of components</h3>
+<div class="paragraph">
+<p>Sometimes components need to be able to execute logic before page
+rendering starts. This is necessary for operations such as forwarding
+and redirecting.</p>
+</div>
+<div class="paragraph">
+<p>Early execution is implemented using ModelExecutionFilter . This filter
+comes before page rendering in the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">filter chain</a>. A
+special request parameter <code>mgnlModelExecutionUUID</code> contains the UUID of
+the component that should be executed. The component model can decide if
+it wants to output something special or continue with rendering
+normally. If the model implements EarlyExecutionAware interface, then
+the <code>executeEarly</code> method is called. Otherwise the normal <code>execute</code>
+method is called.</p>
+</div>
+<div class="paragraph">
+<p>Possible special instructions are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>skip-rendering</code> causes the rendering engine to abort page rendering.
+The template is never rendered.</p>
+</li>
+<li>
+<p><code>redirect:&lt;url&gt;</code> sends a redirect HTTP header to the client and stops
+page rendering. The URL can be absolute or relative inside the Web
+application, that is, the context path is added by Magnolia.</p>
+</li>
+<li>
+<p><code>permanent:&lt;url&gt;</code> sends a permanent redirect (301) to the client and
+stops page rendering. The URL can be absolute or relative.</p>
+</li>
+<li>
+<p><code>forward:&lt;url&gt;</code> performs a forward to the returned URL. The URL can be
+absolute or relative.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the component model decides to continue normally, the
+already-executed model and its <code>actionResult</code> are used instead of
+executing the model again.</p>
+</div>
+<div class="paragraph">
+<p>Early execution proceeds like this:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>ModelExecutionFilter filter is configured before page RenderingFilter
+in the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">filter chain</a>. This
+filter listens for the request parameter <code>mgnlModelExecutionUUID</code> which
+contains the UUID of a component that should be executed early.</p>
+</li>
+<li>
+<p>The filter calls the <code>execute</code> method of the component&#8217;s rendering
+model.</p>
+</li>
+<li>
+<p>The filter checks the returned value for special instructions and
+performs them. If the result is not a special instruction, the filter
+stores the returned <code>actionResult</code> and the model as request attributes
+and passes them on to the rendering pipeline. The request attribute is
+stored with a name that includes the UUID.</p>
+</li>
+<li>
+<p>AbstractRenderer checks for attributes set by the filter for the
+component it is about to render. If they are present their values are
+used, otherwise the model is executed normally.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596694/early-execution-of-components.png" alt="images/download/attachments/196596694/early-execution-of-components.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-anc-Direct-component-renderingDirectcomponentrendering"><a class="anchor" href="#src-196596694_Renderingcontent-anc-Direct-component-renderingDirectcomponentrendering"></a><span id="src-196596694_Renderingcontent-anc-Direct-component-rendering " class="confluence-anchor-link">#</span>#Direct component rendering</h3>
+<div class="paragraph">
+<p>You can request a component to be rendered directly by URL. This is
+useful when rendering Magnolia content in an external system, for
+example. The URL pattern follows the storage path in the JCR. For
+example, the first component in any area on your home page resides at
+path <code>/my-site/&lt;area name&gt;/0</code> in the JCR.</p>
+</div>
+<div class="paragraph">
+<p>Request the component using the path in the URL:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596694/direct-component-rendering.png" alt="images/download/attachments/196596694/direct-component-rendering.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-Directarearendering"><a class="anchor" href="#src-196596694_Renderingcontent-Directarearendering"></a>Direct area rendering</h3>
+<div class="paragraph">
+<p>Direct area rendering allows you to request any area that has a node in
+the JCR.</p>
+</div>
+<div class="paragraph">
+<p>To request an area, insert the <code>mgnlArea</code> selector into the URL after
+the page name but before the <code>.html</code> extension. Set the value to the
+area name.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>~mgnlArea=&lt;area name&gt;~</code></p>
+</div>
+<div class="paragraph">
+<p>To request a nested area, add the path to the nested area separated by
+commas.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>~mgnlArea=<a href="#main area name&gt;">&lt;nested area name</a>~</code></p>
+</div>
+<div class="paragraph">
+<p>Direct area rendering is achieved using a rendering listener registered
+in <code>/server/rendering/engine/listeners/directAreaRendering</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rendering</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">engine</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">listeners</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">directAreaRendering</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.rendering.listeners.AreaFilteringListener</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AreaFilteringListener is an area rendering listener for
+enabling/disabling output according to rendered content.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s <code>main</code> area of the <code>/travel/about</code> page rendered by the URL
+<code><a href="http://localhost:8080/magnoliaAuthor/travel/about" class="bare">http://localhost:8080/magnoliaAuthor/travel/about</a><sub>mgnlArea=main</sub>.html</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596694/direct-area-rendering.png" alt="images/download/attachments/196596694/direct-area-rendering.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If an area does not exist, the whole page is rendered. For example
+<code><a href="http://localhost:8080/magnoliaAuthor/your-site/about" class="bare">http://localhost:8080/magnoliaAuthor/your-site/about</a><sub>mgnlArea=NonExistingArea</sub>.html</code>
+will return 404.</p>
+</li>
+<li>
+<p>Where an area exists but contains no content an empty page is
+rendered.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596694_Renderingcontent-Populatingtherenderingmodelwithrequestparameters"><a class="anchor" href="#src-196596694_Renderingcontent-Populatingtherenderingmodelwithrequestparameters"></a>Populating the rendering model with request parameters</h3>
+<div class="paragraph">
+<p>You can populate the RenderingModel with request parameters. This is
+useful for reacting to URL information. For example, identify a visitor
+who comes from an email campaign and execute custom rendering logic for
+them. Here is an example of parameter that tells you the visitor clicked
+a link in a Campaign Monitor email campaign.</p>
+</div>
+<div class="paragraph">
+<p><code>http:`</code>//www.your-site.com/about.html?utm_source=CampaignMonitor`</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596694_Renderingcontent-Enablingthepopulationofrequestparameters"><a class="anchor" href="#src-196596694_Renderingcontent-Enablingthepopulationofrequestparameters"></a>Enabling the population of request parameters</h4>
+<div class="paragraph">
+<p>You can enable and disable the population of request parameters globally
+for all templates or for a specific template.</p>
+</div>
+<div class="paragraph">
+<p>If you cannot control the template, you can also do this for a specific
+component definition.</p>
+</div>
+<div class="paragraph">
+<p>Globally:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to <strong>Configuration &gt;</strong><code>/server/rendering/engine</code></p>
+</li>
+<li>
+<p>Create a new property <code>autoPopulateFromRequest</code> and set the value to
+<code>true</code> or <code>false</code>. <em>Default is `true`</em>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For a specific template definition, overriding the global setting:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to <strong>Configuration &gt;</strong>
+<code>/modules/&lt;your-module&gt;/templates/pages/&lt;template definition&gt;</code></p>
+</li>
+<li>
+<p>Create a new property <code>autoPopulateFromRequest</code> and set the value to
+<code>true</code> or <code>false</code>. <em>Default is null</em>. This means the global setting
+applies if you don&#8217;t set a value.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For a specific component definition, overriding the global setting:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to <strong>Configuration &gt;</strong>
+<code>/modules/&lt;your-module&gt;/templates/components/&lt;component_definition&gt;</code></p>
+</li>
+<li>
+<p>Create a new property <code>autoPopulateFromRequest</code> and set the value to
+<code>true</code> or <code>false</code>. <em>Default is null</em>. This means the global setting
+applies if you don&#8217;t set a value.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596694_Renderingcontent-Processingtheparameterinamodelclass"><a class="anchor" href="#src-196596694_Renderingcontent-Processingtheparameterinamodelclass"></a>Processing the parameter in a model class</h4>
+<div class="paragraph">
+<p>In your model class, implement a <code>setSomeParameter(String)</code> method. The
+method will be called with the attribute value as the parameter.</p>
+</div>
+<div class="paragraph">
+<p><code>class<code> MyModel </code>implements`</code> RenderingModel {`</p>
+</div>
+<div class="paragraph">
+<p>`    `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> String someParameter;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> setSomeParameter(String someParameter) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.someParameter = someParameter;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String getSomeParameter() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> someParameter;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Populating the rendering model with request attributes impacts
+performance. The rendering calculation takes about 8% longer when
+population is enabled. Enable it only for templates where it is really
+needed.</p>
+</div>
+<div class="paragraph">
+<p>Renderers</p>
+</div>
+<div class="paragraph">
+<p>Model</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

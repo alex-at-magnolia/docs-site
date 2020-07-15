@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting and using REST client instances - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Getting_and_using_REST_client_instances.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Getting_and_using_REST_client_instances.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Getting_and_using_REST_client_instances.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Getting_and_using_REST_client_instances.html">Getting and using REST client instances - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Getting and using REST client instances - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="REST_Client_module.html">REST Client module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204055107"><a class="anchor" href="#src-204055107"></a>Getting and using REST client instances</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204055107_GettingandusingRESTclientinstances-Gettingandusingclientinstances"><a class="anchor" href="#src-204055107_GettingandusingRESTclientinstances-Gettingandusingclientinstances"></a>Getting and using client instances</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="src-204055107_GettingandusingRESTclientinstances-restfntemplatingfunctions"><a class="anchor" href="#src-204055107_GettingandusingRESTclientinstances-restfntemplatingfunctions"></a>restfn templating functions</h3>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/restfn">restfn</a>
+templating functions allow you to obtain and use REST clients. This
+works only for clients that have been
+<a href="#src-204055107_GettingandusingRESTclientinstances-Configuration">configured</a>
+and
+<a href="#src-204055107_GettingandusingRESTclientinstances-Serviceinterfacedeclaration">declared</a>
+with RESTEasy client.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign jokesService = restfn.getService("icndbClient", "info.magnolia.documentation.modules.restclientexamples.client.IcndbService")]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign response = jokesService.joke("random", "Tiger", "Lilly") /]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>i</code>&gt;${response.get("value").get("joke").getTextValue()!"Nix found"}&lt;/<code>i</code>&gt;</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 1 accesses an instance of the client interface. In this example
+it is of type <code>IcndbService</code>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>First parameter is the name of the client configuration node
+(<code>icndbClient</code>),</p>
+</li>
+<li>
+<p>Second parameter is the fully qualified class name of the declared
+service interface
+(<code>info.magnolia.documentation.modules.restclientexamples.client.IcndbService</code>).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Line 2 calls the method <code>#joke</code> which returns a <code>JsonNode</code> object.</p>
+</li>
+<li>
+<p>Note that is a simplified example. See
+<a href="http://javadox.com/org.codehaus.jackson/jackson-core-asl/1.9.12/org/codehaus/jackson/class-use/JsonNode.html">jackson
+javadoc</a> how to further process the <code>JsonNode</code> or assign a raw response
+to a JavaScript variable to process JSON in a JavaScript context.</p>
+<div class="paragraph">
+<p><code>&lt;<code>script</code>&gt;</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>`    var jokeJson = '${jokesService.joke("random", "Tiger", "Lilly")!}';`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>script</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>During installation of the <code>magnolia-resteasy-client</code> module,
+RestEasyClientModuleVersionHandler adds <code>restfn</code> to renderer
+configurations. Make sure that the <code>renderType</code> of your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition">template
+definition</a> points to a renderer that is configured to use <code>restfn</code>. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating+functions">Configure
+the functions in a renderer</a> on how to add templating functions to a
+renderer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204055107_GettingandusingRESTclientinstances-Javausingclientregistry"><a class="anchor" href="#src-204055107_GettingandusingRESTclientinstances-Javausingclientregistry"></a>Java using client registry</h3>
+<div class="paragraph">
+<p>To explain how to obtain and use REST client, we look at a model class
+which uses the same client as in the above example:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> JokesModel&lt;RD </code>extends<code> RenderableDefinition&gt; </code>extends`</code> RenderingModelImpl&lt;RD&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>static</code> <code>final</code> Logger log = LoggerFactory.getLogger(JokesModel.<code>class</code>);`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> RestClientRegistry restClientRegistry;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> JokesModel(Node content, RD definition, RenderingModel&lt;?&gt; parent, RestClientRegistry restClientRegistry) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(content, definition, parent);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.restClientRegistry = restClientRegistry;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String getRandomJoke() {`</p>
+</div>
+<div class="paragraph">
+<p>`        String joke = <code>"No joke! Failed to fetch it due to an error. :-("</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        RestEasyClient client = <code>null</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        IcndbService service = <code>null</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>try</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`            client = (RestEasyClient) restClientRegistry.getRestClient(<code>"icndbClient"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`            service = client.getClientService(IcndbService.<code>class</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        } <code>catch</code> (RegistrationException e) {`</p>
+</div>
+<div class="paragraph">
+<p>`            log.error(<code>"Failed to get a client for [icndbClient]."</code>, e);`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (service != <code>null</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`            JsonNode response = service.joke(<code>"random"</code>, <code>"Tiger"</code>, <code>"Lilly"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>try</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`                joke = response.get(<code>"value"</code>).get(<code>"joke"</code>).getTextValue();`</p>
+</div>
+<div class="paragraph">
+<p>`            } <code>catch</code> (Exception e) {`</p>
+</div>
+<div class="paragraph">
+<p>`                log.error(<code>"Failed to fetch the joke when parsing response."</code>, e);`</p>
+</div>
+<div class="paragraph">
+<p>`            }`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> joke;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add RestClientRegistry as parameter into the constructor and assign it
+as final instance variable (See lines 5, 7, 9.)</p>
+</li>
+<li>
+<p>Obtain RestEasyClient object from the RestClientRegistry. Note that
+#getRestClient requires the configured name of the rest client
+definition. (See line 17.)</p>
+</li>
+<li>
+<p>Create an instance of the declared interface <code>IcndbService</code>. (See line
+18.)</p>
+</li>
+<li>
+<p>Now call the declared method(s) on the service (line 23).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204055107_GettingandusingRESTclientinstances-Componentexample"><a class="anchor" href="#src-204055107_GettingandusingRESTclientinstances-Componentexample"></a>Component example</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You have the option to configure components (filters) to be executed on
+every request. One use case could be authentication.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204055107_GettingandusingRESTclientinstances-ClientRequestFilter"><a class="anchor" href="#src-204055107_GettingandusingRESTclientinstances-ClientRequestFilter"></a>Client Request Filter</h3>
+<div class="paragraph">
+<p>Here is a sample filter that would handle authorization for each
+request.</p>
+</div>
+<div class="paragraph">
+<p>AuthenticationInterceptor</p>
+</div>
+<div class="paragraph">
+<p><code>package`</code> org.example.filters;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.context.Context;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.context.MgnlContext;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> java.io.IOException;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.ws.rs.client.ClientRequestContext;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.ws.rs.client.ClientRequestFilter;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.ws.rs.ext.Provider;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> org.slf4j.Logger;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> org.slf4j.LoggerFactory;`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>` * Interceptor for rest easy to handle authentication with an access token.`</p>
+</div>
+<div class="paragraph">
+<p>` */`</p>
+</div>
+<div class="paragraph">
+<p><code>@Provider</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> AuthenticationInterceptor </code>implements`</code> ClientRequestFilter {`</p>
+</div>
+<div class="paragraph">
+<p>`    `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>static</code> <code>final</code> Logger log = LoggerFactory.getLogger(AuthenticationInterceptor.<code>class</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> filter(ClientRequestContext requestContext) <code>throws</code> IOException {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (MgnlContext.hasInstance() &amp;&amp; MgnlContext.hasAttribute(<code>"ACCESS_TOKEN"</code>, Context.APPLICATION_SCOPE)) {`</p>
+</div>
+<div class="paragraph">
+<p>`            requestContext.getHeaders().putSingle(<code>"Authorization"</code>, `</p>
+</div>
+<div class="paragraph">
+<p>`              <code>"OAuth "</code> + MgnlContext.getAttribute(<code>"ACCESS_TOKEN"</code>, Context.APPLICATION_SCOPE));`</p>
+</div>
+<div class="paragraph">
+<p>`            log.trace(<code>"Authorization : {}"</code>, `</p>
+</div>
+<div class="paragraph">
+<p>`              (String) MgnlContext.getAttribute(<code>"ACCESS_TOKEN"</code>, Context.APPLICATION_SCOPE));`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Example REST client configurations</p>
+</div>
+<div class="paragraph">
+<p>JSON data source</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

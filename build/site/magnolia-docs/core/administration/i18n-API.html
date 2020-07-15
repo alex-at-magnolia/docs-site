@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>i18n API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/i18n-API.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="i18n-API.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/i18n-API.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="i18n-API.html">i18n API - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">i18n API - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Language.html">Language</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595860"><a class="anchor" href="#src-196595860"></a>i18n API</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page describes the Magnolia i18n API, which is based on standard
+<a href="https://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html">Java
+resource bundles</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_i18nAPI-Overview"><a class="anchor" href="#src-196595860_i18nAPI-Overview"></a>Overview</h3>
+<div class="paragraph">
+<p>The Magnolia i18n API is based on
+<a href="#src-196595860_i18nAPI-Thebase-Javamessagebundle">Java resource
+bundles</a> and related classes. Among the main advantages of this API are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-196595860_i18nAPI-AutomaticloadingofmessagebundlesfromtheMagnoliai18nfolder">a
+mechanism to automatically load bundles</a>, eliminating the need to handle
+bundle base names</p>
+</li>
+<li>
+<p>merging bundles into one large bundle</p>
+</li>
+<li>
+<p><a href="#src-196595860_i18nAPI-Auto-generatedkeys">automatic generation of
+keys for Magnolia items</a> such as template definitions, dialogs, apps and
+similar things</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_safe-id-aTE4bkFQSS1UaGViYXNl4oCTSmF2YW1lc3NhZ2VidW5kbGU"><a class="anchor" href="#src-196595860_safe-id-aTE4bkFQSS1UaGViYXNl4oCTSmF2YW1lc3NhZ2VidW5kbGU"></a>The base – Java message bundle</h3>
+<div class="paragraph">
+<p>Java provides an API to load resource properties files for the purposes
+of internationalization.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595860_i18nAPI-message-bundle"><a class="anchor" href="#src-196595860_i18nAPI-message-bundle"></a><span id="src-196595860_i18nAPI-message-bundle2 " class="confluence-anchor-link">#</span>#</h4>
+
+</div>
+<div class="sect3">
+<h4 id="src-196595860_safe-id-aTE4bkFQSS1XaGF0aXNhbWVzc2FnZWJ1bmRsZT8"><a class="anchor" href="#src-196595860_safe-id-aTE4bkFQSS1XaGF0aXNhbWVzc2FnZWJ1bmRsZT8"></a>What is a message bundle?</h4>
+<div class="paragraph">
+<p>A message bundle
+(<a href="http://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html">resource
+bundle</a> in Java) is a collection of <code>.properties</code> files. Each file
+contains key-value pairs of translated user interface text such as
+labels and messages. The keys in all files of the same bundle are
+identical but the values are language specific translations.</p>
+</div>
+<div class="paragraph">
+<p>A message bundle must contain at least one <code>.properties</code> file. The files
+are named after the language (locale):
+<code>&lt;bundle-name&gt;_&lt;locale&gt;.properties</code>, for example
+<code>app-pages-messages_en.properties</code>. Every Magnolia module should provide
+its own message bundle. If a module installs several apps, each app
+should have its own message bundle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595860_i18nAPI-Bundlebasenameandlocation"><a class="anchor" href="#src-196595860_i18nAPI-Bundlebasenameandlocation"></a>Bundle basename and location</h4>
+<div class="paragraph">
+<p>Typically message bundle files are located within the <code>resources</code>
+directory of a Java (Maven) project. For example, the files could be in
+the <code>src/main/resources/com/example/foobar/messages</code> directory:</p>
+</div>
+<div class="paragraph">
+<p><code>src/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── main/</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── resources/`</p>
+</div>
+<div class="paragraph">
+<p>`        └── com/`</p>
+</div>
+<div class="paragraph">
+<p>`            └── example/`</p>
+</div>
+<div class="paragraph">
+<p>`                └── foobar/`</p>
+</div>
+<div class="paragraph">
+<p>`                    └── messages/`</p>
+</div>
+<div class="paragraph">
+<p>`                        ├── app-texts_en.properties`</p>
+</div>
+<div class="paragraph">
+<p>`                        └── app-texts_de.properties`</p>
+</div>
+<div class="paragraph">
+<p>Working with the ordinary Java internationalization API you have to know
+the <strong>basename</strong> to load a message bundle. The basename for the above
+bundle would be <code>com.example.foobar.messages.app-texts</code>. The basename
+reflects the location within the module by the dot notation. Magnolia
+allows you to use this "plain" Java internationalization API and
+provides utility classes to operate with it. However, we recommend using
+the Magnolia i18n API.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_i18nAPI-AutomaticloadingofmessagebundlesfromtheMagnoliai18nfolder"><a class="anchor" href="#src-196595860_i18nAPI-AutomaticloadingofmessagebundlesfromtheMagnoliai18nfolder"></a>Automatic loading of message bundles from the Magnolia i18n folder</h3>
+<div class="paragraph">
+<p>The Magnolia i18n API automatically loads message bundles if they are
+kept in the appropriate folders:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Location</th>
+<th class="tableblock halign-left valign-top">In Magnolia Maven module</th>
+<th class="tableblock halign-left valign-top">In Magnolia light module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preferred</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/main/resources/&lt;module-name&gt;/i18n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;magnolia.resources.dir&gt;/&lt;module-name&gt;/i18n</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/main/resources/mgnl-i18n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Message bundles stored in these directories will be loaded automatically
+during module startup.</p>
+</div>
+<div class="paragraph">
+<p>*)
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you have modules with message bundles located within the deprecated
+folder, make sure that the bundles' file names are unique!</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595860_i18nAPI-Bundleloadorderandbundlemerging"><a class="anchor" href="#src-196595860_i18nAPI-Bundleloadorderandbundlemerging"></a>Bundle load order and bundle merging</h4>
+<div class="paragraph">
+<p>Message bundles are loaded in the same order as modules. The Magnolia
+i18n API loads bundles automatically during module startup as long as
+they are stored in the directories specified in the table above. If
+present in the directories, all bundles from all modules are merged at
+startup into one large bundle, a virtual file, which is then used by the
+Magnolia i18n API.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The keys stored in the message files in the <code>i18n</code> folder, as well as in
+the deprecated <code>mgnl-i18n</code> folder, must be unique throughout all files
+in Magnolia i18n directories. When using one and the same key twice, the
+one which is loaded second overwrites the one loaded first. Organize
+your bundles and keys in a way that does not depend on the bundle load
+order.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_i18nAPI-Auto-generatedkeys"><a class="anchor" href="#src-196595860_i18nAPI-Auto-generatedkeys"></a>Auto-generated keys</h3>
+<div class="paragraph">
+<p>The Magnolia i18n API automatically creates and assigns keys for
+properties of items such as template definition, dialog definition,
+forms, fields, validators, column definitions, subapp description, app
+definition and others. Depending on the underlying I18nKeyGenerator ,
+one or more keys are generated for a property. As a result, you don&#8217;t
+have to assign keys to them. You only have to provide the translations,
+at least one translation for one key. Please note that you may
+nonetheless use your own custom keys instead of those that are generated
+automatically by Magnolia.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595860_safe-id-aTE4bkFQSS1FeGFtcGxlOkF1dG8tZ2VuZXJhdGVka2V5c2luYXRlbXBsYXRlZGVmaW5pdGlvbg"><a class="anchor" href="#src-196595860_safe-id-aTE4bkFQSS1FeGFtcGxlOkF1dG8tZ2VuZXJhdGVka2V5c2luYXRlbXBsYXRlZGVmaW5pdGlvbg"></a>Example: Auto-generated keys in a template definition</h4>
+<div class="paragraph">
+<p>Let&#8217;s suppose there is a template named <code>dilberts-page</code> in a module
+called <code>foobar</code> and the task is to provide the translation of the
+<code>title</code> property of this template definition.</p>
+</div>
+<div class="paragraph">
+<p>Here is the yaml template definition file:</p>
+</div>
+<div class="paragraph">
+<p>foobar/templates/pages/dilberts-page (fragment)</p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /foobar/templates/pages/dilberts-page.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>visible: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: foobar:pages/dilberts-page-properties</code></p>
+</div>
+<div class="paragraph">
+<p>`#title: foobar.customlabels.page.dilbert.title `</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The key for the <code>title</code> property is created automatically by Magnolia,
+you do not have to provide it. In fact Magnolia will recognize two keys,
+one with module name and one without it:</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>foobar.templates.pages.dilberts-page</code></p>
+</div>
+<div class="paragraph">
+<p><code>templates.pages.dilberts-page</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 5: If desired, you can assign a custom key.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is the message bundle file for the translation of the <code>foobar</code>
+module:</p>
+</div>
+<div class="paragraph">
+<p>foobar/i18n/module-foobar-messages_en.properties (fragment)</p>
+</div>
+<div class="paragraph">
+<p><code># Translation for the auto-generated key(s)</code></p>
+</div>
+<div class="paragraph">
+<p><code>#</code></p>
+</div>
+<div class="paragraph">
+<p><code>#templates.pages.dilberts-page=This is the dilbert page :-/</code></p>
+</div>
+<div class="paragraph">
+<p><code>foobar.templates.pages.dilberts-page=This is the dilbert page :-)</code></p>
+</div>
+<div class="paragraph">
+<p><code># Translation for the custom key(s)</code></p>
+</div>
+<div class="paragraph">
+<p><code>#</code></p>
+</div>
+<div class="paragraph">
+<p><code>foobar.customlabels.page.dilbert.title=Dilberts page :^)</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595860_i18nAPI-Generickeys"><a class="anchor" href="#src-196595860_i18nAPI-Generickeys"></a>Generic keys</h4>
+<div class="paragraph">
+<p>Note that Magnolia provides many so called "generic keys" which are
+already translated and which may fit to your items. See
+<a href="Generic-i18n-keys.html">generic i18n keys</a> for further details.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_i18nAPI-Keygenerators"><a class="anchor" href="#src-196595860_i18nAPI-Keygenerators"></a>Key generators</h3>
+<div class="paragraph">
+<p>Magnolia provides different key generator classes for different items.
+These key generators are responsible for the creation and assignment of
+the auto-generated keys.</p>
+</div>
+<div class="paragraph">
+<p>You can also implement your own custom key generator class. Implement
+I18nKeyGenerator or extend AbstractI18nKeyGenerator .</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_i18nAPI-I18nableandI18nTextannotations"><a class="anchor" href="#src-196595860_i18nAPI-I18nableandI18nTextannotations"></a>I18nable and I18nText annotations</h3>
+<div class="paragraph">
+<p>Below is an example of an existing Magnolia definition class using an
+existing key generator class:</p>
+</div>
+<div class="paragraph">
+<p>info.magnolia.rendering.template.RenderableDefinition (simplified)</p>
+</div>
+<div class="paragraph">
+<p><code>@I18nable<code>(keyGenerator = RenderableDefinitionKeyGenerator.</code>class`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface<code> RenderableDefinition </code>extends`</code> NamedDefinition {`</p>
+</div>
+<div class="paragraph">
+<p>`    String getId();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    String getName();`</p>
+</div>
+<div class="paragraph">
+<p>`    String getRenderType();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@I18nText</code></p>
+</div>
+<div class="paragraph">
+<p>`    String getTitle();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@I18nText</code></p>
+</div>
+<div class="paragraph">
+<p>`    String getDescription();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Deprecated</code></p>
+</div>
+<div class="paragraph">
+<p>`    String getI18nBasename();`</p>
+</div>
+<div class="paragraph">
+<p>`    String getTemplateScript();`</p>
+</div>
+<div class="paragraph">
+<p>`    Map&lt;String, RenderableDefinition&gt; getVariations();`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 1: I18nable annotation specifies the key generator class.</p>
+</li>
+<li>
+<p>Lines 11, 14: I18nText annotation marks methods that return text which
+should be translated.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Use I18nable and I18nText for custom definition classes which should be
+i18n-ized.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+From Magnolia 6.2.1, any method annotated with I18nText uses
+<code>NO_FALLBACK</code> by default if no translation is found.</p>
+</div>
+<div class="paragraph">
+<p>info.magnolia.i18nsystem.I18nText</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>@interface`</code> I18nText {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Without {@link #fallback()} explicitly specified, {@link info.magnolia.i18nsystem.TranslationServiceImpl} use the longest i18n key if translation key is not found as fallback.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    String NO_FALLBACK = <code>"&lt;no-fallback&gt;"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * @return Value to be used if no translation is found.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    String fallback() <code>default</code> NO_FALLBACK;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595860_safe-id-aTE4bkFQSS1TaW1wbGVUcmFuc2xhdG9y4oCTdXNpbmdpMThuaW5KYXZhY2xhc3Nlcw"><a class="anchor" href="#src-196595860_safe-id-aTE4bkFQSS1TaW1wbGVUcmFuc2xhdG9y4oCTdXNpbmdpMThuaW5KYXZhY2xhc3Nlcw"></a>SimpleTranslator – using i18n in Java classes</h3>
+<div class="paragraph">
+<p>If you want to internationalize UI elements or other things which are
+built directly on Java, use the SimpleTranslator translation service. In
+a simple content app, you probably won&#8217;t need to create UI elements in
+code since most of them can be configured. But if you do a custom app or
+anything more complex, below is the way the translation service should
+be used:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Do NOT instantiate <code>SimpleTranslator</code> but inject it in the constructor.</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.i18nsystem.SimpleTranslator;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> com.vaadin.ui.Button;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.inject.Inject;`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MyClass {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> SimpleTranslator i18n;`</p>
+</div>
+<div class="paragraph">
+<p>`  `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyClass(SimpleTranslator i18n){`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.i18n = i18n;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> someMethod(){`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>`// more code here &#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>`        Button sendMessageButton = <code>new</code> Button(i18n.translate(<code>"messages-app.app.button.sendMessage"</code>));`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>`// more code here &#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Then pass the key in the <code>#translate(String key).</code></p>
+</div>
+<div class="paragraph">
+<p>The key <code>messages-app.app.button.sendMessage</code> must be in a message file
+with a value:</p>
+</div>
+<div class="paragraph">
+<p>myapp-messages_en.properties</p>
+</div>
+<div class="paragraph">
+<p><code>messages-app.app.button.sendMessage=Send message</code></p>
+</div>
+<div class="paragraph">
+<p>Generic i18n keys</p>
+</div>
+<div class="paragraph">
+<p>i18n best practices</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

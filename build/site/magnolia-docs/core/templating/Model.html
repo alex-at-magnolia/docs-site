@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Model - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Model.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Model.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Model.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Model.html">Model - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Model - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Rendering_content.html">Rendering content</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596703"><a class="anchor" href="#src-196596703"></a>Model</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>A template model provides properties and methods which can be accessed
+in the corresponding template script.</p>
+</div>
+<div class="paragraph">
+<p>The model can be implemented in Java or - since Magnolia 5.5.6 it can
+also be written in JavaScript following
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
+development</a> approach - thus enabling fast development and deployment
+without the need for Java, Maven or WAR deployment.</p>
+</div>
+<div class="paragraph">
+<p>This page covers Java based models. For the JS based models please read
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+JavaScript+models">How
+to work with JavaScript models</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This is an advanced topic.</p>
+</div>
+<div class="paragraph">
+<p>It is not necessary to use a model in Magnolia templating, but it is
+useful. If you are starting out with Magnolia use
+<a href="Templating_functions.html">templating functions</a> instead of a model.
+Model classes cannot be added to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules#Modules-Lightmodule">light
+modules</a> because light modules cannot contain their own Java classes.
+However, a light module can reference a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module#MTEmodule-Componentmodels">component
+model</a> from another module such as
+<a href="#src-196596703_Model-MTEcomponentmodels">MTE</a>.</p>
+</div>
+<div class="paragraph">
+<p>A model can execute any Java code to retrieve data from the JCR
+repository or from an external source.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596703/rendering-diagram.png" alt="images/download/attachments/196596703/rendering-diagram.png" height="250"></span></p>
+</div>
+<div class="sect2">
+<h3 id="src-196596703_safe-id-TW9kZWwtV2hhdGlzYW1vZGVsPw"><a class="anchor" href="#src-196596703_safe-id-TW9kZWwtV2hhdGlzYW1vZGVsPw"></a>What is a model?</h3>
+<div class="paragraph">
+<p>A model is written as a Java model class. It is a JavaBean where
+business logic resides. The model class is the entry point for custom
+Java logic for the template script. All
+<a href="Template_definition.html">templates</a> -
+<a href="Page_definition.html">page</a>, <a href="Area_definition.html">area</a> and
+<a href="Component_definition.html">component</a> - can define a model class.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596703_safe-id-TW9kZWwtSG93ZG9lc2Ftb2RlbHdvcms_"><a class="anchor" href="#src-196596703_safe-id-TW9kZWwtSG93ZG9lc2Ftb2RlbHdvcms_"></a>How does a model work?</h3>
+<div class="paragraph">
+<p>During the
+<a href="Rendering_content.html#src-196596694_Renderingcontent-Stepsinvolvedinrenderingcontent">rendering
+process</a>, the renderer calls the model&#8217;s <code>execute()</code> before it calls the
+template script. The return value of the <code>execute</code> method is passed to
+the template script with the <code>actionResult</code> object.</p>
+</div>
+<div class="paragraph">
+<p>The model class:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Is instantiated for each rendering process.</p>
+</li>
+<li>
+<p>Is provided to the respective script as an object
+<a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-model">model</a>.</p>
+</li>
+<li>
+<p>Is provided the
+<a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-content">current
+content</a>, the
+<a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-def">current
+page definition</a> and any
+<a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-model">parent
+model</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of the model&#8217;s public methods can be
+<a href="#src-196596703_Model-Acessingmodelmethods">accessed</a> by the template
+script.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596703_Model-Benefitsofusingamodel"><a class="anchor" href="#src-196596703_Model-Benefitsofusingamodel"></a>Benefits of using a model</h3>
+<div class="paragraph">
+<p>There are a number of benefits to using a model:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provides a clean separation between script rendering and business
+logic. You can change business logic without changing rendering logic.</p>
+</li>
+<li>
+<p>Different page, area and component templates can use the same business
+logic.</p>
+</li>
+<li>
+<p>Interaction between template scripts and their models can be
+predefined during the conceptual project phase.</p>
+</li>
+<li>
+<p>Model classes and template scripts can be developed independently,</p>
+</li>
+<li>
+<p>Because the model is a Java class, you can use all Magnolia Java
+components.</p>
+</li>
+<li>
+<p>Model classes are reusable and can be subclassed.</p>
+</li>
+<li>
+<p>You can retain control of the business logic by preventing changes by
+front-end script developers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596703_Model-Referencingamodel"><a class="anchor" href="#src-196596703_Model-Referencingamodel"></a>Referencing a model</h3>
+<div class="paragraph">
+<p>All templates can use a model class. The model class is referenced in
+the <code>modelClass</code> property in the
+<a href="Template_definition.html#src-196596456_Templatedefinition-Commontemplateproperties">template
+definition</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: A home page template that uses a model class<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>/my-module/templates/pages/home.yaml</p>
+</div>
+<div class="paragraph">
+<p>`renderType: freemarker `</p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /my-module/templates/pages/home.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: my-module:pages/homePageProperties</code></p>
+</div>
+<div class="paragraph">
+<p><code>modelClass: com.example.templates.HomePageModel</code></p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">home</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dialog</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:pages/home.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.templates.HomePageModel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/templates/pages/home.ftl</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596703_Model-Usingmodelmethods"><a class="anchor" href="#src-196596703_Model-Usingmodelmethods"></a>Using model methods</h3>
+<div class="paragraph">
+<p>Model classes provide their own methods. You can use any <code>public</code> method
+in your templates. The methods are exposed using the
+<code>model.&lt;method name&gt;</code> notation.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+All getters without parameters can be accessed without the 'get' part of
+the method name and without the method brackets. Methods that expect
+parameters can only be called by the full method declaration.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: How to use model methods in your templates</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Model class method</th>
+<th class="tableblock halign-left valign-top">Usage in a template script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>` <code>public</code> String getName()`</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>${model.name}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${model.getName()}</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>` <code>public</code> Collection getLatestNews()`</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>${model.latestNews}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${model.getLatestNews()}</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>` <code>public</code> <code>boolean</code> isArchivedNews()`</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>[#if model.archivedNews] &#8230;&#8203; [/#if]</code></p>
+</div>
+<div class="paragraph">
+<p><code>${model.archivedNews?string}</code></p>
+</div>
+<div class="paragraph">
+<p><code>${model.isArchivedNews()?string}</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>public`</code> String getContact(String contactName)`</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>` ${model.getContact("marilyn")}`</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596703_Model-Modelconstructor"><a class="anchor" href="#src-196596703_Model-Modelconstructor"></a>Model constructor</h3>
+<div class="paragraph">
+<p>These following <a href="Rendering_context_objects.html">objects</a> are passed
+into the constructor of a model:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-content">current
+content</a>: The content of the current rendered template.</p>
+</li>
+<li>
+<p><a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-def">current
+definition</a>: The template definition of the current rendered template.</p>
+</li>
+<li>
+<p><a href="Rendering_context_objects.html#src-196596497_Renderingcontextobjects-model">parent
+model</a>: Is the parent model of the last render cycle.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The constructor of a model uses
+<a href="https://en.wikipedia.org/wiki/Generics_in_Java">Java Generics</a>. The used
+definition can be defined by generics. No casts are needed.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> NavigationComponentModel&lt;RD </code>extends<code> ConfiguredTemplateDefinition&gt; </code>extends`</code> RenderingModelImpl&lt;ConfiguredTemplateDefinition&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> NavigationComponentModel(Node content, ConfiguredTemplateDefinition definition, RenderingModel&lt;?&gt; parent) <code>throws</code> PathNotFoundException, RepositoryException {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(content, definition, parent);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Rendering content</p>
+</div>
+<div class="paragraph">
+<p>Template availability</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

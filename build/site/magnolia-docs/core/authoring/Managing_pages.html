@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Managing pages - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/authoring/Managing_pages.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Managing_pages.html">master</a>
+    <a class="version" href="../../6.2.1/core/authoring/Managing_pages.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Managing_pages.html">Managing pages - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Managing pages - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Authoring.html" class="bare">Authoring.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Authoring.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596041"><a class="anchor" href="#src-196596041"></a>Managing pages</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>The Pages app displays your site hierarchy. Here you can add pages and
+move them around.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596041_Managingpages-Sitehierarchy"><a class="anchor" href="#src-196596041_Managingpages-Sitehierarchy"></a>Site hierarchy</h3>
+<div class="paragraph">
+<p>Pages on a site are displayed in a hierarchical tree. Each site tree has
+a root page (home page) and child pages.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596041/6-1-managingPages.png" alt="images/download/attachments/196596041/6-1-managingPages.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Columns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Page</strong>: Name of the JCR node. JCR
+<a href="#src-196596041_Managingpages-Characterrestrictions">character
+restrictions</a> apply to the name, meaning some characters are not allowed
+in page names. Invalid characters are automatically substituted with a
+hyphen. The page name is used in the URL. The convention is to use
+lower-case words separated by hyphens, for example <code>standard-article</code>
+and <code>news-and-events</code>.</p>
+</li>
+<li>
+<p><strong>Title</strong>: Displayed to visitors. It may be different from the page name
+and can contain any character. The title string is used in the HTML
+<code>title</code> element, in the <code>h1</code> heading on the page and in the navigation
+title.</p>
+</li>
+<li>
+<p><strong>Template</strong>: Template
+<a href="#src-196596041_Managingpages-Assigningatemplatetoapage">assigned</a> to
+the page.</p>
+</li>
+<li>
+<p><strong>Status</strong>: Shows the publication status of the page:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="../../_images/images/download/attachments/196598877/6-1-editingPages-statusPublished.gif" alt="images/download/attachments/196598877/6-1-editingPages-statusPublished.gif" height="16"></span>
+Published (green, solid): Content was published from the author instance
+to the public instance. Identical content exists on both instances.</p>
+</li>
+<li>
+<p><span class="image"><img src="../../_images/images/download/attachments/196598877/6-1-editingPages-statusModified.gif" alt="images/download/attachments/196598877/6-1-editingPages-statusModified.gif" height="15"></span>
+Modified (yellow/amber, solid): Content was modified since publication.
+The author instance is not in sync with the public.</p>
+</li>
+<li>
+<p><span class="image"><img src="../../_images/images/download/attachments/196598877/6-1-editingPages-statusUnpublished.gif" alt="images/download/attachments/196598877/6-1-editingPages-statusUnpublished.gif" height="15"></span>
+Unpublished (red, solid): Content exists only on the author instance.</p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The status column also displays the read/write access status of the
+page. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Roles+and+access+control+lists">Roles
+and access control lists</a>.
+* <strong>Modification date</strong>: Timestamp showing when the page was last
+modified. The timestamp is displayed in the user&#8217;s own timezone if one
+has been set in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Users">user profile</a>, if
+not, the server timezone is displayed.</p>
+</div>
+<div class="paragraph">
+<p>Although strictly speaking there is no limit on the number of pages in a
+website, depending on the back-end you use, there could be limitations
+regarding website structure and total size.</p>
+</div>
+<div class="paragraph">
+<p><strong>JackRabbit page/node limit</strong> - The extensive use of nodes dramatically
+increases the number of SQL statements necessary to retrieve referenced
+nodes. This has a serious impact on overall repository performance. With
+JackRabbit the absolute maximum number of pages permitted at any single
+level in the site hierarchy is 1000. However, the recommended total is
+no more more than 100 pages at a single level.</p>
+</div>
+<div class="paragraph">
+<p><strong>Content size</strong> - The total size of content in the repository should not
+exceed 2 TB. Note that several Magnolia clients have successfully run
+repositories sized 50-200 GB in production over an extended period of
+time.</p>
+</div>
+<div class="paragraph">
+<p><strong>SEO</strong> - For search engine optimization keep the hierarchy as flat as
+possible. If editors find a deeper site hierarchy easier to manage,
+elevate pages to higher levels using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/URI+mapping">URI mapping</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Page moves</strong> - A page&#8217;s position in the site hierarchy determines its
+URL. When the page moves, the URL changes. This can have a negative SEO
+impact. Use a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/URI+mapping#URImapping-Actionprefixes">permanent
+redirect</a> to tell search engines that the page was moved.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596041_Managingpages-Characterrestrictions"><a class="anchor" href="#src-196596041_Managingpages-Characterrestrictions"></a>Character restrictions</h3>
+<div class="paragraph">
+<p>Website content, asset, configuration and everything else is stored in
+the <a href="https://wiki.magnolia-cms.com/display/DOCS62/Repositories">content
+repository</a>. Each item is stored in a node. The node name is generally
+displayed in the first column in AdminCentral, for example the page name
+in the <code>website</code> workspace and asset name in the <code>dam</code> workspace.
+Besides being an internal reference to the node, the name is also used
+for various purposes such to create a page URL.</p>
+</div>
+<div class="paragraph">
+<p>Character restrictions apply only to node names and not to other
+user-entered content. For example, you can only use certain characters
+in a page name but any character in the page title. When a disallowed
+character is used it is automatically substituted with a hyphen ( - ).</p>
+</div>
+<div class="paragraph">
+<p>The Path Java class governs character restrictions. All alphanumeric
+characters (a-z, A-Z, 0-9), hyphen ( - ) and underscore ( _ ) are safe
+to use in node names. We recommend that you use lowercase letters
+separated by a hyphen.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596041_Managingpages-Invalidcharacters"><a class="anchor" href="#src-196596041_Managingpages-Invalidcharacters"></a>Invalid characters</h4>
+<div class="paragraph">
+<p><a href="http://www.day.com/specs/jcr/2.0/3_Repository_Model.html#3.2.4%20Naming%20Restrictions">JCR
+2.0 specification</a> defines the following invalid characters in a local
+name.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Character</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Unicode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Space</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Forward slash (solidus)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2F</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Colon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3A</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">[</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left square bracket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right square bracket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5D</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vertical line (pipe)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">7C</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Asterisk</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Node names are used to create URLs and cannot contain characters that
+are disallowed or have special meaning in URLs. These conventions are
+established by the Internet Engineering Task Force
+(<a href="http://www.ietf.org/">IETF</a>) <a href="http://www.ietf.org/rfc/rfc1738.txt">Network
+Working Group on URLs</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Character</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Unicode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Semicolon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Solidus (forward slash)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2F</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Question mark</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3F</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">+</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plus sign</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2B</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">%</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Percent sign</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">!</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exclamation mark</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number sign (pound, hash)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">^</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Circumflex accent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5E</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Single quote (apostrophe)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">39</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Left parentheses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Right parentheses</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Characters disallowed by Magnolia.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Character</th>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Unicode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">@</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Commercial at</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&amp;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ampersand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">=</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equals sign</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3D</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Apart from the exceptions above, Magnolia allows you to use the full
+<a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> character set for node names
+and other properties, but UTF-8 encoding is disabled by default. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Language+configuration#Languageconfiguration-UTF-8pagenames">UTF-8
+in pages names</a> for instructions on how to enable it. When enabled, all
+special characters and notations covered by the Unicode specification
+can also be used.</p>
+</div>
+<div class="paragraph">
+<p>The dot character (full stop, Unicode 2E) can be used in node names with
+the single limitation that it cannot be the first character. You can
+create a user <code>john.smith</code>, a page <code>article.one</code>, a document
+<code>Magnolia-Flyer-4.0.pdf</code>, a configuration node <code>option.one</code> or a
+JavaScript file <code>jquery.tabtree</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596041_Managingpages-Assigningatemplatetoapage"><a class="anchor" href="#src-196596041_Managingpages-Assigningatemplatetoapage"></a>Assigning a template to a page</h3>
+<div class="paragraph">
+<p>All pages are based on
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating">Templating</a>. The
+template assigned to a page is displayed in the <strong>Template</strong> column. The
+template determines what content is displayed and how.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596041/6-1-managingPages-templatesColumn.png" alt="images/download/attachments/196596041/6-1-managingPages-templatesColumn.png"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+availability">Template
+availability</a> defines what template you can assign to a page.</p>
+</div>
+<div class="paragraph">
+<p>You can change a page template. However, the new template may not be
+able to render content entered using the previous template. If content
+cannot be rendered, you cannot edit it. The original content exists in
+the repository, however. If you change the template back to the
+original, the content is rendered again.</p>
+</div>
+<div class="paragraph">
+<p>If a template is able to render a component that was originally entered
+with a different template, the component may be displayed even if the
+current template does not offer it in the corresponding area. For
+example, if you enter a text component on a Travel Standard page and
+later change the page template to a custom template that also offers a
+text component, the component may still be displayed.</p>
+</div>
+<div class="paragraph">
+<p>Editing pages</p>
+</div>
+<div class="paragraph">
+<p>Editing images</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

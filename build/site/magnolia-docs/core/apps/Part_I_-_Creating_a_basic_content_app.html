@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Part I - Creating a basic content app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Part_I_-_Creating_a_basic_content_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Part_I_-_Creating_a_basic_content_app.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Part_I_-_Creating_a_basic_content_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Part_I_-_Creating_a_basic_content_app.html">Part I - Creating a basic content app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Part I - Creating a basic content app - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="My_first_content_app.html">My first content app</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598208"><a class="anchor" href="#src-196598208"></a>Part I - Creating a basic content app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page is the second part of the <a href="My_first_content_app.html">My
+first content app</a> tutorial and describes how to configure and create a
+basic Bookshelf, a Magnolia content app. The configuration is done using
+Magnolia content types – formal definitions for types of content in
+Magnolia including the properties the type may contain and its
+relationships to other types of content.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598208_PartI-Creatingabasiccontentapp-GettingMagnolia"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-GettingMagnolia"></a>Getting Magnolia</h3>
+<div class="paragraph">
+<p>For development and testing you need a running
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Instances">instance</a> of
+Magnolia. In this tutorial, we suppose that it is installed in a
+directory called <code>magnolia</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t have Magnolia installed and running, go to the page called
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Installing+Magnolia+through+npm+CLI">Installing
+Magnolia through npm CLI</a> and complete the steps described on it. Then,
+return and proceed from here.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598208_PartI-Creatingabasiccontentapp-Creatingthebookshelflightmodule"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-Creatingthebookshelflightmodule"></a>Creating the bookshelf light module</h3>
+<div class="paragraph">
+<p>Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+modules">light
+modules</a> usually define page, area and component
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating">templates</a> and
+many more things. In this tutorial we use a light module called
+<code>bookshelf</code> to create a content app. The module contains both a
+definition of content types and the <a href="App_descriptor.html">app
+descriptor</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a terminal.</p>
+</li>
+<li>
+<p>Go to the <code>light-modules</code> folder of your Magnolia installation:</p>
+</li>
+<li>
+<p>Run the following command:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-light-module bookshelf</code></p>
+</div>
+<div class="paragraph">
+<p>The command creates the <code>bookshelf</code> light module.</p>
+</div>
+<div class="paragraph">
+<p>Click here to see the structure created.</p>
+</div>
+<div class="paragraph">
+<p><code>└── bookshelf</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── decorations`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── dialogs`</p>
+</div>
+<div class="paragraph">
+<p>`    │   ├── components`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── pages`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── i18n`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── bookshelf-messages_en.properties`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── includes`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── README.txt`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── README.md`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── templates`</p>
+</div>
+<div class="paragraph">
+<p>`    │   ├── components`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── pages`</p>
+</div>
+<div class="paragraph">
+<p>`    └── webresources`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598208_PartI-Creatingabasiccontentapp-Creatingtheapp"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-Creatingtheapp"></a>Creating the app</h3>
+<div class="paragraph">
+<p>Change to the <code>bookshelf</code> folder and enter the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-app bookshelf-app</code></p>
+</div>
+<div class="paragraph">
+<p>The commands creates the <code>apps</code> and <code>contentTypes</code> subfolders in the
+light module and adds the <code>bookshelf-app.yaml</code> file to both of them.</p>
+</div>
+<div class="paragraph">
+<p>Click here to see the modified folder structure.</p>
+</div>
+<div class="paragraph">
+<p><code>└── bookshelf</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── apps`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── bookshelf-app.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── contentTypes`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── bookshelf-app.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── decorations`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── dialogs`</p>
+</div>
+<div class="paragraph">
+<p>`    │   ├── components`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── pages`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── i18n`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── bookshelf-messages_en.properties`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── includes`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── README.txt`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── README.md`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── templates`</p>
+</div>
+<div class="paragraph">
+<p>`    │   ├── components`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── pages`</p>
+</div>
+<div class="paragraph">
+<p>`    └── webresources`</p>
+</div>
+<div class="paragraph">
+<p>The <code>bookshelf-app.yaml</code> file in the <code>apps</code> subfolder is an app
+descriptor, while the <code>bookshelf-app.yaml</code> file in the <code>contentTypes</code>
+subfolder contains a content type definition for the app. In the next
+steps, you modify these files to meet the design requirements for the
+Bookshelf app.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Please note that the <code>mgnl create-app bookshelf-app</code> command also
+creates a new workspace called <code>bookshelf-app</code>. However, as the
+Bookshelf app must interact with the <code>books</code> workspace, the name of the
+workspace is changed to <code>books</code> below.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598208_PartI-Creatingabasiccontentapp-Customizingthecontenttypedefinition"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-Customizingthecontenttypedefinition"></a>Customizing the content type definition</h4>
+<div class="paragraph">
+<p>In the <code>contentTypes</code> folder, open the <code>bookshelf-app.yaml</code> and replace
+its content with the following:</p>
+</div>
+<div class="paragraph">
+<p>bookshelf-app.yaml (content type definition)</p>
+</div>
+<div class="paragraph">
+<p><code>datasource:</code></p>
+</div>
+<div class="paragraph">
+<p>`  workspace: books`</p>
+</div>
+<div class="paragraph">
+<p>`  rootPath: /`</p>
+</div>
+<div class="paragraph">
+<p>`  namespaces:`</p>
+</div>
+<div class="paragraph">
+<p>`    lib: https:``//www.magnolia-travel.com/jcr/1.0/lib`</p>
+</div>
+<div class="paragraph">
+<p>`  autoCreate: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p><code>model:</code></p>
+</div>
+<div class="paragraph">
+<p>`  nodeType: lib:book`</p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: authors`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: ed`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Boolean`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: title`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: description`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: publisher`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: publish_date`</p>
+</div>
+<div class="paragraph">
+<p>`      type: Date`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: isbn13  `</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In the <code>datasource</code> section (lines 1-6), you define how content type
+items are persisted. For more details see the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+Data+source+definition">Content
+type Data source definition</a> page.</p>
+</li>
+<li>
+<p>In the <code>model</code> section (lines 8-19), you define the node type and the
+properties of the new content item for the Bookshelf app.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the properties, the default <code>String</code> type is used when no other type
+is supplied. The definition of the Bookshelf app requires that we change
+the type in case of the <code>ed</code> and <code>publish_date</code> properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 13: Set the type of the <code>ed</code> property to <code>Boolean</code>, since it is
+more appropriate in regard to the values the system can store (<code>true</code>,
+<code>false</code>).</p>
+</li>
+<li>
+<p>Line 18: Set the data type of the <code>publish_date</code> property to <code>Date</code> so
+that the value would be stored in the JCR as calendar object.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more details, see the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+type+Model+definition">Content
+type Model definition</a> page.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598208_PartI-Creatingabasiccontentapp-Customizingtheappdescriptor"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-Customizingtheappdescriptor"></a>Customizing the app descriptor</h4>
+<div class="paragraph">
+<p>In the <code>apps</code> subfolder, open the <code>bookshelf-app.yaml</code> and make sure it
+contains only the following two lines:</p>
+</div>
+<div class="paragraph">
+<p>bookshelf-app.yaml (app descriptor)</p>
+</div>
+<div class="paragraph">
+<p><code>!content-type-m5:bookshelf-app</code></p>
+</div>
+<div class="paragraph">
+<p><code>name: bookshelf-app</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 1: The app descriptor instructs the app generator to construct
+the app from the <code>bookshelf-app</code> content type definition.<br>
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Note the presence of the <code>m5</code> suffix in the content type directive. For
+the time being, our app will be based on
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+5+UI+documentation">UI
+5 definitions</a>.</p>
+</li>
+<li>
+<p>Line 2: You give the app the name <code>bookshelf-app</code>, under which the app
+is known to other resources and systems in Magnolia.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598208_PartI-Creatingabasiccontentapp-ChecktheappintheDefinitionsapp"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-ChecktheappintheDefinitionsapp"></a>Check the app in the Definitions app</h4>
+<div class="paragraph">
+<p>After saving the changes, you can check in the
+<a href="Definitions_app.html">Definitions app</a> that the app&#8217;s definitions
+have been loaded by Magnolia.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598208_PartI-Creatingabasiccontentapp-Startingtheapp"><a class="anchor" href="#src-196598208_PartI-Creatingabasiccontentapp-Startingtheapp"></a>Starting the app</h3>
+<div class="paragraph">
+<p>Magnolia adds a tile for your new app to the App launcher automatically
+when registering the app. However, to make the tile appear in the App
+launcher, you must first restart your Magnolia session once by logging
+out and logging in again. For further details see
+<a href="App_launcher_layout.html">App launcher layout</a>.</p>
+</div>
+<div class="paragraph">
+<p>To see the list of the app tiles, click the app launcher icon to the
+right of the Find Bar.</p>
+</div>
+<div class="paragraph">
+<p>See screenshot</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598842/6-1-findBar-appLauncherIcon.png" alt="images/download/attachments/196598842/6-1-findBar-appLauncherIcon.png"></span></p>
+</div>
+<div class="paragraph">
+<p>To start using the app, login to Magnolia again and click the
+bookshelf-app tile in the App launcher.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598208/6-1-partICreatingABasicContentApp-appInLauncher.png" alt="images/download/attachments/196598208/6-1-partICreatingABasicContentApp-appInLauncher.png"></span></p>
+</div>
+<div class="paragraph">
+<p>i18n message keys and the Name, Title and Description labels</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>magnolia-ui-framework</code> module already contains several generic i18n
+message keys whose values are applied as labels in the UI of the
+Bookshelf app. You will create new label values in
+<a href="Part_II_-_Fine-tuning_a_basic_content_app.html#src-196598222_PartII-Fine-tuningabasiccontentapp-Addingani18nmessagebundle">Adding
+an i18n message bundle</a> on the third page of the tutorial.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598208/6-1-partICreatingABasicContentApp-detailDefault.png" alt="images/download/attachments/196598208/6-1-partICreatingABasicContentApp-detailDefault.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/thumbs_up.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/thumbs_up.svg"></span>
+Congratulations! The content app is up and running now and the editors
+could already start using by cataloging new books in it.</p>
+</div>
+<div class="paragraph">
+<p>Continue to <a href="Part_II_-_Fine-tuning_a_basic_content_app.html">the last
+page of this tutorial</a>, where you fine-tune this basic app to its final
+form.</p>
+</div>
+<div class="paragraph">
+<p>My first content app</p>
+</div>
+<div class="paragraph">
+<p>Part II - Fine-tuning a basic content app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

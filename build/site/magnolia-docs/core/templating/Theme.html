@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Theme - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Theme.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Theme.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Theme.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Theme.html">Theme - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Theme - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596709"><a class="anchor" href="#src-196596709"></a>Theme</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>A theme is a collection of resource files that gives a site its visual
+identity through the use of colors and typography. A theme consists of
+Cascading Style Sheets (CSS), Javascript files and an imaging
+configuration which tells the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Imaging+module">Imaging
+module</a> what to do with images for a particular page or component.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_safe-id-VGhlbWUtV2hhdGlzYXRoZW1lPw"><a class="anchor" href="#src-196596709_safe-id-VGhlbWUtV2hhdGlzYXRoZW1lPw"></a>What is a theme?</h3>
+<div class="paragraph">
+<p>A theme is a module or part of a module composed of CSS, JS, and images.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Whentouseatheme"><a class="anchor" href="#src-196596709_Theme-Whentouseatheme"></a>When to use a theme</h3>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+module">Site
+module</a> provides theme functionality. You can only create a theme if you
+use this module and have configured a <a href="Site_definition.html">site
+definition</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Themesandmodules"><a class="anchor" href="#src-196596709_Theme-Themesandmodules"></a>Themes and modules</h3>
+<div class="paragraph">
+<p>Theme resources can be stored in light (YAML) or Maven
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules">modules</a>. Themes
+can reside in a dedicated theme module or form part of another module. A
+special module version handler is not necessary.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Resourceloading"><a class="anchor" href="#src-196596709_Theme-Resourceloading"></a>Resource loading</h3>
+<div class="paragraph">
+<p>All Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">resources</a>,
+including theme resources, are loaded under the <code>/.resources</code> ("dot
+resources") path.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In a Maven module the resources are located in
+<code>/src/main/resources/&lt;moduleName&gt;</code> and any subfolder.</p>
+</li>
+<li>
+<p>In a light module resources can be located any subfolder of your
+module, for example, <code>/&lt;moduleName&gt;/webresources/</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Theme resources can also be loaded from an external source by specifying
+the full URL. This is very useful if you use a
+<a href="https://en.wikipedia.org/wiki/Content_delivery_network">CDN</a> to store,
+cache and deliver your static resources.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Resources</a>
+and <a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+structure">Module
+structure</a> for more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Benefitsofusingatheme"><a class="anchor" href="#src-196596709_Theme-Benefitsofusingatheme"></a>Benefits of using a theme</h3>
+<div class="paragraph">
+<p>Themes offer a number of benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Theme resources are applied to the entire site.</p>
+</li>
+<li>
+<p>Resources are all in one place.</p>
+</li>
+<li>
+<p>Themes are an easy way to work with resources without having to modify
+the head section of your HTML</p>
+</li>
+<li>
+<p>You can define more than one theme and switch between them, or apply a
+different theme to a variation of your site. For example, you could use
+a different theme for pages targeted at U.S. users and European users,
+or a seasonal theme for different times of the year.</p>
+</li>
+<li>
+<p>You can still use different or additional overriding resources on a
+page-template level.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596709_Theme-theme-definition]</mark>#</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Configuringatheme"><a class="anchor" href="#src-196596709_Theme-Configuringatheme"></a>Configuring a theme</h3>
+<div class="sect3">
+<h4 id="src-196596709_Theme-Wheretoconfigureatheme"><a class="anchor" href="#src-196596709_Theme-Wheretoconfigureatheme"></a>Where to configure a theme</h4>
+<div class="paragraph">
+<p>Themes can be configured:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In any module.</p>
+</li>
+<li>
+<p>In YAML on the file system or in the JCR.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196596709_Theme-Properlocation"><a class="anchor" href="#src-196596709_Theme-Properlocation"></a>Proper location</h5>
+<div class="paragraph">
+<p>The configuration must reside in the <code>themes</code> folder of the module in
+`/&lt;module-name&gt;/themes/&lt;theme-name&gt; `. This can be done in YAML or JCR.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596709_Theme-Oldlocation"><a class="anchor" href="#src-196596709_Theme-Oldlocation"></a>Old location</h5>
+<div class="paragraph">
+<p>The old and
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+deprecated location for themes is <code>site/config/&lt;theme-name&gt;</code> . Themes in
+this location could only be configured in the JCR. Themes configured in
+the old location should be moved to the new location.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596709_Theme-Example"><a class="anchor" href="#src-196596709_Theme-Example"></a>Example</h4>
+<div class="paragraph">
+<p><code>travel-demo-theme</code> in
+<code>travel-demo/themes/travel-demo-theme.yaml.</code><strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>travel-demo/themes/travel-demo-theme.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cssFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  #CSS files configuration`</p>
+</div>
+<div class="paragraph">
+<p><code>jsFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  #JavaScript files configuration`</p>
+</div>
+<div class="paragraph">
+<p>`imaging: `</p>
+</div>
+<div class="paragraph">
+<p>`  #Imaging variations configuration`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cssFiles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jsFiles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Three configuration nodes define the individual elements of a theme:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><code>travel-demo-theme</code></th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssFiles</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Optional</strong></p>
+</div>
+<div class="paragraph">
+<p>References <a href="#src-196596709_Theme-CSSfiles">CSS files</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsFiles</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Optional</strong></p>
+</div>
+<div class="paragraph">
+<p>References <a href="#src-196596709_Theme-JavaScriptfiles">JavaScript files</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>Optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines <a href="#src-196596709_Theme-Imagevariations">Image variations</a>
+a.k.a renditions.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596709_Theme-CSSfiles"><a class="anchor" href="#src-196596709_Theme-CSSfiles"></a>CSS files</h4>
+<div class="paragraph">
+<p>Links to CSS resources are configured in the <code>cssFiles</code> node of the
+theme.</p>
+</div>
+<div class="paragraph">
+<p>CSS defines the presentation semantics of an HTML document, and creates
+the look and feel of the site.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>cssFiles</code> configuration in <code>travel-demo-theme</code> in
+<code>travel-demo/themes/travel-demo-theme.yaml</code>.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>travel-demo/themes/travel-demo-theme.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cssFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  bootstrap:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/libs/twitterbootstrap/css/bootstrap.min.css`</p>
+</div>
+<div class="paragraph">
+<p>`    media: all`</p>
+</div>
+<div class="paragraph">
+<p>`  roboto-condensed:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: https:``//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700`</p>
+</div>
+<div class="paragraph">
+<p>`    media: all`</p>
+</div>
+<div class="paragraph">
+<p>`  slick:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/libs/slick-carousel/css/slick.css`</p>
+</div>
+<div class="paragraph">
+<p>`    media: all`</p>
+</div>
+<div class="paragraph">
+<p>`  slick-theme:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/libs/slick-carousel/css/slick-theme.css`</p>
+</div>
+<div class="paragraph">
+<p>`    media: all`</p>
+</div>
+<div class="paragraph">
+<p>`  travels-magnolia:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/css/travels-magnolia.css`</p>
+</div>
+<div class="paragraph">
+<p>`    media: all`</p>
+</div>
+<div class="paragraph">
+<p>`  video:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/mtk/css/video.css`</p>
+</div>
+<div class="paragraph">
+<p>`    media: all`</p>
+</div>
+<div class="paragraph">
+<p><code>jsFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  #JavaScript files configuration`</p>
+</div>
+<div class="paragraph">
+<p>`imaging: `</p>
+</div>
+<div class="paragraph">
+<p>`  #Imaging variations configuration`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 42%;">
+<col style="width: 58%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cssFiles</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bootstrap</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/libs/twitterbootstrap/css/bootstrap.min.css</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">roboto-condensed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" class="bare">https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slick</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/libs/slick-carousel/css/slick.css</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slick-theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/libs/slick-carousel/css/slick-theme.css</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travels-magnolia</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/css/travels-magnolia.css</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">video</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/mtk/css/video.css</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">media</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">all</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cssFiles</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>CSS node of the theme.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Arbitrary node name. Add a node for each sheet.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addFingerPrint</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Embeds a file content fingerprint in the resource URL. The fingerprint
+consists of a timestamp in the <code>yyyy-MM-dd-HH-mm-ss-SSS</code> format and the
+word "cache" both preceded by the the standard selector ("~" tilde). For
+example the <code>travels-magnolia</code> link (above) becomes
+<code>/.resources/travel-demo-theme/css/travels-magnolia<sub>2015-08-16-09-49-00-000</sub>cache.css</code>.
+<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating-and-updating-cached-responses">Google
+recommends</a> fingerprinting as a best practice.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>link</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Path to the CSS file that is added to the HTML. See
+<a href="http://www.w3.org/TR/html401/present/styles.html#h-14.2">Adding style to
+HTML</a> for more. See also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Web resources</a>
+and <a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Origins and
+loading order</a> for different options for storing and loading resources.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>media</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Media associated with the linked CSS file. If you use a responsive web
+design framework like <a href="http://getbootstrap.com/">Bootstrap</a> or
+<a href="http://foundation.zurb.com/">Foundation</a> set this property to <code>all</code>. See
+<a href="http://www.w3.org/TR/html401/types.html#type-media-descriptors">Media
+descriptors</a> for a list of available media.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>conditionalComment</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the <a href="http://en.wikipedia.org/wiki/Conditional_comment">conditional
+comment</a> attribute for the linked CSS file. Conditional comments are
+used to overcome the limitations of legacy browsers such as Internet
+Explorer 9 and earlier. For example, the conditional comment "
+<strong><code>lte IE9</code></strong> " would be translated to:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!--[if lte IE9]&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  //inclusion of the stylesheet or javascript resource`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;![endif]-&#8594;</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>This simple theme example uses only the default Bootstrap minimized CSS
+with no customizations.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596709/css.png" alt="images/download/attachments/196596709/css.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596709_Theme-JavaScriptfiles"><a class="anchor" href="#src-196596709_Theme-JavaScriptfiles"></a>JavaScript files</h4>
+<div class="paragraph">
+<p>Links to JavaScripts are configured in the <code>jsFiles</code> node of the theme.</p>
+</div>
+<div class="paragraph">
+<p>JavaScript is responsible for client-side functionality such as carousel
+paging, AJAX, menu animations, trees, embedded video player, mouse wheel
+support, Google Analytics and much more.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>jsFiles</code> configuration in <code>travel-demo-theme</code> in
+<code>travel-demo/themes/travel-demo-theme.yaml</code>.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>travel-demo/themes/travel-demo-theme.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cssFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  #CSS files configuration`</p>
+</div>
+<div class="paragraph">
+<p><code>jsFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  respimage:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/libs/lazysizes/respimage.min.js`</p>
+</div>
+<div class="paragraph">
+<p>`  lazysizes:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/libs/lazysizes/lazysizes.min.js`</p>
+</div>
+<div class="paragraph">
+<p>`  modernizr:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/js/modernizr-<code>2.6</code>.<code>2</code>.min.js`</p>
+</div>
+<div class="paragraph">
+<p>`  jquery:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/js/jquery-<code>1.10</code>.<code>2</code>.min.js`</p>
+</div>
+<div class="paragraph">
+<p>`  js.cookies:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/js/js.cookies-<code>2.1</code>.<code>2</code>.js`</p>
+</div>
+<div class="paragraph">
+<p>`  jquery.object-fit-cover-simple:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/js/jquery.object-fit-cover-simple.js`</p>
+</div>
+<div class="paragraph">
+<p>`  slick:`</p>
+</div>
+<div class="paragraph">
+<p>`    addFingerPrint: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/travel-demo-theme/libs/slick-carousel/js/slick.min.js`</p>
+</div>
+<div class="paragraph">
+<p>`  addtoany:`</p>
+</div>
+<div class="paragraph">
+<p>`    link: https:``//static.addtoany.com/menu/page.js`</p>
+</div>
+<div class="paragraph">
+<p>`imaging: `</p>
+</div>
+<div class="paragraph">
+<p>`  #Imaging variations configuration`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 48%;">
+<col style="width: 52%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jsFiles</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">respimage</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/libs/lazysizes/respimage.min.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lazysizes:</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/libs/lazysizes/lazysizes.min.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modernizr</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/js/modernizr-2.6.2.min.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jquery</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/js/jquery-1.10.2.min.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">js.cookies</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/js/js.cookies-2.1.2.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jquery.object-fit-cover-simple</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/js/jquery.object-fit-cover-simple.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">slick</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addFingerPrint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.resources/travel-demo-theme/libs/slick-carousel/js/slick.min.js</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addtoany</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://static.addtoany.com/menu/page.js" class="bare">https://static.addtoany.com/menu/page.js</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsFiles</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>JavaScript node of the theme.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Arbitrary node name. Add a node for each JavaScript file.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>addFingerPrint</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Embeds a file content fingerprint in the resource URL. The fingerprint
+consists of a timestamp in the <code>yyyy-MM-dd-HH-mm-ss-SSS</code> format, and the
+word "cache" both preceded by the the standard selector ("~" tilde). For
+example the modernizer link (above) becomes
+<code>/.resources/travel-demo-theme/js//modernizr-2.6.2.min<sub>2015-08-16-09-49-00-000</sub>cache.css</code>.
+<a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#invalidating-and-updating-cached-responses">Google
+recommends</a> fingerprinting as a best practice.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>link</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Path to the JavaScript file. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Web resources</a>
+and <a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Origins and
+loading order</a> for different options for storing and loading resources.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s an example JavaScript alert box using JQuery and the default
+Bootstrap minimized CSS.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596709/js.png" alt="images/download/attachments/196596709/js.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596709_Theme-Imagevariations"><a class="anchor" href="#src-196596709_Theme-Imagevariations"></a>Image variations</h4>
+<div class="paragraph">
+<p>Themes can make use of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Imaging+module">Imaging
+module</a> to preconfigure image variations. A variation is a specific
+configuration that defines features of a target image. Variations can
+range from complex operations, such as applying filters and overlays, to
+simple resizing of the target image.</p>
+</div>
+<div class="paragraph">
+<p>Variations are an effective alternative to resizing images with CSS:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Image size is reduced and less data transferred.</p>
+</li>
+<li>
+<p>Editors can upload images of any size which will automatically be
+resized to fit the template.</p>
+</li>
+<li>
+<p>Image sizes are uniform throughout the site.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Variations are configured in the <code>imaging</code> node of the theme.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>imaging</code> configuration in <code>travel-demo-theme</code> in
+<code>travel-demo/themes/travel-demo-theme.yaml</code>.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>travel-demo/themes/travel-demo-theme.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cssFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  #CSS files configuration`</p>
+</div>
+<div class="paragraph">
+<p><code>jsFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  #JavaScript files configuration`</p>
+</div>
+<div class="paragraph">
+<p><code>imaging:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.templating.imaging.VariationAwareImagingSupport`</p>
+</div>
+<div class="paragraph">
+<p>`  variations:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"1600"</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.templating.imaging.variation.SimpleResizeVariation`</p>
+</div>
+<div class="paragraph">
+<p>`      width: <code>`1600</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>"1366"</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.templating.imaging.variation.SimpleResizeVariation`</p>
+</div>
+<div class="paragraph">
+<p>`      width: <code>`1366</code></p>
+</div>
+<div class="paragraph">
+<p>`    #&#8230;&#8203;&#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"240"</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.templating.imaging.variation.SimpleResizeVariation`</p>
+</div>
+<div class="paragraph">
+<p>`      width: <code>`240</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>"1600x1200"</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.templating.imaging.variation.SimpleResizeVariation`</p>
+</div>
+<div class="paragraph">
+<p>`      height: <code>`1200</code></p>
+</div>
+<div class="paragraph">
+<p>`      width: <code>`1600</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>"1366x1024"</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.templating.imaging.variation.SimpleResizeVariation`</p>
+</div>
+<div class="paragraph">
+<p>`      height: <code>`1024</code></p>
+</div>
+<div class="paragraph">
+<p>`      width: <code>`1366</code></p>
+</div>
+<div class="paragraph">
+<p>`    #&#8230;&#8203;..`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"240x180"</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>class</code>: info.magnolia.templating.imaging.variation.SimpleResizeVariation`</p>
+</div>
+<div class="paragraph">
+<p>`      height: <code>`180</code></p>
+</div>
+<div class="paragraph">
+<p>`      width: <code>`240</code></p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">variations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1600</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.variation.SimpleResizeVariation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1600</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1366</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1600x1200</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.variation.SimpleResizeVariation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">height</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1200</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">width</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1600</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1366x1024</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">240x180</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.VariationAwareImagingSupport</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Imaging node of the theme.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>variations</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Image variations node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;variation&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the variation, a.k.a the rendition name. The name is used to
+call the variation in template scripts. Add one node for every
+variation.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>You can use one of the available classes or create a custom one. The
+available properties depend on the class used for the variation. Any
+custom class must implement Variation .</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module">MTE module</a>
+provides SimpleResizeVariation that resizes images to a defined size in
+pixels (see below for available properties).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;properties&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Add properties that are supported by the class used.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>VariationAwareImagingSupport provides support for variations.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Enables and disables variation support.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="src-196596709_Theme-Configuringasimpleresize"><a class="anchor" href="#src-196596709_Theme-Configuringasimpleresize"></a>Configuring a simple resize</h5>
+<div class="paragraph">
+<p>The <code>SimpleResizeVariation</code> class is suitable for most resize
+variations. It resizes the original image to a defined size in pixels.</p>
+</div>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;variation name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>SimpleResizeVariation</code> resizes images to a defined size.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>crop</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Whether cropping is allowed.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>An integer that defines the height in pixels.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>width</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>An integer that defines the width in pixels.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Behavior:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Although both the width and height properties are optional you must
+configure at least one. If you omit both the
+<a href="Renderers.html">renderer</a> intentionally throws an internal
+<code>ImagingException</code> and the image displays in it&#8217;s original uploaded
+size.</p>
+</li>
+<li>
+<p>If you define both width and height the image is sized down to the
+lower of the two and the rest is cropped, if necessary. Cropping starts
+from the middle, so the image is either cropped on top and bottom, or
+left and right.</p>
+</li>
+<li>
+<p>If you define only width or height, the omitted property is calculated
+using the aspect ratio of the original image.</p>
+</li>
+<li>
+<p>if you set crop to <code>false</code>, the image is resized to the specified
+size, and may be distorted (stretched).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="damfn.html">damfn</a> and
+<a href="How_to_work_with_images_using_damfn.html">How to work with images
+using damfn</a> for how to use variations in your scripts.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Assigningathemetoasite"><a class="anchor" href="#src-196596709_Theme-Assigningathemetoasite"></a>Assigning a theme to a site</h3>
+<div class="paragraph">
+<p>Themes are assigned to a site in the <code>theme</code> node of the
+<a href="Site_definition.html">site definition</a> in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+app">Site app</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Travel Demo Site Definition (CE)</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-theme</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">i18n</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>theme</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Theme node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The value of this property must match the name of the theme
+<a href="#src-196596709_Theme-Configuringatheme">configured</a> in
+<code>/modules/site/config/theme</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Usingthemeresourcesintemplatescripts"><a class="anchor" href="#src-196596709_Theme-Usingthemeresourcesintemplatescripts"></a>Using theme resources in template scripts</h3>
+<div class="paragraph">
+<p>Theme resources are typically added to the <code>&lt;head&gt;</code> element of a page
+template.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Retrieve the configured theme configured over the
+<a href="sitefn.html">sitefn function</a> class:</p>
+<div class="paragraph">
+<p><code>[#assign site =</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>sitefn.site()!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign theme =</code></p>
+</div>
+<div class="paragraph">
+<p><code>sitefn.theme(site)!]</code>
+* Iterate over the theme configuration and include the configured
+resources:</p>
+</div>
+<div class="paragraph">
+<p>+
+`[#list theme.cssFiles as cssFile] `</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>link</code> <code>rel</code>=<code>"stylesheet"</code> <code>href</code>=<code>"${cssFile.link}"</code> <code>media</code>=<code>"${cssFile.media}"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#list]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#list theme.jsFiles as jsFile]</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>script</code> <code>src</code>=<code>"${jsFile.link}"</code>&gt;&lt;/<code>script</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#list]</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596709_Theme-Viewingandeditingthemes"><a class="anchor" href="#src-196596709_Theme-Viewingandeditingthemes"></a>Viewing and editing themes</h3>
+<div class="paragraph">
+<p>Theme definitions from all sources and origins are available in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
+app</a>. Select <code>themes</code> in <strong>Type</strong> to find all theme definitions. You can
+hotfix themes in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resource+Files+app">Resource
+Files</a> app. Select the theme definition and click <strong>Show in Resources
+app</strong> in the Definitions app to access the file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: travel-demo-theme in Definitions app and Resource Files app.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596709/6-1-theme-defApp.png" alt="images/download/attachments/196596709/6-1-theme-defApp.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196596709/6-1-theme-rscApp.png" alt="images/download/attachments/196596709/6-1-theme-rscApp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Template availability</p>
+</div>
+<div class="paragraph">
+<p>Templates in MTK</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Developing and rendering custom content blocks - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Developing_and_rendering_custom_content_blocks.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Developing_and_rendering_custom_content_blocks.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Developing_and_rendering_custom_content_blocks.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Developing_and_rendering_custom_content_blocks.html">Developing and rendering custom content blocks - Magnolia 6.2</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Developing and rendering custom content blocks - Magnolia 6.2</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Developing_a_custom_content_editor_app.html">Developing a custom
+content editor app</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598292"><a class="anchor" href="#src-196598292"></a>Developing and rendering custom content blocks</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Block_definition.html">Block definition</a></p>
+</li>
+<li>
+<p><a href="Developing_a_custom_content_editor_app.html">Developing a custom
+content editor app</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Editor+module">Content
+Editor module</a></p>
+</li>
+<li>
+<p><a href="Stories_app.html">Stories app</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes how to define and render custom content blocks that
+can be grouped to form content compositions in implementations of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+editor">Content
+editor</a>.</p>
+</div>
+<div class="paragraph">
+<p>The Magnolia <a href="Stories_app.html">Stories app</a>, which is an
+implementation of the content editor, uses four predefined block types:
+<code>text</code> , <code>image</code> , <code>externalLink</code> and <code>video</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598292_Developingandrenderingcustomcontentblocks-Blocktypes"><a class="anchor" href="#src-196598292_Developingandrenderingcustomcontentblocks-Blocktypes"></a>Block types</h3>
+<div class="paragraph">
+<p>The Content editor provides predefined block types that you can use in
+your custom content editor app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>text</code></p>
+</li>
+<li>
+<p><code>image</code></p>
+</li>
+<li>
+<p><code>externalLink</code></p>
+</li>
+<li>
+<p><code>video</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also define your own blocks.</p>
+</div>
+<div class="paragraph">
+<p>Compared to <code>TextFieldDefinition</code>, the <code>text</code> block implements a special
+<code>RichTextBlock</code> class, which features basic text formatting functions:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598292/6-1-developingRenderingCustomContentBlocks-textBlock.png" alt="images/download/attachments/196598292/6-1-developingRenderingCustomContentBlocks-textBlock.png" height="93"></span></p>
+</div>
+<div class="paragraph">
+<p>All the other predefined block types implement the
+<code>FieldSetBlockDefinition</code> class.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598292_Developingandrenderingcustomcontentblocks-Demoblocktypes"><a class="anchor" href="#src-196598292_Developingandrenderingcustomcontentblocks-Demoblocktypes"></a>Demo block types</h4>
+<div class="paragraph">
+<p>The Magnolia demo decorates the default Stories app and provides two
+additional block types you can use:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>tour</code></p>
+</li>
+<li>
+<p><code>date</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both block types implement the <code>FieldSetBlockDefinition</code> class.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To see these blocks you must have the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Demo">Magnolia demo modules</a>
+installed.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598292_Developingandrenderingcustomcontentblocks-Definingacustomblock"><a class="anchor" href="#src-196598292_Developingandrenderingcustomcontentblocks-Definingacustomblock"></a>Defining a custom block</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can quickly create your own custom block using Magnolia CLI. The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+CLI+v3#MagnoliaCLIv3-anc-createblock">Magnolia
+CLI <code>create-block</code> command</a> creates a block based on
+<code>FieldSetBlockDefinition</code> and includes many commonly used fields as a
+starting point.</p>
+</div>
+<div class="paragraph">
+<p>To define a custom block, use a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML#YAML-YAMLinthecontextofMagnolia">YAML
+definition file</a> and apply the <code>FieldSetBlockDefinition</code> class of the
+Content editor submodule.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a YAML file in the <code>blocks</code> folder of your module and add:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>The <code>info.magnolia.editor.block.stock.FieldSetBlockDefinition</code> class.</p>
+</li>
+<li>
+<p>The <code>templateId</code> of your block.</p>
+</li>
+<li>
+<p>The list of fields the content block consists of.</p>
+<div class="paragraph">
+<p>A general block definition based on the FieldSetBlockDefinition class</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.editor.block.stock.FieldSetBlockDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>templateId: &lt;module-name&gt;:&lt;the-path-to-the-block-relative-to-the-module&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>fields:</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;field-<code>1</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;field-<code>2</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;field-<code>3</code>&gt; `</p>
+</div>
+<div class="paragraph">
+<p>`  etc.`
+. Provide a template definition file and a template script for your
+block in the <code>templates/blocks</code> subfolder of your module.
+. Optionally, in the <code>i18n</code> folder of your module, provide a file with
+i18n keys for labels and descriptions of the block&#8217;s fields.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598292_safe-id-RGV2ZWxvcGluZ2FuZHJlbmRlcmluZ2N1c3RvbWNvbnRlbnRibG9ja3MtRXhhbXBsZTphcXVvdGF0aW9uYmxvY2s"><a class="anchor" href="#src-196598292_safe-id-RGV2ZWxvcGluZ2FuZHJlbmRlcmluZ2N1c3RvbWNvbnRlbnRibG9ja3MtRXhhbXBsZTphcXVvdGF0aW9uYmxvY2s"></a>Example: a quotation block</h4>
+<div class="paragraph">
+<p>The following code samples are used to create a quotation block in a
+light module called <code>block-examples</code> :</p>
+</div>
+<div class="paragraph">
+<p>Block definition (/block-examples/blocks/quote.yaml)</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.editor.block.stock.FieldSetBlockDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>templateId: block-examples:blocks/quote</code></p>
+</div>
+<div class="paragraph">
+<p><code>fields:</code></p>
+</div>
+<div class="paragraph">
+<p>`  quotation:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.form.field.definition.TextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`    rows: <code>`3</code></p>
+</div>
+<div class="paragraph">
+<p>`  citedPerson:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.form.field.definition.TextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>Template definition file (/block-examples/templates/blocks/quote.yaml)</p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /block-examples/templates/blocks/quote.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p>Template script (/block-examples/templates/blocks/quote.ftl)</p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> content.quotation?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;blockquote&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;p&gt;${cmsfn.decode(content).quotation}&lt;/p&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    [<mark><code>if</code> content.citedPerson?has_content]&lt;cite&gt;${content.citedPerson}&lt;/cite&gt;[/</mark><code>if</code>]`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/blockquote&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p>i18n file (/block-examples/i18n/example-blocks_en.properties)</p>
+</div>
+<div class="paragraph">
+<p><code>blocks.quote.label=Quote</code></p>
+</div>
+<div class="paragraph">
+<p><code>quote.quotation.label=Quote</code></p>
+</div>
+<div class="paragraph">
+<p><code>quote.citedPerson.label=Cited person</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Resulting block:</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598292/6-0-developingCustomContentBlocks-quoteRendered.png" alt="images/download/attachments/196598292/6-0-developingCustomContentBlocks-quoteRendered.png" height="195"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598292_Developingandrenderingcustomcontentblocks-RenderingblocksinaFreeMarkerscript"><a class="anchor" href="#src-196598292_Developingandrenderingcustomcontentblocks-RenderingblocksinaFreeMarkerscript"></a>Rendering blocks in a FreeMarker script</h3>
+<div class="paragraph">
+<p>This section explains how to render block content in a page or a
+component template.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598292_safe-id-RGV2ZWxvcGluZ2FuZHJlbmRlcmluZ2N1c3RvbWNvbnRlbnRibG9ja3MtVGhlY21zOmJsb2NrZGlyZWN0aXZl"><a class="anchor" href="#src-196598292_safe-id-RGV2ZWxvcGluZ2FuZHJlbmRlcmluZ2N1c3RvbWNvbnRlbnRibG9ja3MtVGhlY21zOmJsb2NrZGlyZWN0aXZl"></a>The cms:block directive</h4>
+<div class="paragraph">
+<p>The Content editor module provides <code>cms:block</code>, a Magnolia FreeMarker
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Directives">directive</a> for
+fetching and rendering block elements.</p>
+</div>
+<div class="paragraph">
+<p>The directive expects a node of the type <code>mgnl:block</code> as argument,
+identifies the template definition of the block and calls the associated
+template script.</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign blocks = cmsfn.children(articleContent, <code>"mgnl:block"</code>) /]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#list blocks as block]`</p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.block content=block /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#list]`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598292_Developingandrenderingcustomcontentblocks-Block-renderingscriptsinthearticle-editorsubmodule"><a class="anchor" href="#src-196598292_Developingandrenderingcustomcontentblocks-Block-renderingscriptsinthearticle-editorsubmodule"></a>Block-rendering scripts in the article-editor submodule</h4>
+<div class="paragraph">
+<p>In <code>/templates/pages/areas</code>, the <code>article-editor</code> submodule already
+contains the following predefined block-rendering scripts used by the
+Stories app:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>articleDisplayArea.ftl</code> – Displays a single story.</p>
+</li>
+<li>
+<p><code>articleListArea.ftl</code> – Displays a list of all story.</p>
+</li>
+<li>
+<p><code>articleReferenceArea.ftl</code> – Displays a referenced story through the
+<code>/templates/pages/article.inc.ftl</code> page template script.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598292_Developingandrenderingcustomcontentblocks-Examplesofblockrendering"><a class="anchor" href="#src-196598292_Developingandrenderingcustomcontentblocks-Examplesofblockrendering"></a>Examples of block rendering</h4>
+<div class="paragraph">
+<p>The examples show how to render blocks within a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">template
+script</a> of a page or component template. Using the Magnolia directive
+<code>cms.block</code>, the template script of the block is executed during the
+rendering of the page or component.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Get story content:<br>
+` [#assign articleContent = cmsfn.contentById(content.article, "") /]`</p>
+</li>
+<li>
+<p>Get the blocks for that story:<br>
+<code>[#assign blocks = cmsfn.children(articleContent, "mgnl:block") /]</code></p>
+</li>
+<li>
+<p>Retrieve all blocks for a piece of content:</p>
+<div class="paragraph">
+<p><code>[#if articleContent?hasContent]</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>`  [#assign blocks = cmsfn.children(articleContent, "mgnl:block") /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [#list blocks as block]`</p>
+</div>
+<div class="paragraph">
+<p>`    [@cms.block content=block /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#list]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+<div class="paragraph">
+<p>+
+Line 4: The Magnolia directive <code>cms.block</code> ensures that the template
+script associated to the passed block is called to render the block
+content.
+. Retrieve two blocks, for instance to display an excerpt of a story in
+a list:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>[#if articleContent?hasContent]</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#assign blocks = cmsfn.children(articleContent, "mgnl:block") /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [#list blocks as block]`</p>
+</div>
+<div class="paragraph">
+<p>`    [#if block?index == 2]`</p>
+</div>
+<div class="paragraph">
+<p>`      [#break]`</p>
+</div>
+<div class="paragraph">
+<p>`    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p>`    [@cms.block content=block /]`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#list]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#if]</code></p>
+</div>
+<div class="paragraph">
+<p>+
+Line 7: The Magnolia directive <code>cms.block</code> calls the template script
+associated to the passed block content.</p>
+</div>
+<div class="paragraph">
+<p>Developing a custom content editor app</p>
+</div>
+<div class="paragraph">
+<p>Block definition</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Activation errors - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Activation-errors.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Activation-errors.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/Activation-errors.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Activation-errors.html">Activation errors - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Activation errors - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Troubleshooting.html">Troubleshooting</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595953"><a class="anchor" href="#src-196595953"></a>Activation errors</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Activation-security.html">Activation security</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Activation+module">Activation
+module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Transactional+Activation+module">Transactional
+Activation module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Activation+Tools+app">Activation
+Tools app</a></p>
+</li>
+<li>
+<p><a href="Publishing-and-activation.html">Publishing and activation</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Publishing+module">Publishing
+module</a></p>
+</li>
+<li>
+<p><a href="Publishing-errors.html">Publishing errors</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes some errors that may occur during the
+<a href="Activation-security.html">activation</a> of content from the author to
+public instance(s).</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595953_Activationerrors-Errortypes"><a class="anchor" href="#src-196595953_Activationerrors-Errortypes"></a>Error types</h3>
+<div class="sect3">
+<h4 id="src-196595953_Activationerrors-Mismatchingkeys"><a class="anchor" href="#src-196595953_Activationerrors-Mismatchingkeys"></a>Mismatching keys</h4>
+<div class="paragraph">
+<p>If activation fails due to a mismatch of the keys on the two instances,
+an error "Handshake information for activation was incorrect" is
+displayed. You can also find the error message in the logs:</p>
+</div>
+<div class="paragraph">
+<p><code>ERROR  info.magnolia.module.exchangetransactional.TransactionalSyndicator <code>29.11</code>.<code>2013</code> <code>12</code>:<code>46</code>:<code>50</code>&#8201;&#8212;&#8201;Failed to activate content.</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.cms.exchange.ExchangeException: Message received from subscriber: Handshake information <code>for</code> activation was incorrect. Someone attempted to impersonate author instance. Incoming request was from <code>127.0</code>.``0.1</code></p>
+</div>
+<div class="paragraph">
+<p>`  at info.magnolia.module.activation.BaseSyndicatorImpl.activate(BaseSyndicatorImpl.java:<code>425</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`  at info.magnolia.module.exchangetransactional.TransactionalSyndicator$<code>2</code>.run(TransactionalSyndicator.java:<code>175</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`  at EDU.oswego.cs.dl.util.concurrent.PooledExecutor$Worker.run(Unknown Source)`</p>
+</div>
+<div class="paragraph">
+<p>`  at java.lang.Thread.run(Thread.java:<code>724</code>)`</p>
+</div>
+<div class="paragraph">
+<p>To resolve the issue,
+<a href="Activation-security.html#src-196595937_Activationsecurity-Generatinganewpublickey">generate
+a new public key</a> and copy it to the public instance.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="Monitoring.html">Monitoring</a> for more about logging and
+debugging Magnolia.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595953_Activationerrors-Handshakingerrors"><a class="anchor" href="#src-196595953_Activationerrors-Handshakingerrors"></a>Handshaking errors</h4>
+<div class="sect4">
+<h5 id="src-196595953_Activationerrors-Non-EEsubscriberdetected"><a class="anchor" href="#src-196595953_Activationerrors-Non-EEsubscriberdetected"></a>Non-EE subscriber detected</h5>
+<div class="paragraph">
+<p>If you activate SSL certificates on your magnolia public instance, and
+configure everything so that any http request is redirected to https by
+default but leave the subscriber on the author instance configured to
+point to <code>http://</code> , any activation request will fail with the following
+message:</p>
+</div>
+<div class="paragraph">
+<p><code>Non EE subscriber detected on xxx.</code></p>
+</div>
+<div class="paragraph">
+<p>Change the <code>URL</code> property in the configuration at the
+<code>/server/activation/subscribers/&lt;subscriber-name&gt;@URL</code> path. Make sure
+it starts with <code>https://</code> .</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196595953_Activationerrors-Simpleexchangetransportfailed"><a class="anchor" href="#src-196595953_Activationerrors-Simpleexchangetransportfailed"></a>Simple exchange transport failed</h5>
+<div class="paragraph">
+<p>Whenever Java attempts to connect to another application over SSL (e.g.
+HTTPS, IMAPS or LDAPS), it will only be able to connect to that
+application if it can trust it. The way trust is handled in the Java
+world is that you have a keystore, typically
+<code>JAVA_HOME/lib/security/cacerts</code> , also known as the <em>truststore</em>. The
+error message in this type of failure will look like as follows:</p>
+</div>
+<div class="paragraph">
+<p><code>Can&#8217;t activate: : info.magnolia.cms.exchange.ExchangeException: <code>1</code> error detected: Simple exchange transport failed: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target on xxx.</code></p>
+</div>
+<div class="paragraph">
+<p>To fix this, make sure that <code>-Djavax.net.ssl.trustStore</code> is present in
+your JVM arguments. Java will use the keystore specified with that
+argument.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595953_Activationerrors-Cleaningtheerrors"><a class="anchor" href="#src-196595953_Activationerrors-Cleaningtheerrors"></a>Cleaning the errors</h3>
+<div class="paragraph">
+<p>During the activation process Magnolia makes a copy of the current
+content on the public instance and stores it in the <code>mgnlSystem</code>
+workspace. The system rolls back any changes using the backup copy if
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Transactional+Activation+module">transactional
+activation</a> fails for some reason. If the activation succeeds, the
+system overwrites the current content with the activated content and
+removes the backup copy.</p>
+</div>
+<div class="paragraph">
+<p>Below tips and tools could help you either detect the issue or clean up
+unnecessary content before publishing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-196595953_Activationerrors-Debuggingactivation">Debugging
+activation</a></p>
+</li>
+<li>
+<p><a href="#src-196595953_Activationerrors-Checkingatstartup">Checking at
+startup</a></p>
+</li>
+<li>
+<p><a href="#src-196595953_Activationerrors-Cleaningtool">Cleaning tool</a></p>
+</li>
+<li>
+<p><a href="#src-196595953_Activationerrors-Visualinspection">Visual
+inspection</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196595953_Activationerrors-Debuggingactivation"><a class="anchor" href="#src-196595953_Activationerrors-Debuggingactivation"></a>Debugging activation</h4>
+<div class="paragraph">
+<p>The steps of an activation on Public can be viewed by turning the
+<code>XAReceiveFilter</code> to <code>DEBUG</code> using the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Log+Tools+module">Log Tools
+app</a>. Here we see an example of the steps during page activation.<br>
+<strong>Activation of page /travel/about/company</strong></p>
+</div>
+<div class="paragraph">
+<p>Activation of page /travel/about/company</p>
+</div>
+<div class="paragraph">
+<p><code>About to begin activate of website:8fa4a73f-51c3-40ac-b698-715595216186:/travel/about/company</code></p>
+</div>
+<div class="paragraph">
+<p><code>Got clearance for JCR lock on parent node /travel/about</code></p>
+</div>
+<div class="paragraph">
+<p><code>Requesting XA lock</code></p>
+</div>
+<div class="paragraph">
+<p><code>About to perform activate</code></p>
+</div>
+<div class="paragraph">
+<p><code>Starting content update</code></p>
+</div>
+<div class="paragraph">
+<p><code>Checking for existence of content website:8fa4a73f-51c3-40ac-b698-715595216186</code></p>
+</div>
+<div class="paragraph">
+<p><code>Content 8fa4a73f-51c3-40ac-b698-715595216186 was located under path website:/travel/about/company</code></p>
+</div>
+<div class="paragraph">
+<p><code>Stored content website:/travel/about/company:8fa4a73f-51c3-40ac-b698-715595216186 for rollback later</code></p>
+</div>
+<div class="paragraph">
+<p><code>User superuser successfully activated /travel/about/company on magnoliaPublic.</code></p>
+</div>
+<div class="paragraph">
+<p><code>User superuser attempted to activate 8fa4a73f-51c3-40ac-b698-715595216186 on magnoliaPublic.</code></p>
+</div>
+<div class="paragraph">
+<p><code>Finished activate of website:8fa4a73f-51c3-40ac-b698-715595216186:/travel/about</code></p>
+</div>
+<div class="paragraph">
+<p><code>Activate was executed in total of 0.757 seconds</code></p>
+</div>
+<div class="paragraph">
+<p><code>About to begin commit of website:8fa4a73f-51c3-40ac-b698-715595216186:/travel/about/company</code></p>
+</div>
+<div class="paragraph">
+<p><code>Got clearance for JCR lock on parent node /travel/about/company</code></p>
+</div>
+<div class="paragraph">
+<p><code>About to perform commit</code></p>
+</div>
+<div class="paragraph">
+<p><code>Proceeding with commit of content 8fa4a73f-51c3-40ac-b698-715595216186</code></p>
+</div>
+<div class="paragraph">
+<p><code>Commited content 8fa4a73f-51c3-40ac-b698-715595216186</code></p>
+</div>
+<div class="paragraph">
+<p><code>User transaction committed on MgnlUser - superuser [51ae3379-67cf-4994-9e05-f97cb8bc3e4a].</code></p>
+</div>
+<div class="paragraph">
+<p><code>Finished commit of website:8fa4a73f-51c3-40ac-b698-715595216186:/travel/about/company</code></p>
+</div>
+<div class="paragraph">
+<p>`Commit was executed in total of 0.073 seconds `</p>
+</div>
+<div class="paragraph">
+<p>It is possible that something goes wrong while Magnolia is activating
+the content. For example, the server process is killed or the server
+loses power. This means that the backup copy may have gotten left in the
+<code>mgnlSystem</code> workspace. Never clean up properly after the activation
+during the commit step.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595953_Activationerrors-Checkingatstartup"><a class="anchor" href="#src-196595953_Activationerrors-Checkingatstartup"></a>Checking at startup</h4>
+<div class="paragraph">
+<p>The system will automatically check for nodes. If a node is found in the
+<code>mgnlSystem</code> workspace during startup this message will be recorded in
+the public log.</p>
+</div>
+<div class="paragraph">
+<p><code>WARN PUBLIC [main] info.magnolia.module.exchangetransactional.ExchangeTransactionalUtil: Removing backup copy of /company from mgnlSystem, please verify that page was activated correctly to <code>this</code> <code>public</code> instance.</code></p>
+</div>
+<div class="paragraph">
+<p>This is a sign that the server went down during the activation step. The
+backup copy remains indicating that the commit step was never reached.
+This means that the page may have not been activated correctly.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595953_Activationerrors-Cleaningtool"><a class="anchor" href="#src-196595953_Activationerrors-Cleaningtool"></a>Cleaning tool</h4>
+<div class="paragraph">
+<p>After a successful activation a cleanup procedure is run to remove the
+backup copies. This is performed during the commit step. If for some
+reason it cannot cleanup then a message like this will occur in the log.</p>
+</div>
+<div class="paragraph">
+<p><code>ERROR info.magnolia.module.exchangetransactional.XAReceiveFilter - Failed to cleanup backup of a1918662-8cbe-<code>4346</code>-ac5a-1b24a9950e2b. Activation of <code>this</code> content will not be possible until manual cleanup of mgnlSystem workspace is performed.</code></p>
+</div>
+<div class="paragraph">
+<p>To try and resolve the issue, clean the <code>mgnlSystem</code> workspace yourself
+on the public instance. There is a cleaning tool in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Activation+Tools+app">Activation
+Tools app</a>. This is the same procedure that is run during startup but
+triggered manually using this app.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595953/clean-mgnlSystem-workspace.png" alt="images/download/attachments/196595953/clean-mgnlSystem-workspace.png"></span></p>
+</div>
+<div class="paragraph">
+<p>After running be sure to check the log. If you see repository exceptions
+then you need to take other actions. For example, restarting the server
+to release any locks that may still be present. Restarting will
+automatically call the cleanup procedure described above. If locks was
+the issue then you should see the system successfully remove the backup
+copies during the restart. However, if you still see repository
+exceptions in your log during startup then you most likely have a
+repository corruption issue. In that case probably the best course of
+action would be to recreate the workspace from scratch.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595953_Activationerrors-Visualinspection"><a class="anchor" href="#src-196595953_Activationerrors-Visualinspection"></a>Visual inspection</h4>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR
+Browser app</a> will allow you to visually inspect the workspace as well.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595953/jcr-browser.png" alt="images/download/attachments/196595953/jcr-browser.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The <code>mgnlSystem</code> workspace should normally be empty if there is no
+activation in progress. After cleaning, make sure the website tree is OK
+on your public instance.</p>
+</div>
+<div class="paragraph">
+<p>Troubleshooting</p>
+</div>
+<div class="paragraph">
+<p>Publishing errors</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

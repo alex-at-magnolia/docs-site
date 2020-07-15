@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WAR file with multiple configurations - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/WAR-file-with-multiple-configurations.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="WAR-file-with-multiple-configurations.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/WAR-file-with-multiple-configurations.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="WAR-file-with-multiple-configurations.html">WAR file with multiple configurations - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">WAR file with multiple configurations - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Deploying.html">Deploying</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595648"><a class="anchor" href="#src-196595648"></a>WAR file with multiple configurations</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>You can deploy Magnolia to multiple environments using a single Web
+application archive (WAR) file. The WAR file can contain several
+configurations, each customizing the application to a particular target
+environment. The appropriate configuration is applied automatically when
+the WAR file is extracted on a servlet container.</p>
+</div>
+<div class="paragraph">
+<p>You can see this mechanism in action in a standard Magnolia
+installation. The standard installation deploys two webapps:
+<code>magnoliaAuthor</code> is the authoring instance where content editors work
+and <code>magnoliaPublic</code> is the public website. The two webapps are
+identical. The name of the webapp determines which configuration is
+applied at deployment time.</p>
+</div>
+<div class="paragraph">
+<p>Since the webapp is named after the WAR file (<code>magnoliaAuthor.war</code> is
+extracted to <code>magnoliaAuthor</code>) you can select a different configuration
+by simply renaming the WAR.</p>
+</div>
+<div class="paragraph">
+<p>This approach has the advantage that you only need to compile the webapp
+once. It is not necessary to create separate WAR files for each target
+environment.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-Wheretouse"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-Wheretouse"></a>Where to use</h3>
+<div class="paragraph">
+<p>Here are some ideas where multiple configurations in a single WAR are
+useful:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Author vs. Public</strong>. This is the standard example. One webapp is
+configured as an author instance that takes authors and editors into the
+AdminCentral UI while the other webapp is a public instance that
+displays the published website.</p>
+</li>
+<li>
+<p><strong>Set different storage mechanisms</strong>. The embedded Derby database that
+ships with Magnolia is OK for development and testing purposes but in
+production you need enterprise-scale persistent storage. You can
+configure different persistent storage for production servers, for
+example a MySQL database. When the WAR file is deployed to a production
+server the external database is used.</p>
+</li>
+<li>
+<p><strong>Bootstrap content to a test environment</strong>. Load some test user
+accounts and content to a test environment through the bootstrap
+mechanism. When you deploy the same webapp to production no test content
+is deployed and the production environment stays clean.</p>
+</li>
+<li>
+<p><strong>Configure repositories</strong>. With a custom repository configuration you
+can retrieve production users from a central repository or connect to a
+shared DMS for corporate assets such as documents and images.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Do you have an example of your own? Share it in the comments below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-Contextlistenerreadspropertiesfiles"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-Contextlistenerreadspropertiesfiles"></a>Context listener reads properties files</h3>
+<div class="paragraph">
+<p>Magnolia&#8217;s main listener
+<a href="http://dev.magnolia-cms.com/ref/latest-stable/apidocs/info/magnolia/init/MagnoliaServletContextListener.html">MagnoliaServletContextListener</a>
+reads initialization parameters for each webapp from
+<code>magnolia.properties</code> files. By default, the listener looks for
+properties files in these locations:</p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/magnolia.properties,</code></p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/<code>default</code>/magnolia.properties,</code></p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${webapp}/magnolia.properties,</code></p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${contextPath}/magnolia.properties,</code></p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${servername}/magnolia.properties,</code></p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${servername}/${webapp}/magnolia.properties,</code></p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${servername}/${contextPath}/magnolia.properties</code></p>
+</div>
+<div class="paragraph">
+<p>These properties files are in the <code>WEB-INF/config</code> directory inside the
+WAR. You can configure alternative file names and locations by setting
+the <code>magnolia.initialization.file</code> context parameter in <code>web.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;context-param&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`   &lt;param-name&gt;magnolia.initialization.file&lt;/param-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;param-value&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      WEB-INF/config/dev.mysite.com/magnoliaAuthor/magnolia.properties, `</p>
+</div>
+<div class="paragraph">
+<p>`      WEB-INF/config/<code>default</code>/magnolia.properties, `</p>
+</div>
+<div class="paragraph">
+<p>`      WEB-INF/config/magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;/param-value&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/context-param&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Multiple comma-separated paths are supported. The listener applies the
+properties files in a last-to-first order, loading the files in reverse
+of what you see in the list above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-Usingvariables"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-Usingvariables"></a>Using variables</h3>
+<div class="paragraph">
+<p>You can use variables to map a configuration to its target environment.
+When the context listener finds a match it reads the corresponding
+properties file and applies the properties.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595648_safe-id-V0FSZmlsZXdpdGhtdWx0aXBsZWNvbmZpZ3VyYXRpb25zLSR7c2VydmVybmFtZX0"><a class="anchor" href="#src-196595648_safe-id-V0FSZmlsZXdpdGhtdWx0aXBsZWNvbmZpZ3VyYXRpb25zLSR7c2VydmVybmFtZX0"></a>${servername}</h4>
+<div class="paragraph">
+<p><code>${servername</code>} is the name of the server where the webapp is running.
+Use lowercase. This variable is resolved to a fully qualified server
+name obtained using <code>InetAddress.getLocalHost().getHostName()</code> which may
+also contain the domain depending on your server configuration and
+operating system. Optionally, you can set the
+<code>magnolia.unqualified.server.name</code> context parameter to <code>true</code> in
+<code>web.xml</code> if you prefer using an unqualified name. Now
+<code>server.domain.com</code> will simply resolve to <code>server</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;context-param&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`     &lt;param-name&gt;magnolia.unqualified.server.name&lt;/param-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`     &lt;param-value&gt;<code>true</code>&lt;/param-value&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;/context-param&gt;`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595648_safe-id-V0FSZmlsZXdpdGhtdWx0aXBsZWNvbmZpZ3VyYXRpb25zLSR7d2ViYXBwfQ"><a class="anchor" href="#src-196595648_safe-id-V0FSZmlsZXdpdGhtdWx0aXBsZWNvbmZpZ3VyYXRpb25zLSR7d2ViYXBwfQ"></a>${webapp}</h4>
+<div class="paragraph">
+<p><code>${webapp</code>} is the last token in the webapp path, for example
+<code>magnoliaPublic</code> for a webapp deployed at
+<code>tomcat/webapps/magnoliaPublic</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595648_safe-id-V0FSZmlsZXdpdGhtdWx0aXBsZWNvbmZpZ3VyYXRpb25zLSR7Y29udGV4dEF0dHJpYnV0ZS9wcm9wZXJ0eX1hbmQke2NvbnRleHRQYXJhbS9wcm9wZXJ0eX0"><a class="anchor" href="#src-196595648_safe-id-V0FSZmlsZXdpdGhtdWx0aXBsZWNvbmZpZ3VyYXRpb25zLSR7Y29udGV4dEF0dHJpYnV0ZS9wcm9wZXJ0eX1hbmQke2NvbnRleHRQYXJhbS9wcm9wZXJ0eX0"></a>$\{contextAttribute/property} and $\{contextParam/property}</h4>
+<div class="paragraph">
+<p>You can also use servlet context attributes and parameters to indicate
+the location of configuration files. These variables will be replaced
+with the corresponding attributes or parameters taken from servlet
+context. This is useful for application servers such as IBM WebSphere
+that have multiple instances running on the same server. Typical usage
+in this case:</p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${servername}/${contextAttribute/com.ibm.websphere.servlet.application.host}/magnolia.properties</code></p>
+</div>
+<div class="paragraph">
+<p>Use context attributes and parameters provided by your servlet container
+or define your own. For example, define a custom context parameter:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;context-param&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param-name&gt;instance&lt;/param-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param-value&gt;mysite-author&lt;/param-value&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/context-param&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>And use it in the path:</p>
+</div>
+<div class="paragraph">
+<p><code>WEB-INF/config/${contextParam/instance}/magnolia.properties</code></p>
+</div>
+<div class="paragraph">
+<p>See your servlet container documentation regarding where to define
+context parameters and attributes. For example
+<a href="http://tomcat.apache.org/tomcat-6.0-doc/config/context.html#Introduction">Tomcat
+Context container reference</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595648_WARfilewithmultipleconfigurations-Namingconventions"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-Namingconventions"></a>Naming conventions</h4>
+<div class="paragraph">
+<p>The short variable names are used only in <code>web.xml</code> when resolving. For
+example, <code>${webapp}</code> is a property that is used when resolving paths to
+<code>magnolia.properties</code> files, that is when parsing the string containing
+the list of said files in <code>web.xml</code>. The corresponding variable you can
+use in the properties files is <code>${magnolia.webapp}</code>. This variable
+corresponds to the name of the folder into which Magnolia is deployed,
+typically <code>magnoliaAuthor</code> on Tomcat. Similarly, <code>${servername}</code> will
+correspond to <code>${magnolia.servername}</code>. You also have
+<code>${magnolia.app.rootdir}</code> which is the full path to the deployed app.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-Pathexamples"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-Pathexamples"></a>Path examples</h3>
+<div class="paragraph">
+<p>Here are some path examples and webapps the properties apply to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Default configuration that applies to all webapps.</p>
+<div class="paragraph">
+<p><code>WEB-INF/config/magnolia.properties</code></p>
+</div>
+</li>
+<li>
+<p>Author instances that have the default webapp name <code>magnoliaAuthor</code>.</p>
+<div class="paragraph">
+<p><code>WEB-INF/config/magnoliaAuthor/magnolia.properties</code></p>
+</div>
+</li>
+<li>
+<p>Public instances that have the default webapp name <code>magnoliaPublic</code>.</p>
+<div class="paragraph">
+<p><code>WEB-INF/config/magnoliaPublic/magnolia.properties</code></p>
+</div>
+</li>
+<li>
+<p>Webapps deployed to a development server with fully-qualified name
+<code>dev.mysite.com</code>.</p>
+<div class="paragraph">
+<p><code>WEB-INF/config/dev.mysite.com/magnolia.properties</code></p>
+</div>
+</li>
+<li>
+<p>Webapps deployed to a test server with unqualified name <code>test</code>.</p>
+<div class="paragraph">
+<p><code>WEB-INF/config/test/magnolia.properties</code></p>
+</div>
+</li>
+<li>
+<p>Custom-named author instance deployed to production server
+<code>www.mysite.com</code>.</p>
+<div class="paragraph">
+<p><code>WEB-INF/config/www.mysite.com/prod-author/magnolia.properties</code></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-magnolia.propertiesfile"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-magnolia.propertiesfile"></a>magnolia.properties file</h3>
+<div class="paragraph">
+<p><code>magnolia.properties</code> file contains properties that are not configured
+in the config repository. They are applied at deployment time before
+repositories are initialized.</p>
+</div>
+<div class="paragraph">
+<p>Here is a minimal example of a properties file:</p>
+</div>
+<div class="paragraph">
+<p><code># This is only used <code>for</code> the initial installation.</code></p>
+</div>
+<div class="paragraph">
+<p><code># Afterwards the configuration in the config repository is used.</code></p>
+</div>
+<div class="paragraph">
+<p><code># The value is saved in /server/admin</code></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.bootstrap.authorInstance=``false</code></p>
+</div>
+<div class="paragraph">
+<p>`# Directories in which bootstrap files are searched `</p>
+</div>
+<div class="paragraph">
+<p><code>magnolia.bootstrap.dir=WEB-INF/bootstrap/<code>public</code> WEB-INF/bootstrap/common</code></p>
+</div>
+<div class="paragraph">
+<p>Setting the <code>magnolia.bootstrap.authorInstance</code> property to <code>false</code>
+defines this webapp as a public instance. The webapp is given its own
+bootstrap directory in the <code>magnolia.bootstrap.dir</code> property.</p>
+</div>
+<div class="paragraph">
+<p>For examples of actual properties files, see the
+<a href="http://svn.magnolia-cms.com/svn/community/magnolia/trunk/magnolia-empty-webapp/src/main/webapp/WEB-INF/config/default/magnolia.properties">default
+magnolia.properties file</a> in the SVN version control system or in the
+<code>WEB-INF/config/default</code> directory in your Magnolia installation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-Properties"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-Properties"></a>Properties</h3>
+<div class="paragraph">
+<p>For a list of properties you can set in a <code>magnolia.properties</code> file,
+see <a href="Configuration-management.html">Configuration management</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595648_WARfilewithmultipleconfigurations-CreatingasingleWARfilewithmultipleconfigurations"><a class="anchor" href="#src-196595648_WARfilewithmultipleconfigurations-CreatingasingleWARfilewithmultipleconfigurations"></a>Creating a single WAR file with multiple configurations</h3>
+<div class="paragraph">
+<p>To create a single WAR file with multiple configurations:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new folder under <code>WEB-INF/config</code> for each configuration you
+need. Name the folders to match the name of the webapp.</p>
+<div class="paragraph">
+<p><code>/WEB-INF</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>`   /config`</p>
+</div>
+<div class="paragraph">
+<p>`       /devAuthor`</p>
+</div>
+<div class="paragraph">
+<p>`       /devPublic`
+. If you are deploying on different servers, move the webapp folders
+inside a folder named after the server.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>/WEB-INF</code></p>
+</div>
+<div class="paragraph">
+<p>`   /config`</p>
+</div>
+<div class="paragraph">
+<p>`       /dev.mysite.com`</p>
+</div>
+<div class="paragraph">
+<p>`           /devAuthor`</p>
+</div>
+<div class="paragraph">
+<p>`           /devPublic`
+. Copy the contents of <code>WEB-INF/config/default</code> into each webapp folder
+and customize the properties in the files.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>/WEB-INF</code></p>
+</div>
+<div class="paragraph">
+<p>`   /config`</p>
+</div>
+<div class="paragraph">
+<p>`       /dev.mysite.com`</p>
+</div>
+<div class="paragraph">
+<p>`           /devAuthor`</p>
+</div>
+<div class="paragraph">
+<p>`               log4j.xml`</p>
+</div>
+<div class="paragraph">
+<p>`               magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>`               repositories.xml`</p>
+</div>
+<div class="paragraph">
+<p>`           /devPublic`</p>
+</div>
+<div class="paragraph">
+<p>`               log4j.xml`</p>
+</div>
+<div class="paragraph">
+<p>`               magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>`               repositories.xml`
+. Open <code>WEB-INF/web.xml</code> in a text editor and uncomment the
+<code>context-param</code> section for <code>magnolia.initialization.file</code>.
+. Edit the <code>context-param</code> section, adding paths to the webapp
+properties.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>&lt;context-param&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param-name&gt;magnolia.initialization.file&lt;/param-name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;param-value&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        WEB-INF/config/dev.mysite.com/devAuthor/magnolia.properties,`</p>
+</div>
+<div class="paragraph">
+<p>`        WEB-INF/config/dev.mysite.com/devPublic/magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/param-value&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/context-param&gt;</code>
+. Save <code>web.xml</code>.
+. Compile a WAR file, name it to match one of the webapps, and deploy
+the WAR on a servlet container on the target server.</p>
+</div>
+<div class="paragraph">
+<p>As the WAR is deployed on the container, the context listener applies
+any properties that match the path constructed after applying all
+variables; server name, webapp name and any context parameters and
+attributes.</p>
+</div>
+<div class="paragraph">
+<p>To test another deployment configuration, change the name of the WAR
+file and deploy again. A configuration that matches the new name will
+now be used.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can follow the procedure above by compiling your own WAR file in an
+integrated development environment (IDE) such as Eclipse. Or, if you
+just want to try the multiple configuration mechanism, download the
+standalone Magnolia WAR file
+(<a href="http://sourceforge.net/projects/magnolia/files/magnolia/">Community
+Edition</a>, <a href="http://files.magnolia-cms.com/">DX Core</a>) and change the file
+extension to <code>.zip</code>. Extract the zip, make your configuration changes in
+the extracted files, zip them again and change the extension back to
+<code>.war</code>. Now you can deploy the WAR to a servlet container. See
+<a href="http://svn.magnolia-cms.com/svn/community/projects/" class="bare">http://svn.magnolia-cms.com/svn/community/projects/</a> in SVN for more
+examples.</p>
+</div>
+<div class="paragraph">
+<p>Watch <code>logs/magnolia-debug.log</code> for notifications. The log tells you
+which configuration files are loaded during deployment.</p>
+</div>
+<div class="paragraph">
+<p><code>2010<code>-</code>08<code>-</code>13<code> </code>16<code>:</code>13<code>:</code>12<code>,</code>245`</code> DEBUG MagnoliaServletContextListener: servername is dev-mac.local, rootPath is /Applications/tomcat/webapps/devAuthor, webapp is devAuthor`</p>
+</div>
+<div class="paragraph">
+<p><code>2010<code>-</code>08<code>-</code>13<code> </code>16<code>:</code>13<code>:</code>12<code>,</code>246<code> DEBUG MagnoliaServletContextListener: magnolia.initialization.file value in web.xml is: </code>'WEB-INF/config/${servername}/${webapp}/magnolia.properties, WEB-INF/config/default/magnolia.properties, WEB-INF/config/magnolia.properties'</code></p>
+</div>
+<div class="paragraph">
+<p><code>2010<code>-</code>08<code>-</code>13<code> </code>16<code>:</code>13<code>:</code>12<code>,</code>839<code> INFO PropertiesInitializer: Loading configuration at /Applications/tomcat/webapps/devAuthor/WEB-INF/config/</code>default`</code>/magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p><code>2010<code>-</code>08<code>-</code>13<code> </code>16<code>:</code>13<code>:</code>12<code>,</code>840`</code> INFO PropertiesInitializer: Loading configuration at /Applications/tomcat/webapps/devAuthor/WEB-INF/config/dev-mac.local/devAuthor/magnolia.properties`</p>
+</div>
+<div class="paragraph">
+<p>Deploying a WAR on JBoss WildFly or EAP</p>
+</div>
+<div class="paragraph">
+<p>License</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

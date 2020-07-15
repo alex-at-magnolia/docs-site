@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DAM core module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/DAM_core_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="DAM_core_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/DAM_core_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="DAM_core_module.html">DAM core module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">DAM core module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Digital_Asset_Management_module.html">Digital Asset Management
+module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596926"><a class="anchor" href="#src-196596926"></a>DAM core module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLDAM">DAM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/modules/magnolia-dam/">DAM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.0.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The DAM core module is a Magnolia Maven module.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It has a module class - DamCoreConfiguration - which implements
+ModuleLifecycle.</p>
+</li>
+<li>
+<p>It contains (and registers) the DamDownloadServlet.</p>
+</li>
+<li>
+<p>Provides an implementation of AssetProviderRegistry.</p>
+</li>
+<li>
+<p>The module is configured in <code>/modules/dam/config</code>.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196596926_DAMcoremodule-Installing"><a class="anchor" href="#src-196596926_DAMcoremodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.dam&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-dam-core&lt;/artifactId&gt;
+  &lt;version&gt;3.0.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596926_DAMcoremodule-Assetprovidersandrenderers"><a class="anchor" href="#src-196596926_DAMcoremodule-Assetprovidersandrenderers"></a>Asset providers and renderers</h3>
+<div class="paragraph">
+<p>In order to have a working DAM you must have configured at least:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>an AssetProvider</p>
+</li>
+<li>
+<p>an AssetRenderer</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196596926_DAMcoremodule-ConfiguringAssetProvider"><a class="anchor" href="#src-196596926_DAMcoremodule-ConfiguringAssetProvider"></a>Configuring AssetProvider</h4>
+<div class="paragraph">
+<p>To enable DAM at least one AssetProvider must be configuread as subnode
+of <code>/modules/dam/config/providers/</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">providers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">example-provider</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.dam.MyAssetProvider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">foo</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A class which must implement AssetProvider.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The identifier of the asset provider. Must be unique within all asset
+providers.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596926_DAMcoremodule-ConfiguringanAssetRenderer"><a class="anchor" href="#src-196596926_DAMcoremodule-ConfiguringanAssetRenderer"></a>Configuring an AssetRenderer</h4>
+<div class="paragraph">
+<p>AssetRenderer objects can be configured:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>globally</p>
+</li>
+<li>
+<p>or per AssetProvider.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When an asset rendition is requested,
+<code>AssetProviderRegistry#getRendererFor(Asset asset, MediaType to)</code> first
+is looking for a provider specific renderer but will fallback to the
+globally defined renderer if no specific can be found.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">providers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">example-provider</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.dam.ImagingBasedAssetRenderer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">com.example.dam.MyAssetProvider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">foo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noOp</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.core.NoOpAssetRenderer</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The example configuration above has 2 renderers defined:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/modules/dam/config/providers/example-provider/</code> <code>renderers/imaging</code>
+configures a renderer for images specifically for the asset provider
+<code>example-provider</code>.</p>
+</li>
+<li>
+<p><code>/modules/dam/config/</code> <code>renderers/noOp</code> is a global fallback if a
+provider lacks a renderer for the requested media type.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196596926_DAMcoremodule-NoOpAssetRenderer"><a class="anchor" href="#src-196596926_DAMcoremodule-NoOpAssetRenderer"></a>NoOpAssetRenderer</h5>
+<div class="paragraph">
+<p>The module <code>magnolia-dam-core</code> provides NoOpAssetRenderer which can be
+used to define global AssetRenderer. Per default, NoOpAssetRenderer does
+only wrap the original Asset.</p>
+</div>
+<div class="paragraph">
+<p>NoOpAssetRenderer is registered by</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596926_DAMcoremodule-Implementationspecificconfiguration"><a class="anchor" href="#src-196596926_DAMcoremodule-Implementationspecificconfiguration"></a>Implementation specific configuration</h4>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>magnolia-dam-core is not taking care about the used AssetProvider
+implementation.</p>
+</div>
+<div class="paragraph">
+<p>Specific asset provider and renderer should rather be configured from a
+module which contains a specific implementation but not from
+magnolia-dam-core itself.</p>
+</div>
+<div class="paragraph">
+<p>Please read
+<a href="Magnolia_DAM_JCR_implementation.html#src-196596934_MagnoliaDAMJCRimplementation-Magnoliadamjcrconfiguration">Magnolia
+dam JCR implementation configuration</a> to get a complete example of a
+specific configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596926_DAMcoremodule-Downloadservlet"><a class="anchor" href="#src-196596926_DAMcoremodule-Downloadservlet"></a>Download servlet</h3>
+<div class="paragraph">
+<p>DamDownloadServlet handles
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+assets">asset
+downloads</a>. The main task is to retrieve an <code>Asset</code> Object based on the
+current URI:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If no <code>Asset</code> is found, an error is sent to the response.</p>
+</li>
+<li>
+<p>If an <code>Asset</code> is found, the response header is set and the asset
+binary is put in the response.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The servlet is backwards compatible and maps static UUIDs to the new DAM
+format.</p>
+</div>
+<div class="paragraph">
+<p><code>DamDownloadServlet</code> is registered in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">filter chain</a> at
+<code>/server/filters/servlets/DamDownloadServlet</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">context</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servlets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ClasspathSpoolServlet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4j</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DamDownloadServlet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-dam--</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/dam/*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-dam-static--</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/dam-static/*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.filters.ServletDispatchingFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DAM download servlet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servletClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.dam.core.download.DamDownloadServlet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servletName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DamDownloadServlet</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596926_DAMcoremodule-Contentdisposition"><a class="anchor" href="#src-196596926_DAMcoremodule-Contentdisposition"></a>Content disposition</h3>
+<div class="paragraph">
+<p>Content-disposition is a
+<a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields">HTTP header</a>.
+If the Content-disposition field is set in a HTTP response header, the
+browser opens the "save file as" dialog instead of rendering the
+requested resource.</p>
+</div>
+<div class="paragraph">
+<p>Per default, DamDownloadServlet serves assets with set
+<code>Content-Disposition</code> header. However, it is possible to define
+exceptions to omit the content disposition header.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596926_DAMcoremodule-Disablingcontentdispositionheaderspermimetype"><a class="anchor" href="#src-196596926_DAMcoremodule-Disablingcontentdispositionheaderspermimetype"></a>Disabling content disposition headers per mime type</h4>
+<div class="paragraph">
+<p>DAM standard configuration already defines 2 exceptions based on mime
+type:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>application/x-shockwave-flash</p>
+</li>
+<li>
+<p>video/mp4</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To disable the Content-Disposition header for other content types, add
+their MIME types to
+<code>/dam/config/contentDisposition/contentType/rejected</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentDisposition</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rejected</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">application/x-shockwave-flash</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">video/mp4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.ResponseContentTypeVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.VoterSet</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Nodes and properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>contentDisposition</code>: Defines content disposition header exceptions.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>contentType</code>: Arbitrary node name</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>rejected</code>: Content map of MIME types for which content disposition
+headers are not served.</p>
+</li>
+<li>
+<p><code>class</code>: ResponseContentTypeVoter is a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Voters">voter</a> that checks
+the content type set on the response object against a list of allowed
+and/or rejected content types. It is typed to Object, as it can vote on
+both a passed <code>HttpServletRequest</code>, or the current
+<code>MgnlContext.webContext</code>, if any.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>class</code>: VoterSet supports a set of voters. The voting can be set, as
+well the returned level. If the level is not set (0) the votings result
+is returned.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596926_DAMcoremodule-Disablingcontentdispositionheadersbasedonpath"><a class="anchor" href="#src-196596926_DAMcoremodule-Disablingcontentdispositionheadersbasedonpath"></a>Disabling content disposition headers based on path</h4>
+<div class="paragraph">
+<p>To disable serving <code>Content-Disposition</code> headers based on path:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new node <code>inline</code> under <code>contentDisposition</code>.</p>
+</li>
+<li>
+<p>Under the new content node, create three property nodes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>class</code> and set the value to
+<code>info.magnolia.voting.voters.URIStartsWithVoter</code>.</p>
+</li>
+<li>
+<p><code>not</code> and set the value to <code>true</code>.</p>
+</li>
+<li>
+<p><code>pattern</code> and set the value to <code>/dam/inline</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Under the <code>contentDisposition</code> node add an <code>op</code> property and set the
+value to <code>and</code>. This acts as an operator between voters and is only
+necessary if there you have more than one voter in the set.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This will configure all files in folder <code>inline</code> to be sent without
+content disposition headers. The new content node should look like this:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentDisposition</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">inline</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.URIStartsWithVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/dam/inline</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.VoterSet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">op</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">and</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Digital Asset Management module</p>
+</div>
+<div class="paragraph">
+<p>External DAM app module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

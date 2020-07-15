@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Data privacy :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/data-privacy.html">
+    <meta name="keywords" content="gdpr">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="data-privacy.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/data-privacy.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="data-privacy.html">Data privacy</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Data privacy</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Modules/List+of+modules/Privacy+module">Privacy module</a></p>
+</li>
+<li>
+<p><a href="/Developing/API/Data+privacy+API">Data privacy API</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Privacy+module/GDPR+and+forms">GDPR and
+forms</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Privacy+module/GDPR+and+cookies">GDPR and
+cookies</a></p>
+</li>
+<li>
+<p><a href="/Apps/List+of+apps/Cookies+app">Cookies app</a></p>
+</li>
+<li>
+<p><a href="/Apps/List+of+apps/Visitors+app">Visitors app</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page explains how Magnolia helps you ensure the data privacy rights
+of website visitors in the context of GDPR.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_gdpr"><a class="anchor" href="#_what_is_gdpr"></a>What is GDPR?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The General Data Protection Regulation (GDPR) is a set of rules brought
+into effect on May 25, 2018 to protect the data privacy rights of
+European citizens. GDPR requires companies to be transparent about what
+personal data they collect about subjects and for what purpose. Personal
+data is defined as any information relating to an identified or
+identifiable natural person. See
+<a href="https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en">European
+Commission’s website</a> for more information about the regulation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_does_gdpr_impact_you"><a class="anchor" href="#_does_gdpr_impact_you"></a>Does GDPR impact you?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Any company that wants to do business in the European Union must comply
+with GDPR. Even if you do not intend to provide EU residents with goods
+or services – but you are collecting their personal data – you need to
+comply with the GDPR.</p>
+</div>
+<div class="sect2">
+<h3 id="_gdpr_roles"><a class="anchor" href="#_gdpr_roles"></a>GDPR roles</h3>
+<div class="paragraph">
+<p>The GDPR defines two main roles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Controller</strong> who determines the purposes and means of processing
+personal data. The controller is ultimately responsible for GDPR
+compliance.</p>
+</li>
+<li>
+<p><strong>Processor</strong> who processes personal data on behalf of the controller.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_client_hosted"><a class="anchor" href="#_client_hosted"></a>Client Hosted</h4>
+<div class="paragraph">
+<p>A typical Client Hosted Magnolia client is both a <em>controller</em> and
+<em>processor</em>. As a client hosted client, you determine what personal data
+is collected from visitors and why. You also store and process the data.
+Magnolia is one of the means (tools, methods) you use to collect the
+data. As the data controller, you are ultimately responsible for your
+site’s compliance with GDPR.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cloud"><a class="anchor" href="#_cloud"></a>Cloud</h4>
+<div class="paragraph">
+<p>A typical Magnolia Cloud client is a <em>controller</em> while Magnolia Cloud
+is the <em>processor</em>. Magnolia hosts your website(s) as a cloud service on
+AWS and collects, stores and processes data on your behalf. You can find
+out more about AWS GDPR compliancy
+<a href="https://aws.amazon.com/compliance/gdpr-center/">here</a>. As the data
+controller, you are ultimately responsible for your site’s compliance
+with GDPR.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_does_magnolia_help_you_become_gdpr_compliant"><a class="anchor" href="#_how_does_magnolia_help_you_become_gdpr_compliant"></a>How does Magnolia help you become GDPR compliant?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia is committed to the General Data Protection Regulation and to
+protecting privacy and personal data in a practical and
+solution-oriented way.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A GDPR-dedicated set of modules.</p>
+</li>
+<li>
+<p>APIs to handle visitor information and to manage cookies.</p>
+</li>
+<li>
+<p>Visitors and Cookies apps.</p>
+</li>
+<li>
+<p>Sample templates, dialogs and forms.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_storing_personal_data_and_managing_consent"><a class="anchor" href="#_storing_personal_data_and_managing_consent"></a>Storing personal data and managing consent</h3>
+<div class="paragraph">
+<p><strong>Example</strong>: A visitor fills a contact form on your website. They enter
+their name and email address into the form. Under GDPR, email address
+and name are personal data and you must ask the visitor for consent so
+that you may collect, store and use their data. You should also tell the
+visitor how you plan to use the data. For example, it may not be obvious
+to the visitor that you will add them to a newsletter mailing list.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia helps you manage this in a compliant way by providing a set of
+privacy-aware form templates. The forms are used to collect and record
+the personal data and related consent.</p>
+</div>
+<div class="paragraph">
+<p>Try to minimize the personal data you collect. If you don’t have a
+compelling business reason to capture a particular detail then don’t do
+it. Is there another way of achieving the same goal without having to
+collect the data?</p>
+</div>
+<div class="paragraph">
+<p>You should only collect data that is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adequate</p>
+</li>
+<li>
+<p>Relevant</p>
+</li>
+<li>
+<p>Limited to what is necessary for the purposes for which it is
+processed.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_forms"><a class="anchor" href="#_forms"></a>Forms</h4>
+<div class="paragraph">
+<p>Developers can update your website’s forms to become GDPR-aware using
+the default form components delivered with Magnolia’s
+<a href="/Modules/List+of+modules/Privacy+module">Privacy module</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Get visitor data</strong> form</p>
+</li>
+<li>
+<p><strong>Confirm visitor data</strong> form</p>
+</li>
+<li>
+<p><strong>Store visitor data</strong> form</p>
+</li>
+<li>
+<p><strong>Delete visitor data</strong> form</p>
+</li>
+<li>
+<p><strong>Forget me</strong> form</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These forms and the consent fields available in them can be
+<a href="/Modules/List+of+modules/Privacy+module/GDPR+and+forms">used as a
+starting point and configured</a> to gather only the information you
+require.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_consent"><a class="anchor" href="#_consent"></a>Consent</h4>
+<div class="paragraph">
+<p>Magnolia helps you make sure your visitors have a clear way to give or
+refuse consent.</p>
+</div>
+<div class="paragraph">
+<p>The form shown below and the related consent mechanism was created using
+the out-of the-box <strong>Store visitor data</strong> form template in a page. Once
+submitted, the user is asked to confirm their consent by email: this is
+called <em>double opt-in</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-consent-form-component.png" alt="image" height="250"></span>
+<span class="image"><img src="../../_images/6-0-consent-form-preview.png" alt="image" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>The form template automatically:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds consent fields to your forms so that granular consent for the
+data being collected is obtained directly via the configured form.</p>
+</li>
+<li>
+<p>Helps you configure double opt-in validation for consent by sending a
+link to a confirmation page by email.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These sample forms can be
+<a href="/Modules/List+of+modules/Privacy+module/GDPR+and+forms">configured
+and extended to suit your specific needs</a>.</p>
+</div>
+<div class="paragraph">
+<p>Create a ``Privacy policy'' page explaining what visitor information you
+collect and why. Include a link to this page during the double opt-in
+process and/or when visitors are asked to give consent.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_data_storage"><a class="anchor" href="#_data_storage"></a>Data storage</h4>
+<div class="paragraph">
+<p>Information gathered from visitors is stored in different JCR
+<a href="/Administration/Architecture/Workspaces">workspaces</a>. These
+workspaces are then registered under the
+<a href="/Modules/List+of+modules/Privacy+module#visitor-references-searchers">Visitor
+manager module</a> to be able to process GDPR-sensitive data.</p>
+</div>
+<div class="paragraph">
+<p>Visitor consent is stored in a dedicated <code>visitors</code> workspace. You can
+view consent data, including a record of when and how consent was
+collected for each piece of information, as well as update and delete
+consent in the <a href="/Apps/List+of+apps/Visitors+app">Visitors app</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="!include">/_i/_GDPR+data+is+stored+on+public+and+must+be+synchronized+on+clusters</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_managing_cookies"><a class="anchor" href="#_managing_cookies"></a>Managing cookies</h3>
+<div class="paragraph">
+<p>Magnolia helps you
+<a href="/Modules/List+of+modules/Privacy+module/GDPR+and+cookies">manage
+cookies on your website</a>. Under GDPR, you must inform visitors that your
+website is using cookies, and, if your cookies collect personal data,
+ask visitors to consent to the their data being collected. Before
+setting a cookie, Magnolia checks the cookie consent stored in the
+visitor’s browser against the configuration of the cookie in the Cookies
+app and determines whether or not the cookie may be set.</p>
+</div>
+<div class="paragraph">
+<p>The Magnolia
+<a href="/Getting+started+with+Magnolia/Demo/Travel+Demo+-+for+developers">Travel
+demo</a> shows how the default cookie-related tabs in the Pages app can be
+used to configure cookies and how they appear to users:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-page-properties-cookies.png" alt="image" width="500"></span>
+<span class="image"><img src="../../_images/6-0-page-properties-cookies-preview.png" alt="image" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Create a ``Cookie policy'' page explaining what types of cookies exist
+on your site and their purpose. Include a link to this page from the
+cookie banner.</p>
+</div>
+<div class="sect3">
+<h4 id="_cookie_consent"><a class="anchor" href="#_cookie_consent"></a>Cookie consent</h4>
+<div class="paragraph">
+<p>If your cookies collect personal data, you need to get and record
+consent from your visitors.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, the list of cookies marketeers can choose from
+is configured in the <a href="/Apps/List+of+apps/Cookies+app">Cookies app</a>.
+This is where developers can add and configure the cookies required for
+your site:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-cookie-manager-config.png" alt="image" width="500"></span></p>
+</div>
+<div class="sect4">
+<h5 id="_marketing_tag_example"><a class="anchor" href="#_marketing_tag_example"></a>Marketing tag example</h5>
+<div class="paragraph">
+<p>Google Analytics is a commonly used tool on websites. It works by
+collecting information about visitors through the use of cookies. You
+need to obtain consent for this type of cookie.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Google Analytics is Google’s analytics tool that helps website and app
+owners to understand how their visitors engage with their properties. It
+may use a set of cookies to collect information and report website usage
+statistics without personally identifying individual visitors to Google.
+The main cookie used by Google Analytics is the `__ga' cookie.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Marketeers can link the
+<a href="/Apps/List+of+apps/Marketing+Tags+app">Google Analytics marketing
+tag</a> to the relevant cookie configured in the Cookies app to ensure you
+ask your visitors to consent the <code>_ga</code> cookie being used. Marketing tags
+linked to cookies are not added if the visitor doesn’t accept the
+cookies in question.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-mktg-tag-cookie-tab.png" alt="image" width="500"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_erasing_personal_data"><a class="anchor" href="#_erasing_personal_data"></a>Erasing personal data</h3>
+<div class="paragraph">
+<p>Magnolia enables you to respect a subject’s right to be forgotten. For
+example, the visitor that signed up for the newsletter no longer wants
+to receive it: he/she may request their data be deleted via a link on
+your site and be asked to confirm by email.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides a default <strong>Delete visitor data</strong> form template to
+quickly create a form where visitor can request you delete their data.
+With the <a href="/Developing/API/Data+privacy+API">Data privacy API</a>,
+developers can delete all visitor data previously stored upon request.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_data_portability"><a class="anchor" href="#_data_portability"></a>Data portability</h3>
+<div class="paragraph">
+<p>Magnolia enables you to export a .zip file of all the personal data you
+have collected about a visitor at their request (or at the request of
+data protection authorities). The machine-readable export can contain
+information such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What personal data has been collected and processed.</p>
+</li>
+<li>
+<p>Why the data has been collected and processed.</p>
+</li>
+<li>
+<p>The categories of data subjects.</p>
+</li>
+<li>
+<p>The categories of third parties that data may be shared with.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See
+<a href="/Administration/Importing+and+exporting+data/Importing+and+exporting+JCR+data+for+bootstrapping">exporting
+JCR data</a> - Importing and exporting JCR data with apps from the Admin
+UI.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

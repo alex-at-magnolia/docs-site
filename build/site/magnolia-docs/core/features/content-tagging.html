@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content tagging :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/content-tagging.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="content-tagging.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/content-tagging.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="content-tagging.html">Content tagging</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Content tagging</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Modules/List+of+modules/Content+Tags+module/How+to+enable+content+tags+for+a+content+app">Enable
+tags for an app</a></p>
+</li>
+<li>
+<p><a href="/Templating/Template+scripts/Templating+functions/tagfn"><code>tagfn</code>
+templating functions</a></p>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Content+Tags+module">Content Tags module</a></p>
+</li>
+<li>
+<p><a href="/Apps/List+of+apps/Tags+app">Tags app</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Content tagging: &lt;ac:parameter[Attr <code>ac:name'' </code>url'']&gt;</p>
+</div>
+<div class="paragraph">
+<p>Content tagging: &lt;ri:url[Attr <code>ri:value''
+</code><a href="https://www.youtube.com/watch?v=WEg6b_1I9hU''" class="bare">https://www.youtube.com/watch?v=WEg6b_1I9hU''</a>]&gt;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> +
+https://www.youtube.com/watch?v=WEg6b_1I9hU[Tagging, your booster to
+targeting]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tags are short keywords such as <code>food</code> or <code>sports</code> applied to content
+items. Tags making finding and reusing content easier.</p>
+</div>
+<div class="paragraph">
+<p>Tags are also an important enabler feature. Here are some ideas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Personalization: Use tags to group content by subject and target
+audience. Create small reusable content items (events, products,
+teasers, banners…) and tag them into collections. Now you can serve a
+collection of related content to the visitor.</p>
+</li>
+<li>
+<p>Periodic campaigns: Tag your content items according to their sales
+cycle (<code>on-sale</code>), season (<code>grilling</code>) or trendiness (<code>nordic-noir</code>).
+Display content by tag on your site, for example in a carousel that
+cycles through identically tagged items. Change the tags as you move
+from one period to another. This is a quick way to react to changes in
+inventory. It’s easy to change an entire set of promoted content by
+tagging only.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <a href="/Modules/List+of+modules/Content+Tags+module">Content Tags
+module</a> provides tagging functionality in Magnolia, including the
+<a href="/Apps/List+of+apps/Tags+app">Tags app</a> for deleting and renaming
+tags as well as managing tag dependencies across content items, and a
+<a href="/Templating/Template+scripts/Templating+functions/tagfn"><code>tagfn</code></a>
+templating function.
+<a href="!excerpt-include">/Templating/Template+scripts/Templating+functions/tagfn</a></p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Try out this feature in the
+<a href="https://demo.magnolia-cms.com/.magnolia/admincentral#app:tours:;">Magnolia
+demo Tours app</a> (log in using the username and password <code>superuser</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tags_vs_categories"><a class="anchor" href="#_tags_vs_categories"></a>Tags vs categories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Tags</em> are keywords or terms assigned to a piece of content. Though
+similar, tags and categories serve different purposes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Apps/List+of+apps/Categories+app">Categories</a> are groups of
+pre-defined content that identify the primary topics of your site. In
+general, content only belongs to one category. For example, in the
+Magnolia <a href="/Getting+started+with+Magnolia/Demo">Travel Demo</a>, tours
+are organized into categories such as Europe, Asia and Africa.</p>
+</li>
+<li>
+<p>Tags are free-form and can be defined by authors on the fly. Multiple
+tags can be applied to many content items. For example, in the Travel
+demo, a tour can be tagged <code>adventure</code> regardless of whether it takes
+place in Europe, Asia or Africa.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ease_of_use"><a class="anchor" href="#_ease_of_use"></a>Ease-of-use</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once
+<a href="/Modules/List+of+modules/Content+Tags+module/How+to+enable+content+tags+for+a+content+app">tagging
+is enabled for a content app</a>, authors can create and apply tags by
+selecting item(s) and using the keyboard shortcut <span class="kbd">T</span> or click the
+<strong>Add tags</strong> action to open the tagging dialog.</p>
+</div>
+<div class="paragraph">
+<p>When you start typing in the Tags field, Magnolia suggests tags that
+already exist.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Magnolia provides batch tagging so that you can tag multiple content
+items in one step.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="/Features/Image+recognition">image recognition</a> feature
+automatically recognizes and tags untagged images in the <code>dam</code> workspace
+when you start Magnolia or upload a new image in the Assets app.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tag_based_searching"><a class="anchor" href="#_tag_based_searching"></a>Tag-based searching</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the <a href="/Features/Find+Bar">Find Bar</a> to search through your content
+on the basis of tags. You can also select a tag in the Tags filter
+provided by the Find Bar.</p>
+</div>
+<div class="paragraph">
+<p>Depending on your user permissions, you may also have access to the
+<a href="/Apps/List+of+apps/Tags+app">Tags app</a>. In the Tags app, you can
+double click on any given tag to see where it is used.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-tags-app-dependencies.png.png" alt="image" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>This usage report in the Tags app is useful when you want to remove a
+tag from all content items where it is used when a campaign ends for
+instance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_tagged_content"><a class="anchor" href="#_using_tagged_content"></a>Using tagged content</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tags you apply to content can be used to aggregate and display
+content in different ways.</p>
+</div>
+<div class="paragraph">
+<p>For example, content items can be rendered based on tags by creating a
+template. The <code>tour-tag</code> page in the demo has a special component called
+``Tour list by content tag'' that renders tours based on their tags.</p>
+</div>
+<div class="paragraph">
+<p>Here the <code>food</code> tag has been used to aggregate content:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-0-tours-list-by-tag-page.png" alt="image" height="250"></span>
+<span class="image"><img src="../../_images/6-0-tours-list-by-tag-rendered.png" alt="image" height="250"></span></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

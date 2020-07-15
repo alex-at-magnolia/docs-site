@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DAM API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/DAM-API.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="DAM-API.html">master</a>
+    <a class="version" href="../../6.2.1/core/developing/DAM-API.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="DAM-API.html">DAM API - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">DAM API - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="API.html">API</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596271"><a class="anchor" href="#src-196596271"></a>DAM API</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">Digital
+asset management</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/damfn"><code>damfn</code> templating
+functions</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+images+using+damfn">How
+to work with images using damfn</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Image+recognition">Image
+recognition</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Editing+images">Editing
+images</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+assets">Managing
+assets</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The DAM API provides the basic mechanism for the abstraction of the
+storage location of an asset. The API:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Allows for external storage providers.</p>
+</li>
+<li>
+<p>Is used primarily in templating, templates and models. It provides
+read-only access to assets managed in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Assets+app">Assets app</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Key features of DAM API:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clean, simple and basic.</p>
+</li>
+<li>
+<p>Flexible, extendable and user-friendly. (You can extend the API and
+create your own <a href="#src-196596271_DAMAPI-AssetProvider">asset
+providers</a> for external systems.)</p>
+</li>
+<li>
+<p>Generic, in the sense that it is not coupled to the JCR.</p>
+</li>
+<li>
+<p>Capable of connecting to external asset providers and other systems.</p>
+</li>
+<li>
+<p>Supporting Industry standard
+<a href="#src-196596271_DAMAPI-MediaType">media types</a></p>
+</li>
+<li>
+<p>It is now possible to plug in external asset providers like Flickr,
+YouTube and file systems.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-Architecture"><a class="anchor" href="#src-196596271_DAMAPI-Architecture"></a>Architecture</h3>
+<div class="paragraph">
+<p>The diagram provides an overview of how the main interfaces and classes
+of the DAM API relate.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596271/API-overview.jpg" alt="images/download/attachments/196596271/API-overview.jpg"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-Interfaces"><a class="anchor" href="#src-196596271_DAMAPI-Interfaces"></a>Interfaces</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>AssetProviderRegistry is the main entry point. Given an <code>ItemKey</code> or
+<a href="#src-196596271_DAMAPI-MediaType"><code>MediaType</code></a> it is responsible for:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Finding the correct <code>AssetProvider</code>.</p>
+</li>
+<li>
+<p>Finding the correct <code>AssetRenderer</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>AssetProvider: Exposes <code>Folder`s and `Asset`s from a particular
+source. Specifics of the storage of these items are left to
+implementations. While most provider implementations only use the
+`ItemKey.assetId</code> field of keys passed to the various <code>get</code> methods, the
+entire key object is passed for consistency and flexibility. This makes
+it possible to implement, for example, delegating and aggregating
+providers.</p>
+</li>
+<li>
+<p>PathAwareAssetProvider: Exposes specific operations for
+<code>AssetProviders</code> that are aware of paths, for example JCR, CMIS, File
+system etc. Not all providers need or want to implement these features.
+The term "path" here should be taken "with a pinch of salt". It could,
+for example, be a single name or a "relative" path if the provider
+serves assets from a subset of its underlying data source.</p>
+</li>
+<li>
+<p>AssetRenderer: Provides <code>AssetRenditions</code> by bridging an asset&#8217;s data
+and some type of converter. <code>AssetRenderers</code> can be provided by
+<code>AssetProviders</code> if the <code>AssetProvider</code> itself (or the underlying
+system) is capable of managing the conversion/translation, or via a
+"global" registry.
+<code>AssetProviderRegistry.getRendererFor(info.magnolia.dam.api.Asset, com.google.common.net.MediaType)</code>
+provides the entry point. It looks up in provider, then in its own
+registry, and bridges to other possible conversion mechanisms that are
+independent of Magnolia DAM.</p>
+</li>
+<li>
+<p>Asset: An <code>Asset</code> is a digital resource with associated metadata.</p>
+</li>
+<li>
+<p>Folder: A <code>Folder</code> represents a structural item holding `Asset`s.
+Depending on the provider, this can be directly mapped to the concept of
+folders/directories (JCR, FileSystems etc.), and for other types, it may
+map to the concept of albums, playlists, sets, etc.</p>
+</li>
+<li>
+<p>Item: Defines a common interface for <code>Asset</code> and <code>Folder</code>.</p>
+</li>
+<li>
+<p>AssetQuery: Represents a query to an <code>AssetProvider</code>. Use new
+<code>AssetQuery.Builder()&#8230;&#8203;build()</code> to construct instances.</p>
+</li>
+<li>
+<p>AssetRendition: An <code>AssetRendition</code> is a "view" on a asset for a
+specific <a href="#src-196596271_DAMAPI-MediaType"><code>MediaType</code></a> . It can be a
+simple resize of an image, or a document conversion.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-Enum"><a class="anchor" href="#src-196596271_DAMAPI-Enum"></a>Enum</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>AssetProviderCapability : Clients can ask a provider if they support a
+certain feature before attempting to use it. Typically, this would
+enable/disable certain UI features. In some cases, this will also
+indicate that client code can cast to a specific interface. (e.g.
+<code>PathAwareAssetProvider</code> for <code>hierarchical</code>). If support for write
+operations is added, this enum will be extended with new capabilities.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-Classes"><a class="anchor" href="#src-196596271_DAMAPI-Classes"></a>Classes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>AbstractAssetProvider: Convenient abstract base class for
+implementations. Enables configuration of <code>MediaType`s that the
+implemented `AssetProvider</code> provides.</p>
+</li>
+<li>
+<p>AbstractItem : Common superclass for any dam <code>Item</code>.</p>
+</li>
+<li>
+<p>Builder : A builder for <code>AssetQuery</code> that provides a fluent API.</p>
+</li>
+<li>
+<p>ItemKey : A composite key. In the DAM every <code>Asset</code> and <code>Folder</code> is
+identified by its provider&#8217;s ID and its provider-specific ID (i.e the ID
+with which the provider can uniquely identify the asset).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-Metadatainterfaces"><a class="anchor" href="#src-196596271_DAMAPI-Metadatainterfaces"></a>Metadata interfaces</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>AssetMetadata: A common interface for asset metadata. Different types
+of metadata can be exposed through <code>Asset</code> by extending this interface.
+The <code>AssetProvider</code> should implement support for those. Specific
+metadata interfaces should expose methods with explicit names and return
+types, and ideally provide property descriptions in the Javadocs.
+Metadata is retrieved through an <code>Asset</code> by passing the specific type of
+metadata, i.e, a class object that extends this interface.</p>
+</li>
+<li>
+<p>DublinCore: A collection of Dublin Core metadata names. Extends
+AssetMetadata. Methods: <code>getContributor</code>,<code>getCoverage</code>, <code>getCreated</code>,
+<code>getCreator</code>, <code>getDate</code>, <code>getDescription</code>, <code>getFormat</code>, <code>getIdentifier</code>,
+<code>getLanguage</code>, <code>getModified</code>, <code>getPublisher</code>, <code>getRelation</code>,
+<code>getRights</code>, <code>getSource</code>, <code>getSubject</code>, <code>getTitle</code>, <code>getType</code>.</p>
+</li>
+<li>
+<p>MagnoliaAssetMetadata: Defines Magnolia-specific metadata. Extends
+<code>AssetMetadata</code>. Methods: <code>getHeight</code>, <code>getWidth</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-MediaType"><a class="anchor" href="#src-196596271_DAMAPI-MediaType"></a>MediaType</h3>
+<div class="paragraph">
+<p>DAM 2.0 introduces the `com.google.common.net.MediaType `class included
+in the <a href="http://en.wikipedia.org/wiki/Google_Guava">Google Guava</a> library.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s the class description from the
+<a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/net/MediaType.html">Guava</a>
+Javadoc.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>Represents an <a href="http://en.wikipedia.org/wiki/Internet_media_type">Internet
+Media Type</a> (also known as a MIME Type or Content Type). This class also
+supports the concept of media ranges
+<a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1">defined
+by HTTP/1.1</a>. As such, the <code><strong></code> character is treated as a wildcard and is
+used to represent any acceptable type or subtype value. A media type may
+not have wildcard type with a declared subtype. The <code></strong></code> character has no
+special meaning as part of a parameter. All values for type, subtype,
+parameter attributes or parameter values must be valid according to RFCs
+<a href="http://www.ietf.org/rfc/rfc2045.txt">2045</a> and
+<a href="http://www.ietf.org/rfc/rfc2046.txt">2046</a>.</p>
+</div>
+<div class="paragraph">
+<p>All portions of the media type that are case-insensitive (type, subtype,
+parameter attributes) are normalized to lowercase. The value of the
+<code>charset</code> parameter is normalized to lowercase, but all others are left
+as-is.</p>
+</div>
+<div class="paragraph">
+<p>Note that this specifically does <strong>not</strong> represent the value of the MIME
+<code>Content-Type</code> header and as such has no support for header-specific
+considerations such as line folding and comments.</p>
+</div>
+<div class="paragraph">
+<p>For media types that take a charset the predefined constants default to
+UTF-8 and have a "_UTF_8" suffix. To get a version without a character
+set, use
+<a href="http://docs.guava-libraries.googlecode.com/git/javadoc/com/google/common/net/MediaType.html#withoutParameters%28%29"><code>withoutParameters()</code></a>
+.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-AccessingtheDAMAPI"><a class="anchor" href="#src-196596271_DAMAPI-AccessingtheDAMAPI"></a>Accessing the DAM API</h3>
+<div class="paragraph">
+<p>To access <code>AssetProviderRegistry</code> from your custom module, adapt your
+<code>pom</code> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+descriptor">module
+descriptor</a> XML files to include a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+descriptor#Moduledescriptor-Moduledependencies">dependency</a>.
+You can simply inject or use components to access the
+<code>AssetProviderRegistry</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> AssetProviderRegistry providerRegistry;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// By Injection</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyFunctions(AssetProviderRegistry providerRegistry) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.providerRegistry = providerRegistry;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`// Or using Components</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>void</code> myCustomMethod() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.providerRegistry = Components.getComponent(AssetProviderRegistry.<code>class</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-AssetProvider"><a class="anchor" href="#src-196596271_DAMAPI-AssetProvider"></a>AssetProvider</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AssetProvider</code> <strong>*</strong>*has “capabilities” (AssetProviderCapability). Some
+implementations will not support all features. This can be used to drive
+a UI to enable/disable certain actions or UI elements. Implementations
+should still throw exceptions when those unsupported operations are
+called. (although this may not consistently be the case, for example
+when aggregating search results from different providers.)</p>
+</li>
+<li>
+<p><code>ItemKey</code> is a specific type (composed of provider id and asset id)
+rather than a "magic string". It is passed to most methods, rather than
+the <code>assetID</code> string. This allows for aggregation/delegation in
+specialized providers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><code>AssetProviders</code> are registered by configuration in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+core+module">DAM Core
+module</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_safe-id-REFNQVBJLUl0ZW1zLGFzc2V0c2FuZGZvbGRlcnM"><a class="anchor" href="#src-196596271_safe-id-REFNQVBJLUl0ZW1zLGFzc2V0c2FuZGZvbGRlcnM"></a>Items, assets and folders</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Item</code> is the main parent definition of a <code>Folder</code> and an <code>Asset</code> .</p>
+</li>
+<li>
+<p><code>Asset</code> is the abstract representation of an binary document:</p>
+</li>
+<li>
+<p><code>Folder</code> is the abstract representation of a folder that contains
+<code>Asset</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Implementation notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To some extent, <code>Items,</code> <code>Folders</code> and <code>Assets</code> mimic the
+<a href="#src-196596271_DAMAPI-JCRAPI">JCR API</a>, but there are subtle
+differences that are highlighted in the Javadocs.</p>
+</li>
+<li>
+<p><code>Items</code>, <code>Folders</code> and <code>Assets</code> are meant to be implemented "lazily".
+Implementations will typically keep a reference to their provider. For
+example, the <a href="#src-196596271_DAMAPI-JCRAPI">JCR implementation</a>
+simply keeps a reference to the corresponding <code>Node</code> instance, and
+delegates to it "on demand".</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-AssetRenditionsandMediaTypes"><a class="anchor" href="#src-196596271_DAMAPI-AssetRenditionsandMediaTypes"></a>AssetRenditions and MediaTypes</h3>
+<div class="paragraph">
+<p>An <code>AssetRendition `is a transformation of an `Asset</code>. The
+<code>AssetRenderer `provides `AssetRenditions `by bridging an `Asset&#8217;s</code> data
+and some type of converter.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AssetRenderer `can be provided by `AssetProvider</code> when the
+conversion/translation can be managed by the <code>AssetProvider</code> itself (or
+its underlying system), or via a "global" registry.</p>
+</li>
+<li>
+<p><code>AssetProviderRegistry.getRendererFor(Asset asset,MediaType mediaType)</code>
+, provides the entry point. It looks up in the provider then in its own
+registry, and bridges to other possible conversion mechanisms that are
+independent of the Magnolia DAM.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><code>AssetRenderers</code> are registered by configuration in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+core+module#DAMcoremodule-Assetprovidersandrenderers">DAM
+Core module</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-JCRAPI"><a class="anchor" href="#src-196596271_DAMAPI-JCRAPI"></a>JCR API</h3>
+<div class="paragraph">
+<p>The DAM JCR API classes reside in the DAM JCR module and implement the
+DAM API for JCR assets that are stored in the <code>dam</code> workspace and
+accessible in the Assets app &lt;link&gt;.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-JCRclasses"><a class="anchor" href="#src-196596271_DAMAPI-JCRclasses"></a>JCR classes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>JcrAssetProvider: <code>AssetProvider</code> that delivers assets for the <code>dam</code>
+workspace. Extends <code>AbstractAssetProvider</code> and implements
+<code>PathAwareAssetProvider</code>.``</p>
+</li>
+<li>
+<p>AbstractJcrItem: JCR implementation of an <code>Item</code>. Extends
+<code>AbstractItem&lt;JcrAssetProvider&gt;</code>.</p>
+</li>
+<li>
+<p>JcrAsset: JCR implementation of the <code>Asset</code> definition. Extends
+<code>AbstractJcrItem</code>.</p>
+</li>
+<li>
+<p>JcrFolder: JCR implementation of the <code>Folder</code> definition. Extends
+<code>AbstractJcrItem</code>.</p>
+</li>
+<li>
+<p>AssetNodeTypes: Constants and convenience methods for asset node
+types.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Asset</code>: Represents the node type <code>mgnl:asset</code>. Fields: <code>caption</code>,
+<code>comment</code>, <code>copyright</code>, <code>description</code>, <code>language</code>, <code>master</code>, <code>name</code>,
+<code>provider_type</code>, <code>subject</code>, <code>title</code>, <code>type</code>.</p>
+</li>
+<li>
+<p><code>AssetResource</code>: Represent the resource node bound to an <code>Asset</code>.
+Fields: <code>data</code>, <code>extension</code>, <code>filename</code>, <code>height</code>, <code>mimetype</code>, <code>name</code>,
+<code>ressource_name</code>, <code>size</code>, <code>width</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>JcrItemNodeTypePredicate: Predicate filtering assets nodes (folders
+and assets) based on the following <code>Node.getPrimaryNodeType()</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AssetNodeTypes.Asset.NAME</code></p>
+</li>
+<li>
+<p><code>NodeTypes.Folder#NAME</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Extends <code>info.magnolia.jcr.predicate.AbstractPredicate&lt;javax.jcr.Node&gt;</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DamConstants: Defines commonly used constants for the DAM.JCR module.
+Fields: <code>default_jcr_provider_id</code>, <code>workspace</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-CustomJCRassetproperties"><a class="anchor" href="#src-196596271_DAMAPI-CustomJCRassetproperties"></a>Custom JCR asset properties</h4>
+<div class="paragraph">
+<p>In order to access a custom property defined under a JCR Asset node,
+JcrAsset provides a public getter:</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>`    * JcrAsset specific implementation that lets you access a property value linked to an asset node.`</p>
+</div>
+<div class="paragraph">
+<p>`    * This requires an open session.`</p>
+</div>
+<div class="paragraph">
+<p>`        * `</p>
+</div>
+<div class="paragraph">
+<p>`       * @return property value Object if the property exists or null otherwise.`</p>
+</div>
+<div class="paragraph">
+<p>`       */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Object getProperty(String propertyName) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> PropertyUtil.getPropertyValueObject(getNode(), propertyName);`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596271_DAMAPI-JCRmetadataclasses"><a class="anchor" href="#src-196596271_DAMAPI-JCRmetadataclasses"></a>JCR metadata classes</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>JcrDublinCore: JCR implementation of <code>DublinCore</code>. Fields:
+<code>dc_contributor</code>, <code>dc_coverage</code>, <code>dc_creator</code>,` dc_publisher`,
+<code>dc_relation</code>, <code>dc_source</code>, <code>dc_subject</code>, <code>dc_type</code>. Methods:
+<code>getContributor</code>, <code>getCoverage</code>, <code>getCreated</code>, <code>getCreator</code>, <code>getDate</code>,
+<code>getDescription</code>, <code>getFormat</code>, <code>getIdentifier</code>, <code>getLanguage</code>,
+<code>getModified</code> , <code>getPublisher</code>, <code>getRelation</code>, <code>getRights</code>, <code>getSource</code>,
+<code>getSubject</code>, <code>getTitle</code>, <code>getType</code>.</p>
+</li>
+<li>
+<p>JcrMagnoliaAssetMetadata: Base JCR implementation of the
+<code>MagnoliaAssetMetadata</code> definition. Methods: <code>getHeight</code>, <code>getWidth</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596271_DAMAPI-DAMtemplatingfunctions"><a class="anchor" href="#src-196596271_DAMAPI-DAMtemplatingfunctions"></a>DAM templating functions</h3>
+<div class="paragraph">
+<p>As a template developer, also have a look at
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/damfn">damfn</a>, a set of
+methods which can be used in freemarker scripts to easy access assets,
+asset renditions, and so on.</p>
+</div>
+<div class="paragraph">
+<p>Data privacy API</p>
+</div>
+<div class="paragraph">
+<p>Bundles and webapps</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

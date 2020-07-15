@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Item providers - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Item_providers.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Item_providers.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Item_providers.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Item_providers.html">Item providers - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Item providers - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Dialog_definition.html">Dialog definition</a></p>
+</li>
+<li>
+<p><a href="Field_definition.html">Field definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-207392631"><a class="anchor" href="#src-207392631"></a>Item providers</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia_6_UI_ports_of_5_UI_field_transformer_classes.html">Magnolia
+6 UI ports of 5 UI field transformer classes</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+source+definition">Data
+source definition</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Item providers are a means for accessing items from data sources. On
+this page, we provide more details about their characteristics and main
+advantages, and we show a few examples of using them.</p>
+</div>
+<div class="sect2">
+<h3 id="src-207392631_Itemproviders-Overview"><a class="anchor" href="#src-207392631_Itemproviders-Overview"></a>Overview</h3>
+<div class="paragraph">
+<p>The concept of Item providers is an abstraction aiming to give
+developers a flexible way to specify which item a form field (simple or
+complex) should bind to and how an item should be accessed.</p>
+</div>
+<div class="paragraph">
+<p>Item providers allow you to bind form views to complex nested data
+structures and to fine tune such bindings. For example, if a form binds
+a contact address as a separate sub-form (a composite field in the
+Magnolia 5 UI context), a Magnolia user might want to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use a contact&#8217;s child node to store the data, in which case an item
+provider that resolves a sub-node can be used.</p>
+</li>
+<li>
+<p>Store the properties directly on the contact node and keep it flat.
+This would represent a self-reference item provider use case.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Item providers get reference items as context. Applied to the contact
+address example, an address editor will get the root contact node so
+that it would be trivial to resolve the corresponding sub-node, if
+needed.</p>
+</div>
+<div class="paragraph">
+<p>Typically, item providers are executed only:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When fetching data from the back-end (to populate a form).</p>
+</li>
+<li>
+<p>When some updated data needs to be flushed from the Vaadin components
+back to the back-end (on a form commit).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Last but not least, item providers yield items wrapped into the
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html">Optional</a>
+container, so it is fine not to return anything from the item provider
+implementation. In this case, however, the form data may not be
+populated or saved back to the back-end.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-207392631_Itemproviders-Mainadvantages"><a class="anchor" href="#src-207392631_Itemproviders-Mainadvantages"></a>Main advantages</h3>
+<div class="paragraph">
+<p>Item providers represent a much simpler solution than the field
+transformers in Magnolia 5 UI.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An item provider only needs to know how to access the data. In
+contrast, the transformers in the 5 UI framework were responsible for
+both types of data operations – reading and writing. In Magnolia 6 UI,
+data updates should be piped into back-end items via simple fields by
+means of Vaadin 8 data binding (Binder objects).</p>
+</li>
+<li>
+<p>Unlike transformers, item providers do not have to deal with the
+deprecated Vaadin 7 Item API and do not require manual verifications
+that child properties are populated within an item.</p>
+</li>
+<li>
+<p>Item providers have a clearer concept of chaining. They get a
+reference of an item from a previous level in the hierarchy, making the
+whole complex data binding process recursive.</p>
+</li>
+<li>
+<p>The number of provider types is much lower in Magnolia 6 UI, compared
+to a relatively high number of field transformers in the 5 UI.</p>
+</li>
+<li>
+<p>There&#8217;s also provider implementations that can handle JSON structures,
+task and notifications items, assets or specific product content items.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-207392631_Itemproviders-Wherearetheyused"><a class="anchor" href="#src-207392631_Itemproviders-Wherearetheyused"></a>Where are they used</h3>
+<div class="paragraph">
+<p>Item providers can be used in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Item provider definition in a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Subapp+descriptor#Subappdescriptor-Detailsubappdescriptor">detail
+subapp</a>.</p>
+</li>
+<li>
+<p>Item provider definition In a form containing composite and complex
+fields. In this use, the provider replaces the former field transformer
+functionality that is part of the UI framework 5, but no longer part of
+the Magnolia 6 UI.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-207392631_Itemproviders-Providertypes"><a class="anchor" href="#src-207392631_Itemproviders-Providertypes"></a>Provider types</h3>
+<div class="sect3">
+<h4 id="src-207392631_Itemproviders-Foranydatasource"><a class="anchor" href="#src-207392631_Itemproviders-Foranydatasource"></a>For any data source</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">class and description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>currentItemProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.editor.CurrentItemProviderDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Returns the parent node. Suitable for sub-forms only since it relies on
+a parent.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-207392631_Itemproviders-ForJCRdatasource"><a class="anchor" href="#src-207392631_Itemproviders-ForJCRdatasource"></a>For JCR data source</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">class and description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrChildNodeProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.editor.JcrChildNodeProviderDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Resolves a JCR child node from the parent. Suitable for sub-forms only
+since it relies on a parent.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrGetIndexedChildNode</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.editor.JcrIndexedChildNodeProvider</code></p>
+</div>
+<div class="paragraph">
+<p>Resolves an indexed JCR child node from the parent. Suitable for
+sub-forms only since it relies on a parent.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrGetProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.editor.JcrPropertyProvider</code></p>
+</div>
+<div class="paragraph">
+<p>Proposes a JCR node property as an item datasource. Typically used in
+complex fields with sub-editors where a single field entry needs to be
+exposed as an editor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jcrNodeFromLocationProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.ui.editor.JcrNodeFromLocationResolutionDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Resolves JCR node content from the current location.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-207392631_Itemproviders-ForJSONdatasource"><a class="anchor" href="#src-207392631_Itemproviders-ForJSONdatasource"></a>For JSON data source</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">$type</th>
+<th class="tableblock halign-left valign-top">class and description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonFieldPropertyProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.rest.ui.field.JsonFieldPropertyProviderDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Proposes a JSON node property as an item data source. Typically used in
+complex fields with sub-editors where a single field entry needs to be
+exposed as an editor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonMultiFieldPropertyProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.rest.ui.field.JsonMultiFieldPropertyProviderDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Proposes a JSON node property as an item data source in a multi field
+context. Typically used in complex fields with sub-editors where a
+single field entry needs to be exposed as an editor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonMultiFieldProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.rest.ui.field.JsonMultiFieldProviderDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Resolves a JSON child node from the parent in a multi field context.
+Suitable for sub-forms only since it relies on a parent.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>jsonProvider</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>info.magnolia.rest.ui.JsonItemProviderStrategyDefinition</code></p>
+</div>
+<div class="paragraph">
+<p>Replaces the <code>{id}</code> path parameter with the one passed in the location
+and then fetches the result using a configured REST call.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-207392631_Itemproviders-Insubappdefinition"><a class="anchor" href="#src-207392631_Itemproviders-Insubappdefinition"></a>In subapp definition</h4>
+<div class="paragraph">
+<p>The <code>jcrNodeFromLocationProvider</code> is used for example in the Pages app
+(see line 7 below). This provider resolves a JCR node from its location
+context:</p>
+</div>
+<div class="paragraph">
+<p>`  detail:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.pages.app.detail.PageDetailDescriptor`</p>
+</div>
+<div class="paragraph">
+<p>`    datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jcrDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`      workspace: website`</p>
+</div>
+<div class="paragraph">
+<p>`    itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jcrNodeFromLocationProvider`</p>
+</div>
+<div class="paragraph">
+<p>(A snippet of an existing full definition, see
+<a href="https://git.magnolia-cms.com/projects/MODULES/repos/pages/browse/magnolia-pages-app/src/main/resources/pages-app/apps/pages-app.yaml." class="bare">https://git.magnolia-cms.com/projects/MODULES/repos/pages/browse/magnolia-pages-app/src/main/resources/pages-app/apps/pages-app.yaml.</a>)</p>
+</div>
+<div class="paragraph">
+<p>Using item providers is not limited only to operations related to JCR
+content. See the following definition, where content items are provided
+from a JSON structure through the <code>jsonProvider</code> (line 16):</p>
+</div>
+<div class="paragraph">
+<p>`  view:`</p>
+</div>
+<div class="paragraph">
+<p>`    label: View Commit`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.contentapp.detail.DetailDescriptor`</p>
+</div>
+<div class="paragraph">
+<p>`    datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jsonDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`      restClient: bitbucket`</p>
+</div>
+<div class="paragraph">
+<p>`      restCall: commit`</p>
+</div>
+<div class="paragraph">
+<p>`      jsonPathExpressions:`</p>
+</div>
+<div class="paragraph">
+<p>`        properties:`</p>
+</div>
+<div class="paragraph">
+<p>`          author: <code>&#8217;$.author.raw'</code></p>
+</div>
+<div class="paragraph">
+<p>`    actions:`</p>
+</div>
+<div class="paragraph">
+<p>`      cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`        label: Cancel`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: closeAction`</p>
+</div>
+<div class="paragraph">
+<p>`    itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: jsonProvider`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-207392631_Itemproviders-Informdefinition"><a class="anchor" href="#src-207392631_Itemproviders-Informdefinition"></a>In form definition</h4>
+<div class="paragraph">
+<p>A provider strategy can be applied to handle data-read operations in
+forms with complex field. For example, see the <code>jcrChildNodeProvider</code> in
+the following definition of a complex field called <code>address</code> , composed
+of two simple fields, <code>city</code> and <code>country</code> .</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/207392631/6.2-compositeField-jcrChildNodeProvider_v2.png" alt="images/download/attachments/207392631/6.2-compositeField-jcrChildNodeProvider_v2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>`        address:`</p>
+</div>
+<div class="paragraph">
+<p>`          label: address`</p>
+</div>
+<div class="paragraph">
+<p>`          i18n: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          $type: compositeField`</p>
+</div>
+<div class="paragraph">
+<p>`          itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>`            $type: jcrChildNodeProvider`</p>
+</div>
+<div class="paragraph">
+<p>`          properties:`</p>
+</div>
+<div class="paragraph">
+<p>`            city:`</p>
+</div>
+<div class="paragraph">
+<p>`              label: city`</p>
+</div>
+<div class="paragraph">
+<p>`              $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>`            country:`</p>
+</div>
+<div class="paragraph">
+<p>`              label: country`</p>
+</div>
+<div class="paragraph">
+<p>`              i18n: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`              $type: textField`</p>
+</div>
+<div class="paragraph">
+<p>(A snippet of an existing full definition, see
+<a href="https://git.magnolia-cms.com/projects/MODULES/repos/contacts-app/browse/src/main/resources/contacts/apps/contacts-v8.yaml#320-336." class="bare">https://git.magnolia-cms.com/projects/MODULES/repos/contacts-app/browse/src/main/resources/contacts/apps/contacts-v8.yaml#320-336.</a>)</p>
+</div>
+<div class="paragraph">
+<p>Using the <code>jcrChildNodeProvider</code> resolves the content of the child items
+<code>city</code> and <code>country</code> from the parent <code>address</code>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/207392631/vvangogh_JCR.png" alt="images/download/attachments/207392631/vvangogh_JCR.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Field validators</p>
+</div>
+<div class="paragraph">
+<p>Magnolia 6 UI ports of 5 UI field transformer classes</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

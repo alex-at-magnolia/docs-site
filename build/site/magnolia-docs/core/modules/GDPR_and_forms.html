@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GDPR and forms - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/GDPR_and_forms.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="GDPR_and_forms.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/GDPR_and_forms.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="GDPR_and_forms.html">GDPR and forms - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">GDPR and forms - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Privacy_module.html">Privacy module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597216"><a class="anchor" href="#src-196597216"></a>GDPR and forms</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">Data
+privacy</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy+API">Data
+privacy API</a></p>
+</li>
+<li>
+<p><a href="Privacy_module.html">Privacy module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Visitors+app">Visitors
+app</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes how to create a new GDPR-compliant form as well as
+how to adapt an existing form (containing a field where users may enter
+personal data) to comply with
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">GDPR</a>
+requirements.</p>
+</div>
+<div class="paragraph">
+<p>The examples on this page make use of the
+<a href="Privacy_module.html">Privacy module</a> and the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Travel+Demo+-+for+developers">Travel
+Demo</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597216_GDPRandforms-SimpleformprocessingcomparedtoGDPR-compliantformprocessing"><a class="anchor" href="#src-196597216_GDPRandforms-SimpleformprocessingcomparedtoGDPR-compliantformprocessing"></a>Simple form processing compared to GDPR-compliant form processing</h3>
+<div class="paragraph">
+<p>In an ordinary form, the data entered in the input field is usually
+processed directly upon hitting the submit button on the form.</p>
+</div>
+<div class="paragraph">
+<p>A GDPR-compliant form needs to follow a more complex procedure called
+<em>double opt-in</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A form that contains personal data has to be submitted together with
+the user&#8217;s consent for the processing of such data. This is usually done
+via checkboxes which the user has to tick off before submitting the
+form.</p>
+</li>
+<li>
+<p>In the second step, the user has to confirm the consent given.
+Typically the user receives an
+<a href="https://en.wikipedia.org/wiki/Opt-in_email">opt-in email</a> with links to a
+web page where the user can finish the double opt-in procedure, that is
+confirm or reject the consent.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the example below, we assume that we have a text input form field
+called <code>fullname</code> that must be handled in compliance with GDPR.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597216_GDPRandforms-Datastorage"><a class="anchor" href="#src-196597216_GDPRandforms-Datastorage"></a>Data storage</h3>
+<div class="paragraph">
+<p><strong>Visitors app adds also contacts</strong></p>
+</div>
+<div class="paragraph">
+<p>In the Magnolia DX Core Travel Demo, the <code>contacts</code> workspace is
+registered in the configuration of the Privacy module for demonstration
+purposes of dealing with personal data. This means the Visitors app
+interacts not only with the <code>visitors</code> workspace but also with the
+<code>contacts</code> workspace, which is otherwise primarily used by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Contacts+app">Contacts app</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Data is stored on the public context - synchronization between public
+nodes may be required</strong></p>
+</div>
+<div class="paragraph">
+<p>The record of consent for form-based data in the <code>visitors</code> workspace is
+created on the <em>public</em> Magnolia instance, never on the author instance.
+This is also true for referenced content, for instance in the <code>contacts</code>
+workspace.</p>
+</div>
+<div class="paragraph">
+<p>You must synchronize the consent records stored if you use several
+public instances. The instances, or in our sample implementation at
+least the <code>visitors</code>, <code>pendingContacts</code> and <code>contacts</code> workspaces, must
+be clustered in order to share accounts between the different instances.
+Alternatively, implement observation-based synchronization to replicate
+visitor and contact data across instances.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597216_GDPRandforms-anc-creating-a-GDPR-compliant-formCreatingaGDPR-compliantform"><a class="anchor" href="#src-196597216_GDPRandforms-anc-creating-a-GDPR-compliant-formCreatingaGDPR-compliantform"></a><span id="src-196597216_GDPRandforms-anc-creating-a-GDPR-compliant-form " class="confluence-anchor-link">#</span>#Creating a GDPR-compliant form</h3>
+<div class="paragraph">
+<p>In this section, you create a new GDPR-compliant form. You need the
+knowledge gained here in the second section where you already have a
+form and want to adapt it for GDPR.</p>
+</div>
+<div class="paragraph">
+<p>The Magnolia Travel Demo bundle comes with a sample form component
+template called <strong>(GDPR) Store data form</strong>, which is provided by the
+<code>privacy-sample</code> submodule and designed for the purposes of GDPR.</p>
+</div>
+<div class="paragraph">
+<p>This component template is preconfigured to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ask for a user&#8217;s consent before submitting the form by displaying
+consent checkboxes.</p>
+</li>
+<li>
+<p>Send the user an opt-in email.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196597216_GDPRandforms-Addingandconfiguringtheform"><a class="anchor" href="#src-196597216_GDPRandforms-Addingandconfiguringtheform"></a>Adding and configuring the form</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Make sure that the page in which you want to create the form uses the
+Travel Standard page template.</p>
+</li>
+<li>
+<p>Add a <strong>(GDPR) Store data form</strong> component to the page:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7&#8212;&#8203;addComponent-GDPR.png" alt="images/download/attachments/196597216/5-7&#8212;&#8203;addComponent-GDPR.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-storeDataForminPage-v2.png" alt="images/download/attachments/196597216/5-7-storeDataForminPage-v2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Please note that if you want to create the page in the root, the root
+level should be at least a site&#8217;s root, not the root in the Pages app
+due to
+<a href="https://jira.magnolia-cms.com/browse/MGNLDEMO-292?src=confmacro"><</a> - Template error when trying to edit a new page created in
+the root <span class="status  grey  subtle">Open</span> .</p>
+</div>
+</li>
+<li>
+<p>Click <strong>Edit</strong> in the Action bar to edit the form component.</p>
+</li>
+<li>
+<p>On the <strong>Opt-in Email</strong> tab configure the parts of the email which will
+be sent to the user in the second phase of the opt-in procedure:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-optInForm-GDPR.png" alt="images/download/attachments/196597216/5-7-optInForm-GDPR.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The largest text area in the dialog is where you can define with
+FreeMarker variables how the main message of the confirmation email will
+look like. The body of this email message should contain hyperlinks to a
+consent confirmation/rejection page. The Travel Demo comes with a sample
+of such a page at <code>/travel/contact/confirmation</code>.</p>
+</div>
+</li>
+<li>
+<p>Copy and paste this path to the <strong>Confirmation page</strong> field of the
+dialog and save the changes.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597216_GDPRandforms-AddingaGDPR-sensitivefield"><a class="anchor" href="#src-196597216_GDPRandforms-AddingaGDPR-sensitivefield"></a>Adding a GDPR-sensitive field</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add a new GDPR-sensitive input field component to the beginning of the
+form&#8217;s field set.</p>
+</li>
+<li>
+<p>In the input field&#8217;s edit dialog label the field <strong>Full Name</strong>, name it
+<code>fullname</code> (this becomes the value of the internal JCR <code>controlName</code>
+property).</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-GDPRfields-v2.png" alt="images/download/attachments/196597216/5-7-GDPRfields-v2.png"></span></p>
+</div>
+</li>
+<li>
+<p>On the <strong>Advanced</strong> tab, set Full Name field&#8217;s type to <code>text.</code></p>
+</li>
+<li>
+<p>Open the edit dialog of the <strong>Consent definition</strong> component.</p>
+</li>
+<li>
+<p>Configure the option in which the user chooses consent duration in the
+<strong>Expiration options</strong> field. Use the following format
+<code>&lt;label&gt;:&lt;timeUnit&gt;__&lt;timeQuantifier&gt;</code> where<br>
+<code>&lt;label&gt;</code> represents the label shown for the option.<br>
+<code>&lt;timeUnit&gt;</code> defines the time unit. Use <code>1</code> for year, <code>2</code> for month or
+<code>10</code> for hour.<br>
+<code>&lt;timeQuantifier&gt;</code> defines the actual length of consent for the time
+unit specified.<br>
+For example, if you want to allow the user to choose from consent
+durations of 24 hours, 72 hours and 1 month, you need enter the
+following in the field:</p>
+<div class="paragraph">
+<p><code>24 hours:10__24</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>72 hours:10__72</code></p>
+</div>
+<div class="paragraph">
+<p><code>1 month:2<em>1</code>
+. To set a default value to be selected when the form is loaded, enter
+the part that follows the colon in the <strong>Default expiration value</strong> field,
+for example <code>2</em>1</code>.<br>
+The actual selection box is rendered like this:</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-durationPulldown.png" alt="images/download/attachments/196597216/5-7-durationPulldown.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597216_GDPRandforms-UpdatingPrivacymoduleconfiguration"><a class="anchor" href="#src-196597216_GDPRandforms-UpdatingPrivacymoduleconfiguration"></a>Updating Privacy module configuration</h4>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Since this step is done in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+app">Configuration
+app</a>, you need the <code>superuser</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Default+roles%2C+groups+and+users">role</a>
+to access the app and change the configuration.</p>
+</div>
+<div class="paragraph">
+<p>Both the <code>email</code> field, which comes preconfigured with the <strong>(GDPR) Store
+data form</strong> template, and the <code>fullname</code> field, added to the form&#8217;s field
+set, must be database names registered in the system for GDPR-compliant
+data processing. This is done in the configuration of the Privacy
+module.</p>
+</div>
+<div class="paragraph">
+<p>Open the <code>visitor-manager</code> module configuration at
+<code>/modules/visitor-manager/config/personalFields</code>.</p>
+</div>
+<div class="paragraph">
+<p>Add the newly added <code>fullname</code> field name as a property (which is in
+fact arbitrary) and value under the <code>name/fieldNames</code> node, which is
+already present in the configuration:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-persFieldsConfig-v2.png" alt="images/download/attachments/196597216/5-7-persFieldsConfig-v2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>At this point, the newly created form is GDPR-compliant. The user is
+asked to give consent to process the data entered:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-GDPRconsentcheckboxes.png" alt="images/download/attachments/196597216/5-7-GDPRconsentcheckboxes.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597216_GDPRandforms-anc-making-an-existing-form-GDPR-compliantMakinganexistingformGDPR-compliant"><a class="anchor" href="#src-196597216_GDPRandforms-anc-making-an-existing-form-GDPR-compliantMakinganexistingformGDPR-compliant"></a><span id="src-196597216_GDPRandforms-anc-making-an-existing-form-GDPR-compliant " class="confluence-anchor-link">#</span>#Making an existing form GDPR-compliant</h3>
+<div class="paragraph">
+<p>In this section, we assume that we already have a form with a text input
+field labeled <strong>Full Name</strong>, internally <code>fullname</code>, and we want to adapt
+to comply with GDPR:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-simpleForm.png" alt="images/download/attachments/196597216/5-7-simpleForm.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196597216_GDPRandforms-Changingandconfiguringthecomponenttemplate"><a class="anchor" href="#src-196597216_GDPRandforms-Changingandconfiguringthecomponenttemplate"></a>Changing and configuring the component template</h4>
+<div class="paragraph">
+<p>First you need to change the form&#8217;s template to use one that is designed
+for GDPR. In this example, we use the template called <strong>(GDPR) Store data
+form</strong> again.</p>
+</div>
+<div class="paragraph">
+<p>Select the form and change its template to <strong>(GDPR) Store data form</strong>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-changeToGDPRtemplate.png" alt="images/download/attachments/196597216/5-7-changeToGDPRtemplate.png" height="193"></span></p>
+</div>
+<div class="paragraph">
+<p>In the next step, switch to the <strong>Opt-in Email</strong> tab and configure the
+parts of the opt-in email:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-optInForm-GDPR.png" alt="images/download/attachments/196597216/5-7-optInForm-GDPR.png"></span></p>
+</div>
+<div class="paragraph">
+<p>After saving the changes the form contains two field sets:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-changedTemplate2GDPR.png" alt="images/download/attachments/196597216/5-7-changedTemplate2GDPR.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597216_GDPRandforms-Relocatingthetextinputfield"><a class="anchor" href="#src-196597216_GDPRandforms-Relocatingthetextinputfield"></a>Relocating the text input field</h4>
+<div class="paragraph">
+<p>Now you have to make the <strong>Full Name</strong> field in the first field set a
+member of the other field set. With <code>superuser</code> role you can do that in
+the JCR Browser app:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-GDPRfieldMove.png" alt="images/download/attachments/196597216/5-7-GDPRfieldMove.png"></span></p>
+</div>
+<div class="paragraph">
+<p>After this operation, the <strong>Full Name</strong> field is located next to the
+<strong>Email</strong> field:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-movedField.png" alt="images/download/attachments/196597216/5-7-movedField.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597216_GDPRandforms-UpdatingPrivacymoduleconfiguration.1"><a class="anchor" href="#src-196597216_GDPRandforms-UpdatingPrivacymoduleconfiguration.1"></a>Updating Privacy module configuration</h4>
+<div class="paragraph">
+<p>Again, the <code>fullname</code> field, added to the form&#8217;s field set, must be a
+database name registered in the system for GDPR-compliant data
+processing. Ask your system administrator to do this for you if don&#8217;t
+have access to the Configuration app.</p>
+</div>
+<div class="paragraph">
+<p>Open <code>visitor-manager</code> module configuration at
+<code>/modules/visitor-manager/config/personalFields</code>.</p>
+</div>
+<div class="paragraph">
+<p>Make sure that the relocated field&#8217;s `fullname `name is a property and
+value under the `name/fieldNames `node , which is already present in the
+configuration. If it isn&#8217;t there yet, add it there. The relocated field
+is now also subject to the logic of the <strong>(GDPR) Store data form</strong>
+template and hence the GDPR requirements. When submitting the page, the
+user is asked to give consent for both text input fields in the form,
+<strong>Full Name</strong> and <strong>Email</strong>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597216/5-7-GDPRconsentcheckboxes.png" alt="images/download/attachments/196597216/5-7-GDPRconsentcheckboxes.png"></span></p>
+</div>
+<div class="paragraph">
+<p>GDPR and cookies</p>
+</div>
+<div class="paragraph">
+<p>Public User Registration module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

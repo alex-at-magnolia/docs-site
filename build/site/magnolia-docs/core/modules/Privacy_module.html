@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Privacy module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Privacy_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../magnolia-docs/6.2.1/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Privacy_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Privacy_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Privacy_module.html">Privacy module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Privacy module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597200"><a class="anchor" href="#src-196597200"></a>Privacy module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">DX Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLPRIV">MGNLPRIV</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.enterprise.sites/magnolia-privacy/">Privacy</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">Data
+privacy</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy+API">Data
+privacy API</a></p>
+</li>
+<li>
+<p><a href="GDPR_and_forms.html">GDPR and forms</a></p>
+</li>
+<li>
+<p><a href="GDPR_and_cookies.html">GDPR and cookies</a></p>
+</li>
+<li>
+<p><a href="GDPR_and_apps.html">GDPR and apps</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Privacy module enables you to produce websites compliant with the
+<a href="http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679">General
+Data Protection Regulation</a> (GDPR).</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597200_Privacymodule-Modulestructure"><a class="anchor" href="#src-196597200_Privacymodule-Modulestructure"></a>Module structure</h3>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 46%;">
+<col style="width: 54%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-privacy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent reactor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia‐privacy‐visitor‐manager</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy+API">API for
+GDPR-related operations</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia‐privacy‐form</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a privacy-aware form component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia‐privacy‐ui</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A privacy-aware sub app.</p>
+</li>
+<li>
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/Visitors+app">Visitors
+app</a> and related actions such as the <strong>Update consent</strong> action.</p>
+</li>
+<li>
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/Cookies+app">Cookies
+app</a>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia‐privacy‐sample</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides usage examples of the above
+modules.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia‐privacy‐cookie‐manager</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the cookie API.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597200_Privacymodule-Installing"><a class="anchor" href="#src-196597200_Privacymodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the modules. Add the following
+dependency to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.privacy&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-privacy-cookie-manager&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.privacy&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-privacy-visitor-manager&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.privacy&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-privacy-ui&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.privacy&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-privacy-sample&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Maven dependency management will include the other required submodules.
+Make sure that all dependencies are in the same version. The latest
+version of the module is 2.0</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597200_Privacymodule-Configuration"><a class="anchor" href="#src-196597200_Privacymodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The configuration of the Privacy module is done in the
+<code>privacy-visitor-manager</code> submodule, which allows you to define the
+following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Groups of personal fields that are used as database field names (JCR
+properties in case of the JCR workspace) to organize the personal data
+collected and processed for the purposes of GDPR.</p>
+</li>
+<li>
+<p>Visitor References Searchers, a list of systems (typically workspaces)
+registered to process GDPR-sensitive data.</p>
+</li>
+<li>
+<p>Names of system properties to be excluded from a GDPR report: an
+export in machine-readable format of all data and data categories stored
+and processed by Magnolia for the purposes of GDPR.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196597200_Privacymodule-Personalfields"><a class="anchor" href="#src-196597200_Privacymodule-Personalfields"></a>Personal fields</h4>
+<div class="paragraph">
+<p>Personal field groups are configured under
+<code>/visitor-manager/config/personalFields</code>, see an example hierarchy
+below.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>A content app processing GDPR-sensitive data, or an editor working with
+such an app, is able to process the data only if the visitor has given
+consent.</p>
+</div>
+<div class="paragraph">
+<p>A visitor must give consent for the whole group, such as <code>name</code> or
+<code>addressOne</code> in the example below.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example field hierarchy</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitor-manager</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">personalFields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">email</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldNames</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">email</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldNames</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lastName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lastname</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">middleName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">middlename</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">firstname</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">addressOne</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldNames</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">country</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">country</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">city</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">city</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">streetAddress</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">streetaddress</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zipCode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">zip</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597200_Privacymodule-anc-visitor-ref-searcherVisitorreferencessearchers"><a class="anchor" href="#src-196597200_Privacymodule-anc-visitor-ref-searcherVisitorreferencessearchers"></a><span id="src-196597200_Privacymodule-anc-visitor-ref-searcher " class="confluence-anchor-link">#</span>#Visitor references searchers</h4>
+<div class="paragraph">
+<p>The searchers are defined under
+<code>/visitor-manager/config/visitorReferencesSearchers</code>. Magnolia provides
+searcher configurations out-of-the-box for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>JCR Searcher</p>
+</li>
+<li>
+<p>IBM Watson Reference Searcher</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the following example, the <code>contact</code> and <code>visitors</code> workspaces are
+registered to be able to process GDPR-sensitive data in the
+<code>JcrVisitorReferencesSearcher</code>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitor-manager</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitorReferencesSearchers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jcr</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.consent.visitor.jcr.JcrVisitorReferencesSearcher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspaces</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contacts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contacts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitors</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitors</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Properties</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;searcher-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The class implementing the searcher.</p>
+</div>
+<div class="paragraph">
+<p>The following searcher implementations are provided by Magnolia:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.consent.visitor.jcr.JcrVisitorReferencesSearcher</code></p>
+</li>
+<li>
+<p><code>info.magnolia.extforms.consent.WatsonReferencesSearcher</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspaces</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;workspace-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the workspace registered to process GDPR-sensitive data.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The workspaces are specific only to the <code>JcrVisitorReferencesSearcher</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597200_Privacymodule-FilteringJCRreferencesforexport"><a class="anchor" href="#src-196597200_Privacymodule-FilteringJCRreferencesforexport"></a>Filtering JCR references for export</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+This feature is relevant only to JCR. We don&#8217;t provide any filtering for
+Watson.</p>
+</div>
+<div class="paragraph">
+<p>Under the <code>excludedNames</code> node of the <code>/visitor-manager/commands</code>
+configuration subtree, you can list the properties that should <em>not</em> be
+included in a GDPR report. GDPR reports typically show all
+visitor-related data and data categories stored and processed for the
+purposes of GDPR.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows an exclusion configuration implementing the
+<code>info.magnolia.consent.visitor.jcr.JcrPrivateRecordReference</code> class:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitor-manager</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitor-manager</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">export</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.consent.visitor.jcr.JcrPrivateRecordReference$ExportCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentDecorator</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">propertyPredicate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.jcr.predicate.PropertyFilteringPredicate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">excludedNames</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlLastActivatedVersionCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:lastActivatedVersionCreated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlLastActivatedVersion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:lastActivatedVersion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jcrCreated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jcr:created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlLastActivatedBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:lastActivatedBy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlLastActivated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:lastActivated</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlLastModifiedBy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:lastModifiedBy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jcrPrimaryType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jcr:primaryType</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnlActivationStatus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mgnl:activationStatus</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Properties</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>export</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The class implementing the export function.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides the following implementation classes out-of-the-box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.consent.visitor.jcr.JcrPrivateRecordReference</code></p>
+</li>
+<li>
+<p><code>info.magnolia.extforms.consent.WatsonRecordReference</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>contentDecorator</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>propertyPredicate</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Must implement the
+<code>info.magnolia.jcr.predicate.PropertyFilteringPredicate</code> class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>excludedNames</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;property-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the property to be excluded from appearing in a GDPR report
+file.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Setting and reading a custom cookie</p>
+</div>
+<div class="paragraph">
+<p>GDPR and apps</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
