@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Updating CLI to v3 - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/cli/Updating-CLI-to-v3.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Updating-CLI-to-v3.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Updating-CLI-to-v3.html">Updating CLI to v3 - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Updating CLI to v3 - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-CLI.html" class="bare">Magnolia-CLI.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598519"><a class="anchor" href="#src-196598519"></a>Updating CLI to v3</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI-v3.html">Magnolia CLI v3</a></p>
+</li>
+<li>
+<p><a href="Prototypes-in-CLI-v3.html">Prototypes in CLI v3</a></p>
+</li>
+<li>
+<p><a href="Magnolia-CLI-v2.html">Magnolia CLI v2</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The process of updating from Magnolia CLI v2 to Magnolia CLI v3
+involves:</p>
+</div>
+<div class="paragraph">
+<p>The behaviour of the CLI can be customized. If you haven&#8217;t customized
+your CLI v2, only the first step is required to update Magnolia CLI to
+v3.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598519_UpdatingCLItov3-UpdatingCLIusingthenpmcommand"><a class="anchor" href="#src-196598519_UpdatingCLItov3-UpdatingCLIusingthenpmcommand"></a>Updating CLI using the npm command</h3>
+<div class="paragraph">
+<p>To update your Magnolia CLI installation, use the <code>npm update</code> command:</p>
+</div>
+<div class="paragraph">
+<p><code>npm update @magnolia<code>/cli</code> -g</code></p>
+</div>
+<div class="paragraph">
+<p>On Linux or OS-X, you may need to run this command with superuser
+rights. The command installs Magnolia CLI globally and overwrites the
+previous <em>globally</em>-installed configuration files.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598519_UpdatingCLItov3-Updatingacustomizedlocalv2configuration"><a class="anchor" href="#src-196598519_UpdatingCLItov3-Updatingacustomizedlocalv2configuration"></a>Updating a customized local v2 configuration</h3>
+<div class="paragraph">
+<p>If you <em>have</em> customized your CLI v2 configuration with the
+<code>customize-local-config</code> command, you have two options to update the
+configuration to Magnolia CLI v3:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If you <em>do not need</em> the v2 customizations anymore: delete the
+<code>mgnl-cli.json</code> and <code>mgnl-cli-prototypes</code> directory in the location of
+the customized configuration.</p>
+</li>
+<li>
+<p>If you <em>do need</em> the customizations: you must migrate the CLI v2
+configuration (<code>mgnl-cli.json</code> and prototype files). This is explained
+in the steps below.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="src-196598519_UpdatingCLItov3-MigratingtheCLIv2configuration"><a class="anchor" href="#src-196598519_UpdatingCLItov3-MigratingtheCLIv2configuration"></a>Migrating the CLI v2 configuration</h4>
+<div class="paragraph">
+<p>To migrate your local CLI configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Move your existing <code>mgnl-cli.json</code> and <code>mgnl-cli-prototypes</code> directory
+to another backup location.</p>
+</li>
+<li>
+<p>Run the <code>mgnl customize-local-config</code> command to place new default
+versions of those files there.</p>
+</li>
+<li>
+<p>Reapply the customizations from the backup location to those new file
+versions as explained in more detail below.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196598519_UpdatingCLItov3-Migratingmgnl-cli.json"><a class="anchor" href="#src-196598519_UpdatingCLItov3-Migratingmgnl-cli.json"></a>Migrating mgnl-cli.json</h5>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+In CLI v3, the contents of <code>mgnl-cli.json</code> have changed. Compare it with
+your backup copy of the customized CLI v2 <code>mgnl-cli.json</code> file, and copy
+the customizations that you want to the newly created file.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Typically, only the <code>webapps</code> and <code>downloadJars</code> nodes are customized.
+The following node is no longer used by the CLI:
+<code>lightDevFoldersInModule</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598519_UpdatingCLItov3-Migratingprototypefiles"><a class="anchor" href="#src-196598519_UpdatingCLItov3-Migratingprototypefiles"></a>Migrating prototype files</h5>
+<div class="paragraph">
+<p>We recommend leaving the prototype variants installed with CLI v3 intact
+and migrating your original CLI v2 prototypes to a third variant that
+has a new name but is based on the <code>_default</code> variant provided in
+Magnolia CLI v3. This allows you to choose from three variants provided
+by Magnolia (<code>_default</code>, <code>empty</code>, <code>with-js-model</code>) and one migrated from
+CLI v2 by you to create a page or component template.</p>
+</div>
+<div class="paragraph">
+<p>You may use any name for the third variant. In the example below we
+chose <code>fromCLI2</code>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the newly created <code>mgnl-cli-prototypes</code> directory, make a copy of
+the <code>_default</code> variants for components and pages.</p>
+</li>
+<li>
+<p>Rename the newly created variants to <code>fromCLI2</code>. The 1st and 2nd
+levels of your v3 prototypes folder then look like this:</p>
+<div class="paragraph">
+<p>mgnl-cli-prototypes (folder in CLI v3 with a custom</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>├── block</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── component</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── fromCLI2</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── light-module</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── comprehensive</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── page</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── fromCLI2</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── virtual-uri</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── _default`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── empty`</p>
+</div>
+<div class="paragraph">
+<p>`    └── regexp`
+. Copy your backup CLI v2 prototype files to the respective subfolders
+of <code>fromCLI2</code>.
+. Delete the original <code>yaml</code> and <code>ftl</code> files in the target folders.
+. Rename the migrated files in the target folders to <code><em>name</em></code>.<br>
+See the following figures and the corresponding line numbers:</p>
+</div>
+<div class="paragraph">
+<p><strong>Migrating content in the root <code>component</code> subtree</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598519/CLI3migration-componentPrototype-From_default.png" alt="images/download/attachments/196598519/CLI3migration-componentPrototype-From_default.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Migrating content in the root <code>page</code> subtree</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598519/CLI3migration-pagePrototype-From_default.png" alt="images/download/attachments/196598519/CLI3migration-pagePrototype-From_default.png"></span></p>
+</div>
+<div class="paragraph">
+<p>How to get and adapt a bundle with Magnolia CLI</p>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI v2</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

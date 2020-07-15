@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Part II - Creating a light module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/cli/Part-II---Creating-a-light-module.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Part-II---Creating-a-light-module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Part-II---Creating-a-light-module.html">Part II - Creating a light module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Part II - Creating a light module - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-CLI.html" class="bare">Magnolia-CLI.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598547"><a class="anchor" href="#src-196598547"></a>Part II - Creating a light module</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia CLI</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
+development</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Finding+and+sharing+light+modules">Finding
+and sharing light modules</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">Part I
+- Installing and setting up the CLI and Magnolia</a> is a prerequisite to
+Part II.</p>
+</div>
+<div class="paragraph">
+<p>In the second part of this tutorial, you create a light module called
+<code>bucket-list-module</code>. From there we create templates to build out the
+list. Each page represents an item on our list. Each component provides
+a way of adding content to the bucket list, such as a description of the
+activity or an image to illustrate it.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598547_PartII-Creatingalightmodule-Createalightmodule"><a class="anchor" href="#src-196598547_PartII-Creatingalightmodule-Createalightmodule"></a>Create a light module</h3>
+<div class="paragraph">
+<p>To create a light module, open the <code>light-modules</code> directory and run the
+following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-light-module bucket-list-module</code></p>
+</div>
+<div class="paragraph">
+<p>In this tutorial, the module is called <code>bucket-list-module</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following directory tree is created:</p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/bucket-list-module/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── bucket-list-module-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+<div class="paragraph">
+<p>Check the result in Magnolia:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Magnolia, use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a> to
+search for and open the <strong>Resource Files</strong> app or click the icon to the
+right of the find bar and then the <strong>Resource Files</strong> app tile.</p>
+</li>
+<li>
+<p>Check the light module you created appears in the browser:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-resourceFIles.png" alt="images/download/attachments/196598547/6-0-cliPart2-resourceFIles.png" width="600"></span></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Search for apps or for content across all your apps using the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a>. Open an
+app directly from the Find Bar using the command` open &lt;app-name&gt; app`,
+for example, type "open pages app".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598547_PartII-Creatingalightmodule-Createapage"><a class="anchor" href="#src-196598547_PartII-Creatingalightmodule-Createapage"></a>Create a page</h3>
+<div class="paragraph">
+<p>In the shell, change into the <code>bucket-list-module</code> folder and run the
+following command:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-page bucket-list -P my-page-prototype</code></p>
+</div>
+<div class="paragraph">
+<p>This command creates all the files needed for a page template definition
+called <code>bucket-list</code> based on the <code>my-page-prototype</code> variant you
+created.</p>
+</div>
+<div class="paragraph">
+<p>Additional files are created in the module tree:</p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/bucket-list-module/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│      └── bucket-list.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── bucket-list-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│      └── bucket-list.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│      └── bucket-list.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── css`</p>
+</div>
+<div class="paragraph">
+<p>`       └── bucket-list.css`</p>
+</div>
+<div class="paragraph">
+<p>Check the result in Magnolia:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In Magnolia, open the Pages app.</p>
+</li>
+<li>
+<p>Click <strong>Add page</strong>.</p>
+</li>
+<li>
+<p>Enter the name <code>item 1</code> for your page.</p>
+</li>
+<li>
+<p>Select the <code>bucket-list</code> template for your new page and click Next.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-addPage.png" alt="images/download/attachments/196598547/6-0-cliPart2-addPage.png" width="600"></span></p>
+</div>
+</li>
+<li>
+<p>Enter the title <code>Dive with sharks</code> in the page properties dialog.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-addPageTitle.png" alt="images/download/attachments/196598547/6-0-cliPart2-addPageTitle.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+This dialog is based on the
+`&lt;light-modules&gt;/mgnl-cli-prototypes/page/my-page-prototype/templates/pages/<em>name</em>.yaml `variant
+you created.</p>
+</div>
+</li>
+<li>
+<p>Save your changes.</p>
+</li>
+<li>
+<p>Open the page.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-editPage.png" alt="images/download/attachments/196598547/6-0-cliPart2-editPage.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Note that there is no main area or component on the page you created yet
+but you can already see the styling from the CSS file you added in the
+prototype variant.</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598547_PartII-Creatingalightmodule-Createtheactivitycomponent"><a class="anchor" href="#src-196598547_PartII-Creatingalightmodule-Createtheactivitycomponent"></a>Create the activity component</h3>
+<div class="paragraph">
+<p>First we add an <code>activity</code> component to provide a title and description
+for the activity in the bucket list.</p>
+</div>
+<div class="paragraph">
+<p>To create a component called <code>activity</code>, make sure you are still in the
+<code>bucket-list-module</code> folder and run the following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-component activity -P my-component-prototype</code></p>
+</div>
+<div class="paragraph">
+<p>Go to Magnolia again and refresh your page.</p>
+</div>
+<div class="paragraph">
+<p>Note that there is still no main area or component on the page you
+created.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598547_PartII-Creatingalightmodule-Maketheactivitycomponentavailable"><a class="anchor" href="#src-196598547_PartII-Creatingalightmodule-Maketheactivitycomponentavailable"></a>Make the activity component available</h4>
+<div class="paragraph">
+<p>Run the following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl  add-availability  activity  bucket-list`</code>@main`</p>
+</div>
+<div class="paragraph">
+<p>Now you should move the FreeMarker expression <code>[@cms.area name="main"/]</code>
+to inside the <a href="https://www.w3schools.com/tags/tag_body.asp">HTML body tag</a>
+in your pages template script.</p>
+</div>
+<div class="paragraph">
+<p>To do so:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open your
+`light-modules/bucket-list-module/templates/pages/bucket-list.ftl `file
+in a text editor.</p>
+</li>
+<li>
+<p>Add a <code>&lt;div/&gt;</code> element with the area just below the <code>&lt;h1/&gt;</code> element.</p>
+</li>
+<li>
+<p>Move the expression <code>[@cms.area name="main"/]</code> to inside the new
+<code>&lt;div/&gt;</code> element.</p>
+<div class="paragraph">
+<p>light-modules/bucket-list-module/templates/pages/bucket-list.ftl</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>html</code> <code>xml:lang</code>=<code>"${cmsfn.language()}"</code> <code>lang</code>=<code>"${cmsfn.language()}"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;<code>link</code> <code>rel</code>=<code>"stylesheet"</code> <code>type</code>=<code>"text/css"</code> <code>href</code>=<code>"${ctx.contextPath}/.resources/bucket-list-module/webresources/css/bucket-list.css"</code> <code>media</code>=<code>"all"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [@cms.page /]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>title</code>&gt;${content.windowTitle!content.title!}&lt;/<code>title</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>div</code> <code>class</code>=<code>"container "</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>h1</code>&gt;${content.windowTitle!content.title!}&lt;/<code>h1</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>div</code> <code>class</code>=<code>"main"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`         [@cms.area name="main"/]`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>div</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>div</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>html</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>+
+The FreeMarker expression <code>[@cms.area name="main"/]</code> includes the area.
+The <code>&lt;div class="main"&gt;</code> element wraps the expression for styling
+purposes.</p>
+</div>
+<div class="paragraph">
+<p>Go to Magnolia again and refresh your page. Note that the component
+<code>activity</code> is available in a new area called <code>main</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-addAvailibility.png" alt="images/download/attachments/196598547/6-0-cliPart2-addAvailibility.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Click the <strong>New main component</strong> green bar to add the component to your
+page.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-addNewMainComponent.png" alt="images/download/attachments/196598547/6-0-cliPart2-addNewMainComponent.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+This dialog is based on the
+<code>&lt;light-modules&gt;/mgnl-cli-prototypes/component/my-component-prototype/templates/component/<em>name</em>.yaml</code>
+variant you created.</p>
+</div>
+<div class="paragraph">
+<p>Go ahead and add a title and description for the first item on your
+bucket list.</p>
+</div>
+<div class="paragraph">
+<p>In our example, the activity is diving with tiger sharks:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-addTitleDescription.png" alt="images/download/attachments/196598547/6-0-cliPart2-addTitleDescription.png" width="600"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598547_PartII-Creatingalightmodule-Addavailabilityforsomepre-existingcomponents"><a class="anchor" href="#src-196598547_PartII-Creatingalightmodule-Addavailabilityforsomepre-existingcomponents"></a>Add availability for some pre-existing components</h3>
+<div class="paragraph">
+<p>You can make components from other modules, light or otherwise,
+available in your page template. We will make the following two
+components provided by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/MTK+module">Magnolia
+Templating Kit module</a> available in our page (in the main area):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>image</code> component, to provide an illustration for our bucket list
+item.</p>
+</li>
+<li>
+<p><code>linkList</code> component, to make a list of links to the different item
+pages.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To make the image component available, run the following command in a
+shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl add-availability mtk:components/image pages/bucket-list`</code>@main`</p>
+</div>
+<div class="paragraph">
+<p>To make the link list component available, run the following command in
+a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl add-availability mtk:components/linkList pages/bucket-list`</code>@main`</p>
+</div>
+<div class="paragraph">
+<p>When adding a component to your page, you can now select the Image
+component delivered with the MTK module:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-addComponent.png" alt="images/download/attachments/196598547/6-0-cliPart2-addComponent.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Select the <strong>Image</strong> component and the <strong>before first component</strong> option to
+add the component to your page <em>before</em> the activity component. Upload
+an image of your choice.</p>
+</div>
+<div class="paragraph">
+<p>Preview your page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart3-imageAdded.png" alt="images/download/attachments/196598547/6-0-cliPart3-imageAdded.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Now repeat the steps to add another page called <code>item 2</code> with another of
+your own top bucket list picks in the <code>activity</code> component. We decided
+to go hot air ballooning after shark diving!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598547_PartII-Creatingalightmodule-Createaparentpagetolisttheitems"><a class="anchor" href="#src-196598547_PartII-Creatingalightmodule-Createaparentpagetolisttheitems"></a>Create a parent page to list the items</h3>
+<div class="paragraph">
+<p>In the step before we added availability for the Link list component
+provided by the MTK. Let&#8217;s use it to create a parent page listing all
+the items on our bucket list.</p>
+</div>
+<div class="paragraph">
+<p>Create a new page called <code>list</code>, based on the <code>bucket-list</code> template,
+with the title <code>My bucket list</code>.</p>
+</div>
+<div class="paragraph">
+<p>Drag and drop your two item pages under the new list page. (If you
+didn&#8217;t create a second item, just move the shark diving page.)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-CLIwalkthruPart2-listTree.png" alt="images/download/attachments/196598547/6-0-CLIwalkthruPart2-listTree.png" height="154"></span></p>
+</div>
+<div class="paragraph">
+<p>Open the <code>list</code> page and add the <code>Link list</code> component to the main area.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-CLIwalkthrouPart2-linkListComponent.png" alt="images/download/attachments/196598547/6-0-CLIwalkthrouPart2-linkListComponent.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Add a <strong>Subtitle</strong> and select <code>Ordered list</code> as the list style.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-orderedList.png" alt="images/download/attachments/196598547/6-0-cliPart2-orderedList.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>In the Link list component add links to the two item pages. You don&#8217;t
+need to enter a title: the title of the page selected in the Page link
+field is used by default.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-selectLinks.png" alt="images/download/attachments/196598547/6-0-cliPart2-selectLinks.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-listLinksAdded.png" alt="images/download/attachments/196598547/6-0-cliPart2-listLinksAdded.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Preview page</strong> to see what the <code>My bucket list</code> page will look
+like once published. You can click on the links you entered to access
+your bucket list item pages.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598547/6-0-cliPart2-finalPreviewPage.png" alt="images/download/attachments/196598547/6-0-cliPart2-finalPreviewPage.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Congratulations! You have used the Magnolia CLI to create a fully
+functional light module with a page template and several components.</p>
+</div>
+<div class="paragraph">
+<p>Next: <a href="Part-III---Reusing-a-light-module-from-npm.html">Part III -
+Reusing a light module from npm</a></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Credits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tiger shark image by Albert Kok (own work) CC BY-SA 3.0
+(<a href="http://creativecommons.org/licenses/by-sa/3.0" class="bare">http://creativecommons.org/licenses/by-sa/3.0</a>), via Wikimedia Commons.</p>
+</li>
+<li>
+<p>Hot air ballon image by Toni Lozano -
+<a href="https://www.flickr.com/photos/quiero-un-pantano/294472861/" class="bare">https://www.flickr.com/photos/quiero-un-pantano/294472861/</a> (Frame and
+watermark cropped out by uploader), CC BY 2.0,
+<a href="https://commons.wikimedia.org/w/index.php?curid=1399945" class="bare">https://commons.wikimedia.org/w/index.php?curid=1399945</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Part I - Installing and setting up the CLI and Magnolia</p>
+</div>
+<div class="paragraph">
+<p>Part III - Reusing a light module from npm</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

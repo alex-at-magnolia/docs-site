@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Part I - Installing and setting up the CLI and Magnolia - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/cli/Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">Part I - Installing and setting up the CLI and Magnolia - Magnolia 6.2</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Part I - Installing and setting up the CLI and Magnolia - Magnolia 6.2</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-CLI.html" class="bare">Magnolia-CLI.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598544"><a class="anchor" href="#src-196598544"></a>Part I - Installing and setting up the CLI and Magnolia</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia CLI</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
+development</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Finding+and+sharing+light+modules">Finding
+and sharing light modules</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the first part of this tutorial, you install the CLI and use it to
+set up Magnolia. You also create a prototype variant to later create a
+light module.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallNode.js"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallNode.js"></a>Install Node.js</h3>
+<div class="paragraph">
+<p>Magnolia CLI is an <a href="https://www.npmjs.com/">npm</a> package providing a
+command line interface (CLI) tool to set up and facilitate light
+development with Magnolia. The Magnolia CLI tool runs on
+<a href="https://nodejs.org/">Node.js</a>. If you do not have Node.js installed, go
+to <a href="https://nodejs.org/">Node.js</a> and download and install the latest LTS
+version.</p>
+</div>
+<div class="paragraph">
+<p>To check the version of your node installation, run the following
+command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>node -v</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliaCLI"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliaCLI"></a>Install Magnolia CLI</h3>
+<div class="paragraph">
+<p>Run the following command in a shell to install
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
+CLI</a>:</p>
+</div>
+<div class="paragraph">
+<p><code>npm install <code>@magnolia</code>/cli -g</code></p>
+</div>
+<div class="paragraph">
+<p>Depending on your permissions and the location where you have installed
+Node.js, you may have to execute the command above with root
+permissions. Without installation permissions you will notice messages
+such as <code>npm ERR!</code> in the shell.</p>
+</div>
+<div class="paragraph">
+<p>On Linux or Mac OS X to run this command as root use:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo npm install <code>@magnolia</code>/cli -g</code></p>
+</div>
+<div class="paragraph">
+<p>If the installation is successful, you see the following or a similar
+output in the shell:</p>
+</div>
+<div class="paragraph">
+<p>Expand to see an example output of an npm installation</p>
+</div>
+<div class="paragraph">
+<p><code>/usr/bin/mgnl<code> &#8594; </code>/usr/lib/node_modules/<code>@magnolia</code>/cli/bin/mgnl`</code>.js`</p>
+</div>
+<div class="paragraph">
+<p><code>&gt; spawn-<code>sync</code>@1.0.15 postinstall <code>/usr/lib/node_modules/</code>@magnolia`</code>/cli/node_modules/spawn-sync`</p>
+</div>
+<div class="paragraph">
+<p><code>&gt; node postinstall</code></p>
+</div>
+<div class="paragraph">
+<p><code>+ @magnolia<code>/cli</code>@2.2.0</code></p>
+</div>
+<div class="paragraph">
+<p><code>added 209 packages <code>in</code> 11.40</code></p>
+</div>
+<div class="paragraph">
+<p>Once you have installed Magnolia CLI, test the installation by running
+the following command in the shell:</p>
+</div>
+<div class="paragraph">
+<p>`mgnl help `</p>
+</div>
+<div class="paragraph">
+<p>Expand to show the output of mgnl help</p>
+</div>
+<div class="paragraph">
+<p><code>Usage: mgnl &lt;command&gt; [options]</code></p>
+</div>
+<div class="paragraph">
+<p><code>A tool to setup and facilitate light development with Magnolia CMS</code></p>
+</div>
+<div class="paragraph">
+<p><code>Options:</code></p>
+</div>
+<div class="paragraph">
+<p>`  -v, --version           output the version number`</p>
+</div>
+<div class="paragraph">
+<p>`  -h, --help              output usage information`</p>
+</div>
+<div class="paragraph">
+<p><code>Commands:</code></p>
+</div>
+<div class="paragraph">
+<p>`  jumpstart               download and setup a Magnolia CMS instance <code>for</code> development.`</p>
+</div>
+<div class="paragraph">
+<p>`  start                   start up a Magnolia CMS instance. To stop it, enter CTRL+C`</p>
+</div>
+<div class="paragraph">
+<p>`  add-availability        add component availability.`</p>
+</div>
+<div class="paragraph">
+<p>`  build                   scan a node_modules folder <code>for</code> npm packages with the keyword <code>"magnolia-light-module"</code> (in <code>package</code>.json) and extract them to a directory of choice.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-app              create an app.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-block            create a block.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-component        create a component and optionally add availability <code>for</code> it.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-content-type     create a content type.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-light-module     create a light module.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-page             create a page template.`</p>
+</div>
+<div class="paragraph">
+<p>`  create-virtual-uri      create a virtual uri mapping.`</p>
+</div>
+<div class="paragraph">
+<p>`  customize-local-config  extract <code>"mgnl-cli-prototypes"</code> folder and <code>"mgnl-cli.json"</code> file to customize CLI configuration.`</p>
+</div>
+<div class="paragraph">
+<p>`  install                 install a light module from npm to the local Magnolia instance.`</p>
+</div>
+<div class="paragraph">
+<p>`  search                  search <code>for</code> a light module on npm.`</p>
+</div>
+<div class="paragraph">
+<p>`  tab-completion          install tab autocomplete feature <code>for</code> Bash, zsh or PowerShell`</p>
+</div>
+<div class="paragraph">
+<p>`  version                 display mgnl and node.js versions`</p>
+</div>
+<div class="paragraph">
+<p>`  help [cmd]              display help <code>for</code> [cmd]`</p>
+</div>
+<div class="paragraph">
+<p>`  mgnl: <code>3.1</code>.<code>0</code> node: v8.<code>10.0</code> os: linux`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliausingtheCLI"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-InstallMagnoliausingtheCLI"></a>Install Magnolia using the CLI</h3>
+<div class="paragraph">
+<p>Use the <code>jumpstart</code> command to install Magnolia. This command downloads,
+unpacks and pre-configures a Magnolia bundle of your choice.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>jumpstart</code> command automatically creates a light modules directory
+for you in the current folder. If you already have a different directory
+that you want to use for light modules, use the <code>-p</code> option with the
+jumpstart command to specify the path to your existing light modules
+folder. For example:
+<code>mgnl jumpstart -p /Users/&lt;username&gt;/&lt;shared-projects&gt;/light-modules/</code></p>
+</div>
+<div class="paragraph">
+<p>To install Magnolia:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Change to the directory to where you want to install the Magnolia
+bundle. For example:</p>
+<div class="paragraph">
+<p><code>cd /Users/&lt;username&gt;/dev/</code></p>
+</div>
+</li>
+<li>
+<p>Execute the Magnolia CLI <code>jumpstart</code> command:</p>
+<div class="paragraph">
+<p><code>mgnl jumpstart</code></p>
+</div>
+</li>
+<li>
+<p>Choose the <code>magnolia-community-demo-webapp</code> containing Magnolia
+Community Edition bundled with the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Demo">Travel Demo</a> and a
+Tomcat server. It creates folders for the Tomcat server and for the
+light modules according to the CLI configuration.</p>
+<div class="paragraph">
+<p>Once the setup operation is complete, you should see a message similar
+to this one:</p>
+</div>
+<div class="paragraph">
+<p><code>info Magnolia has been successfully setup for light development!</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>info You can now open a new terminal tab or window and start it up with the CLI command 'mgnl start'</code></p>
+</div>
+<div class="paragraph">
+<p>`info Magnolia will be ready after a few seconds at localhost:8080/magnoliaAuthor. Username and password is superuser `</p>
+</div>
+<div class="paragraph">
+<p>+
+The following files and folders are created:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>dev/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── apache-tomcat/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── bin/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── conf/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── lib/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── logs/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── temp/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── webapps/</code></p>
+</div>
+<div class="paragraph">
+<p>`├── light-modules/                `</p>
+</div>
+<div class="paragraph">
+<p><code>└── downloads/</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototype"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototype"></a>Create your prototype</h3>
+<div class="paragraph">
+<p>When you run <code>create</code> commands from the CLI, the new files are created
+based on prototype files. So for example, if you want to create a new
+page template then the basis for the template is specified by the
+prototype. Essentially, the prototype is the copy-base for new
+templates.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Globalvslocal"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Globalvslocal"></a>Global vs local</h4>
+<div class="paragraph">
+<p>Prototypes can be global or local.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Global</strong>: The global configuration is created during the installation
+of the Magnolia CLI package. It will be used if no local configuration
+is found in the current directory or in its parent folders.</p>
+</li>
+<li>
+<p><strong>Local</strong>: The local configuration is created with the
+<code>customize-local-config</code> command. This creates files in the directory
+where you execute the command. After creation, you can edit the config
+to suit your needs.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see <a href="Prototypes-in-CLI-v3.html">Magnolia CLI
+prototypes</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Prototypevariants"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Prototypevariants"></a>Prototype variants</h4>
+<div class="paragraph">
+<p>Different prototype variants are available depending on what you are
+creating.</p>
+</div>
+<div class="paragraph">
+<p>When executing the <code>create-page</code> and <code>create-component</code> commands you can
+choose one of the prototype variants provided out-of-the-box.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t specify a prototype using the <code>-P</code> option, then the
+<code>_default</code> is used.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Instead of using one of the prototypes provided, we will create our own
+variants. The easiest way of doing this is to copy and paste one of the
+existing prototype variants.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createthelocalprototypeconfigurationfiles"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createthelocalprototypeconfigurationfiles"></a>Create the local prototype configuration files</h4>
+<div class="paragraph">
+<p>Create the local prototype configuration files by running the following
+CLI command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl customize-local-config</code></p>
+</div>
+<div class="paragraph">
+<p>This command extracts the following items to your current folder:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl‑cli‑prototypes/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A folder which contains the prototypes for
+template and dialog definitions and the README file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl‑cli.json</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The configuration file defining the folders of the
+light module skeleton and some other things.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The prototype files are located in the <code>mgnl-cli-prototypes</code> folder you
+just extracted to your <code>dev</code> directory.</p>
+</div>
+<div class="paragraph">
+<p>Click see the prototypes folder structure</p>
+</div>
+<div class="paragraph">
+<p><code>dev/mgnl-cli-prototypes/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md.tpl</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── block</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── blocks</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── blocks</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── blocks</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── blocks</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── component</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │       └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │       └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               ├── <em>name</em>.js</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── light-module</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── <em>name</em>-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── webresources</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── comprehensive</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── apps</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── blocks</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── <em>name</em>-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── messageViews</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── restEndpoints</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── themes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── virtualUriMappings</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── webresources</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── page</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   │       └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       │       └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               ├── <em>name</em>.js</code></p>
+</div>
+<div class="paragraph">
+<p><code>│               └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── virtual-uri</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── _default`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── virtualUriMappings`</p>
+</div>
+<div class="paragraph">
+<p>`    │       └── <em>name</em>.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── empty`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── virtualUriMappings`</p>
+</div>
+<div class="paragraph">
+<p>`    │       └── <em>name</em>.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`    └── regexp`</p>
+</div>
+<div class="paragraph">
+<p>`        └── virtualUriMappings`</p>
+</div>
+<div class="paragraph">
+<p>`            └── <em>name</em>.yaml`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototypevariants"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Createyourprototypevariants"></a>Create your prototype variants</h4>
+<div class="paragraph">
+<p>Now you create prototype variants for the <code>create-page</code> and
+<code>create-component</code> commands based on the <code>_default</code> prototype you just
+extracted.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t want to create your prototype variant and edit the files,
+replace your <code>dev/mgnl-cli-prototypes</code> folder with the folder in this
+zip:
+<a href="attachments_196598545_1_mgnl-cli-prototypes.zip">mgnl-cli-prototypes.zip</a></p>
+</div>
+<div class="paragraph">
+<p>To create a variant, copy and paste the existing default prototype:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For pages, in <code>dev/mgnl-cli-prototypes/page</code>, copy the <code>_default</code>
+folder and paste it at the same level. Rename your copy to
+<code>my-page-prototype</code>.</p>
+</li>
+<li>
+<p>For components, in <code>dev/mgnl-cli-prototypes/component</code>, copy the
+<code>_default</code> folder and paste it at the same level. Rename your copy to
+<code>my-component-prototype</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click to see the prototypes folder structure</p>
+</div>
+<div class="paragraph">
+<p><code>dev/mgnl-cli-prototypes/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md.tpl</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── block</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── component</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── my-component-prototype</code></p>
+</div>
+<div class="paragraph">
+<p><code>│         ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│             ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│                 └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│         ├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│             ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│                 ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│                 └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── light-module</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── page</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── my-page-prototype</code></p>
+</div>
+<div class="paragraph">
+<p><code>│         ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│             ├── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│                 └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│         ├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│             ├── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│                 ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p>`└── virtual-uri `</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Edityourvariantfiles"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Edityourvariantfiles"></a>Edit your variant files</h4>
+<div class="paragraph">
+<p>Now you will edit your prototype files in your variant so that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You add a CSS file to your page variant to generate a CSS and link it
+to pages you create later.</p>
+</li>
+<li>
+<p>The <code>create-page</code> command creates a page template with just a title.</p>
+</li>
+<li>
+<p>The <code>create-component</code> command creates a component with just a title
+and a description.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-AddaCSSfile"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-AddaCSSfile"></a>Add a CSS file</h5>
+<div class="paragraph">
+<p>In the <code>mgnl-cli-prototypes/page/my-page-prototype/</code> folder, create the
+following folders and file <code>/webresources/css/<em>name</em>.css</code></p>
+</div>
+<div class="paragraph">
+<p><code>mkdir<code> -p webresources</code>/css<code>; </code>touch<code> $_</code>/<em>name</em>`</code>.css`</p>
+</div>
+<div class="paragraph">
+<p>Open <code><em>name</em>.css</code> file and add the following content:</p>
+</div>
+<div class="paragraph">
+<p><code>h<code>1</code> {</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>font-family</code>: <code>Helvetica</code>; <code>color</code>: <code>#2A3D00</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>body {</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>background-color</code>: <code>#F5F8EA</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-page-prototypevariant"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-page-prototypevariant"></a>Edit the my-page-prototype variant</h5>
+<div class="paragraph">
+<p>In the <code>mgnl-cli-prototypes/page/my-page-prototype/dialogs/pages</code>
+folder, open <code><em>name</em>.yaml</code> and replace the definition with the
+following reduced version that corresponds to a simple title field being
+required when creating a page:</p>
+</div>
+<div class="paragraph">
+<p>dev/mgnl-cli-prototypes/page/my-page-prototype/dialogs/pages/<em><em>name</em></em>.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  label: Page properties`</p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabMain`</p>
+</div>
+<div class="paragraph">
+<p>`      label: <em>name</em>`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: title`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.ui.form.field.definition.TextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          i18n: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`          label: title`</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  commit:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>In the <code>mgnl-cli-prototypes/page/my-page-prototype/templates/pages</code>
+folder, open <code><em>name</em>.ftl</code> and replace the script with the following
+reduced version:</p>
+</div>
+<div class="paragraph">
+<p>dev/mgnl-cli-prototypes/page/my-page-prototype/templates/pages/<em><em>name</em></em>.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>html</code> <code>xml:lang</code>=<code>"${cmsfn.language()}"</code> <code>lang</code>=<code>"${cmsfn.language()}"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;<code>link</code> <code>rel</code>=<code>"stylesheet"</code> <code>type</code>=<code>"text/css"</code> <code>href</code>=<code>"${ctx.contextPath}/.resources/<em>lightDevModuleFolder</em>/webresources/css/<em>name</em>.css"</code> <code>media</code>=<code>"all"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [@cms.page /]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>title</code>&gt;${content.windowTitle!content.title!}&lt;/<code>title</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>div</code> <code>class</code>=<code>"container "</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>h1</code>&gt;${content.windowTitle!content.title!}&lt;/<code>h1</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>div</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>html</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Note that in line 4 you add a link to the CSS that uses variables
+(<code><em>lightDevModuleFolder</em></code> and <code><em>name</em>.css</code>) to generate part of the
+path to the light module folder and the name of the CSS file.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-component-prototypevariant"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-Editthemy-component-prototypevariant"></a>Edit the my-component-prototype variant</h5>
+<div class="paragraph">
+<p>Next, in the
+<code>mgnl-cli-prototypes/component/my-component-prototype/dialogs/components</code>
+folder, open <code><em>name</em>.yaml</code> and replace the definition with the
+following reduced version that corresponds to a component with a title
+field and a description:</p>
+</div>
+<div class="paragraph">
+<p>dev/mgnl-cli-prototypes/component/component/my-component-prototype/dialogs/component/<em><em>name</em></em>.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  label: <em>name</em>`</p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabMain`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Main`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: title`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.ui.form.field.definition.TextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Title`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: desc`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>class</code>: info.magnolia.ui.form.field.definition.RichTextFieldDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`          label: Description`</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  commit:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>In the
+<code>mgnl-cli-prototypes/component/my-component-prototype/templates/components</code>
+folder, open <code><em>name</em>.ftl</code> and replace the script with the following
+reduced version:</p>
+</div>
+<div class="paragraph">
+<p>dev/mgnl-cli-prototypes/component/component/my-component-prototype/templates/component/<em><em>name</em></em>.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>div</code> <code>class</code>=<code>"<em>name</em>"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#if content.title?has_content]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>h2</code>&gt;${content.title!}&lt;/<code>h2</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#if]`</p>
+</div>
+<div class="paragraph">
+<p>`  [#if content.desc?has_content]`</p>
+</div>
+<div class="paragraph">
+<p>`    ${cmsfn.decode(content).desc!}`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>div</code>&gt;</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-StartMagnolia"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-StartMagnolia"></a>Start Magnolia</h3>
+<div class="paragraph">
+<p>Now you are ready to start Magnolia and begin developing your light
+module.</p>
+</div>
+<div class="paragraph">
+<p>Go to the parent directory of the <code>apache-tomcat</code> directory and execute
+the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI">Magnolia
+CLI</a> <code>start</code> command:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl start</code></p>
+</div>
+<div class="paragraph">
+<p>When starting for the first time, Magnolia runs a web update and
+automatically installs all its modules.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-LogintoMagnolia"><a class="anchor" href="#src-196598544_PartI-InstallingandsettinguptheCLIandMagnolia-LogintoMagnolia"></a>Log in to Magnolia</h3>
+<div class="paragraph">
+<p>Go to <code><a href="http://localhost:8080/magnoliaAuthor" class="bare">http://localhost:8080/magnoliaAuthor</a></code> and sign in as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Username: <code>superuser</code></p>
+</li>
+<li>
+<p>Password: <code>superuser</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia is ready to use and gives you a list of suggestions to get
+started.</p>
+</div>
+<div class="paragraph">
+<p>Next: <a href="Part-II---Creating-a-light-module.html">Part II - Creating a
+light module</a></p>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI walkthrough</p>
+</div>
+<div class="paragraph">
+<p>Part II - Creating a light module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Prototypes in CLI v3 - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/cli/Prototypes-in-CLI-v3.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Prototypes-in-CLI-v3.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Prototypes-in-CLI-v3.html">Prototypes in CLI v3 - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <h1 class="page">Prototypes in CLI v3 - Magnolia 6.2 documentation</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-CLI.html" class="bare">Magnolia-CLI.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Magnolia-CLI-v3.html">Magnolia CLI v3</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598512"><a class="anchor" href="#src-196598512"></a>Prototypes in CLI v3</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page describes how you can use and define a prototype variant in
+Magnolia CLI v3 to create a new block, component, light module, page and
+virtual URI definition.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598512_PrototypesinCLIv3-Prototypesandprototypevariants"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-Prototypesandprototypevariants"></a>Prototypes and prototype variants</h3>
+<div class="paragraph">
+<p>Magnolia CLI v3 comes with the following prototypes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Block</p>
+</li>
+<li>
+<p>Component</p>
+</li>
+<li>
+<p>Light module</p>
+</li>
+<li>
+<p>Page</p>
+</li>
+<li>
+<p>Virtual URI</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each of these prototypes comes in two or three pre-configured variants
+one of which is applied when executing
+<a href="#src-196598512_PrototypesinCLIv3-anc-CLI-create-commands">a
+create command</a>. The variants speed up the creation of a light module or
+its components. You can tweak each of the variants according to your
+needs or even create your own variants. They are stored in the
+<code>mgnl-cli-prototypes</code> folder of your
+<a href="Magnolia-CLI.html#src-196598509_MagnoliaCLI-InstallingMagnoliaCLI">Magnolia
+CLI installation</a>. Please be aware that the installation can reflect
+either a local or a global configuration, see
+<a href="Magnolia-CLI-v3.html#src-196598511_MagnoliaCLIv3-Globalandlocalconfigurations">Global
+and local configurations</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p>Upon a clean installation of CLI v3 the folder has the following
+structure:</p>
+</div>
+<div class="paragraph">
+<p>v3 mgnl-cli-prototypes folder structure</p>
+</div>
+<div class="paragraph">
+<p>`mgnl-cli-prototypes `</p>
+</div>
+<div class="paragraph">
+<p><code>├── block</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── component</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── light-module</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── comprehensive</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── page</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── virtual-uri</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── _default`</p>
+</div>
+<div class="paragraph">
+<p>`    ├── empty`</p>
+</div>
+<div class="paragraph">
+<p>`    └── regexp`</p>
+</div>
+<div class="paragraph">
+<p>The level 2 directory names in the prototypes folder correspond with the
+following prototypes <em>variants</em>. You can refer to a variant by the name
+attached to the <code>-P</code> option in the create commands:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>_default</code> – To create a default structure for the given element. Same
+as not specifying a prototype variant at all. If you use this variant to
+create a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Virtual+URI+mapping">virtual
+URI mapping</a> configuration, the URI mapping is based on the
+<code>DefaultVirtualUriMapping</code> class.</p>
+</li>
+<li>
+<p><code>empty</code> – To create a minimalistic structure of the element. If you
+use this variant to create a virtual URI mapping configuration, no URI
+mapping class is specified in the configuration.</p>
+</li>
+<li>
+<p><code>with-js-model</code> – To create a page or a component utilizing the
+JavaScript Models class. See also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+JavaScript+models">How
+to work with JavaScript models</a>.</p>
+</li>
+<li>
+<p><code>regexp</code> – To create a virtual URI mapping configuration based on the
+<code>RegexpVirtualUriMapping</code> class.</p>
+</li>
+<li>
+<p><code>comprehensive</code> – To create a light module with the most complete
+(=comprehensive) structure. The following structure is created when
+issuing the <code>mgnl create-light-module fooModule -P comprehensive</code>
+command:</p>
+<div class="paragraph">
+<p>comprehensive (prototype variant for creating light modules)</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>fooModule</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── apps</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── blocks</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── fooModule-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── messageViews</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── restEndpoints</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── themes</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── virtualUriMappings</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+<div class="paragraph">
+<p>+
+Without specifying the prototype or, alternatively, by adding
+<code>-P _default</code>, the structure looks like this:</p>
+</div>
+<div class="paragraph">
+<p>+
+default (prototype variant for creating light modules)</p>
+</div>
+<div class="paragraph">
+<p><code>fooModule</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── fooModule-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+<div class="paragraph">
+<p>+
+For comparison, see the light module structure created with the
+<code>mgnl create-light-module fooModule</code> command in
+<a href="Magnolia-CLI-v2.html">Magnolia CLI v2</a>:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>fooModule</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── fooModule-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196598512_PrototypesinCLIv3-Prototypevariantrootfolder"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-Prototypevariantrootfolder"></a>Prototype variant root folder</h4>
+<div class="paragraph">
+<p>The root folder of a prototype variant is like the root folder of a
+light module folder. Whatever is added into the root of a prototype
+variant folder is added also to the corresponding level(s) of the light
+module folder when you execute a specific create command. You can add
+custom files to prototype variants according to your needs (see the
+<a href="#src-196598512_PrototypesinCLIv3-anc-example">example</a> below).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598512_PrototypesinCLIv3-Placeholdervariablesinprototypefiles"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-Placeholdervariablesinprototypefiles"></a>Placeholder variables in prototype files</h4>
+<div class="paragraph">
+<p>In a prototype variant and even in its filename you can use the
+following placeholder variables:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><em>lightDevModuleFolder</em></code> Replaced with the name of the current light
+module.</p>
+</li>
+<li>
+<p><code><em>dialog</em></code> Replaced with the dialog definition ID (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition#Dialogdefinition-Referencingdialogs">referencing
+dialogs</a>).</p>
+</li>
+<li>
+<p><code><em>fromUri</em></code> Replaced with the name of the <code>fromUri</code> configuration in
+a virtual URI mapping.</p>
+</li>
+<li>
+<p><code><em>toUri</em></code> Replaced with the name of the <code>toUri</code> configuration in a
+virtual URI mapping.</p>
+</li>
+<li>
+<p><code><em>template</em></code> Replaced with the template definition ID in block, page
+and component prototypes (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition#Templatedefinition-Referencingtemplates">referencing
+templates</a>).</p>
+</li>
+<li>
+<p><code><em>templateScript</em></code> Replaced with the name and path of a template
+script.</p>
+</li>
+<li>
+<p><code><em>name</em></code> Replaced with the name of the item being generated, for
+instance the name of a page template.</p>
+</li>
+<li>
+<p><code><em>modelName</em></code> Same as <code><em>name</em></code> but converted into UpperCamelCase
+to be a valid object name in a JavaScript model.<br>
+<br>
+<strong>Example</strong><br>
+<br>
+The stock Magnolia page template prototype variant called
+<code>with-js-model</code> contains also a pre-configured prototype file
+<code><em>name</em>.js</code> . The prototype file has the following content (the
+multiline comment at the beginning was removed intentionally):</p>
+<div class="paragraph">
+<p>Prototype JS file</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>var<code> <em>modelName</em> = </code>function`</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>var</code> System = Java.type(<code>"java.lang.System"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Outputs 'Hello, world!' greeting into Tomcat catalina logfile.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>this</code>.greet = <code>function</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`        System.out.println(<code>"Hello, world!"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Returns random number.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>this</code>.getRandomNumber = <code>function</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> Math.random();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>};</code></p>
+</div>
+<div class="paragraph">
+<p><code>new`</code> <em>modelName</em>();`</p>
+</div>
+<div class="paragraph">
+<p>+
+After executing, for example, the command
+<code>mgnl create-page visitor-counter -P with-js-model</code>, the prototype file
+is used to create a new file called <code>visitor-counter.js</code> in the page
+template folder of your light module. The newly created file has the
+following content:</p>
+</div>
+<div class="paragraph">
+<p>+
+Created JS file</p>
+</div>
+<div class="paragraph">
+<p><code>var<code> VisitorCounter = </code>function`</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>var</code> System = Java.type(<code>"java.lang.System"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Outputs 'Hello, world!' greeting into Tomcat catalina logfile.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>this</code>.greet = <code>function</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`        System.out.println(<code>"Hello, world!"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Returns random number.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>this</code>.getRandomNumber = <code>function</code> () {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> Math.random();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>};</code></p>
+</div>
+<div class="paragraph">
+<p><code>new`</code> VisitorCounter();`</p>
+</div>
+<div class="paragraph">
+<p>+
+Notice the change happening at lines 1 and 20: using the <code><em>modelName</em></code>
+variable in the prototype file takes the name <code>visitor-counter</code> from the
+create command and turns it to UpperCamelCase when creating the target
+file.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598512_PrototypesinCLIv3-Usingprototypevariants"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-Usingprototypevariants"></a>Using prototype variants</h3>
+<div class="paragraph">
+<p>A prototype variant is applied any time you use one of the following CLI
+commands:[<mark>src-196598512_PrototypesinCLIv3-anc-CLI-create-commands]</mark>#</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>create-block</code></p>
+</li>
+<li>
+<p><code>create-component</code></p>
+</li>
+<li>
+<p><code>create-light-module</code></p>
+</li>
+<li>
+<p><code>create-page</code></p>
+</li>
+<li>
+<p><code>create-virtual-uri</code></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196598512_PrototypesinCLIv3-Listingtheavailablevariants"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-Listingtheavailablevariants"></a>Listing the available variants</h4>
+<div class="paragraph">
+<p>The variants that are available for use with a create command can be
+listed via the <code>help</code> command, for example:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl help create-page</code></p>
+</div>
+<div class="paragraph">
+<p>In the stock installation of Magnolia CLI v3, the command lists these
+three variants: <code>_default</code>, <code>empty</code>, and <code>with-js-model</code>. If you create
+a new variant and attach it to a given prototype, the new variant also
+appears in the output of the <code>help</code> command.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598512_PrototypesinCLIv3-Applyingavariant"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-Applyingavariant"></a>Applying a variant</h4>
+<div class="paragraph">
+<p>To create a new item from a prototype variant, use a create comand and
+append <code>-P</code> (or <code>--prototype</code>) followed by the name of a variant. For
+example:</p>
+</div>
+<div class="paragraph">
+<p>`mgnl create-page fooPage -P empty `</p>
+</div>
+<div class="paragraph">
+<p>This command wil create a page template from the <code>empty</code> page prototype
+variant.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Be careful not to confuse <code>-P</code> and <code>-p</code> in the create commands. The
+first one is used to specify a prototype, the second is used to specify
+the path.</p>
+</div>
+<div class="paragraph">
+<p>If unsure, use the long versions: <code>--prototype</code> and <code>--path</code>. They are
+easier to remember.</p>
+</div>
+<div class="paragraph">
+<p>If you do not specify a prototype variant, or, alternatively, if you
+append <code>-P _default</code> to a create command, Magnolia CLI applies the
+<code>_default</code> prototype variant and creates the item from the <code>_default</code>
+subdirectory of the given item in the <code>mgnl-cli-prototypes</code> folder. The
+output of the following two example commands is then the same.</p>
+</div>
+<div class="paragraph">
+<p>Commands:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-light-module fooModule</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-light-module fooModule -P _default</code></p>
+</div>
+<div class="paragraph">
+<p>Output:</p>
+</div>
+<div class="paragraph">
+<p><code>fooModule</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── fooModule-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── README.txt</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598512_PrototypesinCLIv3-anc-CreateCustomProtoCreatingacustomvariant"><a class="anchor" href="#src-196598512_PrototypesinCLIv3-anc-CreateCustomProtoCreatingacustomvariant"></a><span id="src-196598512_PrototypesinCLIv3-anc-CreateCustomProto " class="confluence-anchor-link">#</span>#Creating a custom variant</h3>
+<div class="paragraph">
+<p>You can create a custom prototype variant and add it to one of the five
+prototypes to create a new block, component, light module, page or a
+virtual URI configuration. The short tutorial below shows how to create
+a new page prototype variant called <code>Front-Page</code> that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Is based on the <code>empty</code> variant provided by Magnolia.</p>
+</li>
+<li>
+<p>Uses the word <em>Welcome</em> as a <code>h1</code> header on the page.</p>
+</li>
+<li>
+<p>Has the header styled by a stylesheet (CSS) file and the stylesheet
+linked to the template script via two CLI variables.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Remember that the root folder of a prototype variant is like the root
+folder of a light-module folder. Whatever is added into the root a
+prototype variant folder is added to the corresponding levels of the
+light module folder when you execute the specific create command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Tip:</strong> Do not edit or add prototypes in the
+<a href="Magnolia-CLI-v3.html#src-196598511_MagnoliaCLIv3-Globalandlocalconfigurations">global
+configuration</a>. Create it in a local configuration which you can set up
+with the `customize-local-config `command.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598512_safe-id-UHJvdG90eXBlc2luQ0xJdjMtYW5jLWV4YW1wbGVFeGFtcGxlOkZyb250LVBhZ2V2YXJpYW50"><a class="anchor" href="#src-196598512_safe-id-UHJvdG90eXBlc2luQ0xJdjMtYW5jLWV4YW1wbGVFeGFtcGxlOkZyb250LVBhZ2V2YXJpYW50"></a><span id="src-196598512_PrototypesinCLIv3-anc-example " class="confluence-anchor-link">#</span>#Example: Front-Page variant</h4>
+<div class="paragraph">
+<p>To create the <code>Front-Page</code> prototype variant:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <code>mgnl-cli-prototypes</code> folder, go to the <code>page</code> folder and make
+a copy of the existing <code>empty</code> subfolder in it.</p>
+</li>
+<li>
+<p>Rename the copy to <code>Front-Page</code> and <code>cd</code> to it.</p>
+</li>
+<li>
+<p>Create the <code>webresources/css</code> subdirectory in it. Switch to the <code>css</code>
+subdirectory and create a new file called <code><em>name</em>.css</code> there.<br>
+In bash shell you can use the following command for this step:</p>
+<div class="paragraph">
+<p><code>mkdir<code> -p webresources</code>/css<code>; </code>touch<code> $_</code>/<em>name</em>`</code>.css`</p>
+</div>
+</li>
+<li>
+<p>Edit the <code><em>name</em>.css</code> file to have the following content:</p>
+<div class="paragraph">
+<p><code>h<code>1</code> { <code>font-family</code>: <code>Helvetica</code>; <code>color</code>: <code>#689600</code> }</code></p>
+</div>
+</li>
+<li>
+<p>Save the stylesheet file. The content of the <code>page</code> folder now looks
+like this:</p>
+<div class="paragraph">
+<p>New content of the page folder</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>├── _default</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── empty</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── Front-Page</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       ├── <em>name</em>.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │       └── <em>name</em>.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── webresources</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── css</code></p>
+</div>
+<div class="paragraph">
+<p><code>│           └── <em>name</em>.css</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── with-js-model</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── dialogs`</p>
+</div>
+<div class="paragraph">
+<p>`    │   └── pages`</p>
+</div>
+<div class="paragraph">
+<p>`    │       └── <em>name</em>.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`    └── templates`</p>
+</div>
+<div class="paragraph">
+<p>`        └── pages`</p>
+</div>
+<div class="paragraph">
+<p>`            ├── <em>name</em>.ftl`</p>
+</div>
+<div class="paragraph">
+<p>`            ├── <em>name</em>.js`</p>
+</div>
+<div class="paragraph">
+<p>`            └── <em>name</em>.yaml`
+. Open the <code>../Front-Page/templates/pages/<em>name</em>.ftl</code> file for editing
+and save it with the following content:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>&lt;!DOCTYPE html&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>html</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;<code>link</code> <code>rel</code>=<code>"stylesheet"</code> <code>type</code>=<code>"text/css"</code> <code>href</code>=<code>"${ctx.contextPath}/.resources/<em>lightDevModuleFolder</em>/webresources/css/<em>name</em>.css"</code> <code>media</code>=<code>"all"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;<code>h1</code>&gt;Welcome&lt;/<code>h1</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>html</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>+
+<strong>Notes:</strong><br>
+Line 4: The link to the style definition of your <code>Front-Page</code> template.
+There are two CLI variables in the link that make sure the style
+definition is linked correctly with your page:
+* The <code><em>lightDevModuleFolder</em></code> variable in the path generates a part
+of the path to the light module in which you create the page.
+* The <code><em>name</em></code> variable generates a matching name for the stylesheet
+file.</p>
+</div>
+<div class="paragraph">
+<p>+
+Line 7: The element that displays the <code>h1</code> header on your page.</p>
+</div>
+<div class="paragraph">
+<p>Now, the next series of steps shows how to create a new page tempate
+based on the <code>Front-Page</code> prototype variant.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the light module in which you want to create a page from the new
+<code>Front-Page</code> prototype variant. You may create it in a new light module,
+see the
+<a href="Magnolia-CLI-v3.html#src-196598511_MagnoliaCLIv3-create-light-module"><code>create-light-module</code></a>
+command for creating light module templates.</p>
+</li>
+<li>
+<p>You may also check that the <code>Front-Page</code> variant is available for the
+<code>create-page</code> command. Do that by entering:</p>
+<div class="paragraph">
+<p><code>mgnl help create-page</code></p>
+</div>
+<div class="paragraph">
+<p>In the output of the command you should find a line showing the
+availability of the <code>Front-Page</code> variant:</p>
+</div>
+<div class="paragraph">
+<p><code>Available prototypes are: [Front-Page, _default, empty, with-js-model].</code></p>
+</div>
+</li>
+<li>
+<p>Finally, create a page template by entering the following command:</p>
+<div class="paragraph">
+<p><code>mgnl create-page index -P Front-Page</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>templates/pages</code> and <code>webresources/css</code> folders of the light module
+now have new template files created from the <code>Front-Page</code> prototype
+variant:</p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── index.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── index.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── css`</p>
+</div>
+<div class="paragraph">
+<p>`        └── index.css`</p>
+</div>
+<div class="paragraph">
+<p>+
+If you keep your light module in the directory observed by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/_What+is+magnolia.resources.dir">magnolia.resources.dir
+property</a>, the new page template and any subseqent changes to it are
+picked up by Magnolia instantly. The template is available under the
+name <code>index</code> in the Pages app. A new page based on the this template
+should look as follows in the app:<br>
+<span class="image"><img src="../../_images/images/download/attachments/196598512/5-6-2indexTemplate.png" alt="images/download/attachments/196598512/5-6-2indexTemplate.png" height="250"></span><br>
+You may now modify the page template by specifying areas in it and
+allowing components in them.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI v3</p>
+</div>
+<div class="paragraph">
+<p>How to get and adapt a bundle with Magnolia CLI</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>

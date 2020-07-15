@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/6.2.1/core/cli/Magnolia-CLI.html">
+    <meta name="generator" content="Antora 2.3.3">
+<link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        <script src="https://use.fontawesome.com/ecc89e1666.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item magnolia-logo" href="../../../../index.html">
+      </a>
+      <input type="search" placeholder="Search the docs" name="search" id="searchBar">
+
+
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/core/index.html">Core</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-docs/6.2/cloud/index.html">Cloud</a>
+        <a class="navbar-item disabled" href="../../../../magnolia-general/faqs.html">FAQs</a>
+        <a href="https://www.magnolia-cms.com/get-started.html" class="navbar-item" target="_blank"><button class="magnolia-btn">Try Magnolia</button></a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Magnolia-CLI.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li>Dump</li>
+    <li><a href="Magnolia-CLI.html">Command Line Interface</a></li>
+  </ul>
+</nav>
+</div>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../rn/release-notes.html">Release notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+  </div>
+</div>
+    </div>
+  </aside>
+</div>
+<main>
+<article class="doc">
+    <div class="sect1">
+<h2 id="src-196598509"><a class="anchor" href="#src-196598509"></a>Magnolia CLI</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI-v3.html">Magnolia CLI v3</a></p>
+</li>
+<li>
+<p><a href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a></p>
+</li>
+<li>
+<p><a href="Updating-CLI-to-v3.html">Updating CLI to v3</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI is an <a href="https://www.npmjs.com/">npm</a> package providing a
+command line interface (CLI) tool to set up and facilitate light
+development with Magnolia. You can use Magnolia CLI to quickly create a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+modules">light module</a>
+skeleton: the folders and files that form a Magnolia light module.</p>
+</div>
+<div class="paragraph">
+<p>Minimal light module folder structure (click to expand)</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598509_MagnoliaCLI-Lightmoduleminimalfolderstructure"><a class="anchor" href="#src-196598509_MagnoliaCLI-Lightmoduleminimalfolderstructure"></a>Light module minimal folder structure</h3>
+<div class="paragraph">
+<p>Some Magnolia CLI commands may require that a minimal light module
+skeleton exists. For example, to run the <code>create-app</code> command, at least
+the following folder structure is expected to have been created:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;module-name&gt;/
+ └── templates
+       ├── components
+       └── pages</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We currently have two versions of the CLI that are maintained. The main
+difference is how prototypes are handled. If you are a new user, use v3.
+If you are an existing user and want to continue with the same prototype
+structure as before, use v2.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI-v3.html">Magnolia CLI v3</a></p>
+</li>
+<li>
+<p><a href="Magnolia-CLI-v2.html">Magnolia CLI v2</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page provides instructions on how to install Magnolia CLI and
+tracks the changes in Magnolia CLI releases.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you want to jump straight in, try out our
+<a href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a> that
+provides step-by-step instructions to get everything set up and create a
+working light module.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598509_MagnoliaCLI-Installing"><a class="anchor" href="#src-196598509_MagnoliaCLI-Installing"></a>Installing</h3>
+<div class="sect3">
+<h4 id="src-196598509_safe-id-TWFnbm9saWFDTEktUHJlcmVxdWlzaXRlOk5vZGUuanM"><a class="anchor" href="#src-196598509_safe-id-TWFnbm9saWFDTEktUHJlcmVxdWlzaXRlOk5vZGUuanM"></a>Prerequisite: Node.js</h4>
+<div class="paragraph">
+<p>The Magnolia CLI tool runs on <a href="https://nodejs.org/">Node.js</a>. To check the
+version of your node.js installation, run the following command in a
+shell:</p>
+</div>
+<div class="paragraph">
+<p><code>node -v</code></p>
+</div>
+<div class="paragraph">
+<p>Node.js provides two branches:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LTS - recommended for long-term support</p>
+</li>
+<li>
+<p>Current - providing the latest features</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Make sure you are running the latest version of the LTS branch. You can
+get it from <a href="https://nodejs.org/en/download" class="bare">https://nodejs.org/en/download</a>. It may also be
+<a href="https://nodejs.org/en/download/package-manager/">installed via package
+managers</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-mgnl-cli-installationInstallingMagnoliaCLI"><a class="anchor" href="#src-196598509_MagnoliaCLI-mgnl-cli-installationInstallingMagnoliaCLI"></a><span id="src-196598509_MagnoliaCLI-mgnl-cli-installation " class="confluence-anchor-link">#</span>#Installing Magnolia CLI</h4>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>Install Magnolia CLI globally.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The configuration is stored globally.</p>
+</li>
+<li>
+<p>The commands are available in the shell on all directories.</p>
+</li>
+<li>
+<p>The global configuration can be overridden on a project level using
+the <code>customize-local-config</code> command.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The instructions that follow are based on the global npm package
+installation.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196598509_safe-id-TWFnbm9saWFDTEktV2hpY2h2ZXJzaW9uc2FyZWF2YWlsYWJsZT8"><a class="anchor" href="#src-196598509_safe-id-TWFnbm9saWFDTEktV2hpY2h2ZXJzaW9uc2FyZWF2YWlsYWJsZT8"></a>Which versions are available?</h5>
+<div class="paragraph">
+<p>To display a list of released versions of Magnolia CLI, enter the
+following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>npm view <code>@magnolia</code>/cli versions</code></p>
+</div>
+<div class="paragraph">
+<p>Besides a version list, the following command shows additional
+information about the Magnolia CLI package:</p>
+</div>
+<div class="paragraph">
+<p><code>npm view <code>@magnolia</code>/cli</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598509_MagnoliaCLI-Installingthelatestversion"><a class="anchor" href="#src-196598509_MagnoliaCLI-Installingthelatestversion"></a>Installing the latest version</h5>
+<div class="paragraph">
+<p>To install the latest version (globally), run the following command in a
+shell:</p>
+</div>
+<div class="paragraph">
+<p><code>npm install <code>@magnolia</code>/cli -g</code></p>
+</div>
+<div class="paragraph">
+<p>Depending on your permissions and the Node.js installation location, you
+may have to execute the above command with root permissions. On Linux or
+OS-X, to run this command as root, use:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo npm install <code>@magnolia</code>/cli -g</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598509_MagnoliaCLI-Installingaspecificversion"><a class="anchor" href="#src-196598509_MagnoliaCLI-Installingaspecificversion"></a>Installing a specific version</h5>
+<div class="paragraph">
+<p>To install a specific version (globally), for example, 2.1.0, run the
+following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>npm install <code>@magnolia</code>/cli<code>@2</code>.1.<code>0</code> -g</code></p>
+</div>
+<div class="paragraph">
+<p>Depending on your permissions and the Node.js installation location, you
+may have to execute the above command with root permissions. On Linux or
+OS-X, to run this command as root, use:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo npm install <code>@magnolia</code>/cli<code>@2</code>.1.<code>0</code> -g</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196598509_MagnoliaCLI-Installingthelatestdevelopmentversion"><a class="anchor" href="#src-196598509_MagnoliaCLI-Installingthelatestdevelopmentversion"></a>Installing the latest development version</h5>
+<div class="paragraph">
+<p>The master branch on <a href="https://git.magnolia-cms.com/scm/build/npm-cli.git" class="bare">https://git.magnolia-cms.com/scm/build/npm-cli.git</a>
+typically contains the version with the latest code. You may
+alternatively check out the latest code and simply install it from
+source.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Please be aware that the official documentation does not cover the
+functionalities and changes of development versions.</p>
+</div>
+<div class="paragraph">
+<p>To install the latest version from the master, do the following after
+checking out the latest code:</p>
+</div>
+<div class="paragraph">
+<p><code>npm pack</code></p>
+</div>
+<div class="paragraph">
+<p><code>sudo npm install ~/dev/cli3/npm-cli/magnolia-cli-&lt;version&gt;.tgz -g</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-UpdatingMagnoliaCLI"><a class="anchor" href="#src-196598509_MagnoliaCLI-UpdatingMagnoliaCLI"></a>Updating Magnolia CLI</h4>
+<div class="paragraph">
+<p>If you have already installed the CLI and want to update to the latest
+version, use:</p>
+</div>
+<div class="paragraph">
+<p><code>npm update <code>@magnolia</code>/cli -g</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-Testingtheinstallation"><a class="anchor" href="#src-196598509_MagnoliaCLI-Testingtheinstallation"></a>Testing the installation</h4>
+<div class="paragraph">
+<p>To test the installation, run the following command in the shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl help</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-autocompletionShellautocompletion"><a class="anchor" href="#src-196598509_MagnoliaCLI-autocompletionShellautocompletion"></a><span id="src-196598509_MagnoliaCLI-autocompletion " class="confluence-anchor-link">#</span>#Shell autocompletion</h4>
+<div class="paragraph">
+<p>The Magnolia CLI package provides autocompletion for <em>bash,</em> <em>C-shell</em>
+and <em>Windows PowerShell</em>.</p>
+</div>
+<div class="paragraph">
+<p>To install/enable autocompletion, use:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl tab-completion install</code></p>
+</div>
+<div class="paragraph">
+<p>To uninstall it, use:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl tab-completion uninstall</code></p>
+</div>
+<div class="paragraph">
+<p>A successful installation of autocompletion displays a list of files to
+which the tab-completion script has been appended.</p>
+</div>
+<div class="paragraph">
+<p>To test the autocompletion installation, type <code>mgnl</code> and then
+successively hit the Tab key to scroll through the available
+<a href="#src-196598509_MagnoliaCLI-Commands">commands</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>On Windows, autocompletion is only available in PowerShell. If it does
+not work as expected after installation, you may have to change your
+execution policy. To do this, in PowerShell, run as Administrator:</p>
+</div>
+<div class="paragraph">
+<p><code>Set-ExecutionPolicy RemoteSigned</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-196598509_MagnoliaCLI-uninstall-autocomplete-1Uninstallingoldautocompletionsource"><a class="anchor" href="#src-196598509_MagnoliaCLI-uninstall-autocomplete-1Uninstallingoldautocompletionsource"></a><span id="src-196598509_MagnoliaCLI-uninstall-autocomplete-1 " class="confluence-anchor-link">#</span>#Uninstalling old autocompletion source</h5>
+<div class="paragraph">
+<p>If you have already used autocompletion with Magnolia CLI version below
+2.0, you may want to uninstall the "old" autocompletion manually. To do
+so, remove the following line in your bash settings (in ~/.profile or
+~/.bashrc):</p>
+</div>
+<div class="paragraph">
+<p><code>source /usr/local/lib/node_modules/<code>@magnolia</code>/cli/extra/mgnl-autocompletion.sh</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598509_MagnoliaCLI-Releasehistory"><a class="anchor" href="#src-196598509_MagnoliaCLI-Releasehistory"></a>Release history</h3>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.1.0"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.1.0"></a>3.1.0</h4>
+<div class="paragraph">
+<p>Released on June 26, 2019.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>This release comes with full support for Magnolia 6.1 and
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Content+Types">content
+types</a>. It also seamlessly handles both the new DX Core artifacts
+introduced with the release of Magnolia 6.1 and the old ones.<br>
+If you install Magnolia using the CLI <code>jumpstart</code> command and set the
+<code>-m</code> switch to <code>6.1</code> or higher, the CLI offers the new <code>dx-core</code> webapps
+for installation.</p>
+<div class="paragraph">
+<p><code>$ mgnl jumpstart -m ``6.1</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>`? What Magnolia would you like to install? `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>1</code>) magnolia-empty-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>2</code>) magnolia-community-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>3</code>) magnolia-community-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>4</code>) magnolia-dx-core-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>5</code>) magnolia-dx-core-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p>+
+If you set <code>-m</code> to below 6.1, the CLI offers the former Enterprise and
+Cloud webapps.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>$ mgnl jumpstart -m <code>5.7</code>.``3</code></p>
+</div>
+<div class="paragraph">
+<p><code>? What Magnolia would you like to install?</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>1</code>) magnolia-empty-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>2</code>) magnolia-community-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>3</code>) magnolia-community-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>4</code>) magnolia-enterprise-standard-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>5</code>) magnolia-enterprise-standard-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>6</code>) magnolia-enterprise-pro-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>7</code>) magnolia-enterprise-pro-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>8</code>) magnolia-cloud-dev-webapp`
+* Two new commands have been added: <code>create-app</code>, which creates a
+content type and an app based on it, and <code>create-content-type</code>, which
+creates a content type.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-149">NPMCLI-149</a>
+* This release also fixes an issue with the <code>jumpstart</code> command when
+running it behind a proxy and updates third-party dependencies due to
+some vulnerabilities.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-206">NPMCLI-206</a>,
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-223">NPMCLI-223</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.7"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.7"></a>3.0.7</h4>
+<div class="paragraph">
+<p>Released on March 12, 2019.</p>
+</div>
+<div class="paragraph">
+<p>This release fixes a security vulnerability found in the <code>adm-zip</code>
+package by removing the dependency to this package. The unzipping
+process during the CLI installation is now handled by the
+<code>decompress-zip</code> library.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-198">NPMCLI-198</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.6"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.6"></a>3.0.6</h4>
+<div class="paragraph">
+<p>Released on February 11, 2019.</p>
+</div>
+<div class="paragraph">
+<p>This release brings an additional fix to the <code>jumpstart</code> command, which
+was failing when issued from behind a proxy server. The issue, again,
+originated in the Axios client. CLI is now using
+<a href="https://www.npmjs.com/package/axios-https-proxy-fix">axios-https-proxy-fix</a>
+instead of the axios-proxy-fix.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-207">NPMCLI-207</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.5"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.5"></a>3.0.5</h4>
+<div class="paragraph">
+<p>Released on December 17, 2018.</p>
+</div>
+<div class="paragraph">
+<p>This release fixes an issue with the <code>jumpstart</code> command, which was
+failing when issued from behind a proxy server. The issue concerns
+<a href="https://www.npmjs.com/package/axios">Axios</a>, a promise-based HTTP client.
+Until the issue is solved by Axios, you can work around it by including
+the <a href="https://www.npmjs.com/package/axios-proxy-fix">axios-proxy-fix</a>
+package. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-176">NPMCLI-176</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.4"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.4"></a>3.0.4</h4>
+<div class="paragraph">
+<p>Released on September 24, 2018.</p>
+</div>
+<div class="paragraph">
+<p>When executing the <code>jumpstart</code> command with the <code>snapshot</code> flag,
+Magnolia CLI will download not only the latest snapshot development
+version of the specified webapp but also the latest snapshot version of
+the Magnolia `tomcat-barebone `bundle.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-194">NPMCLI-194</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.3"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.3"></a>3.0.3</h4>
+<div class="paragraph">
+<p>Released on August 28, 2018.</p>
+</div>
+<div class="paragraph">
+<p>Fixed an issue with the <code>create-page</code> command on Windows where the
+<code>dialog</code> and <code>templateScript</code> properties were incorrectly set to
+undefined. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-189">NPMCLI-189</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.2"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.2"></a>3.0.2</h4>
+<div class="paragraph">
+<p>Version 3.0.2 was not published due to an issue with npm.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.1"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.1"></a>3.0.1</h4>
+<div class="paragraph">
+<p>Released on June 8, 2018.</p>
+</div>
+<div class="paragraph">
+<p>Fixed an issue with the <code>jumpstart</code> command that was caused by a
+regression in the <code>adm-zip</code> dependency.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-182">NPMCLI-182</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-3.0.0"><a class="anchor" href="#src-196598509_MagnoliaCLI-3.0.0"></a>3.0.0</h4>
+<div class="paragraph">
+<p>Released on March 12, 2018.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New command <code>create-blocks</code> to create
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Block+definition">blocks</a>.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-132">NPMCLI-132</a></p>
+</li>
+<li>
+<p>New command <code>create-virtual-uri</code> to create a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Virtual+URI+mapping">virtual
+URI mapping</a>.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-135">NPMCLI-135</a></p>
+</li>
+<li>
+<p>Prototypes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>New prototype structure with an expanded choice of
+<a href="Prototypes-in-CLI-v3.html">prototype</a> options.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-119">NPMCLI-119</a></p>
+</li>
+<li>
+<p>Prototypes allow the creation of additional custom files in any
+directory of the light module.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-86">NPMCLI-86</a></p>
+</li>
+<li>
+<p>Prototype variants to create component or page templates with a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/JavaScript+Models+module">JavaScript
+model</a>. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-137">NPMCLI-137</a></p>
+</li>
+<li>
+<p>Prototype variants to create a light module.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-148">NPMCLI-148</a></p>
+</li>
+<li>
+<p>Prototypes to create
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Block+definition">blocks</a>
+with the new command <code>create-block</code>.</p>
+</li>
+<li>
+<p>Prototypes to create a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Virtual+URI+mapping">virtual
+URI mapping</a> with the new command <code>create-virtual-uri</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Based on user feedback, Magnolia no longer checks for the nearest
+Tomcat folder when you create a light-modules folder and so the <code>-f</code>
+(force) option has been removed from the <code>create-light-module</code> command.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-159">NPMCLI-159</a></p>
+</li>
+<li>
+<p><code>jumpstart</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You can use the new <code>-w</code> option to choose which Magnolia webapp you
+want to install when using the <code>jumpstart</code> command. With this, the
+options <code>-e</code> and <code>-c</code> are no longer available.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-120">NPMCLI-120</a></p>
+</li>
+<li>
+<p>You can choose the latest SNAPSHOT of the selected webapp.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-144">NPMCLI-144</a></p>
+</li>
+<li>
+<p>Jumpstart does not set the wrong light-modules directory on Windows
+anymore. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-156">NPMCLI-156</a></p>
+</li>
+<li>
+<p>Jumpstart stores downloaded artifacts in a separate folder to reuse
+them later. This also fixes a bug where <code>-e</code> and <code>-c</code> options were
+ignored due to an already existing artifact with a generic filename.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-100">NPMCLI-100</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>mgnl-cli.json</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>No longer contains the <code>lightDevFoldersInModule</code> property. The folder
+structure of a light module created with the CLI is defined in the
+prototypes.</p>
+</li>
+<li>
+<p>The <code>webapps</code> property is used to define the list of possible webapps
+you can choose from from when running the <code>jumpstart</code> command.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The <code>-V</code> option, which used to display the version information of the
+installed Magnolia CLI, has been replaced with a lower-case option
+(<code>-v</code>). The output now also displays the version of Node.js installed.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-133">NPMCLI-133</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here to see the list of issues resolved in version 3.0.0</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Summary</th>
+<th class="tableblock halign-left valign-top">T</th>
+<th class="tableblock halign-left valign-top">Created</th>
+<th class="tableblock halign-left valign-top">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-172?src=confmacro">NPMCLI-172</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-172?src=confmacro">Replace
+deprecated node-uuid package</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-172?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-03-02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-171?src=confmacro">NPMCLI-171</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-171?src=confmacro">Make
+<em>templateId</em> placeholder available also in page and component
+prototypes</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-171?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-03-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-170?src=confmacro">NPMCLI-170</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-170?src=confmacro">Update
+README.md for CLI 3.0.0 release</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-170?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-169?src=confmacro">NPMCLI-169</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-169?src=confmacro">CLI
+should give clear and consistant ERR messages about migrating config to
+v3</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-169?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-167?src=confmacro">NPMCLI-167</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-167?src=confmacro">update
+jumpstart to use new cloud webapp GAV</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-167?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-166?src=confmacro">NPMCLI-166</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-166?src=confmacro">webapp
+chooser does not show all webapps</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-166?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-164?src=confmacro">NPMCLI-164</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-164?src=confmacro">add-availability
+command inserts the availableComponent lines incorrectly</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-164?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-161?src=confmacro">NPMCLI-161</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-161?src=confmacro">"_default"
+prototypes should not be available via "default"</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-161?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-159?src=confmacro">NPMCLI-159</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-159?src=confmacro">create-light-module:
+remove check about nearest tomcat and light-module dir</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-159?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-02-07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-156?src=confmacro">NPMCLI-156</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-156?src=confmacro">Jumpstart
+sets wrong light-modules directory on Windows</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-156?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2018-01-30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-154?src=confmacro">NPMCLI-154</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-154?src=confmacro">Add
+upgrade notice about incompatible prototype files</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-154?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-153?src=confmacro">NPMCLI-153</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-153?src=confmacro">Upgrade
+dependencies for version 3 release</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-153?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-152?src=confmacro">NPMCLI-152</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-152?src=confmacro">Script to
+migrate prototypes to version 3 format</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-152?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-148?src=confmacro">NPMCLI-148</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-148?src=confmacro">Prototypes
+for create-light-module</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-148?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-147?src=confmacro">NPMCLI-147</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-147?src=confmacro">Tab
+autocompletion should include prototypes</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-147?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-12-07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-144?src=confmacro">NPMCLI-144</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-144?src=confmacro">Get
+latest snapshots with jumpstart</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-144?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-10-30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-137?src=confmacro">NPMCLI-137</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-137?src=confmacro">Create
+JavaScript model for page and component template optionally</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-137?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-08-07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-135?src=confmacro">NPMCLI-135</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-135?src=confmacro">Create
+virtual URI with CLI</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-135?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-07-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-133?src=confmacro">NPMCLI-133</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-133?src=confmacro">Improve
+the version command</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-133?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-06-08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-132?src=confmacro">NPMCLI-132</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-132?src=confmacro">Command
+"create-block"</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-132?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-04-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-120?src=confmacro">NPMCLI-120</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-120?src=confmacro">Jumpstart
+can download and use webapps instead of bundles</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-120?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-119?src=confmacro">NPMCLI-119</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-119?src=confmacro">Multiple
+prototypes for creating pages and components</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-119?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-100?src=confmacro">NPMCLI-100</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-100?src=confmacro">Existing
+magnolia.zip lets jumpstart ignore -m and -e option</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-100?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-86?src=confmacro">NPMCLI-86</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-86?src=confmacro">Add
+ability to generate additional files with create commands</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-86?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project%3DNPMCLI+AND+fixVersion%3D3.0.0++&amp;src=confmacro">24
+issues</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-release-2.2.02.2.0"><a class="anchor" href="#src-196598509_MagnoliaCLI-release-2.2.02.2.0"></a><span id="src-196598509_MagnoliaCLI-release-2" class="2 0  confluence-anchor-link">#</span>#2.2.0</h4>
+<div class="paragraph">
+<p>Released on January 18, 2018.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Node v 6.10+ is required to run the CLI.</p>
+</li>
+<li>
+<p>A new option <code>-c</code> (<code>--cloud</code>) has been added to the <code>jumpstart</code>
+command. <code>mgnl jumpstart -c</code> downloads and sets up a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+Cloud">Magnolia
+Cloud</a> bundle. It requires Enterprise credentials to access the Magnolia
+<a href="https://nexus.magnolia-cms.com">Nexus repository</a>.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-138">NPMCLI-138</a></p>
+</li>
+<li>
+<p>If no <code>-p</code> option is set when executing the <code>jumpstart</code> command, the
+<code>magnolia.resources.dir</code> property in the <code>magnolia.properties</code> file is
+set to a relative path by default:
+<code>magnolia.resources.dir=${magnolia.home}/../../../light-modules</code>
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-129">NPMCLI-129</a></p>
+</li>
+<li>
+<p>When creating a light module with the <code>mgnl create-light-module</code>
+command, if you specify a path to a light modules folder that does <em>not</em>
+match the light modules root folder at the nearest Tomcat installation,
+you get an error. The error warns you that Magnolia cannot observe your
+module in the location specified. You can use the <code>-f</code> option if you
+want to force the path to an unobserved folder.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-103">NPMCLI-103</a></p>
+</li>
+<li>
+<p>To help us help you in case you run into an issue, the <code>mgnl -h</code>
+command now also prints out your node.js version, OS and Magnolia CLI
+version. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-128">NPMCLI-128</a></p>
+</li>
+<li>
+<p>The <code>mgnl create-component</code> command now generates a component dialog
+definition YAML file containing <code>label</code> options (instead of the
+previously used <code>name</code>) for i18n compliance.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-105">NPMCLI-105</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here to see the list of issues resolved in version 2.2.0</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Summary</th>
+<th class="tableblock halign-left valign-top">T</th>
+<th class="tableblock halign-left valign-top">Created</th>
+<th class="tableblock halign-left valign-top">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-146?src=confmacro">NPMCLI-146</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-146?src=confmacro">problem
+to install tab-completition</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-146?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-11-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-138?src=confmacro">NPMCLI-138</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-138?src=confmacro">Add
+support for Now bundles</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-138?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-08-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-129?src=confmacro">NPMCLI-129</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-129?src=confmacro">jumpstart
+set relative path for magnolia.resources.dir</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-129?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-04-04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-128?src=confmacro">NPMCLI-128</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-128?src=confmacro">print
+version with help text</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-128?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-125?src=confmacro">NPMCLI-125</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-125?src=confmacro">Improve
+search texts</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-125?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-123?src=confmacro">NPMCLI-123</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-123?src=confmacro">Change
+the default folder for JS / CSS to just webresources</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-123?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-105?src=confmacro">NPMCLI-105</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-105?src=confmacro">change
+option field in dialog</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-105?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-103?src=confmacro">NPMCLI-103</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-103?src=confmacro">create-light-module:
+warn if nearest tomcat has different light-module dir</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-103?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project%3DNPMCLI+AND+fixVersion%3D2.2.0++&amp;src=confmacro">8
+issues</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-release-2.1.02.1.0"><a class="anchor" href="#src-196598509_MagnoliaCLI-release-2.1.02.1.0"></a><span id="src-196598509_MagnoliaCLI-release-2" class="1 0  confluence-anchor-link">#</span>#2.1.0</h4>
+<div class="paragraph">
+<p>Released on March 17, 2017.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Two new commands have been added:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>search</code> - helps find light modules on npm.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-99">NPMCLI-99</a></p>
+</li>
+<li>
+<p><code>install</code> - installs a light module from the registry into your light
+modules folder.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-98">NPMCLI-98</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In the prototype dialog template, the image <code>alt</code> attribute uses the
+<code>caption</code> property.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-31">NPMCLI-31</a></p>
+</li>
+<li>
+<p>The placeholder <code><em>lightDevModuleFolder</em></code> for the name of the
+corresponding light module can be used in all
+<a href="#src-196598509_MagnoliaCLI-Prototypes">prototypes files</a> for page
+and component templates (in <code>mgnl-cli-prototypes/page/*</code> and
+<code>mgnl-cli-prototypes/component</code>).
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-84">NPMCLI-84</a></p>
+</li>
+<li>
+<p>The <code>tab-completion install</code> command, if completed successfully, also
+displays the files (together with their paths) to which the
+autocompletion script has been appended.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-107">NPMCLI-107</a></p>
+</li>
+<li>
+<p>All CLI i18n messages are served from a single location (
+<code>lib/locales/</code> ). The messages in English are located in the <code>en</code>
+subfolder. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-91">NPMCLI-91</a></p>
+</li>
+<li>
+<p>This release also fixes a few bugs. A complete list of the issues that
+have been resolved in version 2.1.0 is available via the following link:</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here to see the list of issues resolved in version 2.1.0</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Summary</th>
+<th class="tableblock halign-left valign-top">T</th>
+<th class="tableblock halign-left valign-top">Created</th>
+<th class="tableblock halign-left valign-top">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-118?src=confmacro">NPMCLI-118</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-118?src=confmacro">Update
+README.md</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-118?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-116?src=confmacro">NPMCLI-116</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-116?src=confmacro">i18n:
+extract remaining texts</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-116?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-115?src=confmacro">NPMCLI-115</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-115?src=confmacro">Component
+availability is messed up under certain conditions</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-115?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-113?src=confmacro">NPMCLI-113</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-113?src=confmacro">testsuite
+fails with error</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-113?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-111?src=confmacro">NPMCLI-111</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-111?src=confmacro">mgnl
+build throws if no argument given</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-111?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-110?src=confmacro">NPMCLI-110</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-110?src=confmacro">Fail
+gracefully if custom config is missing file</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-110?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-03-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-107?src=confmacro">NPMCLI-107</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-107?src=confmacro">tab-completion
+should give success message stating where it has been installed.</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-107?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-99?src=confmacro">NPMCLI-99</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-99?src=confmacro">Search for
+magnolia light-module packages on npm</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-99?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-98?src=confmacro">NPMCLI-98</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-98?src=confmacro">Get a
+light-module package from npm repository</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-98?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-91?src=confmacro">NPMCLI-91</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-91?src=confmacro">Move CLI
+"texts" into a common resource bundle file (i18n)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-91?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-84?src=confmacro">NPMCLI-84</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-84?src=confmacro">Add
+"light-module"-placeholder to component/page mgnl-cli-prototypes</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-84?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-31?src=confmacro">NPMCLI-31</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-31?src=confmacro">Image
+should have good default for alt attribute</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-31?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2016-07-14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project%3DNPMCLI+AND+fixVersion%3D2.1.0+&amp;src=confmacro">12
+issues</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-release-2.02.0.0"><a class="anchor" href="#src-196598509_MagnoliaCLI-release-2.02.0.0"></a><span id="src-196598509_MagnoliaCLI-release-2" class="0  confluence-anchor-link">#</span>#2.0.0</h4>
+<div class="paragraph">
+<p>Released on February 27, 2017.</p>
+</div>
+<div class="paragraph">
+<p>This version contains many improvements and bug fixes. Here is an
+incomplete list of the new or changed features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>New command <code>start</code> for easy start, stop and logging of Magnolia.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-58">NPMCLI-58</a></p>
+</li>
+<li>
+<p>Improved autocompletion:
+(<a href="https://jira.magnolia-cms.com/browse/NPMCLI-69">NPMCLI-69</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Can be enabled and disabled with the new command
+<code>mgnl tab-completion</code>.</p>
+</li>
+<li>
+<p>Is now available not only for <em>bash,</em> but also for <em>C-shell</em> and
+<em>Windows PowerShell</em>.</p>
+</li>
+<li>
+<p>Knows more things to autocomplete.</p>
+</li>
+<li>
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you were using autocompletion in a Magnolia CLI version below 2.0,
+you may want to
+<a href="#src-196598509_MagnoliaCLI-uninstall-autocomplete-1">uninstall
+autocomplete version 1</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>User experience enhanced by:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Improved error and crash handling.</p>
+</li>
+<li>
+<p>Instructions on how to continue when a command is successfully
+executed.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>setup</code> command is renamed to <code>customize-local-config</code> command.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-101">NPMCLI-101</a></p>
+</li>
+<li>
+<p><code>add-availability</code> command defaults to main area when no area is
+specified. <a href="https://jira.magnolia-cms.com/browse/NPMCLI-48">NPMCLI-48</a></p>
+</li>
+<li>
+<p><code>create-light-module</code> command generates README files.
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-62">NPMCLI-62</a></p>
+</li>
+<li>
+<p>Node v 6.0+ is required to run the CLI.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here for a complete list of the issues which have been resolved in
+version 2.0</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Key</th>
+<th class="tableblock halign-left valign-top">Summary</th>
+<th class="tableblock halign-left valign-top">T</th>
+<th class="tableblock halign-left valign-top">Created</th>
+<th class="tableblock halign-left valign-top">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-108?src=confmacro">NPMCLI-108</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-108?src=confmacro">Improve
+README prototype to make modules easier to understand</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-108?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-106?src=confmacro">NPMCLI-106</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-106?src=confmacro">Installation
+of tab completion fails on Windows</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-106?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-102?src=confmacro">NPMCLI-102</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-102?src=confmacro">Improve
+stopping Tomcat on Windows</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-102?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-101?src=confmacro">NPMCLI-101</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-101?src=confmacro">Rename
+mgnl setup to mgnl customize-local-config</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-101?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-95?src=confmacro">NPMCLI-95</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-95?src=confmacro">Help users
+with outdated Node versions</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-95?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-94?src=confmacro">NPMCLI-94</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-94?src=confmacro">Use
+consistent logging style</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-94?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-02-01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-93?src=confmacro">NPMCLI-93</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-93?src=confmacro">Jumpstart
+command does not update magnolia.properties reliably</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-93?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-88?src=confmacro">NPMCLI-88</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-88?src=confmacro">create-light-module
+should support "."</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-88?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-83?src=confmacro">NPMCLI-83</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-83?src=confmacro">Ensure CLI
+works on Windows</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-83?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-78?src=confmacro">NPMCLI-78</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-78?src=confmacro">Small
+screensize leads to broken progress bar</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-78?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-74?src=confmacro">NPMCLI-74</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-74?src=confmacro">Incorrect
+pattern in resfn call in page template</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-74?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-73?src=confmacro">NPMCLI-73</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-73?src=confmacro">Fix Error
+Object / Error handling</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-73?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-69?src=confmacro">NPMCLI-69</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-69?src=confmacro">Command to
+append bash completion to .bash_profile / .bashrc</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-69?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-68?src=confmacro">NPMCLI-68</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-68?src=confmacro">add
+instructions / hints what to do after light module creation</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-68?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-67?src=confmacro">NPMCLI-67</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-67?src=confmacro">show
+instructions how to continue after mgnl jumpstart</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-67?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-66?src=confmacro">NPMCLI-66</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-66?src=confmacro">Improve
+crash handling with next steps and more informations</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-66?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-63?src=confmacro">NPMCLI-63</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-63?src=confmacro">CLI: Help
+users get started</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-63?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-62?src=confmacro">NPMCLI-62</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-62?src=confmacro">Every
+generated light module should contain a README</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-62?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2017-01-17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-58?src=confmacro">NPMCLI-58</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-58?src=confmacro">Easy
+start, stop, and logging of Magnolia</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-58?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2016-11-29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-54?src=confmacro">NPMCLI-54</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-54?src=confmacro">Fix double
+slash in resources path in current page ftl prototype</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/NPMCLI-54?src=confmacro"><span class="image"><img src="../../_images/images/jira.magnolia-cms.com/secure/viewavatar.svg" alt="images/jira.magnolia-cms.com/secure/viewavatar.svg"></span></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2016-10-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="status  green  subtle">Closed</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Showing 20 out of
+<a href="https://jira.magnolia-cms.com/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project%3DNPMCLI+AND+fixVersion%3D2.0++&amp;src=confmacro">23
+issues</a></p>
+</div>
+<div class="sect4">
+<h5 id="src-196598509_safe-id-TWFnbm9saWFDTEktVmlkZW86TWFnbm9saWFDTElUb29sbWFrZXN3ZWJkZXZlbG9wZXJzJ2xpdmVzZWFzaWVy"><a class="anchor" href="#src-196598509_safe-id-TWFnbm9saWFDTEktVmlkZW86TWFnbm9saWFDTElUb29sbWFrZXN3ZWJkZXZlbG9wZXJzJ2xpdmVzZWFzaWVy"></a>Video: Magnolia CLI Tool makes web developers' lives easier</h5>
+<div class="paragraph">
+<p>Please note that this video is based on Magnolia CLI 2.0.0 and Magnolia
+5.5.1 Community Edition. (The latest release of Magnolia is 6.2.1.)</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598509_MagnoliaCLI-Pre-2.0.0versions"><a class="anchor" href="#src-196598509_MagnoliaCLI-Pre-2.0.0versions"></a>Pre-2.0.0 versions</h4>
+<div class="paragraph">
+<p>All pre-2.0.0 versions of Magnolia CLI are considered beta and no
+official documentation is available for them.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598509_MagnoliaCLI-Seealso"><a class="anchor" href="#src-196598509_MagnoliaCLI-Seealso"></a>See also</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Troubleshooting:
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Known%20issues#Knownissues-JVMissues">JVM
+issues</a></p>
+</li>
+<li>
+<p><a href="https://www.npmjs.com/package/@magnolia/cli">Magnolia CLI on npmjs.com</a></p>
+</li>
+<li>
+<p><a href="https://www.npmjs.com/browse/keyword/magnolia-light-module">Light
+modules for Magnolia CLI on npmjs.com</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI v3</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+    <h3 class="toc-title">PAGE CONTENTS</h3>
+    <div id="article-toc"></div>
+</aside>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>
+</main>
+</div>
+<footer class="footer">
+    <p> &copy; <span id="year"></span> <a href="http://www.magnolia-cms.com" target="_blank"
+        title="Link to Magnolia's official website" class="footer-link">Magnolia CMS</a></p>
+    
+    <div class="footer-bottom">
+      <hr class="footer-hr">
+    </div>
+
+    <div class="bottom-icons">
+      <a href="https://www.facebook.com/Magnolia" target="_blank" title="Magnolia's Facebook Page"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a> <a href="https://twitter.com/magnolia_cms" target="_blank" title="Magnolia's Twitter Page"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a> <a href="https://www.linkedin.com/company/magnolia-cms/" target="_blank" title="Magnolia's LinkedIn Page"><i
+        class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+    </div>
+
+    <div class="bottom-logo">
+
+    </div>
+
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    tocbot.init( {
+        tocSelector: '#article-toc',
+        contentSelector: 'article',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        collapseDepth: 3,
+        positionFixedSelector: null,
+        scrollSmooth: true,
+        scrollSmoothDuration: 420
+    } );
+    var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+    if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+        document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+    }
+</script>
+
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+  <script type="text/javascript"> docsearch({
+      appId: '89ZVZ4S26W',
+      apiKey: 'a797119372b8a613eb38a9564867085c',
+      indexName: 'dev_DOCS',
+      inputSelector: '#searchBar',
+      algoliaOptions: { hitsPerPage: 10 },
+    });
+  </script>
+  </body>
+</html>
