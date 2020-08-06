@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-{{> head-first}}
-    <title>{{{detag (or page.title 'Page Not Found')}}}{{#with site.title}} | {{this}}{{/with}}</title>
-{{> head-last}}
+{{> head defaultPageTitle='Page Not Found'}}
   </head>
   <body class="status-404">
 {{> header}}
-{{> body-404}}
+{{> body}}
 {{> footer}}
   </body>
 </html>

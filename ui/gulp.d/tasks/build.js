@@ -49,7 +49,9 @@ module.exports = (src, dest, preview) => () => {
     postcssVar({ preserve: preview }),
     preview ? postcssCalc : () => {},
     autoprefixer,
-    preview ? () => {} : cssnano({ preset: 'default' }),
+    preview
+      ? () => {}
+      : (css, result) => cssnano({ preset: 'default' })(css, result).then(() => postcssPseudoElementFixer(css, result)),
   ]
 
   return merge(
@@ -90,23 +92,32 @@ module.exports = (src, dest, preview) => () => {
       )
       .pipe(buffer())
       .pipe(uglify()),
-    vfs.src(require.resolve('jquery/dist/jquery.min.js'), opts).pipe(concat('js/vendor/jquery.js')),
+    // NOTE use this statement to bundle a JavaScript library that cannot be browserified, like jQuery
+    //vfs.src(require.resolve('<package-name-or-require-path>'), opts).pipe(concat('js/vendor/<library-name>.js')),
     vfs
-      .src(['css/site.css', 'css/vendor/docsearch.css'], { ...opts, sourcemaps })
+      .src('css/site.css', { ...opts, sourcemaps })
       .pipe(postcss((file) => ({ plugins: postcssPlugins, options: { file } }))),
     vfs.src('font/*.{ttf,woff*(2)}', opts),
     vfs
       .src('img/**/*.{gif,ico,jpg,png,svg}', opts)
       .pipe(
-        imagemin([
-          imagemin.gifsicle(),
-          imagemin.jpegtran(),
-          imagemin.optipng(),
-          imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
-        ])
+        imagemin(
+          [
+            imagemin.gifsicle(),
+            imagemin.jpegtran(),
+            imagemin.optipng(),
+            imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+          ].reduce((accum, it) => (it ? accum.concat(it) : accum), [])
+        )
       ),
     vfs.src('helpers/*.js', opts),
     vfs.src('layouts/*.hbs', opts),
     vfs.src('partials/*.hbs', opts)
   ).pipe(vfs.dest(dest, { sourcemaps: sourcemaps && '.' }))
+}
+
+function postcssPseudoElementFixer (css, result) {
+  css.walkRules(/(?:^|[^:]):(?:before|after)/, (rule) => {
+    rule.selector = rule.selectors.map((it) => it.replace(/(^|[^:]):(before|after)$/, '$1::$2')).join(',')
+  })
 }

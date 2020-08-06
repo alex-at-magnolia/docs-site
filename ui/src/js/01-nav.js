@@ -1,115 +1,148 @@
 ;(function () {
   'use strict'
 
-  // closes open menus in navbar on loss of focus
-  window.addEventListener('click', function (e) {
-    find('input.navbar-dropper').forEach(function (input) {
-      if (input !== e.target) input.checked = false
-    })
+  var SECT_CLASS_RX = /^sect(\d)$/
+
+  var navContainer = document.querySelector('.nav-container')
+  var navToggle = document.querySelector('.nav-toggle')
+
+  navToggle.addEventListener('click', showNav)
+  // NOTE don't let click events propagate outside of nav container
+  navContainer.addEventListener('click', concealEvent)
+
+  var menuPanel = navContainer.querySelector('[data-panel=menu]')
+  if (!menuPanel) return
+  var nav = navContainer.querySelector('.nav')
+
+  var currentPageItem = menuPanel.querySelector('.is-current-page')
+  var originalPageItem = currentPageItem
+  if (currentPageItem) {
+    activateCurrentPath(currentPageItem)
+    scrollItemToMidpoint(menuPanel, currentPageItem.querySelector('.nav-link'))
+  } else {
+    menuPanel.scrollTop = 0
+  }
+
+  find(menuPanel, '.nav-item-toggle').forEach(function (btn) {
+    var li = btn.parentElement
+    btn.addEventListener('click', toggleActive.bind(li))
+    var navItemSpan = findNextElement(btn, '.nav-text')
+    if (navItemSpan) {
+      navItemSpan.style.cursor = 'pointer'
+      navItemSpan.addEventListener('click', toggleActive.bind(li))
+    }
   })
 
-  var nav = document.querySelector('nav.nav')
-  var navMenu = {}
-  if (!(navMenu.element = nav && nav.querySelector('.nav-menu'))) return
-  var navControl
-  var currentPageItem = navMenu.element.querySelector('.is-current-page')
+  nav.querySelector('.context').addEventListener('click', function () {
+    var currentPanel = nav.querySelector('.is-active[data-panel]')
+    var activatePanel = currentPanel.dataset.panel === 'menu' ? 'explore' : 'menu'
+    currentPanel.classList.toggle('is-active')
+    nav.querySelector('[data-panel=' + activatePanel + ']').classList.toggle('is-active')
+  })
 
   // NOTE prevent text from being selected by double click
-  navMenu.element.addEventListener('mousedown', function (e) {
+  menuPanel.addEventListener('mousedown', function (e) {
     if (e.detail > 1) e.preventDefault()
   })
 
-  find('.nav-toggle', navMenu.element).forEach(function (toggleBtn) {
-    var navItem = findAncestorWithClass('nav-item', toggleBtn, navMenu.element)
-    toggleBtn.addEventListener('click', toggleActive.bind(navItem))
-    var navItemSpan = findNextElement(toggleBtn)
-    if (navItemSpan.classList.contains('nav-text')) {
-      navItemSpan.style.cursor = 'pointer'
-      navItemSpan.addEventListener('click', toggleActive.bind(navItem))
-    }
-  })
-
-  fitNavMenuInit({})
-  window.addEventListener('load', fitNavMenuInit)
-  window.addEventListener('resize', fitNavMenuInit)
-
-  if ((navControl = document.querySelector('main .nav-control'))) navControl.addEventListener('click', revealNav)
-
-  function scrollItemToMiddle (el, parentEl) {
-    var adjustment = (el.getBoundingClientRect().height - parentEl.getBoundingClientRect().height) * 0.5 + el.offsetTop
-    if (adjustment > 0) parentEl.scrollTop = adjustment
-  }
-
-  function fitNavMenuInit (e) {
-    window.removeEventListener('scroll', fitNavMenuOnScroll)
-    navMenu.element.style.height = ''
-    if ((navMenu.preferredHeight = navMenu.element.getBoundingClientRect().height) > 0) {
-      // QUESTION should we check if x value > 0 instead?
-      if (window.getComputedStyle(nav).visibility === 'visible') {
-        if (!navMenu.encroachingElement) navMenu.encroachingElement = document.querySelector('footer.footer')
-        fitNavMenu(navMenu.preferredHeight, (navMenu.viewHeight = window.innerHeight), navMenu.encroachingElement)
-        window.addEventListener('scroll', fitNavMenuOnScroll)
-      }
-      if (currentPageItem && e.type !== 'resize') {
-        scrollItemToMiddle(currentPageItem.querySelector('.nav-link'), navMenu.element)
+  function onHashChange () {
+    var navLink
+    var hash = window.location.hash
+    if (hash) {
+      if (hash.indexOf('%')) hash = decodeURIComponent(hash)
+      navLink = menuPanel.querySelector('.nav-link[href="' + hash + '"]')
+      if (!navLink) {
+        var targetNode = document.getElementById(hash.slice(1))
+        if (targetNode) {
+          var current = targetNode
+          var ceiling = document.querySelector('article.doc')
+          while ((current = current.parentNode) && current !== ceiling) {
+            var id = current.id
+            // NOTE: look for section heading
+            if (!id && (id = current.className.match(SECT_CLASS_RX))) id = (current.firstElementChild || {}).id
+            if (id && (navLink = menuPanel.querySelector('.nav-link[href="#' + id + '"]'))) break
+          }
+        }
       }
     }
+    var navItem
+    if (navLink) {
+      navItem = navLink.parentNode
+    } else if (originalPageItem) {
+      navLink = (navItem = originalPageItem).querySelector('.nav-link')
+    } else {
+      return
+    }
+    if (navItem === currentPageItem) return
+    find(menuPanel, '.nav-item.is-active').forEach(function (el) {
+      el.classList.remove('is-active', 'is-current-path', 'is-current-page')
+    })
+    navItem.classList.add('is-current-page')
+    currentPageItem = navItem
+    activateCurrentPath(navItem)
+    scrollItemToMidpoint(menuPanel, navLink)
   }
 
-  function fitNavMenuOnScroll () {
-    fitNavMenu(navMenu.preferredHeight, navMenu.viewHeight, navMenu.encroachingElement)
+  if (menuPanel.querySelector('.nav-link[href^="#"]')) {
+    if (window.location.hash) onHashChange()
+    window.addEventListener('hashchange', onHashChange)
   }
 
-  function fitNavMenu (preferredHeight, availableHeight, encroachingElement) {
-    var reclaimedHeight = availableHeight - encroachingElement.getBoundingClientRect().top
-    navMenu.element.style.height = reclaimedHeight > 0 ? Math.max(0, preferredHeight - reclaimedHeight) + 'px' : ''
+  function activateCurrentPath (navItem) {
+    var ancestorClasses
+    var ancestor = navItem.parentNode
+    while (!(ancestorClasses = ancestor.classList).contains('nav-menu')) {
+      if (ancestor.tagName === 'LI' && ancestorClasses.contains('nav-item')) {
+        ancestorClasses.add('is-active', 'is-current-path')
+      }
+      ancestor = ancestor.parentNode
+    }
+    navItem.classList.add('is-active')
   }
 
-  function toggleActive (e) {
+  function toggleActive () {
     this.classList.toggle('is-active')
+  }
+
+  function showNav (e) {
+    if (navToggle.classList.contains('is-active')) return hideNav(e)
+    var html = document.documentElement
+    html.classList.add('is-clipped--nav')
+    navToggle.classList.add('is-active')
+    navContainer.classList.add('is-active')
+    html.addEventListener('click', hideNav)
     concealEvent(e)
   }
 
-  function revealNav (e) {
-    if (nav.classList.contains('is-active')) return hideNav(e)
-    document.documentElement.classList.add('is-clipped--nav')
-    nav.classList.add('is-active')
-    nav.addEventListener('click', concealEvent)
-    window.addEventListener('click', hideNav)
-    concealEvent(e) // NOTE don't let event get picked up by window click listener
-  }
-
   function hideNav (e) {
-    if (e.which === 3 || e.button === 2) return
-    document.documentElement.classList.remove('is-clipped--nav')
-    nav.classList.remove('is-active')
-    nav.removeEventListener('click', concealEvent)
-    window.removeEventListener('click', hideNav)
-    concealEvent(e) // NOTE don't let event get picked up by window click listener
+    var html = document.documentElement
+    html.classList.remove('is-clipped--nav')
+    navToggle.classList.remove('is-active')
+    navContainer.classList.remove('is-active')
+    html.removeEventListener('click', hideNav)
+    concealEvent(e)
   }
 
-  function find (selector, from) {
-    return [].slice.call((from || document).querySelectorAll(selector))
-  }
-
-  function findAncestorWithClass (className, from, scope) {
-    if ((from = from.parentNode) !== scope) {
-      if (from.classList.contains(className)) {
-        return from
-      } else {
-        return findAncestorWithClass(className, from, scope)
-      }
-    }
-  }
-
-  function findNextElement (from, el) {
-    if ((el = from.nextElementSibling)) return el
-    el = from
-    while ((el = el.nextSibling) && el.nodeType !== 1);
-    return el
-  }
-
+  // NOTE don't let event get picked up by window click listener
   function concealEvent (e) {
     e.stopPropagation()
+  }
+
+  function scrollItemToMidpoint (panel, el) {
+    var rect = panel.getBoundingClientRect()
+    var effectiveHeight = rect.height
+    var navStyle = window.getComputedStyle(nav)
+    if (navStyle.position === 'sticky') effectiveHeight -= rect.top - parseFloat(navStyle.top)
+    panel.scrollTop = Math.max(0, (el.getBoundingClientRect().height - effectiveHeight) * 0.5 + el.offsetTop)
+  }
+
+  function find (from, selector) {
+    return [].slice.call(from.querySelectorAll(selector))
+  }
+
+  function findNextElement (from, selector) {
+    var el = from.nextElementSibling
+    if (!el) return
+    return selector ? el[el.matches ? 'matches' : 'msMatchesSelector'](selector) && el : el
   }
 })()

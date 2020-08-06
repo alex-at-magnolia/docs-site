@@ -1,121 +1,51 @@
 <header class="header">
-  <nav class="navbar" id="topbar">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://documentation.magnolia-cms.com"><img src="{{{uiRootPath}}}/img/magnolia-medium.png" alt="Magnolia"></a>
-        <button class="navbar-burger" data-target="topbar-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div id="topbar-menu" class="navbar-menu">
-        <div class="navbar-start">
-          <div class="navbar-item has-dropdown-click">
-            <label for="docs" class="navbar-dropper">Docs</label>
-            <input id="docs" class="navbar-dropper" type="checkbox">
-            <div class="navbar-dropdown explore">
-              {{#with page.componentVersion.asciidoc.attributes.primary-site-url}}
-              <div class="title"><a href="{{this}}">Magnolia Docs Home</a> | <a href="{{#with (and @root.site.url @root.site.homeUrl)}}{{@root.site.url}}{{this}}{{else}}{{@root.siteRootPath}}{{/with}}">Archive</a></div>
-              {{else}}
-              <div class="title"><a href="{{#with (and site.url site.homeUrl)}}{{@root.site.url}}{{this}}{{else}}{{siteRootPath}}{{/with}}">Magnolia Docs Home</a></div>
-              {{/with}}
-              <div class="cols">
-                <ul>
-                  <li class="heading"><a href="{{relativize site.components.server.url}}">Server</a></li>
-                  {{#with (resolvePageURL 'server:n1ql:n1lq-language-reference/index.adoc')}}
-                  <li><a href="{{relativize this}}">N1QL</a></li>
-                  {{/with}}
-                  {{#with (resolvePageURL 'server:fts:full-text-intro.adoc')}}
-                  <li><a href="{{relativize this}}">Full Text Search</a></li>
-                  {{/with}}
-                  {{#with (resolvePageURL 'server:eventing:eventing-overview.adoc')}}
-                  <li><a href="{{relativize this}}">Eventing</a></li>
-                  {{/with}}
-                  {{#with (resolvePageURL 'server:analytics:introduction.adoc')}}
-                  <li><a href="{{relativize this}}">Analytics</a></li>
-                  {{/with}}
-                  {{#with site.components.operator}}
-                  {{#unless ./origin}}
-                  <li><a href="{{relativize ./url}}">Kubernetes</a></li>
-                  {{/unless}}
-                  {{/with}}
-                </ul>
-                <ul>
-                  <li class="heading">Mobile</li>
-                  <li><a href="{{relativize site.components.Magnolia-lite.url}}">Lite</a></li>
-                  <li><a href="{{relativize site.components.sync-gateway.url}}">Sync Gateway</a></li>
-                </ul>
-                <ul class="two-cols">
-                  <li class="heading"><a href="{{relativize (resolvePageURL 'server:sdk:overview.adoc')}}">SDKs</a></li>
-                  <li><a href="{{relativize site.components.java-sdk.url}}">Java</a></li>
-                  <li><a href="{{relativize site.components.dotnet-sdk.url}}">.NET</a></li>
-                  <li><a href="{{relativize site.components.nodejs-sdk.url}}">Node.js</a></li>
-                  <li><a href="{{relativize site.components.python-sdk.url}}">Python</a></li>
-                  <li><a href="{{relativize site.components.php-sdk.url}}">PHP</a></li>
-                  <li><a href="{{relativize site.components.go-sdk.url}}">Go</a></li>
-                  <li><a href="{{relativize site.components.c-sdk.url}}">C</a></li>
-                  {{#with site.components.scala-sdk}}
-                  {{#unless ./origin}}
-                  <li><a href="{{relativize ./url}}">Scala</a></li>
-                  {{/unless}}
-                  {{else}}
-                  <li><a href="{{relativize site.components.scala-sdk.url}}">Scala</a></li>
-                  {{/with}}
-                </ul>
-                <ul>
-                  <li class="heading"><a href="{{relativize (resolvePageURL 'server:connectors:intro.adoc')}}">Connectors</a></li>
-                  <li><a href="{{relativize site.components.kafka-connector.url}}">Kafka</a></li>
-                  <li><a href="{{relativize site.components.spark-connector.url}}">Spark</a></li>
-                  <li><a href="{{relativize site.components.elasticsearch-connector.url}}">Elasticsearch</a></li>
-                  <li><a href="{{relativize (resolvePageURL 'server:connectors:odbc-jdbc-drivers.adoc')}}">ODBC/JDBC</a></li>
-                </ul>
-              </div>
-            </div>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{{or site.url (or siteRootUrl siteRootPath)}}}">
+        <img class="logo" src="{{{uiRootPath}}}/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
           </div>
-          {{#if page.component}}
-          {{#if (or (eq page.component.name 'tutorials') (eq page.component.name 'userprofile-Magnolia-mobile'))}}
-          <a class="navbar-item component" href="{{relativize site.components.tutorials.url}}"><span class="title">{{{site.components.tutorials.title}}}</span></a>
-          {{else if (or page.versions (ends-with page.component.name '-sdk'))}}
-          {{!-- <div class="navbar-item has-dropdown-click">
-            <label for="menu-versions" class="component navbar-dropper"><span class="title">{{{page.component.title}}}</span> <span class="version">{{page.componentVersion.displayVersion}}</span></label>
-            <input id="menu-versions" class="navbar-dropper" type="checkbox">
-            <div class="navbar-dropdown versions">
-              <div class="cols">
-                <ul>
-                  {{#each page.versions}}
-                  <li{{#if (eq ./version @root.page.version)}} class="current"{{/if}}><a class="navbar-item" href="{{relativize ./url}}">{{{@root.page.component.title}}} {{./displayVersion}}</a></li>
-                  {{else}}
-                  <li class="current"><a class="navbar-item" href="{{relativize page.url}}">{{{page.component.title}}} {{page.displayVersion}}</a></li>
-                  {{/each}}
-                </ul>
-                {{#if (ends-with page.component.name '-sdk')}}
-                <ul class="related">
-                  {{#each (related-sdk-pages 'c,dotnet,go,java,nodejs,php,python,scala')}}
-                  <li><a class="navbar-item" href="{{relativize ./url}}">{{{./title}}}</a></li>
-                  {{/each}}
-                </ul>
-                {{/if}}
-              </div>
-            </div>
-          </div> --}}
-          {{else if (ne page.component.name 'home')}}
-          <a class="navbar-item component" href="{{relativize page.componentVersion.url}}"><span class="title">{{{page.component.title}}}</span>{{#unless (eq page.componentVersion.displayVersion 'master')}} <span class="version">{{page.componentVersion.displayVersion}}</span>{{/unless}}</a>
-          {{/if}}
-          {{/if}}
-          {{#if env.ALGOLIA_API_KEY}}
-            <form class="navbar-item search">
-              <input type="text" placeholder="Search Magnolia Docs" class="query" id="search-query">
-              <button type="button" class="search"><span>Search</span></button>
-            </form>
-          {{/if}}
         </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <a class="btn red-btn" href="https://www.magnolia-cms.com/get-started.html" target="_blank">Get Magnolia</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
           </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
         </div>
       </div>
     </div>
   </nav>
+  <div class="lower-head">
+    
+  </div>
 </header>

@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -6,76 +11,66 @@
 
 html {
   box-sizing: border-box;
-  text-size-adjust: 100%;
+  font-size: var(--body-font-size);
+  -webkit-text-size-adjust: 100%;
 }
 
-html,
-body {
-  height: 100%;
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: var(--body-font-size--desktop);
+  }
 }
 
 body {
-  color: var(--color-text);
-  font-family: "Gotham", sans-serif;
-  line-height: 1.5;
+  background: var(--body-background);
+  color: var(--body-font-color);
+  font-family: var(--body-font-family);
+  line-height: var(--body-line-height);
   margin: 0;
 }
 
 a {
-  color: var(--color-link);
-  outline: none;
   text-decoration: none;
 }
 
-a:focus,
 a:hover {
   text-decoration: underline;
 }
 
-button,
-input,
-select {
-  font-family: inherit;
-  outline: none;
-}
-
-button {
-  cursor: pointer;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-button::-moz-focus-inner {
-  border: 0;
+a:active {
+  background-color: none;
 }
 
 code,
 kbd,
 pre {
-  font-family: "Roboto Mono", monospace;
-}
-
-code {
-  color: var(--color-brand-black);
-  font-size: 0.9375em;
-  word-spacing: -0.125em;
-}
-
-html code {
-  hyphens: none;
+  font-family: var(--monospace-font-family);
 }
 
 b,
-strong {
-  font-weight: var(--weight-medium);
+dt,
+strong,
+th {
+  font-weight: var(--body-font-weight-bold);
 }
 
-small {
-  font-size: 0.8em;
+em em { /* stylelint-disable-line */
+  font-style: normal;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: var(--width-container);
-  padding: 0 var(--width-container-gutter);
+strong strong { /* stylelint-disable-line */
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1em;
+  line-height: var(--body-line-height);
+  margin: 0;
+}
+
+button::-moz-focus-inner {
+  border: none;
+  padding: 0;
 }

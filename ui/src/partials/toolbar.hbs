@@ -1,7 +1,15 @@
-{{#with (or (and (not env.CI) page.fileUri) (and (not page.origin.private) page.editUrl))}}
-<div class="tools" role="navigation">
-  <ul>
-    <li class="tool edit"><a href="{{this}}" title="Edit Page" target="_blank" rel="noopener">Edit</a></li>
-  </ul>
+<div class="toolbar" role="navigation">
+{{> nav-toggle}}
+  {{> page-versions}}
+  {{#with site.homeUrl}}
+  <a href="{{{relativize this}}}" class="home-link{{#if @root.page.home}} is-current{{/if}}"></a>
+  {{/with}}
+
+{{> breadcrumbs}}
+
+  {{#if (and page.fileUri (not env.CI))}}
+  <div class="edit-this-page"><a href="{{page.fileUri}}">Edit this Page</a></div>
+  {{else if (and page.editUrl (or env.FORCE_SHOW_EDIT_PAGE_LINK (not page.origin.private)))}}
+  <div class="edit-this-page"><a href="{{page.editUrl}}">Edit this Page</a></div>
+  {{/if}}
 </div>
-{{/with}}
