@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>REST security - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/REST_security.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="REST_security.html">REST security - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">REST security - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="REST_module.html">REST module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597335"><a class="anchor" href="#src-196597335"></a>REST security</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>There are three levels of control when REST requests are issued:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Web access</p>
+</li>
+<li>
+<p>JCR access</p>
+</li>
+<li>
+<p>Command-level access</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Permissions to issue REST requests are controlled using Magnolia&#8217;s
+standard
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Roles+and+access+control+lists">role-based
+security mechanism</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-Securitystrategy"><a class="anchor" href="#src-196597335_RESTsecurity-Securitystrategy"></a>Security strategy</h3>
+<div class="paragraph">
+<p>REST endpoints are a powerful tool but can also make your site very
+vulnerable. Make sure you understand how to implement a strong security
+strategy to safeguard your system.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597335_RESTsecurity-web-accessWebaccesssecurity"><a class="anchor" href="#src-196597335_RESTsecurity-web-accessWebaccesssecurity"></a><span id="src-196597335_RESTsecurity-web-access " class="confluence-anchor-link">#</span>#Web access security</h4>
+<div class="paragraph">
+<p>Web access security is checked by the URISecurityFilter. The filter
+checks whether the role(s) of the requesting user allow to the user to
+request a given path with given method.</p>
+</div>
+<div class="paragraph">
+<p>Web permissions are granted as
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Roles+and+access+control+lists">web access
+lists</a> per role. They grant access to a path for <strong>Get</strong> or <strong>Get &amp; Post</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Get</strong> – Grants the HTTP method <code>GET</code> for a given URI.</p>
+</li>
+<li>
+<p><strong>Get &amp; Post</strong> – Grants the HTTP methods <code>GET</code>, <code>PUT</code>, <code>POST</code> and
+<code>DELETE</code> for a given URI.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Web access is checked for every endpoint.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597335_RESTsecurity-JCR-accessJCRaccesssecurity"><a class="anchor" href="#src-196597335_RESTsecurity-JCR-accessJCRaccesssecurity"></a><span id="src-196597335_RESTsecurity-JCR-access " class="confluence-anchor-link">#</span>#JCR access security</h4>
+<div class="paragraph">
+<p>JCR access security is a feature of the JCR standard (defined by JCR
+<a href="https://www.jcp.org/en/jsr/detail?id=170">JSR-170</a> and
+<a href="https://jcp.org/en/jsr/detail?id=283">JSR-283</a>). JCR access is granted
+per workspace on path level. It can grant <strong>Read-only</strong> or <strong>Read/Write</strong>
+permission.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Roles+and+access+control+lists">Grant
+JCR access lists per role</a>.</p>
+</div>
+<div class="paragraph">
+<p>When using endpoints dealing with JCR repositories (<code>nodes</code> and
+<code>properties</code> to read and write, <code>delivery</code> to read only) the user must
+have an appropriate role that provides JCR permissions for the given
+method.</p>
+</div>
+<div class="paragraph">
+<p>JCR access security is checked on every endpoint that reads or writes
+JCR data.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>JCR access security can be bypassed for the <code>delivery</code> endpoint for
+testing purposes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597335_RESTsecurity-Role-basedsecurityforcommands"><a class="anchor" href="#src-196597335_RESTsecurity-Role-basedsecurityforcommands"></a>Role-based security for commands</h4>
+<div class="paragraph">
+<p>Command level security access only applies to the commands endpoint.</p>
+</div>
+<div class="paragraph">
+<p>Role-based access to specific commands are configured in the
+<code>rest-services</code> module:
+<code>/modules/rest-services/rest-endpoints/commands/enabledCommands/</code></p>
+</div>
+<div class="paragraph">
+<p>Commands are custom actions executed at pre-defined trigger points.
+Magnolia uses commands to activate content, send email, flush the cache,
+take backups, import and export data, and to do many other tasks.
+Commands can perform duties within the system or connect to external
+resources.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-Securityforendpoints-summary"><a class="anchor" href="#src-196597335_RESTsecurity-Securityforendpoints-summary"></a>Security for endpoints - summary</h3>
+<div class="paragraph">
+<p>Endpoints always require URI access, they may also require JCR access or
+a specific role defined at a command level.</p>
+</div>
+<div class="paragraph">
+<p>When you request a REST URL, URI security is checked first:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the URI security check fails, the request is redirected to the
+login page by default.</p>
+</li>
+<li>
+<p>If the the URI security check is passed, the request is delegated to
+the endpoint in question.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the endpoint concerns JCR access, JCR access security is checked too:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the user is not granted access to the requested node, the endpoint
+responds with an HTTP error.</p>
+</li>
+<li>
+<p>If JCR security access is granted, the endpoint responds with an HTTP
+response code 200 and a response body if appropriate.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the endpoint triggers commands, the command definition grants access
+via specifically defined roles defined per command:</p>
+</div>
+<div class="paragraph">
+<p>HTTP<br>
+method</p>
+</div>
+<div class="paragraph">
+<p>Web access security required</p>
+</div>
+<div class="paragraph">
+<p>JCR access security</p>
+</div>
+<div class="paragraph">
+<p>Specific role based security</p>
+</div>
+<div class="paragraph">
+<p><strong><code>delivery</code></strong></p>
+</div>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/delivery/*</p>
+</div>
+<div class="paragraph">
+<p><strong>Read-only</strong> access for the delivery API path</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><strong><code>nodes</code></strong></p>
+</div>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read-only</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><code>PUT</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read/Write</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><code>POST</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read/Write</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><code>DELETE</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read/Write</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><strong><code>properties</code></strong></p>
+</div>
+<div class="paragraph">
+<p><code>GET</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read-only</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><code>PUT</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read/Write</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><code>POST</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read/Write</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><code>DELETE</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/nodes/v1/{workspace}/{path}</p>
+</div>
+<div class="paragraph">
+<p><strong>Read/Write</strong> access for a path on a workspace</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p><strong><code>commands</code></strong></p>
+</div>
+<div class="paragraph">
+<p><code>POST</code></p>
+</div>
+<div class="paragraph">
+<p>/.rest/commands/v2/{catalogName}/{command}</p>
+</div>
+<div class="paragraph">
+<p>-</p>
+</div>
+<div class="paragraph">
+<p>required</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597335_RESTsecurity-RESTroles"><a class="anchor" href="#src-196597335_RESTsecurity-RESTroles"></a>REST roles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The REST module installs four default roles with the following
+permissions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>rest-admin</code> – The REST administrator role grants GET/POST permissions
+to all Magnolia&#8217;s REST APIs.</p>
+</li>
+<li>
+<p><code>rest-editor</code> – The REST editor role grants GET/POST permissions to
+REST services APIs (nodes, properties), for a limited set of workspaces.</p>
+</li>
+<li>
+<p><code>rest-anonymous</code> – The REST anonymous consumer role grants GET
+permissions to Magnolia&#8217;s content delivery REST API.</p>
+</li>
+<li>
+<p><code>rest-backup</code> – The REST backup role grants permission to execute the
+<code>backup</code> command from a running Magnolia instance.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-rest-admin"><a class="anchor" href="#src-196597335_RESTsecurity-rest-admin"></a>rest-admin</h3>
+<div class="paragraph">
+<p>Web access</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Permission</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get &amp; Post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/*</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Configured access</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Applies to</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Commands</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/markAsDeleted/access/roles</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/activate/access/roles</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-rest-editor"><a class="anchor" href="#src-196597335_RESTsecurity-rest-editor"></a>rest-editor</h3>
+<div class="paragraph">
+<p>Web access</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Permission</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/delivery/*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/commands*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/nodes*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get &amp; Post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/nodes/v1/website*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/properties*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get &amp; Post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/properties/v1/website*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get &amp; Post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/cache/v1*</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-rest-anonymous"><a class="anchor" href="#src-196597335_RESTsecurity-rest-anonymous"></a>rest-anonymous</h3>
+<div class="paragraph">
+<p>Web access</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Permission</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/delivery/*</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-rest-backup"><a class="anchor" href="#src-196597335_RESTsecurity-rest-backup"></a>rest-backup</h3>
+<div class="paragraph">
+<p>Web access</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Permission</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get &amp; Post</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/.rest/commands/v2/backup/backup</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Configured access</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Applies to</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Path</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Command</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/modules/rest-services/rest-endpoints/commands/enabledCommands/backup/access/roles</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The superuser account has the <code>rest-admin</code> role by default so you can
+use superuser to test your requests. However, for production use, you
+should create a custom REST role. The <code>anonymous</code> role is specifically
+denied access to the REST endpoints.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597335_RESTsecurity-CustomRESTroles"><a class="anchor" href="#src-196597335_RESTsecurity-CustomRESTroles"></a>Custom REST roles</h3>
+<div class="paragraph">
+<p>Magnolia recommends you create custom REST roles granting specific
+access for specific use cases.</p>
+</div>
+<div class="paragraph">
+<p>The custom roles you create depend on your individual project
+requirements. In general, we recommend you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First deny everything, then specifically grant only what is required.</p>
+</li>
+<li>
+<p>Avoid granting write permissions on JCR workspaces for anonymous
+users.</p>
+</li>
+<li>
+<p>Create different roles for each use case.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>REST module</p>
+</div>
+<div class="paragraph">
+<p>Tools to test REST requests</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

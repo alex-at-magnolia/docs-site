@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello Magnolia - with content via REST - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/Hello-Magnolia---with-content-via-REST.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Hello-Magnolia---with-content-via-REST.html">Hello Magnolia - with content via REST - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Hello Magnolia - with content via REST - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-204051230"><a class="anchor" href="#src-204051230"></a>Hello Magnolia - with content via REST</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Hello+Magnolia">Hello
+Magnolia</a></p>
+</li>
+<li>
+<p><a href="Light-development-in-Magnolia.html">Light development</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+in+Magnolia">REST in
+Magnolia</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Example+REST+client+configurations">Example
+REST client configurations</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+CLI">Magnolia
+CLI</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On this page we describe how you can create and use a component whose
+content is retrieved through REST from an external API.</p>
+</div>
+<div class="paragraph">
+<p>The page is an extension to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Hello+Magnolia">Hello
+Magnolia</a>, an introductory Magnolia tutorial showing how to leverage the
+Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+modules">light module</a>
+functionality to create a web page.</p>
+</div>
+<div class="sect2">
+<h3 id="src-204051230_HelloMagnolia-withcontentviaREST-HelloMagnoliatutorial-aquickrecap"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-HelloMagnoliatutorial-aquickrecap"></a>Hello Magnolia tutorial - a quick recap</h3>
+<div class="paragraph">
+<p>The product of the Hello Magnolia tutorial is a light module called
+<code>hello-magnolia</code> that contains a component used on a page called
+<code>hello</code>. When published to the public instance, the page displays two
+elements in addition to the page title: a quotation and the quotation&#8217;s
+author. On the author instance, editors can change the content of both
+these elements in a dialog called <code>quotation</code>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595106/helloPage_final.png" alt="images/download/attachments/196595106/helloPage_final.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196595106/6-1-HelloMagnolia-quotationComponent.png" alt="images/download/attachments/196595106/6-1-HelloMagnolia-quotationComponent.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051230_safe-id-SGVsbG9NYWdub2xpYS13aXRoY29udGVudHZpYVJFU1QtUHJlcmVxdWlzaXRlOkFNYWdub2xpYXNldHVw"><a class="anchor" href="#src-204051230_safe-id-SGVsbG9NYWdub2xpYS13aXRoY29udGVudHZpYVJFU1QtUHJlcmVxdWlzaXRlOkFNYWdub2xpYXNldHVw"></a>Prerequisite: A Magnolia setup</h3>
+<div class="paragraph">
+<p>Let&#8217;s proceed from here, but first make sure that:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Magnolia CLI is installed on your system.<br>
+If it isn&#8217;t, please install it by following the instructions on the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Magnolia+CLI#MagnoliaCLI-mgnl-cli-installationInstallingMagnoliaCLI">Magnolia
+CLI</a> page.</p>
+</li>
+<li>
+<p>You have a running Magnolia instance.<br>
+If you don&#8217;t have Magnolia installed and running, go to the page called
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Installing+Magnolia+through+npm+CLI">Installing
+Magnolia through npm CLI</a> and complete the steps described on it.</p>
+</li>
+<li>
+<p>The <code>hello-magnolia</code> light module is installed in Magnolia.<br>
+You can get a copy of the <code>hello-magnolia</code> light module by cloning it
+from a branch in our Documentation repository to the folder defined by
+the <code>magnolia.resources.dir</code> property. If you installed Magnolia using
+CLI, it is the <code>light-modules</code> folder, located in the root of your
+Magnolia installation:</p>
+<div class="paragraph">
+<p><code>&lt;your-Magnolia-installation-folder&gt;</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>├── apache-tomcat/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── downloads/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── light-modules/</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── hello-magnolia/`</p>
+</div>
+<div class="paragraph">
+<p>+
+Clone the module to the <code>light-modules</code> folder by executing this
+command:</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>git clone --branch lmo-tutorial-base<code>/6</code>.2 https:<code>//git</code>.magnolia-cms.com<code>/scm/documentation/hello-magnolia</code>.git</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051230_HelloMagnolia-withcontentviaREST-Enhancements"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-Enhancements"></a>Enhancements</h3>
+<div class="paragraph">
+<p>In the steps that follow you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create and configure a REST client in the <code>hello-magnolia</code> light
+module for GET requests to the
+<code><a href="https://programming-quotes-api.herokuapp.com" class="bare">https://programming-quotes-api.herokuapp.com</a></code> API. This particular API
+service is convenient in that it doesn&#8217;t require an API key.</p>
+</li>
+<li>
+<p>Create a new page component called <code>Random Programming Quotation</code>,
+which will retrieve and render the English quotations from the API
+service.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The tree structure of the <code>hello-magnolia</code> light module before and after
+the enhancements:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Before</th>
+<th class="tableblock halign-left valign-top">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>hello-magnolia/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── quotation.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── hello.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── quotation.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── quotation.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── hello.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── hello.html</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── hello.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── index.html</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources/</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── css/`</p>
+</div>
+<div class="paragraph">
+<p>`        └── hello-style.css`</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>hello-magnolia/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── quotation.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── hello.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── restClients/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── programming-quotations.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── quotation.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── quotation.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   ├── random-programming-quotation.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   │   └── random-programming-quotation.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── hello.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── hello.html</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       ├── hello.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│       └── index.html</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources/</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── css/`</p>
+</div>
+<div class="paragraph">
+<p>`        └── hello-style.css`</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>After the changes, the module contains one new subfolder and three new
+files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Lines 8 and 9: The subfolder and a YAML template file containing a
+REST client configuration for the quotation API service.</p>
+</li>
+<li>
+<p>Lines 14 and 15: An FTL template script and a YAML template definition
+for the new <code>Random Programming Quotation</code> component.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-204051230_HelloMagnolia-withcontentviaREST-CreatingaRESTclientconfigurationfile"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-CreatingaRESTclientconfigurationfile"></a>Creating a REST client configuration file</h4>
+<div class="paragraph">
+<p>In the root of the <code>hello-magnolia</code> module, create a new subfolder
+called <code>restClients</code>. In this subfolder, save the following
+configuration to a new file called <code>programming-quotations.yaml</code>:</p>
+</div>
+<div class="paragraph">
+<p>/hello-magnolia/restClients/programming-quotations.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>baseUrl: https:`</code>//programming-quotes-api.herokuapp.com`</p>
+</div>
+<div class="paragraph">
+<p><code>restCalls:</code></p>
+</div>
+<div class="paragraph">
+<p>`  random:`</p>
+</div>
+<div class="paragraph">
+<p>`    method: get`</p>
+</div>
+<div class="paragraph">
+<p>`    entityClass: com.fasterxml.jackson.databind.JsonNode`</p>
+</div>
+<div class="paragraph">
+<p>`    path: /quotes/random/lang/en`</p>
+</div>
+<div class="paragraph">
+<p>After saving the file, you can check in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
+app</a> that this client configuration has been registered:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/204051230/6-2-helloMagnoliaWithARESTfulEnhancement-inDefinitionsApp.png" alt="images/download/attachments/204051230/6-2-helloMagnoliaWithARESTfulEnhancement-inDefinitionsApp.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-204051230_HelloMagnolia-withcontentviaREST-CreatingaRESTfulcomponent"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-CreatingaRESTfulcomponent"></a>Creating a RESTful component</h4>
+<div class="paragraph">
+<p>Stay in the root of the <code>hello-magnolia</code> module. Use the following
+Magnolia CLI command to create the <code>random-programming-quotation</code>
+component. The command will make it available in the <code>main</code> area of the
+page template:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-component random-programming-quotation -a pages/hello@main</code></p>
+</div>
+<div class="paragraph">
+<p>The command creates the following files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/hello-magnolia/dialogs/components/random-programming-quotation.yaml</code><br>
+You don&#8217;t need this file for the present use case. Delete it.</p>
+</li>
+<li>
+<p><code>/hello-magnolia/templates/components/random-programming-quotation.yaml</code><br>
+This template definition gives the component a name and makes the
+component available to the system.</p>
+</li>
+<li>
+<p><code>/hello-magnolia/templates/components/random-programming-quotation.ftl</code><br>
+The template script renders the content of the component.</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-204051230_safe-id-SGVsbG9NYWdub2xpYS13aXRoY29udGVudHZpYVJFU1QtRWRpdHRoZWNvbXBvbmVudCdzdGVtcGxhdGVkZWZpbml0aW9u"><a class="anchor" href="#src-204051230_safe-id-SGVsbG9NYWdub2xpYS13aXRoY29udGVudHZpYVJFU1QtRWRpdHRoZWNvbXBvbmVudCdzdGVtcGxhdGVkZWZpbml0aW9u"></a>Edit the component&#8217;s template definition</h5>
+<div class="paragraph">
+<p>Open the <code>random-programming-quotation.yaml</code> file and:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete the line referring to the dialog template.</p>
+</li>
+<li>
+<p>Rename the component&#8217;s title to <code>Random Programming Quotation</code>. The
+title will be displayed in the list of templates when you choose a
+template for a new page.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The result to be saved should look like this:</p>
+</div>
+<div class="paragraph">
+<p>/hello-magnolia/templates/components/random-programming-quotation.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>title: Random Programming Quotation</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /hello-magnolia/templates/components/random-programming-quotation.ftl</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-204051230_safe-id-SGVsbG9NYWdub2xpYS13aXRoY29udGVudHZpYVJFU1QtRWRpdHRoZWNvbXBvbmVudCdzdGVtcGxhdGVzY3JpcHQ"><a class="anchor" href="#src-204051230_safe-id-SGVsbG9NYWdub2xpYS13aXRoY29udGVudHZpYVJFU1QtRWRpdHRoZWNvbXBvbmVudCdzdGVtcGxhdGVzY3JpcHQ"></a>Edit the component&#8217;s template script</h5>
+<div class="paragraph">
+<p>Open the <code>random-programming-quotation.ftl</code> template script and save it
+with the following code:</p>
+</div>
+<div class="paragraph">
+<p>/hello-magnolia/templates/components/random-programming-quotation.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>${ctx.response.setHeader(<code>"Cache-Control"</code>, <code>"no-cache"</code>)}</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign randomQuote = restfn.call(<code>"programming-quotations"</code>, <code>"random"</code>)]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> randomQuote?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;blockquote&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;p&gt;${randomQuote.en.textValue()}&lt;/p&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;cite&gt;${randomQuote.author.textValue()}&lt;/cite&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/blockquote&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>else</code>]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;pre&gt;An error occurred. The endpoint may be offline or returns <code>null</code> values.&lt;/pre&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[/#<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Notes</strong></p>
+</div>
+<div class="paragraph">
+<p>Line 1: Without the <code>no-cache</code> setting, the changing content of the REST
+response would not be accessible when reloading the page since the
+server by default caches the rendered HTML page.</p>
+</div>
+<div class="paragraph">
+<p>Lines 7 and 8: The expressions <code>randomQuote.en.textValue()</code> and
+<code>randomQuote.author.textValue()</code> will print what is stored in the <code>en</code>
+and <code>author</code> properties, respectively.</p>
+</div>
+<div class="paragraph">
+<p>All the necessary changes in the code are now done. In the next steps
+you:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a new page called <code>hello-rest</code>, using the <code>Hello template</code>.</p>
+</li>
+<li>
+<p>Add the new <code>Random Programming Quotation</code> component to the page, save
+the page and publish it to the public instance.</p>
+</li>
+<li>
+<p>On the public instance, check that the <code>hello-rest</code> page is accessible
+and that it displays random quotations and their attributions whenever
+you reload the page.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051230_HelloMagnolia-withcontentviaREST-Creatinganewpage"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-Creatinganewpage"></a>Creating a new page</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Go to the App launcher and click the <strong>Pages</strong> tile to open the Pages
+app.</p>
+</li>
+<li>
+<p>To add a new page, click <strong>Add page</strong> from the Action bar on the
+right-hand side.</p>
+</li>
+<li>
+<p>In the <strong>Add page</strong> dialog:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Use <code>hello-rest</code> for Page name.</p>
+</li>
+<li>
+<p>Choose the <code>Hello template</code> as the page template.</p>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>In the Page properties dialog, enter <code>RESTful Hello Magnolia</code> into the
+Title field.</p>
+</li>
+<li>
+<p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051230_HelloMagnolia-withcontentviaREST-AddingtheRESTfulcomponent"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-AddingtheRESTfulcomponent"></a>Adding the RESTful component</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <code>hello-rest</code> page in the Pages app.</p>
+</li>
+<li>
+<p>Click the <strong>New Main Component</strong> + button.</p>
+</li>
+<li>
+<p>Select the <code>Random Programming Quotation</code> component:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/204051230/6-2-helloMagnoliaWithARESTfulEnhancement-addNewComponent.png" alt="images/download/attachments/204051230/6-2-helloMagnoliaWithARESTfulEnhancement-addNewComponent.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Next</strong>.<br>
+At this point, you should be already receiving some content from the
+quotation API service. For example, a quotation by Joseph Yoder:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/204051230/6-2-helloMagnoliaWithARESTfulEnhancement-addNewComponent-ContentFetched.png" alt="images/download/attachments/204051230/6-2-helloMagnoliaWithARESTfulEnhancement-addNewComponent-ContentFetched.png"></span></p>
+</div>
+</li>
+<li>
+<p>Preview the page by clicking <strong>Preview page</strong> in the Action bar on the
+left. The Preview action should fetch a new quotation from the API.</p>
+</li>
+<li>
+<p>Publish the page to the public instance by clicking <strong>Publish</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-204051230_HelloMagnolia-withcontentviaREST-Seeingtheresultonthepublicinstance"><a class="anchor" href="#src-204051230_HelloMagnolia-withcontentviaREST-Seeingtheresultonthepublicinstance"></a>Seeing the result on the public instance</h3>
+<div class="paragraph">
+<p>Finally, access the web page on the public instance:
+<a href="http://localhost:8080/magnoliaPublic/hello-rest.html" class="bare">http://localhost:8080/magnoliaPublic/hello-rest.html</a>. The following
+screenshot shows a quotation by Bob Carr, fetched from the quotations
+API:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/204051230/6-2-HelloMagnoliaWithRESTfulRandomQuotes-finalResult.png" alt="images/download/attachments/204051230/6-2-HelloMagnoliaWithRESTfulRandomQuotes-finalResult.png"></span></p>
+</div>
+<div class="paragraph">
+<p>YAML inherit and include</p>
+</div>
+<div class="paragraph">
+<p>How to add an asset with REST</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

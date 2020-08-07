@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to get and adapt a bundle with Magnolia CLI :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/cli/How-to-get-and-adapt-a-bundle-with-Magnolia-CLI.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="How-to-get-and-adapt-a-bundle-with-Magnolia-CLI.html">How to get and adapt a bundle with Magnolia CLI</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">How to get and adapt a bundle with Magnolia CLI</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia CLI</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">Bundles
+and webapps</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With Magnolia CLI v3, the `jumpstart `command lets you choose the
+webapp. Jumpstart downloads the Magnolia stand-alone Tomcat and the
+selected webapp. As a result you end up with a ready-to-use Magnolia
+Tomcat bundle according to your needs.</p>
+</div>
+<div class="paragraph">
+<p>You have different approaches to determine which modules go into your
+bundle. You can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-anc-choosing-the-webapp">Choose
+the webapp when you run the jumpstart command</a>.</p>
+</li>
+<li>
+<p><a href="#src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-adding-modules-via-config">Add
+additional modules using CLI configuration</a>.</p>
+</li>
+<li>
+<p><a href="#src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-adding-modules-manually">Add
+additional modules manually</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can combine these approaches.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-anc-choosing-the-webapp]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-Choosingawebappwhenyourunthejumpstartcommand"><a class="anchor" href="#src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-Choosingawebappwhenyourunthejumpstartcommand"></a>Choosing a webapp when you run the jumpstart command</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you run the Magnolia CLI `jumpstart `command, you are prompted to
+choose a webapp.</p>
+</div>
+<div class="paragraph">
+<p><code>? What Magnolia would you like to install?</code></p>
+</div>
+<div class="paragraph">
+<p><code>1`</code>) magnolia-empty-webapp`</p>
+</div>
+<div class="paragraph">
+<p><code>2`</code>) magnolia-community-webapp`</p>
+</div>
+<div class="paragraph">
+<p><code>3`</code>) magnolia-community-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p><code>4`</code>) magnolia-dx-core-webapp`</p>
+</div>
+<div class="paragraph">
+<p><code>5`</code>) magnolia-dx-core-demo-webapp`</p>
+</div>
+<div class="paragraph">
+<p><code>Answer:</code></p>
+</div>
+<div class="paragraph">
+<p>When choosing, ask yourself:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Do I want the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Demo">Magnolia Travel demo</a>
+? If you do, choose a webapp with <code>demo</code> in its name.</p>
+</li>
+<li>
+<p>Do I have a license? If you don&#8217;t have a Magnolia license yet, choose
+a webapp with`community` in its name. Community editions <em>do not</em>
+require a license. Alternatively,
+<a href="https://www.magnolia-cms.com/try.html">contact us for a trial</a>.</p>
+</li>
+<li>
+<p>Which edition suits my needs best? Look at the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/List+of+modules">List of
+modules</a> to see which modules each edition contains.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>DX Core</p>
+</li>
+<li>
+<p>Community Edition</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Is an empty webapp the best starting point for my project? If so,
+choose <code>magnolia-empty-webapp</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can customize the list of webapps available to choose from by
+editing the <code>availableWebapps</code> section of the Magnolia CLI
+`mgnl-cli.json `file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-Addingadditionalmodules"><a class="anchor" href="#src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-Addingadditionalmodules"></a>Adding additional modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[<mark>src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-adding-modules-via-config]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-Addingadditionalmodulesusingmgnl-cli.jsondownloadJars"><a class="anchor" href="#src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-Addingadditionalmodulesusingmgnl-cli.jsondownloadJars"></a>Adding additional modules using mgnl-cli.json downloadJars</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This approach requires you edit the Magnolia CLI`mgnl-cli.json`
+configuration file. The <code>mgnl-cli.json</code> provides a hook to add more
+modules on top of the webapp you chose. Modules may be added to any
+webapp available when running the <code>jumpstart</code> command.</p>
+</div>
+<div class="paragraph">
+<p>We strongly recommend you
+<a href="Magnolia-CLI-v3.html#src-196598511_MagnoliaCLIv3-Globalandlocalconfigurations">create
+a local copy of the json file to edit</a>. To do so, use the
+<code>customize-local-config `command to create a custom configuration and
+make sure you have a complete configuration which includes both the
+`mgnl-cli.json</code> and the prototypes folder.</p>
+</div>
+<div class="paragraph">
+<p>You must adapt the <code>mgnl-cli.json</code> file <em>before</em> running <code>jumpstart</code>.
+Add the module(s) you want to add to the section <code>downloadJars</code> of the
+<code>mgnl-cli.json</code> file.</p>
+</div>
+<div class="paragraph">
+<p>When you run the <code>jumpstart</code> command, you must also make sure the custom
+configuration you want to use is in the folder where you run the command
+or in an ancestor folder.</p>
+</div>
+<div class="paragraph">
+<p>In the default version of the file, the <code>downloadJars</code> section is empty:</p>
+</div>
+<div class="paragraph">
+<p><code>"downloadJars"`</code>: {}`</p>
+</div>
+<div class="paragraph">
+<p>Add as many modules you need, separating entries with a comma:</p>
+</div>
+<div class="paragraph">
+<p><code>"downloadJars"`</code>: {`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"arbitrary-name-1"</code> : <code>"URL-to-artifact-1"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"arbitrary-name-2"</code> : <code>`"URL-to-artifact-2"</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong></p>
+</div>
+<div class="paragraph">
+<p>In this example, we add the <code>magnolia-app-tutorial</code> content app.</p>
+</div>
+<div class="paragraph">
+<p>`   <code>"downloadJars"</code>: {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>"magnolia-app-tutorial"</code> : <code>`"https://nexus.magnolia-cms.com/content/repositories/magnolia.public.releases/info/magnolia/documentation/magnolia-app-tutorial/1.4.8/magnolia-app-tutorial-1.4.8.jar"</code></p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196598518_HowtogetandadaptabundlewithMagnoliaCLI-adding-modules-manually]</mark>#</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598518_safe-id-SG93dG9nZXRhbmRhZGFwdGFidW5kbGV3aXRoTWFnbm9saWFDTEktQWRkaW5nbW9kdWxlc21hbnVhbGx5aW50b3RoZVdFQi1JTkYvbGliZGlyZWN0b3J5"><a class="anchor" href="#src-196598518_safe-id-SG93dG9nZXRhbmRhZGFwdGFidW5kbGV3aXRoTWFnbm9saWFDTEktQWRkaW5nbW9kdWxlc21hbnVhbGx5aW50b3RoZVdFQi1JTkYvbGliZGlyZWN0b3J5"></a>Adding modules manually into the WEB-INF/lib directory</h3>
+<div class="paragraph">
+<p>If you add modules manually, you do not need to change the
+<code>mgnl-cli.json</code> file. We recommend you use this approach to adapt
+modules that you have built locally or that are not available on
+repositories.</p>
+</div>
+<div class="paragraph">
+<p>This approach is also useful when you want to change the version of
+modules that are already part of the webapp.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example: Adding the DAM app to the Magnolia Empty Webapp 6.2</strong></p>
+</div>
+<div class="paragraph">
+<p>In this example, you add the DAM app to the <code>magnolia-empty-webapp</code>, the
+most basic Magnolia webapp.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Run the Magnolia CLI <code>jumpstart</code> command:</p>
+<div class="paragraph">
+<p><code>mgnl jumpstart -m ``6.2</code></p>
+</div>
+</li>
+<li>
+<p>Choose <code>magnolia-empty-webapp</code>. Do <em>not</em> run the CLI <code>start</code> command
+yet.</p>
+</li>
+<li>
+<p>Download these jars:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/dam/magnolia-dam-api/3.0/magnolia-dam-api-3.0.jar">magnolia-dam-api-3.0.jar</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/dam/magnolia-dam-app/3.0/magnolia-dam-app-3.0.jar">magnolia-dam-app-3.0.jar</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/dam/magnolia-dam-core/3.0/magnolia-dam-core-3.0.jar">magnolia-dam-core-3.0.jar</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/dam/magnolia-dam-jcr/3.0/magnolia-dam-jcr-3.0.jar">magnolia-dam-jcr-3.0.jar</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/dam/magnolia-dam-app-jcr/3.0/magnolia-dam-app-jcr-3.0.jar">magnolia-dam-app-jcr-3.0.jar</a></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Open the following directory created by the <code>jumpstart</code> command:
+<code>apache-tomcat/webapps/magnoliaAuthor/WEB-INF/lib</code>.</p>
+</li>
+<li>
+<p>Place the downloaded files into the directory.</p>
+</li>
+<li>
+<p>Start Magnolia:</p>
+<div class="paragraph">
+<p><code>mgnl start</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Prototypes in CLI v3</p>
+</div>
+<div class="paragraph">
+<p>Updating CLI to v3</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

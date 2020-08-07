@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Google Analytics Visualization module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Google_Analytics_Visualization_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Google_Analytics_Visualization_module.html">Google Analytics Visualization module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Google Analytics Visualization module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596981"><a class="anchor" href="#src-196596981"></a>Google Analytics Visualization module</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>This module is in maintenance mode. See
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Deprecations">Deprecations</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/ga/visualization/magnolia-module-google-analytics-visualization/1.2/magnolia-module-google-analytics-visualization-1.2.zip">magnolia-module-google-analytics-visualization-1.2.zip</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLGAV">MGNLGAV</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.sites/magnolia-module-google-analytics-visualization/">GAV</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Magnolia integrates with the
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/">Google
+Analytics Core Reporting API</a> and the
+<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/">Google
+Analytics Embed API</a>. The Google Analytics Visualization module enables
+you to view Google Analytics data within Magnolia. The module can be
+configured to display the data you are interested in but does not insert
+Google Analytics tags into pages. The
+<a href="Marketing_Tags_module.html">Marketing Tags module</a> can be used for
+inserting tags.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.51.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.51.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.40.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.40.png"></span></p>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-Installing"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.ga.visualization&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-module-google-analytics-visualization&lt;/artifactId&gt;
+  &lt;version&gt;1.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A pre-built bundle is also available for download. See
+<a href="Installing_a_module.html">Installing a module</a> for help.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/ga/visualization/magnolia-module-google-analytics-visualization/1.2/magnolia-module-google-analytics-visualization-1.2.zip">magnolia-module-google-analytics-visualization-1.2.zip</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-EnablingtheAnalyticsAPI"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-EnablingtheAnalyticsAPI"></a>Enabling the Analytics API</h3>
+<div class="paragraph">
+<p>To enable the Analytics API you register your application with the
+Analytics API in the Google Developers Console. This involves creating a
+new project and adding service account credentials to it.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-Creatingaserviceaccount"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Creatingaserviceaccount"></a>Creating a service account</h4>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Do not use Safari to create a service account. The public/private key
+pair generation in step 6 does not work correctly in Safari.</p>
+</div>
+<div class="paragraph">
+<p>Follow the steps below to create a project in the Google Developers
+Console, enable the Analytics API and generate the service account.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the
+<a href="https://console.developers.google.com/start/api?id=analytics&amp;credential=client_key">Google
+Developers Console</a>.</p>
+</li>
+<li>
+<p>Click <strong>Continue</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-10_at_15.41.41.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-10_at_15.41.41.png"></span></p>
+</div>
+<div class="paragraph">
+<p>This creates a new project called "My Project" in the Google Developers
+Console and enables the Analytics API.</p>
+</div>
+</li>
+<li>
+<p>The console notifies you that the project has been created and that
+Analytics API has been enabled. Click <strong>Go to credentials</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-10_at_15.49.03.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-10_at_15.49.03.png"></span></p>
+</div>
+</li>
+<li>
+<p>Fill in the form:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Which API are you using?</strong> Analytics API</p>
+</li>
+<li>
+<p><strong>Where will you be calling the API from?</strong> Web server</p>
+</li>
+<li>
+<p><strong>What data will you be accessing?</strong> Application data</p>
+</li>
+<li>
+<p><strong>Are you using Google App Engine or Google Compute Engine?</strong> No</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-10_at_15.58.34.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-10_at_15.58.34.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>What credentials do I need?</strong> and add credentials to your
+project:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Name</strong>: MagnoliaGAV (or your choice of name)</p>
+</li>
+<li>
+<p><strong>Service account ID</strong>: note the value shown here, you will need it
+later.</p>
+</li>
+<li>
+<p><strong>Key type</strong>: JSON (recommended)</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_09.43.27.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_09.43.27.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Continue</strong> to create the service account.</p>
+</li>
+<li>
+<p>The following dialog is displayed and the account&#8217;s public/private key
+pair is saved to your computer.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-10_at_16.13.11.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-10_at_16.13.11.png"></span></p>
+</div>
+</li>
+<li>
+<p>Click <strong>Close</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-AddingtheserviceaccounttoyourGoogleAnalyticsaccount"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-AddingtheserviceaccounttoyourGoogleAnalyticsaccount"></a>Adding the service account to your Google Analytics account</h4>
+<div class="paragraph">
+<p>The service account you created has a service account ID in email
+address format. Use this ID to
+<a href="https://support.google.com/analytics/answer/1009702">add a user</a> to the
+Google Analytics
+<a href="https://support.google.com/analytics/answer/6099198">Account/Property/View</a>
+you want to access via the API.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign in to your <a href="https://www.google.com/analytics/web/#home/">Analytics
+account</a>.</p>
+</li>
+<li>
+<p>Select the <strong>Admin</strong> tab and navigate to the required
+<strong>Account/Property/View</strong>.</p>
+</li>
+<li>
+<p>In the <strong>View</strong> column, click <strong>User Management</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Add permissions for</strong>, enter the email address of the service
+account.</p>
+</li>
+<li>
+<p>Assign <strong>Read &amp; Analyze</strong> permissions to the user. Additional
+permissions are not required because the Magnolia Google Analytics
+Visualization module does not modify any data in Google Analytics.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_09.55.58.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_09.55.58.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-FindingoutyourViewID"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-FindingoutyourViewID"></a>Finding out your View ID</h4>
+<div class="paragraph">
+<p>You need the View ID when configuring your client to
+<a href="#src-196596981_GoogleAnalyticsVisualizationmodule-FetchingdatafromGoogleAnalytics-Clients">fetch
+data from Google Analytics</a> and when
+<a href="#src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringChartviews">configuring
+the chart view</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In your Analytics account, select the
+<a href="https://support.google.com/analytics/answer/6132368">Admin</a> tab and
+select the required <strong>View</strong> .</p>
+</li>
+<li>
+<p>In the <strong>View</strong> column click <strong>View Settings</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_10.23.35.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_10.23.35.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringcredentialsintheGoogleAnalyticsVisualizationmodule"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringcredentialsintheGoogleAnalyticsVisualizationmodule"></a>Configuring credentials in the Google Analytics Visualization module</h3>
+<div class="paragraph">
+<p>You must configure the Google Analytics Visualization module to fetch
+data from the Google Analytics view. To do so, you load the credentials
+from the file saved to your computer when you created the service
+account. You then store the credentials in the module configuration.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-LoadingcredentialsfromaJSONfile"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-LoadingcredentialsfromaJSONfile"></a>Loading credentials from a JSON file</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">google-analytics-visualization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">credentialConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">applicationName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GAV</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">serviceAccountJsonPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;path_to_json_with_service_account_credentials&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serviceAccountJsonPath</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> if you want to load credentials from a JSON file.</p>
+</div>
+<div class="paragraph">
+<p>Path to JSON file with service account credentials generated in
+<a href="https://wiki.magnolia-cms.com/pages/viewpage.action?spaceKey=DOCS&amp;title=Google+Analytics+Visualization+module#GoogleAnalyticsVisualizationmodule-CreatingaServiceAccount">Creating
+a service account</a> if the JSON key type was selected.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>applicationName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the application requesting data from Google Analytics. For
+example: GAV.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-LoadingcredentialsfromaP12file"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-LoadingcredentialsfromaP12file"></a>Loading credentials from a P12 file</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">google-analytics-visualization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">credentialConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">applicationName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GAV</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servicePrivateKeyPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;path_to_p12_file_with_service_account_credentials&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>applicationName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of your application for requesting data from Google Analytics. For
+example: GAV.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>servicePrivateKeyPath</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> if you want to load credentials from a P12 file.</p>
+</div>
+<div class="paragraph">
+<p>Path to P12 file with service account credentials generated in
+<a href="https://wiki.magnolia-cms.com/pages/viewpage.action?spaceKey=DOCS&amp;title=Google+Analytics+Visualization+module#GoogleAnalyticsVisualizationmodule-CreatingaServiceAccount">Creating
+a service account</a> if the P12 key type was selected.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-StoringcredentialsintheMagnoliaconfiguration"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-StoringcredentialsintheMagnoliaconfiguration"></a>Storing credentials in the Magnolia configuration</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">google-analytics-visualization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">credentialConfig</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">applicationName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GAV</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servicePrivateKey</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;private_key&gt;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">serviceEmail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;service_account_email&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>applicationName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the application requesting data from Google Analytics. For
+example: GAV.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>servicePrivateKey</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> if you want to store credentials in the Magnolia
+configuration.</p>
+</div>
+<div class="paragraph">
+<p>See the screenshot of the open JSON file below.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serviceEmail</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> if you want to store credentials in the Magnolia
+configuration.</p>
+</div>
+<div class="paragraph">
+<p>See the screenshot of the open JSON file below.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_13.58.10.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_13.58.10.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-IntegratingwithPagesapp"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-IntegratingwithPagesapp"></a>Integrating with Pages app</h3>
+<div class="paragraph">
+<p>Once integrated in the Pages app, Magnolia adds two new columns by
+default: <strong>Page views</strong> and <strong>Exit rate</strong>
+<code>info.magnolia.ga.visualization.column.GoogleAnalyticsPageStatisticsColumnFormatter</code>.
+You can configure the Pages app to display more data from Google
+Analytics.</p>
+</div>
+<div class="paragraph">
+<p>The status bar extension
+<code>info.magnolia.ga.visualization.extension.GoogleAnalyticsPageStatisticsExtension</code>
+also displays some Google Analytics data by default and can be
+customized.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.40.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.40.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.51.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-11_at_14.37.51.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-FetchingdatafromGoogleAnalytics-Clients"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-FetchingdatafromGoogleAnalytics-Clients"></a>Fetching data from Google Analytics - Clients</h4>
+<div class="paragraph">
+<p>To avoid exceeding
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/limits-quotas">API
+limits and quotas</a>, limit your use of the Analytics Core Reporting API
+by refreshing data from Google Analytics in configured time intervals.
+The client uses the
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/">Analytics
+Core Reporting API</a> to fetch the data and the
+<a href="Scheduler_module.html">Magnolia Scheduler module</a> to schedule the
+data refresh frequency.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-Clientconfiguration"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Clientconfiguration"></a>Client configuration</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">google-analytics-visualization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metrics</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga-exitRate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">reverse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">today</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">endDateCompare</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31daysAgo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:pagePath=~^/travel*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metrics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:pageviews,ga:exitRate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profileId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:24199737</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30daysAgo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">startDateCompare</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60daysAgo</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>true</code> enables the client. <code>false</code> disables the client.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>serviceClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is
+<code>info.magnolia.ga.visualization.client.GoogleAnalyticsClient</code></p>
+</div>
+<div class="paragraph">
+<p>Client service class which extends
+<code>info.magnolia.ga.visualization.client.GoogleAnalyticsClient</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cron</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>0 0/5 * 1/1 * ? *</code></p>
+</div>
+<div class="paragraph">
+<p>Cron expression which defines the frequency of data refreshes fetched by
+this client.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>command</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>clientExecutor</code></p>
+</div>
+<div class="paragraph">
+<p>Command which is used to instantiate and trigger the client.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>catalog</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>gav</code></p>
+</div>
+<div class="paragraph">
+<p>Name of the catalog where the command resides.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fetchDataImmediately</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>true</code></p>
+</div>
+<div class="paragraph">
+<p>If set to <code>true</code>, the data for the client will immediately be fetched
+from Google Analytics when the client is added or reconfigured.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delay</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>5s</code></p>
+</div>
+<div class="paragraph">
+<p>Defines the delay (in seconds) after which fetching data from Google
+Analytics should start, if <code>fetchDataImmediately</code> is set to <code>true</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>profileId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Unique profile (view) ID for retrieving Analytics data. The <code>profileId</code>
+is written as ga:View ID. See
+<a href="#src-196596981_GoogleAnalyticsVisualizationmodule-FindingoutyourViewID">how
+to find out your Analytics View ID</a>.</p>
+</div>
+<div class="paragraph">
+<p>See more on Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids">documentation</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startDate</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Start date for fetching Analytics data. Requests must specify a start
+date formatted as YYYY-MM-DD, or a relative date such as today,
+yesterday, or 7daysAgo.</p>
+</div>
+<div class="paragraph">
+<p>See more on Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#startDate">documentation</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endDate</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>End date for fetching Analytics data. Requests must specify an end date
+formatted as YYYY-MM-DD, or a relative date such as today, yesterday, or
+7daysAgo.</p>
+</div>
+<div class="paragraph">
+<p>See more on Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#endDate">documentation</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>startDateCompare</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Start date of previous period for comparing the result. Requests must
+specify a start date formatted as YYYY-MM-DD, or a relative date such as
+today, yesterday, or 7daysAgo.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>endDateCompare</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>End date of previous period for comparing the result. Requests must
+specify an end date formatted as YYYY-MM-DD, or a relative date such as
+t oday, yesterday, or 7daysAgo.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A comma-separated list of Analytics metrics such as
+'ga:sessions,ga:pageviews'.</p>
+</div>
+<div class="paragraph">
+<p>See more on Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics">documentation</a>.
+Explore all the metrics in the
+<a href="https://developers.google.com/analytics/devguides/reporting/core/dimsmets">Dimensions
+&amp; Metrics Explorer</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filters</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>A comma-separated list of dimension or metric filters to be applied to
+Analytics data.</p>
+</div>
+<div class="paragraph">
+<p>See more on Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#filters">documentation</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxResults</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The maximum number of entries to be included in the response. If it is
+not set then the Google Analytics default value (1000) is used.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parser</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Setting for the parser of Google Analytics data.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parserClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is
+<code>info.magnolia.ga.visualization.client.parse.GoogleAnalyticsDataParser</code></p>
+</div>
+<div class="paragraph">
+<p>Parser class which has to extend
+<code>info.magnolia.ga.visualization.client.parse.GoogleAnalyticsDataParser</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>required</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;metric_name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the metric. Can be formatted as ga-&lt;metric_name&gt; (for example,
+"ga-pageviews") or simply as &lt;metric_name&gt; (for example, "pageviews").</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reverse</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>false</code></p>
+</div>
+<div class="paragraph">
+<p>When you compare data to the previous period, it is sometimes positive
+that the value has decreased.</p>
+</div>
+<div class="paragraph">
+<p>When this property is set to <code>false</code> then it means that it is positive
+that the value has increased compared to the previous period.</p>
+</div>
+<div class="paragraph">
+<p>When it is set to <code>true</code> then it means that it is positive that the
+value has decreased compared to the previous period.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>roundTo</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>2</code></p>
+</div>
+<div class="paragraph">
+<p>This property specifies number of decimal points for rounding.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringthecolumndisplayinthePagesapp"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringthecolumndisplayinthePagesapp"></a>Configuring the column display in the Pages app</h4>
+<div class="paragraph">
+<p>The columns in the Pages app are configured under <strong>Configuration &gt;</strong>
+<code>/modules/pages/apps/pages/subApps/browser/workbench/contentViews/list/columns</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringtheGoogleAnalyticsVisualizationcolumn"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringtheGoogleAnalyticsVisualizationcolumn"></a>Configuring the Google Analytics Visualization column</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga-pageviews</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sportstation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sportstation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ga.visualization.column.GoogleAnalyticsPageStatisticsColumnDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:pageviews</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ga.visualization.column.GoogleAnalyticsPageStatisticsColumnDefinition</code>
+extends AbstractColumnDefinition.</p>
+</div>
+<div class="paragraph">
+<p>Only the properties specific to
+<code>GoogleAnalyticsPageStatisticsColumnDefinition</code> are described here. See
+the basic set of properties in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Column+definition">Column
+definition documentation</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ga.visualization.column.GoogleAnalyticsPageStatisticsColumnDefinition</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metric</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the metric for which data is shown in the column.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>units</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Units of data shown in the column.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clients</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>required</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;name_of_the_client&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the
+<a href="#src-196596981_GoogleAnalyticsVisualizationmodule-FetchingdatafromGoogleAnalytics-Clients">client</a>
+from which the column reads data.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-Extendingthestatusbarinthedetailsubapp"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Extendingthestatusbarinthedetailsubapp"></a>Extending the status bar in the detail subapp</h4>
+<div class="paragraph">
+<p>Extensions for the status bar in the Pages app are configured under
+<strong>Configuration &gt;</strong>
+<code>/modules/pages/apps/pages/subApps/detail/statusBar/extensions</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringtheGoogleAnalyticsVisualizationextension"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringtheGoogleAnalyticsVisualizationextension"></a>Configuring the Google Analytics Visualization extension</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga-pageviews</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clients</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sportstation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sportstation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ga.visualization.column.GoogleAnalyticsPageStatisticsColumnDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metric</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:pageviews</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
+<div class="content">
+<pre>{0} page views this month</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ga .visualization.column.GoogleAnalyticsPageStatisticsColumnDefinition</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metric</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of metric for which data is shown in the column.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>text</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Text displayed in the status bar. {0} in the text is substituted with
+the value.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization">i18n</a>
+can be used in the text field.<br>
+For example, "{0} page views this month".</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clients</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>required</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;name_of_the_client&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the
+<a href="#src-196596981_GoogleAnalyticsVisualizationmodule-FetchingdatafromGoogleAnalytics-Clients">client</a>
+from which column reads data.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-GoogleAnalyticsVisualizationapp"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-GoogleAnalyticsVisualizationapp"></a>Google Analytics Visualization app</h3>
+<div class="paragraph">
+<p>The Google Analytics Visualization app uses
+<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/">Google
+Analytics Embed API</a> to display more detailed statistics about pages in
+the form of charts. Every request to update a chart triggers a request
+to the Analytics API and provides real-time data from Google Analytics.</p>
+</div>
+<div class="paragraph">
+<p>You can open the app in <strong>Tools &gt; Page statistics</strong> or by clicking <strong>View
+page stats</strong> in the Pages app.</p>
+</div>
+<div class="paragraph">
+<p>The app is configured under <strong>Configuration &gt;</strong>
+<code>/modules/google-analytics-visualization/apps/gav</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-14_at_09.49.50.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-14_at_09.49.50.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-Chartview"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Chartview"></a>Chart view</h4>
+<div class="paragraph">
+<p>You can use the chart view to define what type of data you want to
+display and how it should be displayed in the Google Analytics
+Visualization app.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-14_at_10.37.15.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-14_at_10.37.15.png"></span></p>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringChartviews"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-ConfiguringChartviews"></a>Configuring Chart views</h5>
+<div class="paragraph">
+<p>Chart views are configured under <strong>Configuration &gt;</strong>
+<code>/modules/google-analytics-visualization/config/chartViews</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">topCountriesBySession</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">chartType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PIE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dimensions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:country</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gav.chartViews.topCountriesBySession.label</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">metrics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ga:sessions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">viewId</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
+<div class="content">
+<pre>ga:24199737</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>chartType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, default is <code>LINE</code></p>
+</div>
+<div class="paragraph">
+<p>The chart type. Possible options are: <code>LINE</code>, <code>COLUMN</code>, <code>BAR</code>, <code>TABLE</code>,
+<code>GEO</code> and <code>PIE</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dimensions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, default is <code>ga:date</code></p>
+</div>
+<div class="paragraph">
+<p>A list of comma-separated dimensions for your Analytics data. The
+dimensions parameter breaks down metrics by common criteria.</p>
+</div>
+<div class="paragraph">
+<p>See more in the Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#dimensions">documentation</a>.
+Explore all the metrics in the
+<a href="https://developers.google.com/analytics/devguides/reporting/core/dimsmets">Dimensions
+&amp; Metrics Explorer</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Label for the chart view.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, default is <code>ga:pageviews</code></p>
+</div>
+<div class="paragraph">
+<p>A comma-separated list of Analytics metrics such as
+"ga:sessions,ga:pageviews".</p>
+</div>
+<div class="paragraph">
+<p>See more in the Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#metrics">documentation</a>.
+Explore all the metrics in the
+<a href="https://developers.google.com/analytics/devguides/reporting/core/dimsmets">Dimensions
+&amp; Metrics Explorer</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>viewId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Unique view ID for retrieving Analytics data. The <code>viewId</code> is written as
+ga:&lt;View ID&gt;. See
+<a href="#src-196596981_GoogleAnalyticsVisualizationmodule-FindingoutyourViewID">how
+to find out your Analytics View ID</a>.</p>
+</div>
+<div class="paragraph">
+<p>See more on Analytics Core Reporting API
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids">documentation</a>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-QuerystringinGoogleAnalyticsURL"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-QuerystringinGoogleAnalyticsURL"></a>Query string in Google Analytics URL</h3>
+<div class="paragraph">
+<p>Google Analytics splits pages into multiple rows with different
+parameters. The Google Analytics Visualization module can only display
+(in columns, status bar extensions and in charts) data for URLs without
+parameters.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-14_at_14.17.37.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-14_at_14.17.37.png"></span></p>
+</div>
+<div class="paragraph">
+<p>In the example above, the statistics for the
+<code>Configuration/modules/google-analytics-visualization/config/credentialConfig/travel/contact.html</code>
+page are split into 8 rows. You cannot get an accurate overview of the
+page statistics because they are not combined. The URLs must be merged
+into one row.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596981_GoogleAnalyticsVisualizationmodule-MergingURLswithdifferentparameters"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-MergingURLswithdifferentparameters"></a>Merging URLs with different parameters</h4>
+<div class="paragraph">
+<p>There are different ways of merging URLs. You can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use a canonical URL.</p>
+</li>
+<li>
+<p>Exclude specific query parameters.</p>
+</li>
+<li>
+<p>Use filters.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Google Analytics does not filter data retroactively.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-UsingacanonicalURL"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-UsingacanonicalURL"></a>Using a canonical URL</h5>
+<div class="paragraph">
+<p>Add a <code>&lt;link&gt;</code> element with the attribute <code>rel="canonical"</code> to the
+<code>&lt;head&gt;</code> section of the pages. In our example with the
+<code>/travel/contact.html</code> page, add
+<code>&lt;link rel="canonical" href="/travel/contact.html"/&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Learn more about using
+<a href="https://support.google.com/webmasters/answer/139066">canonical URLs</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-Excludingspecificqueryparameters"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Excludingspecificqueryparameters"></a>Excluding specific query parameters</h5>
+<div class="paragraph">
+<p>In <a href="https://analytics.google.com/analytics/web/#home">Google Analytics</a>
+you can exclude specific query parameters. However, this method cannot
+be used over several views; the parameters must be copied and pasted to
+every view. You must also know the query parameter names.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign in to your <a href="https://www.google.com/analytics/web/#home/">Analytics
+account</a>.</p>
+</li>
+<li>
+<p>Select the <strong>Admin</strong> tab and navigate to <strong>View/View Settings</strong>.</p>
+</li>
+<li>
+<p>Add any query parameters that you do not want to see as a
+comma-separated list in the <strong>Exclude URL Query Parameters</strong> box.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-14_at_15.22.42.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-14_at_15.22.42.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you do not want to merge URLs in your default view then you should
+have a separate view that strips query parameters.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596981_GoogleAnalyticsVisualizationmodule-Usingfilters"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Usingfilters"></a>Using filters</h5>
+<div class="paragraph">
+<p>You can define filters instead of excluding specific query parameters.
+The advantage of using filters is that they can be defined on an account
+level and reused in multiple views. Whole query strings can be removed
+by using regular expressions, so you do not need to know the parameter
+names.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you do not want to merge URLs in your default view then you should
+have a separate view that strips query parameters.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Sign in to your <a href="https://www.google.com/analytics/web/#home/">Analytics
+account</a>.</p>
+</li>
+<li>
+<p>Select the <strong>Admin</strong> tab and navigate to <strong>Account/All Filters</strong> for
+account level filters or <strong>Account/View/Filters</strong> for view level filters.</p>
+</li>
+<li>
+<p>Click <strong>Add Filter</strong>.</p>
+</li>
+<li>
+<p>Under <strong>Filter Type</strong>, select <strong>Custom</strong> and <strong>Search and Replace</strong>.</p>
+</li>
+<li>
+<p>In the <strong>Filter Field</strong> dropdown, select <strong>Request URI</strong>.</p>
+</li>
+<li>
+<p>Add the following regular expression in the <strong>Search String</strong> field:
+<code>\?.*</code></p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596981/Screen_Shot_2016-03-14_at_15.54.50.png" alt="images/download/attachments/196596981/Screen_Shot_2016-03-14_at_15.54.50.png"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596981_GoogleAnalyticsVisualizationmodule-Pathresolving"><a class="anchor" href="#src-196596981_GoogleAnalyticsVisualizationmodule-Pathresolving"></a>Path resolving</h3>
+<div class="paragraph">
+<p>There are two implementations for path resolving of the
+<code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsPathResolver</code>
+interface. The default value
+<code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSimplePathResolver</code>
+resolves the path from node path by adding or removing a prefix defined
+via <code>prefixToRemove</code> and <code>prefixToAdd</code> properties. If not defined, the
+node path is used.</p>
+</div>
+<div class="paragraph">
+<p>The value can optionally be set to
+<code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSiteAwarePathResolver</code>
+if the path is to be resolved from site definition or
+URI2RepositoryMapping mechanism:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">google-analytics-visualization</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pathResolver</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSiteAwarePathResolver</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 84%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default</em> is
+<code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSimplePathResolver</code></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSiteAwarePathResolver</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prefixToAdd</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default</em> is EMPTY</p>
+</div>
+<div class="paragraph">
+<p>a <code>string</code> value to be used by
+<code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSimplePathResolver</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>prefixToRemove</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default</em> is EMPTY</p>
+</div>
+<div class="paragraph">
+<p>a <code>string</code> value to be used by
+<code>info.magnolia.ga.visualization.pathresolver.GoogleAnalyticsSimplePathResolver</code></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Form module</p>
+</div>
+<div class="paragraph">
+<p>Groovy module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

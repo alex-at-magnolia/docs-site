@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Internationalization - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Internationalization.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Internationalization.html">Internationalization - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Internationalization - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Language.html">Language</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595797"><a class="anchor" href="#src-196595797"></a>Internationalization</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page explains the internationalization concept as applied in
+Magnolia. The first part of the page provides the internationalization
+basics, the second part mentions some more advanced points.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595797_Internationalization-Internationalizationvslocalization"><a class="anchor" href="#src-196595797_Internationalization-Internationalizationvslocalization"></a>Internationalization vs localization</h3>
+<div class="paragraph">
+<p>Internationalization and localization, usually abbreviated as <strong>i18n</strong> and
+<strong>l10n</strong> respectively, are ways to adapt Magnolia to different languages
+and regional differences.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Internationalization involves designing a system in which it is easy
+to accommodate new languages without programming.</p>
+</li>
+<li>
+<p>Localization adapts Magnolia to a particular region or language by
+adding locale-specific configuration.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>i18n vs l10n</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Magnolia primarily provides technical means for internationalization and
+it is mainly these aspects that the text below and other parts of the
+Language section deal with. For more information regarding l10n and the
+differences between i18n and l10n, see for example
+<a href="https://www.w3.org/International/questions/qa-i18n">W3C&#8217;s page</a>.</p>
+</div>
+<div class="paragraph">
+<p>The running system assigns a
+<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Locale.html"><code>java.util.Locale</code></a>
+depending on the user settings or browser information. While rendering a
+page, a dialog, an app or any other part or the user interface, the i18n
+system evaluates the proper translation for a text by the current
+<code>Locale</code>. It may happen that the i18n system cannot find a translation
+for the given locale - in this case the translation of the default
+language is applied.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595797_Internationalization-ThebasicsofInternationalizationwithmessagebundles"><a class="anchor" href="#src-196595797_Internationalization-ThebasicsofInternationalizationwithmessagebundles"></a>The basics of Internationalization with message bundles</h3>
+<div class="paragraph">
+<p>All <a href="Types-of-translatable-text.html">types of translatable text</a>
+(besides editorial content stored in JCR) are internationalized with
+message bundles. With message bundles a translator can work with a plain
+text file and doesn&#8217;t need to touch the code. To do this, you need
+<strong>message bundles</strong> which contain <strong>message keys</strong>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595797_Internationalization-i18nmessagebundle"><a class="anchor" href="#src-196595797_Internationalization-i18nmessagebundle"></a>i18n message bundle</h4>
+<div class="paragraph">
+<p>A message bundle
+(<a href="http://docs.oracle.com/javase/tutorial/i18n/resbundle/concept.html">resource
+bundle</a> in Java) is a collection of <code>.properties</code> files. Each file
+contains key-value pairs of translated user interface text such as
+labels and messages. The keys in all files of the same bundle are
+identical but the values are language specific translations.</p>
+</div>
+<div class="paragraph">
+<p>A message bundle must contain at least one <code>.properties</code> file. The files
+are named after the language (locale):
+<code>&lt;bundle-name&gt;_&lt;locale&gt;.properties</code>, for example
+<code>app-pages-messages_en.properties</code>. Every Magnolia module should provide
+its own message bundle. If a module installs several apps, each app
+should have its own message bundle.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-Locationofmessagebundles"><a class="anchor" href="#src-196595797_Internationalization-Locationofmessagebundles"></a>Location of message bundles</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Location</th>
+<th class="tableblock halign-left valign-top">In Magnolia Maven module</th>
+<th class="tableblock halign-left valign-top">In Magnolia light module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preferred</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/main/resources/&lt;module-name&gt;/i18n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;magnolia.resources.dir&gt;/&lt;module-name&gt;/i18n</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deprecated*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>src/main/resources/mgnl-i18n</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Message bundles stored in these directories will be loaded automatically
+during module startup.</p>
+</div>
+<div class="paragraph">
+<p>*)
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you have modules with message bundles located within the deprecated
+folder, make sure that the bundles' file names are unique!</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-Messagebundlefilename"><a class="anchor" href="#src-196595797_Internationalization-Messagebundlefilename"></a>Message bundle file name</h5>
+<div class="paragraph">
+<p>Magnolia will find your message bundle files as long as they are in the
+<code>i18n</code> folder (or in the deprecated folder). Message bundle file names
+must have the following form:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;bundle-name&gt;_&lt;locale&gt;.properties</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;locale&gt;</code> part of the filename, defining the i18n language used in
+the <code>.properties</code> file, must conform with the
+<a href="http://www.localeplanet.com/java/">Java locale notation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Bundle name is arbitrary. However, it is a good practice to use one of
+the following patterns:</p>
+</div>
+<div class="paragraph">
+<p><code>app-&lt;app-name&gt;-messages_&lt;locale&gt;.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;module-name&gt;-messages_&lt;locale&gt;.properties</code></p>
+</div>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>Create separate message bundles for user interface labels and template
+labels. Don&#8217;t store these two groups of text in the same properties
+files or message bundles. They are aimed at different audiences and have
+different localization requirements.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Message files in the Travel Demo</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>module-travel-demo-backend_en.properties</code> (user interface labels)</p>
+</li>
+<li>
+<p><code>module-travel-demo-frontend_en.properties</code> (template labels)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595797_Internationalization-i18nmessagekeys"><a class="anchor" href="#src-196595797_Internationalization-i18nmessagekeys"></a>i18n message keys</h4>
+<div class="paragraph">
+<p>Each <code>.properties</code> file usually contains one or more key-value pairs
+that provide the translations for labels, descriptions and other
+elements:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;key&gt;=&lt;translated value&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+In Magnolia documentation we often use the term <em>key</em> to mean a
+key-value pair.</p>
+</div>
+<div class="paragraph">
+<p>The keys may be module- and/or (sub)app-specific in which case the
+module name and/or the (sub)app name forms a part of the key, e.g.</p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.root.label=Products</code></p>
+</div>
+<div class="paragraph">
+<p>This key will assign the word "Products" to the label for the root
+section of the actionbar of the Browser subapp in the Products app.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>For standard Magnolia components, such as dialogs, forms, fields etc.,
+Magnolia i18n API generates keys automatically. You will only have to
+define keys for the so called
+<a href="Types-of-translatable-text.html#src-196595789_Typesoftranslatabletext-Templatelabels">template
+labels</a> and for texts within custom java classes.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-ReferencingkeysontheUI"><a class="anchor" href="#src-196595797_Internationalization-ReferencingkeysontheUI"></a>Referencing keys on the UI</h5>
+<div class="paragraph">
+<p>Once you have defined the keys in the message bundle, the keys can be
+referenced in the UI. If applied correctly, the UI will render the
+values of the referenced keys in the language of the current locale
+settings.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/i18n_concept_v8.png" alt="images/download/attachments/196595797/i18n_concept_v8.png"></span></p>
+</div>
+<div class="paragraph">
+<p>*) Magnolia references i18n keys in templates, dialogs, apps, forms,
+fields, messages, etc..</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595797_Internationalization-UnicodeandUTF-8encoding"><a class="anchor" href="#src-196595797_Internationalization-UnicodeandUTF-8encoding"></a>Unicode and UTF-8 encoding</h4>
+<div class="paragraph">
+<p><a href="http://en.wikipedia.org/wiki/UTF-8">UTF-8</a> is the dominant character
+encoding for the World Wide Web. Magnolia supports UTF-8 character
+encoding for Unicode. UTF-8 can represent any character in the Unicode
+standard and is backwards compatible with ASCII.</p>
+</div>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>Magnolia requires everyone to use UTF-8 character encoding in
+<code>.properties</code> files.</p>
+</div>
+<div class="paragraph">
+<p>The Java Content Repository (JCR) will store values in whatever format
+you provide. Magnolia always ensures that all values are UTF-8 encoded.
+Java classes read <code>.properties</code> files of message bundles from the file
+system. Depending on the implementation of these stream reading classes,
+Java allows you to set the encoding in which the files are read.<br>
+Magnolia&#8217;s i18n framework assumes that files in message bundles are
+UTF-8 encoded (see DefaultMessageBundlesLoader , DefaultMessagesImpl ).</p>
+</div>
+<div class="paragraph">
+<p>If you open some older properties files in some of the Magnolia modules
+you will find keys like this:</p>
+</div>
+<div class="paragraph">
+<p><code>link.readon = P\u0159e\u010d\u00edst</code></p>
+</div>
+<div class="paragraph">
+<p>This file contains Unicode entities or
+<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Character.html">Java
+Unicode Character Representations</a>. When you use Unicode entities to
+encode special characters, it doesn&#8217;t matter what encoding your file is
+stored in or read by the Java class.</p>
+</div>
+<div class="paragraph">
+<p>However, the above is a legacy practice that is no longer necessary. You
+don&#8217;t have to use Unicode entities, just make sure your properties files
+are UTF-8 encoded. The above snippet from the bundle with basename
+<code>info.magnolia.module.templatingkit.messages</code> can be written like this:</p>
+</div>
+<div class="paragraph">
+<p><code>link.readon = Přečíst</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595797_Internationalization-Moreadvancedpoints"><a class="anchor" href="#src-196595797_Internationalization-Moreadvancedpoints"></a>More advanced points</h3>
+<div class="sect3">
+<h4 id="src-196595797_Internationalization-Findingthefullnameofakey"><a class="anchor" href="#src-196595797_Internationalization-Findingthefullnameofakey"></a>Finding the full name of a key</h4>
+<div class="paragraph">
+<p>Magnolia generates keys for all dialog text automatically. If a
+translation for a key is not found in the existing <code>.properties</code>
+file(s), Magnolia will use the key itself in place of the translation.
+The full name of a key can be obtained in several ways.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-Usethebrowserinspector"><a class="anchor" href="#src-196595797_Internationalization-Usethebrowserinspector"></a>Use the browser inspector</h5>
+<div class="paragraph">
+<p>In the following scenario, a new dialog containing a text input form is
+added to the Contact Page of the Travel Demo module. After creating the
+dialogue, it may look like this in the browser:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/stock_key_cropped.png" alt="images/download/attachments/196595797/stock_key_cropped.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Two labels in this dialog are provided with correct i18n texts: the
+<strong>Cancel</strong> and the <strong>Save Changes</strong> buttons. These translations are reused
+from message bundles of modules that already exist in the Magnolia
+framework.<br>
+The other two labels in the dialog have been replaced by the keys
+themselves and because the names of the keys are too long, the UI
+displays only their parts. The full names can be obtained via the
+<em>inspector function</em> of your web browser. To inspect a label, e.g. the
+one shortened just to <code>travel-demo.compon&#8230;&#8203;</code>, place the mouse cursor on
+the element, right-click and select "Inspect element". This works the
+same way in most web browsers. The following screenshots are from
+Firefox:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/inspector_menu.png" alt="images/download/attachments/196595797/inspector_menu.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Upon selecting the Inspect Element option, the full key together with
+its translation (here actually the key name itself) will be revealed in
+the code window of your browser:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/inspecting_labels2.png" alt="images/download/attachments/196595797/inspecting_labels2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The page code reveals that the name of this key is</p>
+</div>
+<div class="paragraph">
+<p><code>travel-demo.components.txtField.TextFieldDialog.TextField.label</code></p>
+</div>
+<div class="paragraph">
+<p>which itself has been used as the label (viz the red frame) for the
+dialog element. To assign to the label the translation text "Enter Your
+Text", add the following line to the English <code>.properties</code> files of the
+Travel Demo module:</p>
+</div>
+<div class="paragraph">
+<p><code>travel-demo.components.txtField.TextFieldDialog.TextField.label=Enter Your Text</code></p>
+</div>
+<div class="paragraph">
+<p>Deploy the file and start the server. The dialog will now look like
+this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/modded2.png" alt="images/download/attachments/196595797/modded2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The translation "Enter Your Text" appears as a label attached to the
+input text field. Inspecting the element again, the change will also be
+reflected in the code of the page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/enteryourtext_framed.png" alt="images/download/attachments/196595797/enteryourtext_framed.png"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-Usethelog"><a class="anchor" href="#src-196595797_Internationalization-Usethelog"></a>Use the log</h5>
+<div class="paragraph">
+<p>The full names of translation keys can also be obtained by logging the
+<code>info.magnolia.i18nsystem.TranslationServiceImpl</code> class while using an
+app. This class prints keys into the <code>catalina.out</code> log file as Magnolia
+looks for them in bundles.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the Log Levels app of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Log+Tools+module">Log Tools
+module</a>, set the logging level for <code>TranslationServiceImpl</code> to DEBUG.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595797/TranslationServiceImpl_class_crop.png" alt="images/download/attachments/196595797/TranslationServiceImpl_class_crop.png"></span></p>
+</div>
+</li>
+<li>
+<p>Use your app. Open all subapps and dialogs.</p>
+</li>
+<li>
+<p>In the log, look for messages starting with "Looking up in global i18n
+message bundle with key&#8230;&#8203;"</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>catalina.out raw output</p>
+</div>
+<div class="paragraph">
+<p><code>2014-04-04 13:10:45,604 DEBUG info.magnolia.i18nsystem.TranslationServiceImpl : Looking up <code>in</code> global i18n message bundle with key <a id="sample.app.label"></a> and Locale [de]</code></p>
+</div>
+<div class="paragraph">
+<p><code>2014-04-04 13:10:45,605 DEBUG info.magnolia.i18nsystem.TranslationServiceImpl : Looking up <code>in</code> global i18n message bundle with key <a id="sample.app.icon"></a> and Locale [de]</code></p>
+</div>
+<div class="paragraph">
+<p><code>2014-04-04 13:10:45,605 DEBUG info.magnolia.i18nsystem.TranslationServiceImpl : Looking up <code>in</code> global i18n message bundle with key <a id="app-launcher.dev.label"></a> and Locale [de]</code></p>
+</div>
+<div class="paragraph">
+<p><code>2014-04-04 13:10:45,605 DEBUG info.magnolia.i18nsystem.TranslationServiceImpl : Looking up <code>in</code> global i18n message bundle with key <a id="products.app.icon"></a> and Locale [de]</code></p>
+</div>
+<div class="paragraph">
+<p><code>2014-04-04 13:10:45,612 DEBUG info.magnolia.i18nsystem.TranslationServiceImpl : Looking up <code>in</code> global i18n message bundle with key <a id="pages.app.label"></a> and Locale [de]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>The raw log output can be confusing since it also contains keys from
+other Magnolia apps. Parse the log to find keys that are relevant to
+your app only. Here&#8217;s an example command you can run in an OS X
+Terminal:</p>
+</div>
+<div class="paragraph">
+<p><code>cat catalina.out | egrep -o <code>"products(\.\w+)+"</code> | sort --unique</code></p>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cat catalina.out</code> prints the contents of the log file to the console</p>
+</li>
+<li>
+<p><code>egrep -o "products(\.\w+)+"</code> matches message keys that start with
+your app name. Replace <code>products</code> with your app name.</p>
+</li>
+<li>
+<p><code>sort –unique</code> ignores duplicate entries</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>catalina.out parsed output</p>
+</div>
+<div class="paragraph">
+<p><code>products.app</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.app.icon</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.app.label</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.folder</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.folder.label</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.product</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.product.label</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+From Magnolia 6.2.1, if no translation key is found, <code>handleUnknownKey</code>
+is used as the default fallback method.</p>
+</div>
+<div class="paragraph">
+<p>info.magnolia.i18nsystem.TranslationServiceImpl</p>
+</div>
+<div class="paragraph">
+<p>`  <code>private</code> String translate(Locale locale, String basename, String[] keys, String fallback) {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>if</code> (locale == <code>null</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>throw</code> <code>new</code> IllegalArgumentException(<code>"Locale can&#8217;t be null"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`      }`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>if</code> (keys == <code>null</code> || keys.length &lt; <code>1</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>throw</code> <code>new</code> IllegalArgumentException(<code>"Keys can&#8217;t be null or empty"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`      }`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>if</code> (basename != <code>null</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`          log.debug(<code>"Got an explicit basename ({}) for keys {}"</code>, basename, Arrays.asList(keys));`</p>
+</div>
+<div class="paragraph">
+<p>`      }`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>final</code> String message = lookUpKeyUntilFound(keys, locale, basename);`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>if</code> (message != <code>null</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>return</code> message;`</p>
+</div>
+<div class="paragraph">
+<p>`      } <code>else</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>return</code> I18nText.NO_FALLBACK.equals(fallback) ? handleUnknownKey(locale, basename, keys) : fallback;`</p>
+</div>
+<div class="paragraph">
+<p>`      }`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595797_Internationalization-Usingthetranslationservice"><a class="anchor" href="#src-196595797_Internationalization-Usingthetranslationservice"></a>Using the translation service</h4>
+<div class="paragraph">
+<p>When you create UI elements in code, use the SimpleTranslator
+translation service. In a simple content app, you likely won&#8217;t need to
+create UI elements in code since most can be configured. But if you do a
+custom app or anything more complex, this is how to use the service.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-Javacode"><a class="anchor" href="#src-196595797_Internationalization-Javacode"></a>Java code</h5>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Do NOT instantiate <code>SimpleTranslator</code> but inject it in the constructor.</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.i18nsystem.SimpleTranslator;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> com.vaadin.ui.Button;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.inject.Inject;`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MyClass {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> SimpleTranslator i18n;`</p>
+</div>
+<div class="paragraph">
+<p>`  `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyClass(SimpleTranslator i18n){`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.i18n = i18n;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> someMethod(){`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>`// more code here &#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>`        Button sendMessageButton = <code>new</code> Button(i18n.translate(<code>"messages-app.app.button.sendMessage"</code>));`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>`// more code here &#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Then pass the key in the <code>#translate(String key).</code></p>
+</div>
+<div class="paragraph">
+<p>The key <code>messages-app.app.button.sendMessage</code> must be in a message file
+with a value:</p>
+</div>
+<div class="paragraph">
+<p>myapp-messages_en.properties</p>
+</div>
+<div class="paragraph">
+<p><code>messages-app.app.button.sendMessage=Send message</code></p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Translatable fields in a component:
+<a href="http://git.magnolia-cms.com/gitweb/?p=modules/contacts-app.git;a=blob;f=src/main/java/info/magnolia/contacts/app/field/component/ContactPreviewComponent.java">ContactPreviewComponent</a></p>
+</li>
+<li>
+<p>Translatable error message:
+<a href="http://git.magnolia-cms.com/gitweb/?p=modules/dam.git;a=blob;f=magnolia-dam-app/src/main/java/info/magnolia/dam/app/assets/action/DirectUploadAction.java">DirectUploadAction</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196595797_Internationalization-Templatescript"><a class="anchor" href="#src-196595797_Internationalization-Templatescript"></a>Template script</h5>
+<div class="paragraph">
+<p>Similar to Java code, you can use the translation service in a template
+script.</p>
+</div>
+<div class="paragraph">
+<p>Freemarker</p>
+</div>
+<div class="paragraph">
+<p><code>${i18n[<code>'link.readon'</code>]}</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595797_safe-id-SW50ZXJuYXRpb25hbGl6YXRpb24tRXhhbXBsZTppMThub2Z0aGVUdXRvcmlhbG1vZHVsZQ"><a class="anchor" href="#src-196595797_safe-id-SW50ZXJuYXRpb25hbGl6YXRpb24tRXhhbXBsZTppMThub2Z0aGVUdXRvcmlhbG1vZHVsZQ"></a>Example: i18n of the Tutorial module</h3>
+<div class="paragraph">
+<p>This example shows a selection of English messages from the
+<code>app-products-messages_en.properties</code> message file in the Products app
+of the Tutorial module:</p>
+</div>
+<div class="paragraph">
+<p>app-products-messages_en.properties</p>
+</div>
+<div class="paragraph">
+<p><code># App name and icon</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.app.label=Products</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.app.icon=icon-items</code></p>
+</div>
+<div class="paragraph">
+<p><code># Action bar sections</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.root.label=Products</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.folder.label=Folder</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.product.label=Product</code></p>
+</div>
+<div class="paragraph">
+<p><code>products.browser.actionbar.sections.preview.label=Preview</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p>The Products app has message files for English and for Spanish:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Locale</th>
+<th class="tableblock halign-left valign-top">Message files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">English</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>app-contacts-messages_en.properties</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spanish</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>app-contacts-messages_es.properties</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>These files together build a message bundle which is stored in the
+<code>i18n</code> directory within the module path:</p>
+</div>
+<div class="paragraph">
+<p><code>src</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── main</code></p>
+</div>
+<div class="paragraph">
+<p>`    └── resources`</p>
+</div>
+<div class="paragraph">
+<p>`        └── app-tutorial`</p>
+</div>
+<div class="paragraph">
+<p>`            ├── apps`</p>
+</div>
+<div class="paragraph">
+<p>`            │   └── products.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`            └── i18n`</p>
+</div>
+<div class="paragraph">
+<p>`                ├── app-products-messages_en.properties`</p>
+</div>
+<div class="paragraph">
+<p>`                └── app-products-messages_es.properties`</p>
+</div>
+<div class="paragraph">
+<p>Types of translatable text</p>
+</div>
+<div class="paragraph">
+<p>Making a module translatable</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

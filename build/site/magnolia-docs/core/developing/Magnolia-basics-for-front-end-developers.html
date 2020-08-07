@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Magnolia basics for front-end developers - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/Magnolia-basics-for-front-end-developers.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Documentation</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Magnolia-basics-for-front-end-developers.html">Magnolia basics for front-end developers - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Magnolia basics for front-end developers - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Magnolia-front-end-development.html">Magnolia front-end
+development</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596196"><a class="anchor" href="#src-196596196"></a>Magnolia basics for front-end developers</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page provides a high level overview of the key concepts you need to
+understand when creating file-based light modules and working with
+templates and resources in Magnolia.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596196_Magnoliabasicsforfront-enddevelopers-UnderstandingmodulesinMagnolia"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-UnderstandingmodulesinMagnolia"></a>Understanding modules in Magnolia</h3>
+<div class="paragraph">
+<p>Magnolia has a modular architecture in which modules act as containers
+for your templates and resource files.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Lightmodules"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Lightmodules"></a>Light modules</h4>
+<div class="paragraph">
+<p>Magnolia introduced the concept of <em>light modules</em> as part of the
+<a href="Light-development-in-Magnolia.html">light development</a> approach to
+enable front-end developers to create Magnolia projects.</p>
+</div>
+<div class="paragraph">
+<p>A light module is a directory on the file system that contains YAML
+definition files, FreeMarker template scripts and other resource files
+of any type. The file system approach allows you to get up to speed fast
+in Magnolia using familiar tools, text editors, IDEs and build
+processes.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia picks up any changes to the files right away without a restart.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_safe-id-TWFnbm9saWFiYXNpY3Nmb3Jmcm9udC1lbmRkZXZlbG9wZXJzLVdoYXRhYm91dEphdmE_"><a class="anchor" href="#src-196596196_safe-id-TWFnbm9saWFiYXNpY3Nmb3Jmcm9udC1lbmRkZXZlbG9wZXJzLVdoYXRhYm91dEphdmE_"></a>What about Java?</h4>
+<div class="paragraph">
+<p>You don&#8217;t need Java development skills, an SDK or Java IDE to create a
+functioning Magnolia light module. The light module approach complements
+traditional Java development: a project can be built with Maven modules,
+light modules or both. Additionally, because the structure of light
+modules dovetails perfectly with Maven modules, a light module can
+easily be transformed into a Maven module by copying its contents into
+the Maven module.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Modulestructure"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Modulestructure"></a>Module structure</h4>
+<div class="paragraph">
+<p>What makes a Magnolia module are files specific to Magnolia in a
+particular folder structure as shown here:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;module-name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── apps/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs/</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── myDialog.yaml</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── resources/</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── templates/</code></p>
+</div>
+<div class="paragraph">
+<p>`     ├── components/`</p>
+</div>
+<div class="paragraph">
+<p>`     └── pages/`</p>
+</div>
+<div class="paragraph">
+<p>`         └── my-template/`</p>
+</div>
+<div class="paragraph">
+<p>`             ├── myTemplate.yaml`</p>
+</div>
+<div class="paragraph">
+<p>`             └── myTemplate.ftl`</p>
+</div>
+<div class="paragraph">
+<p><code>├── themes/</code></p>
+</div>
+<div class="paragraph">
+<p>You can use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+CLI">Magnolia CLI</a>
+to quickly create all the folders and files in the right location.</p>
+</div>
+<div class="paragraph">
+<p>Advanced topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Modules">Modules in depth</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+structure">Module
+structure</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+descriptor">Module
+descriptor</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596196_Magnoliabasicsforfront-enddevelopers-TemplatinginMagnolia"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-TemplatinginMagnolia"></a>Templating in Magnolia</h3>
+<div class="paragraph">
+<p>Templates are blueprints for creating pages, areas and components. For
+example, when you create a page in the Pages app, you must select a
+template for the page to be based on. The content that editors provide
+using dialogs is merged into the template.</p>
+</div>
+<div class="paragraph">
+<p>A template consists of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A template definition - to give the template a name and make it
+available to the system. The template definition specifies at least a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">script</a>
+and a <a href="https://wiki.magnolia-cms.com/display/DOCS62/Renderers">renderer</a>.
+Magnolia includes a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Renderers">FreeMarker
+renderer</a> that is used by default if no other is specified.</p>
+</li>
+<li>
+<p>A template script - to define the output, typically HTML.</p>
+</li>
+<li>
+<p>Optionally, a dialog definition - to define a dialog for content
+entry.</p>
+</li>
+<li>
+<p>Optionally, a model - the model can be a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Model">JavaBean</a>
+implementing complex logic or a JavaScript model.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596196/mgnl-basic-templating-files.png" alt="images/download/attachments/196596196/mgnl-basic-templating-files.png"></span></p>
+</div>
+<div class="paragraph">
+<p>In Magnolia light development, you
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+configuration">configure
+definitions in YAML files</a> and scripts in a templating language such as
+<a href="http://freemarker.org/">FreeMarker</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Templatingstructure"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Templatingstructure"></a>Templating structure</h4>
+<div class="paragraph">
+<p>Templating is organized with pages, areas and components.</p>
+</div>
+<div class="paragraph">
+<p>A page template outputs an entire web page. A page template typically
+includes some markup for the header and footer and contains one or more
+areas. An area is a region of a template where components can be added
+by an author. A component can provide any type of content, and is the
+smallest unit that authors can manage.</p>
+</div>
+<div class="paragraph">
+<p>As a developer, you provide the page and component templates, and
+specify which components are available in which areas.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596196/mgnl-basic-areas-components.png" alt="images/download/attachments/196596196/mgnl-basic-areas-components.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596196/6-x-magnoliaBasics-templatingStructure-rbox-v3.png" alt="images/download/attachments/196596196/6-x-magnoliaBasics-templatingStructure-rbox-v3.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Templatingdefinitions"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Templatingdefinitions"></a>Templating definitions</h4>
+<div class="sect4">
+<h5 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Pagetemplates"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Pagetemplates"></a>Page templates</h5>
+<div class="paragraph">
+<p>A page template definition describes the appearance of an entire page.
+When an author creates a page in Magnolia, they select one of the page
+templates you have defined.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596196/6-1-magnoliaBasics-pageTemplates.png" alt="images/download/attachments/196596196/6-1-magnoliaBasics-pageTemplates.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The page template definition contains an areas section which lists the
+areas on the page. For each area, you specify the components that will
+be available in a simple list.</p>
+</div>
+<div class="paragraph">
+<p>More information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Page+definition">Page
+definitions</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Componenttemplates"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Componenttemplates"></a>Component templates</h5>
+<div class="paragraph">
+<p>A component is the smallest block of content that editors can edit,
+delete, copy and move as a single unit on the page. At its simplest, a
+component may be just text. However, a component can contain anything: a
+related image, a teaser to another page, or a social media feed from a
+third party web service.</p>
+</div>
+<div class="paragraph">
+<p>A component can also specify areas - enabling an author to add a
+component within a component.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596196/6-1-magnoliaBasics-componentTemplate.png" alt="images/download/attachments/196596196/6-1-magnoliaBasics-componentTemplate.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Components render content entered by editors in dialogs.</p>
+</div>
+<div class="paragraph">
+<p>More information:
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+definition">Component
+definitions</a></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Templatescripts"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Templatescripts"></a>Template scripts</h4>
+<div class="paragraph">
+<p>A template script defines the output, typically HTML, and is interpreted
+by a Renderer . The script is written in a templating language such as
+FreeMarker.</p>
+</div>
+<div class="paragraph">
+<p>A template script is a mixture of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Static markup (HTML).</p>
+</li>
+<li>
+<p>Dynamically assigned values provided by
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating+functions">Templating
+functions</a> and other convenience helpers.</p>
+</li>
+<li>
+<p>Content references.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More information:
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">Template
+scripts</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Dialogs"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Dialogs"></a>Dialogs</h4>
+<div class="paragraph">
+<p>Dialogs enable editors to enter content. Editors type content into
+fields and the dialog saves the content entered in the repository.</p>
+</div>
+<div class="paragraph">
+<p>The functionality of each input field in a dialog is provided by a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition">field
+definition class</a> that allows the editor to perform a task such as enter
+text, upload an image, select a date etc. Template definitions reference
+dialog definitions - this is how Magnolia knows which dialog to
+associate with the template.</p>
+</div>
+<div class="paragraph">
+<p>Pages, area and component templates can all use dialogs. In fact, all
+dialogs used throughout Magnolia are configured in the same way. For
+example, the configuration of dialogs used in apps and components is the
+same.</p>
+</div>
+<div class="paragraph">
+<p>More information:
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">Dialog
+definitions</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Resources"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Resources"></a>Resources</h3>
+<div class="paragraph">
+<p>In Magnolia, the term <em>resource</em> is used for all the files in a light
+module, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Web resources - Such as JS, CSS, and images.</p>
+</li>
+<li>
+<p>Definition files - YAML-based template definitions and dialogs.</p>
+</li>
+<li>
+<p>Template scripts - Such as FreeMarker</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In light development, modules use the file system to provide resources
+to Magnolia. You can edit files directly from the file system with any
+tool.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The file system is one of three locations Magnolia scans for resources.
+You can read more about resource origins and loading order in
+<a href="Resources.html">Resources</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596196_Magnoliabasicsforfront-enddevelopers-Referencingwebresources"><a class="anchor" href="#src-196596196_Magnoliabasicsforfront-enddevelopers-Referencingwebresources"></a>Referencing web resources</h4>
+<div class="paragraph">
+<p>Use the /.resources path to reference Web resources such as CSS and
+JavaScript files.</p>
+</div>
+<div class="paragraph">
+<p>For example, to reference the CSS file
+<code>&lt;magnolia.resources.dir&gt;/my-module/css/style.css</code> in a FreeMarker
+script, you would use:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;link rel=<code>"stylesheet"</code> href=<code>"${ctx.contextPath}/.resources/my-module/css/style.css"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>More information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/resfn">resfn</a> - With resfn
+you can automatically include all web resources in your module.</p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">Themes</a> - With
+themes you can specify a collection of web resources to be included.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596196_safe-id-TWFnbm9saWFiYXNpY3Nmb3Jmcm9udC1lbmRkZXZlbG9wZXJzLVdoYXRub3c_"><a class="anchor" href="#src-196596196_safe-id-TWFnbm9saWFiYXNpY3Nmb3Jmcm9udC1lbmRkZXZlbG9wZXJzLVdoYXRub3c_"></a>What now?</h3>
+<div class="paragraph">
+<p>Get started by <a href="Install-Magnolia.html">installing Magnolia</a> and
+following <a href="Hello-Magnolia-for-front-end-developers.html">a simple
+tutorial</a>.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia front-end development</p>
+</div>
+<div class="paragraph">
+<p>Install Magnolia</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
