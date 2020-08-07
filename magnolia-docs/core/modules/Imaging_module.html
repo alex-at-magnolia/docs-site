@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Imaging module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Imaging_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Imaging_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Imaging_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Imaging_module.html">Imaging module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Imaging module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597011"><a class="anchor" href="#src-196597011"></a>Imaging module</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>The Imaging module simplifies working with images. You don&#8217;t need to
+resize and crop each image by hand as the imaging engine generate
+variations on-the-fly. Administrators create the rules that determine
+the sizes of derivatives. Editors save time as they can select an image
+from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">DAM</a>
+or upload one, and it will be automatically adapted to match the rule.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Please note that the artifact&#8217;s IDs (Maven <code>groupId</code> and <code>artifactId</code>)
+have changed since Magnolia 5.5.</p>
+</div>
+<div class="paragraph">
+<p>If you have custom Java code relying on this module, you need to install
+a compatibility module too.</p>
+</div>
+<div class="paragraph">
+<p>To be sure - please check the module on our
+<a href="https://git.magnolia-cms.com/projects/MODULES/repos/imaging/browse">Bitbucket</a>
+server.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLIMG">MGNLIMG</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/modules/magnolia-imaging/">Imaging</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+images+using+imgfn">How
+to work with images using imgfn</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+images+using+damfn">How
+to work with images using damfn</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Installing"><a class="anchor" href="#src-196597011_Imagingmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Note the changes in <code>groupId</code> and <code>artifactId</code> since the 3.4 release.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.imaging&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-imaging&lt;/artifactId&gt;
+  &lt;version&gt;3.4.3&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Compatibilitymodule"><a class="anchor" href="#src-196597011_Imagingmodule-Compatibilitymodule"></a>Compatibility module</h4>
+<div class="paragraph">
+<p>With Magnolia 5.6 we&#8217;ve begun removing the old Content API from our
+modules. If you have custom code relying on classes from the old imaging
+module then you must do one of two things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update your code for the
+<a href="https://jira.magnolia-cms.com/browse/MGNLIMG-200">new version of the
+imaging module</a>.</p>
+</li>
+<li>
+<p>Or you can use the <code>magnolia-imaging-compatibility</code> module together
+with the <code>magnolia-core-compatibility</code> module.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here to expand to see how to add the compatibility module</p>
+</div>
+<div class="paragraph">
+<p>Add the following snippet to you pom file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.imaging&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-imaging-compatibility&lt;/artifactId&gt;
+  &lt;version&gt;3.4.3&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Imagerequestprocessing"><a class="anchor" href="#src-196597011_Imagingmodule-Imagerequestprocessing"></a>Image request processing</h3>
+<div class="paragraph">
+<p>The diagram shows the elements of the Imaging module and how they
+interrelate (credit: <a href="#src-196597011_Imagingmodule-ref2">Richard
+Unger</a>).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ImagingServlet is responsible for the actual generation of the images.</p>
+</li>
+<li>
+<p>ImageGenerator interface is the entry point for generating images .</p>
+</li>
+<li>
+<p>ImageOperationChain implements <code>ImageGenerator</code> and executes an
+<a href="#src-196597011_Imagingmodule-Imageoperationchains">operation chain</a>
+.</p>
+</li>
+<li>
+<p>Various implementations of ParameterProviderFactory interface are
+responsible for instantiating
+<a href="#src-196597011_Imagingmodule-Parameterproviderfactory">parameter
+providers</a> for a given environment.</p>
+</li>
+<li>
+<p>Implementations of ImageStreamer interface are responsible for pushing
+the generated image, with the given generator and parameters, to an
+output stream.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597011/image-request-processing.png" alt="images/download/attachments/196597011/image-request-processing.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Imagingservlet"><a class="anchor" href="#src-196597011_Imagingmodule-Imagingservlet"></a>Imaging servlet</h3>
+<div class="paragraph">
+<p>ImagingServletis registered in the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">servlet filter
+chain</a> in <code>/server/filters/servlets/ImagingServlet</code>. The servlet is
+responsible for
+<a href="#src-196597011_Imagingmodule-Imagerequestprocessing">generating
+images</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">context</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servlets</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">log4j</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagingServlet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-.imaging--</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.imaging/*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.filters.ServletDispatchingFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Imaging Servlet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servletClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.ImagingServlet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">servletName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagingServlet</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Imagegenerators"><a class="anchor" href="#src-196597011_Imagingmodule-Imagegenerators"></a>Image generators</h3>
+<div class="paragraph">
+<p>ImageGenerator is a component that generates variants from a source
+image based on configuration. Generators are used by
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Image+provider+definition+-+5+UI">image
+provider</a> classes to render images in the UI and on pages.</p>
+</div>
+<div class="paragraph">
+<p>Generators are configured in <code>/modules/imaging/config/generators</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Generator configurations:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">generators</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">large</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.ImageOperationChain</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">portrait</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">thumbnail</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mte</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.ThemeAwareImageGenerator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>generators</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Generators configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;generator name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the image generator.</p>
+</div>
+<div class="paragraph">
+<p><code>large</code>, <code>portrait</code> and <code>thumbnail</code> are used in the UI to generate
+images in apps. <code>mte</code> generates
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">image variations</a> in
+a <a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">theme</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The image generator class:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DefaultImageGenerator: Default image generator with provided
+<code>OutputFormat</code> and <code>ImageOperation</code> defaults.</p>
+</li>
+<li>
+<p>ImageOperationChain: Image generator that delegates to a list of
+<code>ImageOperation</code> instances. This is the most commonly used generator
+class. It executes an
+<a href="#src-196597011_Imagingmodule-Imageoperationchains">operation chain</a>
+and is used by <code>large</code>, <code>portrait</code> and <code>thumbnail</code> generators.</p>
+</li>
+<li>
+<p>ThemeAwareImageGenerator: Theme-aware generator that handles image
+variations in a theme. Extends <code>ImageOperationChain</code>.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>outputFormat</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196597011_Imagingmodule-Outputformat">Output format</a>
+configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>parameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>See the
+<a href="#src-196597011_Imagingmodule-Parameterproviderfactory">Parameter
+provider factory</a> class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>operations</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>*for image operation chains</em></p>
+</div>
+<div class="paragraph">
+<p>See the <a href="#src-196597011_Imagingmodule-Imageoperationchains">Image
+operation chains</a> configuration.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Outputformat"><a class="anchor" href="#src-196597011_Imagingmodule-Outputformat"></a>Output format</h4>
+<div class="paragraph">
+<p>The output format is the format or file type the generator produces,
+such as JPEG or PNG. Supported formats are <code>bmp</code>, <code>gif</code>, <code>jpeg</code>, <code>jpg</code>,
+<code>png</code>, and <code>wbmp</code>. The module also supports these formats and <code>tiff</code> as
+input formats . You can verify the available formats on your system by
+installing the
+<a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.maintenance.releases//info/magnolia/magnolia-module-imagingtools/3.2.8/magnolia-module-imagingtools-3.2.8.jar">magnolia-module-imagingtools.jar</a>
+The Image I/O plugins app displays a list of supported file extensions.</p>
+</div>
+<div class="paragraph">
+<p>The output format is configured in
+<code>/modules/imaging/generators/&lt;generator name&gt;/outputFormat</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Examples</strong>: Output format configurations.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">generators</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">large</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formatName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jpg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">quality</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.ImageOperationChain</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mte</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">quality</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.ThemeAwareImageGenerator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>outputFormat</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Output format configuration. Defines the format the generator produces,
+such as <code>jpg</code> or <code>png</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>quality</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Image quality as a percentage.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formatName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>*for <code>ImageOperationChain</code> only</em></p>
+</div>
+<div class="paragraph">
+<p>The file extension of the generated images.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><code>ThemeAwareImageGenerator</code> generates images in the same format as the
+source image. If you upload a <code>jpg</code>, this generator will produce a
+<code>jpg</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Parameterproviderfactory"><a class="anchor" href="#src-196597011_Imagingmodule-Parameterproviderfactory"></a>Parameter provider factory</h4>
+<div class="paragraph">
+<p>Parameters are instructions passed to an operation, such as where to
+load a source image or what text to lay over it. Registering a
+ParameterProviderFactory allows you to pass parameters from different
+sources:</p>
+</div>
+<div class="paragraph">
+<p>The parameter provider factory is configured in
+<code>/modules/imaging/generators/&lt;generator name&gt;/parameterProviderFactory</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">generators</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mte</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.parameters.ThemeAwareParameterProviderFactory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.ThemeAwareImageGenerator</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Parameter provider classes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.imaging.parameters.BinaryNodeIdentifierParameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node -based <code>ParameterProviderFactory</code> that tries to determine the
+<code>Node</code> by its identifier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.imaging.parameters.BinaryNodePathParameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node -based <code>ParameterProviderFactory</code> that will tries to determine the
+<code>Node</code> by its path.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.templating.imaging.parameters.ThemeAwareParameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Theme -aware <code>ParameterProviderFactory</code> .</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.imaging.parameters.AbstractWorkspaceAndPathParameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Superclass for parameter provider factories based on workspace and
+path.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.imaging.parameters.AbstractWorkspaceAndIdentifierParameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracts workspace and identifier from the path. Everything after the
+identifier is ignored. This allows you, for example, to pass a properly
+named file name, to the image.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.imaging.parameters.AbstractWorkspaceAndUuidParameterProviderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extracts workspace and UUID from the path. Everything after the UUID
+is ignored. This allows you, for example to pass a properly named file
+name to the image.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Imageoperationchains"><a class="anchor" href="#src-196597011_Imagingmodule-Imageoperationchains"></a>Image operation chains</h4>
+<div class="paragraph">
+<p>The Imaging module can resize and crop images, overlay text and apply
+image filters. These are called image operations and are configured in
+** <code>/modules/imaging/config/generators/&lt;generator name&gt;/operations</code>.
+Image operations can also be configured in a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">theme</a>.</p>
+</div>
+<div class="paragraph">
+<p>An image operation chain consists of one or more operations. A simple
+chain could add only fixed text, while a more complex chain could load
+an image from a remote source, apply filters, add multiple text fields
+and style them differently.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Image operation chain configuration:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">generators</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">myOperationChain</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">load</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.load.FromBinaryNode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resize</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.cropresize.BoundedResize</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxHeight</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxWidth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">overlay</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.parameters.BinaryNodePathParameterProviderFactory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.ImageOperationChain</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;generator name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of the image generator.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>operations</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Operations node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;operation names&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>One node for each operation in the chain, for example <code>load</code>, <code>resize</code>
+and <code>overlay</code>. The chain is executed from top to bottom.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Operation class</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;properties&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required/optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Other properties supported by the operation class.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The first operation in an operation chain is typically a load operation.
+Use load class FromBinaryNode to load an image from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Digital+asset+management">DAM</a>.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196597011_Imagingmodule-ParameterProviderFactoryandloadoperationclasstyping"><a class="anchor" href="#src-196597011_Imagingmodule-ParameterProviderFactoryandloadoperationclasstyping"></a>ParameterProviderFactory and load operation class typing</h5>
+<div class="paragraph">
+<p>Note that ParameterProviderFactory and ParameterProvider implementations
+are typed. Let&#8217;s have a look at the
+interfaces:<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Return type of <code>ParameterProviderFactory#newParameterProviderFor</code> and
+the method argument in the class used for a load operation must have the
+same type!</p>
+</div>
+<div class="paragraph">
+<p>For instance BinaryNodePathParameterProviderFactory (as
+ParameterProviderFactory) and FromBinaryNode work nicely together.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Creatingacustomgenerator"><a class="anchor" href="#src-196597011_Imagingmodule-Creatingacustomgenerator"></a>Creating a custom generator</h4>
+<div class="paragraph">
+<p>You can create a custom image generator If the defaults do not meet your
+requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Subclass <code>ImageOperationChain</code>.</p>
+</li>
+<li>
+<p>Override <code>getOutputFormat()</code> method.</p>
+</li>
+<li>
+<p>Set the value of the <code>class</code> node in configuration to your class'
+name.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Imagingworkspace"><a class="anchor" href="#src-196597011_Imagingmodule-Imagingworkspace"></a>Imaging workspace</h4>
+<div class="paragraph">
+<p>The imaging engine stores generated images in the <code>imaging</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workspaces">workspace</a>.</p>
+</div>
+<div class="paragraph">
+<p>The path where generated images are stored depends on the
+CachingStrategy. The default path is:</p>
+</div>
+<div class="paragraph">
+<p><code>/&lt;generatorName&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  /&lt;workspaceName&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    /&lt;path of node or property (nodedata)&gt;`</p>
+</div>
+<div class="paragraph">
+<p>For the MTE generator, the path is:</p>
+</div>
+<div class="paragraph">
+<p><code>/mte</code></p>
+</div>
+<div class="paragraph">
+<p>`  /&lt;themeName&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    /&lt;variationName&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      /&lt;path of node or property (nodedata)&gt;`</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="paragraph">
+<p><code>/mte</code></p>
+</div>
+<div class="paragraph">
+<p>`  /travel-demo-theme`</p>
+</div>
+<div class="paragraph">
+<p>`    /960x720`</p>
+</div>
+<div class="paragraph">
+<p>`      /dam`</p>
+</div>
+<div class="paragraph">
+<p>`        /tours`</p>
+</div>
+<div class="paragraph">
+<p>`          /shark_brian_warrick_0824.JPG`</p>
+</div>
+<div class="paragraph">
+<p>`            /jcr:content`</p>
+</div>
+<div class="paragraph">
+<p>`             /generated image`</p>
+</div>
+<div class="paragraph">
+<p>When the image is rendered on a page, the URL to the generated image is:</p>
+</div>
+<div class="paragraph">
+<p><code>/&lt;CATALINA_HOME, contextPath&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  /.imaging (which is the Imaging servlet <code>default</code> path)`</p>
+</div>
+<div class="paragraph">
+<p>`    /&lt;generatorName&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      /&lt;path to the cached image&gt;`</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s the same image generated by the <code>portrait</code> and <code>mte</code> generators
+in the <a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR
+Browser app</a>. The <code>960x720</code>
+<a href="#src-196597011_Imagingmodule-Imagevariationsinatheme">variation</a> is
+configured in the <code>travel-demo-theme</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597011/6-1-imagingModule.png" alt="images/download/attachments/196597011/6-1-imagingModule.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597011_Imagingmodule-Viewinggeneratedimages"><a class="anchor" href="#src-196597011_Imagingmodule-Viewinggeneratedimages"></a>Viewing generated images</h4>
+<div class="paragraph">
+<p>The syntax for the URL to request a generated image depends on the used
+ParameterProviderFactory. However, it usually has the following pattern:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;protocol&gt;:`</code>//&lt;context&gt;/.imaging/&lt;generator name&gt;/&lt;specific parameters &#8230;&#8203;&gt;`</p>
+</div>
+<div class="paragraph">
+<p>Here is an example of a path when using
+BinaryNodePathParameterProviderFactory:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;protocol&gt;:&lt;context&gt;/.imaging/&lt;generator-name&gt;/&lt;jcr-workspace-name&gt;/&lt;path-to-binary-node&gt;.&lt;suffix-according-to-output-type&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Example:
+<a href="http://localhost:8080/magnoliaAuthor/.imaging/custom-generator-2/dam/examples/jimi-hendrix.jpg/jcr:content.jpg" class="bare">http://localhost:8080/magnoliaAuthor/.imaging/custom-generator-2/dam/examples/jimi-hendrix.jpg/jcr:content.jpg</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Caching"><a class="anchor" href="#src-196597011_Imagingmodule-Caching"></a>Caching</h3>
+<div class="paragraph">
+<p>Magnolia caches image resources to improve performance. Any dynamic
+images generated by the Imaging module are cached at two levels: in the
+<code>imaging</code> workspace and in the actual cache like any other page or
+document. This means that once the system generates an image, you keep
+getting the same cached image on subsequent requests.</p>
+</div>
+<div class="paragraph">
+<p>During testing, you can disable caching of generated images completely.
+In <code>/modules/imaging/config</code> , create a new property
+<code>storeGeneratedImages</code>, and set the value to <code>false</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">storeGeneratedImages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+There is still a small delay between configuration changes and a new
+image being available. Magnolia&#8217;s observation mechanism intentionally
+waits couple of seconds before reading a changed configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Imagingsupport"><a class="anchor" href="#src-196597011_Imagingmodule-Imagingsupport"></a>Imaging support</h3>
+<div class="paragraph">
+<p>Imaging support is enabled by 3 Magnolia modules:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-imaging-support</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagingSupport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The support interface for
+imaging.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-dam-imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagingBasedAssetRenderer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Asset renderer that
+uses <code>ImagingSupport</code> to generate
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+API">renditions</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-templating-essentials-imaging</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ThemeDelegatingImagingSupport</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ImagingSupport that delegates to a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">Theme</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Imagevariationsinatheme"><a class="anchor" href="#src-196597011_Imagingmodule-Imagevariationsinatheme"></a>Image variations in a theme</h3>
+<div class="paragraph">
+<p>A <em>variation</em> is an theme-specific configuration that defines the size
+of the target image and tells the imaging engine whether cropping is
+allowed. Variations are configured in a theme which allows you to
+configure image look and feel in the same place as CSS.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="https://wiki.magnolia-cms.com/display/DOCS62/Theme">Image variations</a>
+and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+work+with+images+using+damfn">Displaying
+resized images</a> for more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597011_Imagingmodule-Configuringanimageoperationinavariation"><a class="anchor" href="#src-196597011_Imagingmodule-Configuringanimageoperationinavariation"></a>Configuring an image operation in a variation</h3>
+<div class="paragraph">
+<p><code>/modules/site/config/themes/travel-demo-theme/imaging/variations</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">themes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-theme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">variations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operation-chain</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">outputFormat</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formatName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">jpg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">quality</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operations</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">load</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.load.FromBinaryNode</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resize</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.cropresize.BoundedResize</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxHeight</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxWidth</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.operations.ImageOperationChain</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameterProviderFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.imaging.parameters.BinaryNodeParameterProviderFactory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.variation.ImageOperationProvidingVariation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1600</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.templating.imaging.VariationAwareImagingSupport</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="paragraph">
+<p>Credits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[<mark>src-196597011_Imagingmodule-ref2]</mark>#</p>
+<div class="paragraph">
+<p>Unger, Richard (2012)
+"http://www.slideshare.net/bkraft/magnolia-conf2012-riselfrzimaging[Enterprise
+extensions to Magnolia&#8217;s Imaging module]"</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Image Recognition module</p>
+</div>
+<div class="paragraph">
+<p>JavaScript Models module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

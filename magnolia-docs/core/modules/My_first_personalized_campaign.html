@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My first personalized campaign - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/My_first_personalized_campaign.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="My_first_personalized_campaign.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/My_first_personalized_campaign.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="My_first_personalized_campaign.html">My first personalized campaign - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">My first personalized campaign - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Personalization_module.html">Personalization module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597121"><a class="anchor" href="#src-196597121"></a>My first personalized campaign</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">Personalization</a></p>
+</li>
+<li>
+<p><a href="Personalization_module.html">Personalization module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In this tutorial you learn how to personalize content. You will target
+content to visitors from a particular country during a specific period
+of time. You learn how to create page variants and how to choose an
+audience. You also test the campaign with the Preview app.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Prerequisites"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>Before you start:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">Personalization</a>
+to understand the terms.</p>
+</li>
+<li>
+<p>Install the <a href="Personalization_module.html">Personalization module</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_safe-id-TXlmaXJzdHBlcnNvbmFsaXplZGNhbXBhaWduLVVzZWNhc2U6RmVzdGl2YWx0b3Vycw"><a class="anchor" href="#src-196597121_safe-id-TXlmaXJzdHBlcnNvbmFsaXplZGNhbXBhaWduLVVzZWNhc2U6RmVzdGl2YWx0b3Vycw"></a>Use case: Festival tours</h3>
+<div class="paragraph">
+<p>Various festivals are held in different countries on different dates
+throughout the year. Create a personalized campaign that promotes the
+Puck Fair festival to U.K. visitors and the Dragon Boat Festival to
+Chinese visitors.</p>
+</div>
+<div class="paragraph">
+<p>Your tasks:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a Festivals page.</p>
+</li>
+<li>
+<p>Create two personalized variants of the page. In each variant, add
+content that appeals to the target audience.</p>
+</li>
+<li>
+<p>Define U.K. and China as target countries using the Country trait.</p>
+</li>
+<li>
+<p>Run the campaign for two weeks prior to the festival date using the
+Date trait.</p>
+</li>
+<li>
+<p>Test the campaign to ensure that correct variant is served to
+visitors.</p>
+</li>
+</ol>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Target country</th>
+<th class="tableblock halign-left valign-top">(none)</th>
+<th class="tableblock halign-left valign-top">China</th>
+<th class="tableblock halign-left valign-top">United Kingdom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Run dates</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(none, ongoing)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">May 26 to June 9, 2019</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">July 27 to August
+10, 2019</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Festivals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dragon Boat Festival</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Puck Fair</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Experience diverse cultures at their most festive. Join
+in the fun of festivals around the world with our exclusive festival
+tour packages.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Dragon Boat Festival is also known as the Duanwu
+Festival. It is a traditional holiday that commemorates the life and
+death of the famous Chinese scholar Qu Yuan. The festival occurs on the
+fifth day of the fifth month on the Chinese lunar calendar.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">On August
+10, a three-day festival known as Puck Fair is held in Killorglin,
+Ireland. Residents of the town capture a goat and proclaim it to be the
+King for three days of revelry.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component image</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="attachments_196597133_1_festivals.jpg">festivals.jpg</a> photo by
+<a href="https://www.flickr.com/photos/stewartwhite/3894985764">Stewart White</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/festivals.jpg" alt="images/download/attachments/196597121/festivals.jpg"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="attachments_196597129_1_dragonboat.jpg">dragonboat.jpg</a> photo by
+<a href="https://commons.wikimedia.org/wiki/File:Dragonboat_racing.jpg">Iidxplus</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/dragonboat.jpg" alt="images/download/attachments/196597121/dragonboat.jpg"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a href="attachments_196597128_1_kingpuck.jpg">kingpuck.jpg</a> photo by
+<a href="https://www.flickr.com/photos/thephotoholic/1083574355/">Buck Lewis</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/kingpuck.jpg" alt="images/download/attachments/196597121/kingpuck.jpg"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Createoriginalpage"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Createoriginalpage"></a>Create original page</h3>
+<div class="paragraph">
+<p>Create a new page in the Travel demo site:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the Pages app.</p>
+</li>
+<li>
+<p>Select <code>/travel</code> and click <strong>Add page</strong>.</p>
+</li>
+<li>
+<p>Name the page <code>festivals</code> and select the Travel Standard template.</p>
+</li>
+<li>
+<p>Edit the page and add a Text and image component in main area:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Headline</strong>: Festivals</p>
+</li>
+<li>
+<p><strong>Text</strong>: Experience diverse cultures at their most festive. Join in the
+fun of festivals around the world with our exclusive festival tour
+packages.</p>
+</li>
+<li>
+<p><strong>Image</strong>: <a href="attachments_196597133_1_festivals.jpg">festivals.jpg</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/original-page.png" alt="images/download/attachments/196597121/original-page.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Createpagevariants"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Createpagevariants"></a>Create page variants</h3>
+<div class="paragraph">
+<p>A variant is an alternative content element that replaces the original
+element in personalized content delivery. Magnolia serves the variant
+instead of the original element when personalization rules match. A
+variant is a copy of the original element, edited to best suit the
+intended audience.</p>
+</div>
+<div class="paragraph">
+<p>Create two
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Variantsarealternativecontent">variants</a>
+of the Festivals page:.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <code>/travel/festivals</code></p>
+</li>
+<li>
+<p>Click <strong>Add page variant</strong> two times.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Magnolia creates two variants. The system also marks the original page
+with the variant icon
+<span class="image"><img src="../../_images/images/download/attachments/196597121/icon-variant.gif" alt="images/download/attachments/196597121/icon-variant.gif"></span>
+. This icon tells editors that the page has alternative content.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/new-variant.png" alt="images/download/attachments/196597121/new-variant.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Chooseaudience"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Chooseaudience"></a>Choose audience</h3>
+<div class="paragraph">
+<p>Choose an audience for the Chinese variant:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the first variant and click <strong>Choose audience</strong>.</p>
+</li>
+<li>
+<p>Set <strong>Name</strong> to <code>Chinese Dragon Boat Festival Travelers</code>.</p>
+</li>
+<li>
+<p>Click <strong>Pick Trait</strong> to define
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Traitsdescribethevisitors">traits</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Set <strong>Country</strong> to <code>China</code>. This rule serves the variant to visitors
+from China.</p>
+</li>
+<li>
+<p>Set <strong>Date</strong> to a range from 2019-05-26 to 2019-06-09. This rule serves
+the variant for two weeks leading up to the festival.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/chinese-audience.png" alt="images/download/attachments/196597121/chinese-audience.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Choose an audience for the U.K. variant:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the second variant and click <strong>Choose audience</strong>.</p>
+</li>
+<li>
+<p>Set <strong>Name</strong> to <code>U.K. Puck Fair Travelers</code>.</p>
+</li>
+<li>
+<p>Define the personalization rules:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Set <strong>Country</strong> to <code>United Kingdon</code>.</p>
+</li>
+<li>
+<p>Set <strong>Start date</strong> to 2019-07-27 and <strong>End date</strong> to 2019-08-10.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/uk-audience.png" alt="images/download/attachments/196597121/uk-audience.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Personalizecontent"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Personalizecontent"></a>Personalize content</h3>
+<div class="paragraph">
+<p>Personalize the page variants:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edit the Chinese page variant.</p>
+</li>
+<li>
+<p>Edit the Text and image component in main area and replace content
+with:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Headline</strong>: Dragon Boat Festival</p>
+</li>
+<li>
+<p><strong>Text</strong>: The Dragon Boat Festival is also known as the Duanwu Festival.
+It is a traditional holiday that commemorates the life and death of the
+famous Chinese scholar Qu Yuan. The festival occurs on the fifth day of
+the fifth month on the Chinese lunar calendar.</p>
+</li>
+<li>
+<p><strong>Image</strong>: <a href="attachments_196597129_1_dragonboat.jpg">dragonboat.jpg</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/chinese-variant.png" alt="images/download/attachments/196597121/chinese-variant.png"></span></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>skip</p>
+</li>
+<li>
+<p>skip</p>
+</li>
+<li>
+<p>Edit the U.K. page variant.</p>
+</li>
+<li>
+<p>Edit the Text and image component in main area and replace content
+with:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Headline</strong>: Puck Fair</p>
+</li>
+<li>
+<p><strong>Text</strong>: On August 10, a three-day festival known as Puck Fair is held
+in Killorglin, Ireland. Residents of the town capture a goat and
+proclaim it to be the King for three days of revelry.</p>
+</li>
+<li>
+<p><strong>Image</strong>: <a href="attachments_196597128_1_kingpuck.jpg">kingpuck.jpg</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/uk-variant.png" alt="images/download/attachments/196597121/uk-variant.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Previewthevariants"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Previewthevariants"></a>Preview the variants</h3>
+<div class="paragraph">
+<p>Test the campaign in the Preview app. Impersonate Chinese and U.K.
+visitors and verify that the correct content variant is served.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the Preview app.</p>
+</li>
+<li>
+<p>Go to the festivals page.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Expected result: The original page is served, not a personalized
+variant.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/preview-default.png" alt="images/download/attachments/196597121/preview-default.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select a Chinese persona 王芳 Wang Fang.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Expected result: The original page is still served because you have
+not defined a date.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/preview-default-chinese-persona.png" alt="images/download/attachments/196597121/preview-default-chinese-persona.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Set <strong>Date</strong> to 2019-06-09 or any other day during the Chinese variant
+run dates.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Expected result: The Chinese variant is served.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/preview-chinese-variant.png" alt="images/download/attachments/196597121/preview-chinese-variant.png"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Set <strong>Country</strong> to United Kingdom and <strong>Date</strong> to 2019-08-10 or any other
+day during the U.K. variant run dates.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Expected result: The U.K. variant is served. This is an example where
+the country trait you explicitly chose (U.K) overrides the country of
+the persona (China).</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/preview-uk-variant.png" alt="images/download/attachments/196597121/preview-uk-variant.png" height="250"></span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Publishcontentandconfiguration"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Publishcontentandconfiguration"></a>Publish content and configuration</h3>
+<div class="paragraph">
+<p>Publish all modified content and configuration to the public instance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Festivals page in <strong>Pages &gt;</strong> <code>/travels/festivals</code>.</p>
+</li>
+<li>
+<p>U.K. and China variants in <strong>Pages &gt;</strong> <code>/travels/festivals/variants</code>.</p>
+</li>
+<li>
+<p>Images in the Assets app.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597121_Myfirstpersonalizedcampaign-Testvariantdeliveryonthepublicinstance"><a class="anchor" href="#src-196597121_Myfirstpersonalizedcampaign-Testvariantdeliveryonthepublicinstance"></a>Test variant delivery on the public instance</h3>
+<div class="paragraph">
+<p>Test variant delivery on the published website. You can pass traits as
+parameters in the URL. This is a handy way to test scenarios that would
+otherwise be difficult to reproduce such as requesting the page from a
+Chinese IP address.</p>
+</div>
+<div class="paragraph">
+<p>Use the following format:</p>
+</div>
+<div class="paragraph">
+<p><code>http:<code>//example</code>.com?&lt;previewParameterPrefix&gt;&lt;Parameter&gt;=&lt;value&gt;</code></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>previewParameterPrefix</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifies the parameter as a preview
+parameter. Parameters used for personalization have a special prefix
+that sets them apart from other parameters. The default prefix is
+<code>preview</code>, for example <code>previewPersona</code> or <code>previewCountry</code>. The prefix
+string is configurable in
+<code>/modules/personalization-preview-app/config/previewParameterPrefix</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;Parameter&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the parameter with first letter capitalized, for
+example <code>Country</code> or <code>Date</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;value&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter value in a valid format. The format depends on the
+parameter. For the country trait the value is a two-letter country code
+(<code>gb</code>, <code>cn</code>) and for a date it is a timestamp written as
+<code>yyyy-mm-dd-hh-mm-ss</code> such as <code>2019-05-26-00-00-00</code>).</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Example</strong>: Visitor from China on May 26, 2019:</p>
+</div>
+<div class="paragraph">
+<p><code>http:`</code>//localhost:8080/magnoliaPublic/travel/festivals.html?previewCountry=cn&amp;previewDate=2019-05-26-00-00-00`</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/public-china.png" alt="images/download/attachments/196597121/public-china.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Visitor from the U.K. on July 27, 2019:</p>
+</div>
+<div class="paragraph">
+<p><code>http:`</code>//localhost:8080/magnoliaPublic/travel/festivals.html?previewCountry=gb&amp;previewDate=2019-07-27-00-00-00`</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597121/public-uk.png" alt="images/download/attachments/196597121/public-uk.png"></span></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Credits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.flickr.com/photos/stewartwhite/3894985764">Stewart White</a>:
+Festivals photo.
+<a href="http://creativecommons.org/licenses/by/2.0/deed.en">Creative Commons
+Attribution 2.0 Generic (CC BY 2.0)</a></p>
+</li>
+<li>
+<p><a href="https://commons.wikimedia.org/wiki/File:Dragonboat_racing.jpg">Iidxplus</a>:
+Dragon boat photo.
+<a href="https://en.wikipedia.org/wiki/en:Creative_Commons">Creative Commons</a>
+<a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">Attribution-Share
+Alike 3.0 Unported</a> .</p>
+</li>
+<li>
+<p><a href="https://www.flickr.com/photos/thephotoholic/1083574355/">Buck Lewis</a>:
+King Puck photo.
+<a href="http://creativecommons.org/licenses/by/2.0/deed.en">Creative Commons
+Attribution 2.0 Generic (CC BY 2.0)</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Personalization module</p>
+</div>
+<div class="paragraph">
+<p>Creating custom traits</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

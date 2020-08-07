@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/cli/Part-III---Reusing-a-light-module-from-npm.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Part-III---Reusing-a-light-module-from-npm.html">master</a>
+    <a class="version" href="../../6.2.1/core/cli/Part-III---Reusing-a-light-module-from-npm.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<div class="sect1">
+<h2 id="src-196598578"><a class="anchor" href="#src-196598578"></a>Part III - Reusing a light module from npm</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-CLI.html">Magnolia CLI</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">Light
+development</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Finding+and+sharing+light+modules">Finding
+and sharing light modules</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="Part-I---Installing-and-setting-up-the-CLI-and-Magnolia.html">Part I
+- Installing and setting up the CLI and Magnolia</a> and
+<a href="Part-II---Creating-a-light-module.html">Part II - Creating a light
+module</a> are prerequisites to Part III.</p>
+</div>
+<div class="paragraph">
+<p>In the last part of this tutorial, we learn how to find, install and
+reuse an existing npm package within our own <code>bucket-list-module</code> light
+module.</p>
+</div>
+<div class="paragraph">
+<p>The npm package we will reuse was created by Matthias Muller, the winner
+of a component sharing contest we held! The Magnolia light module he
+created is a <a href="https://www.npmjs.com/package/google-maps-magnolia">Google
+Maps module</a> that provides two components: <code>google-maps</code> and
+<code>google-directions</code>. We will reuse the <code>google-maps</code> component to show a
+pinpointed location for our bucket list items.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598578_PartIII-Reusingalightmodulefromnpm-Searchforsharedcomponentsinnpm"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-Searchforsharedcomponentsinnpm"></a>Search for shared components in npm</h3>
+<div class="paragraph">
+<p>Light modules are shared with the Magnolia community using the npm
+package manager. While npm was originally built as a package manager for
+Node.js, it has evolved to be the package manager for front-end
+development.</p>
+</div>
+<div class="paragraph">
+<p>When sharing light modules on npm, we ask contributors to use the
+keyword <code>magnolia-light-module</code>. This makes it easy to find Magnolia
+light modules using CLI.</p>
+</div>
+<div class="paragraph">
+<p>Run the following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl search maps</code></p>
+</div>
+<div class="paragraph">
+<p>This command searches for the keyword <code>magnolia-light-module</code> and the
+search term <code>maps</code> on npm and returns a list of modules.</p>
+</div>
+<div class="paragraph">
+<p>The module we want to reuse is named <code>google-maps-magnolia</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>info 1) google-maps-magnolia</code></p>
+</div>
+<div class="paragraph">
+<p><code>info  2017-03-25 2.0.0</code></p>
+</div>
+<div class="paragraph">
+<p><code>info  Magnolia Light Module for providing a responsive google maps integration.</code></p>
+</div>
+<div class="paragraph">
+<p><code>info  mattdimu</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598578_PartIII-Reusingalightmodulefromnpm-Installgoogle-maps-magnolia"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-Installgoogle-maps-magnolia"></a>Install google-maps-magnolia</h3>
+<div class="paragraph">
+<p>Make sure you are in your <code>dev/light-modules</code> folder.</p>
+</div>
+<div class="paragraph">
+<p>Run the following command in a shell:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl install google-maps-magnolia</code></p>
+</div>
+<div class="paragraph">
+<p>This command downloads the module from the npm registry and extracts it
+to your light modules folder:</p>
+</div>
+<div class="paragraph">
+<p><code>google-maps-magnolia/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── travel-demo</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── controls</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── google-maps-magnolia-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── package.json</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── README.md</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── templates</code></p>
+</div>
+<div class="paragraph">
+<p>`    ├── components`</p>
+</div>
+<div class="paragraph">
+<p>`    └── inc`</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598578_PartIII-Reusingalightmodulefromnpm-Configurethegoogle-maps-magnoliamodule"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-Configurethegoogle-maps-magnoliamodule"></a>Configure the google-maps-magnolia module</h3>
+<div class="paragraph">
+<p>Before being able to reuse the component provided by the module, you
+must configure it by making the component available and adding a Google
+API Key to your site definition.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598578_PartIII-Reusingalightmodulefromnpm-Makethegoogle-mapscomponentavailable"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-Makethegoogle-mapscomponentavailable"></a>Make the google-maps component available</h4>
+<div class="paragraph">
+<p>To make the <code>google-maps</code> component from the <code>google-maps-magnolia</code>
+module available to your page, first change into the
+<code>bucket-list-module</code> folder in the shell.</p>
+</div>
+<div class="paragraph">
+<p><code>cd bucket-list-module</code></p>
+</div>
+<div class="paragraph">
+<p>Then run the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl add-availability google-maps-magnolia:components/google-maps pages/bucket-list`</code>@main`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598578_PartIII-Reusingalightmodulefromnpm-GetaGoogleMapsAPIKey"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-GetaGoogleMapsAPIKey"></a>Get a Google Maps API Key</h4>
+<div class="paragraph">
+<p>Follow the Quick Guide steps to retrieve a free Google Maps API Key
+here: <a href="https://developers.google.com/maps/documentation/embed/get-api-key" class="bare">https://developers.google.com/maps/documentation/embed/get-api-key</a></p>
+</div>
+<div class="paragraph">
+<p>Go to Magnolia again and in the Configuration app, update the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+definition">site
+definition</a> to add the key:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Add a <code>parameters</code> content node under
+<code>/modules/travel-demo/config/travel</code>.</p>
+</li>
+<li>
+<p>Add a property called <code>google-maps-magnolia-api-key</code> and set the API
+key as the value.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">google-maps-magnolia-api-key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;api-key-value&gt;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><strong>If you are trying the tutorial with CLI v3 older than 3.0.0 and CLI v2
+older than 2.2.1</strong></p>
+</div>
+<div class="paragraph">
+<p>We have found a bug at this stage in the tutorial
+<a href="https://jira.magnolia-cms.com/browse/NPMCLI-164?src=confmacro"><</a> - add-availability command inserts the availableComponent
+lines incorrectly <span class="status  green  subtle">Closed</span> .</p>
+</div>
+<div class="paragraph">
+<p>Please follow this workaround until it is fixed:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open
+<code>/light-modules/bucket-list-module/templates/pages/bucket-list.yaml</code>.</p>
+</li>
+<li>
+<p>Make sure the content of the file is like this:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>title: bucket-list</code></p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /bucket-list-module/templates/pages/bucket-list.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: bucket-list-module:pages/bucket-list</code></p>
+</div>
+<div class="paragraph">
+<p><code>visible: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`      activity:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: bucket-list-module:components/activity`</p>
+</div>
+<div class="paragraph">
+<p>`      image:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/image`</p>
+</div>
+<div class="paragraph">
+<p>`      linkList:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/linkList`</p>
+</div>
+<div class="paragraph">
+<p>`      google-maps:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: google-maps-magnolia:components/google-maps`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598578_PartIII-Reusingalightmodulefromnpm-Reusethegoogle-mapscomponent"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-Reusethegoogle-mapscomponent"></a>Reuse the google-maps component</h4>
+<div class="paragraph">
+<p>Back in the Pages app, open one of your bucket list item pages. Click
+the <strong>New main component</strong> green bar.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598578/mypage-gmaps-npm.png" alt="images/download/attachments/196598578/mypage-gmaps-npm.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>This time you can choose the <strong>Google Maps</strong> component from the light
+module you installed from npm.</p>
+</div>
+<div class="paragraph">
+<p>The Google Maps dialog you see is defined in
+<code>/dev/light-modules/google-maps-magnolia/dialogs/components/google-maps.yaml</code>.</p>
+</div>
+<div class="paragraph">
+<p>In our Tiger shark diving example, the location is Tiger beach, Grand
+Bahamas.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598578/gmaps-tiger-beach.png" alt="images/download/attachments/196598578/gmaps-tiger-beach.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Once added to your page, the <code>google-maps</code> component displays a map with
+a pin marker on the location we chose:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598578/end-result-2-preview.png" alt="images/download/attachments/196598578/end-result-2-preview.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Congratulations! You have successfully reused a light module shared on
+npm by Magnolia contributor Matthias Muller in your own
+<code>bucket-list-module</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598578_PartIII-Reusingalightmodulefromnpm-Furtherreading"><a class="anchor" href="#src-196598578_PartIII-Reusingalightmodulefromnpm-Furtherreading"></a>Further reading</h3>
+<div class="paragraph">
+<p>Next you could have a look at the other component, <code>google-directions</code>,
+provided in the same module or search for and install another Magnolia
+module from npm.</p>
+</div>
+<div class="paragraph">
+<p>Or why not
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Finding+and+sharing+light+modules">share
+your own light modules</a> on npm to benefit the Magnolia community?</p>
+</div>
+<div class="paragraph">
+<p>Part II - Creating a light module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

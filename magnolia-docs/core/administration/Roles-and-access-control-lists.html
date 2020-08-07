@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Roles and access control lists - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Roles-and-access-control-lists.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Roles-and-access-control-lists.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/Roles-and-access-control-lists.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Roles-and-access-control-lists.html">Roles and access control lists - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Roles and access control lists - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Security.html">Security</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595914"><a class="anchor" href="#src-196595914"></a>Roles and access control lists</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>A role is a function a user performs either in the management of
+Magnolia or as a visitor of a Magnolia website. It reflects the actions
+and activities assigned to, required or expected of a user. Specific
+permissions are granted to enable the functions of a role.</p>
+</div>
+<div class="paragraph">
+<p>For example, the <em>editor</em> role is responsible for editing content
+displayed on the site. Permissions granted to this role allow the user
+to edit the content and submit it for review. The <em>publisher</em> role, on
+the other hand, is tasked with reviewing the content and publishing it
+from the author instance to the public instance(s).</p>
+</div>
+<div class="paragraph">
+<p>Roles have JCR Access Control Lists (ACLs) and Web access permissions.
+For both the JCR content and Web access you can define multiple ACLs per
+role.<br>
+Access to resources is controlled by the roles set up in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Security+app">Security app</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595914/6-1-rolesAndAccessControlLists.png" alt="images/download/attachments/196595914/6-1-rolesAndAccessControlLists.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Roles are also used when configuring <a href="App-permissions.html">App
+permissions</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-JCRACLstructure"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-JCRACLstructure"></a>JCR ACL structure</h3>
+<div class="paragraph">
+<p>Magnolia allows you to define different JCR ACLs for each role. With
+this method, you can assign exact access credentials.</p>
+</div>
+<div class="paragraph">
+<p>A JCR ACL consists of one or more rules where permissions are applied to
+the controlled resource. The ACL itself defines <strong>what</strong> permission is
+granted. Attaching the ACL to a role defines <strong>who</strong> has the permission.
+Any groups and users that belong to the role either directly or through
+groups have the permissions granted in the ACL.</p>
+</div>
+<div class="paragraph">
+<p>ACLs are defined in <strong>Roles</strong> in the <strong>Access control lists</strong> tab.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595914/6-1-rolesAndAccessControl-legend.png" alt="images/download/attachments/196595914/6-1-rolesAndAccessControl-legend.png"></span></p>
+</div>
+<div class="paragraph">
+<p>One JCR ACL specifies:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Workspace</strong>. ACL rules are defined per workspace, for example
+<code>website</code>, <code>dam</code> or <code>templates</code>. A single ACL can contain rules for
+several workspaces.</p>
+</li>
+<li>
+<p><strong>Permission</strong>. Type of permissions applied to the controlled resource:
+<em>Deny</em> access, <em>Read</em>-<em>only</em> or <em>Read/Write</em>.</p>
+</li>
+<li>
+<p><strong>Scope</strong>. Does the permission apply to the selected node only or also
+to its sub nodes?</p>
+</li>
+<li>
+<p><strong>Path</strong> pointing to the node that is controlled.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, the following ACL gives editors permission to edit news
+pages under <code>siteA/news</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workspace</th>
+<th class="tableblock halign-left valign-top">Permission</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>website</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read/Write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA/news</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The power of ACLs is in the combination of the rules. The following ACL
+first denies access to the complete website, then specifically allows
+read access to <code>/siteA</code> and write access to subpages under
+<code>/siteA/news</code>. Users whose access is controlled with this ACL can see
+<code>/siteA</code> and all its subpages but can edit only pages under
+<code>/siteA/news</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workspace</th>
+<th class="tableblock halign-left valign-top">Permission</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>website</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny access</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read-only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read/Write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA/news</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196595914_Rolesandaccesscontrollists-CreatingJCRACLs"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-CreatingJCRACLs"></a>Creating JCR ACLs</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <strong>Security</strong> app.</p>
+</li>
+<li>
+<p>Select a role to which you want to attach the ACL or create a new
+role. ACLs are always attached to roles.</p>
+</li>
+<li>
+<p>Click <strong>Edit role</strong>.</p>
+</li>
+<li>
+<p>Go to the <strong>Access control lists</strong> tab.</p>
+</li>
+<li>
+<p>Next to the workspace such as <code>Website</code>, click <strong>Add new</strong> to create a
+rule.</p>
+</li>
+<li>
+<p>Select:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Permission</strong>. Read-only, Read/Write or Deny access.</p>
+</li>
+<li>
+<p><strong>Scope</strong>. Selected node, Selected and sub nodes, or Sub nodes.</p>
+</li>
+<li>
+<p><strong>Path</strong>. Browse to the controlled object.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="sect4">
+<h5 id="src-196595914_Rolesandaccesscontrollists-Controllingwriteaccessexample"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-Controllingwriteaccessexample"></a>Controlling write access example</h5>
+<div class="paragraph">
+<p>A common use case is a user who publishes content but does not have
+access to edit content.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the <strong>Security</strong> app.</p>
+</li>
+<li>
+<p>Create a new user.</p>
+</li>
+<li>
+<p>Click the <strong>Roles</strong> tab.</p>
+</li>
+<li>
+<p>Grant the user the <strong>publishers</strong> role.</p>
+</li>
+<li>
+<p>Open the <strong>Pages</strong> app and observe the status column.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595914/peter-write-restriction.png" alt="images/download/attachments/196595914/peter-write-restriction.png"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-Webaccess"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-Webaccess"></a>Web access</h3>
+<div class="paragraph">
+<p>With the <strong>Web access</strong> tab, you can define URL permissions for access to
+every Magnolia resource. One ACL grants access to a path for <strong>Get</strong> or
+<strong>Get &amp; Post</strong> or to <strong>Deny</strong> access. Typically, you need to at least deny
+the <code>anonymous</code> role access to AdminCentral.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595914/6-1-rolesAndAccessControlLists-webAccess1.png" alt="images/download/attachments/196595914/6-1-rolesAndAccessControlLists-webAccess1.png"></span></p>
+</div>
+<div class="paragraph">
+<p>On a public instance, deny the <code>anonymous</code> role access to AdminCentral
+and any members-only sections of the site.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595914/6-1-rolesAndAccessControlLists-denyAnonymousPublic.png" alt="images/download/attachments/196595914/6-1-rolesAndAccessControlLists-denyAnonymousPublic.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To configure web access for a new user with an <code>editor</code> or <code>publisher</code>
+role:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <strong>Web access</strong> tab, click <strong>Add new</strong>.</p>
+</li>
+<li>
+<p>Create web access with <strong>Get &amp; Post</strong> set to <code>/*</code>.</p>
+</li>
+<li>
+<p>Test the setup by logging out and logging in as the new user.</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="src-196595914_Rolesandaccesscontrollists-Site-awareACLs"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-Site-awareACLs"></a>Site-aware ACLs</h4>
+<div class="paragraph">
+<p>DX Core allows you to manage multiple websites in a single Magnolia
+instance. You can control cross-site access in two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use the <code>&lt;site&gt;</code> parameter in the path to make an ACL site specific.
+See the <code>&lt;demo-project&gt;</code> example above.</p>
+</li>
+<li>
+<p>The <code>CrossSiteSecurityFilter</code> grants or denies permission to a site
+when the site is requested through a particular domain name, preventing
+sibling site access.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="Cross-site-security.html">Cross-site security</a> for a detailed
+discussion and configuration examples.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-Evaluationofpermissions"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-Evaluationofpermissions"></a>Evaluation of permissions</h3>
+<div class="paragraph">
+<p>When a user signs into Magnolia, the system collects all their ACLs,
+including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ACLs attached to the user&#8217;s roles.</p>
+</li>
+<li>
+<p>ACLs attached to the user&#8217;s groups' roles.</p>
+</li>
+<li>
+<p>ACLs attached to any of the user&#8217;s nested groups' roles.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When the user attempts to access a resource, Magnolia tests all the ACL
+rules the user has inherited to determine which rule matches the
+requested resource.</p>
+</div>
+<div class="paragraph">
+<p>If a user has multiple ACLs through role and group assignment that
+specifically list the requested resource, the ACL with the longest
+pattern determines the permission. The order of the rules is not
+considered. This is a critical point to note, although this criterion is
+only applied if the user has more than one ACL that govern the requested
+resource. Of equally long patterns, the one that grants the broadest
+permissions is applied.</p>
+</div>
+<div class="paragraph">
+<p>Example: A sports editor attempts to edit a sports story on page
+<code>/siteA/news/sports</code>. The user has inherited the following ACL rules
+through his roles, groups' roles and nested groups' roles.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workspace</th>
+<th class="tableblock halign-left valign-top">Permission</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>website</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read-only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read-only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA/news</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read/Write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA/news/sports</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Longest
+pattern. Used to grant permission.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deny</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub nodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA/news/sports/NHL</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Even longer
+but not for the requested resource.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Simply assigning a user to all roles and all groups may not result in
+the broadest possible access for the user because ACLs are evaluated
+specifically in regard to the requested resources and there may be a
+very long rule that denies access to a particular resource.</p>
+</div>
+<div class="paragraph">
+<p>Be sure to add users to groups and roles with the understanding that any
+resource that is governed by more than one rule will behave according to
+the "longest pattern" principle.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-ACLstoragelocation"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-ACLstoragelocation"></a>ACL storage location</h3>
+<div class="paragraph">
+<p>Magnolia stores users, groups, roles and ACLs in separate workspaces.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workspace</th>
+<th class="tableblock halign-left valign-top">What is stored</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>users</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Users (includes system, admin and public users)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>usergroups</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groups</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>userroles</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Roles and ACLs. Since ACLs are always attached to roles,
+they are stored in the same workspace.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-ACLrulesarestoredasregularexpressions"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-ACLrulesarestoredasregularexpressions"></a>ACL rules are stored as regular expressions</h3>
+<div class="paragraph">
+<p>In order to understand the pattern length criterion, it helps to look at
+how Magnolia stores the ACL rules internally. Each rule is translated
+into one or more <a href="http://en.wikipedia.org/wiki/Regular_expression">regular
+expression patterns</a>. The choices you see in the scope dropdown are
+translated as follows.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Selected</strong> translates to <code>/path/to/node</code>.</p>
+</li>
+<li>
+<p><strong>Sub nodes</strong> translates to <code>/path/to/node/*</code>. The asterisk means
+"everything under this".</p>
+</li>
+<li>
+<p><strong>Selected and sub nodes</strong> translates to two regular expressions
+<code>/path/to/node</code> and <code>/path/to/node/*</code>. Together they mean "this node and
+everything under it".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Translated to a regular expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/server/admin</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/server/admin</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sub pages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA/*</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub pages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/siteA</code><br>
+<code>/siteA/*</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When Magnolia searches for the longest matching pattern it compares the
+length of the regular expression patterns, not the length of the path
+you select.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-Markingtheendofapath"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-Markingtheendofapath"></a>Marking the end of a path</h3>
+<div class="paragraph">
+<p>The <strong>Selected</strong> option is a special case available only in controlled
+workspaces such as <code>config</code>. You can use this rule in other spaces by
+defining it manually with the dollar sign <code>$</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: You have a page <code>/news/sports</code> and you want to grant sports
+editors the ability to edit that page, its properties and its subpages,
+but don&#8217;t want them deleting the page. Create the following ACL rules in
+the <code>website</code>-controlled workspace:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Workspace</th>
+<th class="tableblock halign-left valign-top">Permission</th>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>website</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read/Write</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub pages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/news/sports</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read-only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Selected and sub pages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/news/sports$</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The first rule grants write permission to the page and all its children.
+The second rule grants read-only permission to the page itself, not
+affecting permissions to the page properties.</p>
+</div>
+<div class="paragraph">
+<p>When the system evaluates permissions for <code>/news/sports</code>, both rules are
+valid but the second is longer, therefore evaluated as more appropriate
+and applied.</p>
+</div>
+<div class="paragraph">
+<p>When the system evaluates permissions for subpages like
+<code>/news/sports/NBA</code>, only the first rule matches. The second doesn&#8217;t
+because the <code>$</code> sign marks the "end", so the editor has complete control
+of all the subpages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595914_Rolesandaccesscontrollists-Applauncheraccess"><a class="anchor" href="#src-196595914_Rolesandaccesscontrollists-Applauncheraccess"></a>App launcher access</h3>
+<div class="paragraph">
+<p>In order for users to access Magnolia via the app launcher they need at
+least the <strong>Get &amp; Post</strong> permissions to the root node (<code>/<strong></code>) in the *Web
+access</strong> tab. This gives the user permission to access the system and
+launch <a href="App-permissions.html">non-restricted apps</a>, but without
+access to content:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595914/6-1-rolesAndAccessControlLists-demoUser.png" alt="images/download/attachments/196595914/6-1-rolesAndAccessControlLists-demoUser.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Note that in a multisite environment the
+<a href="Cross-site-security.html#src-196595944_Cross-sitesecurity-Site-specificACLs">ACLs
+are site aware</a> and the root node is then referenced with <code>*</code> (without
+the leading slash).</p>
+</div>
+<div class="paragraph">
+<p>Groups</p>
+</div>
+<div class="paragraph">
+<p>Group and role strategies</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

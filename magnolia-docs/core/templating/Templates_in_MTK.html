@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Templates in MTK - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Templates_in_MTK.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Templates_in_MTK.html">master</a>
+    <a class="version" href="../../6.2.1/core/templating/Templates_in_MTK.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Templates_in_MTK.html">Templates in MTK - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Templates in MTK - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596719"><a class="anchor" href="#src-196596719"></a>Templates in MTK</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module">MTE module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/MTK+module">MTK module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page explains how to use the Magnolia Templating Kit (MTK),
+provided as a submodule of the Magnolia Templating Essentials module
+(MTE) .</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596719_TemplatesinMTK-MTEandMTK"><a class="anchor" href="#src-196596719_TemplatesinMTK-MTEandMTK"></a>MTE and MTK</h3>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module">Magnolia
+Templating Essentials</a> (MTE) provides useful templating functionality
+for all projects in the form of templating function libraries,
+definitions, imaging support and templates via the MTK submodule. MTE is
+front-end framework agnostic, which means you can use it with any modern
+CSS and JS framework.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/MTE+module">Include MTE in
+your project</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/MTK+module">Magnolia
+Templating Kit</a> (MTK) is a small set of ready-to-use component, area and
+page templates, that supplies the basic functionality that is common
+across websites. The templates are designed to be flexible, with dialog
+options that enable them to fit many use cases without development. The
+MTK templates can be used "as is", modified to suit your projects needs,
+or simply used as helpful examples of best-practice Magnolia templating.
+The MTK is intentionally small so that developers can learn it quickly.
+CSS is kept to a minimum to enable developers to easily integrate their
+own CSS or frameworks.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the standard maven module, the MTK is also available as a
+light module for easy access to the files:
+<a href="attachments_196598944_1_mtk_1.2.3.zip">mtk_1.2.3.zip</a></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To experiment with MTK or Magnolia templating, put the unzipped MTK
+light module in Magnolia&#8217;s resource directory, and make changes to the
+files. Due to Magnolia&#8217;s resource loading mechanism, these files will be
+used instead of the ones in the Java classpath provided by the Maven
+module.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/MTK+module">Include MTK in
+your project</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196596719_TemplatesinMTK-MTKtemplatedefinitions"><a class="anchor" href="#src-196596719_TemplatesinMTK-MTKtemplatedefinitions"></a>MTK template definitions</h4>
+<div class="paragraph">
+<p>The MTK module includes <a href="#src-196596719_TemplatesinMTK-Pages">page</a>,
+<a href="#src-196596719_TemplatesinMTK-Areas">area</a> and
+<a href="#src-196596719_TemplatesinMTK-Components">component</a> templates and
+associated dialogs.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596719_TemplatesinMTK-Pagetemplate"><a class="anchor" href="#src-196596719_TemplatesinMTK-Pagetemplate"></a>Page template</h5>
+<div class="paragraph">
+<p>The <code>basic</code> page template is a good starting point for custom page
+templates.</p>
+</div>
+<div class="paragraph">
+<p>The basic template contains:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Page_definition.html">Page definition</a>, page
+<a href="Template_scripts.html">template script</a> and a page properties dialog
+that allows you to set titles and metadata.</p>
+</li>
+<li>
+<p>Areas: <code>htmlHeader</code>, <code>navigation</code>, <code>main</code> and <code>footer</code></p>
+</li>
+<li>
+<p><a href="#src-196596719_TemplatesinMTK-Components">Components</a> that are
+available in main and footer areas. See the page definition for
+component availability.</p>
+</li>
+<li>
+<p><a href="#src-196596719_TemplatesinMTK-Navigation">Navigation</a> scripts.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/basic-template.png" alt="images/download/attachments/196596719/basic-template.png"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596719_TemplatesinMTK-Areas"><a class="anchor" href="#src-196596719_TemplatesinMTK-Areas"></a>Areas</h5>
+<div class="paragraph">
+<p>The areas are defined in the page template (see the <code>areas</code> node below).
+Areas typically define what components editors can place inside the area
+(see the <code>availableComponents</code> node in <code>footer</code> and <code>main</code> areas below).</p>
+</div>
+<div class="paragraph">
+<p>/templates/pages/basic.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /mtk/templates/pages/basic.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: mtk:pages/basic</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.module.site.templates.PageTemplateDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>cssFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  normalize:`</p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/mtk/css/normalize-<code>3.0</code>.<code>3</code>.css`</p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/mtk/css/html5boilerplate-main-<code>5.3</code>.<code>0</code>.css`</p>
+</div>
+<div class="paragraph">
+<p>`  video:`</p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/mtk/css/video.css`</p>
+</div>
+<div class="paragraph">
+<p><code>jsFiles:</code></p>
+</div>
+<div class="paragraph">
+<p>`  modernizr:`</p>
+</div>
+<div class="paragraph">
+<p>`    link: /.resources/mtk/js/modernizr-<code>2.8</code>.<code>3</code>.min.js`</p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  htmlHeader:`</p>
+</div>
+<div class="paragraph">
+<p>`    type: noComponent`</p>
+</div>
+<div class="paragraph">
+<p>`    createAreaNode: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`    templateScript: /mtk/templates/areas/htmlHeader.ftl`</p>
+</div>
+<div class="paragraph">
+<p>`  navigation:`</p>
+</div>
+<div class="paragraph">
+<p>`    type: noComponent`</p>
+</div>
+<div class="paragraph">
+<p>`    createAreaNode: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`    templateScript: /mtk/templates/areas/navigation.ftl`</p>
+</div>
+<div class="paragraph">
+<p>`  footer:`</p>
+</div>
+<div class="paragraph">
+<p>`    inheritance:`</p>
+</div>
+<div class="paragraph">
+<p>`      components: all`</p>
+</div>
+<div class="paragraph">
+<p>`      enabled: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents: &amp;footerAvailableComponents`</p>
+</div>
+<div class="paragraph">
+<p>`      link:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/link`</p>
+</div>
+<div class="paragraph">
+<p>`      textImage:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/textImage`</p>
+</div>
+<div class="paragraph">
+<p>`      image:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/image`</p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents: # using all components from footer plus others`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;&lt;: *footerAvailableComponents`</p>
+</div>
+<div class="paragraph">
+<p>`      html:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/html`</p>
+</div>
+<div class="paragraph">
+<p>`      linkList:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/linkList`</p>
+</div>
+<div class="paragraph">
+<p>`      teaser:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/teaser`</p>
+</div>
+<div class="paragraph">
+<p>`      video:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/video`</p>
+</div>
+<div class="paragraph">
+<p>`      pageIntro:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/pageIntro`</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596719_TemplatesinMTK-Components"><a class="anchor" href="#src-196596719_TemplatesinMTK-Components"></a>Components</h5>
+<div class="paragraph">
+<p>The MTK provides basic components for use in your templates:</p>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Textandimage"><a class="anchor" href="#src-196596719_TemplatesinMTK-Textandimage"></a>Text and image</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/textImage</code></p>
+</div>
+<div class="paragraph">
+<p>Displays text and an image.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/textimage-component.png" alt="images/download/attachments/196596719/textimage-component.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Link"><a class="anchor" href="#src-196596719_TemplatesinMTK-Link"></a>Link</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/link</code></p>
+</div>
+<div class="paragraph">
+<p>Creates a link to an internal or external page or a downloadable asset.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/link-component.png" alt="images/download/attachments/196596719/link-component.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Linklist"><a class="anchor" href="#src-196596719_TemplatesinMTK-Linklist"></a>Link list</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/linkList</code></p>
+</div>
+<div class="paragraph">
+<p>Organizes link components into a bulleted, inline or ordered list.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/link-list-component.png" alt="images/download/attachments/196596719/link-list-component.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Image"><a class="anchor" href="#src-196596719_TemplatesinMTK-Image"></a>Image</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/image</code></p>
+</div>
+<div class="paragraph">
+<p>Displays an image.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/image-component.png" alt="images/download/attachments/196596719/image-component.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Teaser"><a class="anchor" href="#src-196596719_TemplatesinMTK-Teaser"></a>Teaser</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/teaser</code></p>
+</div>
+<div class="paragraph">
+<p>Promotes another Magnolia page, third-party website or a downloadable
+asset, inviting the visitor to click for more.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/teaser-component.png" alt="images/download/attachments/196596719/teaser-component.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-HTML"><a class="anchor" href="#src-196596719_TemplatesinMTK-HTML"></a>HTML</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/html</code></p>
+</div>
+<div class="paragraph">
+<p>Allows editors to enter HTML markup and renders it on the page.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/html-component.png" alt="images/download/attachments/196596719/html-component.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Video"><a class="anchor" href="#src-196596719_TemplatesinMTK-Video"></a>Video</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/video</code></p>
+</div>
+<div class="paragraph">
+<p>Adds the possibility to add a video. Videos can be taken from the assets
+app - or you may just add "embed code" as provided by youtube and other
+public video repositories.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/video-comp.png" alt="images/download/attachments/196596719/video-comp.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Pageintro"><a class="anchor" href="#src-196596719_TemplatesinMTK-Pageintro"></a>Page intro</h6>
+<div class="paragraph">
+<p>ID: <code>mtk:components/pageIntro</code></p>
+</div>
+<div class="paragraph">
+<p>A component to render the page properties <code>title</code> and <code>abstract</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/pageIntro-comp.png" alt="images/download/attachments/196596719/pageIntro-comp.png"></span></p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196596719_TemplatesinMTK-Navigation"><a class="anchor" href="#src-196596719_TemplatesinMTK-Navigation"></a>Navigation</h6>
+<div class="paragraph">
+<p>The MTK provides basic navigation to use in your templates. Add subpages
+to see the navigation.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596719/navigation.png" alt="images/download/attachments/196596719/navigation.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The navigation is provided by two scripts that use
+<a href="navfn.html">navfn</a> <a href="Templating_functions.html">templating
+functions</a> which are included in the MTE module.</p>
+</div>
+<div class="paragraph">
+<p>The <code>navigation</code> <a href="#src-196596719_TemplatesinMTK-Areas">area</a> is
+rendered by the <code>navigation.ftl</code> script. This script sets the root page,
+navigation depth and behavior, and includes the <code>navigation.ftl</code> macro.</p>
+</div>
+<div class="paragraph">
+<p>/templates/areas/navigation.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>[#include "/mtk/templates/macros/navigation.ftl"]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#assign navigationRootPage = navfn.rootPage(content)!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[@navigation navParentItem=navigationRootPage depth=1 expandAll=true /]</code></p>
+</div>
+<div class="paragraph">
+<p>The macro does the "heavy-lifting" and generates a simple navigation
+which you can use as a starting point.</p>
+</div>
+<div class="paragraph">
+<p>Click here to see the navigation macro</p>
+</div>
+<div class="paragraph">
+<p>/templates/macros/navigation.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>[#-- Basic navigation macro which generates simple navigation. You can adjust it to fulfil your needs. --]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#macro navigation navParentItem depth=1 expandAll=false navClass="nav"]</code></p>
+</div>
+<div class="paragraph">
+<p>`    [#if navParentItem?has_content &amp;&amp; depth &gt; 0]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>ul</code> <code>class</code>=<code>"${navClass}"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        [#assign navItems = navfn.navItems(navParentItem)]`</p>
+</div>
+<div class="paragraph">
+<p>`        [#list navItems as navItem]`</p>
+</div>
+<div class="paragraph">
+<p>`            [#-- This is example how to resolve navigation from the content apps. Uncomment and adjust to your needs.`</p>
+</div>
+<div class="paragraph">
+<p>`            [#if navfn.hasTemplate(navItem, "mtk:pages/contactsOverview") || navfn.hasTemplateSubtype(navItem, "contactsOverview")]`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;<code>li</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    [#if navfn.isHiddenInNav(navItem)]`</p>
+</div>
+<div class="paragraph">
+<p>`                        &lt;<code>a</code> <code>href</code>=<code>"#"</code>&gt;${navItem.navigationTitle!navItem.title!navItem.@name}&lt;/<code>a</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    [#else]`</p>
+</div>
+<div class="paragraph">
+<p>`                        &lt;<code>a</code> <code>href</code>=<code>"${cmsfn.link(navItem)!"</code>#"}"&gt;${navItem.navigationTitle!navItem.title!navItem.@name}&lt;/<code>a</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>ul</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                        [#assign navContentItems = navfn.navItemsFromApp("contacts", "/", "mgnl:contact")]`</p>
+</div>
+<div class="paragraph">
+<p>`                        [#list navContentItems as navContentItem]`</p>
+</div>
+<div class="paragraph">
+<p>`                            &lt;<code>li</code>&gt;&lt;<code>a</code> <code>href</code>=<code>"${navfn.linkWithSelector(navItem, navContentItem)!"</code>#"}"&gt;${navContentItem.lastName!navContentItem.@name}&lt;/<code>a</code>&gt;&lt;/<code>li</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                        [/#list]`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;/<code>ul</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                &lt;/<code>li</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            [#else]`</p>
+</div>
+<div class="paragraph">
+<p>`            --]`</p>
+</div>
+<div class="paragraph">
+<p>`                [<mark>assign activeNavItem = navfn.isActive(content, navItem)] [</mark>-- Active navigation item is the one which is same as current page--]`</p>
+</div>
+<div class="paragraph">
+<p>`                [<mark>assign openNavItem = navfn.isOpen(content, navItem)] [</mark>-- Open navigation item is the one which is ancestor of current page--]`</p>
+</div>
+<div class="paragraph">
+<p>`                [#if activeNavItem]`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>li</code> <code>class</code>=<code>"active"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                [#elseif openNavItem]`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>li</code> <code>class</code>=<code>"open"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                [#else]`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;<code>li</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                [/#if]`</p>
+</div>
+<div class="paragraph">
+<p>`                        &lt;<code>a</code> <code>href</code>=<code>"${navfn.link(navItem)!"</code>#"}"&gt;${navItem.navigationTitle!navItem.title!navItem.@name}&lt;/<code>a</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`                        [#if expandAll || activeNavItem || openNavItem]`</p>
+</div>
+<div class="paragraph">
+<p>`                            [@navigation navItem depth-1 /]`</p>
+</div>
+<div class="paragraph">
+<p>`                        [/#if]`</p>
+</div>
+<div class="paragraph">
+<p>`                    &lt;/<code>li</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`            [#-- End 'if' for navigation from the content apps]`</p>
+</div>
+<div class="paragraph">
+<p>`            [/#if]`</p>
+</div>
+<div class="paragraph">
+<p>`            --]`</p>
+</div>
+<div class="paragraph">
+<p>`        [/#list]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>ul</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#macro]</code></p>
+</div>
+<div class="paragraph">
+<p>Credits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.flickr.com/photos/aigle_dore/">Moyan Breen</a>: Sunset Aurora
+photo. <a href="http://creativecommons.org/licenses/by/2.0/deed.en">Creative
+Commons Attribution 2.0 Generic (CC BY 2.0)</a></p>
+</li>
+<li>
+<p><a href="https://www.flickr.com/photos/andrew_j_w/">Andrew Wilkinson</a> : Forest
+Stream photo.
+<a href="http://creativecommons.org/licenses/by/2.0/deed.en">Creative Commons
+Attribution 2.0 Generic (CC BY 2.0)</a></p>
+</li>
+<li>
+<p><a href="http://www.booked.net/widgets/weather">Booked.net</a>: Weather widget code</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Theme</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

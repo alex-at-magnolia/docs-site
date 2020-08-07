@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cache core - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Cache_core.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/modules/Cache_core.html">master</a>
+    <a class="version is-current" href="Cache_core.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Cache_core.html">Cache core - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Cache core - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Cache_modules.html">Cache modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766"><a class="anchor" href="#src-196596766"></a>Cache core</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE, Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/MGNLCACHE">MGNLCACHE</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/magnolia-cache/">Cache</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.9.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Magnolia employs a web cache to store server responses so that future
+requests for the same content can be served faster. The chief benefit of
+using cache is a reduction in information load on the network, meaning
+less bandwidth used, reduced processing and improved responsiveness.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Installing"><a class="anchor" href="#src-196596766_Cachecore-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.cache&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-cache-core&lt;/artifactId&gt;
+  &lt;version&gt;5.9.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Disabling"><a class="anchor" href="#src-196596766_Cachecore-Disabling"></a>Disabling</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Although the Cache module is bundled as a separate module, it is
+essential to Magnolia and many other modules depend on it. Don&#8217;t
+uninstall the Cache module. If necessary, disable caching by adding an
+<code>enabled</code> node in <strong>Configuration &gt;</strong> <code>/server/filters/cache</code> and set its
+value to <code>false</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultContentCachingConfigurationName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.filter.CacheFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Howcachingworks"><a class="anchor" href="#src-196596766_Cachecore-Howcachingworks"></a>How caching works</h3>
+<div class="paragraph">
+<p>Caching is performed by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">Cache filter</a>,
+which is part of the standard Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">filter chain</a>. When
+a request arrives to the Cache filter, the filter passes it to the
+browser cache policy.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Content not modified</strong>: If a client has the latest version of content
+(i.e. not modified), the browser cache policy instructs the filter to
+respond with "304 Not Modified".</p>
+</li>
+<li>
+<p><strong>Modified content</strong>: If content has been modified or does not exist in
+the cache, the filter passes the request to the server cache policy.
+Server cache policy then analyses the request and replies with the
+expected behavior. The filter then invokes the appropriate executor.
+This mechanism allows you to add, remove and use executors by changing
+the current cache policy.</p>
+</li>
+<li>
+<p><strong>Content not available</strong>: If the content is not available, the filter
+passes the request on to Magnolia. On the return trip, the filter reads
+the content from the response and stores it in the cache store for
+future use. Flush policy is completely independent of this chain and
+reacts on content changes rather than content served.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595721/request-processing.png" alt="images/download/attachments/196595721/request-processing.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Configuration"><a class="anchor" href="#src-196596766_Cachecore-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>Cache configurations are defined in
+<code>/modules/cache/config/contentCaching/</code>. Within each configuration you
+can define:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What to cache.</p>
+</li>
+<li>
+<p>When to flush the cache.</p>
+</li>
+<li>
+<p>What header data to pass to browsers.</p>
+</li>
+<li>
+<p>Specific implementations of tasks.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentCaching</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uuid-key-mapping</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">compression</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cacheFactory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To select one of the cache configurations, set the
+<code>defaultContentCachingConfigurationName</code> parameter in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">Cache filter</a>. The
+chosen configuration is read into a JavaBean using the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">Node2Bean
+mechanism</a>, making it dynamically available to your own module code.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultContentCachingConfigurationName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.filter.CacheFilter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196596766_Cachecore-Policyconfiguration"><a class="anchor" href="#src-196596766_Cachecore-Policyconfiguration"></a>Policy configuration</h4>
+<div class="paragraph">
+<p>Caching behavior for each configuration is defined with policies.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596766_Cachecore-Servercachepolicy"><a class="anchor" href="#src-196596766_Cachecore-Servercachepolicy"></a>Server cache policy</h5>
+<div class="paragraph">
+<p>This policy defines whether the requested content should be cached or
+not. The decision to cache relies on
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Voters">voters</a>, which are
+used whenever configuration values are not assigned at startup but
+depend on rules. Voters evaluate a rule such as "should content residing
+at this URL be cached" and return a positive or negative response. By
+default, all content on public instances is cached except the
+AdminCentral UI at <code>/.magnolia</code>. Server cache policy is configured in
+<code>/modules/cache/config/contentCaching/defaultPageCache/cachePolicy</code>. The
+default implementation (Default) checks if the content exists in the
+cache store and requests caching if the content is not found. The
+alternative class, Never instructs the cache not to store the generated
+content. Server-side re-caching of no-cache requests (shift reload) are
+configurable and set to <code>false</code> by default.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cachePolicy</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shouldBypassVoters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">urls</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">deny</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resources</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.cachepolicy.Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">refreshOnNoCacheRequests</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5">
+<h6 id="src-196596766_Cachecore-Cachekeygenerator"><a class="anchor" href="#src-196596766_Cachecore-Cachekeygenerator"></a>Cache key generator</h6>
+<div class="paragraph">
+<p>You can define a custom cache key generator or configure the default one
+to meet your needs.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentCaching</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cachePolicy</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shouldBypassVoters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ttlVoters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cacheKeyGenerator</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">useRequestParameters</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.cachekey.DefaultCacheKeyGenerator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.cachepolicy.Default</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Default cache key attributes</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Attribute</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Default</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Description</strong></p>
+</div>
+<div class="paragraph">
+<p><code>useUri</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use URI as part of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useRequestParameters</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use request query as part of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useRequestMethod</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use request method (GET/POST/HEAD) as part of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useRequestServerName</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use server name as part of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useRequestGetSecure</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Save information whether this request was made using a secure channel,
+such as HTTPS as part of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useUserName</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use user name as part of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useLocale</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use locale <code>info.magnolia.cms.core.AggregationState#getLocale</code> as part
+of cache key.</p>
+</div>
+<div class="paragraph">
+<p><code>useChannel</code></p>
+</div>
+<div class="paragraph">
+<p><code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Use channel <code>info.magnolia.cms.core.AggregationState#getChannel</code> as part
+of cache key.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_safe-id-Q2FjaGVjb3JlLUNsaWVudChicm93c2VyKWNhY2hlcG9saWN5"><a class="anchor" href="#src-196596766_safe-id-Q2FjaGVjb3JlLUNsaWVudChicm93c2VyKWNhY2hlcG9saWN5"></a>Client (browser) cache policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Allows for different policies for different content types.
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">Voters</a>
+are used to define the caching rules. These policies define how long the
+browser may cache each content type. The time is passed to the browser
+in the response header. The FixedDuration option instructs the browser
+to cache the content for the specified length of time in minutes. Never
+instructs the browser to do nothing. Client cache policy is configured
+in
+<code>/modules/cache/config/contentCaching/defaultPageCache/browserCachePolicy</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">browserCachePolicy</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">policies</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">disableBrowserCacheInDevelopMode</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">developMode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.PropertyVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">magnolia.develop</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.browsercachepolicy.FixedDuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">farFuture</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.browsercachepolicy.FixedDuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expirationMinutes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">525600</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resources</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dontCachePages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.browsercachepolicy.Never</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.browsercachepolicy.FixedDuration</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expirationMinutes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.browsercachepolicy.BrowserCachePolicySet</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Flushpolicy"><a class="anchor" href="#src-196596766_Cachecore-Flushpolicy"></a>Flush policy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Flush policy defines when to flush the cache. There are two policies
+installed per default.</p>
+</div>
+<div class="paragraph">
+<p><strong>Changes in workspaces</strong></p>
+</div>
+<div class="paragraph">
+<p>This configuration observes changes (activation, import, edit) in a
+workspace and flushes the cache if new or modified content is detected.
+Cache can be flushed completely, partially or not at all. Each module
+can register its own flush policy (or multiple policies) and receive
+notification about new or modified content in each workspace. Flush
+policies are informed about changes in observed workspaces. The list of
+observed workspaces can be defined per policy under the <code>workspaces</code>
+subnode of each policy or all workspaces will trigger cache flush unless
+defined under <code>excludedWorkspaces</code> subnode (default configuration). If
+your custom workspace doesn&#8217;t affect the content of pages, you should
+register it under excludedWorkspaces, otherwise, a change in your
+workspace will unnecessarily flush the cache.</p>
+</div>
+<div class="paragraph">
+<p><strong>Changes in light modules</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Magnolia 5.6.1+: A change in the light modules folder may also flush the
+server cache. See
+<code>/modules/cache/config/contentCaching/defaultPageCache/flushPolicy/policies/lightModule/pathToCacheMappings/defaultPageCache</code>
+with the <code>pattern</code> property, which specifies the pattern for the
+operation. The default value is <code>.<strong>/(templates|webresources|i18n)/.</strong></code> .</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flushPolicy</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">policies</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">flushAll</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">excludedWorkspaces</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forum</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">imaging</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">magnolia-mgnlSystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">magnolia-mgnlSystem</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">magnolia-mgnlVersion</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">magnolia-mgnlVersion</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">messages</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">messages</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profiles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">profiles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">users</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">users</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dam</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.FlushAllListeningPolicy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">lightModules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cacheName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.*/(templates</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">webresources</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">i18n)/.*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.flushpolicy.LightModuleChangesFlushPolicy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.DelegateFlushPolicy</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Executors"><a class="anchor" href="#src-196596766_Cachecore-Executors"></a>Executors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These are actions taken once a caching decision has been made. There are
+three possible actions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>useCache</code>: Retrieves the cached item from the cache and streams it to
+the client.</p>
+</li>
+<li>
+<p><code>store</code>: Stores the response in the cache for future use.</p>
+</li>
+<li>
+<p><code>bypass</code>: Skips caching. This is useful for content that cannot or
+should not be cached.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Executors can be configured at
+<code>/modules/cache/config/contentCaching/defaultPageCache/executors</code>. Each
+of the executors is also responsible for configuring expiration headers.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPageCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">executors</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bypass</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">store</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">useCache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Compression"><a class="anchor" href="#src-196596766_Cachecore-Compression"></a>Compression</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Compression is a simple and effective way to save bandwidth and speed up
+your site. It is a common practice used by Google and Yahoo! for
+example.
+(<a href="http://betterexplained.com/articles/how-to-optimize-your-site-with-gzip-compression/">How
+to Optimize Your Site with GZIP Compression</a> is a great general
+introduction to the topic.) Compression is performed in the gzip filter,
+configured in <code>/server/filters/gzip</code>}. When a client requests a resource
+such as <code>index.html</code>, Magnolia delivers it zipped. A typical HTML page
+is compressed to 20% of its original size. So if your page is 100 kB
+uncompressed, it is 20 kB compressed. To improve performance further,
+zipped content is streamed from the repository to the client rather than
+read into memory first.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Configuring"><a class="anchor" href="#src-196596766_Cachecore-Configuring"></a>Configuring</h3>
+<div class="paragraph">
+<p>You can configure which content types to compress. By default, the gzip
+filter bypasses compression for HTML, JavaScript and CSS because they
+are explicitly selected for compression in the Cache module
+configuration. These types can be compressed efficiently because they
+are text. The decision to compress a particular content type is made
+with voters. Voters are used whenever configuration values are not
+assigned at startup but depend on rules instead. In the Cache module
+configuration there are three voting rules based on content type:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>text/html</code>: HTML.</p>
+</li>
+<li>
+<p><code>application/x-javascript</code>: JavaScript.</p>
+</li>
+<li>
+<p><code>text/css</code>: Cascading Style Sheets.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">compression</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">allowed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text/html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">application/x-javascript</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text/css</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.ResponseContentTypeVoter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To add more content types, such as XML, create a numbered property under
+<code>allowed</code>. Use the Internet media type (MIME type) as value. Here are
+some
+<a href="http://en.wikipedia.org/wiki/Internet_media_type#List_of_common_media_types">common
+media types</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>application/xhtml+xml</code>: XHTML.</p>
+</li>
+<li>
+<p><code>text/csv</code>: Comma-separated value.</p>
+</li>
+<li>
+<p><code>text/plain</code>: Textual data.</p>
+</li>
+<li>
+<p><code>text/xml</code>: Extensible Markup Language.</p>
+</li>
+<li>
+<p><code>application/pdf</code>: Portable Document Format.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As a rule, compressing the HTML, JavaScript and CSS is sufficient; it is
+not necessary to compress binary content such as images. During the
+process, the browser sends a header telling the server that it accepts
+compressed content: <code>Accept-Encoding: gzip</code>. Note that Magnolia does not
+cache big binaries.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-InternetExplorer6"><a class="anchor" href="#src-196596766_Cachecore-InternetExplorer6"></a>Internet Explorer 6</h3>
+<div class="paragraph">
+<p>Note that while all modern browsers support compression, some older
+browsers do not, notably Internet Explorer 6 before Service Pack 2. To
+get around this, Magnolia uses a <code>userAgent</code> voter that rejects
+compression and delivers uncompressed content if the browser identifies
+itself as IE6 in the <code>User-Agent</code> field in request headers.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">compression</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userAgent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rejected</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">00</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.<strong>MSIE 6\.0.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.UserAgentVoter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Testingcompression"><a class="anchor" href="#src-196596766_Cachecore-Testingcompression"></a>Testing compression</h3>
+<div class="paragraph">
+<p>To test your compression configuration, use a tool such as
+<a href="http://websniffer.cc/">Web-Sniffer</a> that allows you to change the
+<code>Accept</code>, <code>Encoding</code> and <code>User-Agent</code> sent headers easily. Here&#8217;s what
+the headers look like when the
+<a href="http://demopublic.magnolia-cms.com/demo-project">Magnolia demo site</a> home
+page
+<a href="http://web-sniffer.net/?url=http%3A%2F%2Fdemopublic.magnolia-cms.com%2Fdemo-project.html&amp;submit=Submit&amp;http=1.1&amp;gzip=yes&amp;type=GET&amp;uak=3">is
+submitted</a> to the sniffer.</p>
+</div>
+<div class="paragraph">
+<p>Request header:</p>
+</div>
+<div class="paragraph">
+<p>`GET /demo-project.html HTTP/<code>1.1</code> Host: demopublic.magnolia-cms.com `</p>
+</div>
+<div class="paragraph">
+<p>`Connection: close User-Agent: Mozilla/<code>5.0</code> (Windows; U; Windows NT <code>5.1</code>; `</p>
+</div>
+<div class="paragraph">
+<p>`de; rv:<code>1.9</code>) Gecko/<code>2008052906</code> Firefox/<code>3.0</code> Accept-Encoding: gzip `</p>
+</div>
+<div class="paragraph">
+<p>`Accept-Charset: ISO-<code>8859</code>-<code>1</code>,UTF-<code>8</code>;q=<code>0.7</code>,*;q=<code>0.7</code> Cache-Control: no `</p>
+</div>
+<div class="paragraph">
+<p><code>Accept-Language: de,en;q=<code>0.7</code>,en-us;q=<code>0.3</code> Referer: http:`</code>//web-sniffer.net`</p>
+</div>
+<div class="paragraph">
+<p>Response header:</p>
+</div>
+<div class="paragraph">
+<p>`Status: HTTP/<code>1.1</code> <code>200</code> OK Date: Fri, <code>23</code> Jul <code>2010</code> <code>07</code>:<code>45</code>:<code>10</code> GMT Server: `</p>
+</div>
+<div class="paragraph">
+<p>`Apache/<code>2.2</code>.<code>9</code> X-Magnolia-Registration: Registered Cache-Control: `</p>
+</div>
+<div class="paragraph">
+<p>`max-age=<code>900</code> Last-Modified: Thu, <code>01</code> Jul <code>2010</code> <code>14</code>:<code>03</code>:<code>12</code> GMT `</p>
+</div>
+<div class="paragraph">
+<p>`Content-Encoding: gzip Vary: Accept-Encoding Content-Length: <code>3852</code> `</p>
+</div>
+<div class="paragraph">
+<p><code>Connection: close Content-Type: text/html;charset=UTF-``8</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Advancedstrategies"><a class="anchor" href="#src-196596766_Cachecore-Advancedstrategies"></a>Advanced strategies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In DX Core, advanced caching strategies are available in separate
+<a href="Advanced_cache_modules.html">Advanced Cache modules</a> .</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Commands"><a class="anchor" href="#src-196596766_Cachecore-Commands"></a>Commands</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cache related commands are in the <code>cache</code> catalog:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>flushAll</code>: Completely flushes all caches. (Note that the imaging
+workspace - which technically is not a cache - is not flushed with this
+command.)</p>
+</li>
+<li>
+<p><code>flushByUUID</code>: Completely flushes all entries related to a given UUID
+from all available caches. This command expects <code>repository</code> and <code>uuid</code>
+as parameters.</p>
+</li>
+<li>
+<p><code>flushNamedCache</code>: Completely flushes a cache by name. Default cache
+names are <code>default</code> and <code>uuid-key-mapping</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-CachedURLs"><a class="anchor" href="#src-196596766_Cachecore-CachedURLs"></a>Cached URLs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, the following URLs are cached:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>On public instance everything except <code>/.magnolia/*</code> which is
+AdminCentral.</p>
+</li>
+<li>
+<p>On author instance all static resources <code>/.resources/*</code> if
+<code>magnolia.develop</code> property is set to <code>false</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Cachestrategies"><a class="anchor" href="#src-196596766_Cachecore-Cachestrategies"></a>Cache strategies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The system caches resources such as JavaScript files and CSS files on
+the author instance by default to make authoring more responsive.
+Disable this behavior when developing. Set the <code>magnolia.develop</code>
+property to <code>true</code> in the default <code>magnolia.properties</code> file. For more
+complex configurations, you need to adjust the configuration under the
+<code>/modules/cache/config/contentCaching/defaultPageCache/cachePolicy</code> node</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Excludingcontentfromcache"><a class="anchor" href="#src-196596766_Cachecore-Excludingcontentfromcache"></a>Excluding content from cache</h3>
+<div class="paragraph">
+<p>There are various reasons why you may wish to exclude content from
+cache. For example, you may have components that query an external data
+source dynamically. The rendered HTML changes even if the content of the
+Magnolia page has not changed. When we say <em>cached content</em> we mean the
+rendered output generated by Magnolia itself, the actual content of the
+page. When you exclude a page from cache you tell Magnolia that it
+should re-render that content every time the page is requested by a
+user.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596766_Cachecore-Configuringanexclusion"><a class="anchor" href="#src-196596766_Cachecore-Configuringanexclusion"></a>Configuring an exclusion</h4>
+<div class="paragraph">
+<p>The first option for excluding content from cache is to configure an
+exclusion in the <a href="#src-196596766_Cachecore-Policyconfiguration">cache
+policy</a>. The example below excludes all pages whose URL starts with
+<code>/.magnolia</code>. This means that AdminCentral pages are not cached.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cache</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentCaching</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cachePolicy</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">shouldBypassVoters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">urls</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">includes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">excludes</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dotMagnolia</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.URIStartsWithVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.magnolia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196596766_Cachecore-Implementingacustomcachepolicy"><a class="anchor" href="#src-196596766_Cachecore-Implementingacustomcachepolicy"></a>Implementing a custom cache policy</h4>
+<div class="paragraph">
+<p>To implement a custom cache policy, implement the CachePolicy interface
+and override the methods you wish to customize. The default policy:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>&#8230;&#8203;determines if a requested page should be cached, retrieved from the
+cache or not cached at all. It is called for every request and takes
+care of any expiration policy, that is if the page should be re-cached.
+The CacheFilter (or any other client component) can determine its
+behavior based on the return CachePolicyResult, which holds both the
+behavior to take and the cache key to use when appropriate.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Configure your custom cache policy class in
+<code>/modules/cache/config/configuration/default/cachepolicy</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596766_Cachecore-Cacheheadernegotiation"><a class="anchor" href="#src-196596766_Cachecore-Cacheheadernegotiation"></a>Cache header negotiation</h4>
+<div class="paragraph">
+<p>Cache header negotiation is a mechanism that allows templates and
+components to influence whether the content should be cached and for how
+long. This mechanism can be used when it is too late to configure an
+exclude, but you do not wish for a page to be cached. Excludes are
+typically configured before it is clear what kinds of pages editors will
+add and what kind of content those pages will have. Cache header
+negotiation allows page components to influence whether the page should
+be cached. You can use cache header negotiation for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Live, dynamic data</strong>: A component that displays dynamic data can
+indicate that the page the component is, or should be, cached only for a
+short duration: 5 minutes, 1 minute, etc.</p>
+</li>
+<li>
+<p><strong>Personalized content</strong>. Components that display personalized content
+can indicate that the page should not be cached at all.</p>
+</li>
+<li>
+<p><strong>Error resolution</strong>: If a component fails to read data from an external
+source and outputs a message to say there is a problem, you may not want
+to cache the error message, at least not for long. Instead, it is better
+if the component makes another attempt at getting the data when the next
+visitor requests the page. When you configure caching in many
+components, remember that the strictest criteria wins. If a page has a
+component that indicates that content should not be cached, the page
+will not be cached regardless of what components say. For example, if
+the live data and personalization components mentioned above are added
+on the same page, the page won&#8217;t be cached at all. A template can
+influence the decision in the same way. A template might want to cache
+the page for 10 minutes because the page displays real-time weather
+updates. If a component on the page wants to be cached for a maximum of
+15 minutes, the template&#8217;s instructions win because they are stricter.
+The page is cached for 10 minutes.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596766_Cachecore-Otheroptions"><a class="anchor" href="#src-196596766_Cachecore-Otheroptions"></a>Other options</h4>
+<div class="paragraph">
+<p>The following options are not best practices but they may help you
+during testing. Don&#8217;t use them as a long-term production strategy.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Dummy URL parameter</strong>: The simplest way to exclude content is to link
+to the relevant page with a dummy query parameter in the URL such as
+<code><a href="http://www.example.com?a=1" class="bare">http://www.example.com?a=1</a></code>. A more subtle solution is to add <code>bypass</code>
+to the <a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">cache
+filter</a>. This ensures that no cache filter is executed on particular
+URLs.</p>
+</li>
+<li>
+<p><strong>Deny URLs in cache policy</strong>: To exclude a URL from caching, add the
+URL to the <code>deny</code> list of the cachePolicy. Entries on the <code>deny</code> list
+are not cached by Magnolia but are taken through the entire filter
+chain, meaning that other policies such as <code>BrowserCachePolicy</code> can
+still be applied. In effect, this solution switches off caching for the
+URL in question.</p>
+</li>
+<li>
+<p><strong>Regular cache flush</strong>: Flush a page from the cache at regular
+intervals. This involves reconfiguring the underlying cache engine.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Settingcacheheaders"><a class="anchor" href="#src-196596766_Cachecore-Settingcacheheaders"></a>Setting cache headers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cache header negotiation uses standard cache response headers. Cache
+needs to be enabled for the site or cache headers have no effect on the
+server side cache. The mechanism is built into the Cache module and
+requires no extra modules. Cache header negotiation is being introduced
+to Magnolia in two phases:</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Incode"><a class="anchor" href="#src-196596766_Cachecore-Incode"></a>In code</h3>
+<div class="paragraph">
+<p>In code, developers set the cache headers in the rendering model of a
+component or a template. This is the current implementation.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example 1</strong>: Setting a cache header in Java code, snippet from
+AbstractFormModel.</p>
+</div>
+<div class="paragraph">
+<p><code>MgnlContext.getWebContext().getResponse().setHeader(<code>"Cache-Control"</code>, <code>"no-cache"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Example 2</strong>: Setting a cache header in a FreeMarker template script.</p>
+</div>
+<div class="paragraph">
+<p><code>${ctx.response.setHeader(<code>"Cache-Control"</code>, <code>"no-cache"</code>)}</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596766_Cachecore-Settingcacheattributesincode"><a class="anchor" href="#src-196596766_Cachecore-Settingcacheattributesincode"></a>Setting cache attributes in code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Available in version 5.3.2 or higher.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596766_Cachecore-Inmemorythreshold"><a class="anchor" href="#src-196596766_Cachecore-Inmemorythreshold"></a>In memory threshold</h3>
+<div class="paragraph">
+<p>This threshold is used to determine if a resource should be cached or
+not according to its size. The default value of 500K was not selected
+randomly, but as a result of testing that shown 98% of resources were
+served as fast from memory as from the repo when exceeding this value.
+This is mainly due to the fact that transport of such amount of data
+offsets time needed for accessing the repository.</p>
+</div>
+<div class="paragraph">
+<p>You can still change this value programmatically, for example, in your
+custom renderer which does time-consuming operations:</p>
+</div>
+<div class="paragraph">
+<p><code>MgnlContext.getWebContext().getRequest().setAttribute(CacheResponseWrapper.ATTRIBUTE_IN_MEMORY_THRESHOLD, CacheResponseWrapper.DEFAULT_THRESHOLD * <code>2</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>You need to set this attribute before anything is written to the output.</p>
+</div>
+<div class="paragraph">
+<p>Cache Browser app</p>
+</div>
+<div class="paragraph">
+<p>Cache Tools app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

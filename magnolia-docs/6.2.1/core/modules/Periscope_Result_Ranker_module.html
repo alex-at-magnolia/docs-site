@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Periscope Result Ranker module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Periscope_Result_Ranker_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/modules/Periscope_Result_Ranker_module.html">master</a>
+    <a class="version is-current" href="Periscope_Result_Ranker_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Periscope_Result_Ranker_module.html">Periscope Result Ranker module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Periscope Result Ranker module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597115"><a class="anchor" href="#src-196597115"></a>Periscope Result Ranker module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">DX Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MLEARN">MLEARN</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.releases/info/magnolia/periscope/magnolia-periscope-result-ranker/">Result
+Ranker</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Periscope_module.html">Periscope module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Periscope Result Ranker module uses neural networks to store
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a> search
+results and rank them by relevance. It extends the Periscope modules.</p>
+</div>
+<div class="paragraph">
+<p>The module learns user preferences to offer better result ranking for
+subsequent searches. By default, search result rankings are stored per
+user. You can
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-changing-the-configuration">change the
+configuration</a> as necessary. For example, you can enable an individual
+ranking for each user or for selected users only. Additionally, you can
+configure the memory size of networks to mitigate possible memory
+consumption issues in large setups.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.periscope.ResultRankerConfiguration</code> allows you to
+entirely disable the ranking of Find Bar search results. You may want to
+use this configuration to improve memory usage or resolve potential
+compatibility issues with DL4J libraries.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597115_PeriscopeResultRankermodule-Installation"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-Installation"></a>Installation</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following
+dependency to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">webapp</a>.
+All other necessary dependencies will be added automatically.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.periscope&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-periscope-result-ranker&lt;/artifactId&gt;
+  &lt;version&gt;1.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597115_PeriscopeResultRankermodule-Configuration"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The module comes with the following default configuration:</p>
+</div>
+<div class="paragraph">
+<p>periscope-result-ranker/src/main/resources/periscope-result-ranker/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>outputUnits: ``10000</code></p>
+</div>
+<div class="paragraph">
+<p><code>rankingNetworkStorageStrategy:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.periscope.rank.ml.jcr.JcrUsernameNetworkStorageStrategy`</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597115_PeriscopeResultRankermodule-Properties"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-Properties"></a>Properties</h4>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 28.9999%;">
+<col style="width: 71.0001%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>outputUnits</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <em>default is `10000`</em></p>
+</div>
+<div class="paragraph">
+<p>The memory size of neural networks.</p>
+</div>
+<div class="paragraph">
+<p>The result-ranking system requires memory (heap space) and disk space
+per unit for each user (local ranking) or instance (global ranking). You
+can adjust the size of the memory used per unit to mitigate possible
+memory consumption issues (see
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-memory-size">Result
+Ranker memory size</a>).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rankingNetworkStorageStrategy</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The result-ranking memory strategy.</p>
+</div>
+<div class="paragraph">
+<p>The default strategy stores result rankings per user. Other strategies
+are possible (see
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-strategy">Result
+Ranker strategy</a>).</p>
+</div>
+<div class="paragraph">
+<p>To adjust the strategy, set the <code>class</code> property accordingly.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong>, <em>default is
+`info.magnolia.periscope.rank.ml.jcr.JcrUsernameNetworkStorageStrategy`</em></p>
+</div>
+<div class="paragraph">
+<p>Other possible values must be a subtype of
+<code>info.magnolia.periscope.rank.ml.RankingNetworkStorageStrategy</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597115_PeriscopeResultRankermodule-Understandingconfigurationtooptimizememoryfootprint"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-Understandingconfigurationtooptimizememoryfootprint"></a>Understanding configuration to optimize memory footprint</h3>
+<div class="paragraph">
+<p>The Periscope Result Ranker module creates a certain number of memory
+units. The total number of memory units depends on the
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-strategy">Result
+Ranker strategy</a>. The size of a single memory unit is based on the
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-memory-size">Result
+Ranker memory size</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597115_PeriscopeResultRankermodule-anc-ranker-strategyResultRankerstrategy"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-strategyResultRankerstrategy"></a><span id="src-196597115_PeriscopeResultRankermodule-anc-ranker-strategy " class="confluence-anchor-link">#</span>#Result Ranker strategy</h4>
+<div class="paragraph">
+<p>You can set the Result Ranker strategy via the <code>class</code> property of the
+<code>rankingNetworkStorageStrategy</code> property.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196597115_PeriscopeResultRankermodule-User-basedranking"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-User-basedranking"></a>User-based ranking</h5>
+<div class="paragraph">
+<p>This default configuration enables result ranking for each user
+operating on the author instance. With this strategy, the module creates
+one neural network for each user. The memory footprint grows with every
+new user working on an author instance.</p>
+</div>
+<div class="paragraph">
+<p>Class:
+<code>info.magnolia.periscope.rank.ml.jcr.JcrUsernameNetworkStorageStrategy</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597115_PeriscopeResultRankermodule-Role-basedranking"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-Role-basedranking"></a>Role-based ranking</h5>
+<div class="paragraph">
+<p>With this strategy, only users with the role <code>superuser</code> or <code>ranker</code>
+have local (per-user) ranking memory. Any other users work with the
+global (per-instance) ranking memory.</p>
+</div>
+<div class="paragraph">
+<p>Class:
+<code>info.magnolia.periscope.rank.ml.jcr.JcrUserRoleNetworkStorageStrategy</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To keep the memory footprint for the Result Ranker on a minimum level,
+use the <code>JcrUserRoleNetworkStorageStrategy</code> class and do <em>not</em> assign
+the role <code>ranker</code>. Make sure that you have only a few users with the
+<code>superuser</code> role.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597115_PeriscopeResultRankermodule-Customranking"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-Customranking"></a>Custom ranking</h5>
+<div class="paragraph">
+<p>You can develop your own custom result-ranking strategy. To do this,
+create a custom class that implements RankingNetworkStorageStrategy and
+set the <code>class</code> property in the configuration accordingly.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597115_PeriscopeResultRankermodule-anc-ranker-memory-sizeResultRankermemorysize"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-memory-sizeResultRankermemorysize"></a><span id="src-196597115_PeriscopeResultRankermodule-anc-ranker-memory-size " class="confluence-anchor-link">#</span>#Result Ranker memory size</h4>
+<div class="paragraph">
+<p>You can globally configure the memory size of neural networks. To do so,
+adjust the <code>outputUnits</code> value. The default memory size is <code>10000</code>; this
+value represents the maximum number of Find Bar search results that can
+be stored and ranked in networks.</p>
+</div>
+<div class="paragraph">
+<p>Large networks can store more results but use up more memory, while
+small networks consume less memory but might lose stored results to free
+up additional memory. Results are removed from networks based on a
+least-recently-used policy. This ensures that frequent results remain in
+memory irrespective of when they were added to the networks. You may
+want to configure the memory size of networks depending on the
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-ranker-strategy">Result
+Ranker strategy</a>.</p>
+</div>
+<div class="paragraph">
+<p>When you change the <code>outputUnits</code> value (e.g. from <code>10000</code> to <code>1000</code>),
+you need to clean up the JCR <code>rankings</code> workspace. Otherwise, an error
+will appear when you select a search result. This is because the
+networks loaded into memory were created using a configuration that no
+longer exists, rendering any stored results obsolete. When you change
+the <code>outputUnits</code> value, make sure that you delete any stored networks
+and log into the Magnolia instance again to regenerate networks using
+the new configuration (see
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-clearing-ranker-memory-data">Clearing
+Result Ranker memory</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597115_PeriscopeResultRankermodule-anc-changing-the-configurationChangingconfiguration"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-anc-changing-the-configurationChangingconfiguration"></a><span id="src-196597115_PeriscopeResultRankermodule-anc-changing-the-configuration " class="confluence-anchor-link">#</span>#Changing configuration</h3>
+<div class="paragraph">
+<p>The Periscope Result Ranker module configuration resides in
+<code>periscope-result-ranker/src/main/resources/periscope-result-ranker/config.yaml</code>.
+The module is deployed as a JAR file, but you can change the
+configuration by one of the following means:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-196597115_PeriscopeResultRankermodule-anc-config-change-by-hotfix">Creating
+a node in the JCR <code>resources</code> workspace (hotfix)</a></p>
+</li>
+<li>
+<p><a href="#src-196597115_PeriscopeResultRankermodule-anc-config-change-by-decorator">Using
+a decorator file</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The configuration is read by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">Resources
+module</a>. Magnolia scans the following for a resource (in this particular
+order):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>JCR <code>resources</code> workspace (hotfix)</p>
+</li>
+<li>
+<p>Light module</p>
+</li>
+<li>
+<p>Classpath (JAR file)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Java bean representation of the selected resource is then stored in
+the registry. The object in the registry may get decorated if a
+decorator exists for that configuration.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Storing configuration in the JCR <code>resources</code> workspace is useful for
+hotfixes and patches. This way, an administrator can create an urgent
+fix and publish it in the Resource Files app. In the long run, we
+recommend using file-based decoration.</p>
+</div>
+<div class="paragraph">
+<p>The configuration data is read on startup and after it has been changed.
+The actual data is stored in the module&#8217;s configuration registry. You
+can look it up using the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
+app</a> in <strong>modules</strong> &gt; <strong>periscope-result-ranker</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597115/6-1-0-Periscope_Result_Ranker_module-definitionAppCheck.png" alt="images/download/attachments/196597115/6-1-0-Periscope_Result_Ranker_module-definitionAppCheck.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you change the <code>outputUnits</code> value, you must delete all existing
+network data (see
+<a href="#src-196597115_PeriscopeResultRankermodule-anc-clearing-ranker-memory-data">Clearing
+Result Ranker memory</a>).</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597115_PeriscopeResultRankermodule-anc-config-change-by-hotfixChangingconfigurationwithresourceshotfix"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-anc-config-change-by-hotfixChangingconfigurationwithresourceshotfix"></a><span id="src-196597115_PeriscopeResultRankermodule-anc-config-change-by-hotfix " class="confluence-anchor-link">#</span>#Changing configuration with resources hotfix</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources#Resources-ResourceFilesapp">Resource
+Files app</a>.</p>
+</li>
+<li>
+<p>Browse to and select <strong>periscope-result-ranker</strong> &gt; <strong>config.yaml</strong>.</p>
+</li>
+<li>
+<p>In the action bar, click <strong>Edit file</strong>. The Resource Files app creates a
+copy of the currently used configuration and stores it in the JCR
+<code>resources</code> workspace.</p>
+</li>
+<li>
+<p>Edit the file as necessary.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597115/6-1-0-Periscope_Result_Ranker_module-create-config-hotfix.png" alt="images/download/attachments/196597115/6-1-0-Periscope_Result_Ranker_module-create-config-hotfix.png"></span></p>
+</div>
+</li>
+<li>
+<p>Click <strong>Save changes</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597115_PeriscopeResultRankermodule-anc-config-change-by-decoratorChangingconfigurationusingdecoration"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-anc-config-change-by-decoratorChangingconfigurationusingdecoration"></a><span id="src-196597115_PeriscopeResultRankermodule-anc-config-change-by-decorator " class="confluence-anchor-link">#</span>#Changing configuration using decoration</h4>
+<div class="paragraph">
+<p>With decoration, you can adapt the currently used configuration (whether
+it is from a light module, hotfix or JAR file). To learn more about
+decoration, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration#Definitiondecoration-Definitiondecorationconcept">Definition
+decoration concept</a>.</p>
+</div>
+<div class="paragraph">
+<p>A decorator file can reside in any Magnolia Maven module or any light
+module (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration#Definitiondecoration-Definitiondecoratorfilelocation">Definition
+decorator file location</a>). In the example below, we will create a
+decorator file in a light module named <code>test-module</code>.</p>
+</div>
+<div class="paragraph">
+<p>Within the light module, create the file
+<code>decorations/periscope-result-ranker/config.yaml</code>.</p>
+</div>
+<div class="paragraph">
+<p>&lt;magnolia.resources.dir&gt;/test-module/decorations/periscope-result-ranker/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>outputUnits: ``1000</code></p>
+</div>
+<div class="paragraph">
+<p><code>rankingNetworkStorageStrategy:</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>class</code>: info.magnolia.periscope.rank.ml.jcr.JcrUserRoleNetworkStorageStrategy`</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597115_PeriscopeResultRankermodule-anc-clearing-ranker-memory-dataClearingResultRankermemory"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-anc-clearing-ranker-memory-dataClearingResultRankermemory"></a><span id="src-196597115_PeriscopeResultRankermodule-anc-clearing-ranker-memory-data " class="confluence-anchor-link">#</span>#Clearing Result Ranker memory</h3>
+<div class="paragraph">
+<p>The Periscope Result Ranker module stores all user-based, role-based,
+and custom rankings in the JCR <code>rankings</code> workspace. The module creates
+one node for each memory unit.</p>
+</div>
+<div class="paragraph">
+<p>Nodes for local (per-user) rankings are named after user names. Nodes
+for global (per-instance) rankings are named
+<code>default-neural-network-rankings</code>.</p>
+</div>
+<div class="paragraph">
+<p>To clear the Result Ranker memory:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR app</a>.</p>
+</li>
+<li>
+<p>Switch to the <code>rankings</code> workspace.</p>
+</li>
+<li>
+<p>Select the nodes you want to delete.</p>
+</li>
+<li>
+<p>In the action bar, click <strong>Delete item</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597115/6-1-0-Periscope_Result_Ranker_module-deleteRankingDataWithJcrBrowser.png" alt="images/download/attachments/196597115/6-1-0-Periscope_Result_Ranker_module-deleteRankingDataWithJcrBrowser.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597115_PeriscopeResultRankermodule-AddingsupportforLinuxarmhfandppc64le"><a class="anchor" href="#src-196597115_PeriscopeResultRankermodule-AddingsupportforLinuxarmhfandppc64le"></a>Adding support for Linux armhf and ppc64le</h3>
+<div class="paragraph">
+<p>The Periscope Result Ranker module supports the 64-bit versions of
+Linux, Mac OS and Windows by default. If you use Magnolia in one of the
+environments below, you must add the corresponding dependencies
+manually.</p>
+</div>
+<div class="paragraph">
+<p><strong>Linux armhf</strong></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>groupId</code>&gt;org.bytedeco.javacpp-presets&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>artifactId</code>&gt;openblas&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>classifier</code>&gt;linux-armhf&lt;/<code>classifier</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Linux ppc64le</strong></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>groupId</code>&gt;org.bytedeco.javacpp-presets&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>artifactId</code>&gt;openblas&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>classifier</code>&gt;linux-ppc64le&lt;/<code>classifier</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>groupId</code>&gt;org.nd4j&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>artifactId</code>&gt;nd4j-native&lt;/<code>artifactId</code>&gt; `</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>classifier</code>&gt;linux-ppc64le&lt;/<code>classifier</code>&gt; `</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependency</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Periscope module</p>
+</div>
+<div class="paragraph">
+<p>Personalization module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
