@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Custom tasks - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Custom_tasks.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/modules/Custom_tasks.html">master</a>
+    <a class="version is-current" href="Custom_tasks.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Custom_tasks.html">Custom tasks - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Custom tasks - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Workflow_module.html">Workflow module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597482"><a class="anchor" href="#src-196597482"></a>Custom tasks</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>From jBPM
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMDomainSpecificProcesses.html">documentation</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>jBPM provides the ability to create and use domain-specific task nodes
+in your business processes. This simplifies development when you&#8217;re
+creating business processes that contain tasks dealing with other
+technical systems.</p>
+</div>
+<div class="paragraph">
+<p>When using jBPM, we call these domain-specific task nodes "custom work
+items" or (custom) "service nodes". There are two separate aspects to
+creating and using custom work items:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adding a node with a custom work item to a process definition using
+the Eclipse editor or jBPM designer.</p>
+</li>
+<li>
+<p>Creating a custom work item handler that the jBPM engine will use when
+executing the custom work item in a running process.</p>
+</li>
+</ul>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Custom tasks are also called as <em>domain specific tasks</em>. The technical
+term is <em>work item</em> and its <em>work item handler</em>.</p>
+</div>
+<div class="paragraph">
+<p>A work item is an XML node inside your process definition. The
+respective work item handler is a Java class that implements the
+<code>org.kie.api.runtime.process.WorkItemHandler</code> interface. This document
+explains how to integrate and configure a work item handler and how to
+use the handler to execute a work item.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597482_Customtasks-Workitemhandlerregistry"><a class="anchor" href="#src-196597482_Customtasks-Workitemhandlerregistry"></a>Work item handler registry</h3>
+<div class="paragraph">
+<p>The mapping between a work item and its handler is based on the work
+item name. The name has to be added to the jBPM Environment when
+starting the engine. In Magnolia we use an observed registry for work
+item handlers. The registry is under the <code>workItemHandlers</code> node in
+module configuration. Custom handlers can be configured in any module
+using YAML or JCR.</p>
+</div>
+<div class="paragraph">
+<p>Here are the default work item handlers registered in Magnolia:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597482/default-work-item-handlers.png" alt="images/download/attachments/196597482/default-work-item-handlers.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The expanded <code>rejectNotification</code> handler shows the properties needed to
+register a handler:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>class</code>: The definition class of a work item is similar to any other
+definition class in Magnolia. The fields you make accessible using
+getters and setters on the definition are accessible to the
+implementation by injecting the definition into it. This is one
+possibility to access data from within your handler in the process.
+Another option is passing a parameter map when launching the process.</p>
+</li>
+<li>
+<p><code>implementationClass</code>: An implementation class executes the work item.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597482_Customtasks-Decorators"><a class="anchor" href="#src-196597482_Customtasks-Decorators"></a>Decorators</h3>
+<div class="paragraph">
+<p>Do not re-implement similar mechanisms over and over again. Introduce
+decorators for your handlers when you need some common functionality in
+handlers. A decorator allows you to wrap an existing work item handler
+implementation into another handler. Both handlers must implement the
+same <code>WorkItemHandler</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>Decorator configuration is similar to handler configuration. A decorator
+needs a definition and an implementation configured. When the handler is
+loaded into Magnolia during system startup, it looks for a <code>decorator</code>
+node in the configuration. If the node is found the original handler is
+wrapped into the decorator by passing the original handler as parameter.
+Also passed are the decorator definition and any other objects
+accessible through injection.</p>
+</div>
+<div class="paragraph">
+<p>Error handling is an example of decoration. A technical error during
+execution throws an exception:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597482/work-item-handler-decorator-configuration.png" alt="images/download/attachments/196597482/work-item-handler-decorator-configuration.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597482_Customtasks-Errorhandling"><a class="anchor" href="#src-196597482_Customtasks-Errorhandling"></a>Error handling</h3>
+<div class="paragraph">
+<p>Error handling in process execution is not a trivial topic. Start
+implementing error handling the moment you start modeling your process.
+You have to know what can go wrong and you need to decide what to do in
+case of errors. As a rule of thumb, exception and error handling should
+be handled inside your process and be isolated from the rest of the
+system.</p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMExceptionManagement.html">jBPM
+Exception Management</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597482_Customtasks-Errorhandlingusingadecorator"><a class="anchor" href="#src-196597482_Customtasks-Errorhandlingusingadecorator"></a>Error handling using a decorator</h4>
+<div class="paragraph">
+<p>As described in
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMExceptionManagement.html#d0e15421">jBPM
+Technical Exceptions</a>, you can use decorators for handling errors in
+custom tasks where an error is an exception thrown during the execution
+of a task. <code>ThrowExceptionHandlerDecorator</code> is a sample implementation
+of a decorator for wrapping any kind of task. The decorator catches any
+kind of exception thrown during <code>execute</code> and <code>abort</code> phase of the
+handler and wraps the exception into a
+<code>WorkItemHandlerRuntimeException</code>.</p>
+</div>
+<div class="paragraph">
+<p>The exception can then be caught as part of the process using an <em>Error
+Boundary Event</em>, letting the process take care of error handling. The
+advantage of this approach is that you clearly see where errors can
+happen and the associated handling is evident at process level. You can
+re-use the pattern for other custom tasks that may fail.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597482/Screen_Shot_2014-06-19_at_17.00.35.png" alt="images/download/attachments/196597482/Screen_Shot_2014-06-19_at_17.00.35.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Apart from using Magnolia&#8217;s own exception decorator you can also use the
+decorators provided by jBPM such as <code>SignallingTaskHandlerDecorator</code> or
+<code>LoggingTaskHandlerDecorator</code>. Set the <code>HandlerDecoratorDefinition</code> in
+the <code>class</code> property and the decorator implementation in the
+<code>implementationClass</code> property in your configuration.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597482_Customtasks-Errorhandlerdecoratorconfiguration"><a class="anchor" href="#src-196597482_Customtasks-Errorhandlerdecoratorconfiguration"></a>Error handler decorator configuration</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597482/error-handler-decorator-configuration.png" alt="images/download/attachments/196597482/error-handler-decorator-configuration.png"></span></p>
+</div>
+<div class="paragraph">
+<p><code>ThrowExceptionHandlerDecorator</code> properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>class</code></p>
+</li>
+<li>
+<p><code>implementationClass</code>: The actual implementation of the decorator</p>
+</li>
+<li>
+<p><code>log</code>: Whether the caught exception should be logged. Default is
+<code>false</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597482_Customtasks-Modelinganerror"><a class="anchor" href="#src-196597482_Customtasks-Modelinganerror"></a>Modeling an error</h4>
+<div class="paragraph">
+<p>Define the error at the process level in the BPMN2 editor:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597482/Screen_Shot_2014-06-19_at_17.07.13.png" alt="images/download/attachments/196597482/Screen_Shot_2014-06-19_at_17.07.13.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Reference the error from the Error Boundary Event:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597482/Screen_Shot_2014-07-08_at_13.48.35.png" alt="images/download/attachments/196597482/Screen_Shot_2014-07-08_at_13.48.35.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>In jBPM 6 there are some technical restrictions in using Error Boundary
+Events which should be solved in upcoming releases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The exception is not mapped to the <em>Target</em>. You cannot retrieve the
+exception later on in the process.</p>
+</li>
+<li>
+<p>In theory you should not have to use the <em>FQN</em> of the exception, but
+rather define a human readable name of the error.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597482_Customtasks-Asynchronousexecution"><a class="anchor" href="#src-196597482_Customtasks-Asynchronousexecution"></a>Asynchronous execution</h3>
+<div class="paragraph">
+<p>As process execution runs synchronously you will run into problems
+executing long-running tasks as part of the process. There are different
+solutions to approach this problem. See
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMAsyncExecution.html">jBPM:
+Concurrency and asynchronous execution</a> before proceeding.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597482_Customtasks-Executingyourworkitemhandlerasynchronously"><a class="anchor" href="#src-196597482_Customtasks-Executingyourworkitemhandlerasynchronously"></a>Executing your work item handler asynchronously</h4>
+<div class="paragraph">
+<p>Instead of spawning a thread manually inside your work item handler as
+outlined in
+<a href="http://docs.jboss.org/jbpm/v6.0.1/userguide/jBPMAsyncExecution.html#d0e16493">jBPM:
+Asynchronous execution</a>, you can extend Magnolia&#8217;s
+<code>AsyncWorkItemHandler</code> which takes advantage of the asynchronous Quartz
+scheduler for launching long running tasks. The benefit of extending
+this abstract handler is that you can model the error handling the same
+way as in <a href="#src-196597482_Customtasks-Modelinganerror">Modeling an
+error</a> using an <em>Error Boundary Event</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597482_Customtasks-Implementation"><a class="anchor" href="#src-196597482_Customtasks-Implementation"></a>Implementation</h4>
+<div class="paragraph">
+<p>In your implementer class, extend <code>AsyncWorkItemHandler</code> and implement
+the abstract methods that take care of creating Quartz related objects
+such as <code>Trigger</code> and <code>JobDetail</code>. See
+<a href="http://quartz-scheduler.org/documentation">Quartz documentation</a> for
+details. (Magnolia currently bundles Quartz 1.8)</p>
+</div>
+<div class="paragraph">
+<p>info.magnolia.module.workflow.jbpm.workitem.handler.AsyncWorkItemHandler</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>abstract<code> </code>class<code> AsyncWorkItemHandler </code>implements`</code> WorkItemHandler {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> AsyncWorkItemHandler(&#8230;&#8203;) {`</p>
+</div>
+<div class="paragraph">
+<p>`      &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>abstract</code> String getJobName(WorkItem workItem);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>abstract</code> String getHandlerName();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>abstract</code> JobDetail createJobDetail(String jobName, WorkItem workItem);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>abstract</code> Trigger createTrigger(String jobName, WorkItem workItem);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597482_Customtasks-Errorhandlinginasynchronousexecution"><a class="anchor" href="#src-196597482_Customtasks-Errorhandlinginasynchronousexecution"></a>Error handling in asynchronous execution</h4>
+<div class="paragraph">
+<p>Error handling during asynchronous execution is done by registering a
+Quartz <code>JobListener</code> to the scheduler. The listener handles a failed job
+in the same way an error decorator handles errors. In case you need to
+change the default behavior, override the
+<code>AsyncWorkItemHandler#getListener(String jobName)</code> method in your
+implementation.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597482_Customtasks-Tutorial"><a class="anchor" href="#src-196597482_Customtasks-Tutorial"></a>Tutorial</h3>
+<div class="paragraph">
+<p>We have put together a
+<a href="Creating_a_custom_workflow_process.html">step-by-step tutorial</a> on
+how to model, implement and load custom work item handlers.</p>
+</div>
+<div class="paragraph">
+<p>Creating a custom workflow process</p>
+</div>
+<div class="paragraph">
+<p>User tasks</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

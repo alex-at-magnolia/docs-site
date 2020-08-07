@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Hello-cloud - a development tutorial - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Hello-cloud---a-development-tutorial.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../cloud/Hello-cloud---a-development-tutorial.html">master</a>
+    <a class="version is-current" href="Hello-cloud---a-development-tutorial.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Hello-cloud---a-development-tutorial.html">Hello-cloud - a development tutorial - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Hello-cloud - a development tutorial - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321117"><a class="anchor" href="#src-215321117"></a>Hello-cloud - a development tutorial</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
+in the cloud</a></p>
+</li>
+<li>
+<p><a href="Cockpit.html">Cockpit</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/cloudy_.gif" alt="images/download/attachments/215321117/cloudy_.gif"></span>
+In this tutorial you will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In <a href="#src-215321117_Hello-cloud-adevelopmenttutorial-A">Part A</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Write code using only a few
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+CLI">Magnolia CLI</a>
+commands to create a functional Magnolia light module containing a page
+template and a component template. The resulting FreeMarker
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">template
+scripts</a>, the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/YAML">YAML</a>-formatted
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition">template
+definitions</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">dialog
+definitions</a> will appear in the light-modules directory.</p>
+</li>
+<li>
+<p>Test the code on a Magnolia bundle running locally.</p>
+</li>
+<li>
+<p>Send the code to the cloud-based Magnolia Git repository, using the
+commit and push commands.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>In <a href="#src-215321117_Hello-cloud-adevelopmenttutorial-B">Part B</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Install the code in cloud-based Magnolia environments via the
+Cockpit.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-215321117_Hello-cloud-adevelopmenttutorial-Prerequisites"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>Before you start, make sure you have:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Setting-up-a-Magnolia-bundle-for-local-development.html#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingthelocalMagnoliabundle">Installed
+and started a Magnolia bundle for local development on your machine</a></p>
+</li>
+<li>
+<p><a href="Setting-up-a-new-environment.html">Set up</a> the Integration, UAT,
+and Live environments in the Cockpit.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321117_safe-id-SGVsbG8tY2xvdWQtYWRldmVsb3BtZW50dHV0b3JpYWwtQSlPbnlvdXJsb2NhbG1hY2hpbmVB"><a class="anchor" href="#src-215321117_safe-id-SGVsbG8tY2xvdWQtYWRldmVsb3BtZW50dHV0b3JpYWwtQSlPbnlvdXJsb2NhbG1hY2hpbmVB"></a><span id="src-215321117_Hello-cloud-adevelopmenttutorial-A " class="confluence-anchor-link">#</span>#A) On your local machine</h3>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-1.Writenewcode"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-1.Writenewcode"></a>1. Write new code</h4>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Createalight-moduledirectory"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Createalight-moduledirectory"></a>Create a light-module directory</h5>
+<div class="paragraph">
+<p>Open a shell and create the following <code>light-modules</code> directory (Mac
+path usage is shown):</p>
+</div>
+<div class="paragraph">
+<p><code>/Users/<code>&lt;username&gt;</code>/dev/repo/mgnl-cloud-packages/magnolia-docs/light-modules</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Createalightmodule"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Createalightmodule"></a>Create a light module</h5>
+<div class="paragraph">
+<p>Change to the <code>light-modules</code> directory and execute the
+<code>create-light-module</code> command to create a light module called
+<code>hello-cloud</code>:</p>
+</div>
+<div class="paragraph">
+<p>`mgnl create-light-module hello-cloud `</p>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI creates the following structure in the directory:</p>
+</div>
+<div class="paragraph">
+<p>~/dev/repo/mgnl-cloud-packages/magnolia-docs/light-modules/hello-cloud</p>
+</div>
+<div class="paragraph">
+<p><code>hello-cloud/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── hello-cloud-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Createapagetemplate"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Createapagetemplate"></a>Create a page template</h5>
+<div class="paragraph">
+<p>Now <code>cd</code> into the newly created <code>hello-cloud</code> directory and execute the
+following command to create a page, giving the page the name
+<code>cloudy-page</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>cd`</code> hello-cloud/`</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-page cloudy-page</code></p>
+</div>
+<div class="paragraph">
+<p>All going well, Magnolia CLI creates three files:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 31%;">
+<col style="width: 69%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Page+definition">Page
+template definition</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>light-modules/hello-cloud/templates/pages/cloudy-page.yaml</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">template
+script</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>light-modules/hello-cloud/templates/pages/cloudy-page.ftl</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">dialog
+definition</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>light-modules/hello-cloud/dialogs/pages/cloudy-page.yaml</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In a real-world situation you would edit these files, for instance to
+apply a stylesheet. In this tutorial we will skip this step to simplify.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Createacomponent"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Createacomponent"></a>Create a component</h5>
+<div class="paragraph">
+<p>In the shell, make sure that you are still in the <code>hello-cloud</code>
+directory. In a Mac or Linux shell, you can use the <code>pwd</code> command to see
+the path to the current directory:</p>
+</div>
+<div class="paragraph">
+<p><code>pwd</code></p>
+</div>
+<div class="paragraph">
+<p><code>/Users/<code>&lt;username&gt;</code>/dev/repo/mgnl-cloud-packages/magnolia-docs/light-modules/hello-cloud</code></p>
+</div>
+<div class="paragraph">
+<p>Run the following command to create a component, naming it
+<code>bluesky-component</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl create-component bluesky-component</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI creates three additional files:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+definition">Component
+template definition</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>light-modules/hello-cloud/templates/components/bluesky-component.yaml</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">template
+script</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>light-modules/hello-cloud/templates/components/bluesky-component.ftl</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">dialog
+definition</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>light-modules/hello-cloud/hello-cloud/dialogs/components/bluesky-component.yaml</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Again, in a real-world situation you would edit and refine the component
+even further, but we will not do that in this tutorial.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Makethecomponentavailabletothepagetemplate"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Makethecomponentavailabletothepagetemplate"></a>Make the component available to the page template</h5>
+<div class="paragraph">
+<p>We want to make sure that the new component can be used in the new page
+template. Execute the following Magnolia CLI command to make the
+<code>bluesky-component</code> available in <code>cloudy-page</code> in the <code>main</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Area+definition">area</a>.</p>
+</div>
+<div class="paragraph">
+<p>Before executing the command, have a look a these files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>light-modules/hello-cloud/templates/pages/cloudy-page.yaml</code></p>
+</li>
+<li>
+<p><code>light-modules/hello-cloud/templates/pages/cloudy-page.ftl</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia CLI will modify these files when you run the
+<code>mgnl add-availability `command from the `hello-cloud</code> directory:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl add-availability components/bluesky-component pages/cloudy-page`</code>@main`</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Please note that Magnolia CLI may have inserted the <code>area</code> directive at
+the very end of the .ftl file. Edit <code>cloudy-page.ftl</code> and move the
+directive to the position that immediately follows the <code>&lt;h1/&gt;</code> tag:</p>
+</div>
+<div class="paragraph">
+<p>Click here to see how to edit cloudy-page.ftl</p>
+</div>
+<div class="paragraph">
+<p>See line 15 in the example below. The line number in your file can be
+different, but make sure you place the <code>area</code> directive after the &lt;h1/&gt;
+tag.</p>
+</div>
+<div class="paragraph">
+<p>cloudy-page.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE html&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>html</code> <code>xml:lang</code>=<code>"${cmsfn.language()}"</code> <code>lang</code>=<code>"${cmsfn.language()}"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [@cms.page /]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>meta</code> <code>charset</code>=<code>"utf-8"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>meta</code> <code>name</code>=<code>"viewport"</code> <code>content</code>=<code>"width=device-width, initial-scale=1"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>title</code>&gt;${content.windowTitle!content.title!}&lt;/<code>title</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>meta</code> <code>name</code>=<code>"description"</code> <code>content</code>=<code>"${content.description!"</code>"}" /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>meta</code> <code>name</code>=<code>"keywords"</code> <code>content</code>=<code>"${content.keywords!"</code>"}" /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>head</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>body</code> <code>class</code>=<code>"cloudy-page ${cmsfn.language()}"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>div</code> <code>class</code>=<code>"container "</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>h1</code>&gt;cloudy-page works!&lt;/<code>h1</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    [@cms.area name="main"/]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>div</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>body</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>html</code>&gt;</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-MakeanMTKcomponentavailabletothepagetemplate"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-MakeanMTKcomponentavailabletothepagetemplate"></a>Make an MTK component available to the page template</h5>
+<div class="paragraph">
+<p>Use the <a href="https://wiki.magnolia-cms.com/display/DOCS62/MTK+module">MTK
+module</a> (Magnolia Templating Kit module) to make the components, such as
+<code>HTML</code>, available in the <code>cloudy-page</code> of the <code>hello-cloud</code> light
+module. To make the component available to the <code>cloudy-page</code> template in
+the <code>main</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Area+definition">area</a> ,
+execute the following command from the <code>hello-cloud</code> directory:</p>
+</div>
+<div class="paragraph">
+<p><code>mgnl add-availability mtk:components/html pages/cloudy-page`</code>@main`</p>
+</div>
+<div class="paragraph">
+<p>The command will modify the
+<code>light-modules/hello-cloud/templates/pages/cloudy-page.yaml</code> file.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-2.TestthecodeA2"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-2.TestthecodeA2"></a><span id="src-215321117_Hello-cloud-adevelopmenttutorial-A2 " class="confluence-anchor-link">#</span>#2. Test the code</h4>
+<div class="paragraph">
+<p>Now it&#8217;s time to test the new template on your local Magnolia instance.
+Make sure your local Magnolia is running.</p>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-LogintoyourlocalMagnoliainstallation"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-LogintoyourlocalMagnoliainstallation"></a>Login to your local Magnolia installation</h5>
+<div class="paragraph">
+<p>Use your favorite web browser to open the URL
+<code><a href="http://localhost:8080/magnoliaAuthor/" class="bare">http://localhost:8080/magnoliaAuthor/</a></code> . The first request may take
+some time if Magnolia has to finish installing its modules. When you see
+the login screen, enter <code>superuser</code> for both the user name and password:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/loginAuthor_crop_v2.png" alt="images/download/attachments/215321117/loginAuthor_crop_v2.png" width="600"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Createanewpagewiththecloudy-pagetemplate"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Createanewpagewiththecloudy-pagetemplate"></a>Create a new page with the cloudy-page template</h5>
+<div class="paragraph">
+<p>Search for and open the Pages app. Add a page. Name it <code>home</code> and select
+the <code>cloudy-page</code> template:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/add_home_page_crop.png" alt="images/download/attachments/215321117/add_home_page_crop.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Open <code>cloudy-page</code> for editing:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/cloudypage_2edit.png" alt="images/download/attachments/215321117/cloudypage_2edit.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Add a component to the MAIN area. Make sure that both the
+<code>bluesky-component</code> and <code>HTML</code> components are available :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/add_component_crop.png" alt="images/download/attachments/215321117/add_component_crop.png" width="600"></span></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-215321117_Hello-cloud-adevelopmenttutorial-Findhello-cloudintheResourceFilesapp"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-Findhello-cloudintheResourceFilesapp"></a>Find hello-cloud in the Resource Files app</h5>
+<div class="paragraph">
+<p>Type "open resources app" in the Find Bar or click the app launcher icon
+and then the <strong>Resource Files</strong> app. In the tree you can see the
+<code>hello-cloud</code> light module with all of its resources. The filesystem
+icon (
+<span class="image"><img src="../_images/images/download/attachments/215321117/origin-icon-file-system.gif" alt="images/download/attachments/215321117/origin-icon-file-system.gif"></span>
+) in the Origin column will indicate that all of the resources in the
+module are stored on your local filesystem.<br>
+<br>
+<span class="image"><img src="../_images/images/download/attachments/215321117/treeview_crop.png" alt="images/download/attachments/215321117/treeview_crop.png" width="600"></span></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-3.Sendthecodetothecloud-basedMagnoliarepository"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-3.Sendthecodetothecloud-basedMagnoliarepository"></a>3. Send the code to the cloud-based Magnolia repository</h4>
+<div class="paragraph">
+<p>When you are satisfied with your new <code>hello-cloud</code> light module, push
+the changes to the cloud-based Magnolia instance using Git commands .
+Before you can push, you must add and then commit your changes to Git.</p>
+</div>
+<div class="paragraph">
+<p>Open the shell and <code>cd</code> to the root directory of the Git repository:</p>
+</div>
+<div class="paragraph">
+<p><code>cd<code> </code>/Users/<code>&lt;username&gt;</code>/dev/repo/mgnl-cloud-packages/magnolia-docs/</code></p>
+</div>
+<div class="paragraph">
+<p>Add the folder of the new light module to the Git index:</p>
+</div>
+<div class="paragraph">
+<p><code>git <code>add</code> light<code>-</code>modules<code>/</code>hello<code>-</code>cloud`</code>/`</p>
+</div>
+<div class="paragraph">
+<p>Commit the changes with a meaningful commit message:</p>
+</div>
+<div class="paragraph">
+<p>` git commit -m <code>`"Add light-module 'hello-cloud'"</code></p>
+</div>
+<div class="paragraph">
+<p>With this command you have just created a new entry in Git&#8217;s history.
+The entry is sent to the Magnolia repository in the next step.</p>
+</div>
+<div class="paragraph">
+<p>Send your code to the cloud-based Magnolia repository with the Git
+<code>push</code> command:</p>
+</div>
+<div class="paragraph">
+<p><code>git push</code></p>
+</div>
+<div class="paragraph">
+<p>If the push is successful, you see some something like this:</p>
+</div>
+<div class="paragraph">
+<p><code>Counting objects: 11, <code>done</code>.</code></p>
+</div>
+<div class="paragraph">
+<p><code>Delta compression using up to 4 threads.</code></p>
+</div>
+<div class="paragraph">
+<p><code>Compressing objects: 100% (8<code>/8</code>), <code>done</code>.</code></p>
+</div>
+<div class="paragraph">
+<p><code>Writing objects: 100% (11<code>/11</code>), 1.40 KiB | 1.40 MiB<code>/s</code>, <code>done</code>.</code></p>
+</div>
+<div class="paragraph">
+<p><code>Total 11 (delta 1), reused 4 (delta 0)</code></p>
+</div>
+<div class="paragraph">
+<p><code>To https:<code>//git</code>.magnolia-cms.com<code>/scm/odc/magnolia-docs</code>.git</code></p>
+</div>
+<div class="paragraph">
+<p>`   79b2c82..ef4fabc  master &#8594; master`</p>
+</div>
+<div class="paragraph">
+<p>Finally, run the <code>git status</code> command. You should get something like
+this:</p>
+</div>
+<div class="paragraph">
+<p><code>On branch master</code></p>
+</div>
+<div class="paragraph">
+<p><code>Your branch is up-to-date with <code>'origin/master'</code>.</code></p>
+</div>
+<div class="paragraph">
+<p><code>nothing to commit, working tree clean</code></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/cloudy_.gif" alt="images/download/attachments/215321117/cloudy_.gif"></span>
+Great! You&#8217;ve successfully concluded the first part of the tutorial in
+which you have created a Magnolia light module and pushed it to your
+Magnolia Git repository. In the next part of the tutorial you will be
+working in the Magnolia cockpit.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321117_safe-id-SGVsbG8tY2xvdWQtYWRldmVsb3BtZW50dHV0b3JpYWwtQilJbnRoZU1hZ25vbGlhY29ja3BpdEI"><a class="anchor" href="#src-215321117_safe-id-SGVsbG8tY2xvdWQtYWRldmVsb3BtZW50dHV0b3JpYWwtQilJbnRoZU1hZ25vbGlhY29ja3BpdEI"></a><span id="src-215321117_Hello-cloud-adevelopmenttutorial-B " class="confluence-anchor-link">#</span>#B) In the Magnolia cockpit</h3>
+<div class="paragraph">
+<p>The Magnolia cockpit guides you through the next few actions.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Use the credentials you received during the
+<a href="Onboarding-to-Magnolia-Cloud.html">onboarding</a> process to log into
+the cockpit and the cloud author instance</p>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-4.Installadevelopmentsnapshotcontainingthenewlightmodule"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-4.Installadevelopmentsnapshotcontainingthenewlightmodule"></a>4. Install a development snapshot containing the new light module</h4>
+<div class="paragraph">
+<p>In this section you make the most recent changes (the latest commit to
+master) available in the Magnolia Integration environment by installing
+a snapshot.</p>
+</div>
+<div class="paragraph">
+<p>Reminder: We assume that you have already
+<a href="Setting-up-a-new-environment.html">set up</a> the Integration, UAT, and
+Live environments in the Cockpit.</p>
+</div>
+<div class="paragraph">
+<p>Log in to the Magnolia cockpit and click <strong>Show package overview</strong> &gt;
+<strong>Install an update</strong> in the <strong>Installed releases</strong> section towards the
+bottom of the page.</p>
+</div>
+<div class="paragraph">
+<p>On the <strong>Install an update</strong> page click <strong>Install a development snapshot</strong>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/tutorial4a.png" alt="images/download/attachments/215321117/tutorial4a.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>A <a href="Installing-a-snapshot.html">two-step wizard</a> guides you through
+how to retrieve your latest commit from the Git repository and install
+it in the Integration environment. The <strong>Master</strong> option in the wizard
+includes the hello-cloud light module you committed to Git in step 3 of
+this tutorial.</p>
+</div>
+<div class="paragraph">
+<p>Once you have completed the steps in the wizard, look at the Integration
+environment in the <strong>Package overview</strong> page. Note the green tick before
+the instance name and the <strong>Info</strong> column that shows <em>master</em>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/tutorial4b.png" alt="images/download/attachments/215321117/tutorial4b.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>At this point you can check that your module updates are present in the
+installed snapshot by going to the Magnolia author instance via the
+<strong>Edit content</strong> link in the Integration section. The state of the light
+modules should now be identical in both your local Magnolia instance and
+the cloud-based Integration environment.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-5.Defineareleasewiththehello-cloudmodule"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-5.Defineareleasewiththehello-cloudmodule"></a>5. Define a release with the hello-cloud module</h4>
+<div class="paragraph">
+<p>You now wrap the snapshot carrying the module updates into an
+installable release. In fact, all of the development snapshots installed
+in the Integration environment since the last release are wrapped into a
+single release, but in this tutorial there is only one snapshot to wrap.
+Click <strong>Install an update</strong> in the <strong>Installed releases</strong> section.</p>
+</div>
+<div class="paragraph">
+<p>On the <strong>Install an update</strong> page click <strong>Define a new release</strong>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/tutorial5a.png" alt="images/download/attachments/215321117/tutorial5a.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Another <a href="Defining-a-release.html">three-step wizard</a> guides you
+through how to wrap the snapshot containing the hello-cloud light module
+into a release.</p>
+</div>
+<div class="paragraph">
+<p>Once you have completed the steps in the wizard, look at the Integration
+environment in the Package overview page. Note that the release is
+assigned a version number that is displayed in the Integration
+environment section . You will refer to this version number later on
+when installing in environments.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/tutorial5b.png" alt="images/download/attachments/215321117/tutorial5b.png" width="600"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-6.InstallthenewreleaseintheUATenvironment"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-6.InstallthenewreleaseintheUATenvironment"></a>6. Install the new release in the UAT environment</h4>
+<div class="paragraph">
+<p>After you have defined the release, you install it in the UAT and Live
+environments. Start with the installation in the UAT environment.</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Install an update</strong> in the <strong>Installed releases</strong> section.</p>
+</div>
+<div class="paragraph">
+<p>On the <strong>Install an update</strong> page click <strong>Install a release</strong>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/tutorial6a.png" alt="images/download/attachments/215321117/tutorial6a.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Another <a href="Installing-a-release-in-UAT.html">four-step wizard</a> guides
+you through how to install the release to the UAT or Live environment.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Choose the release version you have just defined and the <strong>UAT</strong> option in
+this step of the tutorial.</p>
+</div>
+<div class="paragraph">
+<p>Once you have completed the steps in the wizard, look at the UAT
+environment in the Package overview page. Note that the same release
+version is now displayed in both the Integration and UAT environment
+sections.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-7.InstallthereleaseinLive"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-7.InstallthereleaseinLive"></a>7. Install the release in Live</h4>
+<div class="paragraph">
+<p>This is the last step in the whole cycle. Installing a release in the
+Live environment is almost identical to installing in UAT.</p>
+</div>
+<div class="paragraph">
+<p>In <strong>Package overview</strong> click <strong>Install an update</strong> and on the next screen
+choose <strong>Install a release</strong> again.</p>
+</div>
+<div class="paragraph">
+<p>This time in the <a href="Installing-a-release-in-Live.html">four-step
+wizard</a>, choose the release version you have just installed in the UAT
+environment and the <strong>Live</strong> option.</p>
+</div>
+<div class="paragraph">
+<p>Once you have completed the steps in the wizard, look at the Live
+environment in the Package overview page. Note that the same release
+version is now displayed in all the environment sections.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321117_Hello-cloud-adevelopmenttutorial-8.ChecktheresultoftheinstallationinPackageoverview"><a class="anchor" href="#src-215321117_Hello-cloud-adevelopmenttutorial-8.ChecktheresultoftheinstallationinPackageoverview"></a>8. Check the result of the installation in Package overview</h4>
+<div class="paragraph">
+<p>In <strong>Package overview</strong> all of the environments should now be running your
+release version.</p>
+</div>
+<div class="paragraph">
+<p>You can now open the author instance in the Live environment and create
+a new page using the <code>hello-cloud</code> template in the very same way as in
+<a href="#src-215321117_Hello-cloud-adevelopmenttutorial-A2">step 2 above</a>
+(<strong>Test the code</strong>). The difference is that the author and public
+instances are now running as part of your cloud-based Magnolia
+installation.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Use the credentials you received during the
+<a href="Onboarding-to-Magnolia-Cloud.html">onboarding</a> process to log into
+the cloud author instance</p>
+</div>
+<div class="paragraph">
+<p>For example, here we have added a page named "home" using the
+<code>cloudy-page</code> template, and added the <code>bluesky-component</code> and <code>HTML</code>
+components to the main area (with an image and some text):</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/pages-open-hello-cloudy-page.png" alt="images/download/attachments/215321117/pages-open-hello-cloudy-page.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>If you
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Publishing+and+activation">publish</a>
+the page (and in this example, the image), it looks like this in the
+Public instance :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/published-hello-cloudy-page.png" alt="images/download/attachments/215321117/published-hello-cloudy-page.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321117/cloudy_.gif" alt="images/download/attachments/215321117/cloudy_.gif"></span>
+Congratulations, you have completed this tutorial!
+<span class="image"><img src="../_images/images/download/attachments/215321117/cloudy_.gif" alt="images/download/attachments/215321117/cloudy_.gif"></span></p>
+</div>
+<div class="paragraph">
+<p>Have a look at the rest of the <a href="Magnolia-Cloud.html">Magnolia Cloud</a>
+or dig further into light module development by learning about
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+front-end+development">front-end
+development in Magnolia</a>.</p>
+</div>
+<div class="paragraph">
+<p>Cloud user management</p>
+</div>
+<div class="paragraph">
+<p>Cockpit</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

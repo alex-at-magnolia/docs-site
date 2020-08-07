@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cockpit - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Cockpit.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../cloud/Cockpit.html">master</a>
+    <a class="version is-current" href="Cockpit.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Cockpit.html">Cockpit - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Cockpit - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321133"><a class="anchor" href="#src-215321133"></a>Cockpit</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-cockpit-concepts.html">Magnolia cockpit concepts</a> -
+Explains how the different elements mentioned in this page fit together.</p>
+</li>
+<li>
+<p><a href="Understanding-cockpit-notifications.html">Understanding cockpit
+notifications</a></p>
+</li>
+<li>
+<p><a href="Understanding-activity-logs.html">Understanding activity logs</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Magnolia cockpit is the central point of access to all functionality
+provided by Magnolia in the cloud. This page gives you a brief overview
+of the main screens in the cockpit and what actions can be performed.</p>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Loggingin"><a class="anchor" href="#src-215321133_Cockpit-Loggingin"></a>Logging in</h3>
+<div class="paragraph">
+<p>A URL for the cockpit and login details for all the users you requested
+are provided by Magnolia when you subscribe to Magnolia&#8217;s cloud
+offering. Use this information to access the cockpit.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_login.png" alt="images/download/attachments/215321133/mnow_login.png" width="500"></span></p>
+</div>
+<div class="paragraph">
+<p>Once you have logged in, you can manage your user settings by clicking
+on your name in the top right corner.</p>
+</div>
+<div class="paragraph">
+<p>You are logged out automatically after 30 minutes of inactivity for
+security reasons.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-anc-sub-package-overviewSubscriptionpackages"><a class="anchor" href="#src-215321133_Cockpit-anc-sub-package-overviewSubscriptionpackages"></a><span id="src-215321133_Cockpit-anc-sub-package-overview " class="confluence-anchor-link">#</span>#Subscription packages</h3>
+<div class="paragraph">
+<p>Welcome! The first page you will see upon logging in is the subscription
+packages page. It shows the package created for you by Magnolia and its
+status.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_site_overview.png" alt="images/download/attachments/215321133/mnow_site_overview.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>From this page, you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>View your package and its current status. Click on the plus sign icon
+to see details about the status of the package.</p>
+</li>
+<li>
+<p>Click <strong>Show package *overview</strong>* to access the
+<a href="#src-215321133_Cockpit-Packageoverview">package overview</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When Magnolia is conducting a support or maintenance operation requiring
+downtime, you see a message indicating that your subscription package is
+temporarily in
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Support+for+Magnolia+cloud+customers#SupportforMagnoliacloudcustomers-anc-cloud-maintenance">maintenance
+mode</a> here.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Notifications"><a class="anchor" href="#src-215321133_Cockpit-Notifications"></a>Notifications</h3>
+<div class="paragraph">
+<p>The top banner in the cockpit displays notifications sent to you by
+Magnolia Helpdesk.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/cloud-cockpit-banner.png" alt="images/download/attachments/215321133/cloud-cockpit-banner.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>There are three types of notification:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Red – Critical notifications</p>
+</li>
+<li>
+<p>Yellow – Warning notifications</p>
+</li>
+<li>
+<p>Blue – Information notifications</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click the notifications box to access the
+<a href="Understanding-cockpit-notifications.html">cockpit notifications</a> and
+manage your messages.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/cloud-cockpit-notifications.png" alt="images/download/attachments/215321133/cloud-cockpit-notifications.png" width="600"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Packageoverview"><a class="anchor" href="#src-215321133_Cockpit-Packageoverview"></a>Package overview</h3>
+<div class="paragraph">
+<p>Click <strong>Show package overview</strong> in the subscription packages page to
+access the package overview page. This page is the access point for all
+the package administration actions for the cloud-based cloud Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/cloud-cockpit-package-overview-page.png" alt="images/download/attachments/215321133/cloud-cockpit-package-overview-page.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>From this page you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#src-215321133_Cockpit-Activitylog">Access the activity log</a></p>
+</li>
+<li>
+<p><a href="#src-215321133_Cockpit-Environmentsoverview">Manage your
+environments</a></p>
+</li>
+<li>
+<p><a href="#src-215321133_Cockpit-Installupdates">Install updates</a></p>
+</li>
+<li>
+<p><a href="#src-215321133_Cockpit-People">View a list of stakeholders</a></p>
+</li>
+<li>
+<p><a href="#src-215321133_Cockpit-Additionalinformation">View additional
+information</a> about the GIT repository linked to the subscription
+package.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-215321133_Cockpit-Activitylog"><a class="anchor" href="#src-215321133_Cockpit-Activitylog"></a>Activity log</h4>
+<div class="paragraph">
+<p>The <a href="Understanding-activity-logs.html">activity log</a> displays a log
+of all major actions triggered from the cockpit providing a single
+location to see who did what when.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/5-7-1-cloud-activity-log.png" alt="images/download/attachments/215321133/5-7-1-cloud-activity-log.png" width="600"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Environmentsoverview"><a class="anchor" href="#src-215321133_Cockpit-Environmentsoverview"></a>Environments overview</h3>
+<div class="paragraph">
+<p>The package overview page provides an overview of all the
+<em><a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-Environment">Environments</a></em>
+and
+<em><a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-Space">Spaces</a></em>
+that have been set up for the package.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_env-overview.png" alt="images/download/attachments/215321133/mnow_env-overview.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>A Magnolia package typically consists of three environments:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Live</strong> - Where the tested and approved version of the content product
+is delivered to customers.</p>
+</li>
+<li>
+<p><strong>UAT</strong> (User Acceptance Testing) - Where the next version of the
+product is made available to editors and managers for testing and
+review.</p>
+</li>
+<li>
+<p><strong>Integration</strong> - Where developers try out ideas and test solutions
+before giving internal users access.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As features are developed, the configuration is tested and moved from
+Integration, through UAT and finally to Live.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Depending on your subscription package, the environments available to
+you may differ.</p>
+</div>
+<div class="paragraph">
+<p>For example, you may have only a single Live environment available, or
+only a UAT and a Live environment. In these cases, you can
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Installing+a+snapshot">install
+a development snapshot</a> directly in the Live or in the UAT environment
+respectively.</p>
+</div>
+<div class="paragraph">
+<p>From the environments section, you can
+<a href="Managing-environments-using-the-Magnolia-cockpit.html">Manage your
+environments</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Managing-cloud-log-levels.html">Manage your package logs</a></p>
+</li>
+<li>
+<p><a href="Restarting-instances.html">Restart an instance</a></p>
+</li>
+<li>
+<p><a href="Viewing-cloud-database-information.html">View RDS information</a></p>
+</li>
+<li>
+<p><a href="Setting-up-a-new-environment.html">Set up a new environment</a><br>
+If no environment of a given type exists, you can directly create one.
+If one already exists, you have to tear it down first.</p>
+</li>
+<li>
+<p><a href="Tearing-down-an-environment.html">Tear down an environment</a></p>
+</li>
+<li>
+<p><a href="Configuring-domain-redirect-rules.html">Configure domain redirect
+rules</a></p>
+</li>
+<li>
+<p><a href="Protecting-environments.html">Protect environments</a></p>
+</li>
+<li>
+<p><a href="Backing-up-and-restoring.html">Back up</a></p>
+</li>
+<li>
+<p><a href="Recovering-the-Live-environment.html">Restore</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/cloud-manage-environments-all-available.png" alt="images/download/attachments/215321133/cloud-manage-environments-all-available.png" width="600"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-215321133_Cockpit-Eachenvironment"><a class="anchor" href="#src-215321133_Cockpit-Eachenvironment"></a>Each environment</h4>
+<div class="paragraph">
+<p>Each environment consists of one or several
+<em><a href="https://wiki.magnolia-cms.com/display/DOCS62/Glossary#Glossary-Space">spaces</a></em>,
+which separate the environment into larger blocks containing public or
+author instances of Magnolia. By default, each environment has an Author
+space and a Public space.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_each-env.png" alt="images/download/attachments/215321133/mnow_each-env.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>For a given environment, you
+can:[<mark>src-215321133_Cockpit-anc-edit-content-auth-instance]</mark>#</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>View site</strong> – View the public instance of the site, which must be
+named home.</p>
+</li>
+<li>
+<p><strong>Edit content</strong> – Access the author instance of the package to edit
+content.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can see information about the release or snapshot installed in your
+environment in the columns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When the release or snapshot was created</p>
+</li>
+<li>
+<p>When it was installed</p>
+</li>
+<li>
+<p>Release or snapshot name</p>
+</li>
+<li>
+<p>Git commit ID</p>
+</li>
+<li>
+<p>Description</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can see the status of your environment from the status icon beside
+the instance name (click the + icon to display the name):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Icon</th>
+<th class="tableblock halign-left valign-top">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../_images/images/download/thumbnails/215321133/cloud-ok.gif" alt="images/download/thumbnails/215321133/cloud-ok.gif" height="25"></span><br>
+<span class="caption">green tick mark</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment running</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../_images/images/download/thumbnails/215321133/cloud-warning.gif" alt="images/download/thumbnails/215321133/cloud-warning.gif" height="25"></span><br>
+<span class="caption">yellow exclamation mark</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment rebooting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../_images/images/download/thumbnails/215321133/cloud-error.gif" alt="images/download/thumbnails/215321133/cloud-error.gif" height="25"></span><br>
+<span class="caption">red cross</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Environment stopped</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Installedreleases"><a class="anchor" href="#src-215321133_Cockpit-Installedreleases"></a>Installed releases</h3>
+<div class="paragraph">
+<p>The package overview page provides information about what has been
+installed in your package in the Installed releases section.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_site_release.png" alt="images/download/attachments/215321133/mnow_site_release.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>You can view time-stamped releases and
+<a href="#src-215321133_Cockpit-Installupdates">install updates</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-215321133_Cockpit-Installupdates"><a class="anchor" href="#src-215321133_Cockpit-Installupdates"></a>Install updates</h4>
+<div class="paragraph">
+<p>The <strong>Install an update</strong> page is the access point for developers to
+retrieve their work and propagate it through the different environments
+and testing stages before putting it into production.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_install-update.png" alt="images/download/attachments/215321133/mnow_install-update.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>See the following pages for information about how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Installing-a-snapshot.html">Install a development snapshot</a></p>
+</li>
+<li>
+<p><a href="Defining-a-release.html">Define a new release</a></p>
+</li>
+<li>
+<p>Install a release</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Installing-a-release-in-UAT.html">in UAT</a></p>
+</li>
+<li>
+<p><a href="Installing-a-release-in-Live.html">in Live</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="Copying-content-for-testing.html">Copy content for testing</a></p>
+</li>
+<li>
+<p><a href="Upgrading-Magnolia-in-the-cloud.html">Change the version of
+Magnolia</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Users"><a class="anchor" href="#src-215321133_Cockpit-Users"></a>Users</h3>
+<div class="paragraph">
+<p>The package overview page displays a list of stakeholders and their
+contact details in the <strong>Users</strong> (previously <em>People</em>) section. Here, you
+find Owners, Developers, Subscribers, and Magnolia Support contacts.
+Owners and Developers have Cockpit access and all of the privileges that
+come along with this. However, Subscribers do not have Cockpit access
+but simply receive notifications (such as RDS and maintenance emails) in
+relation to the Cockpit. See the <a href="Managing-subscribers.html">Managing
+subscribers</a> page for more information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321133_Cockpit-Additionalinformation"><a class="anchor" href="#src-215321133_Cockpit-Additionalinformation"></a>Additional information</h3>
+<div class="paragraph">
+<p>Information related with the subscription package is displayed in the
+<strong>Additional information</strong> section of the package overview page.</p>
+</div>
+<div class="paragraph">
+<p>A <strong>Logs view URL</strong> link to <a href="Monitoring-and-logging.html">the
+Datadog service for your subscription package</a> is provided.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>GIT repository</strong> URL for the subscription package is provided: when
+you <a href="Developing-for-Magnolia-in-the-cloud.html">develop locally</a>, you
+must push your configuration changes to this GIT repository so they can
+be installed in the Integration environment.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321133/mnow_add-info.png" alt="images/download/attachments/215321133/mnow_add-info.png" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p>Hello-cloud - a development tutorial</p>
+</div>
+<div class="paragraph">
+<p>Magnolia cockpit concepts</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

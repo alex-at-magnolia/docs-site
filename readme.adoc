@@ -10,18 +10,25 @@ To view the site locally:
 
 . Clone the repository to your machine.
 . Navigate to the `docs-site` folder you just cloned.
-. Navigate to `build/site/`.
+. Navigate to `./public/`.
 . Open `index.html` with your browser.
 
 ---
 
 To pick up the latest changes:
 
-. From the `docs-site` folder, run: `antora playbook.yml --fetch`.
+. Check you are on the *master branch* with `git branch`.
+. Run `git pull`.
+. Navigate to the `docs-site` folder and run: `antora playbook.yml --fetch`.
 +
 NOTE: You will see plenty of `WARNING` messages while it's building - ignore for now. 
 +
 
 [start=2]
 . Navigate to `./public/`.
++
+TIP: You can also run `start public/index.html` from the `./` of the repo as well.
++
+
+[start=3]
 . Open `index.html` with your browser.

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>UI framework and development pattern changes in Magnolia 6 - Magnolia :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/UI_framework_and_development_pattern_changes_in_Magnolia_6.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/apps/UI_framework_and_development_pattern_changes_in_Magnolia_6.html">master</a>
+    <a class="version is-current" href="UI_framework_and_development_pattern_changes_in_Magnolia_6.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="UI_framework_and_development_pattern_changes_in_Magnolia_6.html">UI framework and development pattern changes in Magnolia 6 - Magnolia</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">UI framework and development pattern changes in Magnolia 6 - Magnolia</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Developing_an_app.html">Developing an app</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596360"><a class="anchor" href="#src-196596360"></a>UI framework and development pattern changes in Magnolia 6</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page describes some architectural approaches adopted for the UI
+framework in Magnolia 6.x, which—when compared to the UI framework used
+in Magnolia 5.7—constitutes a shift in applying the model-view-presenter
+(MVP) pattern. Below, we explain—especially to developers who write
+custom UI components in Java—how Magnolia UI components use the MVP
+development pattern for UI components.</p>
+</div>
+<div class="paragraph">
+<p>In the <em>Magnolia 6 UI</em> framework, the <em>view</em> is a first-class citizen
+that consumes definitions and, if required, creates a <em>presenter</em>. This
+contrasts with the approach used in the <em>Magnolia 5 UI</em> framework in
+which the presenter is typically the driver and the view is based on it.
+In the <em>Magnolia 6 UI</em> framework:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It is simpler to assemble UI components.</p>
+</li>
+<li>
+<p>Classes are preferred over interfaces.</p>
+</li>
+<li>
+<p>There are fewer abstractions and therefore less code.</p>
+</li>
+<li>
+<p>There are fewer dependencies between parent and child components.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-TheMagnolia5andtheMagnolia6UIframeworks"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-TheMagnolia5andtheMagnolia6UIframeworks"></a>The Magnolia 5 and the Magnolia 6 UI frameworks</h3>
+<div class="paragraph">
+<p>The Magnolia UI project version 6.x contains both the UI framework used
+in Magnolia 5.7 (referred to as <em>Magnolia 5 UI</em>) and the <em>Magnolia 6 UI</em>
+framework. You can use either framework.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-Magnolia5UI"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-Magnolia5UI"></a>Magnolia 5 UI</h4>
+<div class="paragraph">
+<p>In Magnolia 6, <em>Magnolia 5 UI</em> has been relocated to the
+<code>magnolia-ui-framework-compatibility</code> module. Many Magnolia apps still
+rely on this old framework. The fully qualified class names have not
+changed, which ensures runtime compatibility for older custom components
+based on the classes from the <em>Magnolia 5 UI</em> framework.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-Magnolia6UI"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-Magnolia6UI"></a>Magnolia 6 UI</h4>
+<div class="paragraph">
+<p>In the <em>Magnolia 6 UI</em> framework, the core components of the UI are
+located in the <code>magnolia-ui-framework</code> module inherited from Magnolia
+5.7. The new <code>magnolia-ui-framework-jcr</code> module is also part of
+<em>Magnolia 6 UI</em>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-UImodules"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-UImodules"></a>UI modules</h4>
+<div class="paragraph">
+<p>For more information on the <em>Magnolia 6 UI</em> modules, refer to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/UI+module">UI module</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596360_safe-id-VUlmcmFtZXdvcmthbmRkZXZlbG9wbWVudHBhdHRlcm5jaGFuZ2VzaW5NYWdub2xpYTYtVGhlbW9kZWwtdmlldy1wcmVzZW50ZXIoTVZQKXBhdHRlcm4"><a class="anchor" href="#src-196596360_safe-id-VUlmcmFtZXdvcmthbmRkZXZlbG9wbWVudHBhdHRlcm5jaGFuZ2VzaW5NYWdub2xpYTYtVGhlbW9kZWwtdmlldy1wcmVzZW50ZXIoTVZQKXBhdHRlcm4"></a>The model-view-presenter (MVP) pattern</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596360/6-0_ui-framework-mvp_01.png" alt="images/download/attachments/196596360/6-0_ui-framework-mvp_01.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-UnderstandingtheMVPpattern"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-UnderstandingtheMVPpattern"></a>Understanding the MVP pattern</h4>
+<div class="paragraph">
+<p>Model-view-presenter is a pattern commonly used in UI development. Its
+main purpose is a separation of concerns for the view, the presenter and
+the model.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>view</strong> primarily describes the layout of the UI and declares the
+handlers of the relevant user action events such as clicks, key presses
+and drag &amp; drops.</p>
+</li>
+<li>
+<p>The <strong>presenter</strong> acts as a delegate of the view when executing the
+business logic of user events, for example, when interacting with the
+back end / DB or fetching the data that needs to be displayed in the
+view. Normally, each view would use its own presenter and would not show
+it to the outside world. In some cases, when the view is simple enough,
+no presenter may be needed at all.</p>
+</li>
+<li>
+<p>The <strong>model</strong> keeps the state of the view such as the current selection,
+filters or toggles. Both the view and the presenter may have access to
+the model and may mutate it arbitrarily. However, when it comes to
+modifications done by the presenter, it is important to resolve
+<em>synchronization</em> of such view changes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The MVP pattern helps write UI code in a clean and maintainable way.</p>
+</div>
+<div class="paragraph">
+<p>In the case of Magnolia, where flexibility is very important, MVP opens
+up possibilities to augment or customize the UI by overriding only one
+of the three elements.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-MVPintheMagnoliaUIframework"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-MVPintheMagnoliaUIframework"></a>MVP in the Magnolia UI framework</h4>
+<div class="paragraph">
+<p>Here is a list of specific goals we are trying to achieve with the MVP
+pattern in the Magnolia UI codebase:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Using definitions</em>: the user interface should be as configurable as
+possible so that all three MVP elements would consume a definition
+(form, dialog or content view) and produce a UI component.</p>
+</li>
+<li>
+<p>Keeping views <em>back-end-agnostic</em> as much as possible: the business
+logic related to the back end, in most cases to JCR, should be
+replaceable with similar implementations for other back ends. This
+typically boils down to overriding a presenter.</p>
+</li>
+<li>
+<p><em>Reusability</em>: we want to let the developers use the parts of our UI
+in various custom contexts and compositions.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We have been using the MVP pattern already in Magnolia 5. In Magnolia 6,
+we improve the way we use the UI development patterns. The objective is
+to better fulfill the requirements listed above and produce a codebase
+that is easier to customize and maintain.</p>
+</div>
+<div class="paragraph">
+<p>The next section describes the shift in approach between Magnolia 5 and
+Magnolia 6.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-anc-approach-shift]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-Theshiftinapproach"><a class="anchor" href="#src-196596360_UIframeworkanddevelopmentpatternchangesinMagnolia6-Theshiftinapproach"></a>The shift in approach</h3>
+<div class="paragraph">
+<p>We have moved the focus from the presenter to the view. When developing,
+you concentrate more on the view. When assembling components, you
+assemble views within the code of a view.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_safe-id-VUlmcmFtZXdvcmthbmRkZXZlbG9wbWVudHBhdHRlcm5jaGFuZ2VzaW5NYWdub2xpYTYtVGhlTWFnbm9saWE1VUlmcmFtZXdvcms6dGhlcHJlc2VudGVyaXN0aGVkcml2ZXI"><a class="anchor" href="#src-196596360_safe-id-VUlmcmFtZXdvcmthbmRkZXZlbG9wbWVudHBhdHRlcm5jaGFuZ2VzaW5NYWdub2xpYTYtVGhlTWFnbm9saWE1VUlmcmFtZXdvcms6dGhlcHJlc2VudGVyaXN0aGVkcml2ZXI"></a>The Magnolia 5 UI framework: the presenter is the driver</h4>
+<div class="paragraph">
+<p>In the <em>Magnolia 5</em> <em>UI</em> framework, the presenter is the driver and you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Let it consume the definition.</p>
+</li>
+<li>
+<p>Build a view based on it.</p>
+</li>
+<li>
+<p>Produce child presenters, if any.</p>
+</li>
+<li>
+<p>Have these child presenters generate their views and attach them to
+the view.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In this presenter-centric approach, the following can be observed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A presenter typically has a <code>start(&#8230;&#8203;)</code> method with the definitions,
+the event bus and the initial state as input:<br>
+<code>TreeView TreePresenter#start(workbenchDefinition, eventBus, viewTypeName, contentConnector)</code><br>
+Besides being bulky and slightly confusing, these methods need to be
+called externally, forcing the lifecycle of a particular view/presenter
+to be managed outside. For example, a workbench has to call the start
+methods of <code>TreePresenter</code> and <code>ListPresenter</code>; otherwise, they would
+not be populated properly.</p>
+</li>
+<li>
+<p>A view typically interacts with a presenter over <em>listener-like</em>
+interfaces, which results in additional boilerplate code. In other
+words, after creating a view, a presenter would subscribe to view events
+as an observer.</p>
+</li>
+<li>
+<p><em>A parent presenter is aware of the sub-presenters</em>. Moreover, it has
+access to the sub-views, which adds too much responsibility to it.</p>
+</li>
+<li>
+<p>Component <em>composition</em> takes place at the presenter level. This is
+counter-intuitive compared to composition happening at the view level
+since views are essentially synonymous with components.</p>
+</li>
+<li>
+<p>The view state is <em>managed by the presenter</em> and is shared primarily
+via events, causing synchronization to be a problem—effectively, only
+notifications (messages) about the changes are sent, after which every
+part of the UI involved finds it difficult to store the current state.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596360/6-0_ui-framework-mvp-mgnl5.png" alt="images/download/attachments/196596360/6-0_ui-framework-mvp-mgnl5.png"></span></p>
+</div>
+<div class="paragraph">
+<p><code>WorkbenchPresenter</code> is involved in the management of nearly all the
+other related parts. Among other things, the presenter:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creates sub-presenters.</p>
+</li>
+<li>
+<p>Feeds them configuration (definitions).</p>
+</li>
+<li>
+<p>Gathers sub-views and arranges them into one view (<code>WorkbenchView</code>).</p>
+</li>
+<li>
+<p>Orchestrates the selection state.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.ui.workbench.WorkbenchStatusBarPresenter</code> (see
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ui.pub/browse/magnolia-ui-framework-compatibility/src/main/java/info/magnolia/ui/workbench/WorkbenchStatusBarPresenter.java">source
+code on git</a>)</p>
+</li>
+<li>
+<p><code>info.magnolia.ui.contentapp.browser.BrowserSubApp</code> (see
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ui.pub/browse/magnolia-ui-framework-compatibility/src/main/java/info/magnolia/ui/contentapp/browser/BrowserSubApp.java">source
+code on git</a>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596360_safe-id-VUlmcmFtZXdvcmthbmRkZXZlbG9wbWVudHBhdHRlcm5jaGFuZ2VzaW5NYWdub2xpYTYtVGhlTWFnbm9saWE2VUlmcmFtZXdvcms6dGhldmlld2lzdGhlZmlyc3QtY2xhc3NjaXRpemVu"><a class="anchor" href="#src-196596360_safe-id-VUlmcmFtZXdvcmthbmRkZXZlbG9wbWVudHBhdHRlcm5jaGFuZ2VzaW5NYWdub2xpYTYtVGhlTWFnbm9saWE2VUlmcmFtZXdvcms6dGhldmlld2lzdGhlZmlyc3QtY2xhc3NjaXRpemVu"></a>The Magnolia 6 UI framework: the view is the first-class citizen</h4>
+<div class="paragraph">
+<p>In the view-centric approach, you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Let the view consume the definition and populate itself from it.</p>
+</li>
+<li>
+<p>Have the view create and own the presenter as well as interact with it
+directly without additional interfaces.</p>
+</li>
+<li>
+<p>Compose the UI at the view level.</p>
+</li>
+<li>
+<p>Never let presenters interact with each other.</p>
+</li>
+<li>
+<p>Let the views manage the lifecycle of their children as well as create
+and destroy them deliberately.</p>
+</li>
+<li>
+<p>Have the views share configuration and resources among themselves
+without coding overhead.</p>
+</li>
+<li>
+<p>Assign each view its own component provider bound to the view&#8217;s UI
+key.</p>
+</li>
+<li>
+<p>Associate each view with a storage space in an HTTP session where the
+view state can be kept.</p>
+</li>
+<li>
+<p>Provide convenient means for managing and sharing the view state (also
+known as view contexts).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596360/6-0_ui-framework-mvp-mgnl6.png" alt="images/download/attachments/196596360/6-0_ui-framework-mvp-mgnl6.png"></span></p>
+</div>
+<div class="paragraph">
+<p><code>WorkbenchView</code> takes a definition, directly configures it and passes
+content view definitions on to <code>ContentView</code>, which takes care of its
+own presenters. The main reason why this separation is now possible is
+that, instead of manual state synchronization, we can do it through
+special tools based on session, scoping and IoC.</p>
+</div>
+<div class="paragraph">
+<p>Example classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.ui.contentapp.browser.StatusBar</code> (see
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ui.pub/browse/magnolia-ui-framework/src/main/java/info/magnolia/ui/contentapp/browser/StatusBar.java">source
+code on git</a>)</p>
+</li>
+<li>
+<p><code>info.magnolia.ui.contentapp.browser.Workbench</code> (see
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ui.pub/browse/magnolia-ui-framework/src/main/java/info/magnolia/ui/contentapp/browser/Workbench.java">source
+code on git</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Customizing an app</p>
+</div>
+<div class="paragraph">
+<p>Events</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

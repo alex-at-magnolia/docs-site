@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blossom module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Blossom_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/modules/Blossom_module.html">master</a>
+    <a class="version is-current" href="Blossom_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Blossom_module.html">Blossom module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Blossom module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596754"><a class="anchor" href="#src-196596754"></a>Blossom module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/BLOSSOM">BLOSSOM</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/modules/magnolia-module-blossom/">Blossom</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.4.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Blossom module makes the
+<a href="http://projects.spring.io/spring-framework">Spring Framework</a> available
+for Magnolia. Blossom enables you to create editing components that
+display a high level of dynamic behavior. These components can be used
+by editors to create truly interactive web pages. For example, the
+Spring Framework application stack makes it easier to connect to
+business systems, so that they fetch the information that you want to
+present in your pages. As Blossom is built on the Spring Web MVC,
+familiarity with this framework will ensure a smooth experience working
+with the module.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-KeyBlossomfunctionality"><a class="anchor" href="#src-196596754_Blossommodule-KeyBlossomfunctionality"></a>Key Blossom functionality</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Annotation based API that builds on the Spring Web MVC. The Blossom
+API automatically detects annotated classes and registers them for use
+in Magnolia. To do this, simply add @Template to your controllers and
+they are ready to be used as building blocks by editors.</p>
+</li>
+<li>
+<p>Exposes controllers as templates and components, allowing you to use
+the controller for building a model. Useful if you need to call a web
+service for information that you need to present or if you need to read
+information from a database.</p>
+</li>
+<li>
+<p>Template based. Having templates (pages, areas and components) backed
+by an MVC framework has the benefit of providing natural web development
+business logic.</p>
+</li>
+<li>
+<p>Enable the re-use of previously created controllers.</p>
+</li>
+<li>
+<p>Allows you to create dialogs with code rather than configuration. This
+has many benefits:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>you can populate the dialog at runtime with options detected at
+runtime:</p>
+</li>
+<li>
+<p>you can obtain dialogs from the repository and place into your source
+control (CVS, SVN, GIT).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Components can be executed in front of Magnolia. This means that it
+can choose to do a redirect and skip page rendering. This is very
+useful, for instance, if you have a form that on post should either
+present an error message or do a redirect.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1CbG9zc29tbW9kdWxldmVyc2lvbnNhbmRyZWxlYXNlcyxjb21wYXRpYmlsaXR5d2l0aE1hZ25vbGlh"><a class="anchor" href="#src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1CbG9zc29tbW9kdWxldmVyc2lvbnNhbmRyZWxlYXNlcyxjb21wYXRpYmlsaXR5d2l0aE1hZ25vbGlh"></a>Blossom module versions and releases, compatibility with Magnolia</h3>
+<div class="paragraph">
+<p>Please see the separate <a href="Blossom_module_release_notes.html">Blossom
+module release notes</a> subpage.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-MinimumRequirements"><a class="anchor" href="#src-196596754_Blossommodule-MinimumRequirements"></a>Minimum Requirements</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Needs at least Java 8.</p>
+</li>
+<li>
+<p>Supports Spring Framework 3.2 or later.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-Installing"><a class="anchor" href="#src-196596754_Blossommodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.blossom&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-module-blossom&lt;/artifactId&gt;
+  &lt;version&gt;3.4.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Make sure you include also the
+<a href="https://mvnrepository.com/artifact/org.springframework/spring-core/3.2.0.RELEASE">Spring
+Core</a> dependency in at least version 3.2.0 RELEASE.</p>
+</div>
+<div class="paragraph">
+<p>The Magnolia Blossom Personalization module is also required. If you are
+using Magnolia 6.2 and later, you need:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.personalization&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-personalization-blossom-compatibility&lt;/artifactId&gt;
+  &lt;version&gt;2.0.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For older Magnolia branches, use:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.personalization&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-personalization-blossom&lt;/artifactId&gt;
+  &lt;version&gt;1.8.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-GettingStarted"><a class="anchor" href="#src-196596754_Blossommodule-GettingStarted"></a>Getting Started</h3>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Programmingmodel"><a class="anchor" href="#src-196596754_Blossommodule-Programmingmodel"></a>Programming model</h4>
+<div class="paragraph">
+<p>Blossom is an annotation based API that&#8217;s used in combination with
+Spring MVC. This snippet gives an overview of how the API is used.</p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id = </code>"myModule:components/text"<code>, title = </code>"Text"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> TextComponent {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Content"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> contentTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`        tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"heading"</code>).label(<code>"Heading"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.richText(<code>"body"</code>).label(<code>"Text body"</code>).required()`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Margins"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> marginsTab(TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(<code>"/text"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String render() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>"components/text.ftl"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id = </code>"myModule:components/main"<code>, title = </code>"Main"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MainTemplate {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@DialogFactory</code>(<code>"frontpage-properties"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> frontPageProperties(UiConfig cfg, DialogBuilder dialog) {`</p>
+</div>
+<div class="paragraph">
+<p>`        dialog.form().tabs(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.forms.tab(<code>"Properties"</code>).fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                        cfg.fields.text(<code>"headline"</code>).label(<code>"Headline"</code>).description(<code>"The text to use as a headline"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`                )`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(<code>"/main"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String render() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>"pages/mainTemplate.ftl"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@Area</code>(<code>"Content"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@AvailableComponentClasses</code>({TextComponent.<code>class</code>})`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>static</code> <code>class</code> ContentArea {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>@RequestMapping</code>(<code>"/main/content"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>public</code> String render() {`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> <code>"areas/contentArea.ftl"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>@DialogFactory<code>(</code>"main-properties"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MainDialogFactory {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Properties"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> propertiesTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Runningthesampleproject"><a class="anchor" href="#src-196596754_Blossommodule-Runningthesampleproject"></a>Running the sample project</h4>
+<div class="paragraph">
+<p>This sample is a complete web application based on the current Magnolia
+and requires nothing more than a Maven installation.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clone the <a href="https://git.magnolia-cms.com/scm/blossom/samples.git">git
+repository</a>, switch to the right branch:</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Magnolia</th>
+<th class="tableblock halign-left valign-top">Blossom branch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">master (3.4)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">release/3.3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">release/3.2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">release/3.2</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Build the project and then run <code>magnolia-blossom-sample-webapp</code> using
+<code>mvn jetty:run-war</code>.</p>
+</li>
+<li>
+<p>When maven has downloaded the necessary artifacts and started the
+application point your browser to
+<a href="http://localhost:8080/">localhost:8080</a>.</p>
+</li>
+<li>
+<p>Magnolia will now be in install mode and display a list of modules for
+install.<br>
+Complete the installation wizard and then log in using <code>superuser</code> for
+both username and password.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>git clone http:`</code>//git.magnolia-cms.com/git/modules/blossom/samples.git`</p>
+</div>
+<div class="paragraph">
+<p><code>cd samples</code></p>
+</div>
+<div class="paragraph">
+<p><code>mvn install</code></p>
+</div>
+<div class="paragraph">
+<p><code>cd magnolia-blossom-sample-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><code>export MAVEN_OPTS=``"-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M -Xmx512m"</code></p>
+</div>
+<div class="paragraph">
+<p><code>mvn jetty:run-war</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Creatingyourownproject"><a class="anchor" href="#src-196596754_Blossommodule-Creatingyourownproject"></a>Creating your own project</h4>
+<div class="paragraph">
+<p>We recommend using the archetypes to create your own project. For more
+details see this <a href="Getting_started_with_Blossom.html">Getting started
+with Blossom</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1XaGF0J3NuZXdpbkJsb3Nzb20z"><a class="anchor" href="#src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1XaGF0J3NuZXdpbkJsb3Nzb20z"></a>What&#8217;s new in Blossom 3</h3>
+<div class="paragraph">
+<p>Major update for Magnolia 5 style dialogs, compatible with Magnolia 5.1
+and later. In version 5 Magnolia has a brand new user interface and with
+it comes a new API for dialogs. This version of Blossom is an update for
+this API and also contains a few other improvements.</p>
+</div>
+<div class="paragraph">
+<p><strong>Fluent builder style API for dialogs</strong></p>
+</div>
+<div class="paragraph">
+<p>Building dialogs is now done using a fluent builder style API with a
+very compact syntax. The builders allow for controlling every detail of
+how a field should appear and behave. Where in the old API you had to
+resort to configure the controls using key and value pairs the new API
+has chainable setters for every property.</p>
+</div>
+<div class="paragraph">
+<p><strong>Meta-annotations for component availability</strong></p>
+</div>
+<div class="paragraph">
+<p>Components can be categorised using custom meta-annotations, these can
+then be specified when setting the available components on areas. All
+components having this component category will be available in the area.</p>
+</div>
+<div class="paragraph">
+<p><strong>Support for autowiring in RenderingModels</strong></p>
+</div>
+<div class="paragraph">
+<p>AbstractAutowiredRenderingModel is an abstract class for RenderingModels
+that need be to be autowired using Spring.</p>
+</div>
+<div class="paragraph">
+<p><strong>Support for Spring MVC 3.1 MVC handler methods</strong></p>
+</div>
+<div class="paragraph">
+<p>In Spring MVC 3.1 the implementation of annotated MVC was reimplemented
+adding new handler adapters and handler mappings, starting with Blossom
+3.0.2 handlers detected using the new implementation are discovered.</p>
+</div>
+<div class="paragraph">
+<p><strong>Post processing callbacks prior to registration of templates, areas,
+components and dialogs</strong></p>
+</div>
+<div class="paragraph">
+<p>Blossom 3.0.2 introduced a new annotation <code>@PreRegister</code> to be used on
+methods that should be called prior to registration with Magnolia.</p>
+</div>
+<div class="paragraph">
+<p><strong>Auto generation of components in areas</strong></p>
+</div>
+<div class="paragraph">
+<p>The process of auto generation gives areas the opportunity to
+pre-populate areas with components to save editors some work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1XaGF0J3NuZXdpbkJsb3Nzb20y"><a class="anchor" href="#src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1XaGF0J3NuZXdpbkJsb3Nzb20y"></a>What&#8217;s new in Blossom 2</h3>
+<div class="paragraph">
+<p>Major update for Magnolia 4.5 and its new rendering engine, page editor
+and templating concepts. The term paragraph is replaced with component.
+Components and templates have been streamlined and are internally
+identical, the only real difference is that they have different id
+formats which in turn controls where they&#8217;re applicable.</p>
+</div>
+<div class="paragraph">
+<p><strong>New id conventions for templates</strong></p>
+</div>
+<div class="paragraph">
+<p>In Magnolia 4.5 template IDs are in the format of <code>&lt;moduleName&gt;:&lt;path&gt;</code>.
+(See the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Templating">Templating</a>
+documentation.) As a consequence the Blossom convention was updated. You
+now need to specify the ID explicitly on your controller:
+<code>@Template(id="myModule:pages/news", title="News")</code>.</p>
+</div>
+<div class="paragraph">
+<p>For help on how to migrate your templates to the new naming convention,
+see
+<a href="http://wiki.magnolia-cms.com/display/WIKI/Migrating+content+when+upgrading+to+Blossom+2">Migrating
+content when upgrading to Blossom 2</a> .</p>
+</div>
+<div class="paragraph">
+<p><strong>Areas</strong></p>
+</div>
+<div class="paragraph">
+<p>With Magnolia 4.5 areas are explicit entities rather than implicit as
+node collections. They&#8217;re declared as nested classes (public static)
+directly within the page templates they belong to.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-Reference"><a class="anchor" href="#src-196596754_Blossommodule-Reference"></a>Reference</h3>
+<div class="paragraph">
+<p>This is the reference documentation for Blossom. The sample code in this
+section uses Spring 2.5+ annotated controllers.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Templates"><a class="anchor" href="#src-196596754_Blossommodule-Templates"></a>Templates</h4>
+<div class="paragraph">
+<p>To make a controller function as a template, simply add the <code>@Template</code>
+annotation. For example:</p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id = </code>"myModule:pages/section"<code>, title = </code>"Section Template"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> SectionController {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(<code>"/section"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> ModelAndView render() {`</p>
+</div>
+<div class="paragraph">
+<p>`        &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>This controller will be exposed in Magnolia, showing up as 'Section
+Template'. Note that the 'id' follows a convention used in Magnolia:
+module name, followed by a path. For templates that you want to use for
+pages, the path needs to start with <code>pages</code>.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Controllingwhereatemplatecanbeused"><a class="anchor" href="#src-196596754_Blossommodule-Controllingwhereatemplatecanbeused"></a>Controlling where a template can be used</h5>
+<div class="paragraph">
+<p>Where a page template is available for editors to use can be customized
+in two ways. Either using the site module and configure in the site
+definition or by using the <code>@Available</code> annotation. If the @Available is
+used it will override any setting in the site definition. Use it on a
+method in your controller that returns boolean. It can receive as
+arguments an argument of type <code>Node</code> or <code>Content</code>, this is the page in
+the website for which to determine if the template is available. It can
+also accept an argument of type <code>TemplateDefinition</code> this is the
+internal definition used by Magnolia:</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Available</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>boolean</code> isAvailable(Node websiteNode) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>`// Replace this with logic for your specific use case</code></p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>true</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>For more details see the documentation on the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+definition">site
+definition.</a></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Areas"><a class="anchor" href="#src-196596754_Blossommodule-Areas"></a>Areas</h4>
+<div class="paragraph">
+<p>Areas are defined using nested classes (public static class) within a
+template or within an other area. Areas are standard Spring Web MVC
+controllers annotated with <code>@Area</code>. In addition Areas have their own
+dialog.</p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(title = </code>"Main"<code>, id = </code>"myModule:pages/main"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MainTemplate {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@Area</code>(<code>"Promos"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inherits</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>@AvailableComponentClasses</code>({TextComponent.<code>class</code>})`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Controller</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>static</code> <code>class</code> PromosArea {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>@RequestMapping</code>(<code>"/mainTemplate/promos"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>public</code> String render() {`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> <code>"areas/promos.ftl"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// rest of the template excluded for brevity</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Controllingwhichcomponentscanbeaddedtoanarea"><a class="anchor" href="#src-196596754_Blossommodule-Controllingwhichcomponentscanbeaddedtoanarea"></a>Controlling which components can be added to an area</h5>
+<div class="paragraph">
+<p>To specify which components can be used in an area you can either list
+the ids of the components using the <code>@AvailableComponents</code> annotation,
+list their classes using the <code>@AvailableComponentClasses</code> annotation, or
+use meta-annotations to categorise your components. It&#8217;s possible to use
+all three options on the same area. Meta-annotations are annotations
+that you create yourself and use on your components. They need to
+annotated with <code>@ComponentCategory</code>.</p>
+</div>
+<div class="paragraph">
+<p>This annotation is a component category annotation.</p>
+</div>
+<div class="paragraph">
+<p><code>@Retention`</code>(RetentionPolicy.RUNTIME)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Target`</code>(ElementType.TYPE)`</p>
+</div>
+<div class="paragraph">
+<p><code>@ComponentCategory</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>@interface`</code> Promo {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Any controller annotated with it will be included in an area that
+specifies it.</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(title = </code>"Text"<code>, id = </code>"myModule:components/text"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Promo</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> TextComponent {`</p>
+</div>
+<div class="paragraph">
+<p>`    &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Areainheritance"><a class="anchor" href="#src-196596754_Blossommodule-Areainheritance"></a>Area inheritance</h5>
+<div class="paragraph">
+<p>A common requirement is to have every page on a site or a whole section
+to have a consistent base look, sharing header, footer and banners. Area
+inheritance is a feature that makes an area include components from its
+parent pages. To use this feature use the <code>@Inherited</code> annotation on an
+area.</p>
+</div>
+<div class="paragraph">
+<p><code>@Inherits</code></p>
+</div>
+<div class="paragraph">
+<p>By default the annotation is set to filtered mode, where it will only
+include components explicitly marked to be inherited. This is done using
+a property named inheritable. To flag it the component needs to have a
+checkbox added to its dialog.</p>
+</div>
+<div class="paragraph">
+<p><code>cfg.fields.checkbox(<code>"inheritable"</code>).label(<code>"Inherited"</code>)</code></p>
+</div>
+<div class="paragraph">
+<p>Filtering mode can be turned off causing all components to be inherited.</p>
+</div>
+<div class="paragraph">
+<p><code>@Inherits`</code>(components = ComponentInheritanceMode.ALL)`</p>
+</div>
+<div class="paragraph">
+<p>The annotation also allows you to control how properties are inherited.
+These are properties on the area itself. A property set on the area in
+the parent page is then available when the area is rendered in the child
+page.</p>
+</div>
+<div class="paragraph">
+<p><code>@Inherits`</code>(properties = PropertyInheritanceMode.ALL)`</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Maximumnumberofcomponentsinarea"><a class="anchor" href="#src-196596754_Blossommodule-Maximumnumberofcomponentsinarea"></a>Maximum number of components in area</h5>
+<div class="paragraph">
+<p>Sometimes its helpful to limit the number of components an editor can
+add into an area. On the area annotation you can specify the limit your
+design requires.</p>
+</div>
+<div class="paragraph">
+<p><code>@Area<code>(name = </code>"Promos"<code>, maxComponents = </code>5`</code>)`</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Reusingareasbetweentemplatesthroughclassinheritance"><a class="anchor" href="#src-196596754_Blossommodule-Reusingareasbetweentemplatesthroughclassinheritance"></a>Reusing areas between templates through class inheritance</h5>
+<div class="paragraph">
+<p>It&#8217;s common that many templates in a project have the same set of areas
+by taking advantage of the class hierarchy you only need to define them
+once.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>abstract<code> </code>class`</code> AbstractTemplate {`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Controller</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>@Area</code>(<code>"headerArea"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>static</code> <code>class</code> HeaderArea {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>@RequestMapping</code>(<code>"/headerArea"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>public</code> String render() {`</p>
+</div>
+<div class="paragraph">
+<p>`          <code>return</code> <code>"areas/headerArea"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`      }`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template`</code>(&#8230;&#8203;)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> ExampleTemplate </code>extends`</code> AbstractTemplate {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Autogeneration"><a class="anchor" href="#src-196596754_Blossommodule-Autogeneration"></a>Auto generation</h5>
+<div class="paragraph">
+<p>To reduce the effort needed by editors to create pages it can be useful
+to pre-populate pages by automatically adding (generating) components in
+areas. To use this feature add a method on your area and annotate it
+with <code>@AutoGenerator</code>. It will receive the Node for the area content.</p>
+</div>
+<div class="paragraph">
+<p><code>@AutoGenerator</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> generate(Node node) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// if node has no sub nodes add nodes for components</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Components"><a class="anchor" href="#src-196596754_Blossommodule-Components"></a>Components</h4>
+<div class="paragraph">
+<p>Components are controllers annotated with <code>@Template</code> and having an id
+in the format <code>moduleName:components/*</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id = </code>"myModule:components/textAndImage"<code>, title=</code>"Text and Image"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@TemplateDescription<code>(</code>"Adds a text section with an image"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> TextAndImageController {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(<code>"/textAndImage"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> ModelAndView render() {`</p>
+</div>
+<div class="paragraph">
+<p>`        &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>This controller will be visible as the Text and Image component. The
+description set using <code>@TemplateDescription</code> is shown when you choose a
+component to add in the page editor.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Accessingcontentincontrollers"><a class="anchor" href="#src-196596754_Blossommodule-Accessingcontentincontrollers"></a>Accessing content in controllers</h4>
+<div class="paragraph">
+<p>In controllers you can have the content object passed directly to your
+method. In templates this is the content object for the page, in
+components it&#8217;s the content object for the component within the page. If
+you declare two arguments of type <code>Content</code> or <code>Node</code> the first one will
+be the content of the page and the second will be the content of the
+component. Other arguments supported are <code>AggregationState</code>, <code>Context</code>,
+<code>WebContext</code>, <code>User</code> and <code>MgnlUser</code>:</p>
+</div>
+<div class="paragraph">
+<p><code>@RequestMapping<code>(</code>"/book"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public`</code> String render(Node pageNode, Node componentNode) {`</p>
+</div>
+<div class="paragraph">
+<p>`    &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`} `</p>
+</div>
+<div class="paragraph">
+<p>To do this, configure the <code>BlossomHandlerMethodArgumentResolver</code> on your
+<code>RequestMappingHandlerAdapter</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-AccessingMagnoliacontextobjectsincontrollers"><a class="anchor" href="#src-196596754_Blossommodule-AccessingMagnoliacontextobjectsincontrollers"></a>Accessing Magnolia context objects in controllers</h4>
+<div class="paragraph">
+<p>In addition to the content you can access a range of objects about the
+current rendering context by adding them as arguments to your
+<code>@RequestMapping</code> annotated methods.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.rendering.template.TemplateDefinition</code> The definition
+of the template as generated by Blossom based on the controllers
+annotations.</p>
+</li>
+<li>
+<p><code>info.magnolia.rendering.template.AreaDefinition</code> When rendering an
+area this is the definition of the area generated by Blossom.</p>
+</li>
+<li>
+<p><code>info.magnolia.cms.core.AggregationState</code> Aggregation of state about
+an operation in the CMS</p>
+</li>
+<li>
+<p><code>info.magnolia.context.Context</code> Context regarding an operation in the
+CMS and methods for accessing the JCR.</p>
+</li>
+<li>
+<p><code>info.magnolia.context.WebContext</code> Specialization of <code>Context</code> for web
+requests.</p>
+</li>
+<li>
+<p><code>info.magnolia.cms.security.User</code> The current user.</p>
+</li>
+<li>
+<p><code>info.magnolia.cms.security.MgnlUser</code> The current user as a instance
+of the default <code>User</code> implementation.</p>
+</li>
+<li>
+<p><code>info.magnolia.cms.core.Channel</code> The current channel being rendered
+for in a multi-channel setup.</p>
+</li>
+<li>
+<p><code>info.magnolia.module.site.theme.Theme</code> The current theme.</p>
+</li>
+<li>
+<p><code>info.magnolia.module.site.Site</code> The current site.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Templateparameters"><a class="anchor" href="#src-196596754_Blossommodule-Templateparameters"></a>Template parameters</h4>
+<div class="paragraph">
+<p>On templates, areas and components you can declare parameters that can
+then be accessed in the view using the <code>def.parameters.&lt;parameter-name&gt;</code>
+notation.</p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(title = </code>"Main"<code>, id = </code>"blossomSampleModule:pages/main"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@TemplateParams`</code>({`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>@TemplateParam</code>(name = <code>"example"</code>, value=<code>"my-value"</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>})</code></p>
+</div>
+<div class="paragraph">
+<p>To access the example parameter in a freemarker view use:</p>
+</div>
+<div class="paragraph">
+<p><code>${def.parameters.example!}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Viewrendering"><a class="anchor" href="#src-196596754_Blossommodule-Viewrendering"></a>View rendering</h4>
+<div class="paragraph">
+<p>View rendering with Blossom is performed by Spring. Blossom comes with
+support for using the Magnolia rendering chain. As a result you&#8217;ll have
+access to all the objects that Magnolia provides to template scripts.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Contentredirects"><a class="anchor" href="#src-196596754_Blossommodule-Contentredirects"></a>Content redirects</h5>
+<div class="paragraph">
+<p>Blossom also provides a convenient way of returning redirects to
+content. By adding the <code>UuidRedirectViewResolver</code> you can return the
+<code>uuid</code> to redirect to directly from your controller. This example
+returns a redirect to a page:</p>
+</div>
+<div class="paragraph">
+<p>`    <code>return</code> <code>"website:"</code> + content.getUUID();`</p>
+</div>
+<div class="paragraph">
+<p>This example returns a redirect for a resource in the documents
+repository:</p>
+</div>
+<div class="paragraph">
+<p>`    <code>return</code> <code>"dms:"</code> + content.getUUID();`</p>
+</div>
+<div class="paragraph">
+<p>Redirecting to the page currently being rendered is a very common case
+and Blossom has a shortcut syntax that does exactly this without
+requiring the uuid.</p>
+</div>
+<div class="paragraph">
+<p><code>return<code> </code>"magnolia-redirect:main-content"`</code>;`</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also possible to redirect to the current content being rendered
+when executing further down the content hierarchy.</p>
+</div>
+<div class="paragraph">
+<p><code>return<code> </code>"magnolia-redirect:current-content"`</code>;`</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Thymeleafviews"><a class="anchor" href="#src-196596754_Blossommodule-Thymeleafviews"></a>Thymeleaf views</h5>
+<div class="paragraph">
+<p>If you prefer using Thymeleaf there is a project on GitHub by Thomas
+Kratz that adds support for it to Blossom. It is fully functional and is
+in production use.</p>
+</div>
+<div class="paragraph">
+<p>For more details see the
+<a href="https://github.com/eiswind/magnolia-thymeleaf-renderer">magnolia-thymeleaf-renderer
+project on GitHub</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-SubstitutingBlossomviewresolverswithcustomresolvers"><a class="anchor" href="#src-196596754_Blossommodule-SubstitutingBlossomviewresolverswithcustomresolvers"></a>Substituting Blossom view resolvers with custom resolvers</h5>
+<div class="paragraph">
+<p>If you substitute or combine the Blossom view resolvers with your own
+implementations, be aware that the GZip filter included in Magnolia
+wraps the response object and gives it some non-standard semantics. It
+will tell you that the response is not committed even though it has been
+written to. It will also allow you to do redirects even though the
+response has been written to.</p>
+</div>
+<div class="paragraph">
+<p>Be aware that if you write controllers that exploit the GZip filter, you
+are creating a dependency and you will need to have the GZip filter
+active. Certain frameworks such Spring and WebFlow will test if the
+response is committed to detect if redirects are possible and sometimes
+to choose between doing a forward or an include.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Dialogs"><a class="anchor" href="#src-196596754_Blossommodule-Dialogs"></a>Dialogs</h4>
+<div class="paragraph">
+<p>Blossom allows you to create dialogs using code. One of the benefits of
+this is that when the controller fetches data from a web service you can
+populate your dialog with options retrieved from that web service. See
+also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">Dialogs</a>.</p>
+</div>
+<div class="paragraph">
+<p>For example, if the controller displays a list of the best selling books
+in a category of books you could call the web service to find out what
+categories are available and use them to populate a select control.
+Another benefit is that you get your dialogs out of the repository and
+into version control. You get to version your dialogs together with your
+controllers.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You can easily change your dialog code in your IDE, compile and hot swap
+the new code into an instance of Magnolia running in debug mode. This
+makes developing dialogs extremely fast.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-FluentbuilderstyleAPI"><a class="anchor" href="#src-196596754_Blossommodule-FluentbuilderstyleAPI"></a>Fluent builder style API</h5>
+<div class="paragraph">
+<p>Dialogs are described using a model of definition classes. These define
+the structure of the dialog, its tabs and its fields. They describe both
+what the dialogs and its forms should look like and how they should
+behave. Blossom uses a fluent builder style API to construct these
+definitions. The API consists of config classes that produce builders,
+the builders produce definitions.</p>
+</div>
+<div class="paragraph">
+<p>The central config class is <code>UiConfig</code> which is used to create tabs and
+all different kinds of fields provided by Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Blossom provides <code>UiConfig</code> to all methods that create dialogs or
+populate dialogs. In addition it will also provide a <code>TabBuilder</code> or
+<code>DialogBuilder</code>, depending on the use case. These represent the tab or
+dialog that&#8217;s being populated.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Note that is also possible to extend the dialog creation mechanism in
+Blossom to use custom config classes or replace <code>UiConfig</code> or
+<code>TabBuilder</code> with classes of your own for adding your custom or
+third-party fields. The article
+<a href="http://wiki.magnolia-cms.com/display/WIKI/Extending+the+Blossom+TabBuilder">Extending
+the Blossom TabBuilder</a> on the wiki explains how this is done in detail.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Dialogfactories"><a class="anchor" href="#src-196596754_Blossommodule-Dialogfactories"></a>Dialog factories</h5>
+<div class="paragraph">
+<p>Dialog factories create dialogs. Although the dialogs are automatically
+exposed in Magnolia, you need to configure them as beans in Spring. The
+easiest way to do this is to use Spring 2.5+ component scan, however
+manual configuration in XML will work. For example:</p>
+</div>
+<div class="paragraph">
+<p><code>@DialogFactory<code>(</code>"front-page-dialog"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@TabOrder<code>({</code>"Content"<code>, </code>"Margins"`</code>})`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> FrontPageDialog {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Margins"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> marginsTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`        tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.staticField(<code>"static"</code>).description(<code>"Margins around the side of the front page"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"leftMargin"</code>).label(<code>"Left Margin"</code>).description(<code>"Left margin in pixels"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"rightMargin"</code>).label(<code>"Right Margin"</code>).description(<code>"Right margin in pixels"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Content"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> contentTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`        tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"title"</code>).label(<code>"Title"</code>).description(<code>"The title of this page"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>This registers a dialog in Magnolia with the name <code>front-page-dialog</code>.
+It has two tabs, <code>Content</code> and <code>Margins</code>. Methods annotated with
+<code>@TabFactory</code> in superclasses will be called. If there are many dialogs
+that look the same you can create an abstract base class for them.</p>
+</div>
+<div class="paragraph">
+<p>The order that the dialogs appear in has been set using the <code>@TabOrder</code>
+annotation. It sorts them based on their names. If you would rather sort
+them by their names you can change it with a property in your module
+descriptor.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>properties</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>property</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>name</code>&gt;magnolia.blossom.sortTabsByLabel&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>value</code>&gt;false&lt;/<code>value</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>property</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>properties</code>&gt;</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Templatescreatetheirowndialog"><a class="anchor" href="#src-196596754_Blossommodule-Templatescreatetheirowndialog"></a>Templates create their own dialog</h5>
+<div class="paragraph">
+<p>A template always has a dialog so you don&#8217;t have to create a dialog
+factory and link them with a name. Instead your controller will act as
+its own dialog factory. You can use the same annotations inside your
+controller that you can for dialog factories. (See above.) If you want
+your template to use a dialog that is created by a dialog factory or
+configured in the repository, it&#8217;s possible to override this behavior
+and specify which dialog should be used:</p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(dialog=</code>"my-dialog"`</code>)`</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Templatescancontaindialogfactories"><a class="anchor" href="#src-196596754_Blossommodule-Templatescancontaindialogfactories"></a>Templates can contain dialog factories</h5>
+<div class="paragraph">
+<p>Because templates are often designed for use with few dialogs, Blossom
+allows you to create these within your template class for ease of
+location. The concept is similar to dialog factories but here everything
+is done in a single method.</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id = </code>"myModule:pages/productTemplate"<code>, title = </code>"Product Template"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> ProductTemplate {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@DialogFactory</code>(<code>"product-dialog"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> productDialog(UiConfig cfg, DialogBuilder dialog) {`</p>
+</div>
+<div class="paragraph">
+<p>`        dialog.form().tabs(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.forms.tab(<code>"Settings"</code>).fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                        cfg.fields.text(<code>"title"</code>).label(<code>"Title"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`                ),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.forms.tab(<code>"Properties"</code>).fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                        cfg.fields.text(<code>"headline"</code>).label(<code>"Headline"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`                )`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Dialogsandtheclasshierarchy"><a class="anchor" href="#src-196596754_Blossommodule-Dialogsandtheclasshierarchy"></a>Dialogs and the class hierarchy</h5>
+<div class="paragraph">
+<p>It&#8217;s not uncommon to have several dialogs that are very similar. For
+instance you might want to have the same basic sets of tabs in a number
+of dialogs. Blossom makes this possible by allowing you to define tab
+factories in super classes. Methods are invoked in superclass-first
+order, methods within the same class have no defined order of
+invocation.</p>
+</div>
+<div class="paragraph">
+<p>For instance a tab for meta data in an abstract base class extended by
+several templates.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>abstract<code> </code>class`</code> BasePageTemplate {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Meta"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> metaTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`        tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`            cfg.fields.text(<code>"metaAuthor"</code>).label(<code>"Author"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>` cfg.fields.text(<code>"metaKeywords"</code>).label(<code>"Keywords"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`            cfg.fields.text(<code>"metaDescription"</code>).label(<code>"Description"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Postcreatecallbacksfordialogs"><a class="anchor" href="#src-196596754_Blossommodule-Postcreatecallbacksfordialogs"></a>Post create callbacks for dialogs</h5>
+<div class="paragraph">
+<p>Tab factories will always add a tab and then call your method to have it
+populated. If you wish to only add the tab in certain scenarios you can
+instead use a post create callback. You can then determine the scenario,
+for instance testing if the user has a certain role or if the page is in
+a certain part of the website tree. They can also be useful when you
+need to do changes to the dialog after all tab factories have been
+added. Methods are invoked in superclass-first order and always after
+tab factories in the same class, post create methods within the same
+class have no defined order of invocation.</p>
+</div>
+<div class="paragraph">
+<p>In this example a field is added if a criteria is met.</p>
+</div>
+<div class="paragraph">
+<p><code>@PostCreate</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> postCreate(DialogBuilder dialog, UiConfig cfg) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>if</code> (some criteria) {`</p>
+</div>
+<div class="paragraph">
+<p>`        dialog.form().tab(<code>"Content"</code>).label(<code>"Content"</code>).fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"header"</code>).label(<code>"header"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Customdialogactions"><a class="anchor" href="#src-196596754_Blossommodule-Customdialogactions"></a>Custom dialog actions</h5>
+<div class="paragraph">
+<p>Blossom will add the standard save and cancel actions to the dialog
+before it is shown to the user unless any have been configured.</p>
+</div>
+<div class="paragraph">
+<p>This example shows how to configure a custom save action using a post
+create callback.</p>
+</div>
+<div class="paragraph">
+<p><code>@PostCreate</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> postCreate(UiConfig cfg, DialogBuilder dialog) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// Add custom save action</code></p>
+</div>
+<div class="paragraph">
+<p>`    MyCustomSaveDialogActionDefinition save = <code>new</code> MyCustomSaveDialogActionDefinition();`</p>
+</div>
+<div class="paragraph">
+<p>`    save.setName(<code>"commit"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    save.setLabel(<code>"save"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    dialog.addAction(save);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`// Add the standard cancel action</code></p>
+</div>
+<div class="paragraph">
+<p>`    CancelDialogActionDefinition cancel = <code>new</code> CancelDialogActionDefinition();`</p>
+</div>
+<div class="paragraph">
+<p>`    cancel.setName(<code>"cancel"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    cancel.setLabel(<code>"cancel"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    dialog.addAction(cancel);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Validatingdialoginput"><a class="anchor" href="#src-196596754_Blossommodule-Validatingdialoginput"></a>Validating dialog input</h5>
+<div class="paragraph">
+<p>To ensure that the content is correctly structured you can add
+validators to the fields. In the example below the name field can not be
+empty and the email has to be valid.</p>
+</div>
+<div class="paragraph">
+<p><code>@TabFactory</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> contentTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`    tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`       cfg.fields.text(<code>"name"</code>).label(<code>"Name"</code>).required(),`</p>
+</div>
+<div class="paragraph">
+<p>`       cfg.fields.text(<code>"email"</code>).label(<code>"Email"</code>).validator(cfg.validators.email())`</p>
+</div>
+<div class="paragraph">
+<p>`    );`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-UsingDAMfields"><a class="anchor" href="#src-196596754_Blossommodule-UsingDAMfields"></a>Using DAM fields</h5>
+<div class="paragraph">
+<p>The DAM module has a config class of its own, <code>DamConfig</code>, Blossom also
+provides this automatically when added as an argument.</p>
+</div>
+<div class="paragraph">
+<p><code>@TabFactory<code>(</code>"Content"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> contentTab(UiConfig cfg, DamConfig dam, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`    tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`            cfg.fields.text(<code>"title"</code>).label(<code>"Title"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`            cfg.fields.richText(<code>"body"</code>).label(<code>"Text"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`            dam.fields.assetLink(<code>"photo"</code>).label(<code>"Photo"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    );`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1Qb3N0cHJvY2Vzc2luZ2NhbGxiYWNrc3ByaW9ydG9yZWdpc3RyYXRpb25vZnRlbXBsYXRlcyxhcmVhcyxjb21wb25lbnRzYW5kZGlhbG9ncw"><a class="anchor" href="#src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1Qb3N0cHJvY2Vzc2luZ2NhbGxiYWNrc3ByaW9ydG9yZWdpc3RyYXRpb25vZnRlbXBsYXRlcyxhcmVhcyxjb21wb25lbnRzYW5kZGlhbG9ncw"></a>Post processing callbacks prior to registration of templates, areas, components and dialogs</h4>
+<div class="paragraph">
+<p>Before Blossom registers templates, areas, components and dialogs with
+Magnolia at startup, effectively making them available for use, it will
+inspect its class for methods annotated with <code>@PreRegister</code> and invoke
+those methods. This can be used to customize the definition Blossom
+built based on the annotations present on the class.</p>
+</div>
+<div class="paragraph">
+<p>@PreRegister in template or component</p>
+</div>
+<div class="paragraph">
+<p><code>@PreRegister</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> register(BlossomTemplateDefinition templateDefinition) {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>@PreRegister in area</p>
+</div>
+<div class="paragraph">
+<p><code>@PreRegister</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> register(BlossomAreaDefinition areaDefinition) {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>@PreRegister in dialog</p>
+</div>
+<div class="paragraph">
+<p><code>@PreRegister</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> register(BlossomDialogDescription dialogDescription) {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Pre-executionofcomponents"><a class="anchor" href="#src-196596754_Blossommodule-Pre-executionofcomponents"></a>Pre-execution of components</h4>
+<div class="paragraph">
+<p>Pre-execution allows you to write components that can take care of the
+entire page rendering. This is necessary if you want to do redirects.
+Another scenario is if you want to have your controller rendering a form
+into the page on GET requests and write an XML document or a PDF on POST
+requests.</p>
+</div>
+<div class="paragraph">
+<p>Note that this feature is enabled by default from version 1.1 and
+disabled by default in 0.5. To enable it you need to change a flag in
+the repository. Navigate to <code>config:/server/filters/cms/blossom `in
+AdminCentral and change the property `enabled</code> from &#8216;false` to
+'`true&#8217;.</p>
+</div>
+<div class="paragraph">
+<p>In order for pre-execution to work you need to use the
+<code>BlossomHandlerMapping</code>. See section on this page on Handler Mapping.</p>
+</div>
+<div class="paragraph">
+<p>Pre-execution is performed by a filter that will intercept requests and
+look for a request parameter that contains the UUID of the component
+that is to be pre-executed. The request parameter is named <code>_pecid</code>.
+Blossom provides a taglib to make it easier to include this request
+parameter.</p>
+</div>
+<div class="paragraph">
+<p>The blossom taglib has two tags, <code>&lt;blossom:pecid-input /&gt;</code> that will
+output <code>&lt;input type="hidden" name="_pecid" value="&lt;component uuid&gt;" /&gt;</code>.
+This tag is also available under the alias <code>&lt;blossom:pecidInput /&gt;</code>,
+this is necessary for use in Freemarker templates.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;%@ taglib uri=<code>"blossom-taglib"</code> prefix=<code>"blossom"</code> %&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;form action=<code>"?"</code> method=<code>"POST"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;blossom:pecid-input /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;input type=<code>"text"</code> name=<code>"q"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;input type=<code>"submit"</code> value=<code>"Search"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/form&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>It is possible to use <code>&lt;blossom:pecid var="pecid" /&gt;</code> to set the UUID of
+the component as a variable, in this example named <code>pecid</code>. The <code>var</code>
+attribute is optional. If it&#8217;s not specified the component UUID is
+written directly into the page.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;a href=``"/news/new-website-launched.html?_pecid=&lt;blossom:pecid /&gt;"</code></p>
+</div>
+<div class="paragraph">
+<p>When you have multiple forms on the same page it can be helpful to
+distinguish which one is supposed to handle a POST request by testing in
+a controller if it is being pre-executed.</p>
+</div>
+<div class="paragraph">
+<p><code>if<code> (request.getMethod().equals(</code>"POST"`</code>) &amp;&amp; PreexecutionUtils.isPreexecuting() {`</p>
+</div>
+<div class="paragraph">
+<p>`    processFormSubmit(request);`</p>
+</div>
+<div class="paragraph">
+<p><code>} <code>else</code> {</code></p>
+</div>
+<div class="paragraph">
+<p>`    showForm(request);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>At the end of this article you&#8217;ll find a full example of how to use
+pre-execution.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-HandlerMapping"><a class="anchor" href="#src-196596754_Blossommodule-HandlerMapping"></a>Handler Mapping</h4>
+<div class="paragraph">
+<p>Spring uses HandlerMappings to map a request to a handler (usually a
+controller). Blossom interrogates the HandlerMappings to find out how
+you have mapped your handlers. Your HandlerMapping needs to be a class
+inherited from <code>AbstractUrlHandlerMapping</code>. This is usually the case,
+both Spring 2.5+ annotated controllers and <code>BeanNameUrlHandlerMapping</code>
+inherit from <code>AbstractUrlHandlerMapping</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you want support for pre-execution (see below) you will need to have
+<code>BlossomHandlerMapping</code> delegate to your <code>HandlerMapping</code>. This is
+necessary because this is where pre-execution is taken care of.</p>
+</div>
+<div class="paragraph">
+<p>Note, you have to explicitly declare your HandlerMapping in XML.
+Although Spring will supply you with defaults even if you do not use
+XML, it is not possible for Blossom ot get a reference to the defaults
+and therefore will not take part in the rendering.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Localization"><a class="anchor" href="#src-196596754_Blossommodule-Localization"></a>Localization</h4>
+<div class="paragraph">
+<p>Using <code>@I18nBasename</code> you can set the name of the resource bundle you
+want to use. This can be used on templates, areas and components and in
+dialog factories. Labels and descriptions set for instance using the
+<code>@Template</code> and <code>@TabFactory</code> annotations will then be localized using
+the specified resource bundle.</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(title = </code>"Text"<code>, id = </code>"blossomSampleModule:components/text"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@I18nBasename<code>(</code>"info.magnolia.blossom.sample.messages"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> TextComponent {`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>@TabFactory</code>(<code>"textComponent.contentTab.label"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>void</code> contentTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`    tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`      cfg.fields.text(<code>"heading"</code>).label(<code>"textComponent.contentTab.heading"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    );`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>You can also leave labels and titles empty to have Magnolia resolve them
+automatically by generating a key based on the dialog&#8217;s name, the tab&#8217;s
+name, and the field&#8217;s name. However by default Blossom will use the
+value given in @TabFactory both for name and label of the tab. In order
+to leave the label empty so automatic i18n takes effect you need to set
+a property in your module descriptor.</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>properties</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>property</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;magnolia.blossom.setTabLabels&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>value</code>&gt;false&lt;/<code>value</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>property</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>properties</code>&gt;`</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Springi18ninteroperability"><a class="anchor" href="#src-196596754_Blossommodule-Springi18ninteroperability"></a>Spring i18n interoperability</h5>
+<div class="paragraph">
+<p>Blossom provides you with a <code>LocaleResolver</code> to enable Spring to pick up
+the locale that Magnolia has selected for the current request:</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.blossom.context.MagnoliaLocaleResolver</code></p>
+</div>
+<div class="paragraph">
+<p>To bridge Magnolia i18n into Spring, use the following <code>MessageSource</code>
+implementation:</p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.module.blossom.context.MagnoliaMessageSource</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596754_Blossommodule-Contenttranslation"><a class="anchor" href="#src-196596754_Blossommodule-Contenttranslation"></a>Content translation</h5>
+<div class="paragraph">
+<p>If the content of a tab field should be translatable then it can be made
+i18n aware by using the i18n() method.</p>
+</div>
+<div class="paragraph">
+<p>` <code>@TabFactory</code>(<code>"textComponent.contentTab.label"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>void</code> contentTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`    tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`      cfg.fields.text(<code>"heading"</code>).label(<code>"textComponent.contentTab.heading"</code>).i18n()`</p>
+</div>
+<div class="paragraph">
+<p>`    );`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Sitesandthetemplateprototype"><a class="anchor" href="#src-196596754_Blossommodule-Sitesandthetemplateprototype"></a>Sites and the template prototype</h4>
+<div class="paragraph">
+<p>In the site definition you can define a template prototype which is a
+template that other templates inherit from. Things configured on the
+prototype such as areas are copied onto other templates.</p>
+</div>
+<div class="paragraph">
+<p>To use this feature with Blossom you need to use a special view
+renderer. Blossom provides a FactoryBean for creating this renderer,
+SiteAwareFreemarkerTemplateViewRendererFactoryBean.</p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="#src-196596754_Blossommodule-Blossommodule-Runningthesampleproject">Blossom
+sample</a> has example configuration for this renderer and the
+<a href="Getting_started_with_Blossom.html">getting started guide</a> uses a
+maven archetype that generates this configuration for you.</p>
+</div>
+<div class="paragraph">
+<p>For more details see the documentation on the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Site+definition">site
+definition</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-MultipartRequests"><a class="anchor" href="#src-196596754_Blossommodule-MultipartRequests"></a>Multipart Requests</h4>
+<div class="paragraph">
+<p>Because Magnolia handles multipart requests, Blossom provides a
+<code>MultipartResolver</code> implementation. Add this snippet to your beans XML.
+In the example above this would be <code>blossom-servlet.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;bean id=<code>"multipartResolver"</code> <code>class</code>=<code>"info.magnolia.module.blossom.multipart.BlossomMultipartResolver"</code> /&gt;`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-VirtualURIMappings"><a class="anchor" href="#src-196596754_Blossommodule-VirtualURIMappings"></a>Virtual URI Mappings</h4>
+<div class="paragraph">
+<p>Any bean implementing VirtualUriMapping that is configured with Spring
+is automatically detected and exposed in Magnolia. This means that you
+don not need to configure them in the repository as you normally would.</p>
+</div>
+<div class="paragraph">
+<p>In addition, Blossom supports writing virtual URI mappings by annotating
+a class with <code>@VirtualURIMapper</code>. Instances of this class, when
+configured as a bean in Spring, will be scanned for methods that can be
+used for URI mapping. Any method that return <code>String</code> or <code>MappingResult</code>
+and accepts as arguments a String that is the incoming URI or a
+<code>HttpServletRequest</code> is used.</p>
+</div>
+<div class="paragraph">
+<p>The returned string from a Virtual URI mapping is the new URI that
+Magnolia will use to look up the page in the repository that is to be
+rendered. The returned URI can also be prefixed with "redirect:",
+"permanent:" or "forward:" to trigger either a temporary redirect, a
+permanent redirect or a forward respectively. For redirects the URI can
+be absolute or relative within the web application (the context path is
+added automatically).</p>
+</div>
+<div class="paragraph">
+<p><code>@VirtualURIMapper</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> SampleURIMapper {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String about(String uri, HttpServletRequest request) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (uri.equals(<code>"/about"</code>))`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> <code>"/sections/about"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>null</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String news(String uri, HttpServletRequest request) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (uri.equals(<code>"/news"</code>))`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> <code>"forward:/dispatcher/news.do"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>null</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>For more details the reference documentation on
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/URI+mapping">Virtual URI
+mapping</a> .</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-DependenciesonMagnoliacomponents"><a class="anchor" href="#src-196596754_Blossommodule-DependenciesonMagnoliacomponents"></a>Dependencies on Magnolia components</h4>
+<div class="paragraph">
+<p>Magnolia is not based on Spring, but rather uses a container internally
+that manages components. It is possible to pull these components in as
+beans in the <code>ApplicationContext</code>. Here they are made available for
+declaring dependencies on them and as candidates for autowiring. This is
+an example that exposes the <code>ModuleManager</code> as a bean with id
+'moduleManager':</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;blossom:component id=<code>"moduleManager"</code> type=<code>"info.magnolia.module.ModuleManager"</code> /&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>(Note the id is optional). For more details on Magnolia Components see
+the documentation on
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">Configuration</a>
+.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Configuringbeansintherepository"><a class="anchor" href="#src-196596754_Blossommodule-Configuringbeansintherepository"></a>Configuring beans in the repository</h4>
+<div class="paragraph">
+<p>Besides for storing content for web pages, the JCR repository is also
+widely used for configuration. One benefit of this is that configuration
+is easy to change while the application is running.</p>
+</div>
+<div class="paragraph">
+<p>To read this configuration Magnolia uses a mechanism called Node2Bean to
+transform the configuration into plain Java beans. The process is based
+on reflection. Blossom provides an extension to this mechanism which,
+during initialization of the bean, applies post processing on it using
+the Spring <code>ApplicationContext</code>.</p>
+</div>
+<div class="paragraph">
+<p>This makes it possible to have dependencies in the bean that should be
+autowired by the <code>ApplicationContext</code>. Note that the bean will also
+receive all the standard life cycle callbacks that a bean managed by
+Spring can use. These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>InitializingBean</code>,</p>
+</li>
+<li>
+<p><code>ServletContextAware</code>,</p>
+</li>
+<li>
+<p><code>ApplicationContextAware</code></p>
+</li>
+<li>
+<p>and many more.<br>
+It can also use <code>@PostConstruct</code> and it will be subject for having AOP
+aspects applied.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Node2Bean mechanism by default calls a method with the signature
+<code>public void init()</code> on the beans it creates if it exists. The extension
+provided by Blossom does not support this. Instead use <code>@PostConstruct</code>.</p>
+</div>
+<div class="paragraph">
+<p>With Blossom it is possible to use this mechanism directly in Spring
+beans xml files. The bean is proxied and is transparently replaced if
+changes are made in the repository.</p>
+</div>
+<div class="paragraph">
+<p>This is an example for a book store web site that has a discount service
+configured in the repository:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;blossom:configured-bean id=<code>"discountService"</code> path=<code>"/modules/book-store-module/beans/discountService"</code> /&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>This example is identical to the one above except that the configuration
+is observed for any changes being made. When it changes the bean is
+reloaded making it easy to change the discounts while the system is
+running:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;blossom:observed-bean id=<code>"discountService"</code> path=<code>"/modules/book-store-module/beans/discountService"</code> /&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>By default the proxy is created using JDK dynamic proxies, this proxies
+on an interface level. If you require proxying on the class you can
+specify <code>proxy-target-class="true"</code> and the proxy will instead be a
+cglib class proxy. This is analogous to the way Spring AOP uses proxies.</p>
+</div>
+<div class="paragraph">
+<p>For more details on Node2Bean see the documentation on
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">Configuration</a>
+.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-AutowiringRenderingModelclasses"><a class="anchor" href="#src-196596754_Blossommodule-AutowiringRenderingModelclasses"></a>Autowiring RenderingModel classes</h4>
+<div class="paragraph">
+<p>When using standard Magnolia templates with RenderingModel classes do
+their backing logic you can get access to beans managed by Spring
+through autowiring. Blossom provides an abstract base class for this
+called <code>AbstractAutowiredRenderingModel. `It will do autowiring on
+itself using the root web application context. Note that Magnolia will
+still create the RenderingModel and since it supports the `@Inject</code>
+annotation you should use <code>@Autowired</code> for the dependencies you want to
+from Spring.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> MyRenderingModel </code>extends`</code> AbstractAutowiredRenderingModel&lt;TemplateDefinition&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Autowired</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> MyService service;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyRenderingModel(ServletContext servletContext, Node content, TemplateDefinition definition, RenderingModel&lt;?&gt; parent) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(content, definition, parent, servletContext);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>In order to use this you will need to have annotation config enabled in
+your root web application context. Add the following to your
+<code>applicationContext.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;context:annotation-config/&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1JbnRlcmFjdGlvbnN3aXRoPG12Yzphbm5vdGF0aW9uLWRyaXZlbi8-"><a class="anchor" href="#src-196596754_safe-id-Qmxvc3NvbW1vZHVsZS1JbnRlcmFjdGlvbnN3aXRoPG12Yzphbm5vdGF0aW9uLWRyaXZlbi8-"></a>Interactions with &lt;mvc:annotation-driven/&gt;</h4>
+<div class="paragraph">
+<p>The &lt;mvc:annotation-driven/&gt; tag is essentially a macro. It adds a
+number of beans, such as message converters, handler adapters and so on.
+They&#8217;re all configured with reasonable defaults that suits the majority
+of users. That is, until you actually need something that differs from
+the defaults. Then you need to remove it and explicitly configure
+instead.</p>
+</div>
+<div class="paragraph">
+<p>In order for Blossom to work it customizes some of the same beans that
+&lt;mvc:annotation-driven/&gt; adds. Therefor some things will break when you
+add &lt;mvc:annotation-driven/&gt;. One thing that does break is
+pre-execution. In order for it to work all handler adapters need to be
+configured within a <code>BlossomHandlerMapping</code> bean.</p>
+</div>
+<div class="paragraph">
+<p>A common reason for adding &lt;mvc:annotation-driven/&gt; is bean validation
+of submitted forms since it adds configuration for this by default. When
+using Blossom you need to set up configuration for bean validation
+explicitly. If you&#8217;ve used the archetypes to create your module this was
+done for you. Otherwise refer to this snippet that shows how its done:</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;bean <code>class</code>=<code>"org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;property name=<code>"customArgumentResolver"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;bean <code>class</code>=<code>"info.magnolia.module.blossom.web.BlossomWebArgumentResolver"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/property&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;property name=<code>"webBindingInitializer"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;bean <code>class</code>=<code>"org.springframework.web.bind.support.ConfigurableWebBindingInitializer"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;property name=<code>"validator"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;bean <code>class</code>=<code>"org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/property&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/bean&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/property&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/bean&gt;`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-AdditionalDispatcherServletsandAJAXcalls"><a class="anchor" href="#src-196596754_Blossommodule-AdditionalDispatcherServletsandAJAXcalls"></a>Additional DispatcherServlets and AJAX calls</h4>
+<div class="paragraph">
+<p>Controllers used for rendering content are not accessible for requests
+coming in to the servlet container. Requests that come in are handled my
+Magnolia and mapped to content that is only later rendered by these
+controllers. The BlossomDispatcherServlet that manages these controllers
+are started in your module class and the servlet container has no
+knowledge of this servlet. Since these controllers are non meaningful
+without content there&#8217;s no reason to have them directly accessible.</p>
+</div>
+<div class="paragraph">
+<p>Controllers that should be accessible directly and are not used to
+render content need to be managed by a different DispatcherServlet.</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s two ways to add a DispatcherServlet in a Magnolia project. You
+either simply add one to web.xml or you add to your module descriptor.</p>
+</div>
+<div class="paragraph">
+<p>Adding it to the module descriptor is the better choice because then its
+started after your module has started and it will become a child of the
+root web application context and can access all beans within it. You
+also won&#8217;t need to update web.xml which makes module install easier and
+upgrades of Magnolia easier.</p>
+</div>
+<div class="paragraph">
+<p>The module descriptor is your
+<strong>/src/main/resources/META-INF/magnolia/&lt;module name&gt;.xml</strong> file.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example of what that looks like:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>servlets</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>servlet</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>name</code>&gt;dispatcher&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>class</code>&gt;org.springframework.web.servlet.DispatcherServlet&lt;/<code>class</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>mappings</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>mapping</code>&gt;/ajax/*&lt;/<code>mapping</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>mappings</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>params</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>param</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>name</code>&gt;contextConfigLocation&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>value</code>&gt;classpath:/ajax-servlet.xml&lt;/<code>value</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>param</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>params</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>servlet</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>servlets</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Magnolia installs the servlet when the module is installed so after
+you&#8217;ve added it you need to reinstall your module. When it&#8217;s installed
+you can see it in the configuration app at
+<strong>/server/filters/servlets/dispatcher</strong>.</p>
+</div>
+<div class="paragraph">
+<p>In the example above the DispatcherServlet will get all requests with a
+path starting with <strong>/ajax/</strong> and it uses a configuration
+file<strong>/src/main/resources/ajax-servlet.xml</strong>.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll want to make sure that <strong>ajax-servlet.xml</strong> has only the
+controllers that should be accessible from the outside and not those
+used for rendering content. Do this by organizing them in different
+packages and use component scan to find the right ones.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s what a simple <strong>ajax-servlet.xml</strong> would look like:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>beans</code> <code>xmlns</code>=``"http://www.springframework.org/schema/beans"</code></p>
+</div>
+<div class="paragraph">
+<p>`       <code>xmlns:xsi</code>=<code>`"http://www.w3.org/2001/XMLSchema-instance"</code></p>
+</div>
+<div class="paragraph">
+<p>`       <code>xmlns:context</code>=<code>`"http://www.springframework.org/schema/context"</code></p>
+</div>
+<div class="paragraph">
+<p>`       <code>xsi:schemaLocation</code>=<code>"http://www.springframework.org/schema/beans <a href="http://www.springframework.org/schema/beans/spring-beans.xsd" class="bare">http://www.springframework.org/schema/beans/spring-beans.xsd</a> <a href="http://www.springframework.org/schema/context" class="bare">http://www.springframework.org/schema/context</a> <a href="http://www.springframework.org/schema/context/spring-context.xsd"" class="bare">http://www.springframework.org/schema/context/spring-context.xsd"</a></code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>context</code>:annotation-config/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>context</code>:component-scan <code>base-package</code>=<code>"my.module.ajax"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>beans</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>It will component scan and find the controller below which becomes
+accessible at <strong>/ajax/hello</strong> , note that the /ajax part is not specified
+in the controller.</p>
+</div>
+<div class="paragraph">
+<p><code>package`</code> my.module.ajax;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> org.springframework.stereotype.Controller;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> org.springframework.web.bind.annotation.RequestMapping;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> org.springframework.web.bind.annotation.ResponseBody;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> AjaxController {`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@ResponseBody</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(<code>"/hello"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String render() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>"Hello!"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-Examples"><a class="anchor" href="#src-196596754_Blossommodule-Examples"></a>Examples</h3>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-Usingpre-execution"><a class="anchor" href="#src-196596754_Blossommodule-Usingpre-execution"></a>Using pre-execution</h4>
+<div class="paragraph">
+<p>This is a simple controller that displays a form:</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@RequestMapping<code>(</code>"/search"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id = </code>"myModule:components/searchForm"<code>, title = </code>"Search form"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>@TemplateDescription<code>(</code>"Adds a customizable search form"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> SearchController {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(method = RequestMethod.GET)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> ModelAndView form() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>new</code> ModelAndView(<code>"searchForm"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(method = RequestMethod.POST)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> ModelAndView search(<code>@RequestParam</code>(<code>"q"</code>) String q, Node content) <code>throws</code> RepositoryException {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>if</code> (StringUtils.isBlank(q)) {`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>return</code> <code>new</code> ModelAndView(<code>"searchForm"</code>, <code>"errorMessage"</code>, content.getProperty(<code>"errorMessage"</code>).getString());`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`        String searchUrl = content.getProperty(<code>"searchUrl"</code>).getString();`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>new</code> ModelAndView(<code>new</code> RedirectView(searchUrl + q));`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>@TabFactory</code>(<code>"Settings"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> settingsTab(UiConfig cfg, TabBuilder tab) {`</p>
+</div>
+<div class="paragraph">
+<p>`        tab.fields(`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"title"</code>).label(<code>"Title"</code>).required().requiredErrorMessage(<code>"You need to enter a title!"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"bodyText"</code>).label(<code>"Text"</code>),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"searchUrl"</code>).label(<code>"Search engine URL"</code>).description(<code>"For instance: <a href="http://www.google.com/search?q="" class="bare">http://www.google.com/search?q="</a></code>),`</p>
+</div>
+<div class="paragraph">
+<p>`                cfg.fields.text(<code>"errorMessage"</code>).label(<code>"Error message"</code>).description(<code>"For instance: You need to enter a query"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`        );`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>The template for this component uses the blossom taglib to add the
+request parameter.</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign blossom=JspTaglibs[<code>"blossom-taglib"</code>] /]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;h1&gt;${content.title}/&lt;h2&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;p&gt;${content.bodyText}&lt;/p&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#<code>if</code> errorMessage?has_content]</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;p style=<code>"color:read"</code>;"&gt;${errorMessage}&lt;/p&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>[#/<code>if</code>]</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;form action=<code>"?"</code> method=<code>"POST"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>` [<code>@blossom</code>.pecidInput /]`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;input type=<code>"text"</code> name=<code>"q"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;input type=<code>"submit"</code> value=<code>"Search"</code> /&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/form&gt;</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596754_Blossommodule-UsingSpringWebFlowinsideMagnolia"><a class="anchor" href="#src-196596754_Blossommodule-UsingSpringWebFlowinsideMagnolia"></a>Using Spring WebFlow inside Magnolia</h4>
+<div class="paragraph">
+<p>It is possible to include a webflow as a component and embed it into a
+page. The example below is a controller that exposes a booking flow:</p>
+</div>
+<div class="paragraph">
+<p><code>@Controller</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Template<code>(id=</code>"myModule:components/bookingFlow"<code>, title = </code>"Booking Flow"`</code>)`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> BookingFlowController </code>extends`</code> FlowController {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Autowired</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> setFlowExecutor(FlowExecutor flowExecutor) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>.setFlowExecutor(flowExecutor);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>@RequestMapping</code>(<code>"/booking"</code>)`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) <code>throws</code> Exception {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>super</code>.handleRequest(request, response);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Note that you need to turn off the <code>redirectOnPause</code> behavior since it&#8217;s
+not usable when the flow is embedded in a page. Also, you might want to
+customize the handling of <code>NoSuchFlowException</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596754_Blossommodule-Resources"><a class="anchor" href="#src-196596754_Blossommodule-Resources"></a>Resources</h3>
+<div class="paragraph">
+<p>Tutorial -
+<a href="http://www.developer.com/java/web/spring-framework-and-magnolia-cms-creating-complex-java-based-websites.html">Spring
+Framework and Magnolia: Creating Complex Java-based Websites</a></p>
+</div>
+<div class="paragraph">
+<p>Backup module</p>
+</div>
+<div class="paragraph">
+<p>Blossom module release notes</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

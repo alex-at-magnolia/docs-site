@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Release notes for Magnolia CMS 6.2 - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/releases/Release-notes-for-Magnolia-CMS-6.2.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../releases/Release-notes-for-Magnolia-CMS-6.2.html">master</a>
+    <a class="version is-current" href="Release-notes-for-Magnolia-CMS-6.2.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Release-notes-for-Magnolia-CMS-6.2.html">Release notes for Magnolia CMS 6.2 - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Release notes for Magnolia CMS 6.2 - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Releases.html" class="bare">Releases.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Releases.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-200310839"><a class="anchor" href="#src-200310839"></a>Release notes for Magnolia CMS 6.2</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/End-of-life+policy#End-of-lifepolicy-LTS">LTS
+release</a> delivered on March 27, 2020</p>
+</div>
+<div class="paragraph">
+<p>*
+<a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-demo-webapp/6.2/magnolia-dx-core-demo-webapp-6.2.war">Magnolia
+DX Core 6.2</a></p>
+</div>
+<div class="paragraph">
+<p>All downloads&#8230;&#8203;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-demo-webapp/6.2/magnolia-dx-core-demo-webapp-6.2.war">magnolia-dx-core-demo-webapp-6.2.war</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-webapp/6.2/magnolia-dx-core-webapp-6.2.war">magnolia-dx-core-webapp-6.2.war</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-websphere-webapp/6.2/magnolia-dx-core-websphere-webapp-6.2.war">magnolia-dx-core-websphere-webapp-6.2.war</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-wildfly-webapp/6.2/magnolia-dx-core-wildfly-webapp-6.2.war">magnolia-dx-core-wildfly-webapp-6.2.war</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/bundle/magnolia-community-demo-webapp/6.2/magnolia-community-demo-webapp-6.2.war">magnolia-community-demo-webapp-6.2.war</a></p>
+</li>
+<li>
+<p><a href="https://nexus.magnolia-cms.com/service/local/repositories/magnolia.public.releases/content/info/magnolia/bundle/magnolia-community-demo-webapp/6.2/magnolia-community-demo-webapp-6.2-tomcat-bundle.zip">magnolia-community-demo-webapp-6.2-tomcat-bundle.zip</a>,
+<a href="https://nexus.magnolia-cms.com/service/local/repositories/magnolia.public.releases/content/info/magnolia/bundle/magnolia-community-demo-webapp/6.2/magnolia-community-demo-webapp-6.2-tomcat-bundle.tar.gz">.tar.gz</a></p>
+</li>
+<li>
+<p><a href="attachments_200310827_1_mtk_1.2.3.zip">mtk_1.2.3.zip</a> (as a light
+module)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia 6.2 takes us a step closer to our vision of a digital
+experience hub for omnichannel. In this release, we focus on experience
+management and integration. We also consolidate our UI framework efforts
+(see
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Changes+in+Magnolia+6+UI">Changes
+in Magnolia 6 UI</a> for a summary of the progress made so far).</p>
+</div>
+<div class="paragraph">
+<p><strong>Rich authoring experience for headless</strong>. Single-page apps (SPAs) have
+been gaining traction among both developers and marketers. Marketers are
+drawn toward the compelling digital experiences possible with SPAs,
+while front-end developers find today’s top SPA frameworks easier to
+work with. Whether you have started with SPAs or plan to do so in the
+future, you will want your marketers to fully manage those experiences
+from within the CMS – just like they are used to managing any website or
+page. The Visual SPA Editor released with Magnolia 6.2 empowers
+marketers to use the Magnolia Pages app – with its intuitive controls
+and live preview – even for headless projects that use SPA frameworks
+like React and Angular.</p>
+</div>
+<div class="paragraph">
+<p>Feature:
+<a href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-VisualSPAEditor">Visual
+SPA Editor</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Manage content from one hub</strong>. Siloed content that is spread across
+disparate systems makes it extremely challenging for marketers to create
+compelling, personalized experiences (not to mention the higher costs
+and slower time to market for campaigns). With Magnolia 6.2, you can
+bring in content and data from your PIMs, DAMs and even other CMSs using
+Light Development. You can declare REST clients in YAML – no Java code
+needed! You can then use the content and data in Magnolia apps, forms,
+templates and search results just like local content.</p>
+</div>
+<div class="paragraph">
+<p>Feature:
+<a href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Multisourcecontent">Multisource
+content</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Accelerate your DX platform with Connector Packs</strong>. At Magnolia, we
+believe that the one-size-fits-all approach of suite vendors limits
+brands in building digital platforms that are fit for purpose and fully
+tailored to their needs. So we take a best-of-breed approach to let
+customers choose the exact systems they need. We launch two new
+Connector Packs – Marketing Automation and DAM&#8201;&#8212;&#8201;and add more
+connectors to existing packs.</p>
+</div>
+<div class="paragraph">
+<p>Feature:
+<a href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-ConnectorPacks">Connector
+Packs</a></p>
+</div>
+<div class="paragraph">
+<p><strong>IUX – Integrated User Experience</strong>. With Magnolia 6.2, we open the first
+IUX slot. IUX slots are places in the AdminCentral UI where elements
+from integrated applications or other Magnolia content apps can live.
+The first slot is a wide horizontal slot at the top of content apps that
+shows page analytics by default.</p>
+</div>
+<div class="paragraph">
+<p>Feature:
+<a href="#src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItSVVY4oCTSW50ZWdyYXRlZFVzZXJFeHBlcmllbmNl">IUX
+(Integrated User Experience)</a></p>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-VisualSPAEditor"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-VisualSPAEditor"></a>Visual SPA Editor</h3>
+<div class="paragraph">
+<p>The Visual SPA Editor released with Magnolia 6.2 empowers marketers to
+use the Magnolia Pages app – with its intuitive controls and live
+preview – even for headless projects that use SPA frameworks like React
+and Angular.</p>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-UsingPageeditorforsingle-pageapps"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-UsingPageeditorforsingle-pageapps"></a>Using Page editor for single-page apps</h4>
+<div class="paragraph">
+<p>In a typical headless CMS, marketers have to work in forms, disconnected
+from the actual experience. In Magnolia, marketers retain creative
+control:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Choose components and layout, not just enter content.</p>
+</li>
+<li>
+<p>Understand the context of where content will be used with live
+preview.</p>
+</li>
+<li>
+<p>Maintain autonomy for editing channels, segments and campaigns.</p>
+</li>
+<li>
+<p>Reuse content across channels.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/200310839/6-2-Visual-SPA-Editor.png" alt="images/download/attachments/200310839/6-2-Visual-SPA-Editor.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Capabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Visually edit SPAs directly</p>
+</li>
+<li>
+<p>Use existing React/Angular components without modification</p>
+</li>
+<li>
+<p>Manage nested components</p>
+</li>
+<li>
+<p>Manage a tree of pages</p>
+</li>
+<li>
+<p>Manage interactive components</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Benefits for marketers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maintain autonomy for creating and editing all layout and content</p>
+</li>
+<li>
+<p>Reuse content across channels</p>
+</li>
+<li>
+<p>Preview any experience in context</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Benefits for developers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use popular technologies (React/Angular)</p>
+</li>
+<li>
+<p>Develop faster (designers and developers share one set of templates)</p>
+</li>
+<li>
+<p>Reduce development and ongoing maintenance costs (by making the SPA
+editable, software development is only needed for the initial setup or
+for more significant changes)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Visual editing of SPAs takes place in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+app">Pages app</a> where
+you can also preview the SPAs. See our example <code>angular-minimal</code> app
+page as available in the page preview of the Pages app (on the left) and
+as served by the Angular <code>ng</code> dev server on <code>localhost:4200</code> (on the
+right).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../_images/images/download/attachments/200310839/6-2-AttachingAnSPAProjectToMagnolia_8080author-%281%29.png" alt="images/download/attachments/200310839/6-2-AttachingAnSPAProjectToMagnolia_8080author-%281%29.png"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../_images/images/download/attachments/200310839/6-2-AttachingAnSPAProjectToMagnoliaangularMinimal_4200-%281%29.png" alt="images/download/attachments/200310839/6-2-AttachingAnSPAProjectToMagnoliaangularMinimal_4200-%281%29.png"></span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItU1BBcmVuZGVyaW5nOm5ld3N1Ym1vZHVsZWFuZGxpYnJhcmllcw"><a class="anchor" href="#src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItU1BBcmVuZGVyaW5nOm5ld3N1Ym1vZHVsZWFuZGxpYnJhcmllcw"></a>SPA rendering: new submodule and libraries</h4>
+<div class="paragraph">
+<p>The SPA functionality is handled by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>magnolia-spa-rendering</code> – a new submodule in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+module">Pages module</a>.</p>
+</li>
+<li>
+<p>Three new helper libraries shipped through the Node JavaScript
+platform:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@magnolia/template-annotations</code></p>
+</li>
+<li>
+<p><code>@magnolia/angular-editor</code></p>
+</li>
+<li>
+<p><code>@magnolia/react-editor</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On the Magnolia side, a SPA has a very simple template definition that
+just references the <code>index.html</code> file generated by the external React or
+Angular app. The SPA renderer produces template annotations, which the
+Pages app transforms into green
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Editing+pages#Editingpages-Toolbars">toolbars</a>
+(editable page elements).</p>
+</div>
+<div class="paragraph">
+<p>On the client side, the helper libraries ensure that your SPA project
+can be edited in the Pages app.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Componentmapping"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Componentmapping"></a>Component mapping</h4>
+<div class="paragraph">
+<p>The helper libraries are also crucial to correct interpretation of
+component <em>mappings</em>, that is one-to-one correspondences between
+components developed in a front-end framework and their Magnolia
+counterparts. The mappings are JavaScript objects containing entries
+whose key is the template id string and whose value is a direct
+JavaScript reference to the component type.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example mapping in the Angular framework</strong></p>
+</div>
+<div class="paragraph">
+<p>Magnolia template definition of a component called <code>title</code>:</p>
+</div>
+<div class="paragraph">
+<p>&lt;magnolia-resource-dir&gt;/light-modules/angular-magnolia-int/templates/components/title.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>title: Title component</code></p>
+</div>
+<div class="paragraph">
+<p>Its JavaScript (TypeScript) mapping in an Angular component (line 5):</p>
+</div>
+<div class="paragraph">
+<p>/spa-angular-minimal/src/app/root.component.ts</p>
+</div>
+<div class="paragraph">
+<p>`  constructor(<code>private</code> http: HttpClient, <code>private</code> router: Router, <code>private</code> rendererContext: RendererContextService) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>this</code>.rendererContext.setComponentMapping({`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>'angular-magnolia-int:pages/home'</code>: HomeComponent,`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>'angular-magnolia-int:pages/about'</code>: AboutComponent,`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>'angular-magnolia-int:components/title'</code>: TitleComponent,`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>'angular-magnolia-int:components/componentWithArea'</code>: ComponentWithAreaComponent,`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>'angular-magnolia-int:components/navigation'</code>: NavigationComponent,`</p>
+</div>
+<div class="paragraph">
+<p>`    });`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-RESTendpointsforSPA"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-RESTendpointsforSPA"></a>REST endpoints for SPA</h4>
+<div class="paragraph">
+<p>Page content, which is always edited in the Pages app, is requested by
+an external SPA through the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Delivery+endpoint+API+v2">Delivery
+endpoint API v2</a>. Page, area and component template definitions are
+requested by the SPA through a dedicated Magnolia template definition
+endpoint:
+<code>info.magnolia.rendering.spa.rest.v1.TemplateDefinitionEndpoint</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Further details</strong></p>
+</div>
+<div class="paragraph">
+<p>For a more detailed overview, see the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Single-page+applications">Single-page
+applications</a> feature page.</p>
+</div>
+<div class="paragraph">
+<p>For select technical aspects, see the child pages of
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/SPA+development+and+Magnolia">SPA
+development and Magnolia</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/PAGES-190">PAGES-190</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Multisourcecontent"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Multisourcecontent"></a>Multisource content</h3>
+<div class="paragraph">
+<p>Customers expect personal interactions with brands across many touch
+points (web, mobile and social). However, brands struggle to deliver a
+consistent experience to all those channels when content is stuck in
+silos. Siloed content that is spread across disparate systems makes it
+extremely challenging for marketers to create compelling, personalized
+experiences (not to mention the higher costs and slower time to market
+for campaigns).</p>
+</div>
+<div class="paragraph">
+<p>With Magnolia 6.2, you can bring in content and data from your PIMs,
+DAMs and even other CMSs. You can use the content and data in Magnolia
+apps, forms, templates and search results just like local content. For
+example, in the Pages app, a marketer can select a product from an
+e-commerce system or a legacy in-house PIM and create a connection to it
+on the page. When the page is rendered, it can include an image of the
+product and a hyperlink to another web system where the full product
+information is hosted.</p>
+</div>
+<div class="paragraph">
+<p>Multisource can connect to most REST APIs thanks to a highly
+configurable connection that can transform any content structure. Any UI
+element in Magnolia AdminCentral has the flexibility to work with the
+external REST-based content.</p>
+</div>
+<div class="paragraph">
+<p>At a technical level, the key capabilities are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Declarative REST clients</p>
+</li>
+<li>
+<p>JSON data source</p>
+</li>
+<li>
+<p>UI framework components for displaying data in AdminCentral UI
+elements</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-DeclarativeREST"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-DeclarativeREST"></a>Declarative REST</h4>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+Client+module">REST
+Client module</a> is released in version 2, bringing a set of new features
+and improvements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Connect to external systems with only configuration</p>
+</li>
+<li>
+<p>Access content from external systems throughout the Magnolia UI as if
+it were native content:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In an app</p>
+</li>
+<li>
+<p>In a select field</p>
+</li>
+<li>
+<p>In a link field chooser</p>
+</li>
+<li>
+<p>As search results in the Find Bar</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Include content from external systems in your digital experiences (for
+example, exchange rates pulled from a remote service on a web page)</p>
+</li>
+<li>
+<p>Trigger or act on remote systems</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Benefits for developers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accomplish common integration tasks in a way that is faster,
+standardized and easier to maintain</p>
+</li>
+<li>
+<p>Deploy multisource implementations to running systems with no restart
+(compatible with Light Development)</p>
+</li>
+<li>
+<p>Work with external content and local content in the same way</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong> You can now configure REST clients in light modules without
+requiring a proxy Java class. This client configuration retrieves a
+response from the `https://restcountries.eu/rest/v2/all `endpoint
+containing a list of country names.</p>
+</div>
+<div class="paragraph">
+<p>&lt;Magnolia-installation-folder&gt;/light-modules/demo/restClients/countries.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>baseUrl: https:`</code>//restcountries.eu/rest/v2/`</p>
+</div>
+<div class="paragraph">
+<p><code>restCalls:</code></p>
+</div>
+<div class="paragraph">
+<p>`  allCountries:`</p>
+</div>
+<div class="paragraph">
+<p>`    method: GET`</p>
+</div>
+<div class="paragraph">
+<p>`    entityClass: com.fasterxml.jackson.databind.JsonNode`</p>
+</div>
+<div class="paragraph">
+<p>`    path: /all`</p>
+</div>
+<div class="paragraph">
+<p>You can use the data delivered in the JSON response in your page
+project.</p>
+</div>
+<div class="paragraph">
+<p>In addition, with the DX Core edition and its
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/UI+Framework+REST+Extensions+module">UI
+Framework REST Extensions module</a>, you can use configured REST clients
+together with UI elements – the apps and the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a> (through
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+search+result+suppliers+for+Periscope">a
+search result supplier configuration</a>). For example, you can display the
+country names as options in a select field.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/200310839/6-2-exampleRESTclientConfigurations-allCountries-inAppForm.png-%281%29.png" alt="images/download/attachments/200310839/6-2-exampleRESTclientConfigurations-allCountries-inAppForm.png-%281%29.png"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5021">MGNLUI-5021</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLUI-5341">MGNLUI-5341</a></p>
+</div>
+<div class="paragraph">
+<p>For more examples, see the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Example+REST+client+configurations">Example
+REST client configurations</a> page. Below is a summary of the new features
+and improvements.</p>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Newrestfnfunctions"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Newrestfnfunctions"></a>New restfn functions</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>`restfn.call `executes a call to a configured REST client with
+optional assignment of custom values
+(<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-42">MGNLRESTCL-42</a>).</p>
+</li>
+<li>
+<p>`restfn.asMap `converts a JsonNode object to a hash map
+(<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-86">MGNLRESTCL-86</a>).</p>
+</li>
+<li>
+<p>`restfn.asList `converts a JsonNode object to an array list
+(<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-86">MGNLRESTCL-86</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-DebuggingRESTcalls"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-DebuggingRESTcalls"></a>Debugging REST calls</h5>
+<div class="paragraph">
+<p>Besides using the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+Client+app">REST Client
+app</a> to test configured REST clients, you can use its new <code>debug</code> subapp
+to display full REST calls and responses.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-87">MGNLRESTCL-87</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-SecurityschemesandOAuth2authentication"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-SecurityschemesandOAuth2authentication"></a>Security schemes and OAuth2 authentication</h5>
+<div class="paragraph">
+<p>Two REST security handlers are available out of the box, <code>basic</code> (RFC
+7617) and <code>bearer</code> (RFC 6750). The latter accepts parameters enabling
+connections to endpoints using implementations of the OAuth2
+authentication scheme.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-44">MGNLRESTCL-44</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-92">MGNLRESTCL-92</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Hidingsensitiveinformation"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Hidingsensitiveinformation"></a>Hiding sensitive information</h5>
+<div class="paragraph">
+<p>For the <code>path</code>, <code>queryParameters</code>, <code>headers</code>, <code>cookies</code> and <code>body</code>
+properties as well as the <code>username</code> and <code>password</code> properties of the
+<code>basic</code> security scheme, you can use password templates
+(<code>{@password:&lt;passwordIdentifier&gt;}</code>) and the respective password
+identifiers from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Passwords+app">Passwords
+app</a> to hide password values from REST client definitions.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-113">MGNLRESTCL-113</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Handlingerrors"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Handlingerrors"></a>Handling errors</h5>
+<div class="paragraph">
+<p>With
+<code>info.magnolia.rest.client.exception.handler.RestClientExceptionHandler</code>,
+you can access response codes and exceptions and deal with them the way
+you need.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-43">MGNLRESTCL-43</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Cachingandtimeouts"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Cachingandtimeouts"></a>Caching and timeouts</h5>
+<div class="paragraph">
+<p>For each REST client, you can specify caching and timeout strategies
+through the <code>cacheConfiguration</code> and <code>timeoutConfiguration</code> nodes
+respectively.</p>
+</div>
+<div class="paragraph">
+<p><code>baseUrl: http:`</code>//httpbin.org/`</p>
+</div>
+<div class="paragraph">
+<p><code>cacheConfiguration:</code></p>
+</div>
+<div class="paragraph">
+<p>`  expireIn: <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p><code>timeoutConfiguration:</code></p>
+</div>
+<div class="paragraph">
+<p>`  readTimeout: <code>`4</code></p>
+</div>
+<div class="paragraph">
+<p>`  fallbackToCache: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p><code>restCalls:</code></p>
+</div>
+<div class="paragraph">
+<p>`  delay:`</p>
+</div>
+<div class="paragraph">
+<p>`    method: GET`</p>
+</div>
+<div class="paragraph">
+<p>`    entityClass: java.lang.String`</p>
+</div>
+<div class="paragraph">
+<p>`    path: <code>&#8217;delay/{delay_period}'</code></p>
+</div>
+<div class="paragraph">
+<p>`    headers:`</p>
+</div>
+<div class="paragraph">
+<p>`      lang: <code>&#8217;{lang}'</code></p>
+</div>
+<div class="paragraph">
+<p>`    defaultValues:`</p>
+</div>
+<div class="paragraph">
+<p>`      delay_period: <code>`3</code></p>
+</div>
+<div class="paragraph">
+<p>`      lang: EN`</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-45">MGNLRESTCL-45</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-46">MGNLRESTCL-46</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Associateddeprecations"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Associateddeprecations"></a>Associated deprecations</h5>
+<div class="paragraph">
+<p>Alongside those improvements come the following deprecations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The RESTEasy Client module (<code>magnolia-resteasy-client</code>) has been
+deprecated and merged into the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+Client+module">REST
+Client module</a>. For more details, see the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+to+Magnolia+6.2.x">Upgrading
+to Magnolia 6.2.x</a> page. The cache modules (<code>magnolia-cache-parent</code>) no
+longer depend on <code>magnolia-resteasy-client</code>
+(<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-60">MGNLRESTCL-60</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLCACHE-215">MGNLCACHE-215</a>).</p>
+</li>
+<li>
+<p>Implementations of <code>info.magnolia.rest.client.call.AbstractRestCall</code>
+such as <code>GetRestCall</code> or <code>PostRestCall</code> have been deprecated. REST call
+definitions now use JAX-RS API directly
+(<a href="https://jira.magnolia-cms.com/browse/MGNLRESTCL-65">MGNLRESTCL-65</a>).</p>
+</li>
+<li>
+<p><code>RestSearchResultSupplier</code> in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Periscope+module">Periscope
+module</a> has been deprecated in favor of <code>RestClientResultSupplier</code> in
+the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/UI+Framework+REST+Extensions+module">UI
+Framework REST Extensions module</a>
+(<a href="https://jira.magnolia-cms.com/browse/MGNLPER-119">MGNLPER-119</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-JSONdatasource"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-JSONdatasource"></a>JSON data source</h4>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/JSON+data+source">JSON
+data source</a> provides information about what REST client, REST call and
+path expressions to use. It is part of the <code>magnolia-rest-client-ui</code>
+extension module for the <em>Magnolia 6 UI</em> framework. Note that the JSON
+data source, which provides the ability to use REST clients in the UI,
+is a DX Core feature that is not available in the Community Edition.</p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/UI+Framework+REST+Extensions+module">UI
+Framework REST Extensions module</a> offers two additional field types for
+JSON data sources: <code>restLinkField</code> and <code>restComboBoxField</code>. These types
+wrap <code>linkField</code> and <code>comboBoxField</code> respectively and check whether REST
+calls are working properly. If an error occurs, components that use REST
+field types will be disabled.</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  properties:`</p>
+</div>
+<div class="paragraph">
+<p>`    jcrName:`</p>
+</div>
+<div class="paragraph">
+<p>`      label: Name`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: restComboBoxField`</p>
+</div>
+<div class="paragraph">
+<p>`      datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`        name: rest`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: jsonDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`        restClient: countries`</p>
+</div>
+<div class="paragraph">
+<p>`        restCall: allCountries`</p>
+</div>
+<div class="paragraph">
+<p>`        jsonPathExpressions:`</p>
+</div>
+<div class="paragraph">
+<p>`          itemId: <code>&#8217;$.name'</code></p>
+</div>
+<div class="paragraph">
+<p>`          items: <code>&#8217;$.*'</code></p>
+</div>
+<div class="paragraph">
+<p>`          describeBy: <code>&#8217;$.name'</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-ConnectorPacks"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-ConnectorPacks"></a>Connector Packs</h3>
+<div class="paragraph">
+<p>Connector Packs complement DX Core. Each Connector Pack integrates
+Magnolia with an adjacent software category such as e-commerce. The
+packs are optional. You typically need to connect multiple systems when
+building a best-of-breed digital experience platform. Connector Packs
+make it all easier.</p>
+</div>
+<div class="paragraph">
+<p>The following new Connector Packs and updates to existing packs are
+currently available<strong>:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+Connector+Pack">DAM
+Connector Pack</a> provides out-of-the-box connectors to Amazon S3 and
+Bynder to make your existing assets available directly within Magnolia.
+<span class="status  green">NEW</span></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Marketing+Automation+Connector+Pack">Marketing
+Automation Connector Pack</a> provides out-of-the-box connectors to the
+marketing software systems Adobe Marketo and Salesforce for web-to-lead
+functionality as well as an API to write your own connector to another
+third-party tool. <span class="status  green">NEW</span></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Commerce+Connector+Pack">Commerce
+Connector Pack</a> delivers a new connector to Salesforce Commerce.
+<span class="status  blue">UPDATED</span></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Analytics+Connector+Pack">Analytics
+Connector Pack</a> delivers a new connector to Adobe Analytics.
+<span class="status  blue">UPDATED</span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Keep up to date with changes to our Connector Packs and Special Features
+with the
+<a href="Connector-Pack-and-Special-Feature-changelog.html">Connector Pack
+and Special Feature changelog</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-UIframework"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-UIframework"></a>UI framework</h3>
+<div class="sect3">
+<h4 id="src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItSVVY4oCTSW50ZWdyYXRlZFVzZXJFeHBlcmllbmNl"><a class="anchor" href="#src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItSVVY4oCTSW50ZWdyYXRlZFVzZXJFeHBlcmllbmNl"></a>IUX – Integrated User Experience</h4>
+<div class="paragraph">
+<p>With Magnolia 6.2, we open the first IUX slot. IUX slots are places in
+the AdminCentral UI where elements from integrated applications or other
+Magnolia content apps can live. Elements such as charts and widgets add
+value to the user&#8217;s workflow inside Magnolia. We pull in data from
+adjacent applications and content apps and display it in the right
+places so that users do not need to switch contexts.</p>
+</div>
+<div class="paragraph">
+<p>The first slot is a wide horizontal slot at the top of content apps. You
+can see the slot in the Pages app when you install the Analytics
+Connector Pack, but you can also use it for your own purposes. Select a
+page to see common metrics from the connected analytics source directly
+in the Magnolia UI. You do not need to switch back and forth between
+applications.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/200310839/6-2-iux-analytics.png" alt="images/download/attachments/200310839/6-2-iux-analytics.png"></span></p>
+</div>
+<div class="paragraph">
+<p>At a technical level, the IUX slot is an extension panel in the browser
+subapp. The panel allows you to configure a list of extension views in
+the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workbench+definition">workbench</a>
+and replaces `contentTools `of <em>Magnolia 5 UI</em>. See `extensionViews `for
+configuration and properties.</p>
+</div>
+<div class="paragraph">
+<p>Any view implementing <code>UiFrameworkView</code> could be inserted into the slot.
+You can create a view for displaying data that would benefit from value
+context and can switch data whenever the selected item changes. The
+following is an example view for displaying page titles, with
+<code>valueContext.observe</code> triggering an update whenever selection changes.</p>
+</div>
+<div class="paragraph">
+<p><code>package`</code> info.magnolia.ui.framework.app.extension;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.ui.contentapp.browser.context.ValueContext;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.ui.framework.ConfiguredViewDefinition;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.ui.framework.UiFrameworkView;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.inject.Inject;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.jcr.Node;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> com.machinezoo.noexception.Exceptions;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> com.vaadin.ui.Composite;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> com.vaadin.ui.Label;`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>` * Complex data view :).`</p>
+</div>
+<div class="paragraph">
+<p>` */`</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> DataView </code>extends<code> Composite </code>implements`</code> UiFrameworkView {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> DataView(ValueContext&lt;Node&gt; valueContext) {`</p>
+</div>
+<div class="paragraph">
+<p>`        Label pageTitle = <code>new</code> Label();`</p>
+</div>
+<div class="paragraph">
+<p>`        valueContext.observe(() &#8594; {`</p>
+</div>
+<div class="paragraph">
+<p>`            Node node = valueContext.getSingleOrThrow();`</p>
+</div>
+<div class="paragraph">
+<p>`            pageTitle.setValue(Exceptions.wrap().get(node::getName));`</p>
+</div>
+<div class="paragraph">
+<p>`        });`</p>
+</div>
+<div class="paragraph">
+<p>`        setCompositionRoot(pageTitle);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>static</code> <code>class</code> Definition <code>extends</code> ConfiguredViewDefinition&lt;DataView&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>public</code> Definition() {`</p>
+</div>
+<div class="paragraph">
+<p>`            setImplementationClass(DataView.<code>class</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5151">MGNLUI-5151</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItQWRkaXRpb25hbCR0eXBlYWxpYXNlc2ZvclVJY29tcG9uZW50cw"><a class="anchor" href="#src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItQWRkaXRpb25hbCR0eXBlYWxpYXNlc2ZvclVJY29tcG9uZW50cw"></a>Additional $type aliases for UI components</h4>
+<div class="paragraph">
+<p>Since Magnolia 6.1, a range of <code>$type</code> aliases have been available as
+shortcuts for the fully qualified class names of mainly fields and
+columns. This release extends the initiative to more definition types:
+actions, data sources, drop constraints, editors, item providers,
+layouts and validators.</p>
+</div>
+<div class="paragraph">
+<p>For a full list of <code>$type</code> aliases for fields, see
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fieldtypes">Field
+types</a>. For other <code>$type</code> aliases, check each definition class
+individually.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5172">MGNLUI-5172</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Dialogsmoreuniformandresponsive"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Dialogsmoreuniformandresponsive"></a>Dialogs more uniform and responsive</h4>
+<div class="paragraph">
+<p>With Magnolia 6.2, light and strong dialogs are of the same size and
+more responsive. Both dialog types are now modal (allowing no
+interaction with other parts of the interface), and the difference
+between them is only visual (the background color). See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+types">Dialog types</a>
+for more details.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5426">MGNLUI-5426</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Defaultcolumnfiltersinchooserdialog"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Defaultcolumnfiltersinchooserdialog"></a>Default column filters in chooser dialog</h4>
+<div class="paragraph">
+<p>Column filters are now used to search in a chooser dialog. If none is
+configured in the referenced columns, filters will be automatically
+created for all columns of the <code>String</code> type. Note that configured
+filters always take precedence over default ones.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5419">MGNLUI-5419</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-ConfigurationtodepopulateFormViewinOpenDialogAction"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-ConfigurationtodepopulateFormViewinOpenDialogAction"></a>Configuration to depopulate FormView in OpenDialogAction</h4>
+<div class="paragraph">
+<p><code>info.magnolia.ui.editor.FormView</code> is automatically populated whenever
+OpenDialogActionDefinition is configured. This can trigger exceptions in
+some cases where there is no initial value to populate the form with. To
+disable this default behavior, you can now set the <code>populate</code> property
+to <code>false</code> in YAML. The following is an <code>openDialogAction</code> definition
+from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resource+Files+app">Resource
+Files app</a>:</p>
+</div>
+<div class="paragraph">
+<p><code>addFile:</code></p>
+</div>
+<div class="paragraph">
+<p>`  icon: icon-add-file`</p>
+</div>
+<div class="paragraph">
+<p>`  $type: openDialogAction`</p>
+</div>
+<div class="paragraph">
+<p>`  populate: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`  dialogId: resources-app:addFile`</p>
+</div>
+<div class="paragraph">
+<p>`  availability:`</p>
+</div>
+<div class="paragraph">
+<p>`    root: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    rules:`</p>
+</div>
+<div class="paragraph">
+<p>`      IsResourceFolderRule: &amp;isResourceFolder`</p>
+</div>
+<div class="paragraph">
+<p>`        implementationClass: info.magnolia.resources.app.availability.IsResourceFolderRule`</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5721">MGNLUI-5721</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Keyboardshortcutsforcontentappsandnavigation"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Keyboardshortcutsforcontentappsandnavigation"></a>Keyboard shortcuts for content apps and navigation</h4>
+<div class="paragraph">
+<p>A number of keyboard shortcuts have been implemented for browsing,
+selecting and editing items in grids and for global navigation. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Keyboard+shortcuts">Keyboard
+shortcuts</a> for a full list.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-4628">MGNLUI-4628</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLUI-4974">MGNLUI-4974</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItTWluL21heHdpZHRocHJvcGVydGllc2ZvckNvbHVtbkRlZmluaXRpb24"><a class="anchor" href="#src-200310839_safe-id-UmVsZWFzZW5vdGVzZm9yTWFnbm9saWFDTVM2LjItTWluL21heHdpZHRocHJvcGVydGllc2ZvckNvbHVtbkRlZmluaXRpb24"></a>Min/max width properties for ColumnDefinition</h4>
+<div class="paragraph">
+<p>To provide backward compatibility, the ColumnDefinition interface has
+the following new properties: <code>expandRatio</code>, <code>maximumWidth</code>,
+<code>minimumWidth</code>, <code>minimumWidthFromContent</code> and <code>width</code>. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Column+definition">Column
+definition</a> for more details.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5574">MGNLUI-5574</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLUI-5603">MGNLUI-5603</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-ConvertersforMagnolia5UIfields"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-ConvertersforMagnolia5UIfields"></a>Converters for Magnolia 5 UI fields</h4>
+<div class="paragraph">
+<p>To provide a smooth transition from <em>Magnolia 5</em> to <em>Magnolia 6 UI</em>, a
+number of field converters have been introduced. These converters allow
+you to take a <em>Magnolia 5 UI</em> definition, transform it into a model on
+the fly and delegate to the updated implementation. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+converters">Field
+converters</a> for more information.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5026">MGNLUI-5026</a>,
+<a href="https://jira.magnolia-cms.com/browse/MGNLUI-5687">MGNLUI-5687</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Sliderfield"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Sliderfield"></a>Slider field</h4>
+<div class="paragraph">
+<p>You can use <code>info.magnolia.ui.field.SliderFieldDefinition</code> to render a
+horizontal bar that allows the user to set a numeric value within a
+defined range. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Slider+field">Slider field</a>
+for configuration and properties.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5525">MGNLUI-5525</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Improveduploadfieldimplementation"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Improveduploadfieldimplementation"></a>Improved upload field implementation</h4>
+<div class="paragraph">
+<p>The new <code>info.magnolia.ui.editor.UploadViewDefinition</code> allows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+upload+field">DAM
+upload field</a> to be used by configuring a custom <code>factoryClass</code>. If no
+<code>factoryClass</code> is configured, the default upload field will be created.</p>
+</li>
+<li>
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/Upload+field">upload
+field</a> to be marked as required and to display a validation error for an
+empty field.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>upload:</code></p>
+</div>
+<div class="paragraph">
+<p>` factoryClass: info.magnolia.dam.app.field.factory.DamUploadFieldFactory`</p>
+</div>
+<div class="paragraph">
+<p>` <code>class</code>: info.magnolia.ui.editor.UploadViewDefinition`</p>
+</div>
+<div class="paragraph">
+<p>` required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>` itemProvider:`</p>
+</div>
+<div class="paragraph">
+<p>` $type: jcrChildNodeProvider`</p>
+</div>
+<div class="paragraph">
+<p>` nodeName: jcr:content`</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5656">MGNLUI-5656</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-ServerpushinAdminCentral"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-ServerpushinAdminCentral"></a>Server push in AdminCentral</h4>
+<div class="paragraph">
+<p>Server-side <code>push</code> functionality is now provided in AdminCentral.
+Previously, the typical Vaadin UI model would only update views or send
+notifications if the author interacted with the system. With this
+functionality, content apps are refreshed live in the background and
+notifications appear almost immediately.</p>
+</div>
+<div class="paragraph">
+<p>See the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+to+Magnolia+6.2.x">Upgrading
+to Magnolia 6.2.x</a> page for how to enable this in your Magnolia webapp.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5257">MGNLUI-5257</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-PropertyvalueaccessmethodsforFormView"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-PropertyvalueaccessmethodsforFormView"></a>Property value access methods for FormView</h4>
+<div class="paragraph">
+<p>The following property value access methods have been added to
+<code>info.magnolia.ui.editor.FormView</code>:</p>
+</div>
+<div class="paragraph">
+<p><code>public`</code> &lt;V&gt; Optional&lt;V&gt; getPropertyValue(String propertyName) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>return</code> <code>this</code>.getPropertyValue(propertyName, localeContext.getCurrent());`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>public`</code> &lt;V&gt; Optional&lt;V&gt; getPropertyValue(String propertyName, Locale locale) {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>return</code> <code>this</code>.formPresenter.getBoundPropertyValue(propertyName, locale);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5329">MGNLUI-5329</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Vaadin8thumbnailview"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Vaadin8thumbnailview"></a>Vaadin 8 thumbnail view</h4>
+<div class="paragraph">
+<p>To improve back-end data binding,
+<code>info.magnolia.ui.contentapp.browser.ThumbnailView</code> now uses the
+<a href="https://vaadin.com/api/framework/8/com/vaadin/data/provider/DataProvider.html">DataProvider</a>
+and PreviewProvider interfaces rather than the deprecated
+<a href="https://vaadin.com/api/framework/7/com/vaadin/data/Container.html">Container</a>
+and ImageProvider respectively.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-4695">MGNLUI-4695</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Defaultdialogactionsandrootavailability"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Defaultdialogactionsandrootavailability"></a>Default dialog actions and root availability</h4>
+<div class="paragraph">
+<p>The default <code>commit</code> and <code>cancel</code> dialog actions were introduced in
+Magnolia 6.1 as a developer preview feature. With Magnolia 6.2, these
+actions are not only fully stable but also available by default for
+empty selection.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5734">MGNLUI-5734</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Simplifiedemptyselectioningridviews"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Simplifiedemptyselectioningridviews"></a>Simplified empty selection in grid views</h4>
+<div class="paragraph">
+<p>Handling empty selection in grid views has been simplified. Previously,
+when nothing was selected, the framework would implicitly select a
+default (or root) element (<code>~ContentConnector#getDefaultItemId</code>). With
+Magnolia 6.2, the selection context (value context) is left empty. In
+doing so, UI actions handle empty selection themselves by using
+workspace root items as a fallback or by executing some other logic.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5219">MGNLUI-5219</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-DeprecatedMagnolia5UIFramework"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-DeprecatedMagnolia5UIFramework"></a>Deprecated Magnolia 5 UI Framework</h4>
+<div class="paragraph">
+<p>The <em>Magnolia 5 UI</em> framework is now marked as deprecated in the
+documentation. You are advised to use the updated implementations of
+<em>Magnolia 6 UI</em>.</p>
+</div>
+<div class="paragraph">
+<p>In code, this means that every <code>*-compatibility</code> artifact has been
+deprecated (for example, <code>magnolia-personalization-compatibility</code>). The
+deprecated classes contain links to their replacements.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-4971">MGNLUI-4971</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Classandpackageimprovements"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Classandpackageimprovements"></a>Class and package improvements</h4>
+<div class="paragraph">
+<p>With Magnolia 6.2, a large number of classes and packages have been
+renamed, moved or deleted. See `MGNLUI-5618.diff `for a full list of
+changes.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5618">MGNLUI-5618</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-CommunityEditionupdates"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-CommunityEditionupdates"></a>Community Edition updates</h3>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-CEPacksmergedintoCE"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-CEPacksmergedintoCE"></a>CE Packs merged into CE</h4>
+<div class="paragraph">
+<p>The CE Packs repository has been fully merged into CE, which now
+contains all community webapps and bundles. See the updated
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ce.pub/browse">CE
+repository</a> for more details.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLCE-219">MGNLCE-219</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-CEbundlemergedintoCEwebapp"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-CEbundlemergedintoCEwebapp"></a>CE bundle merged into CE webapp</h4>
+<div class="paragraph">
+<p>The <code>magnolia-community-demo-bundle</code> artifact has been merged into
+<code>magnolia-community-demo-webapp</code>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLCE-128">MGNLCE-128</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Third-partylibraryupdates"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Third-partylibraryupdates"></a>Third-party library updates</h3>
+<div class="paragraph">
+<p>This release comes with third-party library updates to fix some security
+and compatibility issues as well as improve performance. The following
+are the most notable changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Commons Net updated to 3.5
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-378">BUILD-378</a>)</p>
+</li>
+<li>
+<p>COS replaced with Commons FileUpload
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-344">BUILD-344</a>,
+<a href="https://jira.magnolia-cms.com/browse/MAGNOLIA-7566">MAGNOLIA-7566</a>)</p>
+</li>
+<li>
+<p>HttpClient updated to 4.5.11
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-370">BUILD-370</a>)</p>
+</li>
+<li>
+<p>Jackrabbit updated to 2.20.0
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-356">BUILD-356</a>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+As described in the
+<a href="https://issues.apache.org/jira/browse/JCR-4449">Jackrabbit Content
+Repository</a>, <code>jackrabbit-api</code> has been replaced with
+<code>oak-jackrabbit-api</code>. Although this update has affected the
+<code>magnolia-main</code> and <code>magnolia-ui</code> modules, there are no API-breaking
+changes and imports do not need to be modified.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Javassist updated to 3.19.0-GA
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-378">BUILD-378</a>)</p>
+</li>
+<li>
+<p>JSON-lib updated to 2.4
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-378">BUILD-378</a>)</p>
+</li>
+<li>
+<p>ND4J updated to AVX2
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-366">BUILD-366</a>)</p>
+</li>
+<li>
+<p>OkHttp updated to 3.13.1
+(<a href="https://jira.magnolia-cms.com/browse/BUILD-378">BUILD-378</a>)</p>
+</li>
+<li>
+<p>RESTEasy and Jackson Databind updated to 4.4.2.Final and 2.10.1
+respectively (<a href="https://jira.magnolia-cms.com/browse/BUILD-358">BUILD-358</a>)</p>
+</li>
+<li>
+<p>Vaadin updated to 8.9.4 (
+<a href="https://jira.magnolia-cms.com/browse/BUILD-357">BUILD-357</a> )</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All changes are managed via the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/BOM+for+third-party+libraries">BOM
+for third-party libraries</a> . If you manage your bundles via Maven using
+the BOM, all updates will be handled automatically. We keep the details
+of security-related fixes private in line with our
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Security+policy">security
+policy</a> . <a href="https://wiki.magnolia-cms.com/display/DOCS62/Support">Contact
+our Support team</a> if you need more information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Others"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Others"></a>Others</h3>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Usersreleasedfrommemoryonceloggedout"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Usersreleasedfrommemoryonceloggedout"></a>Users released from memory once logged out</h4>
+<div class="paragraph">
+<p>In the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Periscope+module">Periscope
+module</a>, DX Core users are now released from memory as soon as they log
+out or their session expires. Previously, a user would stay in memory
+until the maximum limit of 10 users was reached.</p>
+</div>
+<div class="paragraph">
+<p>Note that you should still configure
+<a href="https://deeplearning4j.konduit.ai/config/config-memory">DL4J memory
+limits</a> to avoid off-heap memory starvation. This is particularly the
+case with the <code>-Dorg.bytedeco.javacpp.maxbytes</code> JVM argument.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLPER-121">MGNLPER-121</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-StreammethodsforResourceAPI"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-StreammethodsforResourceAPI"></a>Stream methods for Resource API</h4>
+<div class="paragraph">
+<p>The following stream and lookup methods have been added to the Resource
+interface:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface`</code> Resource {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>default</code> Stream&lt;Resource&gt; streamChildren() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> listChildren().stream();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>default</code> Stream&lt;Resource&gt; findResources(Predicate&lt;Resource&gt; resourcePredicate) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> streamChildren().filter(resourcePredicate);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>default</code> Optional&lt;Resource&gt; findResource(Predicate&lt;Resource&gt; resourcePredicate) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> findResources(resourcePredicate).findFirst();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>default</code> Optional&lt;Resource&gt; findResource(String childResourceName) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> findResource(resource &#8594; resource.getName().equals(childResourceName));`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MAGNOLIA-7603">MAGNOLIA-7603</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Optimizedscanningandpatternmatchingforresfn"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Optimizedscanningandpatternmatchingforresfn"></a>Optimized scanning and pattern matching for resfn</h4>
+<div class="paragraph">
+<p>In the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources+module">Resources
+module</a>, the <code>ResourcesTemplatingFunctions#generate</code> method used by
+<code>resfn</code> previously scanned:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All the files and directories of the <code>resources</code> directory</p>
+</li>
+<li>
+<p>All the files in the classpath to match their path with the provided
+JS or CSS path (potential regex)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This recursive scanning resulted in significant CPU usage. To ensure
+that such scanning and pattern matching are no longer forced, compiled
+regular expressions have been optimized as follows:</p>
+</div>
+<div class="paragraph">
+<p><code>private<code> </code>static<code> </code>final<code> String GLOB_WILDCARD_CHARS = </code>"\\*\\[\\{\\?"`</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>// non-greedily matches anything that precedes a forward slash followed by string containing any of the glob-related</code></p>
+</div>
+<div class="paragraph">
+<p><code>// characters (or the end of the string)</code></p>
+</div>
+<div class="paragraph">
+<p><code>private<code> </code>static<code> </code>final<code> Pattern PATH_BEFORE_GLOB = Pattern.compile(String.format(</code>"<sup>glob:(?&lt;root&gt;[</sup>%s]+?)(\\/[^\\/]*[%s$])"`</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`        GLOB_WILDCARD_CHARS, GLOB_WILDCARD_CHARS));`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>` * Find out where in a String things start looking like a regex. Do this by matching`</p>
+</div>
+<div class="paragraph">
+<p>` * anything that doesn&#8217;t seem to be a "normal" file name character:`</p>
+</div>
+<div class="paragraph">
+<p>` * alphanumeric, horizontal whitespace, underscore, dash and dot.`</p>
+</div>
+<div class="paragraph">
+<p>` * Will result in funky`</p>
+</div>
+<div class="paragraph">
+<p>` * but perfectly legal Unix paths being regarded as regex, e.g.`</p>
+</div>
+<div class="paragraph">
+<p>` * if they contain characters like squiggly brackets or square brackets.`</p>
+</div>
+<div class="paragraph">
+<p>` * This only means our heuristic optimization will not fully apply to such`</p>
+</div>
+<div class="paragraph">
+<p>` * funky path names, as the prefix path found will be shorter than possible,`</p>
+</div>
+<div class="paragraph">
+<p>` * while in 99,9% of cases it will be optimal.`</p>
+</div>
+<div class="paragraph">
+<p>` */`</p>
+</div>
+<div class="paragraph">
+<p><code>private<code> </code>static<code> </code>final<code> String NON_REGEX_WILDCARD_CHARS = </code>"\\p{Alnum}\\h_\\-\\./"`</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>private<code> </code>static<code> </code>final<code> Pattern PATH_BEFORE_REGEX = Pattern.compile(String.format(</code>"<sup>(?&lt;root&gt;[%s]+?)(\\/[</sup>\\/]*[^%s$])"`</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`            NON_REGEX_WILDCARD_CHARS, NON_REGEX_WILDCARD_CHARS));`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>` * Returns a glob or regex expression&#8217;s leading directory before a first "*" or other special glob/regex character`</p>
+</div>
+<div class="paragraph">
+<p>` * that potentially ambiguates directories.`</p>
+</div>
+<div class="paragraph">
+<p>` * @param patternWithPathPrefix`</p>
+</div>
+<div class="paragraph">
+<p>` */`</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLRES-319">MGNLRES-319</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-DeprecatedContentAPIremoved"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-DeprecatedContentAPIremoved"></a>Deprecated Content API removed</h4>
+<div class="paragraph">
+<p>The legacy <code>Content</code> API has been completely removed from Magnolia 6.2.
+It has been deprecated since
+<a href="https://wiki.magnolia-cms.com/display/DOCS45/Release+notes+for+Magnolia+4.5.1">Magnolia
+4.5</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Knownissues"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Knownissues"></a>Known issues</h3>
+<div class="paragraph">
+<p>If you are upgrading from an earlier version, read the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+to+Magnolia+6.2.x">Upgrading
+to Magnolia 6.2.x</a> page first and check the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Known+issues">Known issues</a>
+page.</p>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-ContentstoredinCEappsnotdisplayed"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-ContentstoredinCEappsnotdisplayed"></a>Content stored in CE apps not displayed</h4>
+<div class="paragraph">
+<p>In the Community Edition, if you edit content created in an app and the
+instance has no default i18n support, the content will not be displayed
+in the detail subapp of the app.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLUI-5770">MGNLUI-5770</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Sitemoduleinaccessibletonon-DXCoreusers"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Sitemoduleinaccessibletonon-DXCoreusers"></a>Site module inaccessible to non-DX Core users</h4>
+<div class="paragraph">
+<p>Site 1.2.4 relies on artifacts in maintenance mode, making it
+inaccessible to non-DX Core users. To fix this, the recommended Site 1.3
+is now available in our public Nexus repository and will be bundled with
+Magnolia 6.2.1.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLSITE-97">MGNLSITE-97</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-DeviceDetectionmoduleremovedfrombundle"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-DeviceDetectionmoduleremovedfrombundle"></a>Device Detection module removed from bundle</h4>
+<div class="paragraph">
+<p>The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Device+Detection+module">Device
+Detection module</a> has been removed from the bundle. If you rely on the
+module, you will need to add it back as a dependency in your webapp POM.
+Otherwise, you will need to clean the broken configuration left behind.
+To do so, remove the following nodes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/server/filters/deviceDetection</code></p>
+</li>
+<li>
+<p><code>/server/rendering/channelManagement/channels/device</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/MGNLEE-598">MGNLEE-598</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Incompatibilities"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Incompatibilities"></a>Incompatibilities</h4>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-OracleWebLogicServer"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-OracleWebLogicServer"></a>Oracle WebLogic Server</h5>
+<div class="paragraph">
+<p>Magnolia 6.2 is not compatible with Oracle WebLogic Server.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-CampaignPublishermoduleandapp"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-CampaignPublishermoduleandapp"></a>Campaign Publisher module and app</h5>
+<div class="paragraph">
+<p>The
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Campaign+Publisher+module">Campaign
+Publisher module</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Campaign+Publisher+app">app</a>
+are not compatible with the apps migrated to the <em>Magnolia 6 UI</em>
+framework. For the ongoing effort to convert them, see
+<a href="https://jira.magnolia-cms.com/browse/MGNLCAMPU-80">MGNLCAMPU-80</a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-RESTToolsmodule"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-RESTToolsmodule"></a>REST Tools module</h5>
+<div class="paragraph">
+<p>Due to an upgrade of the Swagger libraries and pending adjustments to
+Open API integration, the REST Tools module, which is a submodule of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/REST+module">REST module</a>
+but is not installed by default, is not compatible with Magnolia 6.2.
+For more details about ongoing development, see
+<a href="https://jira.magnolia-cms.com/browse/MGNLREST-231">MGNLREST-231</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Documentationscreenshotupdates"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Documentationscreenshotupdates"></a>Documentation screenshot updates</h4>
+<div class="paragraph">
+<p>Some of the screenshots in the documentation still show the legacy
+<em>Magnolia 5 UI</em>. Please bear with us as we work to update them.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Previousreleases"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Previousreleases"></a>Previous releases</h3>
+<div class="paragraph">
+<p>There will be another maintenance release for Magnolia 6.1 before it
+reaches end of life. Magnolia 5.7 and 5.6 will remain supported as
+specified in
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/End-of-life+policy#End-of-lifepolicy-Currentlysupportedreleases">Currently
+supported releases</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Changelog"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Changelog"></a>Changelog</h3>
+<div class="paragraph">
+<p>See the <a href="https://jira.magnolia-cms.com/issues/?filter=19541">6.2
+changelog</a> for all the changes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Neworupdatedmodules"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Neworupdatedmodules"></a>New or updated modules</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Advanced Cache 2.3</p>
+</li>
+<li>
+<p>Backup 2.4</p>
+</li>
+<li>
+<p>Barebones Tomcat Bundle 1.2</p>
+</li>
+<li>
+<p>Blossom 3.3.1</p>
+</li>
+<li>
+<p>Cache 5.9.0</p>
+</li>
+<li>
+<p>Campaign Publisher 1.3.2</p>
+</li>
+<li>
+<p>Categorization 2.7.1</p>
+</li>
+<li>
+<p>Community Edition 6.2</p>
+</li>
+<li>
+<p>Contacts App 1.8</p>
+</li>
+<li>
+<p>Content Dependencies 2.0</p>
+</li>
+<li>
+<p>Content Editor 1.3.3</p>
+</li>
+<li>
+<p>Content Tags 2.0</p>
+</li>
+<li>
+<p>Content Translation Support 2.4.2</p>
+</li>
+<li>
+<p>Content Types 1.1.1</p>
+</li>
+<li>
+<p>DAM 3.0</p>
+</li>
+<li>
+<p>Definitions App 2.1</p>
+</li>
+<li>
+<p>Demo Projects 1.5</p>
+</li>
+<li>
+<p>Diff 2.2</p>
+</li>
+<li>
+<p>DX Core 6.2</p>
+</li>
+<li>
+<p>External Forms 1.5.1</p>
+</li>
+<li>
+<p>Freemarker Templating Samples 6.0.2</p>
+</li>
+<li>
+<p>Groovy 3.0</p>
+</li>
+<li>
+<p>Icons 22</p>
+</li>
+<li>
+<p>Language Bundles 1.1</p>
+</li>
+<li>
+<p>Machine Learning 1.2</p>
+</li>
+<li>
+<p>Magnolia 6.2</p>
+</li>
+<li>
+<p>Mail 5.5.3</p>
+</li>
+<li>
+<p>Marketing Tags Manager 1.4.3</p>
+</li>
+<li>
+<p>Multisite 2.1</p>
+</li>
+<li>
+<p>Observation 2.2</p>
+</li>
+<li>
+<p>Pages 6.2</p>
+</li>
+<li>
+<p>Password Manager 1.2.3</p>
+</li>
+<li>
+<p>Periscope 1.2</p>
+</li>
+<li>
+<p>Personalization 2.0</p>
+</li>
+<li>
+<p>Privacy 2.0</p>
+</li>
+<li>
+<p>Public User Registration 2.7.3</p>
+</li>
+<li>
+<p>Publishing 1.2</p>
+</li>
+<li>
+<p>Publishing Transactional 1.0.5</p>
+</li>
+<li>
+<p>Resources 3.0</p>
+</li>
+<li>
+<p>REST Client 2.0</p>
+</li>
+<li>
+<p>REST Client UI 1.0</p>
+</li>
+<li>
+<p>REST Framework 2.2</p>
+</li>
+<li>
+<p>RSS Aggregator 2.6.3</p>
+</li>
+<li>
+<p>Scheduler 2.3.3</p>
+</li>
+<li>
+<p>Site 1.2.4</p>
+</li>
+<li>
+<p>SiteMesh 1.2</p>
+</li>
+<li>
+<p>Soft Locking 3.0</p>
+</li>
+<li>
+<p>Task Management 1.2.7</p>
+</li>
+<li>
+<p>Third-party library BOM 6.2</p>
+</li>
+<li>
+<p>UI 6.2</p>
+</li>
+<li>
+<p>Usage Metrics 1.1</p>
+</li>
+<li>
+<p>Vaadin Compatibility Addons 1.3.3</p>
+</li>
+<li>
+<p>Workflow 6.0</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-200310839_ReleasenotesforMagnoliaCMS6.2-Acknowledgements"><a class="anchor" href="#src-200310839_ReleasenotesforMagnoliaCMS6.2-Acknowledgements"></a>Acknowledgements</h3>
+<div class="paragraph">
+<p>The Magnolia team would also like to thank everyone who reported issues,
+contributed patches or simply commented on issues for this release. Your
+continued interest helps us make Magnolia better. Special thanks go to
+David Caviedes Marquez, Thomas Comiotto, Thomas Duffey, Michael
+Fosgerau, Jarkko Mantysaari, Michael Mühlebach, Philip Mundt, Hieu
+Nguyen Duc, Thomas Peintner, Cedric Reichenbach, Will Scheidegger,
+Rajeev Singh and Joerg von Frantzius.</p>
+</div>
+<div class="paragraph">
+<p>Release notes for Magnolia CMS 6.2.1</p>
+</div>
+<div class="paragraph">
+<p>Cloud changelog</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

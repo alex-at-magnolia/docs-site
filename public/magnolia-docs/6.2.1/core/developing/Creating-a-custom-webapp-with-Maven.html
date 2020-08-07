@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Creating a custom webapp with Maven - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/Creating-a-custom-webapp-with-Maven.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/developing/Creating-a-custom-webapp-with-Maven.html">master</a>
+    <a class="version is-current" href="Creating-a-custom-webapp-with-Maven.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Creating-a-custom-webapp-with-Maven.html">Creating a custom webapp with Maven - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Creating a custom webapp with Maven - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Bundles-and-webapps.html">Bundles and webapps</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596275"><a class="anchor" href="#src-196596275"></a>Creating a custom webapp with Maven</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Bundles-and-webapps.html">Bundles and webapps</a></p>
+</li>
+<li>
+<p><a href="https://maven.apache.org/">Apache Maven</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DEV/Maven+setup">Magnolia Maven
+setup</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Creating-a-minimal-webapp-with-Maven.html">Creating a minimal
+webapp with Maven</a></p>
+</li>
+<li>
+<p><a href="Creating-a-DX-Core-webapp-with-Maven.html">Creating a DX Core
+webapp with Maven</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This tutorial explains how you can create custom Magnolia webapps with
+<a href="https://maven.apache.org/">Maven</a>. Using Maven allows you to customize
+your webapps with the POM files, which can be tracked with a
+<a href="https://en.wikipedia.org/wiki/Version_control">version control system</a>
+like <a href="https://en.wikipedia.org/wiki/Git">Git</a>. A tailored webapp makes
+building and deploying faster and has a positive impact on the
+performance of your instances. With Maven, you can streamline your
+Magnolia project to meet the specific demands of the project.</p>
+</div>
+<div class="paragraph">
+<p>If you just want to try out Magnolia, follow instead the tutorial called
+<a href="https://documentation.magnolia-cms.com/display/DOCS/How+to+get+and+adapt+a+bundle+with+Magnolia+CLI">How
+to get and adapt a bundle with Magnolia CLI</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596275_CreatingacustomwebappwithMaven-Introduction"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Introduction"></a>Introduction</h3>
+<div class="sect3">
+<h4 id="src-196596275_safe-id-Q3JlYXRpbmdhY3VzdG9td2ViYXBwd2l0aE1hdmVuLVdoYXRpc2F3ZWJhcHA_"><a class="anchor" href="#src-196596275_safe-id-Q3JlYXRpbmdhY3VzdG9td2ViYXBwd2l0aE1hdmVuLVdoYXRpc2F3ZWJhcHA_"></a>What is a webapp?</h4>
+<div class="paragraph">
+<p>A Java Web Application (webapp) is a collection of servlets, other Java
+classes, static resources such as HTML pages, other resources, and meta
+information that describes the webapp bundled together. You can run a
+webapp on a servlet container. A Java webapp has a typical structure. It
+can be packaged as a <a href="https://en.wikipedia.org/wiki/WAR_(file_format)">WAR
+file</a>. A webapp usually contains already packed portions called
+libraries or modules as
+<a href="https://en.wikipedia.org/wiki/JAR_(file_format)">JAR</a> files.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides several preconfigured webapps and bundles. Some of
+them are ideal candidates as a starting point to build your custom
+webapp.</p>
+</div>
+<div class="paragraph">
+<p>Click to display a list of the preconfigured webapps and bundles
+provided by Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides the following stand-alone, pre-configured Apache
+Tomcat server that does not include a webapp:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 98%;">
+<colgroup>
+<col style="width: 27%;">
+<col style="width: 32%;">
+<col style="width: 41%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Artifact</th>
+<th class="tableblock halign-left valign-top">Download</th>
+<th class="tableblock halign-left valign-top">Usage / purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-tomcat-barebone</code>
+<span class="image"><img src="../../_images/images/download/attachments/196598861/tomcat.gif" alt="images/download/attachments/196598861/tomcat.gif"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.public.releases/info/magnolia/tomcat/barebone/magnolia-tomcat-barebone/">From
+Nexus.</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A preconfigured Tomcat server ready to be used with any
+Magnolia webapp.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Magnolia provides the following webapps and bundles.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>To get the complete list of the modules in each webapp or bundle, look
+at the corresponding pom file of the bundle or see
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Supported+modules+in+the+cloud">Supported
+modules in the cloud</a>.</p>
+</div>
+<div class="paragraph">
+<p>Artifact name</p>
+</div>
+<div class="paragraph">
+<p>Download</p>
+</div>
+<div class="paragraph">
+<p>Usage</p>
+</div>
+<div class="paragraph">
+<p>Travel demo</p>
+</div>
+<div class="paragraph">
+<p><strong>DX Core</strong></p>
+</div>
+<div class="paragraph">
+<p><code>dx-core-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-webapp/6.2.1/magnolia-dx-core-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-webapp/6.2.1/magnolia-dx-core-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>This is the DX Core webapp for projects.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598861/cloudy_.gif" alt="images/download/attachments/196598861/cloudy_.gif"></span>
+Use <code>dx-core-webapp</code> for local Magnolia Cloud development. (If you are a
+partner, see <code>dx-core-cloud-webapp</code> below).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+Add a <code>tomcat-bundle</code> classifier to use with Apache Tomcat.
+<span class="image"><img src="../../_images/images/download/attachments/196598861/tomcat.gif" alt="images/download/attachments/196598861/tomcat.gif"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/forbidden.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/forbidden.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>dx-core-demo-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-demo-webapp/6.2.1/magnolia-dx-core-demo-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-demo-webapp/6.2.1/magnolia-dx-core-demo-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>DX Core webapp plus the travel demo for evaluation purposes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+Add a <code>tomcat-bundle</code> classifier to use with Apache Tomcat.
+<span class="image"><img src="../../_images/images/download/attachments/196598861/tomcat.gif" alt="images/download/attachments/196598861/tomcat.gif"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/check.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/check.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>dx-core-websphere-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-websphere-webapp/6.2.1/magnolia-dx-core-websphere-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-websphere-webapp/6.2.1/magnolia-dx-core-websphere-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>Webapp tuned for
+<a href="http://www-01.ibm.com/software/de/websphere/">Websphere</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Does not include workflow modules.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/check.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/check.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>dx-core-wildfly-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-wildfly-webapp/6.2.1/magnolia-dx-core-wildfly-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-wildfly-webapp/6.2.1/magnolia-dx-core-wildfly-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>Webapp tuned for <a href="https://wildfly.org/">Wildfly</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/check.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/check.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>dx-core-cloud-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-cloud-webapp/6.2.1/magnolia-dx-core-cloud-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-cloud-webapp/6.2.1/magnolia-dx-core-cloud-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>For internal and partner cloud Magnolia usage.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+Partners should use <code>dx-core-cloud-webapp</code> for local Magnolia Cloud
+development or when creating a custom cloud bundle for a customer</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Use <code>dx-core-webapp</code> for local Magnolia Cloud development.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/check.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/check.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Community Edition</strong></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-empty-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/magnolia-empty-webapp/6.2.1/magnolia-empty-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/magnolia-empty-webapp/6.2.1/magnolia-empty-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>This is the most basic Magnolia webapp. Use this as a basis for your
+custom webapp.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/forbidden.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/forbidden.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-community-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/bundle/magnolia-community-webapp/6.2.1/magnolia-community-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/bundle/magnolia-community-webapp/6.2.1/magnolia-community-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>Complete Magnolia Community Edition webapp for community projects.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/forbidden.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/forbidden.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-community-demo-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/bundle/magnolia-community-demo-webapp/6.2.1/magnolia-community-demo-webapp-6.2.1.war" class="bare">https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/bundle/magnolia-community-demo-webapp/6.2.1/magnolia-community-demo-webapp-6.2.1.war</a></p>
+</div>
+<div class="paragraph">
+<p>Community Edition webapp plus the travel demo for evaluation purposes.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/check.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/check.svg"></span></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-community-demo-webapp</code></p>
+</div>
+<div class="paragraph">
+<p>classifier: <code>tomcat-bundle</code></p>
+</div>
+<div class="paragraph">
+<p><a href="https://nexus.magnolia-cms.com/service/local/repositories/magnolia.public.releases/content/info/magnolia/bundle/magnolia-community-demo-webapp/6.2.1/magnolia-community-demo-webapp-6.2.1-tomcat-bundle.zip"><span class="image"><img src="../../_images/images/download/attachments/215325288/dl-icon.gif" alt="images/download/attachments/215325288/dl-icon.gif" height="16"></span></a></p>
+</div>
+<div class="paragraph">
+<p><code>magnolia-community-demo-webapp</code> bundled with Apache Tomcat.
+<span class="image"><img src="../../_images/images/download/attachments/196598861/tomcat.gif" alt="images/download/attachments/196598861/tomcat.gif"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/check.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/check.svg"></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596275_CreatingacustomwebappwithMaven-Requirements"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Requirements"></a>Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We assume that you are familiar with <a href="https://maven.apache.org/">Maven</a>
+and the basics of <a href="https://maven.apache.org/pom.html">POM</a> files. Your
+Maven settings should comply with the Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DEV/Maven+setup">Maven setup</a>,
+which provides access to the <a href="https://nexus.magnolia-cms.com/">Magnolia
+Nexus</a> repositories, and thus ensures that you can build the webapps
+described in the examples. If you are new to Magnolia, we recommend that
+you first carefully follow the
+<a href="https://wiki.magnolia-cms.com/display/DEV/Maven+setup">Maven setup</a> page.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596275_CreatingacustomwebappwithMaven-anc-ee-credentials]</mark>#</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When creating a custom webapp, you have to decide whether your webapp
+will contain DX Core modules or only Community Edition modules. If you
+go for the DX Core, you need credentials to access the DX Core
+repositories on Nexus and you also need a DX Core license to run the DX
+Core webapps. If you don&#8217;t have these credentials yet, but want to try
+out the Magnolia DX Core,
+<a href="https://www.magnolia-cms.com/developer-trial.html">apply for a trial
+license</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596275_CreatingacustomwebappwithMaven-Possibleapproaches"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Possibleapproaches"></a>Possible approaches</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes two approaches to define a custom webapp with
+Maven. For both of them, keep in mind the following:</p>
+</div>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>To create a custom Magnolia webapp, always start with a <em>preconfigured</em>
+Magnolia webapp.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596275_CreatingacustomwebappwithMaven-Aminimalwebappandaddingmodules"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Aminimalwebappandaddingmodules"></a>A minimal webapp and adding modules</h3>
+<div class="paragraph">
+<p>If your aim is a minimalistic webapp, we recommend using the
+<code>magnolia-empty-webapp</code> as a base for your webapp project. it is also
+the base for every Magnolia webapp and provides the essentials such as
+the Core and UI modules. This approach is applied on the subpage
+<a href="Creating-a-minimal-webapp-with-Maven.html">Creating a minimal webapp
+with Maven</a>. It could be suitable for you, if you aim at creating a
+custom headless instance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596275_CreatingacustomwebappwithMaven-Afeature-richwebappandexcludingmodules"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Afeature-richwebappandexcludingmodules"></a>A feature-rich webapp and excluding modules</h3>
+<div class="paragraph">
+<p>Most of the preconfigured Magnolia webapps come with a feature-rich set
+allowing you to accomplish a number of different tasks and run complex
+websites. The most prominent preconfigured Magnolia webapps are these
+two:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>magnolia-community-webapp</code></p>
+</li>
+<li>
+<p><code>magnolia‑dx-core‑webapp</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the <a href="Creating-a-DX-Core-webapp-with-Maven.html">Creating a DX Core
+webapp with Maven</a> part of this tutorial, the <code>magnolia-dx-core-webapp</code>
+is used as a starting point. We then exclude some modules which are not
+necessary for the example use case.</p>
+</div>
+<div class="paragraph">
+<p>When creating a feature-rich webapp, you cannot only exclude modules,
+you also need to add additional modules. Usually, it is common to do
+both, exclude and add modules.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596275_CreatingacustomwebappwithMaven-Procedureoverview"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Procedureoverview"></a>Procedure overview</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a webapp skeleton from a Magnolia Maven archetype.</p>
+</li>
+<li>
+<p>Modify the POM files according to your needs.</p>
+</li>
+<li>
+<p>Add additional resources, if necessary.</p>
+</li>
+<li>
+<p>Build the webapp.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596275_CreatingacustomwebappwithMaven-Creatinganarchetype-basedwebappskeleton"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Creatinganarchetype-basedwebappskeleton"></a>Creating an archetype-based webapp skeleton</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Just as Maven provides archetypes to create a typical skeleton for Maven
+projects, Magnolia too provides an archetype to create a skeleton for a
+Magnolia Maven project. The Magnolia archetype comes with options for
+different tasks. Here, we use the <code>magnolia-project-archetype</code>. It is an
+archetype that creates a Magnolia project with its parent POM and a
+webapp with its own POM.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Before running the maven <code>archetype</code> command, please read
+<a href="How-to-use-Magnolia-Maven-archetypes.html#src-196596447_HowtouseMagnoliaMavenarchetypes-CheckMavensettings">How
+to use Magnolia Maven archetypes: Check Maven settings</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you are not familiar with the Maven archetype plugin, please also
+read
+<a href="How-to-use-Magnolia-Maven-archetypes.html#src-196596447_HowtouseMagnoliaMavenarchetypes-Thearchetypeplugin">How
+to use Magnolia Maven archetypes: The archetype plugin</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596275_CreatingacustomwebappwithMaven-Thearchetypecommand"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Thearchetypecommand"></a>The archetype command</h3>
+<div class="paragraph">
+<p>The first step to create your Maven-based custom webapp is running the
+archetype command. Change into the directory where you want to create
+the Maven project for the Magnolia webapp. In the directory, use a shell
+to run the following command:</p>
+</div>
+<div class="paragraph">
+<p><code>mvn archetype:generate -DarchetypeGroupId=info.magnolia.maven.archetypes -DarchetypeArtifactId=magnolia-project-archetype -DarchetypeVersion=RELEASE</code></p>
+</div>
+<div class="paragraph">
+<p>While the archetype script is running, Maven prompts you to supply
+values for a list of parameters. Some of them are Maven-specific, others
+concern only Magnolia. In some cases, Maven suggests a value. To accept
+it, enter <code>RETURN</code> or specify your own value and press <code>RETURN</code>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Executing the archetype command is the very first step you always have
+to take irrespective of the webapp edition you wish to create (Community
+or DX Core) and the approach you want follow (minimal or feature-rich).
+The parameters you specify in the prompts have no influence on the
+edition type or the approach.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596275_CreatingacustomwebappwithMaven-anc-archetype-parameters-list]</mark>#</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596275_CreatingacustomwebappwithMaven-Archetypeparameters"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Archetypeparameters"></a>Archetype parameters</h4>
+<div class="paragraph">
+<p>These are the parameters Maven prompts you with in the order they
+appear:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Paremeter</th>
+<th class="tableblock halign-left valign-top">Example value</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>groupId</code> <sup>1)</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>com.example</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It typically reflects the name or domain
+of your company or projects.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>artifactId</code> <sup>1)</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom-project-minimal</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project-specific
+identifier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven artifact <code>version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>1.0-SNAPSHOT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Project version. Typically,
+when creating a new project, use the value suggested, <code>1.0-SNAPSHOT</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>package</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>com.example</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Package name for Java classes reflecting both your company (or domain)
+and the specific project.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+For this archetype, this parameter is not used, but you must provide a
+value. You can use the value proposed by the archetype script.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-bundle-version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>6.2</code><br>
+(The latest in this branch is: `6.2.1 `)</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The Magnolia version from which your custom project inherits. If you are
+unsure, use the latest released version (see
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Releases">releases</a>).</p>
+</div>
+<div class="paragraph">
+<p>This version is used in the <code>dependencyManagement</code> section of the
+created POM files. The section indirectly manages all the versions of
+the Magnolia modules which go into the webapp.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>project-name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>custom-project-minimal</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Project name.</p>
+</div>
+<div class="paragraph">
+<p>In many cases it is reasonable to use the same value as in <code>artifactId</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1)</sup> See also the Maven
+<a href="https://maven.apache.org/guides/mini/guide-naming-conventions.html">Guide
+to naming conventions on groupId, artifactId, and version</a>.</p>
+</div>
+<div class="paragraph">
+<p>After entering a <code>project-name</code> value, the archetype script lists all
+the values you have provided. Now you can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Confirm your choice by pressing <code>RETURN</code>. Maven will generate the
+skeleton based on your parameters.</p>
+</li>
+<li>
+<p>Escape the running archetype script by pressing <code>CTRL</code>+<code>C</code>. The script
+terminates, not creating anything. To start again, execute the archetype
+command as described above.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you have confirmed your choice of parameters, the script finishes the
+build with a <code>BUILD SUCCESS</code> message.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596275_CreatingacustomwebappwithMaven-anc-generated-skeleton]</mark>#</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596275_CreatingacustomwebappwithMaven-Thewebappskeleton"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Thewebappskeleton"></a>The webapp skeleton</h3>
+<div class="paragraph">
+<p>Maven generates the following webapp skeleton:</p>
+</div>
+<div class="paragraph">
+<p><code>custom-project-minimal/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── custom-project-minimal-webapp</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── pom.xml</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── src</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── pom.xml</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Line 3: The webapp&#8217;s POM file, defining the modules going into the
+webapp.</p>
+</li>
+<li>
+<p>Line 4: The <code>src</code> directory, containing more subfolders. In
+<a href="#src-196596275_CreatingacustomwebappwithMaven-Examples">Example 2</a>,
+you add more resources to this directory.</p>
+</li>
+<li>
+<p>Line 5: The parent (actually the root) POM file of the created
+project. This POM file manages the dependencies.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The POM files are the central pieces of the skeleton. Make sure you
+understand these files since you must adapt them in
+<a href="#src-196596275_CreatingacustomwebappwithMaven-Examples">the
+examples</a> to define the custom webapps.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596275_CreatingacustomwebappwithMaven-ParentPOM"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-ParentPOM"></a>Parent POM</h4>
+<div class="paragraph">
+<p>The content of the parent POM file, generated for bundle version 6.2:</p>
+</div>
+<div class="paragraph">
+<p>custom-project-minimal/pom.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;?<code>xml</code> <code>version</code>=<code>"1.0"</code> <code>encoding</code>=<code>"UTF-8"</code> <code>standalone</code>=<code>"no"</code>?&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>project</code> <code>xmlns</code>=<code>"http://maven.apache.org/POM/4.0.0"</code> <code>xmlns:xsi</code>=<code>"http://www.w3.org/2001/XMLSchema-instance"</code> <code>xsi:schemaLocation</code>=<code>"http://maven.apache.org/POM/4.0.0 <a href="http://maven.apache.org/maven-v4_0_0.xsd"" class="bare">http://maven.apache.org/maven-v4_0_0.xsd"</a></code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>modelVersion</code>&gt;4.0.0&lt;/<code>modelVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>groupId</code>&gt;com.example&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;custom-project-minimal&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>name</code>&gt;custom-project-minimal (parent pom)&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>version</code>&gt;1.0-SNAPSHOT&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>packaging</code>&gt;pom&lt;/<code>packaging</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>properties</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>magnoliaBundleVersion</code>&gt;6.2&lt;/<code>magnoliaBundleVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>javaVersion</code>&gt;1.8&lt;/<code>javaVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>properties</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;!-- Fill the following in, so you can use the release plugin -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>scm</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>connection</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>developerConnection</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>url</code>/&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>scm</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependencyManagement</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;!-- Option A -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;!-- Importing dependencyManagement of CE bundle. -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>artifactId</code>&gt;magnolia-bundle-parent&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>version</code>&gt;${magnoliaBundleVersion}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>scope</code>&gt;import&lt;/<code>scope</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;!-- Option B -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;!-- If you want to use the DX CORE. -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;!--`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>groupId</code>&gt;info.magnolia.dx&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>artifactId</code>&gt;magnolia-dx-core-parent&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>version</code>&gt;${magnoliaBundleVersion}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>scope</code>&gt;import&lt;/<code>scope</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependencyManagement</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>build</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>groupId</code>&gt;org.apache.maven.plugins&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>artifactId</code>&gt;maven-compiler-plugin&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>version</code>&gt;3.7.0&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>source</code>&gt;${javaVersion}&lt;/<code>source</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>target</code>&gt;${javaVersion}&lt;/<code>target</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- default resources configuration which will filter your module descriptors -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>resources</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>resource</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>directory</code>&gt;src/main/resources&lt;/<code>directory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>includes</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>include</code>&gt;*<strong>/</strong>&lt;/<code>include</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>includes</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>resource</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>resource</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>filtering</code>&gt;true&lt;/<code>filtering</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>directory</code>&gt;src/main/resources&lt;/<code>directory</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>includes</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>include</code>&gt;META-INF/magnolia/*&lt;/<code>include</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>includes</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>resource</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>resources</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>build</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>repositories</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>id</code>&gt;magnolia.public&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>url</code>&gt;<code><a href="https://nexus.magnolia-cms.com/content/groups/public" class="bare">https://nexus.magnolia-cms.com/content/groups/public</a></code>&lt;/<code>url</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>snapshots</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>enabled</code>&gt;true&lt;/<code>enabled</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>snapshots</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- IF YOU NEED MODULES FROM THE ENTERPRISE VERSION, UNCOMMENT THE FOLLOWING REPOSITORY -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!--`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>id</code>&gt;magnolia.enterprise.releases&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>url</code>&gt;<code><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.releases" class="bare">https://nexus.magnolia-cms.com/content/repositories/magnolia.enterprise.releases</a></code>&lt;/<code>url</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>snapshots</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>enabled</code>&gt;false&lt;/<code>enabled</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>snapshots</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>id</code>&gt;vaadin-addons&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>url</code>&gt;<code><a href="https://maven.vaadin.com/vaadin-addons" class="bare">https://maven.vaadin.com/vaadin-addons</a></code>&lt;/<code>url</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>repository</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>repositories</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>modules</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>module</code>&gt;custom-project-minimal-webapp&lt;/<code>module</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>modules</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>project</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Depending on the requirements of your project, the <code>properties</code> and the
+<code>dependencyManagement</code> sections may need some adjustments.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196596275_CreatingacustomwebappwithMaven-Properties"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Properties"></a>Properties</h5>
+<div class="paragraph">
+<p>The <code>properties</code> section is where you define values such as versions.
+You can use the section in both the parent POM and the webapp POM.</p>
+</div>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>Use the <code>properties</code> section to define versions. The section may the
+serve as a central part for organizing all versions required by your
+project.</p>
+</div>
+<div class="paragraph">
+<p>For example, the archetype adds the <code>magnoliaBundleVersion</code> property.</p>
+</div>
+<div class="paragraph">
+<p>[<mark>src-196596275_CreatingacustomwebappwithMaven-anc-inherited-dependency-management]</mark>#</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196596275_CreatingacustomwebappwithMaven-Dependencymanagement"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Dependencymanagement"></a>Dependency management</h5>
+<div class="paragraph">
+<p>In the <code>dependencyManagement</code> section, you define the artifact
+dependencies that you also add to the module in the webapp POM.</p>
+</div>
+<div class="paragraph">
+<p>In the skeleton, <em>Option A</em> and <em>Option B</em> were created, the latter as a
+comment.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Use the <em>Option A</em> to inherit dependency management for a Magnolia
+<em>Community Edition</em> (CE) webapp.</strong><br>
+Have a look at the
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/ce.pub/browse/pom.xml?at=refs%2Ftags%2Fmagnolia-bundle-6.2">parent
+POM of the CE bundle</a> (Magnolia release 6.2) to understand what exactly
+you inherit with <em>Option A</em>.</p>
+</li>
+<li>
+<p><strong>Use the <em>Option B</em> to inherit dependency management for a Magnolia
+<em>DX Core</em> webapp</strong>.<br>
+Importing the DX Core dependency management section also indirectly
+imports the CE dependency management.<br>
+Have a look at the
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/dx-core/browse/pom.xml?at=refs%2Ftags%2Fmagnolia-dx-core-6.2">parent
+POM of the DX Core</a> (Magnolia release 6.2) to understand what exactly
+you inherit with <em>Option B</em>. To access the parent POM of the EE bundle
+on Git, you need
+<a href="#src-196596275_CreatingacustomwebappwithMaven-anc-ee-credentials">DX
+Core credentials</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Also, use the <code>dependencyManagement</code> section to define the versions of
+other modules which you want to add to the webapp.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596275_CreatingacustomwebappwithMaven-WebappPOM"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-WebappPOM"></a>Webapp POM</h4>
+<div class="paragraph">
+<p>The contents of the webapp POM file:</p>
+</div>
+<div class="paragraph">
+<p>custom-project-minimal/custom-project-minimal-webapp/pom.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;?<code>xml</code> <code>version</code>=<code>"1.0"</code> <code>encoding</code>=<code>"UTF-8"</code>?&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>project</code> <code>xmlns</code>=<code>"http://maven.apache.org/POM/4.0.0"</code> <code>xmlns:xsi</code>=<code>"http://www.w3.org/2001/XMLSchema-instance"</code> <code>xsi:schemaLocation</code>=<code>"http://maven.apache.org/POM/4.0.0 <a href="http://maven.apache.org/maven-v4_0_0.xsd"" class="bare">http://maven.apache.org/maven-v4_0_0.xsd"</a></code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>modelVersion</code>&gt;4.0.0&lt;/<code>modelVersion</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>parent</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>groupId</code>&gt;com.example&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>artifactId</code>&gt;custom-project-minimal&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>version</code>&gt;1.0-SNAPSHOT&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>relativePath</code>&gt;../pom.xml&lt;/<code>relativePath</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>parent</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>artifactId</code>&gt;custom-project-minimal-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>name</code>&gt;custom-project-minimal: webapp&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>packaging</code>&gt;war&lt;/<code>packaging</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!--`</p>
+</div>
+<div class="paragraph">
+<p>`     Add your project specific dependencies here:`</p>
+</div>
+<div class="paragraph">
+<p>`     A custom webapp typically is based on a magnolia webapp. The most simple and reduced bundle to start with is the "magnolia-empty-webapp" (see "option i" below).`</p>
+</div>
+<div class="paragraph">
+<p>`     To see a complete list of preconfigured Magnolia webapps, have a look at <code><a href="https://documentation.magnolia-cms.com/display/DOCS/Bundles" class="bare">https://documentation.magnolia-cms.com/display/DOCS/Bundles</a></code>+and+webapps`</p>
+</div>
+<div class="paragraph">
+<p>`     &#8658; Please just use one of the four below listed options!`</p>
+</div>
+<div class="paragraph">
+<p>`     Make sure to use the appropriate option (A or B) in the parent pom`</p>
+</div>
+<div class="paragraph">
+<p>`    -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- option i - magnolia-empty-webapp -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-empty-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-empty-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- option ii - magnolia-community-webapp -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Dependencies versions are already imported by parent pom. Requires "Option A" in the parent pom. -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!--`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-community-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.bundle&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-community-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- option iii - magnolia-dx-core-webapp -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!-- Dependencies versions are already imported by parent pom. Requires "Option B" in the parent pom. -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;!--`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.dx&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-dx-core-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;war&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>groupId</code>&gt;info.magnolia.dx&lt;/<code>groupId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>artifactId</code>&gt;magnolia-dx-core-webapp&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;pom&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>build</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>artifactId</code>&gt;maven-war-plugin&lt;/<code>artifactId</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;!-- exclude jars copied "physically" from the webapp overlay - so we only get those resolved by Maven&#8217;s dependency management -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`          &lt;<code>dependentWarExcludes</code>&gt;WEB-INF/lib/*.jar&lt;/<code>dependentWarExcludes</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;/<code>configuration</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/<code>plugin</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>plugins</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>build</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>project</code>&gt;</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-196596275_CreatingacustomwebappwithMaven-Dependencies"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Dependencies"></a>Dependencies</h5>
+<div class="paragraph">
+<p>Finally, in the <code>dependencies</code> section of the webapp POM, you assemble
+the modules which should be part of the webapp. Since you are using a
+preconfigured Magnolia webapp as the base, the Magnolia archetype
+creates and adds the following options to the webapp POM:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>magnolia-empty-webapp</code></p>
+</li>
+<li>
+<p><code>magnolia-community-webapp</code></p>
+</li>
+<li>
+<p><code>magnolia-dx-core-webapp</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each of these options has a dependency to two artifact types – <code>pom</code> and
+<code>war</code>.</p>
+</div>
+<div class="paragraph">
+<p>Besides adding an existing webapp, you typically also add other
+dependencies to single modules.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596275_CreatingacustomwebappwithMaven-Examples"><a class="anchor" href="#src-196596275_CreatingacustomwebappwithMaven-Examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For examples of creating custom webapps with Maven, see the following
+pages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Example 1: <a href="Creating-a-minimal-webapp-with-Maven.html">Creating a
+minimal webapp with Maven</a></p>
+</li>
+<li>
+<p>Example 2: <a href="Creating-a-DX-Core-webapp-with-Maven.html">Creating a
+DX Core webapp with Maven</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bundles and webapps</p>
+</div>
+<div class="paragraph">
+<p>Creating a minimal webapp with Maven</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

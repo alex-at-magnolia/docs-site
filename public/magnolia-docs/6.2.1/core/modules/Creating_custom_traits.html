@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Creating custom traits - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Creating_custom_traits.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/modules/Creating_custom_traits.html">master</a>
+    <a class="version is-current" href="Creating_custom_traits.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Creating_custom_traits.html">Creating custom traits - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Creating custom traits - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Personalization_module.html">Personalization module</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597150"><a class="anchor" href="#src-196597150"></a>Creating custom traits</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This tutorial takes you through the process of creating a custom
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Traitsdescribethevisitors">trait</a>.</p>
+</div>
+<div class="paragraph">
+<p>A trait is an attribute or property of a visitor or visit, such as age
+or gender, that you can use to personalize content.</p>
+</div>
+<div class="paragraph">
+<p>We create a trait that detects the visitor&#8217;s operating system. Depending
+on the detected user agent, we serve the visitor a page with a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+personalization">personalized
+component</a>. We create two component variants named "WINDOWS" and "OS-X"
+for a component with a text and an image.</p>
+</div>
+<div class="paragraph">
+<p>The trait extracts the operating system from the
+<a href="http://en.wikipedia.org/wiki/User_agent">User-Agent</a> in the HTTP header:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Windows users are served a component with text that refers to the
+Windows system and a download link at
+<code><a href="ftp://mgnl.travel/maps-offline/windows.zip" class="bare">ftp://mgnl.travel/maps-offline/windows.zip</a></code>.</p>
+</li>
+<li>
+<p>OS-X users are served a component with text that refers to the OS-X
+system and a download link at <code><a href="ftp://mgnl.travel/maps-offline/osx.zip" class="bare">ftp://mgnl.travel/maps-offline/osx.zip</a></code>.</p>
+</li>
+<li>
+<p>If neither system is detected, Magnolia serves the "ORIGINAL" version
+of the component, containing generic text and a download link at
+<code><a href="ftp://mgnl.travel/maps-offline/other-systems.zip" class="bare">ftp://mgnl.travel/maps-offline/other-systems.zip</a></code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/userAgent-trait_comp13n3.png" alt="images/download/attachments/196597150/userAgent-trait_comp13n3.png"></span></p>
+</div>
+<div class="sect2">
+<h3 id="src-196597150_Creatingcustomtraits-Createamodule"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Createamodule"></a>Create a module</h3>
+<div class="paragraph">
+<p>A trait is deployed with a Magnolia module. Create a module first.
+Choose from these options depending on your skill level:</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597150_safe-id-Q3JlYXRpbmdjdXN0b210cmFpdHMtT3B0aW9uMTpDbG9uZXRoZXByb2plY3RpbkdpdA"><a class="anchor" href="#src-196597150_safe-id-Q3JlYXRpbmdjdXN0b210cmFpdHMtT3B0aW9uMTpDbG9uZXRoZXByb2plY3RpbkdpdA"></a>Option 1: Clone the project in Git</h4>
+<div class="paragraph">
+<p>This option gives you a ready-made project that you can customize to
+your needs.</p>
+</div>
+<div class="paragraph">
+<p>Choose this option if you know how to work with a Magnolia project and
+Git, and want to examine the code locally in your IDE.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Clone the `documentation-trait-tutorial `repository.</p>
+<div class="paragraph">
+<p><code>git clone http:<code>//git</code>.magnolia-cms.com<code>/git/documentation/documentation-trait-tutorial</code>.git</code></p>
+</div>
+<div class="paragraph">
+<p>After having cloned the repo, you can check out the tagged version for
+the tag named <code>documentation-trait-tutorial-1.3</code>:</p>
+</div>
+<div class="paragraph">
+<p><code>git checkout documentation-trait-tutorial-1.3</code></p>
+</div>
+</li>
+<li>
+<p>Import the project into your IDE. Here&#8217;s what the project looks like
+in IntelliJ IDEA:</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/trait-tutorial_IDEA_v2.png" alt="images/download/attachments/196597150/trait-tutorial_IDEA_v2.png"></span></p>
+</div>
+</li>
+<li>
+<p>Build the project into a JAR and deploy it to your Magnolia instance.
+Or run the project in your IDE. To run it in an IDE, add the module as a
+dependency to your Magnolia bundle POM file (see Option 2).</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597150_safe-id-Q3JlYXRpbmdjdXN0b210cmFpdHMtT3B0aW9uMjpBZGR0aGVwcm9qZWN0YXNhZGVwZW5kZW5jeXRveW91cmJ1bmRsZQ"><a class="anchor" href="#src-196597150_safe-id-Q3JlYXRpbmdjdXN0b210cmFpdHMtT3B0aW9uMjpBZGR0aGVwcm9qZWN0YXNhZGVwZW5kZW5jeXRveW91cmJ1bmRsZQ"></a>Option 2: Add the project as a dependency to your bundle</h4>
+<div class="paragraph">
+<p>Choose this option if you run Magnolia in your IDE, but don&#8217;t plan to
+work on the code.</p>
+</div>
+<div class="paragraph">
+<p>Add the project as a dependency in the POM files of your Magnolia
+bundle.</p>
+</div>
+<div class="paragraph">
+<p>For DX Core
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundles</a>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <code>dependencyManagement</code> section of the DX Core bundle parent POM
+file, add a <code>dependency</code> element with a version number:</p>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.documentation&lt;/groupId&gt;
+  &lt;artifactId&gt;documentation-trait-tutorial&lt;/artifactId&gt;
+  &lt;version&gt;1.3&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</li>
+<li>
+<p>In the <code>dependencies</code> section of the dx-core-webapp POM file, add a
+<code>dependency</code> element without a version number:</p>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.documentation&lt;/groupId&gt;
+  &lt;artifactId&gt;documentation-trait-tutorial&lt;/artifactId&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+If you use IMB WebSphere, add the <code>dependency</code> element in the
+appropriate POM file of your webapp of choice.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>If you are using a custom bundle, add the <code>dependency</code> element with a
+version number in the POM file of your customized bundle.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597150_safe-id-Q3JlYXRpbmdjdXN0b210cmFpdHMtT3B0aW9uMzpEb3dubG9hZHRoZW1vZHVsZUpBUg"><a class="anchor" href="#src-196597150_safe-id-Q3JlYXRpbmdjdXN0b210cmFpdHMtT3B0aW9uMzpEb3dubG9hZHRoZW1vZHVsZUpBUg"></a>Option 3: Download the module JAR</h4>
+<div class="paragraph">
+<p>Choose this option if you are new to Magnolia and don&#8217;t have a
+development environment (IDE). You can use the trait but won&#8217;t be able
+to look at the code.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Installing+Magnolia">Install</a>
+the Magnolia Tomcat bundle.</p>
+</li>
+<li>
+<p>Download
+<a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.public.releases//info/magnolia/documentation/documentation-trait-tutorial/1.3/documentation-trait-tutorial-1.3.jar">documentation-trait-tutorial-1.3.jar</a>
+from Nexus.</p>
+</li>
+<li>
+<p>Copy the JAR into <code>&lt;CATALINA_HOME&gt;/webapps/&lt;contextPath&gt;/WEB-INF/lib</code>
+folder. Typically this is
+<code>&lt;CATALINA_HOME&gt;/webapps/magnoliaAuthor/WEB-INF/lib</code>.</p>
+</li>
+<li>
+<p>Restart your Magnolia instance and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Installing+Magnolia#InstallingMagnolia-InstallMagnolia">run
+the Web update</a> . This will install the <code>documentation-trait-tutorial</code>
+module.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597150_Creatingcustomtraits-Registeringatrait"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Registeringatrait"></a>Registering a trait</h3>
+<div class="paragraph">
+<p>Any module can register a trait. Magnolia observes the `traits `folder
+in your module configuration and adds new traits to a trait registry.
+Registered traits are then displayed to editors in the user interface.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s the <code>userAgent</code> trait.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">documentation-trait-tutorial</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">traits</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userAgent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ruleField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">valueField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">converterClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.documentation.examples.personalization.useragent.UserAgentParameterConverter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultPreviewTrait</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">traitClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.documentation.examples.personalization.useragent.UserAgent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">voterClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.documentation.examples.personalization.useragent.UserAgentVoter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;trait name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Trait name. Choose a name that is easy for editors to understand such as
+<code>country</code>, <code>date</code> or <code>userAgent</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ruleField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Field used to define permitted values for the trait. See
+<a href="#src-196597150_Creatingcustomtraits-Rulefield">Rule field</a> below.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>valueField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Field used to enter a single value to test personalized content
+delivery. See <a href="#src-196597150_Creatingcustomtraits-Valuefield">Value
+field</a> below.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>converterClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Converter class which must implement
+<code>info.magnolia.personalization.preview.parameter.PreviewParameterConverter&lt;Object&gt;</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>traitClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Trait class. Doesn&#8217;t have to explicitly implement an interface. Usually,
+it is just a plain Java object which allows you to specify the trait and
+its characteristics.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>voterClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Voter class which must extend <code>AbstractBoolVoter&lt;TraitCollector&gt;</code>. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Voters">Voters</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>defaultPreviewTrait</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Adds the trait to the Preview app. Set this property to <code>true</code> for
+traits that editors preview content with routinely. It makes the Preview
+app faster to use. If a trait is used rarely, leave the property out.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>traitStorageClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is</em>
+<code>info.magnolia.personalization.trait.storage.StorageAwareTraitCollector$RequestScopedTraitStorage</code></p>
+</div>
+<div class="paragraph">
+<p>If the trait is expected to remain the same for all requests in the
+current session, you can set the value to
+<code>info.magnolia.personalization.trait.storage.StorageAwareTraitCollector$SessionScopedTraitStorage</code>
+, which will avoid resolving the trait in each request. The trait will
+be resolved once for the current session. The value is implemented for
+example for the <code>country</code> trait in the default installation of Magnolia.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196597150_Creatingcustomtraits-Rulefield"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Rulefield"></a>Rule field</h4>
+<div class="paragraph">
+<p>A rule field defines values for the trait when you choose an audience.
+For example, you need two rule fields to define a date range: one for
+the start date and another for the end date. Magnolia uses the input
+entered into the rule field(s) to construct a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Voters">voter</a>. The voter
+then decides whether the visitor or visit matches the rule or not. When
+the rule is met, personalized content is delivered.</p>
+</div>
+<div class="paragraph">
+<p>The rule field is displayed to users in the Choose audience dialog:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/exampletraitselection.png" alt="images/download/attachments/196597150/exampletraitselection.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Choose a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fielddefinitionclasses">field
+definition class</a> that lets the user specify the permitted values. In
+some cases, a simple
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text field</a> is
+enough (country). In others, for example, where you need the user to
+select a value (new visitor, registered visitor, logged-in visitor), a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Select+field">select field</a>
+is appropriate. For more complex fields, use a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Composite+field">composite
+field</a>. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/List+of+fields">List of
+fields</a> for more.</p>
+</div>
+<div class="paragraph">
+<p><code>userAgent</code> rule field:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userAgent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ruleField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.TextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transformerClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.personalization.ui.SimpleTraitValueTransformer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 13%;">
+<col style="width: 87%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ruleField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Rule field node</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fielddefinitionclasses">Field
+definition class</a>. The field must be known to the system. If you
+introduce a new field and only want it available in your module,
+configure it in the <code>/modules/&lt;module name&gt;/fieldTypes</code> node. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Custom+fields">Custom
+fields</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>transformerClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Transformer class which must implement
+<code>info.magnolia.personalization.ui.SimpleTraitValueTransformer</code> .</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required/optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Field type. In this case, it is a bean property of the superclass (
+<code>TextFieldDefinition</code> ) of the definition class. The type is not needed
+in every case.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196597150_Creatingcustomtraits-Valuefield"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Valuefield"></a>Value field</h4>
+<div class="paragraph">
+<p>A value field is for previewing variants. The field is displayed to
+users in the Preview app when viewing the page as a visitor:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/preview_Macintoshtrait_scope_justactionbar_v2.png" alt="images/download/attachments/196597150/preview_Macintoshtrait_scope_justactionbar_v2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>When you enter a value that matches the rule, for example, "Macintosh"
+in the image above, the voter tests the value against the rule and
+Magnolia displays the content variant associated with the value.</p>
+</div>
+<div class="paragraph">
+<p><code>userAgent</code> value field:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userAgent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">valueField</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.TextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>valueField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Value field node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fielddefinitionclasses">Field
+definition class</a>. See
+<a href="#src-196597150_Creatingcustomtraits-Rulefield">Rule field</a> (above)
+and <a href="https://wiki.magnolia-cms.com/display/DOCS62/Custom+fields">Custom
+fields</a> if you need to create a new field.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required/optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Field type. In this case, it is a bean property of the superclass
+(<code>TextFieldDefinition</code>) of the definition class. The type is not needed
+in every case.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597150_Creatingcustomtraits-Registeringatraitdetectorfilter"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Registeringatraitdetectorfilter"></a>Registering a trait detector filter</h3>
+<div class="paragraph">
+<p>Once you have
+<a href="#src-196597150_Creatingcustomtraits-Registeringatrait">registered
+the trait</a>, provide a <code>TraitDetectorFilter</code> and register it in the
+filter chain to make sure the appropriate variant is served.</p>
+</div>
+<div class="paragraph">
+<p><code>UserAgentDetectorFilter</code> registration in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Filters">filter chain</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">context</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentType</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userAgent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.documentation.examples.personalization.useragent.UserAgentDetectorFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;more filters&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 84%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filters</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Filters node</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;filter name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Filter name. Name the filter after your trait. Ideally, name the node to
+match the
+<a href="#src-196597150_Creatingcustomtraits-Registeringatrait">trait
+registration</a> node. In our example the filter name is <code>userAgent</code>. The
+system doesn&#8217;t require that both nodes have the same name, but it makes
+it easier to identify the purpose of the filter.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Class that implements <code>AbstractTraitDetectorFilter&lt;Object&gt;</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196597150_Creatingcustomtraits-Positionofthefilterinthechain"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Positionofthefilterinthechain"></a>Position of the filter in the chain</h4>
+<div class="paragraph">
+<p>Make sure the filter is in the right position in the chain. Filters are
+executed in the order they are registered in the chain, from top to
+bottom. You want to position the filter right after the <code>contentType</code>
+filter.</p>
+</div>
+<div class="paragraph">
+<p>When installing a module, you can define the position with
+<code>ModuleVersionHandler#getExtraInstallTasks</code>.</p>
+</div>
+<div class="paragraph">
+<p>info.magnolia.documentation.examples.personalization.setup.PersonalizationExamplesModuleVersionHandler</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> PersonalizationExamplesModuleVersionHandler </code>extends`</code> DefaultModuleVersionHandler {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> List&lt;Task&gt; getExtraInstallTasks(InstallContext installContext) {`</p>
+</div>
+<div class="paragraph">
+<p>`        List&lt;Task&gt; tasks = <code>new</code> ArrayList&lt;Task&gt;();`</p>
+</div>
+<div class="paragraph">
+<p>`        tasks.add(<code>new</code> FilterOrderingTask(<code>"userAgent"</code>, <code>new</code> String[]{<code>"contentType"</code>}));`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> tasks;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>In the example above the configuration tree is simplified. Other filters
+may also want to be right after <code>contentType</code>. In a production
+environment it may look like this:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/filterChain-realSituation-sc_ii.png.png" alt="images/download/attachments/196597150/filterChain-realSituation-sc_ii.png.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597150_Creatingcustomtraits-Creatingcomponentvariants"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Creatingcomponentvariants"></a>Creating component variants</h3>
+<div class="paragraph">
+<p>Now you can create component variants and choose an audience using the
+new trait.</p>
+</div>
+<div class="paragraph">
+<p>The <code>documentation-trait-tutorial</code> module installs an example page named
+<code>maps-download</code> that contains two custom variants of the Text and image
+component:</p>
+</div>
+<div class="paragraph">
+<p><strong>Windows variant</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/editor_view_win.png" alt="images/download/attachments/196597150/editor_view_win.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>OS-X variant</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/public_view_osx.png" alt="images/download/attachments/196597150/public_view_osx.png"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Original</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/editor_view_original.png" alt="images/download/attachments/196597150/editor_view_original.png"></span></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+It is not possible to specify an audience for the original. The original
+acts as fallback (default) content when no variants match the visitor.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597150_Creatingcustomtraits-Testingtheresult"><a class="anchor" href="#src-196597150_Creatingcustomtraits-Testingtheresult"></a>Testing the result</h4>
+<div class="paragraph">
+<p>You can test the personalized variants using a browser plugin or on
+different computers running Windows and OS-X. User agent switcher
+add-ons that allow you to spoof and mimic various user agents are
+available for
+<a href="https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher-firefox/">Firefox</a>,
+<a href="https://chrome.google.com/webstore/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg">Chrome/Chromium</a>,
+and
+<a href="https://addons.opera.com/en/extensions/details/user-agent-switcher/">Opera</a>.</p>
+</div>
+<div class="paragraph">
+<p>You should now be able to see different renderings of the page
+containing the personalized variants of the Text and image component
+depending on the user agent.</p>
+</div>
+<div class="paragraph">
+<p><strong>Windows user agent</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/public_view_windows_v2.png" alt="images/download/attachments/196597150/public_view_windows_v2.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>OS-X user agent</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/public_view_os-x_v2.png" alt="images/download/attachments/196597150/public_view_os-x_v2.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p><strong>Other user agents</strong></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597150/public_view_original_v2.png" alt="images/download/attachments/196597150/public_view_original_v2.png" height="250"></span></p>
+</div>
+<div class="paragraph">
+<p>My first personalized campaign</p>
+</div>
+<div class="paragraph">
+<p>Creating custom traits without Java</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

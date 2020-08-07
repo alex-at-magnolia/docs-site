@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Security policy - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Security-policy.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Security-policy.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/Security-policy.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Security-policy.html">Security policy - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Security policy - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Security.html">Security</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595951"><a class="anchor" href="#src-196595951"></a>Security policy</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Security-best-practices.html">Security best practices</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page explains how we ensure that Magnolia is a secure platform for
+your project.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595951_Securitypolicy-Magnoliaisonlyassecureasyourprojectimplementation"><a class="anchor" href="#src-196595951_Securitypolicy-Magnoliaisonlyassecureasyourprojectimplementation"></a>Magnolia is only as secure as your project implementation</h3>
+<div class="paragraph">
+<p>There is no single certificate that would validate a Web application as
+secure. Magnolia is a platform, which means security depends on the
+environment Magnolia is deployed in and on your project-specific
+implementation.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p><em>*Only you know* the specifics of your environment and your business.
+For any given application, there may not be a threat agent that can
+perform the relevant attack, or the technical impact may not make any
+difference to your business. Therefore, you should evaluate each risk
+<strong>for yourself</strong>, focusing on the threat agents, security controls, and
+business impacts in your enterprise.</em> <em>–
+<a href="https://www.owasp.org/index.php/Top_10_2013-Risk">Open Web Application
+Security Project (OWASP)</a></em></p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595951_Securitypolicy-OWASPTop10securityrisks"><a class="anchor" href="#src-196595951_Securitypolicy-OWASPTop10securityrisks"></a>OWASP Top 10 security risks</h3>
+<div class="paragraph">
+<p><a href="https://www.owasp.org/index.php/Top_10_2013-Table_of_Contents">OWASP Top
+10</a> is a list of critical web application security risks. While there is
+no certificate that could certify the Magnolia platform as secure, OWASP
+Top 10 is a very reasonable checklist. It&#8217;s a good idea to validate your
+project implementation against the Top 10.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Rank</th>
+<th class="tableblock halign-left valign-top">Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A1</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Injection</p>
+</div>
+<div class="paragraph">
+<p>Magnolia is inherently protected against OS and SQL injections by not
+using direct access to the OS or database in any way. All access to
+database and OS data is handled via JCR APIs.</p>
+</div>
+<div class="paragraph">
+<p>However Magnolia allows the implementor of a solution on top of Magnolia
+to use custom queries for SQL-like JCR search. The implementor is fully
+responsible for making sure that such custom queries can&#8217;t be used by an
+attacker for injection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A2</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Broken Authentication and Session Management</p>
+</div>
+<div class="paragraph">
+<p>In order to make security configurable and allow integration with
+external security systems, Magnolia&#8217;s security implementation is based
+on the
+<a href="http://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service">Java
+Authentication and Authorization Service</a> (JAAS) standard. The
+configuration of the JAAS login chain and implementation of JAAS modules
+provided by Magnolia are secure and handle user security correctly.
+However, it is the responsibility of the implementor to ensure that
+their custom configuration also behaves correctly and that by changing
+configuration they do not allow any insecure access.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A3</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cross-Site Scripting (XSS)</p>
+</div>
+<div class="paragraph">
+<p>All templates provided by Magnolia are continuously checked and improved
+to prevent any such attacks. In case of discovering any such
+vulnerability, Magnolia is fully committed to providing a fix
+immediately. The in-place templating functionality in Magnolia allows
+the client to apply a patch for the issue in a quick and easy manner to
+help protect their site. By default, Magnolia wraps all content nodes to
+prevent malicious input entered also by users who have access to the
+system such as an editor with malicious intent. However, since
+implementors often introduce custom templates with special
+functionality, it is the responsibility of the implementor to ensure
+that all such modifications are still safe from XSS.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A4</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Insecure direct object references</p>
+</div>
+<div class="paragraph">
+<p>Magnolia doesn&#8217;t expose any database objects, all database access is
+handled over the JCR API, nor any file object for direct user
+manipulation.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A5</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Security misconfiguration</p>
+</div>
+<div class="paragraph">
+<p>Magnolia delivers secure rather than insecure default configuration.
+Active action from implementor is required to make configuration
+insecure.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A6</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Sensitive data exposure</p>
+</div>
+<div class="paragraph">
+<p>The only sensitive data used by Magnolia is user credentials. Those are
+either not stored in Magnolia at all but rather in LDAP/AD/custom
+security or when stored, Magnolia stores only a hash of such
+information. The hash itself is generated with slow hashing functions
+with additional complexity to prevent brute force, rainbow and other
+forms of attacks.</p>
+</div>
+<div class="paragraph">
+<p>When storing sensitive additional data, the implementor has to ensure
+encryption of such data. Magnolia provides cryptographic libraries out
+of the box to make such a task as simple as possible.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A7</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Missing Function level Access Control</p>
+</div>
+<div class="paragraph">
+<p>Magnolia security is based on node access, reading the data itself.
+Permissions are checked on every access to the data.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A8</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Cross Site request forgery (CSRF)</p>
+</div>
+<div class="paragraph">
+<p>Session management is handled by the application server that Magnolia is
+deployed on, not by Magnolia itself.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A9</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Using components with known vulnerabilities</p>
+</div>
+<div class="paragraph">
+<p>Magnolia is not aware of any vulnerabilities in the libraries used in
+the product at the moment. If at any point such a vulnerability is
+discovered, Magnolia immediately upgrades to a newer version of the
+library to avoid the issue or provides a workaround to be applied on top
+of the library to prevent an exploit.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A10</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Unvalidated Redirects and Forwards</p>
+</div>
+<div class="paragraph">
+<p>Out of the box Magnolia doesn&#8217;t forward any requests to other sites.
+When configuring such functionality in Magnolia, the implementor is
+fully responsible for preventing abuse of such features.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595951_Securitypolicy-Howtoreportvulnerabilities"><a class="anchor" href="#src-196595951_Securitypolicy-Howtoreportvulnerabilities"></a>How to report vulnerabilities</h3>
+<div class="paragraph">
+<p>If you find a security vulnerability in Magnolia, please <strong>report it
+privately</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://jira.magnolia-cms.com/secure/CreateIssue!default.jspa?pid=10210">Enter
+a SUPPORT issue</a> or</p>
+</li>
+<li>
+<p>Send mail to
+<a href="mailto:support@magnolia-cms.com.">support@magnolia-cms.com</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Our goal is to keep the vulnerability private. Issues in the SUPPORT
+project are private to Magnolia and the issue reporter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595951_Securitypolicy-Howwereacttovulnerabilityreports"><a class="anchor" href="#src-196595951_Securitypolicy-Howwereacttovulnerabilityreports"></a>How we react to vulnerability reports</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Magnolia evaluates whether the vulnerability is real or a case of
+misconfiguration. If real, we commit to provide a fix in 30 days.</p>
+</li>
+<li>
+<p>Magnolia creates separate JIRA issues for the fix. These issues are
+visible to Magnolia only.</p>
+</li>
+<li>
+<p>When a fix is available, Magnolia informs the reporter through the
+same channel where the issue was reported and provides the fix.</p>
+</li>
+<li>
+<p>Magnolia makes the fix available to all clients in the next
+maintenance release. We make a short statement about the fix in release
+notes but give no details since unpatched installations are vulnerable.</p>
+</li>
+<li>
+<p>JIRA issues for the fix remain private for 90 days after the fix is
+released. This shelters clients from exposure and prevents anyone from
+exploiting the vulnerability.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595951_Securitypolicy-Howtolearnaboutsecurityfixes"><a class="anchor" href="#src-196595951_Securitypolicy-Howtolearnaboutsecurityfixes"></a>How to learn about security fixes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Read the <a href="https://wiki.magnolia-cms.com/display/DOCS62/Releases">release
+notes</a> carefully. Security fixes are announced in release notes.</p>
+</li>
+<li>
+<p>Join to
+<a href="https://groups.google.com/a/magnolia-cms.com/forum/#!forum/announce-list">Magnolia
+Announcements</a> Google Group to get email notifications.</p>
+</li>
+<li>
+<p>Keep your instances up to date.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595951_Securitypolicy-Backportingofsecurityfixes"><a class="anchor" href="#src-196595951_Securitypolicy-Backportingofsecurityfixes"></a>Backporting of security fixes</h3>
+<div class="paragraph">
+<p>All
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/End-of-life+policy">currently
+maintained Magnolia branches</a> get security fixes backported if the
+branch is vulnerable. For example, if a vulnerability is reported for
+Magnolia 6.2, we backport the fix to Magnolia 5.7 and 5.6.</p>
+</div>
+<div class="paragraph">
+<p>Maintenance releases for the current major version are available for the
+Community Edition as well as DX Core.</p>
+</div>
+<div class="paragraph">
+<p>Maintenance releases for previous major versions of Magnolia are
+available to DX Core customers only (i.e. customers that have an active
+subscription to DX Core).</p>
+</div>
+<div class="paragraph">
+<p>Security best practices</p>
+</div>
+<div class="paragraph">
+<p>Troubleshooting</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

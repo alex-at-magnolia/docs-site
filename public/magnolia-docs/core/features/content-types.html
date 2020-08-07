@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content Types :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/content-types.html">
+    <meta name="keywords" content="key-topic">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="content-types.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/content-types.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="content-types.html">Content Types</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Content Types</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Developing/Content+Types+tutorial">Content Types tutorial</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="/Developing/Content+Types+tutorial/Part+I+-+My+first+content+type">My
+first content type</a></p>
+</li>
+<li>
+<p><a href="/Developing/Content+Types+tutorial/Part+II+-+Complex+content+types+and+security+set+up">Complex
+content types and security set up</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="/Modules/List+of+modules/Content+Types+module">Content Types
+module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Magnolia <a href="/Modules/List+of+modules/Content+Types+module">Content
+Types module</a> is a tool to define the content model in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Your content model is a key consideration for every web and digital
+experience project you work on. It creates a shared understanding across
+the domains of a project, from project owners to marketing leads,
+content creators to developers.</p>
+</div>
+<div class="paragraph">
+<p>It describes the key types of content in your project, the properties
+each of those types has and the relationships between the content types.</p>
+</div>
+<div class="paragraph">
+<p>Content apps, apps for managing content, can be easily created from
+content types.</p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rapid_development_and_fast_deployment"><a class="anchor" href="#_rapid_development_and_fast_deployment"></a>Rapid development and fast deployment</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using Magnolia content types means rapid development and quick
+deployment to a running system, thus reducing the
+<a href="https://en.wikipedia.org/wiki/Time_to_market">time to market</a>.</p>
+</div>
+<div class="paragraph">
+<p>Once the content apps are in place, editors can start entering content
+right away. They can do so in parallel with or even before the rest of
+the project/template development.</p>
+</div>
+<div class="sect2">
+<h3 id="_all_in_one_yaml_file"><a class="anchor" href="#_all_in_one_yaml_file"></a>All in one YAML file</h3>
+<div class="paragraph">
+<p>A developer can configure all the required definitions for a content
+type in a single YAML file within a <a href="/Modules/Light+modules">light
+module</a>. The YAML file can contain both the content model and the
+details about where to store the data such as a JCR workspace and node
+type.</p>
+</div>
+<div class="paragraph">
+<p>/content-type-examples/contentTypes/tourGuide.yaml</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">datasource:
+  workspace: tourguides
+  namespaces:
+    mt: https://www.magnolia-travel.com/jcr/1.0/mt
+  autoCreate: true
+
+model:
+  nodeType: mt:tourGuide
+  properties:
+    - name: birthday
+      type: Date
+    - name: gender
+    - name: shortBio</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_automatically_generated_apps"><a class="anchor" href="#_automatically_generated_apps"></a>Automatically generated apps</h3>
+<div class="paragraph">
+<p>Creating, editing, publishing, managing and deleting content items of a
+content type works best with a content app. The content types module
+automatically generates this app for you based on the content type
+definition. All you have to do is to provide a minimalistic app
+definition file referencing the content type definition.</p>
+</div>
+<div class="paragraph">
+<p>/content-type-examples/apps/tourGuides-app.yaml</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">!content-type:tourGuide
+name: tourGuides-app</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quick_deployment_to_a_running_system"><a class="anchor" href="#_quick_deployment_to_a_running_system"></a>Quick deployment to a running system</h3>
+<div class="paragraph">
+<p>Using <a href="/Modules/Light+modules">light modules</a> you can deploy new
+content types and apps to your production environment without
+redeploying a WAR file or restarting Magnolia. This reduces the time to
+market and it is a perfect approach if you have a
+<a href="/Magnolia+Cloud">Magnolia Cloud</a> subscription package.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_convention_over_configuration"><a class="anchor" href="#_convention_over_configuration"></a>Convention over configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Content Types module helps facilitate the development process by
+following the principle of
+<a href="https://en.wikipedia.org/wiki/Convention_over_configuration">convention
+over configuration</a>. With a minimal configuration you can achieve
+feasible results which follow Magnolia’s best practices based on typical
+use cases.</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless, you can also map highly complex and sophisticated use
+cases with content types.</p>
+</div>
+<div class="sect2">
+<h3 id="_content_modeling_from_simple_to_sophisticated"><a class="anchor" href="#_content_modeling_from_simple_to_sophisticated"></a>Content modeling from simple to sophisticated</h3>
+<div class="paragraph">
+<p>With a content type you can define structured data in a very
+straightforward way. Such a definition can be kept simple just by
+configuring a list of plain properties, but it can also go far beyond
+this: Defining the relations between different content models, linking
+one or more content items of type <em>A</em> to a content item of type <em>B</em>.</p>
+</div>
+<div class="paragraph">
+<p>When you need a group of fields more than once in the same model, you
+may want to use
+<a href="/Modules/List+of+modules/Content+Types+module/Content+type+definition/Content+type+Model+definition#submodels">submodels</a>.
+You can define relations to content items which you created before the
+Content Types module was available.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_default_configuration_of_a_generated_app_and_its_further_customization"><a class="anchor" href="#_the_default_configuration_of_a_generated_app_and_its_further_customization"></a>The default configuration of a generated app and its further customization</h3>
+<div class="paragraph">
+<p>Defining a content app has never been quicker than with referencing a
+content type. You can do it with one line of a YAML file.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia generates a ready-to-use app with simple or complex
+<a href="/Templating/Dialog+definition/Field+definition/List+of+fields">form
+fields</a> depending on the type of the properties of the given content
+type.</p>
+</div>
+<div class="paragraph">
+<p>To satisfy the custom requirements of your content editors, the defaults
+of the generated app can be overridden on different levels.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_content_types_and_headless_projects"><a class="anchor" href="#_content_types_and_headless_projects"></a>Content types and headless projects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Combining Content Types with the
+<a href="/Developing/API/REST+API/Delivery+endpoint+API">Delivery endpoint
+API</a> makes it a perfect match for headless projects.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

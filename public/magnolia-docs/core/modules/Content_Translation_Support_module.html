@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Content Translation Support module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Content_Translation_Support_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Content_Translation_Support_module.html">master</a>
+    <a class="version" href="../../6.2.1/core/modules/Content_Translation_Support_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Content_Translation_Support_module.html">Content Translation Support module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Content Translation Support module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596882"><a class="anchor" href="#src-196596882"></a>Content Translation Support module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">DX Core</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLCTS">MGNLCTS</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.enterprise.sites/magnolia-module-content-translation-support/">Content
+Translation Support</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2.4.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The Content Translation Support module allows you to export and import
+content in translation-friendly
+<a href="http://en.wikipedia.org/wiki/Xliff">XLIFF</a>, CSV and Excel formats. You
+can send a file to a translator and then import the translated content.
+The file includes context information and a link to the relevant content
+to make translation easier. The module comes with a
+<a href="#src-196596882_ContentTranslationSupportmodule-ContentTranslationapp">Content
+Translation app</a> for managing page translation. Export formats are
+pluggable and can be extended to support a custom format.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Please note that the artifact&#8217;s IDs (Maven <code>groupId</code> and <code>artifactId</code>)
+have changed since Magnolia 5.5.</p>
+</div>
+<div class="paragraph">
+<p>If you have custom Java code relying on this module, you need to install
+a compatibility module too.</p>
+</div>
+<div class="paragraph">
+<p>Check
+<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/content-translation-support/browse">Git
+for the new module structure</a> .</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>See also the
+<a href="https://wiki.magnolia-cms.com/display/SERVICES/Content+Translation+Extended">Content
+Translation Support Extended</a> (CTSX) module, which provides automated
+translation services for your content.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Installing"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following
+dependencies to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Note the changes in <code>groupId</code> and <code>artifactId</code> since the 2.2 release.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.translation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-content-translation&lt;/artifactId&gt;
+  &lt;version&gt;2.4.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.translation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-content-translation-pages-integration-app&lt;/artifactId&gt;
+  &lt;version&gt;2.4.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596882_ContentTranslationSupportmodule-Compatibilitymodule"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Compatibilitymodule"></a>Compatibility module</h4>
+<div class="paragraph">
+<p>We have been gradually removing the old Content API from our modules
+since Magnolia 5.6. If you have custom code relying on classes from the
+old form module then you must do one of two things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Update your code for the
+<a href="https://jira.magnolia-cms.com/browse/MGNLCTS-92">new version of the
+content translation support module</a>.</p>
+</li>
+<li>
+<p>Or you can use the
+<code>magnolia-content-translation-support-compatibility</code> module together
+with the <code>magnolia-core-compatibility</code> module.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Click here to expand to see how to add the compatibility module</p>
+</div>
+<div class="paragraph">
+<p>Add the following snippet to you pom file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.translation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-content-translation-support-compatibility&lt;/artifactId&gt;
+  &lt;version&gt;2.4.2&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Configuration"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The module is configured in the following JCR nodes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/modules/translation</code></p>
+</li>
+<li>
+<p><code>/modules/translation-pages-integration</code></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translation-pages-integration</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In addition, the following directories in the <strong>Resource Files</strong> app
+contain configuration by file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>/translation/dialogs</code></p>
+</li>
+<li>
+<p><code>/translation/fieldTypes</code></p>
+</li>
+<li>
+<p><code>/translation/i18n</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-ContentTranslationapp"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-ContentTranslationapp"></a>Content Translation app</h3>
+<div class="paragraph">
+<p>The Content Translation app allows you to manage the translation of
+pages.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Export translation</strong>: Exports i18n content of a page or tree.</p>
+</li>
+<li>
+<p><strong>Import translation</strong>: Imports translated content of a page or tree.</p>
+</li>
+<li>
+<p><strong>Preview page</strong>: Opens the page in preview mode in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+app">Pages app</a>.</p>
+</li>
+<li>
+<p><strong>Publish</strong> and <strong>Unpublish</strong> are subject to
+<a href="Workflow_module.html">workflow</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596882/6-1-contentTranslationSupportModule.png" alt="images/download/attachments/196596882/6-1-contentTranslationSupportModule.png"></span></p>
+</div>
+<div class="sect3">
+<h4 id="src-196596882_ContentTranslationSupportmodule-Exportingpagesfortranslation"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Exportingpagesfortranslation"></a>Exporting pages for translation</h4>
+<div class="paragraph">
+<p>To export pages:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a page. Subpages are included in the export file.</p>
+</li>
+<li>
+<p>Click <strong>Export translation</strong>.</p>
+</li>
+<li>
+<p>Select a file format</p>
+</li>
+<li>
+<p>Click <strong>Export File.</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596882/6-1-contentTranslationSupportModule-exportDialog.png" alt="images/download/attachments/196596882/6-1-contentTranslationSupportModule-exportDialog.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The download filename is created from the file path in the <code>website</code>
+workspace, with dots replacing forward slashes such as
+<code>website.travel.about.xls</code>. The file has the following columns (comma
+separated headings in CSV or elements in XLIFF):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Modification date of page</strong></p>
+</li>
+<li>
+<p><strong>Key</strong>: Internal identifier that consists of component UUID and field
+name. This is used by Magnolia to store and render translated content.
+Do not edit this value.</p>
+</li>
+<li>
+<p><strong>Link to page</strong>: Page URL for easy access by the translator. Click to
+see the translatable text in page context.</p>
+</li>
+<li>
+<p><strong>Title</strong>: A pseudo-title created by combining component type and field
+name, for example <code>Text and Image: Subheading</code>. This tells the
+translator what kind of page element he is translating.</p>
+</li>
+<li>
+<p><strong>Default language</strong>: Default language text.</p>
+</li>
+<li>
+<p><strong>&lt;language_code&gt;</strong>: Columns for each locale configured for the site.
+This is where the translator types the language text. Already translated
+content can be updated and new translations added.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596882/excel-spreadsheet.png" alt="images/download/attachments/196596882/excel-spreadsheet.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>GoogleSpreadsheetTranslationBundleWriter</code>
+<a href="#src-196596882_ContentTranslationSupportmodule-importersandexporters">importers
+and exporters</a> adds the
+<a href="https://support.google.com/docs/answer/3093331?hl=en">Google translate
+formula</a> to the CSV exporter. When you upload the CSV file to Google
+Docs it evaluates the formula and the text is machine-translated into
+the target i18n languages automatically.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596882_ContentTranslationSupportmodule-Importingtranslatedpagecontent"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Importingtranslatedpagecontent"></a>Importing translated page content</h4>
+<div class="paragraph">
+<p>Once the file has been translated you can upload it in the app. The
+translated content is automatically included on the page.</p>
+</div>
+<div class="paragraph">
+<p>To import translated page content:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select the page.</p>
+</li>
+<li>
+<p>Click <strong>Import translation</strong>.</p>
+</li>
+<li>
+<p>Upload the file.</p>
+</li>
+<li>
+<p>Optionally check the overwrite and import empty translations options.</p>
+</li>
+<li>
+<p>Click <strong>Import File</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596882/6-1-contentTranslationSupportModule-importDialog.png" alt="images/download/attachments/196596882/6-1-contentTranslationSupportModule-importDialog.png"></span></p>
+</div>
+<div class="paragraph">
+<p>In the <strong>Pages</strong> app, you can now see the translated content in the
+components and dialogs.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Locales"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Locales"></a>Locales</h3>
+<div class="paragraph">
+<p>Your site definition needs to have at least one
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Language+configuration">locale</a>
+in addition to the default locale. Locales show up as columns in the
+export file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>travel</code> site definition with English and German locales.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">i18n</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">locales</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">en</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">country</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">en</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">de</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">country</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">de</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.i18n.DefaultI18nContentSupport</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fallbackLocale</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">en</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Importersandexporters"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Importersandexporters"></a>Importers and exporters</h3>
+<div class="paragraph">
+<p>Importers and exporters are Java classes that contain business logic to
+convert translatable content into a convenient format. Out of the box
+the module provides importers and exporters for XLIFF, Excel and CSV
+files, and an exporter for
+<a href="#src-196596882_ContentTranslationSupportmodule-UploadingtoGoogeDocs">Uploading
+to Googe Docs</a>.</p>
+</div>
+<div class="paragraph">
+<p>Importers and exporters are configured in <code>/modules/translation/config</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">importers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xlsImporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">readerImplementationClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.io.reader.XlsTranslationItemReader</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xls</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttranslation.fileformat.xls</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">csvImporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xliffImporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exporters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xlsExporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">writerImplementationClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.io.writer.XlsTranslationItemWriter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extension</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xls</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contenttranslation.fileformat.xls</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">csvExporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">xliffExporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">googleSpreadsheetExporter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Class that performs the import or export (<code>readerImplementationClass</code>
+and <code>writerImplementationClass</code> properties respectively).</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.translation.io.reader.XlsTranslationItemReader</code></p>
+</li>
+<li>
+<p><code>info.magnolia.translation.io.reader.CsvTranslationItemReader</code></p>
+</li>
+<li>
+<p><code>info.magnolia.translation.io.reader.UnzippedXliffTranslationItemReader</code></p>
+</li>
+<li>
+<p><code>info.magnolia.translation.io.writer.XlsTranslationItemWriter</code></p>
+</li>
+<li>
+<p><code>info.magnolia.translation.io.writer.CsvTranslationItemWriter</code></p>
+</li>
+<li>
+<p><code>info.magnolia.translation.io.writer.XliffTranslationItemWriter</code></p>
+</li>
+<li>
+<p><code>info.magnolia.translation.io.writer.GoogleSpreadsheetTranslationItemWriter</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can write your own importers and exporters for other file formats,
+databases, or Web services that translators use. See examples in Git
+(<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/content-translation-support/browse/src/main/java/info/magnolia/module/contenttranslationsupport/reimport">importers</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/content-translation-support/browse/src/main/java/info/magnolia/module/contenttranslationsupport/export">exporters</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>extension</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>File extension without the dot.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Commands"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Commands"></a>Commands</h3>
+<div class="paragraph">
+<p>The module includes two <code>TranslationFile</code> commands that are used to
+export and import content in various formats for translation.</p>
+</div>
+<div class="paragraph">
+<p>Commands are configured in <code>/modules/translation/commands/translation</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">downloadTranslationFile</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.commands.TranslationFileDownloadCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uploadTranslationFile</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.commands.TranslationFileUploadCommand</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>commands</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">Commands</a> folder.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>translation</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Content translation support
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">catalog</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;command name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>downloadTranslationFile</code>: Name of the command node to download files
+for translation.</p>
+</li>
+<li>
+<p><code>uploadTranslationFile</code>: Name of the command node to reupload
+translation files.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formPath</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The path to the form.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Workspace name.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>TranslationFileDownloadCommand:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Downloads files from a specified path in a specified format, for
+translation. Operates on the <code>website</code> workspace by default.</p>
+</li>
+<li>
+<p>Calls the relevant
+<a href="#src-196596882_ContentTranslationSupportmodule-Importersandexporters">Importers
+and exporters</a> class.</p>
+</li>
+<li>
+<p>The exported file contains all page content nodes marked as <code>i18n</code> in
+the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+definition">template
+definition</a>.</p>
+</li>
+<li>
+<p>The file path in the repository is converted into the file name by
+replacing forward slashes with dots. For example the file name for
+<code>/travel/about/careers</code> page is
+<code>website.travel.about.careers</code>.<code>&lt;file extension&gt;</code>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>TranslationFileUploadCommand:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Uploads translated files in a specified format to a specified path.
+Operates on the <code>website</code> workspace by default.</p>
+</li>
+<li>
+<p>Calls the relevant
+<a href="#src-196596882_ContentTranslationSupportmodule-Importersandexporters">Importers
+and exporters</a> class.</p>
+</li>
+<li>
+<p>Content is uploaded to relevant i18n fields in the dialogs.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Actiondefinitions"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Actiondefinitions"></a>Action definitions</h3>
+<div class="paragraph">
+<p>The module includes some dialog actions that are used in the
+<a href="#src-196596882_ContentTranslationSupportmodule-ContentTranslationapp">Content
+translation app</a>. These can be
+<a href="#src-196596882_ContentTranslationSupportmodule-Enablingcontenttranslationincontentapps">Enabling
+content translation in content apps</a>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Commit actions to download and upload files in
+<code>/translation-pages-integration/dialogs/downloadTranslationFile/actions/downloadTranslationFile</code>
+and <code>uploadTranslationFile</code>.</p>
+</div>
+<div class="paragraph">
+<p>These actions are configured by file, for example in <strong>Resource Files &gt;</strong>
+<code>/translation/dialogs/downloadTranslationFile.yaml</code>, not in JCR nodes.</p>
+</div>
+<div class="paragraph">
+<p>downloadTranslationFile.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  commit:`</p>
+</div>
+<div class="paragraph">
+<p>`    command: downloadTranslationFile`</p>
+</div>
+<div class="paragraph">
+<p>`    catalog: translation`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.translation.ui.action.TranslationFileDownloadDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.dialog.action.CancelDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>uploadTranslationFile.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  commit:`</p>
+</div>
+<div class="paragraph">
+<p>`    command: uploadTranslationFile`</p>
+</div>
+<div class="paragraph">
+<p>`    catalog: translation`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.translation.ui.action.TranslationFileUploadDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`    successMessage: translation.uploadTranslationFile.executionSuccess`</p>
+</div>
+<div class="paragraph">
+<p>`  cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.dialog.action.CancelDialogActionDefinition`</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>commit</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Commit action configuration.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>catalog</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>translation</code> command
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">catalog</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Action definition class. See below.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>command</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Name of command configuration node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Action labels: Export file and Import file.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Action definition classes:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.translation.ui.action.TranslationFileUploadDialogActionDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uploads the translation file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.translation.ui.action.TranslationFileDownloadDialogActionDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Downloads the translation file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>info.magnolia.translation.ui.action.OpenCreateTranslationFileUploadDialogActionDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Used in the app to open the <code>uploadTranslationFile</code> dialog.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>downloadTranslationFile</code> dialog is opened with
+OpenCreateDialogActionDefinition <em>.</em> See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Action+definition">Action
+definition classes</a> for more.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Whatisexportedandimported"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Whatisexportedandimported"></a>What is exported and imported</h3>
+<div class="paragraph">
+<p>By default,
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rich+text+field">rich text</a>
+fields are included in export files, and additional field types can be
+<a href="#src-196596882_ContentTranslationSupportmodule-Registeringadditionalfieldtypes">Registering
+additional field types</a>.</p>
+</div>
+<div class="paragraph">
+<p>The type of content that is exported is configured in
+<code>/modules/translation/config/supportedFieldDefinitions</code> and
+<code>/propertiesToTranslateFinder</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translate</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">config</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">importers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">exporters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supportedFieldDefinitions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">richText</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.RichTextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.TextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">propertiesToTranslateFinder</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.finder.AdaptivePropertiesToTranslateFinder</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>config</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Module configuration folder.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>supportedFieldDefinitions</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the field types to export.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;field name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Registers
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rich+text+field">rich text
+field</a> and <a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text
+field</a> definition classes. These field types typically contain the
+textual i18n content.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>propertiesToTranslateFinder</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Node data to translate finder node.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>AdaptivePropertiesToTranslateFinder delegates calls to an implementation
+of <code>PropertiesToTranslateFinder</code> based on the modules that are currently
+installed.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196596882_ContentTranslationSupportmodule-Registeringadditionalfieldtypes"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Registeringadditionalfieldtypes"></a>Registering additional field types</h4>
+<div class="paragraph">
+<p>You can register appropriate additional field types to be included in
+the exported file.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Registering
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Composite+field">composite
+field</a> as a field type to export.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">supportedFieldDefinitions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">richText</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.RichTextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.TextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">composite</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.CompositeFieldDefinition</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In addition to registration, the subfields of the composite field should
+have an <code>i18n</code> property set to <code>true</code>. It is not necessary for the
+composite field itself to have an <code>i18n</code> property.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Composite field configuration where <code>text1</code> field will be
+included in the download file, but <code>text2</code> will not.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p>/my-module/dialogs/my-dialog.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    - name: tabText`</p>
+</div>
+<div class="paragraph">
+<p>`      fields:`</p>
+</div>
+<div class="paragraph">
+<p>`        - name: test `</p>
+</div>
+<div class="paragraph">
+<p>`          label: Test`</p>
+</div>
+<div class="paragraph">
+<p>`          layout: vertical`</p>
+</div>
+<div class="paragraph">
+<p>`          fieldType: composite`</p>
+</div>
+<div class="paragraph">
+<p>`          transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer`</p>
+</div>
+<div class="paragraph">
+<p>`          fields:`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: text1`</p>
+</div>
+<div class="paragraph">
+<p>`              i18n: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`              label: Text <code>`1</code></p>
+</div>
+<div class="paragraph">
+<p>`              fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p>`            - name: text2`</p>
+</div>
+<div class="paragraph">
+<p>`              label: Text <code>`2</code></p>
+</div>
+<div class="paragraph">
+<p>`              fieldType: text`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tabs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tabText</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">test</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text1</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">i18n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text 1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text2</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Text 2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fieldType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Test</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">layout</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vertical</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">transformerClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-i18ncontentstorage"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-i18ncontentstorage"></a>i18n content storage</h3>
+<div class="paragraph">
+<p>You can view the translated nodes in the <code>website</code> workspace in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR Browser
+app</a>. The translated content is suffixed with a locale such as <code>_de</code>.
+Since English is the default locale on this site no <code>_en</code> suffix is
+used.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Jumbotron on About page in the Travel demo.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596882/6-1-contentTranslationSupportModule-jcr.png" alt="images/download/attachments/196596882/6-1-contentTranslationSupportModule-jcr.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596882_ContentTranslationSupportmodule-Enablingcontenttranslationincontentapps"><a class="anchor" href="#src-196596882_ContentTranslationSupportmodule-Enablingcontenttranslationincontentapps"></a>Enabling content translation in content apps</h3>
+<div class="paragraph">
+<p>You can enable content translation support in any content app.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: Enabling content translation in the Contacts app.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the <code>i18n</code> property to any field you want to translate in the
+<code>detail</code> subapp. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Language+configuration">Enabling
+mulitlanguage content</a> for more.<br>
+<strong>Example</strong>: New Bio
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Text+field">text field</a> in
+the Personal tab in
+<code>/modules/contacts/apps/contacts/subapps/detail/editor/form/tabs/personal/fields/bio</code>.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">editor</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tabs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">personal</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fields</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bio</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">i18n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bio</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rows</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Configure contact translation upload and download
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">commands</a> in the
+<code>translation</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Commands">catalog</a> in the
+<code>translation</code> module. The commands are called by the dialogs configured
+in step 3.<br>
+<strong>Example</strong>: <code>downloadContactTranslation</code> and <code>uploadContactTranslation</code>
+commands configured in
+`/modules/translation/commands/translation/commands `.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commands</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">translation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">downloadContactTranslation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">workspace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contacts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">formPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/modules/contacts/apps/contacts/subApps/detail/editor/form</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.commands.TranslationFileDownloadCommand</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uploadContactTranslation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.translation.commands.TranslationFileUploadCommand</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Configure contact translation dialogs in any module. The easiest way
+to do this is to copy the <code>downloadTranslationFile</code> and
+<code>uploadTranslationFile</code> dialog definition files in <strong>Resource Files</strong>
+<code>/translation/dialogs/</code> and change the value of the <code>command</code>
+properties. These dialogs use the commands configured in step 2.</p>
+<div class="paragraph">
+<p><strong>Example</strong>: <code>downloadContactTranslation</code> and <code>uploadContactTranslation</code>
+dialogs configured in
+`/modules/translation/commands/translation/dialogs `.</p>
+</div>
+<div class="paragraph">
+<p>downloadContactTranslation.yaml</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  commit:`</p>
+</div>
+<div class="paragraph">
+<p>`    command: downloadContactTranslation`</p>
+</div>
+<div class="paragraph">
+<p>`    catalog: translation`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.translation.ui.action.TranslationFileDownloadDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`  cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.dialog.action.CancelDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>+
+uploadContactTranslation.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>form:</code></p>
+</div>
+<div class="paragraph">
+<p>`  tabs:`</p>
+</div>
+<div class="paragraph">
+<p>`    &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>actions:</code></p>
+</div>
+<div class="paragraph">
+<p>`  commit:`</p>
+</div>
+<div class="paragraph">
+<p>`    command: uploadContactTranslation`</p>
+</div>
+<div class="paragraph">
+<p>`    catalog: translation`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.translation.ui.action.TranslationFileUploadDialogActionDefinition`</p>
+</div>
+<div class="paragraph">
+<p>`    successMessage: translation.uploadTranslationFile.executionSuccess`</p>
+</div>
+<div class="paragraph">
+<p>`  cancel:`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>class</code>: info.magnolia.ui.dialog.action.CancelDialogActionDefinition`
+. Add translation download and upload actions in the <code>browser</code> subapp.
+The easiest way to do this is to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">extend</a>
+the <code>downloadTranslationFile</code> and <code>uploadTranslationFile</code> actions in the
+Content Translation app.</p>
+</div>
+<div class="paragraph">
+<p>+
+<strong>Example</strong>: Adding <code>downloadTranslation</code> and <code>uploadTranslation</code> actions
+in the Contacts app in
+<code>/modules/contacts/apps/contacts/subapps/browser/actions</code>.</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">apps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contacts</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">subapps</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">browser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">downloadTranslation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/modules/translation-pages-integration/apps/pages-translation/subApps/browser/actions/downloadTranslationFile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Download for translation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uploadTranslation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/modules/ translation-pages-integration /apps/
+pages-translation /subApps/browser/actions/uploadTranslationFile</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Upload translated content</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the actions created in step 4 to the actionbar.<br>
+<strong>Example</strong>: Adding <code>downloadTranslation</code> and <code>uploadTranslation</code> actions
+to the <code>contact</code> section of the actionbar in the Contacts app in
+<code>/modules/contacts/apps/contacts/subapps/browser/actionbar/sections/contact/groups/importExportActions</code>.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">browser</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actionbar</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sections</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contact</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">groups</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">importExportActions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">items</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">export</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">downloadTranslation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uploadTranslation</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>How to enable content tags for a content app</p>
+</div>
+<div class="paragraph">
+<p>Content Types module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

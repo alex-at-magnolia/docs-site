@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Integration modules - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/developing/Integration-modules.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Integration-modules.html">master</a>
+    <a class="version" href="../../6.2.1/core/developing/Integration-modules.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Integration-modules.html">Integration modules - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Integration modules - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Developing.html" class="bare">Developing.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Developing.html">Magnolia 6.2 documentation</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596337"><a class="anchor" href="#src-196596337"></a>Integration modules</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Integration">Integration</a></p>
+</li>
+<li>
+<p><a href="Integration-points.html">Integration points</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Magnolia is extremely flexible and built for easy integration. You can
+connect Magnolia to multiple third-party systems, tools and data
+sources.</p>
+</div>
+<div class="paragraph">
+<p>This page summarizes integration solutions provided out-of-the-box by
+Magnolia and some of our partners, and
+<a href="#src-196596337_Integrationmodules-Integrationpoints">Integration
+points</a> that you can use for your own customizations.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Analytics"><a class="anchor" href="#src-196596337_Integrationmodules-Analytics"></a>Analytics</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-GoogleAnalyticsVisualization"><a class="anchor" href="#src-196596337_Integrationmodules-GoogleAnalyticsVisualization"></a>Google Analytics Visualization</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Google+Analytics+Visualization+module">Google
+Analytics Visualization module</a> integrates Magnolia with the
+<a href="https://developers.google.com/analytics/devguides/reporting/core/v3/">Google
+Analytics Core Reporting API</a> and the
+<a href="https://developers.google.com/analytics/devguides/reporting/embed/v1/">Google
+Analytics Embed API</a>. You can view Google Analytics data within
+Magnolia. The module can be configured to display only the data you are
+interested in.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-MarketingTags"><a class="anchor" href="#src-196596337_Integrationmodules-MarketingTags"></a>Marketing Tags</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Marketing+Tags+app">Marketing
+Tags app</a> is a central place to manage marketing tags such as Web
+analytics, third-party content and advertising network code snippets.
+The app allows you to create tags and place them on pages. Tags
+typically collect analytics information such as how many visitors view
+the page and how long they stay. Tags can also integrate third-party
+content such as social media or insert ad campaigns. You can use tags to
+learn more about visitors or provide content.</p>
+</div>
+<div class="paragraph">
+<p>Tags work with Magnolia&#8217;s
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">data privacy</a>
+and cookie consent systems to only include the JS tags when the website
+visitor has given their consent.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Assetstorage"><a class="anchor" href="#src-196596337_Integrationmodules-Assetstorage"></a>Asset storage</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-AmazonS3"><a class="anchor" href="#src-196596337_Integrationmodules-AmazonS3"></a>Amazon S3</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Amazon+S3+Connector+module">Amazon
+S3 Connector module</a> provides an app that allows users to manage assets
+in <a href="http://aws.amazon.com/documentation/s3/">Amazon S3</a> while using them
+in Magnolia. Amazon S3 (Simple Storage Service) is an online file
+storage web service offered by <a href="http://aws.amazon.com/">Amazon Web
+Services</a> that provides storage through
+<a href="https://en.wikipedia.org/wiki/Web_service">web services</a> interfaces.
+Using Amazon S3 takes the load of storing and serving large assets off
+your Magnolia servers.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-CantoCumulus"><a class="anchor" href="#src-196596337_Integrationmodules-CantoCumulus"></a>Canto Cumulus</h4>
+<div class="paragraph">
+<p><a href="/pages/createpage.action?spaceKey=DOCS62&amp;title=Cumulus+DAM+connector&amp;linkCreation=true&amp;fromPageId=196596337">Cumulus
+DAM Connector module</a> connects a <a href="https://www.canto.com/">Canto Cumulus
+DAM</a> to Magnolia. Cumulus is a popular, enterprise-grade digital asset
+management platform that offers digital rights management and many
+back-end connections, including Adobe Photoshop, InDesign and more. You
+can use Cumulus DAM content within a Magnolia website in a manner that
+resembles working with native Magnolia content. In addition to exposing
+DAM content to Magnolia websites, the module provides access to DAM
+content management. The Cumulus DAM Connector installs the
+<a href="/pages/createpage.action?spaceKey=DOCS62&amp;title=Cumulus+DAM+connector&amp;linkCreation=true&amp;fromPageId=196596337">Cumulus
+Asset app</a> that allows users to browse assets in the remote (Cumulus)
+DAM.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Authentication"><a class="anchor" href="#src-196596337_Integrationmodules-Authentication"></a>Authentication</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-CAS"><a class="anchor" href="#src-196596337_Integrationmodules-CAS"></a>CAS</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/CAS+module">CAS module</a>
+enables
+<a href="https://en.wikipedia.org/wiki/Central_Authentication_Service">Central
+Authentication Service</a> (CAS) in Magnolia. CAS is a single sign-on (SSO)
+Web protocol that permits a user to log in once to a system and then
+automatically gain access to all related systems to which they have been
+granted permission as per their credentials. This avoids the need to log
+into each system individually. The Magnolia CAS module handles
+authentication only. When a user logs into CAS, the system authenticates
+their identity to participating services because the user has been
+authenticated to CAS.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-LDAP"><a class="anchor" href="#src-196596337_Integrationmodules-LDAP"></a>LDAP</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/LDAP+Connector+module">LDAP
+Connector module</a> is a <a href="http://java.sun.com/products/jaas/">JAAS</a> login
+module that connects to any LDAP v3 directory service. The LDAP
+Connector is used in intranet environments where an enterprise user
+management infrastructure already exists. With JAAS you can meet single
+sign-on requirements or connect to legacy LDAP servers.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Cache"><a class="anchor" href="#src-196596337_Integrationmodules-Cache"></a>Cache</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Ehcache"><a class="anchor" href="#src-196596337_Integrationmodules-Ehcache"></a>Ehcache</h4>
+<div class="paragraph">
+<p>Magnolia uses <a href="http://ehcache.org/">Ehcache</a> for back-end cache
+functionality by default. This is provided by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Ehcache+3+module">Ehcache 3
+module</a>. Ehcache is a robust, proven and full-featured cache product
+which has made it the most widely used Java cache.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Memcached"><a class="anchor" href="#src-196596337_Integrationmodules-Memcached"></a>Memcached</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Memcached+implementation">Memcached
+module</a> adds the advantages of a distributed cache.
+<a href="http://memcached.org/">Memcached</a> is a high-performance, distributed
+memory object caching system that allows you to share cache items
+between multiple Magnolia instances. Additional benefits include
+persistence of cached items after the restart of a Magnolia instance and
+running memcached servers on any server in the network, conserving
+server memory.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-SiteMesh"><a class="anchor" href="#src-196596337_Integrationmodules-SiteMesh"></a>SiteMesh</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Advanced+Cache+Dynamic+Page+Caching">Advanced
+Dynamic Page Caching module</a> uses the
+<a href="http://wiki.sitemesh.org/wiki/display/sitemesh3/SiteMesh+3+Overview">SiteMesh
+3</a> for dynamic page caching. The module allows you to cache static
+content on an otherwise dynamic page. You can mark which areas and
+components are dynamic. Magnolia will cache all static content and only
+renders the dynamic components per request. You can also set a different
+time-to-live on the dynamic components.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-E-Commerce"><a class="anchor" href="#src-196596337_Integrationmodules-E-Commerce"></a>E-Commerce</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-IBMWebsphereCommerce"><a class="anchor" href="#src-196596337_Integrationmodules-IBMWebsphereCommerce"></a>IBM Websphere Commerce</h4>
+<div class="paragraph">
+<p><a href="/pages/createpage.action?spaceKey=DOCS62&amp;title=IBM+WebSphere+Commerce+Integration+module&amp;linkCreation=true&amp;fromPageId=196596337">IBM
+WebSphere Commerce Integration module</a> connects a
+<a href="http://www-03.ibm.com/software/products/en/websphere-commerce">WebSphere
+Commerce</a> store to Magnolia. WebSphere Commerce is a popular,
+enterprise-grade e-commerce platform that offers many back-end
+integrations including payment gateways, warehouse management,
+call-center management and more. You can use store content within a
+Magnolia website in a manner that resembles working with native Magnolia
+content. The module also provides access to shopping cart management,
+checkout and payment processing powered by WebSphere Commerce.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Ovata"><a class="anchor" href="#src-196596337_Integrationmodules-Ovata"></a>Ovata</h4>
+<div class="paragraph">
+<p><a href="https://marketplace.magnolia-cms.com/detail/ovata.html">Ovata connector</a>
+is a third-party module offered by <a href="http://www.ovata.ch/Home.html">Ovata
+E-Commerce</a>. They offer an enterprise-grade e-commerce solution that you
+can easily customize to match your requirements. Together with Magnolia,
+Ovata provides a powerful platform for all of your e-commerce
+activities.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Magento"><a class="anchor" href="#src-196596337_Integrationmodules-Magento"></a>Magento</h4>
+<div class="paragraph">
+<p><a href="https://marketplace.magnolia-cms.com/detail/xailabs-mmconnector.html">xai
+labs MMConnector™</a> is the third-party connector available from
+<a href="http://xailabs.com/">xailabs GmbH</a>. It is a powerful tool that connects
+Magnolia to the <a href="https://magento.com/">Magento</a> e-commerce platform. You
+can easily place products from your Magento store on a Magnolia page to
+create a content-driven shopping experience.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Frameworks"><a class="anchor" href="#src-196596337_Integrationmodules-Frameworks"></a>Frameworks</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Spring"><a class="anchor" href="#src-196596337_Integrationmodules-Spring"></a>Spring</h4>
+<div class="paragraph">
+<p>The popular Spring Framework application stack makes it easy to connect
+to business systems so that they fetch the information that you want to
+present in your pages.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Blossom+module">Blossom
+module</a> makes the <a href="https://spring.io/">Spring Framework</a> available for
+Magnolia. With Blossom you can create components that display a high
+level of dynamic behavior. The components can be used by editors to
+create interactive web pages. The Spring Framework application stack
+makes it easier to connect to business systems that fetch the
+information you want to present in your pages. The Blossom module
+provides:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Programmatic registration: Dialogs, page templates and components can
+be registered by code or annotations rather than configuration.</p>
+</li>
+<li>
+<p><a href="http://docs.spring.io/autorepo/docs/spring/3.2.x/spring-framework-reference/html/mvc.html">Spring
+MVC</a> or WebFlow for page templates and components: This allows you to
+combine Spring with the authoring facilities of Magnolia.</p>
+</li>
+<li>
+<p>Pre-execution of components: Enables the use of redirects and forwards
+in the execution of a component. The execution is bound to a specific
+component allowing you to have multiple instances of the same component
+on the same page.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-SiteMesh.1"><a class="anchor" href="#src-196596337_Integrationmodules-SiteMesh.1"></a>SiteMesh</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/SiteMesh+module">SiteMesh
+module</a> integrates the
+<a href="http://wiki.sitemesh.org/wiki/display/sitemesh3/SiteMesh+3+Overview">SiteMesh
+3</a> decoration and Web application integration framework with Magnolia.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-CloudFoundry"><a class="anchor" href="#src-196596337_Integrationmodules-CloudFoundry"></a>Cloud Foundry</h4>
+<div class="paragraph">
+<p>Cloud Foundry Integration module provides the adjustments necessary to
+easily deploy Magnolia on Cloud Foundry. <a href="http://cloudfoundry.org/">Cloud
+Foundry</a> is an open-source, cloud computing platform as a service
+(<a href="http://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a>) originally
+developed by <a href="http://www.vmware.com/">VMware</a>. The platform provides a
+technical stack that includes the run-time and services on top of a
+cloud infrastructure. Users can build and deploy any kind of application
+without the cost and complexity of buying and managing the underlying
+hardware and software, and provisioning hosting capabilities.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The module is being deprecated.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Bootstrap"><a class="anchor" href="#src-196596337_Integrationmodules-Bootstrap"></a>Bootstrap</h4>
+<div class="paragraph">
+<p><a href="https://marketplace.magnolia-cms.com/bootstrap.html">Bootstrap framework
+module</a> simplifies working with the <a href="http://getbootstrap.com/">Bootstrap</a>
+HTML, CSS and JavaScript framework. The module allows you to build
+modern, responsive websites quickly. It includes 2 basic page templates
+and 5 components. The module offers a highly flexible layout of content
+rows and auto-generated columns. Bootstrap&#8217;s column mechanism
+automatically manages the responsiveness of the page. There are also
+advanced dialog options such as images or link styles which apply
+relevant Bootstrap classes. You can use the module to build simple
+websites or as a foundation for bigger projects.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-RabbitMQ"><a class="anchor" href="#src-196596337_Integrationmodules-RabbitMQ"></a>RabbitMQ</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/SERVICES/RMQ+Publication">RabbitMQ
+module bundle</a> provides an alternative way of publishing content and
+synchronizing instances in Magnolia. Magnolia RabbitMQ modules are
+suitable for environments consisting of more than five public instances
+and environments that need to synchronize with other environments.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Search"><a class="anchor" href="#src-196596337_Integrationmodules-Search"></a>Search</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Solrmodule"><a class="anchor" href="#src-196596337_Integrationmodules-Solrmodule"></a>Solr module</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Solr+module">Solr module</a>
+uses the <a href="http://lucene.apache.org/solr/">Apache Solr</a> search platform to
+index and crawl Magnolia content. Solr is a standalone enterprise search
+server with a REST-like API. Solr uses the Lucene library for full-text
+indexing and provides faceted search, distributed search and index
+replication. You can use Solr to index content in an event-based or
+action-based fashion. The bundle consists of two modules: Content
+Indexer and Search Provider.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596337_Integrationmodules-Language"><a class="anchor" href="#src-196596337_Integrationmodules-Language"></a>Language</h3>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Contenttranslation"><a class="anchor" href="#src-196596337_Integrationmodules-Contenttranslation"></a>Content translation</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Translation+Support+module">Content
+Translation Support module</a> allows you to export and import page content
+in translation-friendly <a href="http://en.wikipedia.org/wiki/Xliff">XLIFF</a>, CSV
+and Excel formats. You can send a file to a translator and import the
+translated content back. The file includes context information and a
+link back to the page to make translation easier. Export formats are
+pluggable and can be extended to support a custom format. The module
+comes with a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Translation+app">Content
+Translation app</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596337_Integrationmodules-Extendedcontenttranslation"><a class="anchor" href="#src-196596337_Integrationmodules-Extendedcontenttranslation"></a>Extended content translation</h4>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/EX/Content+Translation+Extended">Content
+Translation Support Extend</a> module bundle consists of five modules that
+extend the functionality of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Translation+Support+module">Content
+Translation Support module</a>. Out of the box the modules provide
+automatic content translation by external translation services:
+<a href="https://cloud.google.com/translate/docs/">Google Translate</a> and
+<a href="https://www.microsoft.com/en-us/translator/translatorapi.aspx">Microsoft
+Translator</a>, content translation workflow and workflow integration with
+external provider <a href="http://translations.com/">Translations.com</a>.</p>
+</div>
+<div class="paragraph">
+<p>Maven</p>
+</div>
+<div class="paragraph">
+<p>Integration points</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

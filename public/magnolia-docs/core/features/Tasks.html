@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tasks :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/features/Tasks.html">
+    <meta name="keywords" content="tasks">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Tasks.html">master</a>
+    <a class="version" href="../../6.2.1/core/features/Tasks.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Tasks.html">Tasks</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Tasks</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tasks make collaboration better. Tasks are better than messages when you
+work together with others. Tasks have a clear status and an assignee.
+You can go to the <a href="/Apps/List+of+apps/Tasks+app">Tasks app</a> to claim
+a task for yourself and start work on it.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia uses tasks in the publishing workflow: when an editor publishes
+a page the system creates an approval task and sends it to the
+publishers group.</p>
+</div>
+<div class="paragraph">
+<p>See also
+<a href="/Modules/List+of+modules/Workflow+module/Custom+tasks">Custom tasks</a>
+and <a href="/Modules/List+of+modules/Workflow+module/User+tasks">User tasks</a>
+documentation for how to integrate it with jBPM. But please keep in
+mind, that you can create and work with Tasks without having to deal
+with jBPM and workflow.</p>
+</div>
+<div class="paragraph">
+<p><strong>Best practice</strong></p>
+</div>
+<div id="dont-use-tasks-if-you-dont-have-any-human-activity-in-your-workflow" class="paragraph">
+<p>Do not use tasks if you don’t have any human activity in your workflow.
+They are great for humans but unnecessary for operations that only
+involve the system itself.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/6-1-tasksApp.png" alt="image" width="600"></span></p>
+</div>
+<div class="paragraph">
+<p><a href="!toc" class="bare">!toc</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tasksmanager"><a class="anchor" href="#_tasksmanager"></a>TasksManager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A task is an object that you create using the
+<a href="!javadoc">info.magnolia.task.TasksManager</a>. You can send the task to
+a list of users or to a list of groups. The recipient can assign the
+task to himself. Other recipients can see who owns the task and its
+status when they go to the Tasks app.</p>
+</div>
+<div class="paragraph">
+<p>When working with tasks, use the <code>TasksManager</code> class which takes care
+of updating fields such as <code>creationDate</code>, <code>modificationDate</code> and
+<code>status</code> and notifies the system event bus.</p>
+</div>
+<div class="paragraph">
+<p>To get <code>TasksManager</code> in your implementations, use injection:</p>
+</div>
+<div class="paragraph">
+<p>Using TasksManager</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+public MyClass(TasksManager tasksManager) {
+    this.tasksManager = tasksManager;
+}
+
+public void createTask() {
+    Task task = new Task();
+    ...
+    tasksManager.addTask(task);
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Be aware that by calling</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  task.setId(String);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the task will not be created in the workspace.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_task"><a class="anchor" href="#_creating_a_task"></a>Creating a task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Start by giving the task a name. The name is unique for the type of task
+you are creating and acts as a reference to the task definition in the
+registry.</p>
+</div>
+<div class="paragraph">
+<p>Defining the task name</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">task.setname("getGroceries")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next, define the possible assignees for the task. You can send a task to
+a list of <code>groups</code> or <code>actors</code>.</p>
+</div>
+<div class="paragraph">
+<p>Defining assignees</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;String&gt; actorIds = new ArrayList() {{
+       add("eric");
+       add("susan");
+    }};
+List&lt;String&gt; groupIds = new ArrayList() {{
+       add("groceryShoppers");
+    }};
+
+task.setActorIds(actorIds);
+task.setGroupIds(groupIds);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, add <code>content</code> to your task. The <code>content</code> should contain the
+information the assignee needs to complete the task. For example, in the
+default publishing workflow the <code>content</code> contains information the
+publisher needs to review a page and publish it such as the
+<a href="/Administration/Architecture/Workspaces">workspace</a> where the page
+resides, a path to the page node, and the version of the page being
+published.</p>
+</div>
+<div class="paragraph">
+<p>Adding content to a task</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, String&gt; content = new HashMap() {{
+            put("groceries", "milk, eggs, beer");
+            put("budget", "15.- CHF");
+        }};
+
+task.setContent(content);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>content</code> map is stored to JCR using
+<a href="http://jackrabbit.apache.org/object-content-mapping.html">OCM</a> and allows
+storing any <code>&lt;String, Object&gt;</code> map where <code>Object</code> is a simple type. The
+data inside the content map is usually only used for displaying
+information in the Tasks app.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_claiming_a_task"><a class="anchor" href="#_claiming_a_task"></a>Claiming a task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When a user assigns a task to themselves they <em>claim</em> it. To claim a
+task, set the <code>actorId</code>:</p>
+</div>
+<div class="paragraph">
+<p>Claiming a task</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">taskManager.claim(taskId, userId);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will update the task <code>status</code> and <code>modificationDate</code> and notifies
+the system event bus.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia uses
+<code>info.magnolia.ui.admincentral.shellapp.pulse.task.action.ClaimTaskAction</code>
+inside the Tasks app for this step.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reclaiming_a_task"><a class="anchor" href="#_reclaiming_a_task"></a>Reclaiming a task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With appropriate publication rights you can reclaim a task which is
+already <code>InProgress</code> from another user.</p>
+</div>
+<div class="paragraph">
+<p>Task reclaiming works in the same way as claiming a task, i.e.</p>
+</div>
+<div class="paragraph">
+<p>Claiming a task</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">taskManager.claim(taskId, userId);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>using the
+<code>info.magnolia.ui.admincentral.shellapp.pulse.task.action.ClaimTaskActionDefinition</code>
+class but adds <code>notifyPreviousAssignee</code>, which is set to <code>true</code> by
+default and will trigger sending an i18n-able notification in the Tasks
+app to the previous assignee in the publication sequence that the task
+has been reclaimed by another user:</p>
+</div>
+<div class="paragraph">
+<p>Notifying the author</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">messagesManager.sendMessage(task.getActorId(), message)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please note that <code>notifyPreviousAssignee</code> is present also in
+<code>info.magnolia.ui.admincentral.shellapp.pulse.task.action.ClaimTasksActionDefinition</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resolving_a_task"><a class="anchor" href="#_resolving_a_task"></a>Resolving a task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To resolve a task assigned to an actor:</p>
+</div>
+<div class="paragraph">
+<p>Resolving a task</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; result = new HashMap&lt;String, Object&gt;();
+result.put("budgetSpent", "13.25 CHF");
+
+taskManager.resolve(taskId, result);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A resolved task usually produces some sort of output. You can use the
+<code>result</code> map to pass this output to further processing. <code>TasksManager</code>
+will take care of notifying any handlers registered to the system event
+bus.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia uses
+<code>info.magnolia.ui.admincentral.shellapp.pulse.task.action.ResolveTaskAction</code>
+inside the Tasks app for this step. It allows you to define a decision
+inside the configuration which is mainly used for approving or rejecting
+a publication.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">messageViews</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.n]#publish</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.n]#form</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.n]#actions</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#approve</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#availability</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#class</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.admincentral.shellapp.pulse.task.action.ResolveTaskActionDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#decision</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">approve</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.p]#icon</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-publish</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>After resolving the task using the <code>ResolveTask</code> action the result map
+contains only one entry with the configured decision.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As with the <code>content</code> map, the <code>result</code> map is stored to JCR using OCM
+and allows storing any <code>&lt;String, Object&gt;</code> map where <code>Object</code> is a simple
+type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_archiving_and_removing_a_task"><a class="anchor" href="#_archiving_and_removing_a_task"></a>Archiving and removing a task</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>TasksManager</code> provides a method for archiving tasks. The method
+removes the task from the Tasks app. You can still retrieve an archived
+task later in case you want to re-open it or audit.</p>
+</div>
+<div class="paragraph">
+<p>While the API allows deleting a task, we strongly discourage doing so
+unless you know for sure that the deleted task won’t be used any more.</p>
+</div>
+<div class="paragraph">
+<p>Archiving and removing a task</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">taskManager.archiveTask(taskId);
+
+taskManager.removeTask(taskId);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_status"><a class="anchor" href="#_status"></a>Status</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every task is bound to a life cycle and transitions back and forth
+between statuses as it proceeds in your process:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Created</code> : The Task has been created but is not assigned to any
+actor.</p>
+</li>
+<li>
+<p><code>InProgress</code> : The task has been assigned to a user</p>
+</li>
+<li>
+<p><code>Resolved</code> : The task has been resolved by the assigned actor.</p>
+</li>
+<li>
+<p><code>Failed</code> : The execution of the task has failed.</p>
+</li>
+<li>
+<p><code>Archived</code> : The task has been removed from the Tasks app.</p>
+</li>
+<li>
+<p><code>Removed</code> : The task has been removed from the repository. Removing
+tasks is supported by the API but should be used carefully. Depending on
+the use case, a user should be able to re-open a task after it has been
+resolved.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Changes to task status can be tracked by registering a
+<a href="!javadoc">info.magnolia.task.event.TaskEventHandler</a> to the system
+event bus.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_task_definition"><a class="anchor" href="#_task_definition"></a>Task definition</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Every task type needs a unique name. The name is used to read the task
+definition from the task registry in your module configuration.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">my-module</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.f]#tasks</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.n]#getGroceries</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.p]#class</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.task.definition.TaskDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.p]#taskView</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:groceries</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.p]#title</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groceries</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The simplest <a href="!javadoc">info.magnolia.task.definition.TaskDefinition</a>
+needs the following properties:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;task name&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The node’s name used to look up the configuration for a task.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>title</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The i18nable title of the task displayed in the tasks list in the Tasks
+app.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>taskView</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The view definition used to render the form and action bar in the detail
+view of the Tasks app. This is a reference to a <code>messageView</code>
+definition.</p>
+</div>
+<div class="paragraph">
+<p><span class="lv1"><code>class</code></span></p>
+</div>
+<div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The class mapping used for <em>node2bean</em> to initialize the POJO.
+<code>info.magnolia.task.definition.TaskDefinition</code>.</p>
+</div>
+<div class="paragraph">
+<p>As with any definition used in Magnolia, you can define your own
+extensions to the task definition and add configurable nodes and
+properties. This is especially useful in combination with a custom
+<a href="#task-presenter">task presenter</a> for putting together the detail
+view.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_task_view"><a class="anchor" href="#_task_view"></a>Task view</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>While we use the term <em>task view</em> for the detail view of a task, it is
+technically a
+<a href="/Apps/Developing+an+app/Messages/Message+view+definition">message
+view</a> used to render the form and action bar.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Use a message view configuration to define which fields of the task
+object are displayed to the user. You can use a dot notation such as
+<code>content.groceries</code> to reference fields from the <code>content</code> or <code>result</code>
+map. In the same fashion, you can configure your
+<a href="/Support/Magnolia+5+UI+documentation/Dialog+definition+-5+UI/Dialog+action+definition-5+UI[actions],
+including
+link:/Support/Magnolia+5+UI+documentation/Dialog+definition-5+UI/Dialog+action+definition-+5+UI">availability</a>
+and <a href="/Apps/App+configuration/Action+bar+definition">action bar</a>
+mappings.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">my-module</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.f]#messageViews</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.n]#groceries</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#form</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.n]#tabs</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv5">[.n]#groceries</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv6">[.n]#fields</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv7">[.n]#actorIds</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv7">[.n]#content.groceries</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="p">class</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.field.definition.TextFieldDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv7">[.n]#content.budget</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv7">[.n]#comment</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#actions</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#actionbar</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id=""><a class="anchor" href="#"></a>+</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Task presenter</p>
+</div>
+<div class="paragraph">
+<p>A task presenter is started when a user opens a task to see its details.
+The presenter builds the form and action bar which are displayed to the
+user in the browser. Magnolia provides a
+<a href="!javadoc">info.magnolia.ui.admincentral.shellapp.pulse.task.DefaultTaskDetailPresenter</a>.
+See <a href="#task-view">Task view</a> for its functionality.</p>
+</div>
+<div class="paragraph">
+<p>Most likely the task data you want to display in the Tasks app can be
+rendered with the <code>DefaultTaskDetailPresenter</code>. But in case the default
+presenter is not sufficient you can implement your own presenter and
+have it render whatever view is needed.</p>
+</div>
+<div class="paragraph">
+<p>To implement a custom presenter, extend or use
+<a href="!javadoc">info.magnolia.ui.admincentral.shellapp.pulse.task.definition.TaskUiDefinition</a>
+instead of <a href="!javadoc">info.magnolia.task.definition.TaskDefinition</a>
+and add a <code>presenterClass</code> property with a custom implementation of the
+<a href="!javadoc">info.magnolia.ui.admincentral.shellapp.pulse.task.TaskDetailPresenter</a>
+interface to the configuration.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="f">tasks</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.n]#getGroceries</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.p]#class</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.admincentral.shellapp.pulse.task.definition.TaskUiDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.p]#presenterClass</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.my-company.ui.GroceryTaskPresenter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.p]#taskView</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:groceries</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.p]#title</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Groceries</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In your implementation, you can access the task object as well as its
+definition using injection:</p>
+</div>
+<div class="paragraph">
+<p>Example of a task presenter</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Inject
+public GroceryTaskPresenter(GroceryView view, TaskUiDefinition definition, Task task) {
+    ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_bulk_actions"><a class="anchor" href="#_configuring_bulk_actions"></a>Configuring bulk actions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>abort</code>, <code>archive</code> and <code>claim</code> tasks can be configured as
+bulk-actions as per default user roles. Specify the user roles for the
+tasks via the <code>bulkActions</code> node in the configuration of the
+<code>ui-admincentral</code> module.</p>
+</div>
+<div class="paragraph">
+<p>The tree below shows the default setting for the <code>archive</code> action (the
+definition class is
+<code>info.magnolia.ui.admincentral.shellapp.pulse.task.action.ArchiveTasksActionDefinition</code>)
+with the <code>superuser</code> role set to access this action:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="n">bulkActions</span></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv1">[.n]#archive</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.n]#availability</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#access</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.n]#roles</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv5">[.p]#superuser</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">superuser</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.n]#rules</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv4">[.n]#CanArchiveTaskRule</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv5">[.n]#status</span>#</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv6">[.p]#Created</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Created</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv6">[.p]#Failed</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Failed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv6">[.p]#InProgress</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">InProgress</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv6">[.p]#Resolved</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resolved</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv6">[.p]#Scheduled</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scheduled</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv5">[.p]#assignee</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv5">[.p]#class</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.admincentral.shellapp.pulse.task.action.availability.TaskAvailabilityRuleDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv3">[.p]#multiple</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.p]#class</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.admincentral.shellapp.pulse.task.action.ArchiveTasksActionDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="lv2">[.p]#icon</span>#</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">icon-delete</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>To allow bulk actions for other users, add their role names from the
+list of
+<a href="/Administration/Security/Default+roles,+groups+and+users#default-roles">default
+roles</a> as the properties and values of the <code>roles</code> subnode.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="/Apps/App+configuration/Action+definition">Action definition</a>
+for more details about action properties.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

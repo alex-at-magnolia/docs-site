@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Cookies app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Cookies_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Cookies_app.html">master</a>
+    <a class="version" href="../../6.2.1/core/apps/Cookies_app.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Cookies_app.html">Cookies app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Cookies app - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_apps.html">List of apps</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597820"><a class="anchor" href="#src-196597820"></a>Cookies app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">Data
+privacy</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy+API">Data
+privacy API</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies">GDPR and
+cookies</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Privacy+module">Privacy
+module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Use the Cookies app to manage cookies that require consent from your
+website visitors.</p>
+</div>
+<div class="paragraph">
+<p>The cookies you use on your website have different origins: some come
+from third-party services such as Google Analytics, others from Magnolia
+features. One example of a Magnolia cookie is the VISITOR cookie used by
+the visitor trait to serve
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalized</a>
+content.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597820_Cookiesapp-Appdefinition"><a class="anchor" href="#src-196597820_Cookiesapp-Appdefinition"></a>App definition</h3>
+<div class="paragraph">
+<p>The Cookies app is defined in a YAML file. This YAML file resides in the
+Magnolia Maven module called <code>magnolia-privacy-ui</code>, which is part of the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Privacy+module">Privacy
+module</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you want to change the app definition, you can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">decorate</a>
+it, create a copy in the <code>resources</code> workspace with the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources#Resources-ResourceFilesapp">Resource
+Files app</a> or create a copy in a file-based light module using the
+Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources#Resources-Originsandloadingorder">resources
+origins loading order</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597820_Cookiesapp-Usage"><a class="anchor" href="#src-196597820_Cookiesapp-Usage"></a>Usage</h3>
+<div class="paragraph">
+<p>Read <a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies">GDPR
+and cookies</a> to understand how to use the Cookies app to set cookies
+according to website visitor consent.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597820_Cookiesapp-Addingacookiedefinition"><a class="anchor" href="#src-196597820_Cookiesapp-Addingacookiedefinition"></a>Adding a cookie definition</h4>
+<div class="paragraph">
+<p>Open the <strong>Cookies</strong> app from the app launcher.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Search for apps or for content across all your apps using the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a>. Open an
+app directly from the Find Bar using the command` open &lt;app-name&gt; app`,
+for example, type "open pages app".</p>
+</div>
+<div class="paragraph">
+<p>To add a new cookie, click <strong>Add cookie</strong>. New nodes can only be added to
+the root node (no nested cookies). The properties <code>id</code> (cookie&#8217;s unique
+ID) and <code>cookieName</code> (cookie&#8217;s name as seen in the browser) are
+mandatory.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597820/5-7-cookiesApp-GDPR.png" alt="images/download/attachments/196597820/5-7-cookiesApp-GDPR.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597820_Cookiesapp-Editingacookiedefinition"><a class="anchor" href="#src-196597820_Cookiesapp-Editingacookiedefinition"></a>Editing a cookie definition</h4>
+<div class="paragraph">
+<p>To edit a cookie definition, select a cookie in the browser and click
+<strong>Edit cookie</strong>. The fields in the Cookie properties dialog correspond to
+the properties described below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597820/5-7-cookieProperties-GDPR.png" alt="images/download/attachments/196597820/5-7-cookieProperties-GDPR.png"></span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597820_Cookiesapp-anc-cookie-propertiesCookieproperties"><a class="anchor" href="#src-196597820_Cookiesapp-anc-cookie-propertiesCookieproperties"></a><span id="src-196597820_Cookiesapp-anc-cookie-properties " class="confluence-anchor-link">#</span>#Cookie properties</h4>
+<div class="paragraph">
+<p>You can also edit cookie definitions directly in the Configuration app
+under <code>/modules/cookie-manager/config</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong><span id="src-196597820_Cookiesapp-anc-cookie-id">#</span>#required</strong></p>
+</div>
+<div class="paragraph">
+<p>Cookie&#8217;s unique ID. The node name is used as the <code>id</code>. The identifier is
+required to get a CookieDefinition from the CookieManager. (See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy+API#DataprivacyAPI-anc-cookie-manager">Data
+privacy API: Cookie manager</a>.)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>cookieName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the cookie as seen in the browser.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>value</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The value of the cookie.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>domain</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The domain within which this cookie should be presented.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>path</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The path for the cookie to which the client should return the cookie.</p>
+</div>
+<div class="paragraph">
+<p>Leave empty if the cookie should be valid just for the subtree of the
+active page. Use <code>/</code> if the cookie should be valid for whole domain.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxAge</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>-1</code></p>
+</div>
+<div class="paragraph">
+<p>The maximum age of this cookie (in seconds).</p>
+</div>
+<div class="paragraph">
+<p>The default value -1 creates a cookie that expires when you shut down
+the browser.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredConsentRegexp</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>.+</code></p>
+</div>
+<div class="paragraph">
+<p>A regular expression used to determine whether a cookie will be set or
+not.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>secure</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>false</code><strong><br>
+</strong></p>
+</div>
+<div class="paragraph">
+<p>Indicates to the browser whether the cookie should only be sent using a
+secure protocol, such as HTTPS or SSL.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isHttpOnly</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>true</code></p>
+</div>
+<div class="paragraph">
+<p>HttpOnly cookies are not supposed to be exposed to client-side scripting
+code, and may therefore help mitigate certain kinds of cross-site
+scripting attacks.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, default is <code>true</code></p>
+</div>
+<div class="paragraph">
+<p>Set to <code>false</code> to disable the cookie definition.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>comment</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>This property cannot be edited using the Cookies app. Instead you must
+create localized
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">i18n
+message keys</a> for this property. The format of the i18n key is
+<code>cookies.$cookiesId.comment</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All properties except <code>requiredConsentRegexp</code> and <code>enabled</code> derive from
+the
+<a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/Cookie.html">Servlet
+Cookie API</a>.</p>
+</div>
+<div class="paragraph">
+<p>The implementation of the server-side set cookie calling
+<code>cookieManager#addCookie</code> may override the properties set in the Cookies
+app.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196597820_Cookiesapp-anc-requiredConsentRegexp-propertyMagnolia-specificpropertyrequiredConsentRegexp"><a class="anchor" href="#src-196597820_Cookiesapp-anc-requiredConsentRegexp-propertyMagnolia-specificpropertyrequiredConsentRegexp"></a><span id="src-196597820_Cookiesapp-anc-requiredConsentRegexp-property " class="confluence-anchor-link">#</span>#Magnolia-specific property requiredConsentRegexp</h5>
+<div class="paragraph">
+<p>In addition to <code>id</code> and <code>cookieName</code>, the <code>requiredConsentRegexp</code>
+property is also crucial when configuring cookies.The value of the
+<code>requiredConsentRegexp</code> property is interpreted as a
+<a href="https://en.wikipedia.org/wiki/Regular_expression">regular expression</a>.
+The default value is <code>.+</code>.Server-side cookies are set if the regular
+expression matches the value stored in the <code>cookieConsent_status</code>
+cookie.</p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies#GDPRandcookies-anc-understanding-the-cookie-setting-decision">GDPR
+and cookies: Understanding when cookies are set</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597820_Cookiesapp-Bootstrappedcookiedefinitions"><a class="anchor" href="#src-196597820_Cookiesapp-Bootstrappedcookiedefinitions"></a>Bootstrapped cookie definitions</h3>
+<div class="paragraph">
+<p>The Cookies app already contains some nodes. The exact content depends
+on the modules in your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>.
+The following table lists the pre-configured cookie definitions you may
+find in Magnolia:</p>
+</div>
+<div class="paragraph">
+<p>ID</p>
+</div>
+<div class="paragraph">
+<p><code>cookieName</code></p>
+</div>
+<div class="paragraph">
+<p>Usage</p>
+</div>
+<div class="paragraph">
+<p>Installed by</p>
+</div>
+<div class="paragraph">
+<p>cookiesConsent</p>
+</div>
+<div class="paragraph">
+<p>cookieconsent_status</p>
+</div>
+<div class="paragraph">
+<p>Stores the cookie consent decision of the website visitor.</p>
+</div>
+<div class="paragraph">
+<p><code>magnolia‐privacy‐ui</code><br>
+(see <a href="https://wiki.magnolia-cms.com/display/DOCS62/Privacy+module">Privacy
+module</a>)</p>
+</div>
+<div class="paragraph">
+<p>NEW_VISITOR</p>
+</div>
+<div class="paragraph">
+<p>NEW_VISITOR</p>
+</div>
+<div class="paragraph">
+<p>Used by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Defaulttraits">visitor
+trait</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization+module">Personalization
+module</a></p>
+</div>
+<div class="paragraph">
+<p>RETURNING_VISITOR</p>
+</div>
+<div class="paragraph">
+<p>VISITOR</p>
+</div>
+<div class="paragraph">
+<p>REGISTERED_VISITOR</p>
+</div>
+<div class="paragraph">
+<p>VISITOR</p>
+</div>
+<div class="paragraph">
+<p>weatherLocality_Basel</p>
+</div>
+<div class="paragraph">
+<p>weatherLocality</p>
+</div>
+<div class="paragraph">
+<p>Not used. Can be used for a cookie trait.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization+module">Personalization
+module</a></p>
+</div>
+<div class="paragraph">
+<p>weatherLocality_London</p>
+</div>
+<div class="paragraph">
+<p>weatherLocality</p>
+</div>
+<div class="paragraph">
+<p>google_analytics</p>
+</div>
+<div class="paragraph">
+<p>_ga,_gid</p>
+</div>
+<div class="paragraph">
+<p>Google Analytics</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Travel+Demo+-+for+developers">Travel
+demo modules</a></p>
+</div>
+<div class="paragraph">
+<p>tourType_any</p>
+</div>
+<div class="paragraph">
+<p>tourType</p>
+</div>
+<div class="paragraph">
+<p>Tour type buttons on the Travel demo home page.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Travel+Demo+-+for+developers">Travel
+demo modules</a></p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/information.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/information.svg"></span>
+We don&#8217;t recommend removing these nodes except those from the Travel
+demo module.</p>
+</div>
+<div class="paragraph">
+<p>Content Translation app</p>
+</div>
+<div class="paragraph">
+<p>Definitions app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

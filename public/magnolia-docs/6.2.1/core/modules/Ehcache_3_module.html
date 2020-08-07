@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ehcache 3 module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Ehcache_3_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/modules/Ehcache_3_module.html">master</a>
+    <a class="version is-current" href="Ehcache_3_module.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Ehcache_3_module.html">Ehcache 3 module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Ehcache 3 module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+<li>
+<p><a href="Cache_modules.html">Cache modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596773"><a class="anchor" href="#src-196596773"></a>Ehcache 3 module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE, Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a>,
+<a href="http://www.gnu.org/licenses/gpl.html">GPL</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://jira.magnolia-cms.com/browse/MGNLCACHE">MGNLCACHE</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/magnolia-cache/">Cache</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5.9.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Magnolia uses Ehcache 3 for its back-end cache functionality by default.
+<a href="http://www.ehcache.org">Ehcache</a> is a robust, proven and full-featured
+cache product which has made it the most widely-used Java cache.</p>
+</div>
+<div class="paragraph">
+<p>Compared with Ehcache 2, the 3.x line brings important changes and
+improvements such as full compatibility with javax.cache API
+(<a href="https://www.jcp.org/en/jsr/detail?id=107">JSR-107</a>), off-heap storage
+capabilities, a revamped API, persistence, improved performance over
+Ehcache 2.x and much more.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Installing"><a class="anchor" href="#src-196596773_Ehcache3module-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the module. Add the following to
+your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Bundles+and+webapps">bundle</a>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.cache&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-cache-ehcache3&lt;/artifactId&gt;
+  &lt;version&gt;5.9.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Ehcachestoragetiers"><a class="anchor" href="#src-196596773_Ehcache3module-Ehcachestoragetiers"></a>Ehcache storage tiers</h3>
+<div class="paragraph">
+<p>An Ehcache 3 cache can be organized into storage tiers by storage type:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Heap storage</p>
+</li>
+<li>
+<p>Off heap storage</p>
+</li>
+<li>
+<p>Disk storage</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each storage tier can specify how much can be stored in each tier.
+Ehcache will select the appropriate tier to store a cache entry
+depending on how frequently it used and Ehcache manages storing cache
+entries among the storage tiers but you define the storage tiers of your
+cache in Magnolia. Which storage tiers you use and their sizes will
+affect the performance of the cache.</p>
+</div>
+<div class="paragraph">
+<p>Each of the storage types have advantages and disadvantages, and when
+used in combination can provide a performance-optimized, robust cache.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196596773_Ehcache3module-Heapstorage"><a class="anchor" href="#src-196596773_Ehcache3module-Heapstorage"></a>Heap storage</h4>
+<div class="paragraph">
+<p>Cache entries are stored as individual objects in memory on the JVM
+heap. Entry values are not serialized or deserialized when being stored
+or retrieved from the cache, so heap storage is the fastest of the
+Ehcache storage tiers.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, heap storage can be slowed down by JVM garbage
+collection and the amount of entries that can be stored in the heap
+storage is limited by the overall amount of heap available in the JVM.</p>
+</div>
+<div class="paragraph">
+<p>Heap storage can be bounded by number of items stored or by an overall
+size. However, there is a cost associated calculating the size of the
+cache contents when limiting the heap storage tier by number of entries.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596773_Ehcache3module-Offheapstorage"><a class="anchor" href="#src-196596773_Ehcache3module-Offheapstorage"></a>Off heap storage</h4>
+<div class="paragraph">
+<p>Off heap storage stores the cache entries in blocks of memory on the JVM
+heap. Unlike heap storage cache values are serialized to the memory
+block when stored in the cache and deserialized from the memory block
+when retrieved.</p>
+</div>
+<div class="paragraph">
+<p>The serialization and deserialization add a certain overhead; so
+off-heap storage is slower than heap storage. Off-heap storage can be
+limited by an overall size but not by number of entries.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196596773_Ehcache3module-Diskstorage"><a class="anchor" href="#src-196596773_Ehcache3module-Diskstorage"></a>Disk storage</h4>
+<div class="paragraph">
+<p>Cache entries are stored as files. Cache values are serialized to the
+file when stored and deserialized when retrieved. Of the three storage
+tiers, disk storage is the slowest, though how fast disk storage is will
+depend on the speed and how dedicated the disk is.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Storagetiersandcaches"><a class="anchor" href="#src-196596773_Ehcache3module-Storagetiersandcaches"></a>Storage tiers and caches</h3>
+<div class="paragraph">
+<p>You can configure your cache to have one or more storage tiers. Ehcache
+will manage the cache entries, moving "hot" (frequently used) entries to
+faster storage tiers and "cold" (less frequently used) entries to slower
+storage tiers.</p>
+</div>
+<div class="paragraph">
+<p>The following combinations of storage tiers for a cache are possible:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>heap only (single tier)</p>
+</li>
+<li>
+<p>off heap only (single tier)</p>
+</li>
+<li>
+<p>disk only (single tier)</p>
+</li>
+<li>
+<p>heap + off-heap (2 tiers)</p>
+</li>
+<li>
+<p>heap + disk (2 tiers)</p>
+</li>
+<li>
+<p>heap + off-heap + disk (3 tiers)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While it possible to define a cache with a single storage tier of any
+type (heap, off-heap or disk), you must always define a heap storage
+tier when configuring more than one storage tiers for your cache.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Storagetiersizing"><a class="anchor" href="#src-196596773_Ehcache3module-Storagetiersizing"></a>Storage tier sizing</h3>
+<div class="paragraph">
+<p>When using multiple storage tiers, Ehcache expects that each succeeding
+tier be larger than the previous tier. In other words, the heap tier
+must be smaller than the off-heap tier and disk tier and the off-heap
+tier must be smaller than the disk tier.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to use define tiers in different denominations, for
+example, a heap tier sized by entries and an off heap tier sized by
+bytes, in this case Ehcache can&#8217;t ensure that the heap tier is actually
+smaller than the off-heap tier.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Diskstoragelocation"><a class="anchor" href="#src-196596773_Ehcache3module-Diskstoragelocation"></a>Disk storage location</h3>
+<div class="paragraph">
+<p>If you use a disk storage tier in your cache, the cache will store its
+contents on the file system. You can control the location of the cache
+files with Magnolia properties and configuration.</p>
+</div>
+<div class="paragraph">
+<p>By default the location for disk storage is:</p>
+</div>
+<div class="paragraph">
+<p>$\{<strong>magnolia.cache.startdir</strong>}/$\{<strong>magnolia.cache.manager.id</strong>}</p>
+</div>
+<div class="paragraph">
+<p><strong>magnolia.cache.startdir</strong> defaults to $\{<strong>magnolia.home</strong>}/cache.</p>
+</div>
+<div class="paragraph">
+<p><strong>magnolia.cache.manager.id</strong> defaults to $\{<strong>magnolia.app.rootdir</strong>}.</p>
+</div>
+<div class="paragraph">
+<p>See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+management">Configuration
+management</a> for more on configuring Magnolia properties.</p>
+</div>
+<div class="paragraph">
+<p>You can also set the cache location by setting the property
+"<strong>diskStorePath</strong>" for the cache factory configuration at
+<strong>/modules/cache/config/cacheFactory/delegateFactories/cacheFactory</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Setting the diskStorePath property may override the settings of the
+Magnolia properties <strong>magnolia.cache.startdir</strong> and
+<strong>magnolia.cache.manager.id</strong>.</p>
+</div>
+<div class="paragraph">
+<p>If <strong>diskStorePath</strong> is an absolute path, the disk cache files will be
+stored at its location.</p>
+</div>
+<div class="paragraph">
+<p>if <strong>diskStorePath</strong> is a relative path, the disk cache files will be
+stored at $\{<strong>magnolia.cache.startdir</strong>}/&lt;diskStorePath&gt;.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Cachepersistence"><a class="anchor" href="#src-196596773_Ehcache3module-Cachepersistence"></a>Cache persistence</h3>
+<div class="paragraph">
+<p>The contents of a cache can be saved and restored after restarting
+Magnolia. Cache persistence thus saves the time for the cache to be
+repopulated.</p>
+</div>
+<div class="paragraph">
+<p>Only a cache with a disk storage tier can be persisted, so if you want a
+persistent cache, only the following cache configurations tiers can be
+used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>disk only (single tier)</p>
+</li>
+<li>
+<p>heap + disk (2 tiers)</p>
+</li>
+<li>
+<p>heap + off-heap + disk (3 tiers)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Configuringapersistentcache"><a class="anchor" href="#src-196596773_Ehcache3module-Configuringapersistentcache"></a>Configuring a persistent cache</h3>
+<div class="paragraph">
+<p>As mentioned, a persistent cache has to have a disk storage tier. The
+cache can configured to be persistent by setting the property
+"<strong>persistent</strong>" for the disk tier configuration
+<code>/modules/cache/config/cacheFactory/delegateFactories/ehcache3/caches/&lt;cache name&gt;/resourcePoolsBuilder/pools/&lt;disk tier name&gt;</code>
+to "true".</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596773_Ehcache3module-Configuration"><a class="anchor" href="#src-196596773_Ehcache3module-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>Ehcache has its own configuration options that can be set in
+<code>/modules/cache/config/cacheFactory/</code> .</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">cacheFactory</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.ehcache3.EhCache3Factory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">caches</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;cacheName&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.ehcache3.configuration.EhCache3ConfigurationBuilder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keyType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.io.Serializable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">valueType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">java.io.Serializable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourcePoolsBuilder</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.ehcache3.configuration.Ehcache3ResourcePoolsBuilder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pools</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">heap</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourceType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HEAP</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.ehcache3.configuration.Ehcache3ResourcePoolBuilder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourceUnit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ENTRIES</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">disk</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourceType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DISK</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.ehcache3.configuration.Ehcache3ResourcePoolBuilder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">persistent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">resourceUnit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1000</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">expiryPolicy</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.cache.ehcache3.configuration.EhCache3Expiry</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 14%;">
+<col style="width: 68%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Property</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Default value</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>keyType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The key type for the cache.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>valueType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The value type for the cache.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourceType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>HEAP</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The type of the cache pool: <code>HEAP</code> , <code>OFFHEAP</code> , or <code>DISK</code> .</p>
+</div>
+<div class="paragraph">
+<p>See <strong>Storage tiers</strong> in
+<a href="http://www.ehcache.org/documentation/3.0/caching-concepts.html" class="bare">http://www.ehcache.org/documentation/3.0/caching-concepts.html</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>resourceUnit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ENTRIES</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The size-type applied for the given resource pool.</p>
+</div>
+<div class="paragraph">
+<p>The <code>HEAP</code> pool can be sized by entries (<code>ENTRIES</code>) or by bytes (<code>B</code>,
+<code>KB</code>, <code>MB</code>, <code>GB</code>, <code>TB</code>, <code>PB</code>).</p>
+</div>
+<div class="paragraph">
+<p>The <code>OFFHEAP</code> and <code>DISK</code> pools are sized by bytes only ( <code>B</code> , <code>KB</code> ,
+<code>MB</code> , <code>GB</code> , <code>TB</code> , <code>PB</code> ).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>persistent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>false</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Persistence of the disk storage pool. Persistence means the cache will
+survive a JVM restart.</p>
+</div>
+<div class="paragraph">
+<p>Only a <code>DISK</code> tier can set <code>persistent</code> to <code>true</code>. Setting a <code>HEAP</code> or
+<code>OFFHEAP</code> tier to be persistent will result in an error.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The size of the given resource pool.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expiryPolicy</code> / <code>create</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>infinite</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Lifetime in seconds for all entries when those are initially added. This
+does not apply to entries with an explicitly specified time to live
+(TTL).</p>
+</div>
+<div class="paragraph">
+<p><code>infinite</code> means that the mapping will never expire.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expiryPolicy</code> / <code>update</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Expiration time in seconds when an existing entry is updated.</p>
+</div>
+<div class="paragraph">
+<p><code>none</code> means that the expiration time remains unchanged.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>expiryPolicy</code> / <code>access</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>none</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Expiration time in seconds when an existing entry is accessed.</p>
+</div>
+<div class="paragraph">
+<p><code>none</code> means that the expiration time remains unchanged.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>blockingTimeout</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>10000</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instructs Ehcache to wait the specified
+time in milliseconds before attempting to cache the
+request.<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Create the <code>blockingTimeout</code> property in the tree at the same level
+where the EhCache3Factory class is defined, not inside the <code>&lt;cacheName&gt;</code>
+node.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Cache Tools app</p>
+</div>
+<div class="paragraph">
+<p>Memcached implementation</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

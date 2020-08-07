@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Generic i18n keys - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Generic-i18n-keys.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/administration/Generic-i18n-keys.html">master</a>
+    <a class="version is-current" href="Generic-i18n-keys.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Generic-i18n-keys.html">Generic i18n keys - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Generic i18n keys - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Language.html">Language</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-219791488"><a class="anchor" href="#src-219791488"></a>Generic i18n keys</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>These generic i18n keys are part of the <em>Magnolia 6 UI</em> framework.</p>
+</div>
+<div class="paragraph">
+<p>If you work with the <em>Magnolia 5 UI</em> framework, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Generic+i18n+keys+-+5+UI">Generic
+i18n keys for <em>Magnolia 5 UI</em></a> instead.</p>
+</div>
+<div class="paragraph">
+<p>Generic i18n keys can be used in more than one location simultaneously,
+such as in multiple modules, apps and subapps, tabs or views. A list of
+such keys is provided at the end of this page.</p>
+</div>
+<div class="sect2">
+<h3 id="src-219791488_Generici18nkeys-Reusingkeysfromothermodules"><a class="anchor" href="#src-219791488_Generici18nkeys-Reusingkeysfromothermodules"></a>Reusing keys from other modules</h3>
+<div class="paragraph">
+<p>At startup, Magnolia creates a global message bundle by reading keys
+from all <code>.properties</code> files of all modules in the current project. The
+global bundle is a virtual bundle, not a physical file. It includes keys
+from your module and keys from Magnolia&#8217;s own modules such as
+<code>ui-admincentral</code> and <code>ui-framework</code>.</p>
+</div>
+<div class="paragraph">
+<p>This means that you do not need to provide keys for all UI elements in
+your app. Keys for commonly reused elements such as buttons and subapps
+are in Magnolia&#8217;s own modules. Just reuse the UI element in your app,
+and Magnolia will find the existing key automatically. In simple terms,
+the shorter the form of the key, the more places it will apply to.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: The contact edit form has <strong>Save changes</strong> and <strong>Cancel</strong>
+buttons.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://wiki.magnolia-cms.com/display/DOCS62/Contacts+app">Contacts
+app</a> does not provide the text for either button in its own message
+bundle. They are provided in the
+<code>module-ui-framework-messages_en.properties</code> file of the <code>ui-framework</code>
+module.</p>
+</div>
+<div class="paragraph">
+<p>module-ui-framework-messages_en.properties</p>
+</div>
+<div class="paragraph">
+<p><code># Default Action Labels</code></p>
+</div>
+<div class="paragraph">
+<p><code>actions.commit=save changes</code></p>
+</div>
+<div class="paragraph">
+<p><code>actions.cancel=cancel</code></p>
+</div>
+<div class="paragraph">
+<p>Therefore, it is not necessary to insert two specific keys such as the
+following into the <code>.properties</code> file of the Contacts app.</p>
+</div>
+<div class="paragraph">
+<p>contacts-app-messages_en.properties</p>
+</div>
+<div class="paragraph">
+<p><code>contacts<code>-app</code>.actions.commit=save changes</code></p>
+</div>
+<div class="paragraph">
+<p><code>contacts<code>-app</code>.actions.cancel=cancel</code></p>
+</div>
+<div class="paragraph">
+<p>If your app needs these buttons, just name your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">actions</a>
+<code>commit</code> and <code>cancel</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">actions</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">commit</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.action.SaveFormActionDefinition</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">implementationClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.contacts.app.form.action.SaveContactFormAction</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cancel</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.ui.form.action.CancelFormActionDefinition</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-219791488_Generici18nkeys-Providingakeytoothermodulesorapps"><a class="anchor" href="#src-219791488_Generici18nkeys-Providingakeytoothermodulesorapps"></a>Providing a key to other modules or apps</h3>
+<div class="paragraph">
+<p>If a key is to be made available to other modules or apps, make the key
+less specific by omitting the <code>&lt;module&gt;</code> or <code>&lt;app&gt;</code> part of the key. See
+the list below for acceptable shorter forms of i18n keys.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example:</strong> The key for the <code>teaser</code> component in the MTK module
+(<a href="https://demo.magnolia-cms.com/.magnolia/admincentral;#app:resources:detail;/mtk/templates/components/teaser.yaml" class="bare">https://demo.magnolia-cms.com/.magnolia/admincentral;#app:resources:detail;/mtk/templates/components/teaser.yaml</a>)</p>
+</div>
+<div class="paragraph">
+<p><code>mtk.templates.components.teaser=Teaser</code></p>
+</div>
+<div class="paragraph">
+<p>can be shortened just to</p>
+</div>
+<div class="paragraph">
+<p><code>templates.components.teaser=Teaser</code></p>
+</div>
+<div class="paragraph">
+<p>By omitting the module name (<code>mtk</code>) from the key, the shorter form can
+be reused for translation in other modules, e.g. in Travel Demo
+(<a href="https://demo.magnolia-cms.com/.magnolia/admincentral;#app:resources:detail;/travel-demo/templates/components/teaser.yaml:edit">https://demo.magnolia-cms.com/.magnolia/admincentral;#app:resources:detail;/travel-demo/templates/components/teaser.yaml</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-219791488_Generici18nkeys-Overridingagenerickey"><a class="anchor" href="#src-219791488_Generici18nkeys-Overridingagenerickey"></a>Overriding a generic key</h3>
+<div class="paragraph">
+<p>There are, however, scenarios when a translation for an element has to
+be different from the one available in the generic key. In this case,
+the user still has the option to expand the key from its short (generic)
+form into a longer pattern that specifies the element (e.g. the module,
+app, subapp, etc.) where the translation should appear. For example, if
+the key for the <code>teaser</code> component in the Travel Demo module needs a
+different translation from that used in MTK, the key can be expanded
+into a more specific form:</p>
+</div>
+<div class="paragraph">
+<p><code>travel-demo.templates.components.teaser=The Travel Demo Teaser</code></p>
+</div>
+<div class="paragraph">
+<p>The translation will now be available primarily to the <code>teaser</code>
+component in the Travel Demo module.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-219791488_Generici18nkeys-Listofgenerici18nkeys"><a class="anchor" href="#src-219791488_Generici18nkeys-Listofgenerici18nkeys"></a>List of generic i18n keys</h3>
+<div class="paragraph">
+<p>The parts in <code>[brackets]</code> can be omitted.</p>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Apps"><a class="anchor" href="#src-219791488_Generici18nkeys-Apps"></a>Apps</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;app&gt;.app[.label]</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Applaunchergroup"><a class="anchor" href="#src-219791488_Generici18nkeys-Applaunchergroup"></a>App launcher group</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>app-launcher.&lt;groupName&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Sections"><a class="anchor" href="#src-219791488_Generici18nkeys-Sections"></a>Sections</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;app&gt;.[&lt;subapp&gt;.]actionbar.&lt;section&gt;[.label]</code></p>
+</li>
+<li>
+<p><code>[&lt;app&gt;.][&lt;subapp&gt;.]actionbar.sections.&lt;section&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If used in the key, <code>&lt;subapp&gt;</code> requires <code>&lt;app&gt;</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Actions"><a class="anchor" href="#src-219791488_Generici18nkeys-Actions"></a>Actions</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[&lt;app&gt;.][&lt;subapp&gt;.]actions.&lt;action&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Columns"><a class="anchor" href="#src-219791488_Generici18nkeys-Columns"></a>Columns</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[&lt;app&gt;.][&lt;subapp&gt;.]views.&lt;column&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If used in the key, <code>&lt;subapp&gt;</code> requires <code>&lt;app&gt;</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Tabs"><a class="anchor" href="#src-219791488_Generici18nkeys-Tabs"></a>Tabs</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;module&gt;.&lt;dialogPath&gt;.&lt;tab&gt;[.label]</code></p>
+</li>
+<li>
+<p><code>tabs.&lt;tab&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Dialogs"><a class="anchor" href="#src-219791488_Generici18nkeys-Dialogs"></a>Dialogs</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;module&gt;.&lt;dialogPath&gt;[.label]</code></p>
+</li>
+<li>
+<p><code>dialogs.&lt;dialogPath&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-219791488_Generici18nkeys-Chooserdialogs"><a class="anchor" href="#src-219791488_Generici18nkeys-Chooserdialogs"></a>Chooser dialogs</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><code>dialogs.chooseDialog[.label]</code></p>
+</li>
+<li>
+<p><code>&lt;app&gt;.chooseDialog[.label]</code></p>
+</li>
+<li>
+<p><code>dialogs.&lt;action&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Fields"><a class="anchor" href="#src-219791488_Generici18nkeys-Fields"></a>Fields</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fields.&lt;field&gt;[.label]</code></p>
+</li>
+<li>
+<p><code>&lt;app&gt;.&lt;action&gt;.&lt;field&gt;[.label]</code></p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-219791488_Generici18nkeys-Fieldvalidators"><a class="anchor" href="#src-219791488_Generici18nkeys-Fieldvalidators"></a>Field validators</h5>
+<div class="paragraph">
+<p>The generic i18n key for a field validator is
+<code>validators.&lt;validatorName&gt;.errorMessage</code>.</p>
+</div>
+<div class="paragraph">
+<p>If a validator is defined for the field, the i18n keys may take the
+validator suffix:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[&lt;module&gt;.]&lt;dialogPath&gt;.[&lt;tab&gt;.]&lt;field&gt;.validation.errorMessage</code></p>
+</li>
+<li>
+<p><code>&lt;tab&gt;.&lt;field&gt;.validation.errorMessage</code></p>
+</li>
+<li>
+<p><code>fields.&lt;field&gt;.validation.errorMessage</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-219791488_Generici18nkeys-Templates"><a class="anchor" href="#src-219791488_Generici18nkeys-Templates"></a>Templates</h4>
+<div class="sect4">
+<h5 id="src-219791488_safe-id-R2VuZXJpY2kxOG5rZXlzLVBhZ2VzL2NvbXBvbmVudHM"><a class="anchor" href="#src-219791488_safe-id-R2VuZXJpY2kxOG5rZXlzLVBhZ2VzL2NvbXBvbmVudHM"></a>Pages/components</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[&lt;module&gt;.]templates.&lt;templatePath&gt;</code></p>
+</li>
+<li>
+<p><code>[&lt;module&gt;.]templates.&lt;templatePath&gt;.description</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-219791488_Generici18nkeys-Areas"><a class="anchor" href="#src-219791488_Generici18nkeys-Areas"></a>Areas</h5>
+<div class="ulist">
+<ul>
+<li>
+<p><code>templates.areas.&lt;areaName&gt;</code></p>
+</li>
+<li>
+<p><code>templates.areas.&lt;areaName&gt;.description</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Multilanguage structure</p>
+</div>
+<div class="paragraph">
+<p>i18n API</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

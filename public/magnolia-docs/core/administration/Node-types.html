@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Node types - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Node-types.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2.1/index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">master</button>
+  <div class="version-menu">
+    <a class="version is-current" href="Node-types.html">master</a>
+    <a class="version" href="../../6.2.1/core/administration/Node-types.html">6.2.1</a>
+    <a class="version is-missing" href="../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Node-types.html">Node types - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Node types - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Architecture.html">Architecture</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595702"><a class="anchor" href="#src-196595702"></a>Node types</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Magnolia stores data in a Java Content Repository. The repository is a
+hierarchical object database that is particularly well-suited for
+storing content. In a content management system you need to be able to
+store text, documents, images and other binary objects along with their
+metadata. The data is structured as a tree of nodes. Each node can have
+one or more types. The type defines what kind of properties the node
+has, the number and type of its child nodes, and its behavior. See
+<a href="http://jackrabbit.apache.org/node-types.html">Jackrabbit Node Types</a> for
+more information and
+<a href="http://jackrabbit.apache.org/node-type-visualization.html">Node Type
+Visualization</a> for a diagram of the node type hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>In Magnolia we define custom node types that define Magnolia&#8217;s custom
+content model. The JCR in turn enforces the constraints of that model at
+the repository level. If you need to reference JCR node types in your
+code, Jackrabbit&#8217;s
+<a href="http://jackrabbit.apache.org/api/2.14/org/apache/jackrabbit/JcrConstants">JcrConstants</a>
+is useful. We provide constants also for Magnolia&#8217;s custom node types
+but also convenience methods. For example, to update the last
+modification date of a node, use the
+<code>NodeTypes.LastModified.update(node)</code> convenience method. Magnolia node
+types are registered by the NodeTypes Java class.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Prefixes"><a class="anchor" href="#src-196595702_Nodetypes-Prefixes"></a>Prefixes</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node type</th>
+<th class="tableblock halign-left valign-top">Prefix</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR primary node type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nt:</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mixin node type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mix:</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Magnolia node type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <code>mgnl</code> prefix does not tell you
+whether the node is a primary node or a mixin. To find out which type a
+<code>mgnl</code> node is, check the `magnolia-nodetypes.cnd `file.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Nodetypehierarchy"><a class="anchor" href="#src-196595702_Nodetypes-Nodetypehierarchy"></a>Node type hierarchy</h3>
+<div class="paragraph">
+<p>In this simplified node type hierarchy diagram you can see what extends
+what. For example, <code>mgnl:page</code> extends <code>mgnl:versionable</code>. This means
+that page is an object you can version. In contrast, <code>mgnl:area</code> and
+<code>mgnl:component</code> are not versionable – they are subnodes that must be
+activated together with the parent page. However, all three node types
+(page, area, component) are renderable which means you can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Rendering+content">render a
+component on its own</a> without its parent page. See the
+`magnolia-nodetypes.cnd `file for a full view of the Magnolia node type
+hierarchy.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595702/node-type-hierarchy.png" alt="images/download/attachments/196595702/node-type-hierarchy.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Primarynodetypes"><a class="anchor" href="#src-196595702_Nodetypes-Primarynodetypes"></a>Primary node types</h3>
+<div class="paragraph">
+<p>Every node has a primary node type assigned to it upon creation. The
+primary node type defines node structure such as allowed and required
+child nodes and properties. Primary types reflect the business that is
+represented in the repository. Magnolia&#8217;s primary node types define
+content management nodes such as pages, areas, components and resources.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-JCRprimarynodetypes"><a class="anchor" href="#src-196595702_Nodetypes-JCRprimarynodetypes"></a>JCR primary node types</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nt:base</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The base type of all primary node types.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nt:unstructured</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unstructured node type that allows any properties
+and child nodes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nt:hierarchyNode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Abstract base type for nodes in a structured node
+hierarchy.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nt:file</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCR representation of a file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nt:frozenNode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This node type is used in the versioning system.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-Magnoliaprimarynodetypes"><a class="anchor" href="#src-196595702_Nodetypes-Magnoliaprimarynodetypes"></a>Magnolia primary node types</h4>
+<div class="paragraph">
+<p>The primary Magnolia node types are defined in:</p>
+</div>
+<div class="paragraph">
+<p>magnolia-nodetypes.cnd</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;'mgnl'='http://www.magnolia.info/jcr/mgnl'&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;'mix'='http://www.jcp.org/jcr/mix/1.0'&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;'nt'='http://www.jcp.org/jcr/nt/1.0'&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:metaData] &gt; mix:referenceable, nt:hierarchyNode</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:lastModified]</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:lastModifiedBy (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:lastModified (date) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:activatable] &gt; mix:lockable</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:activationStatus (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:lastActivatedBy (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:lastActivatedVersionCreated (date) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:lastActivated (date) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:lastActivatedVersion (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:renderable]</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:template (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:created]</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:createdBy (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:created (date) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:versionable] &gt; mix:lockable</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:comment (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:deleted] &gt; mgnl:versionable</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:deleted (date) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:deletedBy (string) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:content] &gt; mgnl:activatable, mgnl:created, mgnl:lastModified, mgnl:renderable, mgnl:versionable, mix:referenceable, nt:hierarchyNode</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) multiple nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  + * (nt:base)`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:contentNode] &gt; mgnl:activatable, mgnl:created, mgnl:lastModified, mgnl:renderable, mix:referenceable, nt:hierarchyNode</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) multiple nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  + * (nt:base)`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:folder] &gt; mgnl:activatable, mgnl:created, mgnl:lastModified, mix:referenceable, nt:folder</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) multiple nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  + * (nt:base)`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:resource] &gt; mgnl:activatable, mgnl:created, mgnl:lastModified, nt:resource</code></p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:reserve] &gt; nt:hierarchyNode</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p>`  - * (undefined) nofulltext noqueryorder`</p>
+</div>
+<div class="paragraph">
+<p>`  + * (nt:base)`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:page] &gt; mgnl:content</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:area] &gt; mgnl:contentNode</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:component] &gt; mgnl:contentNode</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:user] &gt; mgnl:content</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:role] &gt; mgnl:content</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:group] &gt; mgnl:content</code></p>
+</div>
+<div class="paragraph">
+<p>`  orderable`</p>
+</div>
+<div class="paragraph">
+<p><code>[mgnl:hasVersion]</code></p>
+</div>
+<div class="paragraph">
+<p>`  mixin`</p>
+</div>
+<div class="paragraph">
+<p>These types are required for the basic features of Magnolia to function:
+configuration, page-editing and rendering as well as activation from
+author to public (which relies on versioning).</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:area</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Area</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:component</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activatable and versionable content objects such as
+pages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:contentNode</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activatable but not versionable content objects
+which can be rendered independently. For example, blocks or objects
+below page level such as area or component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:folder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Folder</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:group</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:metaData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Metadata</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:nodeData</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:page</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:reserve</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reserved for system use.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:resource</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:role</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:user</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Mixinnodetypes"><a class="anchor" href="#src-196595702_Nodetypes-Mixinnodetypes"></a>Mixin node types</h3>
+<div class="paragraph">
+<p>Mixin node types specify additional properties or characteristics to the
+node. A node can have a primary type and several mixin types at the same
+time. JCR mixins add repository-level functionality such as versioning
+and locking. Magnolia mixins add content management capabilities such as
+activating and rendering.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-JCRmixinnodetypes"><a class="anchor" href="#src-196595702_Nodetypes-JCRmixinnodetypes"></a>JCR mixin node types</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mix:referenceable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mixin type for referenceable nodes. Provides an
+auto-created <code>jcr:uuid</code> property that gives the node a unique,
+referenceable identifier.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mix:versionable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mixin type for versionable nodes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mix:lockable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables locking capabilities for a node.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-Magnoliamixinnodetypes"><a class="anchor" href="#src-196595702_Nodetypes-Magnoliamixinnodetypes"></a>Magnolia mixin node types</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Properties</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:deleted</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>mgnl:deleted (DATE)</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl:deletedBy (STRING)</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date the node was deleted, the user who deleted it and the deletion
+comment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:lastModified</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>mgnl:lastModified (DATE)</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl:lastModifiedBy (STRING)</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date the node was last modified and the user who modified it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:activatable</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>mgnl:lastActivated (DATE)</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl:lastActivatedBy (STRING)</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl:activationStatus (STRING)</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl:lastActivatedVersion (STRING)</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Date the node was activated, the user who activated it, its current
+activation status and the version in which the node was activated.</p>
+</div>
+<div class="paragraph">
+<p>Note that on the public instance, <code>lastActionDate</code> always contains the
+date of the previous activation, not the current one. This is because
+the <code>lastActionDate</code> is updated only after the content is sent to the
+public instance.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:created</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>mgnl:created (DATE)</code></p>
+</div>
+<div class="paragraph">
+<p><code>mgnl:createdBy (STRING)</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date the node was created and the user who created it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:renderable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:template (STRING)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Associates a template with
+the node for rendering.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:versionable</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:comment (STRING)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allows the user to leave a
+comment on the version.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:visitorReference</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:visitorId (STRING)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Uniquely identifies
+a page visitor and the associated site content for the purposes of
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Data+privacy">personal data
+protection</a> (GDPR).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Samenamesiblingsarenotallowed"><a class="anchor" href="#src-196595702_Nodetypes-Samenamesiblingsarenotallowed"></a>Same name siblings are not allowed</h3>
+<div class="paragraph">
+<p>The Magnolia node type definition `magnolia-nodetypes.cnd `does not
+allow same name siblings. This means that you cannot have two nodes at
+the same level in the node hierarchy with the same name. Typically same
+name siblings is not an issue because Magnolia enforces the constraint
+automatically during normal usage. However, if prior to Magnolia 5.2 you
+imported an XML file that was created outside of Magnolia or was edited
+by hand, it is possible that the XML import created a same name sibling.</p>
+</div>
+<div class="paragraph">
+<p>Use the <code>siblings.groovy</code> script to find same name siblings in your
+repository. The example below searches for identically named areas
+(<code>returnItemType</code> is <code>mgnl:area</code>) in the <code>website</code> workspace under the
+<code>/travel/about</code> page. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Groovy+module">Groovy
+module</a> for instructions on how to execute Groovy scripts.</p>
+</div>
+<div class="paragraph">
+<p>siblings.groovy</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.cms.util.QueryUtil;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.cms.core.search.Query;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.cms.core.Path;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.jcr.util.NodeUtil;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.context.MgnlContext;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.jcr.Session;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.jcr.Node;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> javax.jcr.NodeIterator;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> org.apache.commons.lang.StringUtils;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> java.util.LinkedList;`</p>
+</div>
+<div class="paragraph">
+<p><code>def`</code> siblings(workspace,path,returnItemType) {`</p>
+</div>
+<div class="paragraph">
+<p>`    query = <code>"/jcr:root"</code> + path + <code>"//* order by @name"</code>;  //i.e. path=/travel/about`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>try</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`        NodeIterator nodes = QueryUtil.search(workspace,query,Query.XPATH,returnItemType);`</p>
+</div>
+<div class="paragraph">
+<p>`        `</p>
+</div>
+<div class="paragraph">
+<p>`        Session session = MgnlContext.getJCRSession(workspace);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>def</code> siblings = []; `</p>
+</div>
+<div class="paragraph">
+<p>`        <code>while</code> (nodes.hasNext()) {`</p>
+</div>
+<div class="paragraph">
+<p>`            Node node = nodes.nextNode();`</p>
+</div>
+<div class="paragraph">
+<p>`            nodePath = node.getPath();`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>if</code> (StringUtils.<code>contains</code>(nodePath,<code>"["</code>)) {`</p>
+</div>
+<div class="paragraph">
+<p>`              <code>println</code> <code>"found same name sibling of '${node.getName()}' at ${nodePath}"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`              siblings.add(node);`</p>
+</div>
+<div class="paragraph">
+<p>`            }`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`        siblings.<code>each</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`            nodePath = node.getPath();`</p>
+</div>
+<div class="paragraph">
+<p>`            newName = Path.getUniqueLabel(session,nodePath,node.getName());`</p>
+</div>
+<div class="paragraph">
+<p>`            NodeUtil.renameNode(node,newName);`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>println</code> <code>"${nodePath} was renamed to ${newName}"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`        }`</p>
+</div>
+<div class="paragraph">
+<p>`        session.save();`</p>
+</div>
+<div class="paragraph">
+<p>`    } <code>catch</code> (Exception e) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>println</code> e;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>//example</code></p>
+</div>
+<div class="paragraph">
+<p><code>siblings(<code>"website"</code>, <code>"/travel/about"</code>, <code>"mgnl:area"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>Options from the expandable Groovy script above:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>workspace</code>: Any <a href="Workspaces.html">Magnolia workspace</a>.</p>
+</li>
+<li>
+<p><code>path</code>: A valid path in the workspace. <code>/</code> will search for everything
+under the workspace root.</p>
+</li>
+<li>
+<p><code>returnItemType</code>: A valid JCR node type. The query goes through all
+node types but the results are filtered to the node type you specify.
+Use <code>nt:base</code> as a "wildcard".</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Module-specificnodetypes"><a class="anchor" href="#src-196595702_Nodetypes-Module-specificnodetypes"></a>Module-specific node types</h3>
+<div class="paragraph">
+<p>The following sections list node types that are provided by individual
+Magnolia modules. You can define several node types per module if you so
+require. Almost all the node types added inherit from <code>mgnl:contentNode</code>
+or <code>mgnl:content</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-Categorizationmodule"><a class="anchor" href="#src-196595702_Nodetypes-Categorizationmodule"></a>Categorization module</h4>
+<div class="paragraph">
+<p>Defined in `magnolia-category-nodetypes.xml `.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:category</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object containing a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Categorization+module#Categorizationmodule-Whatisacategory?">category</a>.
+Inherits from <code>mgnl:content</code> .</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-ContentEditormodule"><a class="anchor" href="#src-196595702_Nodetypes-ContentEditormodule"></a>Content Editor module</h4>
+<div class="paragraph">
+<p>Defined in `content-editor-nodetypes.xml `.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:block</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content editor block objects containing text, image or
+similar content. Inherits from <code>mgnl:contentNode</code> and are activatable
+but not versionable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:composition</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compositions are activatable and versionable as a
+whole and contain ordered subnodes of type <code>mgnl:block</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:collection</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collection of unordered content editor compositions.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-ContentTagsmodule"><a class="anchor" href="#src-196595702_Nodetypes-ContentTagsmodule"></a>Content Tags module</h4>
+<div class="paragraph">
+<p>Defined in
+<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/content-tags/browse/magnolia-content-tags-core/src/main/resources/mgnl-nodetypes/content-tags-nodetypes.xml"><code>content-tags-nodetypes.xml</code></a>
+.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:tag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object containing a content tag. Inherits from
+<code>mgnl:content</code> .</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-MarketingTagsmodule"><a class="anchor" href="#src-196595702_Nodetypes-MarketingTagsmodule"></a>Marketing Tags module</h4>
+<div class="paragraph">
+<p>Defined in
+<a href="https://git.magnolia-cms.com/projects/ENTERPRISE/repos/marketing-tags/browse/src/main/resources/mgnl-nodetypes/magnolia-tags-nodetypes.xml"><code>magnolia-tags-nodetypes.xml</code></a>
+.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 98%;">
+<colgroup>
+<col style="width: 23%;">
+<col style="width: 77%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:marketing-tag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object containing a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Marketing+Tags+app#MarketingTagsapp-Whataremarketingtags">marketing
+tag</a>. Inherits from <code>mgnl:content</code> .</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-Passwordmanagermodule"><a class="anchor" href="#src-196595702_Nodetypes-Passwordmanagermodule"></a>Password manager module</h4>
+<div class="paragraph">
+<p>Defined in `magnolia-keystore-nodetypes.xml `.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:password</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An object containing a password. Inherits from
+<code>mgnl:content</code> .</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595702_Nodetypes-Personalizationmodule"><a class="anchor" href="#src-196595702_Nodetypes-Personalizationmodule"></a>Personalization module</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Notation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnl:componentVariant</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A personalized variant of a component node.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595702_Nodetypes-Customnodetypes"><a class="anchor" href="#src-196595702_Nodetypes-Customnodetypes"></a>Custom node types</h3>
+<div class="paragraph">
+<p>To meet your needs you can define custom content types and with the
+Magnolia
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Content+Types+module">Content
+Types module</a> you can define them (together with workspaces) also in
+light modules.</p>
+</div>
+<div class="paragraph">
+<p>Please read the page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Defining+JCR+node+types+and+workspaces">Defining
+JCR node types and workspaces</a>, which provides an overview of all ways
+to define custom JCR node types and create new workspaces with Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Content storage and structure</p>
+</div>
+<div class="paragraph">
+<p>Publishing and activation</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

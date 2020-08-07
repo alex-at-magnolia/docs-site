@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Area definition - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/templating/Area_definition.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <link rel="icon" href="../../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">
+        <img class="logo" src="../../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="6.2.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Magnolia Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Get Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Dump</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/Features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../authoring/Authoring.html">Authoring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../support/Support.html">Need Support?</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#FAQS.adoc">FAQs</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">6.2.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">6.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../6.2/index.html">6.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../magnolia-general/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6.2.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../core/templating/Area_definition.html">master</a>
+    <a class="version is-current" href="Area_definition.html">6.2.1</a>
+    <a class="version is-missing" href="../../../6.2/index.html">6.2</a>
+  </div>
+</div>
+  <a href="../../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Area_definition.html">Area definition - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Area definition - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Templating.html" class="bare">Templating.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Templating.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Template_definition.html">Template definition</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596459"><a class="anchor" href="#src-196596459"></a>Area definition</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Areas control page structure. An area definition defines what components
+editors can add in the area and how many. Areas also provide
+repeatability: an area template typically loops through the components
+inside it, rendering them one by one. Define areas inside your
+<a href="Page_definition.html">page definitions</a>. You can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Module+configuration#Moduleconfiguration-ConfiguringinJCRvsYAML">configure
+an area definition in a YAML file or a JCR node.</a></p>
+</div>
+<div class="sect2">
+<h3 id="src-196596459_Areadefinition-Wheretodefineareas"><a class="anchor" href="#src-196596459_Areadefinition-Wheretodefineareas"></a>Where to define areas</h3>
+<div class="paragraph">
+<p>Areas are defined in a <a href="Page_definition.html">page definition</a>,
+inside the <code>areas</code> item:*YAML file*</p>
+</div>
+<div class="paragraph">
+<p>example/templates/pages/home.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  header:`</p>
+</div>
+<div class="paragraph">
+<p>`    # header area configuration`</p>
+</div>
+<div class="paragraph">
+<p>`  content:`</p>
+</div>
+<div class="paragraph">
+<p>`    # content area configuration`</p>
+</div>
+<div class="paragraph">
+<p>`  footer:`</p>
+</div>
+<div class="paragraph">
+<p>`    # footer area configuration`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templates</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pages</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">home</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">header</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">footer</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596459_Areadefinition-Areaproperties"><a class="anchor" href="#src-196596459_Areadefinition-Areaproperties"></a>Area properties</h3>
+<div class="paragraph">
+<p>Simple area definition:*YAML file*</p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  content:`</p>
+</div>
+<div class="paragraph">
+<p>`    renderType: freemarker`</p>
+</div>
+<div class="paragraph">
+<p>`    type: list`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents: `</p>
+</div>
+<div class="paragraph">
+<p>`      text:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: my-module:components/text`</p>
+</div>
+<div class="paragraph">
+<p>`    optional: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">content</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:components/text</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">optional</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">list</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>You can use <a href="Template_definition.html">common template properties</a>
+and the following properties in an area definition:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;area‑name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Area names must be unique within a <a href="Page_definition.html">page
+definition</a>. This means, you cannot have two areas named <code>column</code> in the
+same page definition but you can have <code>column1</code> and <code>column2</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> , <em>default is `list`</em><strong><br>
+</strong></p>
+</div>
+<div class="paragraph">
+<p>Type of the area. Defines whether editors can add components inside the
+area and how many:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>single</code> can only contain one component.</p>
+</li>
+<li>
+<p><code>list</code> can contain many components.</p>
+</li>
+<li>
+<p><code>noComponent</code> cannot contain any editable components.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="#src-196596459_Areadefinition-Settingtheareatype">Setting the
+area type</a> .</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>availableComponents</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> for <code>list</code> and <code>single</code> areas____</p>
+</div>
+<div class="paragraph">
+<p>A map of components that editors can add in the area. Reference a
+component by its ID: <code>&lt;module&gt;:&lt;path&gt;</code> . See
+<a href="Template_availability.html#src-196596706_Templateavailability-Restrictingcomponentavailabilityinanareatemplate">Restricting
+component availability in an area template</a>.This property is not
+applicable to areas of type <code>noComponent</code> .</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>optional</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Makes the area optional. <code>true</code> adds a delete button in the area toolbar
+that editors can use to remove the area from the page.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>editable</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Typically this property is used in reverse. By setting the value to
+<code>false</code> you can prevent area editing. Useful for areas like header and
+footer.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>maxComponents</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Maximum number of components an editor can add to the area. Only
+applicable to <code>list</code> areas.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>When set to <code>false</code>, the area is not rendered, regardless of whether it
+contains content such as components, auto-generated content or content
+rendered by a script. Content is retained in the repository and will
+render when the area is re-enabled.</p>
+</div>
+<div class="paragraph">
+<p>By setting it to <code>null</code>, the area&#8217;s configuration inherits the values
+from the prototype.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createAreaNode</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em>*<strong>*</strong></p>
+</div>
+<div class="paragraph">
+<p>Creates a node for the area in the repository. Set the property to
+<code>false</code> if an area node is not needed. See
+<a href="#src-196596459_Areadefinition-Creatingareanodes">Creating area
+nodes</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is the parent area item&#8217;s name</em></p>
+</div>
+<div class="paragraph">
+<p>Name of the area. Identifies the area so the page can call it to be
+rendered.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>inheritance</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Inheritance renders the area&#8217;s components on child pages automatically.
+Inheritance saves time and effort and helps you display content
+consistently across the site. See
+<a href="Component_inheritance.html">Component inheritance</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>autoGeneration</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Creates components inside the area automatically without editor
+involvement. Anything you define inside the <code>content</code> item will be
+generated. See <a href="Component_autogeneration.html">Component
+autogeneration</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fragmentDefinition</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> (DX Core only)</p>
+</div>
+<div class="paragraph">
+<p>Allows you to mark an area as dynamic. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Advanced+Cache+Policies+module">Advanced
+Cache</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/SiteMesh+module">Sitemesh</a>
+modules for more.Properties:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>class</code>:
+<code>info.magnolia.module.advancedcache.rendering.DynamicFragmentDefinition</code>
+(<a href="https://git.magnolia-cms.com/gitweb/?p=enterprise/advanced-cache.git;a=blob;f=src/main/java/info/magnolia/module/advancedcache/rendering/DynamicFragmentDefinition.java;h=1ff9f251458bf87bbf8ec024f80a99c8176c590d;hb=HEAD">Git</a>)
+supports an advanced definition for dynamic fragments.</p>
+</li>
+<li>
+<p><code>cacheKeyGeneratorClass</code>: Cache key generator class. <em>Default is
+null</em>.</p>
+</li>
+<li>
+<p><code>dynamic</code>: Enables and disables dynamic caching. <em>Default is `true`</em> .</p>
+</li>
+<li>
+<p><code>mechanism</code>: Mechanism used. Sitemesh mechanism is supported. <em>Default
+is null</em>.</p>
+</li>
+<li>
+<p><code>ttl</code>: Time to live setting. <em>Default is `0`</em> .</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596459_Areadefinition-Settingtheareatype"><a class="anchor" href="#src-196596459_Areadefinition-Settingtheareatype"></a>Setting the area type</h3>
+<div class="paragraph">
+<p>The <code>type</code> property determines what is rendered in the area:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>single</code> area renders a single component. You can make many components
+available to editors, but they can only add one. This area type works
+well in areas designed to grab the visitor&#8217;s attention. For example a
+flashy stage at the top of a home or section page, or templates designed
+for a specific purpose like an image gallery.</p>
+</li>
+<li>
+<p><code>list</code> area renders multiple components that are displayed
+sequentially. You can make one or more components available to editors,
+and by default they can add as many as they like. You can limit the
+number of components with the <code>maxComponents</code> property. List areas work
+best where you want to give editors a lot of freedom, for example in a
+news template. One news article may have a mix of images, text, videos,
+embeds and feeds, whereas another may need only text.</p>
+</li>
+<li>
+<p><code>noComponent</code> area does not make any components available to editors.
+Use this area type for content that is generated automatically, not
+edited. Examples include rendering content entirely by a script,
+code-generated content like a breadcrumb or search box, and content that
+is not displayed to visitors such as a meta title and description.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This example shows a minimal configuration of the three area types.<strong>YAML
+file</strong></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  intro:`</p>
+</div>
+<div class="paragraph">
+<p>`    type: single`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`      styledIntroText:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: my-module:components/styledIntroText`</p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`      textImage: `</p>
+</div>
+<div class="paragraph">
+<p>`        id: my-module:components/textImage`</p>
+</div>
+<div class="paragraph">
+<p>`      blockQuote:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: my-module:components/blockQuote       `</p>
+</div>
+<div class="paragraph">
+<p>`  close:`</p>
+</div>
+<div class="paragraph">
+<p>`    type: noComponent`</p>
+</div>
+<div class="paragraph">
+<p>`    templateScript: /my-module/templates/misc/close.ftl `</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">intro</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">styledIntroText</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:components/styledIntroText</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">single</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">main</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">textImage</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
+<div class="content">
+<pre></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:components/textImage</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">blockQuote</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-module:components/blockQuote</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">close</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/templates/misc/close.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noComponent</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Notes about the example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Since <code>list</code> is the default value for the <code>type</code> property, it is not
+defined in the <code>main</code> area.</p>
+</li>
+<li>
+<p>The <code>intro</code> and <code>main</code> areas don&#8217;t have a <code>templateScript</code> property.
+Instead, they fall back on the
+<a href="#src-196596459_Areadefinition-Defaultareascripts">default area
+scripts</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596459_Areadefinition-Defaultareascripts"><a class="anchor" href="#src-196596459_Areadefinition-Defaultareascripts"></a>Default area scripts</h3>
+<div class="paragraph">
+<p>Even though the <code>templateScript</code>
+<a href="Template_definition.html#src-196596456_Templatedefinition-Commontemplateproperties">property</a>
+is required, it is not necessary to add the property to <code>single</code> and
+<code>list</code> area definitions. The system uses the default scripts below. If
+you need to render anything additional, like area <code>div</code> tags or
+<a href="#src-196596459_Areadefinition-Creatingnestedareas">nested areas</a>,
+write an script and reference it in the <code>templateScript</code> property.</p>
+</div>
+<div class="paragraph">
+<p><code>single</code> area default script:</p>
+</div>
+<div class="paragraph">
+<p><code>[#-- Single component area that can only contain one component --]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#-- Area Definition should have property type=single --]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[<code>@cms</code>.component content=component /]</code></p>
+</div>
+<div class="paragraph">
+<p><code>list</code> area default script:</p>
+</div>
+<div class="paragraph">
+<p><code>[#-- Multi component area that will list all content elements and enables adding more that one --]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#-- Area Definition should have property type=list --]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#list components as component]</code></p>
+</div>
+<div class="paragraph">
+<p>`    [<code>@cms</code>.component content=component /]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#list]</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596459_Areadefinition-Creatingnestedareas"><a class="anchor" href="#src-196596459_Areadefinition-Creatingnestedareas"></a>Creating nested areas</h3>
+<div class="paragraph">
+<p>Areas can contain nested areas, which can in turn contain nested areas.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+If you use a nested area, you need to assign a separate template script
+to the parent area in which the child area is rendered.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  navigation:`</p>
+</div>
+<div class="paragraph">
+<p>`    templateScript: /my-web/templates/areas/navigation.ftl`</p>
+</div>
+<div class="paragraph">
+<p>`    areas:`</p>
+</div>
+<div class="paragraph">
+<p>`      navigationTeaser:`</p>
+</div>
+<div class="paragraph">
+<p>`        type: single`</p>
+</div>
+<div class="paragraph">
+<p>`        availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`          articleTeaser:`</p>
+</div>
+<div class="paragraph">
+<p>`            id: my-web:components/navigationTeaser`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navigation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-web/templates/areas/navigation.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">navigationTeaser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">single</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">availableComponents</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">articleTeaser</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">my-web:components/navigationTeaser</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196596459_Areadefinition-Creatingareanodes"><a class="anchor" href="#src-196596459_Areadefinition-Creatingareanodes"></a>Creating area nodes</h3>
+<div class="paragraph">
+<p>Area nodes are created in the JCR for each configured area by default.
+This is controlled by the <code>createAreaNode</code> property that is set to
+<code>true</code> by default.</p>
+</div>
+<div class="paragraph">
+<p>Set the property to <code>false</code> if an area node is not needed, such as when
+the area type is <code>noComponent</code> or it has no content that editors could
+edit. Another use case for <code>false</code> is an area that operates on some
+other item or node&#8217;s content, not its own. When the content is stored
+elsewhere, no area node is needed.<strong>YAML file</strong></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  stockExchangeTicker:`</p>
+</div>
+<div class="paragraph">
+<p>`    createAreaNode: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`    templateScript: /my-module/templates/misc/stockExchangeTicker.ftl`</p>
+</div>
+<div class="paragraph">
+<p>`    type: noComponent`</p>
+</div>
+<div class="paragraph">
+<p><strong>JCR node</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">stockExchangeTicker</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">createAreaNode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/my-module/templates/misc/stockExchangeTicker.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noComponent</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Page definition</p>
+</div>
+<div class="paragraph">
+<p>Component inheritance</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
