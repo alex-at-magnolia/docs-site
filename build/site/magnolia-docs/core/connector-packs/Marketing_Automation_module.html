@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Marketing Automation module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/Marketing_Automation_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Marketing_Automation_module.html">Marketing Automation module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Marketing Automation module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Marketing_Automation_Connector_Pack.html">Marketing Automation
+Connector Pack</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819297"><a class="anchor" href="#src-209819297"></a>Marketing Automation module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Install</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#src-209819297_MarketingAutomationmodule-Installing">Multiple
+modules</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Connector Pack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Marketing Automation Connector Pack</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MKTAUT">MKTAUT</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.addons.releases/info/magnolia/marketingautomation/">marketingautomation</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Marketing_Automation_Connector_Pack.html">Marketing Automation
+Connector Pack</a></p>
+</li>
+<li>
+<p><a href="Marketing_Automation_REST_endpoint.html">Marketing Automation REST
+endpoint</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Marketing Automation Connector pack allows you to capture leads on
+your website. This feature is commonly called web-to-lead.</p>
+</div>
+<div class="paragraph">
+<p>Use the Marketing Automation modules to connect your third-party
+marketing software solution to Magnolia. Render a form configured in
+your marketing software solution as a Magnolia form and automatically
+send the lead data back to your solution. We provide out-of-the-box
+connectors for Marketo and Salesforce. The Salesforce connector stores
+the captured leads as
+<a href="https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm">Lead
+objects</a> in Salesforce. The Marketo connector stores them in Marketo.</p>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-Modulestructure"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Modulestructure"></a>Module structure</h3>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 55%;">
+<col style="width: 45%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-marketing-automation-parent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent reactor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-marketing-automation</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the foundation and the API
+for marketing automation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-marketing-automation-ui</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the sample templating
+scripts and component definitions to quickly enable external forms in
+your Magnolia pages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-marketing-automation-marketo-connector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a default
+implementation to connect to <a href="https://www.marketo.com/">Marketo</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-marketing-automation-salesforce-connector</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a
+default implementation to connect to
+<a href="https://www.salesforce.com/">Salesforce</a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-Installing"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the modules. Add the following
+dependencies to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">webapp</a>.
+All the other necessary dependencies will be brought in automatically:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.marketingautomation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-marketing-automation&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.marketingautomation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-marketing-automation-ui&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.marketingautomation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-marketing-automation-marketo-connector&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.marketingautomation&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-marketing-automation-salesforce-connector&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-Configuration"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>This section explains how to configure the connection between the
+Marketing Automation module and your external marketing software
+solution. Essentially, you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provide connection details for your external solution.</p>
+</li>
+<li>
+<p>Map your external solution fields to Magnolia field types.</p>
+</li>
+<li>
+<p>Configure the cache if necessary.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can create or edit the configuration in the JCR or the File System
+(YAML) under <code>&lt;module-name&gt;/marketing-automations/&lt;definition-name&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Before you configure the connection, make sure you know:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Which solution you want to connect to. Default implementations are
+provided for:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Marketo</p>
+</li>
+<li>
+<p>Salesforce</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The relevant URLs to connect to your external marketing software
+solution.</p>
+</li>
+<li>
+<p>Connection credentials for your solution.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The Marketing Automation Connector Pack provides out-of-the-box
+connectors to the Marketo and Salesforce. If you use another third-party
+marketing software solution, you can write your own implementation to
+<a href="#src-209819297_MarketingAutomationmodule-anc-configure-own-connector">configure
+your own connector</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Marketoconnectionconfiguration"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Marketoconnectionconfiguration"></a>Marketo connection configuration</h4>
+<div class="paragraph">
+<p>To use Marketo forms in Magnolia, you must have a working Marketo
+account.</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819297_MarketingAutomationmodule-Credentials"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Credentials"></a>Credentials</h5>
+<div class="paragraph">
+<p>You need Marketo credentials to access the forms. Credentials consist of
+two parts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clientId</p>
+</li>
+<li>
+<p>clientSecret</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can configure these credentials in the
+<code>/marketing-automation-marketo-connector/marketing-automations/marketo.yaml</code>
+file.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can add the <code>clientSecret</code> part of your credentials
+to your Magnolia instance in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Passwords+app">Password
+manager app</a> and reference the path in the configuration.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-209819297_MarketingAutomationmodule-Connecting"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Connecting"></a>Connecting</h5>
+<div class="paragraph">
+<p>Add your connection configuration to the connections list (see YAML line
+11).</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides a default implementation to retrieve forms and leads
+from Marketo (YAML lines 3-10).</p>
+</div>
+<div class="paragraph">
+<p>/marketing-automation-marketo-connector/marketing-automations/marketo.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.mkautomation.definition.DefaultMarketingFormDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>type: marketo</code></p>
+</div>
+<div class="paragraph">
+<p><code>implementation:</code></p>
+</div>
+<div class="paragraph">
+<p>`  forms:`</p>
+</div>
+<div class="paragraph">
+<p>`    all: info.magnolia.mkautomation.marketo.forms.All`</p>
+</div>
+<div class="paragraph">
+<p>`    byId: info.magnolia.mkautomation.marketo.forms.ById`</p>
+</div>
+<div class="paragraph">
+<p>`    byName: info.magnolia.mkautomation.marketo.forms.ByName`</p>
+</div>
+<div class="paragraph">
+<p>`    submitBy: info.magnolia.mkautomation.marketo.forms.SubmitBy`</p>
+</div>
+<div class="paragraph">
+<p>`  leads:`</p>
+</div>
+<div class="paragraph">
+<p>`    searchBy: info.magnolia.mkautomation.marketo.leads.SearchByFilterType`</p>
+</div>
+<div class="paragraph">
+<p><code>connection:</code></p>
+</div>
+<div class="paragraph">
+<p>`  baseUrl: https:``//641-OQJ-158.mktorest.com`</p>
+</div>
+<div class="paragraph">
+<p>`  authUrl: https:``//641-OQJ-158.mktorest.com/identity/oauth/token`</p>
+</div>
+<div class="paragraph">
+<p>`  clientId: b96f40ff-38fb-<code>4832</code>-ab80-080c067debe7`</p>
+</div>
+<div class="paragraph">
+<p>`  clientSecret: client_secret_or_path_to_password_manager`</p>
+</div>
+<div class="paragraph">
+<p><code>formSelectorId: marketing-automation-ui:fieldsSelectionForm</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Salesforceconnectionconfiguration"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Salesforceconnectionconfiguration"></a>Salesforce connection configuration</h4>
+<div class="paragraph">
+<p>To use Salesforce web-to-lead functionality in Magnolia, you must have a
+working Salesforce account.</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819297_MarketingAutomationmodule-Credentials.1"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Credentials.1"></a>Credentials</h5>
+<div class="paragraph">
+<p>You need the following Salesforce credentials:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>clientId</p>
+</li>
+<li>
+<p>clientSecret</p>
+</li>
+<li>
+<p>username and password</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can configure these credentials in the
+<code>/marketing-automation-salesforce-connector/marketing-automations/salesforce.yaml</code>
+file.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can add the <code>clientSecret</code> and <code>password</code> parts of
+your credentials to your Magnolia instance in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Passwords+app">Password
+manager app</a> and reference the path in the configuration.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-209819297_MarketingAutomationmodule-Connecting.1"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Connecting.1"></a>Connecting</h5>
+<div class="paragraph">
+<p>Add your connection configuration to the connections list (see YAML line
+11).</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides a default implementation to retrieve forms and leads
+from Salesforce (see YAML lines 3-10).</p>
+</div>
+<div class="paragraph">
+<p>/marketing-automation-salesforce-connector/marketing-automations/salesforce.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.mkautomation.definition.DefaultMarketingFormDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>type: salesforce</code></p>
+</div>
+<div class="paragraph">
+<p><code>implementation:</code></p>
+</div>
+<div class="paragraph">
+<p>`  forms:`</p>
+</div>
+<div class="paragraph">
+<p>`    all: info.magnolia.mkautomation.salesforce.forms.All`</p>
+</div>
+<div class="paragraph">
+<p>`    byId: info.magnolia.mkautomation.salesforce.forms.ById`</p>
+</div>
+<div class="paragraph">
+<p>`    byName: info.magnolia.mkautomation.salesforce.forms.ByName`</p>
+</div>
+<div class="paragraph">
+<p>`    submitBy: info.magnolia.mkautomation.salesforce.forms.SubmitBy`</p>
+</div>
+<div class="paragraph">
+<p>`  leads:`</p>
+</div>
+<div class="paragraph">
+<p>`    searchBy: info.magnolia.mkautomation.salesforce.leads.SearchByQuery`</p>
+</div>
+<div class="paragraph">
+<p><code>connection:</code></p>
+</div>
+<div class="paragraph">
+<p>`  baseUrl: https:``//mianlien.my.salesforce.com/services`</p>
+</div>
+<div class="paragraph">
+<p>`  authUrl: https:``//login.salesforce.com/services/oauth2/token`</p>
+</div>
+<div class="paragraph">
+<p>`  credentials:`</p>
+</div>
+<div class="paragraph">
+<p>`    username: email<code>@email</code>.com`</p>
+</div>
+<div class="paragraph">
+<p>`    password: password_or_path_to_password_manager`</p>
+</div>
+<div class="paragraph">
+<p>`  clientId: 3MVG96_7YM2sI9wT5awWympuHDV97wt6AsbvT1ILMqMWXfUgSfB0e4SztxStXnyjskXpQC571mKsUx2qddJiw`</p>
+</div>
+<div class="paragraph">
+<p>`  clientSecret: client_secret_or_path_to_password_manager`</p>
+</div>
+<div class="paragraph">
+<p><code>selectedForms:</code></p>
+</div>
+<div class="paragraph">
+<p>`  - Lead`</p>
+</div>
+<div class="paragraph">
+<p>`  - Account`</p>
+</div>
+<div class="paragraph">
+<p>`  - Contact`</p>
+</div>
+<div class="paragraph">
+<p><code>formSelectorId: marketing-automation-ui:fieldsSelectionForm</code></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Connectionconfigurationproperties"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Connectionconfigurationproperties"></a>Connection configuration properties</h4>
+<div class="paragraph">
+<p>These are the properties used to configure a connection to your external
+marketing software solution. The properties required vary depending on
+your solution (see <strong>Required for</strong> column in the table below).</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 98%;">
+<colgroup>
+<col style="width: 14%;">
+<col style="width: 76%;">
+<col style="width: 10%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Required for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.mkautomation.definition.DefaultMarketingFormDefinition</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Your marketing software solution: <code>marketo</code> or <code>salesforce</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>implementation</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forms</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>all</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>, default is
+`info.magnolia.mkautomation.&lt;salesforce/marketo&gt;.forms.All`</em></p>
+</div>
+<div class="paragraph">
+<p>Implementation to retrieve all forms from your external marketing
+software solution.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>byId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>, default is
+`info.magnolia.mkautomation.&lt;salesforce/marketo&gt;.forms.ById`</em></p>
+</div>
+<div class="paragraph">
+<p>Implementation to retrieve forms by ID from your external marketing
+software solution.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>byName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>, default is
+`info.magnolia.mkautomation.&lt;salesforce/marketo&gt;.forms.ByName`</em></p>
+</div>
+<div class="paragraph">
+<p>Implementation to retrieve forms by name from your external marketing
+software solution.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitBy</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>, default is
+`info.magnolia.mkautomation.&lt;salesforce/marketo&gt;.forms.SubmitBy`</em></p>
+</div>
+<div class="paragraph">
+<p>Implementation to submit form by form name/id to your external marketing
+software solution.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>leads</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>searchBy</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> <em>,</em></p>
+</div>
+<div class="paragraph">
+<p><em>default for Salesforce is
+`info.magnolia.mkautomation.salesforce.leads.SearchByQuery`</em></p>
+</div>
+<div class="paragraph">
+<p><em>default for Marketo is
+`info.magnolia.mkautomation.marketo.leads.SearchByFilterType`</em></p>
+</div>
+<div class="paragraph">
+<p>Implementation to retrieve leads based on a search query or filter from
+your external marketing software solution.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>connection</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>authUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Authentication URL for the external solution you want to connect to.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>baseUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Base URL for the external solution you want to connect to.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>credentials</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>username</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>User name for Salesforce.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Salesforce</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Password for Salesforce or the path to the Magnolia password manager.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Salesforce</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clientId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>User name for your external solution.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clientSecret</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Client secret for your external solution or the path to the Magnolia
+password manager.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>selectedForms</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Filters the forms displayed. For the Salesforce connector, the filter is
+based on
+<a href="https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_list.htm">Salesforce
+sObject</a> form names.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+The values are case sensitive.</p>
+</div>
+<div class="paragraph">
+<p>For example, with these values set, only the Lead, Account and Contact
+forms are available in the Marketing Form dialog:</p>
+</div>
+<div class="paragraph">
+<p><code>- Lead</code><br>
+<code>- Account</code><br>
+<code>- Contact</code></p>
+</div>
+<div class="paragraph">
+<p>If the <code>selectedForms</code> property isn&#8217;t set or if it&#8217;s empty, all forms
+are displayed.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>formSelectorId</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Path to the definition that configures if whole forms or form fields can
+be selected.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides the following form definitions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>marketing-automation-ui:defaultForm</code></p>
+</li>
+<li>
+<p><code>marketing-automation-ui:fieldsSelectionForm</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can create your own
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Form+definition">Form
+definitions</a> to suit your requirements.</p>
+</div>
+<div class="paragraph">
+<p>If the <code>formSelectorId</code> property isn&#8217;t set or if it&#8217;s empty, only whole
+forms can be selected in the dialog</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">All</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Enablingformfieldselection"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Enablingformfieldselection"></a>Enabling form field selection</h4>
+<div class="paragraph">
+<p>If you want your editors to be able to choose individual fields rather
+than whole forms, you must enable field selection in the Marketing Form
+dialog and provide a definition to configure the display.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia provides basic definitions out-of-the-box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>defaultForm</code> - only forms can be selected.</p>
+</li>
+<li>
+<p><code>fieldsSelectionForm</code> - form fields can be selected.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, you can create your own
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Form+definition">form
+definitions</a> to suit your requirements under:
+<code>/marketing-automation-&lt;your-module&gt;/marketing-formselectors/&lt;configured form&gt;.yaml</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>In the samples provided, field selection is enabled by default in the
+Salesforce example and not enabled in the Marketo example.</p>
+</div>
+<div class="paragraph">
+<p>To enable form field selection:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add the <code>formSelectorId</code> property to the
+<code>/marketing-automation-&lt;your-connector&gt;/marketing-automations/&lt;your-connector&gt;.yaml</code>
+file.</p>
+</li>
+<li>
+<p>Set the value of the property to the path to the field selection
+definition.<br>
+Magnolia provides the following definitions out-of-the-box:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><code>defaultForm</code> - only forms can be selected (red rectangle in the
+image).</p>
+</li>
+<li>
+<p><code>fieldsSelectionForm</code> - form fields can be selected (blue rectangle
+in the image).</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/209819297/6-2-mktaut-formselectors.png" alt="images/download/attachments/209819297/6-2-mktaut-formselectors.png"></span></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Edit the samples or create your own form definition under
+<code>/marketing-automation-&lt;your-module&gt;/marketing-formselectors/&lt;configured form&gt;.yaml</code>.<br>
+For example:</p>
+<div class="paragraph">
+<p>/marketing-automation-ui/marketing-formselectors/fieldsSelectionForm.yaml</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>implementationClass: info.magnolia.mkautomation.ui.form.MarketingSwitchableSubFormView</code></p>
+</div>
+<div class="paragraph">
+<p><code>properties:</code></p>
+</div>
+<div class="paragraph">
+<p>`  marketingForm:`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: comboBoxField`</p>
+</div>
+<div class="paragraph">
+<p>`    filteringMode: STARTSWITH`</p>
+</div>
+<div class="paragraph">
+<p>`    textInputAllowed: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    emptySelectionAllowed: <code>`false</code></p>
+</div>
+<div class="paragraph">
+<p>`    required: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`    requiredErrorMessage: marketing-automation-ui.form.field.validation.message.required`</p>
+</div>
+<div class="paragraph">
+<p>`    label: marketing-automation-ui.editForm.marketingForm`</p>
+</div>
+<div class="paragraph">
+<p>`    datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: formOptionListDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`  marketingFields:`</p>
+</div>
+<div class="paragraph">
+<p>`    $type: marketingTwin`</p>
+</div>
+<div class="paragraph">
+<p>`    label: marketing-automation-ui.editForm.marketingTwin`</p>
+</div>
+<div class="paragraph">
+<p>`    leftColumnCaption: marketing-automation-ui.editForm.marketingTwin.leftColumnCaption`</p>
+</div>
+<div class="paragraph">
+<p>`    rightColumnCaption: marketing-automation-ui.editForm.marketingTwin.rightColumnCaption`</p>
+</div>
+<div class="paragraph">
+<p>`    datasource:`</p>
+</div>
+<div class="paragraph">
+<p>`      $type: fieldOptionListDatasource`</p>
+</div>
+<div class="paragraph">
+<p>`    validators:`</p>
+</div>
+<div class="paragraph">
+<p>`      - name: requiredFields`</p>
+</div>
+<div class="paragraph">
+<p>`        $type: requiredFieldsValidator`</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819297_MarketingAutomationmodule-Propertiesusedintheexample"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Propertiesusedintheexample"></a>Properties used in the example</h5>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 35%;">
+<col style="width: 65%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>implementationClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>info.magnolia.mkautomation.ui.form.MarketingSwitchableSubFormView</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Use a valid field alias name to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fieldtypes">reference
+a field type</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>filteringMode</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Vaadin <code>FilteringMode `. Available values are `contains</code> and
+<code>startswith</code></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>textInputAllowed</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>When <code>true</code>, the user can type into the field to filter the available
+items. The <code>filteringMode</code> property defines how the options are
+filtered.</p>
+</div>
+<div class="paragraph">
+<p>When <code>false</code>, the field just shows the current selection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>emptySelectionAllowed</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Defines whether the user can select nothing in the field. When <code>true</code>,
+an empty item appears to the user.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>required</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Makes the field required. An asterisk is displayed next to the field
+label.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>requiredErrorMessage</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is `validation.message.required`</em></p>
+</div>
+<div class="paragraph">
+<p>Error message shown when <code>required</code> is set to <code>true</code> and the user saves
+an empty field. The value can be literal or retrieved from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagebundle">message
+bundle</a> with a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>.
+Use alphanumeric characters in literal values.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>label</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Field label displayed to editors. The value can be literal or a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>
+of a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagebundle">message
+bundle</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you do not provide the property, Magnolia will fall back to a
+generated i18n key.</p>
+</div>
+<div class="paragraph">
+<p>If you do not want a label at all, define the property and set its value
+to a blank space such as <code>label: " "</code> in YAML.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>datasource</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>$type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Use a valid field alias name to
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+definition#Fielddefinition-Fieldtypes">reference
+a field type</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>leftColumnCaption</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Left column label displayed to editors. The value can be literal or a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>
+of a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagebundle">message
+bundle</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rightColumnCaption</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Left column label displayed to editors. The value can be literal or a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagekeys">key</a>
+of a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Internationalization#Internationalization-i18nmessagebundle">message
+bundle</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>validators</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>List of
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Field+validators">field
+validator definition items</a>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Disablingformpre-filling"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Disablingformpre-filling"></a>Disabling form pre-filling</h4>
+<div class="paragraph">
+<p>Form pre-filling is an option offered by many marketing automation
+solutions. Pre-filling is when values previously entered by a visitor in
+a form are loaded into the corresponding form fields on a subsequent
+visit. By default, form pre-filling is enabled in Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>You can disable this feature by adding a <code>formPrefillingEnabled</code>
+property set to <code>false</code> in your connector configuration under
+<code>&lt;module-name&gt;/marketing-automations/&lt;definition-name&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;</code></p>
+</div>
+<div class="paragraph">
+<p><code>formPrefillingEnabled: ``false</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-ConfiguringfieldmappingbetweenyourexternalsolutionandMagnolia"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-ConfiguringfieldmappingbetweenyourexternalsolutionandMagnolia"></a>Configuring field mapping between your external solution and Magnolia</h4>
+<div class="paragraph">
+<p>Map your fields to HTML field types in the
+<code>marketing-automation-&lt;marketo/salesforce&gt;-connector/config.yaml</code> file.</p>
+</div>
+<div class="paragraph">
+<p>Marketo example:</p>
+</div>
+<div class="paragraph">
+<p>/marketing-automation-marketo/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>fieldsMappingConfiguration:</code></p>
+</div>
+<div class="paragraph">
+<p>`  dataTypeField: $.dataType`</p>
+</div>
+<div class="paragraph">
+<p>`  fieldsMapping:`</p>
+</div>
+<div class="paragraph">
+<p>`    currency: text`</p>
+</div>
+<div class="paragraph">
+<p>`    checkbox:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: booleanCheckbox`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.defaultValue`</p>
+</div>
+<div class="paragraph">
+<p>`      label: `</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue: $.defaultValue`</p>
+</div>
+<div class="paragraph">
+<p>`    date: date`</p>
+</div>
+<div class="paragraph">
+<p>`    datetime: datetime`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>double</code>: number`</p>
+</div>
+<div class="paragraph">
+<p>`    email: email`</p>
+</div>
+<div class="paragraph">
+<p>`    hidden: hidden`</p>
+</div>
+<div class="paragraph">
+<p>`    profiling: hidden`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>int</code>: number`</p>
+</div>
+<div class="paragraph">
+<p>`    number: number`</p>
+</div>
+<div class="paragraph">
+<p>`    phone: tel`</p>
+</div>
+<div class="paragraph">
+<p>`    select:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: select`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.fieldMetaData.values[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.fieldMetaData.values[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      multiSelect: $.fieldMetaData.multiSelect`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue: $.defaultValue`</p>
+</div>
+<div class="paragraph">
+<p>`    string: text`</p>
+</div>
+<div class="paragraph">
+<p>`    textarea: textarea`</p>
+</div>
+<div class="paragraph">
+<p>`    url: url`</p>
+</div>
+<div class="paragraph">
+<p>`    checkboxes:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: checkbox`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.fieldMetaData.values[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.fieldMetaData.values[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue: $.defaultValue`</p>
+</div>
+<div class="paragraph">
+<p>`    radioButtons:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: radio`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.fieldMetaData.values[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.fieldMetaData.values[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue: $.defaultValue`</p>
+</div>
+<div class="paragraph">
+<p>Salesforce example:</p>
+</div>
+<div class="paragraph">
+<p><code>fieldsMappingConfiguration:</code></p>
+</div>
+<div class="paragraph">
+<p>`  dataTypeField: $.type`</p>
+</div>
+<div class="paragraph">
+<p>`  fieldsMapping:`</p>
+</div>
+<div class="paragraph">
+<p>`    string: text`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>boolean</code>:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: booleanCheckbox`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.label`</p>
+</div>
+<div class="paragraph">
+<p>`      label:`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue:`</p>
+</div>
+<div class="paragraph">
+<p>`    textarea: textarea`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>double</code>: number`</p>
+</div>
+<div class="paragraph">
+<p>`    phone: tel`</p>
+</div>
+<div class="paragraph">
+<p>`    email: email`</p>
+</div>
+<div class="paragraph">
+<p>`    url: url`</p>
+</div>
+<div class="paragraph">
+<p>`    address: text`</p>
+</div>
+<div class="paragraph">
+<p>`    currency: number`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>int</code>: number`</p>
+</div>
+<div class="paragraph">
+<p>`    reference:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: select`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.picklistValues[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.picklistValues[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue:`</p>
+</div>
+<div class="paragraph">
+<p>`    picklist:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: select`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.picklistValues[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.picklistValues[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue:`</p>
+</div>
+<div class="paragraph">
+<p>`    multipicklist:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: select`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.picklistValues[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.picklistValues[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      multiSelect: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue:`</p>
+</div>
+<div class="paragraph">
+<p>`    date: date`</p>
+</div>
+<div class="paragraph">
+<p>`    datetime: datetime`</p>
+</div>
+<div class="sect4">
+<h5 id="src-209819297_MarketingAutomationmodule-Fieldmappingproperties"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Fieldmappingproperties"></a>Field mapping properties</h5>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fieldsMappingConfiguration</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>required</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dataTypeField</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Defines the field type in JSONPath format. For example: <code>$.dataType</code>
+gets the dataType field type.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fieldsMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>required</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>leftValue: rightValue</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>For <em>simple</em> fields, such as <code>string: text</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The leftValue represents the data type returned from your external
+marketing software solution.</p>
+</li>
+<li>
+<p>The rightValue maps to HTML field types, for example <code>string: text</code>
+means the field type <code>string</code> from your external marketing software
+solution is rendered as an &lt;input type="text"&#8230;&#8203; /&gt; field in the
+browser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can list as many field mappings as required.</p>
+</div>
+<div class="paragraph">
+<p>For <em>complex</em> HTML fields that need extra values, such as select fields
+or checkboxes, you can also configure additional values. For example:</p>
+</div>
+<div class="paragraph">
+<p>`  select:`</p>
+</div>
+<div class="paragraph">
+<p>`      name: select`</p>
+</div>
+<div class="paragraph">
+<p>`      value: $.fieldMetaData.values[*].value`</p>
+</div>
+<div class="paragraph">
+<p>`      label: $.fieldMetaData.values[*].label`</p>
+</div>
+<div class="paragraph">
+<p>`      multiSelect: $.fieldMetaData.multiSelect`</p>
+</div>
+<div class="paragraph">
+<p>`      defaultValue: $.defaultValue`</p>
+</div>
+<div class="paragraph">
+<p>Where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>select</code> – Field type returned by the provider.</p>
+</li>
+<li>
+<p><code>name</code> – Magnolia HTML field type, for example <code>select</code></p>
+</li>
+<li>
+<p><code>value</code> – Value for the field options (for select, checkbox, radio
+type fields) in JSONPath format. For example:
+<code>$.fieldMetaData.values[*].value</code></p>
+</li>
+<li>
+<p><code>label</code> – Label for the field options (for select, checkbox, radio
+type fields) in JSONPath format. For example:
+<code>$.fieldMetaData.values[*].label</code></p>
+</li>
+<li>
+<p><code>multiSelect</code> - For a field with multiple options. For example:
+<code>$.fieldMetaData.multiSelect</code></p>
+</li>
+<li>
+<p><code>defaultValue</code> – The property that stores the default value. For
+example: <code>$.defaultValue</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>See
+<a href="https://developers.marketo.com/rest-api/lead-database/fields/field-types/">Marketo
+field types documentation</a> and
+<a href="https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/field_types.htm">Salesforce
+field types</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Configuringthecache"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Configuringthecache"></a>Configuring the cache</h4>
+<div class="paragraph">
+<p>By default, the cache is enabled and content pulled from your external
+solution is updated every 300 seconds (5 minutes).</p>
+</div>
+<div class="paragraph">
+<p>You can enable or disable the cache and change the frequency via YAML:</p>
+</div>
+<div class="paragraph">
+<p>/marketing-automation/config.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>cachingDefinition:</code></p>
+</div>
+<div class="paragraph">
+<p>`  enabled: <code>`true</code></p>
+</div>
+<div class="paragraph">
+<p>`  invalidateInSeconds: <code>`300</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-anc-configure-own-connectorConfiguringyourownconnector"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-anc-configure-own-connectorConfiguringyourownconnector"></a><span id="src-209819297_MarketingAutomationmodule-anc-configure-own-connector " class="confluence-anchor-link">#</span>#Configuring your own connector</h3>
+<div class="paragraph">
+<p>Magnolia provides an API to enable the Magnolia author instance to get
+form and lead data from your external marketing software solution. We
+provide out-of-the-box implementations to connect to Marketo and
+Salesforce. If you want to connect to another third-party solution, you
+must write your own implementation.</p>
+</div>
+<div class="paragraph">
+<p>You can integrate with another third-party marketing software solution
+using the following interfaces provided by the <code>marketing-automation</code>
+submodule:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.mkautomation.common.marketingforms</code> (for forms)</p>
+</li>
+<li>
+<p><code>info.magnolia.mkautomation.common.marketingleads</code> (for leads)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>MarketingForms.java</p>
+</div>
+<div class="paragraph">
+<p><code>package`</code> info.magnolia.mkautomation.common;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.mkautomation.function.SubmitSupplier;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.mkautomation.function.Supplier;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.mkautomation.function.SupplierByOptional;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> lombok.AllArgsConstructor;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> lombok.Data;`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p>` * Provides API to operate on {@linkplain Form} objects.`</p>
+</div>
+<div class="paragraph">
+<p>` */`</p>
+</div>
+<div class="paragraph">
+<p><code>@Data</code></p>
+</div>
+<div class="paragraph">
+<p><code>@AllArgsConstructor</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MarketingForms {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> All all;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> ById byId;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> ByName byName;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> SubmitBy submitBy;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Supplier interface for getting all external forms.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>interface</code> All <code>extends</code> Supplier&lt;Form&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Supplier interface for external form searched by id.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>interface</code> ById <code>extends</code> SupplierByOptional&lt;Form, Form.Id&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Supplier interface for external form searched by name.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>interface</code> ByName <code>extends</code> SupplierByOptional&lt;Form, Form.Id&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Supplier interface for post a external form.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>interface</code> SubmitBy <code>extends</code> SubmitSupplier&lt;Form&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>MarketingLeads.java</p>
+</div>
+<div class="paragraph">
+<p><code>package`</code> info.magnolia.mkautomation.common;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> info.magnolia.mkautomation.function.SupplierByOptional;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> java.util.Map;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> lombok.AllArgsConstructor;`</p>
+</div>
+<div class="paragraph">
+<p><code>import`</code> lombok.Data;`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p><code>* Provides API to operate on {@linkplain Lead} objects.</code></p>
+</div>
+<div class="paragraph">
+<p><code>*/</code></p>
+</div>
+<div class="paragraph">
+<p><code>@Data</code></p>
+</div>
+<div class="paragraph">
+<p><code>@AllArgsConstructor</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> MarketingLeads {`</p>
+</div>
+<div class="paragraph">
+<p><code>private`</code> SearchBy searchBy;`</p>
+</div>
+<div class="paragraph">
+<p><code>/**</code></p>
+</div>
+<div class="paragraph">
+<p><code>* Supplier interface for external lead searched by parameters.</code></p>
+</div>
+<div class="paragraph">
+<p><code>*/</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface<code> SearchBy </code>extends`</code> SupplierByOptional&lt;Lead, Map&lt;String, String&gt;&gt; {`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-Usage"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Usage"></a>Usage</h3>
+<div class="paragraph">
+<p>The <code>magnolia-marketing-automation-ui</code> submodule provides a sample
+Marketing Forms
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Component+definition">component</a>
+that is available in the Basic
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Page+definition">page
+template</a> by default.</p>
+</div>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-Samplepagecomponent"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Samplepagecomponent"></a>Sample page component</h4>
+<div class="paragraph">
+<p>When you add the <strong>Marketing Form</strong> component to a page, a sample dialog
+enables you to select the connector you have configured. Once you select
+the connector, you can choose the form and, if you have
+<a href="#src-209819297_MarketingAutomationmodule-Enablingformfieldselection">enabled
+form field selection</a>, the form fields you want.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/209819297/image2019-11-22_11-51-27.png" alt="images/download/attachments/209819297/image2019-11-22_11-51-27.png"></span>
+<span class="image"><img src="../../_images/images/download/attachments/209819297/6-2-mktaut-dialog-fieldsel.png" alt="images/download/attachments/209819297/6-2-mktaut-dialog-fieldsel.png"></span></p>
+</div>
+<div class="paragraph">
+<p>When field selection is enabled, note that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If there are required fields for the form type you selected, you must
+select them in Magnolia.</p>
+</li>
+<li>
+<p>You cannot remove required fields in Magnolia, you must remove them
+from the original form in your external marketing software solution if
+required.</p>
+</li>
+<li>
+<p>You cannot reorder the fields you select in Magnolia. They are
+displayed as they were designed in your external marketing software
+solution.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When field selection is not enabled, the form fields are defined
+directly in your external marketing software solution and you only
+select the form in the dialog.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/209819297/6-2-mktaut-dialog-formsel.png" alt="images/download/attachments/209819297/6-2-mktaut-dialog-formsel.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Once you have added a form to a page, you can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Publishing">publish</a> the
+page and make it available to your website users. Data entered by your
+users in the rendered form is sent directly back to your external
+marketing software solution.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/209819297/6-2-marketing-automation-form-in-page.png" alt="images/download/attachments/209819297/6-2-marketing-automation-form-in-page.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Progressive forms are supported by Magnolia if they are enabled in your
+external marketing software solution.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-Releasehistory"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-Releasehistory"></a>Release history</h3>
+<div class="sect3">
+<h4 id="src-209819297_MarketingAutomationmodule-MarketingAutomationmodule1.0"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-MarketingAutomationmodule1.0"></a>Marketing Automation module 1.0</h4>
+<div class="paragraph">
+<p>Released on April 6, 2020.</p>
+</div>
+<div class="paragraph">
+<p>Initial release of the Marketing Automation Connector Pack for
+integrating with third-party marketing software solutions, such as
+Marketo and Salesforce, so that you can use your forms or form fields
+directly in Magnolia and efficiently collect data about your prospects
+and customers.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="Marketing_Automation_Connector_Pack.html">Marketing Automation
+Connector Pack</a> for an overview of the functionality provided.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-209819297_MarketingAutomationmodule-MarketingAutomationConnectorPackcompatibility"><a class="anchor" href="#src-209819297_MarketingAutomationmodule-MarketingAutomationConnectorPackcompatibility"></a>Marketing Automation Connector Pack compatibility</h3>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 46%;">
+<col style="width: 54%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module version</th>
+<th class="tableblock halign-left valign-top">Magnolia CMS version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>6.2</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A note about connector compatibilty</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The third-party versions listed below are the versions Magnolia has
+<em>developed and tested against</em>. If you don’t see a particular version
+listed, it simply means that we do not routinely test on it.</p>
+</div>
+<div class="paragraph">
+<p>If you are using another version of the third-party tool and run into
+compatibility issues, please contact our
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Support">Support team</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module version</th>
+<th class="tableblock halign-left valign-top">Marketo API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tested against <strong>2.2.0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module version</th>
+<th class="tableblock halign-left valign-top">Salesforce API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tested against <strong>45.0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Marketing Automation Connector Pack</p>
+</div>
+<div class="paragraph">
+<p>Marketing Automation REST endpoint</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

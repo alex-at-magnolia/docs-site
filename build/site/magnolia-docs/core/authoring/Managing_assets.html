@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Managing assets :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/authoring/Managing_assets.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Feeds.html">Feeds</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li>Authoring</li>
+    <li><a href="Managing_assets.html">Managing assets</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Managing assets</h1>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Browsingassets"><a class="anchor" href="#src-196596063_Managingassets-Browsingassets"></a>Browsing assets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can browse the Magnolia DAM in three views:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Tree view</strong>: Displays a hierarchical tree, including the folder
+structure.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-treeView.png" alt="images/download/attachments/196596063/6-0-managingAssets-treeView.png"></span></p>
+</div>
+</li>
+<li>
+<p><strong>List view</strong>: Displays the items individually. You can sort them
+alphanumerically by clicking the column headings.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-listView.png" alt="images/download/attachments/196596063/6-0-managingAssets-listView.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The DAM can handle a very large number of assets. However, if you have
+more than 20.000 assets, you should organize them into folders. Avoid
+storing too many assets in the same folder. Instead, create subfolders
+and organize your assets. Storing too many assets within the same folder
+may lead to performance issues. If you need a large and unstructured
+flat list of assets, disable the thumbnail and list views.
+* <strong>Thumbnail view</strong>: Displays thumbnail images of the assets. There is a
+zoom control at the top for resizing.</p>
+</div>
+<div class="paragraph">
+<p>+
+<span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-thumbnailView.png" alt="images/download/attachments/196596063/6-0-managingAssets-thumbnailView.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Supportedfileformatsforpreviewgeneration"><a class="anchor" href="#src-196596063_Managingassets-Supportedfileformatsforpreviewgeneration"></a>Supported file formats for preview generation</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Imageformats"><a class="anchor" href="#src-196596063_Managingassets-Imageformats"></a>Image formats</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The most common image formats are supported, <strong>excluding</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>image/x-icon</p>
+</li>
+<li>
+<p>image/x-portable-bitmap</p>
+</li>
+<li>
+<p>image/x-xpixmap</p>
+</li>
+<li>
+<p>image/x-portable-graymap</p>
+</li>
+<li>
+<p>image/x-cmu-raster</p>
+</li>
+<li>
+<p>image/x-portable-pixmap</p>
+</li>
+<li>
+<p>image/x-xbitmap</p>
+</li>
+<li>
+<p>image/x-rgb</p>
+</li>
+<li>
+<p>image/x-xwindowdump</p>
+</li>
+<li>
+<p>image/x-cmx</p>
+</li>
+<li>
+<p>image/cis-cod</p>
+</li>
+<li>
+<p>image/ief</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Videoformats"><a class="anchor" href="#src-196596063_Managingassets-Videoformats"></a>Video formats</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>video/mpeg</p>
+</li>
+<li>
+<p>video/webm</p>
+</li>
+<li>
+<p>video/mp4</p>
+</li>
+<li>
+<p>video/ogg</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Audioformats"><a class="anchor" href="#src-196596063_Managingassets-Audioformats"></a>Audio formats</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>audio/mpeg</p>
+</li>
+<li>
+<p>audio/webm</p>
+</li>
+<li>
+<p>audio/mp4</p>
+</li>
+<li>
+<p>audio/ogg</p>
+</li>
+<li>
+<p>audio/aac</p>
+</li>
+<li>
+<p>audio/aacp</p>
+</li>
+<li>
+<p>audio/flac</p>
+</li>
+<li>
+<p>audio/wav</p>
+</li>
+<li>
+<p>audio/x-wav</p>
+</li>
+<li>
+<p>audio/mp3</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>For more information on supported formats, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/DAM+Preview+module">DAM
+Preview module</a>.</p>
+</div>
+</div>
+</div>
+<h1 id="src-196596063_Managingassets-Searchingforanasset" class="sect0"><a class="anchor" href="#src-196596063_Managingassets-Searchingforanasset"></a>Searching for an asset</h1>
+<div class="paragraph">
+<p>To search for an asset, use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find bar</a> at the
+top of the UI:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-searching.png" alt="images/download/attachments/196596063/6-0-managingAssets-searching.png"></span></p>
+</div>
+<div class="paragraph">
+<p>You can also narrow your search. Click the
+<span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-refineSearchToggleButton.png" alt="images/download/attachments/196596063/6-0-managingAssets-refineSearchToggleButton.png"></span>
+button in the top left corner and refine your search using the options
+provided:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-refineSearch.png" alt="images/download/attachments/196596063/6-0-managingAssets-refineSearch.png"></span></p>
+</div>
+<h1 id="src-196596063_Managingassets-Uploadingasingleasset" class="sect0"><a class="anchor" href="#src-196596063_Managingassets-Uploadingasingleasset"></a>Uploading a single asset</h1>
+<div class="paragraph">
+<p>To upload an asset:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select a parent folder or upload the image at the root level.</p>
+</li>
+<li>
+<p>Click <strong>Upload asset</strong>.</p>
+</li>
+<li>
+<p>Select a file to upload or drag and drop it into the <strong>Media</strong> field.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-uploadAsset.png" alt="images/download/attachments/196596063/6-0-managingAssets-uploadAsset.png"></span></p>
+</div>
+</li>
+<li>
+<p>The file uploads.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-uploadMpgAsset.png" alt="images/download/attachments/196596063/6-0-managingAssets-uploadMpgAsset.png"></span></p>
+</div>
+</li>
+<li>
+<p>For images, the image details and a thumbnail displays. You can
+<a href="Editing_images.html">edit</a> the image in Magnolia.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-image.png" alt="images/download/attachments/196596063/6-0-managingAssets-image.png"></span></p>
+</div>
+</li>
+<li>
+<p>For other assets, the file details and an asset type icon displays.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-AssetDetails.png" alt="images/download/attachments/196596063/6-0-managingAssets-AssetDetails.png"></span></p>
+</div>
+</li>
+</ol>
+</div>
+<h1 id="src-196596063_Managingassets-Uploadingmultipleassets" class="sect0"><a class="anchor" href="#src-196596063_Managingassets-Uploadingmultipleassets"></a>Uploading multiple assets</h1>
+<div class="paragraph">
+<p>You can upload a ZIP file in the Asset app in order to import multiple
+assets.</p>
+</div>
+<div class="paragraph">
+<p>To import a ZIP file:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click <strong>Upload ZIP archive</strong>.</p>
+</li>
+<li>
+<p>Select a location. You can choose between:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Extract into new folder</strong> – Adds a new parent folder (default).</p>
+</li>
+<li>
+<p><strong>Extract here</strong> – Extracts the ZIP archive directly into the current
+folder.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Browse to the file.</p>
+</li>
+<li>
+<p>In <strong>Encoding</strong>, select UTF-8 or CP437, depending on what system the ZIP
+file was created on.</p>
+</li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598831/6-0-assets-uploadZip.png" alt="images/download/attachments/196598831/6-0-assets-uploadZip.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The assets are imported like this:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><em>Extract into new folder</em></th>
+<th class="tableblock halign-left valign-top"><em>Extract here</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196598831/6-0-uploadZipAsset-extractIntoNew.png" alt="images/download/attachments/196598831/6-0-uploadZipAsset-extractIntoNew.png" height="206"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../../_images/images/download/attachments/196598831/6-0-uploadZip-extractHere.png" alt="images/download/attachments/196598831/6-0-uploadZip-extractHere.png" height="158"></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Uploadinganassetfromanotherapp"><a class="anchor" href="#src-196596063_Managingassets-Uploadinganassetfromanotherapp"></a>Uploading an asset from another app</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can <a href="#src-196596063_Managingassets-Uploading">upload</a> an asset
+into the Magnolia DAM also from any other app that can browse the DAM,
+for example when creating a new contact in the Contacts app. The
+procedure and actions are identical to those in the Assets app and work
+in exactly the same way. You can define app-specific metadata fields
+which can be different from the standard
+<a href="#src-196596063_Managingassets-Metadata">metadata fields</a> available
+when uploading in the <strong>Assets</strong> app.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-editContact.png" alt="images/download/attachments/196596063/6-0-managingAssets-editContact.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Deletinganasset"><a class="anchor" href="#src-196596063_Managingassets-Deletinganasset"></a>Deleting an asset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Versioning.html">Versioning</a> is enabled in the DAM. This allows you
+to restore previous versions of an asset or folder. The delete action
+marks the node for deletion and the deletion is completed on publication
+of the deletion.</p>
+</div>
+<div class="paragraph">
+<p>To delete an asset or folder:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select an item.</p>
+</li>
+<li>
+<p>Click <strong>Delete folder</strong>/<strong>asset</strong>.</p>
+</li>
+<li>
+<p>Confirm your action in the dialog.This marks the node for deletion and
+creates a restorable version. The item icon (folder or node) is replaced
+with the trash bin.</p>
+</li>
+<li>
+<p>Click <strong>Publish deletion</strong> to complete the deletion. At this point you
+can cancel the deletion by clicking <strong>Restore previous version</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Assetmetadata"><a class="anchor" href="#src-196596063_Managingassets-Assetmetadata"></a>Asset metadata</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The metadata fields are located in the Asset dialog. You can set
+metadata when uploading or add/edit it by clicking <strong>Edit asset</strong> to open
+the dialog.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196596063_Managingassets-Magnolianativemetadata"><a class="anchor" href="#src-196596063_Managingassets-Magnolianativemetadata"></a>Magnolia native metadata</h3>
+<div class="paragraph">
+<p>The system records certain data automatically, with such fields
+typically disabled. By default, the following fields cannot be edited:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Describe asset using</strong>: The supported metadata standard. By default,
+the <a href="http://dublincore.org/documents/dces/">Simple Dublin Core Metadata
+Element Set (DCMES)</a> is supported. You can customize Magnolia to support
+different standards.</p>
+</li>
+<li>
+<p><strong>Identifier</strong>: An unambiguous reference to the resource within a given
+context. An alphanumerical string is used to identify and reference the
+asset. Editors can move assets without breaking links in the DAM.</p>
+</li>
+<li>
+<p><strong>Type</strong>: The nature or genre of the resource.</p>
+</li>
+<li>
+<p><strong>Creation Date</strong>: Date of upload.</p>
+</li>
+<li>
+<p><strong>Modification Date</strong>: Date of last modification.</p>
+</li>
+<li>
+<p><strong>Creator</strong>: An entity responsible for creating the resource (uploading
+the asset).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196596063/6-0-managingAssets-MgnlMetadata.png" alt="images/download/attachments/196596063/6-0-managingAssets-MgnlMetadata.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196596063_Managingassets-DublinCoremetadata"><a class="anchor" href="#src-196596063_Managingassets-DublinCoremetadata"></a>Dublin Core metadata</h3>
+<div class="paragraph">
+<p>Magnolia supports the <a href="http://dublincore.org/documents/dces/">Simple
+Dublin Core Metadata Element Set (DCMES)</a> standard by default and the
+following fields are available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Caption</strong>: The asset caption.</p>
+</li>
+<li>
+<p><strong>Language</strong>: Language tag of the asset. Recommended best practice is to
+use a controlled vocabulary such as
+<a href="http://www.rfc-base.org/rfc-4646.html">RFC 4646</a>.</p>
+</li>
+<li>
+<p><strong>Title</strong>: Asset title.</p>
+</li>
+<li>
+<p><strong>Subject</strong>: The topic of the asset. Typically, the subject will be
+represented using keywords, key phrases, or classification codes.</p>
+</li>
+<li>
+<p><strong>Coverage</strong>: Scope of the asset. Typically this refers to a place,
+period or jurisdiction.</p>
+</li>
+<li>
+<p><strong>Description</strong>: Full description of the asset.</p>
+</li>
+<li>
+<p><strong>Publisher</strong>: Original publisher of the asset if being republished from
+another source.</p>
+</li>
+<li>
+<p><strong>Contributor</strong>: Use to name asset contributors.</p>
+</li>
+<li>
+<p><strong>Rights</strong>: Type of copyright.</p>
+</li>
+<li>
+<p><strong>Source</strong>: A related asset from which this asset is derived.</p>
+</li>
+<li>
+<p><strong>Relation</strong>: Related assets.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196596063_Managingassets-Settingaltattributes"><a class="anchor" href="#src-196596063_Managingassets-Settingaltattributes"></a>Setting alt attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>alt</code> attribute of the <code>img</code> tag specifies alternative text for an
+image when that image cannot be displayed on a page. The standard rule
+is to use concise text that serves the same function as the image.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

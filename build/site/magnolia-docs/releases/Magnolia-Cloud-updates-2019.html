@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Magnolia Cloud updates 2019 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/releases/Magnolia-Cloud-updates-2019.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Workflow.html">Workflow</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/authoring/Feeds.html">Feeds</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Magnolia-Cloud-updates-2019.html">Magnolia Cloud updates 2019</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Magnolia Cloud updates 2019</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page lists the updates for Magnolia Cloud in 2019.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-December"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-December"></a>December</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Cockpitnotifications"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Cockpitnotifications"></a>Cockpit notifications</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Magnolia Cloud Helpdesk regularly needs to inform you of events
+affecting your subscription package such as planned maintenance
+requiring a restart or upgrade operations.</p>
+</div>
+<div class="paragraph">
+<p>Notifications appear in the cockpit banner <strong>Notifications</strong> box and as
+pop-ups when they are first delivered.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-cockpit-banner.png" alt="images/download/attachments/215321072/cloud-cockpit-banner.png"></span></p>
+</div>
+<div class="paragraph">
+<p>A dedicated Notifications page lists all the notifications received for
+your subscription package, or packages, and provides a clear visual
+indication of the importance of each message:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-cockpit-notifications.png" alt="images/download/attachments/215321072/cloud-cockpit-notifications.png"></span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Red – Critical notifications</p>
+</li>
+<li>
+<p>Yellow – Warning notifications</p>
+</li>
+<li>
+<p>Blue – Information notifications</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Understanding+cockpit+notifications">Understanding
+cockpit notifications</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-October"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-October"></a>October</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Cockpituserinterfaceoverhaul"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Cockpituserinterfaceoverhaul"></a>Cockpit user interface overhaul</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following on from the redesign of Magnolia 6 user interface, the cockpit
+has been overhauled to provide a light, modern and relaxing look and
+feel.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-cockpit-new-ui.png" alt="images/download/attachments/215321072/cloud-cockpit-new-ui.png"></span></p>
+</div>
+<div class="paragraph">
+<p>There is no change in the underlying functionality or user flows.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-IntegrationwithDatadogformonitoringandlogging"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-IntegrationwithDatadogformonitoringandlogging"></a>Integration with Datadog for monitoring and logging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A URL link to the <a href="https://www.datadoghq.com/log-management/">Datadog
+Application Performance Monitoring (APM)</a> service for your subscription
+package is provided in the Additional information section. Magnolia will
+provide you with account details to access your logs there.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-datadog-example.png" alt="images/download/attachments/215321072/cloud-datadog-example.png"></span></p>
+</div>
+<div class="paragraph">
+<p>As a consequence, the <strong>View logs</strong> action has been removed from the
+cockpit.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-September"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-September"></a>September</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Cloudbundlevariants"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Cloudbundlevariants"></a>Cloud bundle variants</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia has adjusted its cloud offer to better suit the needs of our
+customers and partners.</p>
+</div>
+<div class="sect2">
+<h3 id="src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LVN0YW5kYXJkYnVuZGxl4oCTTGlnaHREZXZlbG9wbWVudA"><a class="anchor" href="#src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LVN0YW5kYXJkYnVuZGxl4oCTTGlnaHREZXZlbG9wbWVudA"></a>Standard bundle – Light Development</h3>
+<div class="paragraph">
+<p>This cloud variant focuses on speed and agility for your projects. Your
+site is hosted in Magnolia Cloud; Magnolia manages the environment as a
+service.</p>
+</div>
+<div class="paragraph">
+<p>The fully managed environment provides the infrastructure for Light
+Development as well as the Cockpit, which you use for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuration</p>
+</li>
+<li>
+<p>Deployment workflow</p>
+</li>
+<li>
+<p>Backup and restore</p>
+</li>
+<li>
+<p>Logs and Monitoring</p>
+</li>
+<li>
+<p>Additional services</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With this cloud variant you can customize Magnolia using
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+development+in+Magnolia">light
+development</a> and manage the deployment environment via the Cockpit. This
+variant includes the standard DX Core bundle and additionally offers
+Magnolia Connector Packs and selected Special Features (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Supported+modules+in+the+cloud">supported
+modules</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LUN1c3RvbWJ1bmRsZeKAk0xpZ2h0RGV2ZWxvcG1lbnRhbmRKYXZhRGV2ZWxvcG1lbnQ"><a class="anchor" href="#src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LUN1c3RvbWJ1bmRsZeKAk0xpZ2h0RGV2ZWxvcG1lbnRhbmRKYXZhRGV2ZWxvcG1lbnQ"></a>Custom bundle – Light Development and Java Development</h3>
+<div class="paragraph">
+<p>This cloud variant is geared towards complex projects that need a high
+level of customization. With this cloud variant you can customize
+Magnolia using both Light Development and Java custom modules.</p>
+</div>
+<div class="paragraph">
+<p>Your site is hosted in Magnolia Cloud and you or your chosen Partner
+manages the creation of custom Java modules and the deployment of the
+bundle. This variant provides the highest level of flexibility allowing
+for a custom CMS that fits your unique needs. It also includes all the
+functionality of the standard DX Core bundle and additionally offers
+Magnolia Connector Packs and selected Special Features (see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Supported+modules+in+the+cloud">supported
+modules</a>).</p>
+</div>
+<div class="paragraph">
+<p>Our experienced Services team is available to provide best practices and
+help you on board to our cloud.</p>
+</div>
+<div class="paragraph">
+<p>Note</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>With custom bundles, our customers and partners may <em>not</em> deploy
+configuration that results in creating a secondary repository.</p>
+</div>
+<div class="paragraph">
+<p>Should this happen, workspaces and content stored in anything other than
+a Magnolia-provided repository is not included in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Backup operations.</p>
+</li>
+<li>
+<p>Content cloning operations.</p>
+</li>
+<li>
+<p>SLA obligations.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can see the bundle types that can be used in your subscription
+package in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cockpit">Additional
+Information</a> section.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Moreinformationdisplayedforenvironmentsandbundles"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Moreinformationdisplayedforenvironmentsandbundles"></a>More information displayed for environments and bundles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you hover over the environment branch or tag icon in the
+Environments section in the cockpit, you now see a creation timestamp
+for the snapshot or release installed in addition to the existing
+information.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/envs-installed-site-release-info-%282%29.png" alt="images/download/attachments/215321072/envs-installed-site-release-info-%282%29.png"></span></p>
+</div>
+<div class="paragraph">
+<p>When setting up or upgrading an environment, instead of just the bundle
+version, you also have the full bundle name displayed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-July"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-July"></a>July</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-InstallingasnapshotonUATorLive"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-InstallingasnapshotonUATorLive"></a>Installing a snapshot on UAT or Live</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Depending on your project requirements, your subscription package
+environments may vary and affect the
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Developing+for+Magnolia+in+the+cloud">standard
+development cycle</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/mnow-local-dev-overview-%288%29.png" alt="images/download/attachments/215321072/mnow-local-dev-overview-%288%29.png"></span></p>
+</div>
+<div class="paragraph">
+<p>If your subscription package does not include an integration
+environment, you can install a development snapshot directly in the UAT
+environment.</p>
+</div>
+<div class="paragraph">
+<p>If your package only consists of a Live environment (no integration or
+UAT), you can also install a development snapshot in the Live
+environment.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Installing+a+snapshot">Installing
+a snapshot</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-June"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-June"></a>June</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-MagnoliaCMS6.1"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-MagnoliaCMS6.1"></a>Magnolia CMS 6.1</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CMS 6.1 when
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud. Note that 6.1 is a
+<a href="https://documentation.magnolia-cms.com/display/DOCS/End-of-life+policy">Feature
+release</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://documentation.magnolia-cms.com/display/DOCS61/Release+notes+for+Magnolia+CMS+6.1">Release
+notes for Magnolia CMS 6.1</a> are available.</p>
+</div>
+<div class="paragraph">
+<p>Note that the Contacts, Synchronization, Link Mapper and jsonfn modules
+are no longer included in the cloud bundle as they are not part of DX
+Core. See
+<a href="https://documentation.magnolia-cms.com/display/DOCS61/Release+notes+for+Magnolia+CMS+6.1#ReleasenotesforMagnoliaCMS6.1-Productpackaging">Product
+packaging</a> in the 6.1 release notes for more information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Environmentprotection"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Environmentprotection"></a>Environment protection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can now protect your environments using a wizard in the cloud
+cockpit to prevent them from being
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Tearing+down+an+environment">torn
+down</a> accidentally or
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud">upgraded</a>.</p>
+</div>
+<div class="paragraph">
+<p>When an environment is protected, a green shield icon is displayed next
+to it in the Package overview. You must disable protection (using the
+same cockpit wizard) to be able to tear down the environment again.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Protecting+environments">Protecting
+environments</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-May"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-May"></a>May</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Magnolia5.7.3"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Magnolia5.7.3"></a>Magnolia 5.7.3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.7.3 when
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud. Note that 5.7.3 is a bug-fixing and
+security release.</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://documentation.magnolia-cms.com/display/DOCS57/Release+notes+for+Magnolia+CORE+5.7.3">Magnolia
+CORE 5.7.3</a> are available.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>We recommend that Magnolia CORE 5.7.3 be used for your production
+environments until the release of Magnolia CMS 6.1</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Restartyourinstancesinthecloud"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Restartyourinstancesinthecloud"></a>Restart your instances in the cloud</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can restart instances one by one using a wizard in the cloud
+cockpit.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-restart-instance-wiz2.png" alt="images/download/attachments/215321072/cloud-restart-instance-wiz2.png"></span></p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Restarting+instances">Restarting
+instances</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Viewinformationaboutyourdatabase"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Viewinformationaboutyourdatabase"></a>View information about your database</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can view the <strong>Allocated storage space</strong> and <strong>Free storage space</strong> for
+the database linked to your cloud-based Magnolia package in the cockpit.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Viewing+cloud+database+information">Viewing
+cloud database information</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Domainnamechanges"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Domainnamechanges"></a>Domain name changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Previously, Magnolia required definitive domain names to be provided
+during the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Onboarding+to+Magnolia+Cloud">onboarding</a>
+process. Now you can add and remove domain names and manage certificates
+at any time by contacting the
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6">Magnolia
+Cloud Helpdesk</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-April"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-April"></a>April</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Upgradebackupsareautomaticallyremoved"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Upgradebackupsareautomaticallyremoved"></a>Upgrade backups are automatically removed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you upgrade your Live environment from one version of Magnolia to
+another, an automatic upgrade backup is created for
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud#UpgradingMagnoliainthecloud-anc-restore-backup">rollback
+purposes</a>. This backup is now automatically removed after 48h. If you
+require the backup to be kept for a longer period of time if, for
+example, you have encountered issues or need additional time to validate
+the upgrade, you can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud#UpgradingMagnoliainthecloud-anc-extend-storage">extend
+the time period from 48 hours to 5 days</a>.</p>
+</div>
+<div class="paragraph">
+<p>Until the automatic backup is removed, you cannot tear down your
+upgraded environment. If you need to tear down the environment, you can
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud#UpgradingMagnoliainthecloud-anc-remove-backup">delete
+the upgrade backup manually</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LUVudmlyb25tZW50c2V0dXB3aXphcmRzdXBwb3J0c211bHRpcGxlcnVudGltZXNvZmJ1bmRsZXNAYW5jLXNldHVwLXdpemFyZA"><a class="anchor" href="#src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LUVudmlyb25tZW50c2V0dXB3aXphcmRzdXBwb3J0c211bHRpcGxlcnVudGltZXNvZmJ1bmRsZXNAYW5jLXNldHVwLXdpemFyZA"></a><span id="src-215321072_safe-id-TWFnbm9saWFDbG91ZHVwZGF0ZXMyMDE5LUBhbmMtc2V0dXAtd2l6YXJk " class="confluence-anchor-link">#</span>#Environment setup wizard supports multiple runtimes of bundles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you set up an environment, you now see runtime information (the OS,
+JDK and Tomcat versions) when selecting a bundle.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-changelog-runtimes.png" alt="images/download/attachments/215321072/cloud-changelog-runtimes.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Previously only the bundle type and version were displayed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-March"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-March"></a>March</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-6.0.1cloudpackbundlereleasedtofixmultisitelicensingissue"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-6.0.1cloudpackbundlereleasedtofixmultisitelicensingissue"></a>6.0.1 cloud pack bundle released to fix multisite licensing issue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Due to a licensing issue in Magnolia 6.0, cloud customers were unable to
+use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Multisite+module">Multisite
+module</a> functionality. We have released a 6.0.1 cloud pack bundle to
+resolve this issue. Please
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud">upgrade
+your cloud pack bundle version of Magnolia</a> if you require multisite.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-February"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-February"></a>February</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-SupportforGitbrancheswheninstallingasnapshot"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-SupportforGitbrancheswheninstallingasnapshot"></a>Support for Git branches when installing a snapshot</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When moving your development work from Git to your Cloud subscription
+package, you can now select which Git <em>branch</em> you want to retrieve
+content from. Previously only the latest commit or a tagged version was
+available from the Master branch, obliging you to squash and rebase your
+work before
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Installing+a+snapshot">moving
+it to Magnolia Cloud</a>.</p>
+</div>
+<div class="paragraph">
+<p>Being able to select a Git branch means you can apply a simple code
+change to a specific environment without deploying any other (possibly
+half-finished) code that might already be in your repository. For
+example, you can hot fix your live environment without affecting ongoing
+testing on the UAT environment.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321072/cloud-install-release-step1.png" alt="images/download/attachments/215321072/cloud-install-release-step1.png"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-January"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-January"></a>January</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321072_MagnoliaCloudupdates2019-Magnolia5.7.2and6.0"><a class="anchor" href="#src-215321072_MagnoliaCloudupdates2019-Magnolia5.7.2and6.0"></a>Magnolia 5.7.2 and 6.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.7.2 and Magnolia CMS 6.0
+when
+<a href="https://documentation.magnolia-cms.com/display/DOCS/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud.</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://documentation.magnolia-cms.com/display/DOCS57/Release+notes+for+Magnolia+CORE+5.7.2">Magnolia
+CORE 5.7.2</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS60/Release+notes+for+Magnolia+CMS+6.0">Magnolia
+CMS 6.0</a> are available.</p>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud updates 2020</p>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud updates 2018</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
