@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Magnolia Cloud updates 2018 :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/releases/Magnolia-Cloud-updates-2018.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Magnolia-Cloud-updates-2018.html">Magnolia Cloud updates 2018</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Magnolia Cloud updates 2018</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page lists the updates for Magnolia Cloud in 2018. Click on an
+entry to see details or <a href="#src-215321087">Expand/Collapse All</a>.</p>
+</div>
+<div class="paragraph">
+<p>November 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-IPv6support"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-IPv6support"></a>IPv6 support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>IPv6 addresses are supported in our whitelists.</p>
+</div>
+<div class="paragraph">
+<p>Contact the
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6/group/18">Magnolia
+Cloud Support</a> team to tell them your needs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-IPwhitelistingavailableforLiveenvironments"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-IPwhitelistingavailableforLiveenvironments"></a>IP whitelisting available for Live environments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whitelisting is now available for Live environments as well as
+Integration and UAT.</p>
+</div>
+<div class="paragraph">
+<p>The default rule for Live environments is 0.0.0.0/0 (open to the world).
+The Magnolia Cloud support team can activate or deactivate IP protected
+mode for each environment upon request.</p>
+</div>
+<div class="paragraph">
+<p>Contact the
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6/group/18">Magnolia
+Cloud Support</a> team to tell them your needs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Configuringrootdomainredirectrules"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Configuringrootdomainredirectrules"></a>Configuring root domain redirect rules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can now
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuring+domain+redirect+rules">configure
+your own root domain redirect rules</a> in the cockpit.</p>
+</div>
+<div class="paragraph">
+<p>September 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Chooseyourownautomaticbackuptime"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Chooseyourownautomaticbackuptime"></a>Choose your own automatic backup time</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can now choose a specific time for the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Backing+up+and+restoring">automatic
+backup of your environments</a> to be scheduled in line with your project
+requirements. The default automatic backup time is 01:00 UTC.</p>
+</div>
+<div class="paragraph">
+<p>Contact the
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6/group/18">Magnolia
+Cloud Support</a> team to tell them your needs.</p>
+</div>
+<div class="paragraph">
+<p>August 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.7.1and5.6.8"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.7.1and5.6.8"></a>Magnolia CORE 5.7.1 and 5.6.8</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.7.1 and Magnolia CORE
+5.6.8 when
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud.</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://wiki.magnolia-cms.com/display/DOCS57/Release+notes+for+Magnolia+CORE+5.7.1">Magnolia
+CORE 5.7.1</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS56/Release+notes+for+Magnolia+CORE+5.6.8">Magnolia
+CORE 5.6.8</a> are available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Maintenancemodeincockpit"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Maintenancemodeincockpit"></a>Maintenance mode in cockpit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When Magnolia is conducting a support or maintenance operation requiring
+downtime, we now switch your subscription package to maintenance mode.
+You can only view your package when it is in maintenance mode. A message
+indicating that your package is temporarily in maintenance mode is
+displayed in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cockpit#Cockpit-anc-sub-package-overview">subscription
+package overview</a> page:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321087/5-7-1-cloud-maintenance-mode.png" alt="images/download/attachments/215321087/5-7-1-cloud-maintenance-mode.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6/group/18">Magnolia
+Cloud Support</a> team will always contact you to schedule any downtime
+required in advance.</p>
+</div>
+<div class="paragraph">
+<p>July 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.7"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.7"></a>Magnolia CORE 5.7</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.7 when
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud.</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://wiki.magnolia-cms.com/display/DOCS57/Release+notes+for+Magnolia+CORE+5.7">Magnolia
+CORE 5.7</a> are available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-ContentSecurityPolicyheaderissue"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-ContentSecurityPolicyheaderissue"></a>Content Security Policy header issue</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We introduced a Content Security Policy (CSP) header in Magnolia 5.6.6.
+Configuring CSP involves adding the Content-Security-Policy HTTP header
+to a web page. It helps you reduce XSS risks on modern browsers by
+declaring which dynamic resources are allowed to load.</p>
+</div>
+<div class="paragraph">
+<p>If your Magnolia Cloud environment is running on Magnolia 5.6.6, you may
+encounter problems where admin central and apps that load external
+scripts fail to load. This is because the CSP header value restricts
+eval() execution and Vaadin, on which Magnolia is based, needs to invoke
+eval() to function correctly.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321087/csp-issue.png" alt="images/download/attachments/215321087/csp-issue.png"></span></p>
+</div>
+<div class="paragraph">
+<p>If you
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud">upgrade
+your Magnolia Cloud environment</a> to Magnolia CORE 5.7, a new default
+header that fixes this issue is added.</p>
+</div>
+<div class="paragraph">
+<p>If necessary, we recommend you customize the header to define your own
+whitelist.</p>
+</div>
+<div class="paragraph">
+<p>To avoid this issue when using a 5.6.6 environment:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Manually update the <code>Content-Security-Policy</code> property value in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Configuration+app">Configuration
+app</a>:</p>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 6%;">
+<col style="width: 94%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">From:</th>
+<th class="tableblock halign-left valign-top">default-src 'self' 'unsafe-inline'</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To:</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default-src 'self' 'unsafe-inline' 'unsafe-eval'
+<a href="https://ga-dev-tools.appspot.com" class="bare">https://ga-dev-tools.appspot.com</a> <a href="https://apis.google.com" class="bare">https://apis.google.com</a>
+<a href="https://www.google.com" class="bare">https://www.google.com</a> <a href="https://content.googleapis.com" class="bare">https://content.googleapis.com</a>
+<a href="https://ajax.googleapis.com" class="bare">https://ajax.googleapis.com</a> ; img-src 'self' data:;</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Remove the X-Content-Security-Policy header property (no longer
+required).</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The final configuration should look similar to this:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cspHeader</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Content-Security-Policy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">default-src 'self' 'unsafe-inline'
+'unsafe-eval' <a href="https://ga-dev-tools.appspot.com" class="bare">https://ga-dev-tools.appspot.com</a> <a href="https://apis.google.com" class="bare">https://apis.google.com</a>
+<a href="https://www.google.com" class="bare">https://www.google.com</a> <a href="https://content.googleapis.com" class="bare">https://content.googleapis.com</a>
+<a href="https://ajax.googleapis.com" class="bare">https://ajax.googleapis.com</a> ; img-src 'self' data:;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/browse/ONDEMAND-1729">ONDEMAND-1729</a></p>
+</div>
+<div class="paragraph">
+<p>June 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.6.6"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.6.6"></a>Magnolia CORE 5.6.6</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.6.6 when
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud.</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://wiki.magnolia-cms.com/display/DOCS56/Release+notes+for+Magnolia+CORE+5.6.6">Magnolia
+CORE 5.6.6</a> are available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-ContentofIntegrationandUATenvironmentsnotpubliclyaccessible"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-ContentofIntegrationandUATenvironmentsnotpubliclyaccessible"></a>Content of Integration and UAT environments not publicly accessible</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Access to content on the Integration and UAT environment public
+instances can now be restricted.</p>
+</div>
+<div class="paragraph">
+<p>During the on-boarding process, Magnolia asks you for a whitelist of IP
+addresses for these environments to limit access to only those who need
+it. For example, your employees tasked with developing and testing work.</p>
+</div>
+<div class="paragraph">
+<p>We have restricted access for security reasons and to prevent content on
+the Integration and UAT environment public instances being unnecessarily
+indexed by search robots.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Securityvulnerabilitiesfixed"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Securityvulnerabilitiesfixed"></a>Security vulnerabilities fixed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have fixed several security issues with this release. We keep details
+of this kind of fix private in line with our
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Security+policy">Security
+Policy</a>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6/group/18">Contact
+our Support team</a> if you need more information.</p>
+</div>
+<div class="paragraph">
+<p>May 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.6.5"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.6.5"></a>Magnolia CORE 5.6.5</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.6.5 when
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud .</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://wiki.magnolia-cms.com/display/DOCS56/Release+notes+for+Magnolia+CORE+5.6.5">Magnolia
+CORE 5.6.5</a> are available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-UpgradingMagnolia"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-UpgradingMagnolia"></a>Upgrading Magnolia</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Upgrading+Magnolia+in+the+cloud">Upgrade
+your cloud environments directly from the cockpit</a> when a new version of
+Magnolia is released and available on the Cloud (as is the case for
+Magnolia CORE 5.6.5 in this update).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Loggingimprovements"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Loggingimprovements"></a>Logging improvements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Filter the logs you want to display in the <strong>View logs</strong> page by start
+date and time, end date and time or in a given date and time frame.</p>
+</div>
+<div class="paragraph">
+<p>Use the <strong>Download</strong> button to download the logs displayed in TXT format.</p>
+</div>
+<div class="paragraph">
+<p><strong>Log levels</strong> are now working as expected from Magnolia 5.6.5 on. For
+more information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+cloud+log+levels">Managing
+cloud log levels</a>.</p>
+</div>
+<div class="paragraph">
+<p>Developers can also use the REST API <code>logs</code> endpoint to get Magnolia
+cloud instance logs and integrate them with external tools. For more
+information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Using+REST+to+access+cloud+logs">Using
+REST to access cloud logs</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-HTTPSURLforGitrepository"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-HTTPSURLforGitrepository"></a>HTTPS URL for Git repository</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The link to the git repository displayed in the <strong>Additional information</strong>
+section of the cockpit is now an HTTPS link to avoid issues with SSH
+keys.</p>
+</div>
+<div class="paragraph">
+<p>For example:
+<a href="https://git.magnolia-cms.com/projects/ODC/repos/magnolia-docs/browse">https://&lt;username&gt;@git.magnolia-cms.com/scm/odc/magnolia-docs.git</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Stickertodifferentiateenvironmentinstances"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Stickertodifferentiateenvironmentinstances"></a>Sticker to differentiate environment instances</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have introduced a sticker in the author instances to help you
+distinguish between Live, UAT and Integration
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cockpit#Cockpit-Eachenvironment">environments</a>:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321087/image2018-4-19_11-53-1.png" alt="images/download/attachments/215321087/image2018-4-19_11-53-1.png"></span></p>
+</div>
+<div class="paragraph">
+<p>March 2018 - Magnolia Cloud update</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.5.8and5.6.3"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-MagnoliaCORE5.5.8and5.6.3"></a>Magnolia CORE 5.5.8 and 5.6.3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With this update, you can use Magnolia CORE 5.5.8 or Magnolia CORE 5.6.3
+when
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Setting+up+a+new+environment">setting
+up your environments</a> in the cloud .</p>
+</div>
+<div class="paragraph">
+<p>Release notes for
+<a href="https://wiki.magnolia-cms.com/display/DOCS55/Release+notes+for+Magnolia+CORE+5.5.8">Magnolia
+CORE 5.5.8</a> and
+<a href="https://wiki.magnolia-cms.com/display/DOCS56/Release+notes+for+Magnolia+CORE+5.6.3">Magnolia
+CORE 5.6.3</a> are available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Loggingimprovements.1"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Loggingimprovements.1"></a>Logging improvements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Magnolia cloud offers a log view to help you troubleshoot your instances
+and ensure the quality of your website.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/download/attachments/215321087/cloud-troubleshootpackage-just-view.png" alt="images/download/attachments/215321087/cloud-troubleshootpackage-just-view.png"></span></p>
+</div>
+<div class="paragraph">
+<p>From the Manage environments section, you can <strong>View logs</strong> for each
+running Public and Author instance.</p>
+</div>
+<div class="paragraph">
+<p>For more information, see
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Managing+cloud+log+levels">Managing
+cloud log levels</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321087_MagnoliaCloudupdates2018-Responsetimeandperformanceimprovements"><a class="anchor" href="#src-215321087_MagnoliaCloudupdates2018-Responsetimeandperformanceimprovements"></a>Response time and performance improvements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have optimized how we use Apache Tomcat for Magnolia cloud to provide
+better performance and scalability.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>+</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud updates 2019</p>
+</div>
+<div class="paragraph">
+<p>Magnolia Cloud updates 2017</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
