@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Virtual URI mapping - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Virtual-URI-mapping.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Virtual-URI-mapping.html">Virtual URI mapping - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Virtual URI mapping - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="URI-mapping.html">URI mapping</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595985"><a class="anchor" href="#src-196595985"></a>Virtual URI mapping</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Virtual+URI+module">Virtual
+URI module</a></p>
+</li>
+<li>
+<p><a href="URI-to-repository-mapping.html">URI to repository mapping</a></p>
+</li>
+<li>
+<p><a href="URI-mapping.html">URI mapping</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Virtual URI mapping is a way to redirect an incoming request to the
+actual location of the content. Typically, the virtual address does not
+match the site hierarchy exactly.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Virtual URI mapping is an area where you can quickly break a site if you
+are not careful. It is easy to create cyclical mappings where the result
+of one mapping feeds another mapping. This can have unintended
+consequences and render AdminCentral unreachable. Create and test
+mappings in an isolated test environment before deploying them to
+production. If something goes wrong and you cannot access AdminCentral
+anymore, use the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Groovy+module">Groovy Rescue
+App</a> to delete the problematic mapping.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595985_VirtualURImapping-ThelogicofvirtualURImappinginMagnolia"><a class="anchor" href="#src-196595985_VirtualURImapping-ThelogicofvirtualURImappinginMagnolia"></a>The logic of virtual URI mapping in Magnolia</h3>
+<div class="paragraph">
+<p>A given mapping configuration "maps" an incoming URI to a new target
+URI. It returns a result describing the new URI and the level of match.
+The following action prefixes are supported for the new URI:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>redirect:</code></p>
+</li>
+<li>
+<p><code>permanent:</code></p>
+</li>
+<li>
+<p><code>forward:</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>to trigger either a temporary redirect, a permanent redirect or a
+forward, respectively. See the
+<a href="#src-196595985_VirtualURImapping-Actionprefixes">Action prefixes</a>
+section below for more detailed explanations.</p>
+</div>
+<div class="paragraph">
+<p>The URIs can be either absolute or relative within the web application
+in which case the context path is added automatically. For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Relative<br>
+<br>
+<code>fromUri: /winter2016</code><br>
+<code>toUri: forward:/marketing/campaigns/winter2016</code></p>
+</li>
+<li>
+<p>Absolute<br>
+<br>
+<code>fromUri: /winter2016</code><br>
+<code>toUri: forward:https://www.example.com/marketing/campaigns/winter2016.html</code></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-Themappingsregistry"><a class="anchor" href="#src-196595985_VirtualURImapping-Themappingsregistry"></a>The mappings registry</h4>
+<div class="paragraph">
+<p>The mappings are delegated to a separate module (<code>virtual-uri</code>) through
+the <code>info.magnolia.virtualuri.VirtualUriFilter</code> class and are stored in
+their own registry (<code>VirtualUriRegistry</code>), which allows to reference
+each mapping also in YAML definition files. All virtual URI mappings can
+be located via the Definitions app no matter whether they come from JCR
+or a YAML file:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595985/6-0-virtualURIMapping-definitionsApp.png" alt="images/download/attachments/196595985/6-0-virtualURIMapping-definitionsApp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Alternatively, search the <code>config</code> space with the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/JCR+Browser+app">JCR Browser
+app</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Warnings for overflow events are logged in <code>DirectoryWatcher</code>. Overflow
+events happen when the maximum number of user watches is reached.</p>
+</div>
+<div class="paragraph">
+<p>Any existing buffer size is hard-coded and cannot be configured. We
+recommend to keep the number of files in a single folder below 100 and
+to use folder hierarchies whenever possible.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595985_VirtualURImapping-Wheretousevirtualmappings"><a class="anchor" href="#src-196595985_VirtualURImapping-Wheretousevirtualmappings"></a>Where to use virtual mappings</h3>
+<div class="paragraph">
+<p>Virtual URIs are commonly used in Internet marketing for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Campaigns, events, conferences, shows,
+<a href="http://finnotype.blogspot.com/2010/10/vanity-urls-with-magnolia-cms.html">vanity
+URLs</a></p>
+</li>
+<li>
+<p>Microsites</p>
+</li>
+<li>
+<p>Landing pages, geo or language specific pages</p>
+</li>
+<li>
+<p>Product pages</p>
+</li>
+<li>
+<p>Conversion pages</p>
+</li>
+<li>
+<p>Downloads</p>
+</li>
+<li>
+<p>Coupon codes, special offers</p>
+</li>
+<li>
+<p>Abbreviations, shorthands</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are also utility reasons for redirecting URLs, related to
+day-to-day site maintenance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Web pages have moved due to site re-organization. Users still have old
+URLs in their bookmarks and in search engine indexes. Without
+redirection traffic would be lost.</p>
+</li>
+<li>
+<p>Registering alternative domain extensions like <code>example.net</code> and
+<code>example.org</code> and redirecting them to your primary site <code>example.com</code>.
+You can map multiple domain names to a site in your Magnolia site
+definition. This can be a major time-saver for a CMS team since there is
+no need to configure a Web server. Note that you need to register the
+domains with a registrar first and make sure that DNS entries for the
+domains point to the server hosting your Magnolia instance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As an example of mapping, see also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+get+content+as+JSON+-+an+overview">Turning
+a template-based JSON provider into a RESTful API with
+virtualURIMapping</a> where we define a custom virtual mapping to rewrite a
+path like <code>/getjson/tours/magnolia-travels/Kyoto</code> into
+<code>/getjson?workspace=tours&amp;path=/magnolia-travels/Kyoto</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595985_VirtualURImapping-Configuration"><a class="anchor" href="#src-196595985_VirtualURImapping-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>You can create virtual URI mappings in the <code>virtualUriMappings</code> folder
+inside your module configuration.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Please note that the YAML-based configuration must be stored under the
+<code>virtualUriMappings</code> folder, with the plural <code>-s</code> at the end and
+camel-cased <strong><code>Uri</code></strong> in the middle of the name of the folder. In JCR
+configuration, the node&#8217;s name can be either <code>virtualUriMappings</code> or the
+older <code>virtualURIMapping</code>. In either case make sure that the folder is
+at the top level inside module configuration.</p>
+</div>
+<div class="paragraph">
+<p>To mitigate an issue caused by having more than 500 configured virtual
+URI mappings in light modules, a WARN-level message is now logged when a
+<code>DirectoryWatcher</code> overflow occurs
+(<a href="https://jira.magnolia-cms.com/browse/MAGNOLIA-7762">MAGNOLIA-7762</a>). We
+recommend to keep the number of files in a single folder below 100 and
+to use folder hierarchies whenever possible. For the upcoming fix, see
+<a href="https://jira.magnolia-cms.com/browse/MAGNOLIA-7798">MAGNOLIA-7798</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-ViaJCR"><a class="anchor" href="#src-196595985_VirtualURImapping-ViaJCR"></a>Via JCR</h4>
+<div class="paragraph">
+<p><strong>Example</strong>: A mapping named <code>enterprise-edition</code> forwards users from
+<code>example.com/ee</code> to <code>example.com/enterprise-edition</code>. The
+<code>DefaultVirtualUriMapping</code> class (for description see the
+<a href="#src-196595985_VirtualURImapping-Mappingclasses">Mapping classes</a>
+section below) maps one URI to another. This ensures that external links
+that point to <code>example.com/ee</code> still work when the target page is
+renamed.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;my-module&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualUriMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enterprise-edition</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/ee</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/enterprise-edition</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-ViaYAML"><a class="anchor" href="#src-196595985_VirtualURImapping-ViaYAML"></a>Via YAML</h4>
+<div class="paragraph">
+<p>You can configure virtual URI mappings in a YAML definition file inside
+a light module folder:</p>
+</div>
+<div class="paragraph">
+<p>&lt;my-module&gt;/virtualUriMappings/enterprise-edition.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping`</p>
+</div>
+<div class="paragraph">
+<p><code>fromUri: /ee</code></p>
+</div>
+<div class="paragraph">
+<p><code>toUri: forward:/enterprise-edition</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-Properties"><a class="anchor" href="#src-196595985_VirtualURImapping-Properties"></a>Properties</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Class that performs the mapping. See the section
+<a href="#src-196595985_VirtualURImapping-Mappingclasses">Mapping classes</a>
+below.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fromUri</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Pattern to match in the requested URI.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>toUri</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Concrete URI where the request is mapped to.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>site</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> (for the <code>MultiSiteRegexpVirtualUriMapping</code> class)</p>
+</div>
+<div class="paragraph">
+<p>Specifies the site that should be used for the mapping.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-Acatalogofmappings"><a class="anchor" href="#src-196595985_VirtualURImapping-Acatalogofmappings"></a>A catalog of mappings</h4>
+<div class="paragraph">
+<p>For easier orientation, if you have to configure a lot of mappings, you
+can store them in folder-like structures rather than in one long flat
+list of mappings:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;my-module&gt;</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualUriMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">europe</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/customer-support-europe.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/europe/cust-support.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">usa</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/customer-support-usa.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/usa/cust-support.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asia-australia</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">asia</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/customer-support-asia.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/asia/cust-support.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">australia</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/customer-support-australia.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/australia/cust-support.htmlhttp://forward/asia/cust-support.html[]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-Mappingclasses"><a class="anchor" href="#src-196595985_VirtualURImapping-Mappingclasses"></a>Mapping classes</h4>
+<div class="paragraph">
+<p>Magnolia provides eight ready-made classes that perform virtual URI
+mapping:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.virtualuri.mapping.*</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>DefaultVirtualUriMapping maps a virtual URI to a content path. This
+is the simplest and most common type.<br>
+If the URI starts with a dot (<code>.</code>), it is not taken as a wildcard
+anymore but the dot in fact is interpreted as dot. If you need a
+wildcard, use <code>?</code> instead.</p>
+</li>
+<li>
+<p>RegexpVirtualUriMapping allows you to specify a regular expression
+pattern that matches a sequence of characters. A regexp pattern can
+match a variety of URIs, which saves time and effort as you would
+otherwise have to create default mappings for each case. <code>toUri</code> can
+contain back references to the regexp matches.</p>
+</li>
+<li>
+<p>RotatingVirtualUriMapping is an extension of
+<code>RegexpVirtualUriMapping</code> that allows rotation between different
+destination URIs. In order to rotate, <code>toUri</code> must contain an asterisk
+character <code>*</code> that will be replaced by a random integer between <code>start</code>
+(default is 1) and <code>end</code> minus one (default is <code>3</code>). An additional
+property <code>padding</code> specifies the desired width of the string. Zeroes are
+added to the left of the integer to make all strings equally wide.
+Default width is <code>2</code>.</p>
+</li>
+<li>
+<p>HostBasedVirtualUriMapping forwards the request to a different URI
+depending on the requested host name.</p>
+</li>
+<li>
+<p>HostBasedRegexpVirtualUriMapping combines the host-based and regex
+mappings, i.e. forwards the request to a different URI depending on the
+requested host name and allows you to specify a regular expression
+pattern that matches a sequence of characters.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>info.magnolia.multisite.mapping.*</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>MultiSiteRootVirtualUriMapping is a special class which specifies the
+root of a site if site matching returns <code>null</code>.</p>
+</li>
+<li>
+<p>MultiSiteRegexpVirtualUriMapping adds a site condition to the mapURI
+check. A mapping will only match the request if both the specified
+regular expression and the specified site match.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also write your own implementation.</p>
+</div>
+<div class="paragraph">
+<p>The patterns for regular expressions in the regex-based classes are
+defined in
+<a href="https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html">java.util.regex.Pattern</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-Actionprefixes"><a class="anchor" href="#src-196595985_VirtualURImapping-Actionprefixes"></a>Action prefixes</h4>
+<div class="paragraph">
+<p>You can use these action prefixes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>forward</code> hides the true target URL from the visitor. The URL that the
+user typed in the browser address bar or the link they clicked remains
+visible. Forward is performed internally by the servlet. Any browser
+reload of the resulting page will repeat the original request, with the
+original URL.</p>
+</li>
+<li>
+<p><code>redirect</code> displays the true target URL in the address bar. It is a
+two-step process where the web application instructs the browser to
+fetch a second URL which differs from the original. A browser reload of
+the second URL will not repeat the original request but will rather
+fetch the second URL. Redirect is marginally slower than a forward since
+it requires two browser requests instead of one. A redirect returns HTTP
+status code 302 "found" to the client. While OK for human visitors, this
+method can be suboptimal from search engine optimization (SEO) viewpoint
+as search engines do not transfer the page rank assigned to the old URL
+to the new URL.</p>
+</li>
+<li>
+<p><code>permanent</code> 301 redirect is a
+<a href="http://www.webconfs.com/how-to-redirect-a-webpage.php">search engine
+friendly</a> option. In this case the HTTP response code is set to 301.
+<a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=93633">Google</a>
+and
+<a href="http://help.yahoo.com/l/us/yahoo/smallbusiness/store/pageredirects/pageredirects-15.html">Yahoo!</a>
+specifically endorse this type of redirection and
+<a href="http://www.bing.com/community/webmaster/f/12252/t/667937.aspx">Bing</a> is
+following the trend. 301 redirect preserves your search engine ranking
+for the redirected page.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is also possible to leave the action prefix out. A virtual URI
+mapping that does not have a prefix does not re-process the request. It
+just changes the current URI in the AggregationState.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595985_VirtualURImapping-Examples"><a class="anchor" href="#src-196595985_VirtualURImapping-Examples"></a>Examples</h4>
+<div class="sect4">
+<h5 id="src-196595985_VirtualURImapping-Default"><a class="anchor" href="#src-196595985_VirtualURImapping-Default"></a>Default</h5>
+<div class="paragraph">
+<p>Forward from <code>/winter2016</code> to <code>/marketing/campaigns/winter2016</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualUriMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">winter2010</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.DefaultVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/winter2016</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/marketing/campaigns/winter2016</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="src-196595985_VirtualURImapping-Regularexpression"><a class="anchor" href="#src-196595985_VirtualURImapping-Regularexpression"></a>Regular expression</h5>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Always test your regex-based virtual URI configurations thoroughly
+before applying them to a live environment. The configurations that seem
+correct on the surface can yield unwanted results. For example, using
+boundary matchers (the hat <code>^</code>, the dollar <code>$</code>, and others) in <code>fromUri</code>
+and <code>toUri</code> may improve your matches otherwise a simple value such as
+<code>/foobar.html</code> will be matched not only in <code>/foobar.html</code> but also in
+<code>/something/foobar.html</code>.</p>
+</div>
+<div class="paragraph">
+<p>Take requested page name and pass it as a <code>productId</code> request parameter
+to a product detail page.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualUriMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">productIDs</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.RegexpVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/products/([0-9a-zA-Z-]+)\.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/product/detail.html?productId=$1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The pattern <code>[0-9a-zA-Z-]</code> in <code>fromUri</code> means "any single character in
+the range of 0-9 or a-z or A-Z or the character <code>-</code> literally". The plus
+character makes this a greedy pattern that matches one or more of the
+preceding tokens and will match as many characters as possible before
+satisfying the next token. By enclosing the pattern in parentheses we
+create a capturing group <code>([0-9a-zA-Z-]+)</code> which can be referenced in
+the <code>toUri</code> using <code>$1</code>.</p>
+</div>
+<div class="paragraph">
+<p>These request URIs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>example.com/products/Wayfarer-Retro.html</code></p>
+</li>
+<li>
+<p><code>example.com/products/B00LBFSSYI.html</code></p>
+</li>
+<li>
+<p><code>example.com/products/Sony-MDRZX100.html</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>would be mapped to these URIs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>example.com/product/detail.html?productId=Wayfarer-Retro</code></p>
+</li>
+<li>
+<p><code>example.com/product/detail.html?productId=B00LBFSSYI</code></p>
+</li>
+<li>
+<p><code>example.com/product/detail.html?productId=Sony-MDRZX100</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196595985_VirtualURImapping-Rotating"><a class="anchor" href="#src-196595985_VirtualURImapping-Rotating"></a>Rotating</h5>
+<div class="paragraph">
+<p>A request URI such as <code>forward:/banner/image_*.jpg</code> will randomly
+forward the request to <code>/banner/image_01.jpg</code>, <code>/banner/image_02.jpg</code> or
+<code>/banner/image_03.jpg</code>. A use case for this class is rotating images
+such as banner ads. The mapping displays a random ad on each page visit.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualUriMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">banner-ads</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.RotatingVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">end</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/dam/tours/banner/image.jpg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">padding</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">start</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/dam/tours/banner/image_*.jpg</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In addition to randomized ad distribution, the class allows you to do
+basic A/B or multivariate testing. For example, create two images: A and
+B. Configure the mapping to display them randomly. Track visitor
+click-through rates to find out which image is more effective.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196595985_VirtualURImapping-Hostbased"><a class="anchor" href="#src-196595985_VirtualURImapping-Hostbased"></a>Host based</h5>
+<div class="paragraph">
+<p>Forward the visitor to a German language version of the home page when
+the site is requested with the <code>.de</code> country domain. Similarly, forward
+to a French version when the site is requested with the <code>.fr</code> country
+domain. The matching pattern is in the <code>host</code> property. The <code>toUri</code>
+value under the parent node works as a fallback option. If no hostname
+match is found, such as when the site is requested with <code>acme.com</code>,
+forward to an English version.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">virtualUriMappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">language-by-domain</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mappings</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">de</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel.de</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/de/travel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fr</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">host</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel.fr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/fr/travel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.virtualuri.mapping.HostBasedVirtualUriMapping</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fromUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">toUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">forward:/en/travel</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595985_VirtualURImapping-MappingsinthedefaultinstallationsofMagnolia"><a class="anchor" href="#src-196595985_VirtualURImapping-MappingsinthedefaultinstallationsofMagnolia"></a>Mappings in the default installations of Magnolia</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module</th>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">Mapping class</th>
+<th class="tableblock halign-left valign-top">From
+
+(Site)</th>
+<th class="tableblock halign-left valign-top">To</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>ui-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p>(Author Instance)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MultiSiteRootVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/.magnolia/admincentral</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>ui-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p>(Author Instance)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DefaultVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/.magnolia/admincentral</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>ui-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p>(Public Instance)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MultiSiteRootVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/travel.html</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>ui-admincentral</code></p>
+</div>
+<div class="paragraph">
+<p>(Public Instance)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DefaultVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/travel.html</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rssaggregator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE, DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RegexpVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/rssFeeds/(.*)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/rss/?feedPath=/$1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rssaggregator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE, DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RegexpVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/planetFeeds/(.*)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/rss/?feedPath=/$1&amp;generatorName=planet</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rssaggregator</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE, DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RegexpVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/categoryFeeds/(<strong class="a-zA-Z0-9">)/(.</strong>)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>redirect:/rss/?generatorName=category&amp;categories=$1&amp;siteRoot=/$2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tours</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>RegexpVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>/tours(.*).html</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forward:/travel/tour?tour=$1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tours</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MultiSiteRegexpVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>/tours(.*).html</code></p>
+</div>
+<div class="paragraph">
+<p>(<code>travel</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forward:/tour?tour=$1</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tours</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DX Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>MultiSiteRegexpVirtualUriMapping</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>/tours(.*).html</code></p>
+</div>
+<div class="paragraph">
+<p>(<code>sportstation</code>)</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>forward:/tour?tour=$1</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>URI to repository mapping</p>
+</div>
+<div class="paragraph">
+<p>Voters</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
