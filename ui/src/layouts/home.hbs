@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+{{> head-first}}
+    <title>Magnolia Documentation</title>
+    {{#with page.canonicalUrl}}
+    <link rel="canonical" href="{{this}}">
+    {{/with}}
+{{> head-last}}
+  </head>
+  <body class="home">
+{{> header}}
+{{> body-home}}
+{{> footer}}
+  </body>
+</html>

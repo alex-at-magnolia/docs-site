@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using REST to access cloud logs - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Using-REST-to-access-cloud-logs.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/administration/Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Magnolia Documentation</a></li>
+    <li><a href="Using-REST-to-access-cloud-logs.html">Using REST to access cloud logs - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Using REST to access cloud logs - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+<div id="ht-search" class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Managing-environments-using-the-Magnolia-cockpit.html">Managing
+environments using the Magnolia cockpit</a></p>
+</li>
+<li>
+<p><a href="Monitoring-and-logging.html">Monitoring and logging</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321259"><a class="anchor" href="#src-215321259"></a>Using REST to access cloud logs</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Managing-cloud-log-levels.html">Managing cloud log levels</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Log+Tools+app">Log Tools
+app</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This page describes the <code>logs</code> endpoint, which can be used to access
+Magnolia cloud instance logs. For viewing and managing the logs via the
+Cockpit, see the <a href="Managing-cloud-log-levels.html">Managing cloud log
+levels</a> page.</p>
+</div>
+<div class="sect2">
+<h3 id="src-215321259_UsingRESTtoaccesscloudlogs-Obtaininganauthenticationtoken"><a class="anchor" href="#src-215321259_UsingRESTtoaccesscloudlogs-Obtaininganauthenticationtoken"></a>Obtaining an authentication token</h3>
+<div class="paragraph">
+<p>Important</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When sending REST requests, make sure you always send them via a secure
+protocol such as HTTPS so that communication with the endpoint is
+encrypted.</p>
+</div>
+<div class="paragraph">
+<p>A REST request for a cloud log must be authenticated. Magnolia uses
+authentication based on the
+<a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JSON Web Token</a>. To obtain
+a JWT token, issue the following <code>curl</code> command in bash, where:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;your_username&gt;</code> is the LDAP user name assigned to you in your Cloud
+subscription package to access the Cockpit.</p>
+</li>
+<li>
+<p><code>&lt;your_password&gt;</code> is the LDAP user name assigned to you in the
+package.</p>
+</li>
+<li>
+<p><code>&lt;cockpit-domain-name&gt;</code> is the domain name of your Cockpit.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>curl -H <code>"X-Auth-Username: &lt;your_username&gt;"</code> -H <code>"X-Auth-Password: &lt;your_password&gt;"</code> -X POST https:<code>//</code>&lt;cockpit-domain-name&gt;`</code>/authenticate`</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="paragraph">
+<p><code>curl -H <code>"X-Auth-Username: John"</code> -H <code>"X-Auth-Password: Doe"</code> -X POST https:<code>//cockpit</code>.example.com`</code>/authenticate`</p>
+</div>
+<div class="paragraph">
+<p>You should get a response like this:</p>
+</div>
+<div class="paragraph">
+<p><code>{<code>"authToken"</code>:<code>"&lt;token-header&gt;.&lt;token-payload&gt;.&lt;token-signature&gt;"</code>}</code></p>
+</div>
+<div class="paragraph">
+<p>The token required is this part:
+<code>&lt;token-header&gt;.&lt;token-payload&gt;.&lt;token-signature&gt;</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-215321259_UsingRESTtoaccesscloudlogs-Therequest"><a class="anchor" href="#src-215321259_UsingRESTtoaccesscloudlogs-Therequest"></a>The request</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Currently Magnolia clouds logs keep a maximum of the last 5 minutes of
+log data or the last 1000 log lines, counted from time-now OR from a log
+record matching the <code>recordLocator</code>, if sent in the request.</p>
+</div>
+<div class="sect3">
+<h4 id="src-215321259_UsingRESTtoaccesscloudlogs-RequestURL"><a class="anchor" href="#src-215321259_UsingRESTtoaccesscloudlogs-RequestURL"></a>Request URL</h4>
+<div class="paragraph">
+<p>GET
+<code><a href="https://{cockpit-domain-name}/.rest/instances/logs?siteName={subscription-package-code}&amp;environment={int|uat|live}&amp;mgnlInstanceName={name-of-the-instance}&amp;logMoveDirection={1|-1}&amp;recordLocator={locator-string}" class="bare">https://{cockpit-domain-name}/.rest/instances/logs?siteName={subscription-package-code}&amp;environment={int|uat|live}&amp;mgnlInstanceName={name-of-the-instance}&amp;logMoveDirection={1|-1}&amp;recordLocator={locator-string}</a></code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-215321259_UsingRESTtoaccesscloudlogs-Parameters"><a class="anchor" href="#src-215321259_UsingRESTtoaccesscloudlogs-Parameters"></a>Parameters</h4>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 21%;">
+<col style="width: 39%;">
+<col style="width: 15%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Parameter Type</th>
+<th class="tableblock halign-left valign-top">Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>siteName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The code of your subscription package.</p>
+</div>
+<div class="paragraph">
+<p>You can find the site name displayed in your
+<a href="Managing-environments-using-the-Magnolia-cockpit.html">environments</a>,
+for example <code>magnolia-mkg-integration-5-6-3-public1</code>. The <code>siteName</code> is
+the prefix before the environment type, in this example, <code>magnolia-mkg</code>.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>environment</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The environment name.</p>
+</div>
+<div class="paragraph">
+<p>Can only be one of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>live</code></p>
+</li>
+<li>
+<p><code>uat</code></p>
+</li>
+<li>
+<p><code>integration</code></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mgnlInstanceName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the instance.</p>
+</div>
+<div class="paragraph">
+<p>You can find the instance name after setting up an environment or in the
+<a href="Managing-cloud-log-levels.html">View log page</a> instance dropdown.</p>
+</div>
+<div class="paragraph">
+<p>For example: <code>author1</code>, <code>public1</code>, <code>public2</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>logMoveDirection</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The direction in which to traverse the log.</p>
+</div>
+<div class="paragraph">
+<p>Use <code>1</code> for going forwards or <code>-1</code> for going backwards.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>recordLocator</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>A specific log record that serves as the main reference point. The
+locator is a Base64-encoded string.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+To get a <code>recordLocator</code>, first send the request without this parameter
+and choose a value shown in the response.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>query</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-215321259_UsingRESTtoaccesscloudlogs-Examples"><a class="anchor" href="#src-215321259_UsingRESTtoaccesscloudlogs-Examples"></a>Examples</h4>
+<div class="paragraph">
+<p>GET the log from the <code>public1 uat</code> instance of the <code>example-abbrev</code>
+cloud subscription package:</p>
+</div>
+<div class="paragraph">
+<p>Command</p>
+</div>
+<div class="paragraph">
+<p><code>curl -H <code>"X-Auth-Token:{JWT-token}"</code> -X GET ``"https://cockpit.example.com/.rest/instances/logs?siteName=example-abbrev&amp;environment=uat&amp;mgnlInstanceName=public1&amp;logMoveDirection=-1"</code></p>
+</div>
+<div class="paragraph">
+<p>Click to see the response</p>
+</div>
+<div class="paragraph">
+<p><code>{</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>"logs"</code>: [{`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.2.212 - - [27/Apr/2018:09:11:42 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:11:46.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzMDgxMDYxNjYsMzAwNTExXQ=="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }, {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.27.131 - - [27/Apr/2018:09:11:44 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:11:46.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzMDgxMDYyMTYsODc5Nl0="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }, {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.2.212 - - [27/Apr/2018:09:12:12 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:12:16.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzMzgxMTExMDIsODU3NDBd"</code></p>
+</div>
+<div class="paragraph">
+<p>`  }, {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.27.131 - - [27/Apr/2018:09:12:14 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:12:16.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzMzgxMTExNTEsMzAwNTIxXQ=="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }, {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.2.212 - - [27/Apr/2018:09:12:42 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:12:46.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzNjgxMTQ1OTYsODgwNV0="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }],`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"lastRecordLocator"</code>: <code>`"WzE1MjQ4MjAzMDgxMDYxNjYsMzAwNTExXQ=="</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>GET the same as in the previous example but now relative to the
+<code>[1524820338111102,85740]</code> log record (Base64-encoded as
+<code>WzE1MjQ4MjAzMzgxMTExMDIsODU3NDBd</code> in the URL):</p>
+</div>
+<div class="paragraph">
+<p>Command</p>
+</div>
+<div class="paragraph">
+<p><code>curl -H <code>"X-Auth-Token:{JWT-token}"</code> -X GET ``"https://cockpit.example.com/.rest/instances/logs?siteName=example-abbrev&amp;environment=uat&amp;mgnlInstanceName=public1&amp;logMoveDirection=-1&amp;recordLocator=WzE1MjQ4MjAzMzgxMTExMDIsODU3NDBd"</code></p>
+</div>
+<div class="paragraph">
+<p>Click to see the response</p>
+</div>
+<div class="paragraph">
+<p><code>{</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>"logs"</code>: [{`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.27.131 - - [27/Apr/2018:09:11:14 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:11:16.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAyNzgxMDIwODYsODc5NV0="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }, {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.2.212 - - [27/Apr/2018:09:11:42 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:11:46.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzMDgxMDYxNjYsMzAwNTE1XQ=="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }, {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"message"</code>: <code>"172.31.27.131 - - [27/Apr/2018:09:11:44 +0000] \"GET /.healthcheck/ HTTP/1.1\" 200 30"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"timestamp"</code>: <code>"2018-04-27T09:11:46.000000000+00:00"</code>,`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>"recordLocator"</code>: <code>`"WzE1MjQ4MjAzMDgxMDYyMTYsODc5Nl0="</code></p>
+</div>
+<div class="paragraph">
+<p>`  }],`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>"lastRecordLocator"</code>: <code>`"WzE1MjQ4MjAyNzgxMDIwODYsODc5NV0="</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Managing cloud log levels</p>
+</div>
+<div class="paragraph">
+<p>Restarting instances</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

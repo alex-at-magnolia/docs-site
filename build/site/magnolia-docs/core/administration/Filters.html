@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Filters - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/administration/Filters.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Filters.html">Filters - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Filters - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Administration.html" class="bare">Administration.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Administration.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="">&#8230;&#8203;</a></p>
+</li>
+<li>
+<p><a href="Architecture.html">Architecture</a></p>
+</li>
+<li>
+<p><a href="Request-processing-and-filters.html">Request processing and
+filters</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196595729"><a class="anchor" href="#src-196595729"></a>Filters</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p><a href="http://www.oracle.com/technetwork/java/filters-137243.html">Java filters</a>
+were introduced in the Java Servlet specification version 2.3. A filter
+intercepts requests and responses to transform or use the information.
+Filters typically do not themselves create responses but instead provide
+universal functions that can be "attached" to any type of servlet page.</p>
+</div>
+<div class="paragraph">
+<p>Since the filter chain is responsible for request handling in Magnolia,
+the default chain illustrates how filters are used to process requests.
+This document provides minimal information on filters. For more, see
+<a href="Request-processing-and-filters.html">Request processing and filters</a>
+and the
+<a href="https://nexus.magnolia-cms.com/content/sites/magnolia.public.sites/ref/5.3.6/apidocs/info/magnolia/cms/filters/package-summary.html"><code>filters</code></a>
+package.</p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t change the filter order</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Magnolia handles incoming requests to display a page through its own
+filter chain. Filters in the chain are executed <strong>in the order in which
+they are declared</strong> until a filter decides that it can fulfill the
+request.</p>
+</div>
+<div class="paragraph">
+<p>Be careful</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>When editing properties in the filter chain be careful. Always test the
+changes on test environment before applying it to production.</p>
+</div>
+<div class="paragraph">
+<p>For instance, if you add a Voter to a filter with an erroneous regular
+expression, you won&#8217;t be able to access admincentral anymore. (In such
+case you have to use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Groovy+module#Groovymodule-RescueApp">Groovy
+Rescue App</a>).</p>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Context"><a class="anchor" href="#src-196595729_Filters-Context"></a>Context</h3>
+<div class="paragraph">
+<p>The first filter in the filter chain is ContextFilter . This filter
+initializes <code>MgnlContext</code> and configures
+<a href="http://www.javacodegeeks.com/2013/01/effective-logging-in-javajee-mapped-diagnostic-context.html">MDC
+logging</a>. <code>MgnlContext</code> is local to the request and available on every
+further filter. The context provides a lot of useful functions, see
+MgnlContext for details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Contenttype"><a class="anchor" href="#src-196595729_Filters-Contenttype"></a>Content type</h3>
+<div class="paragraph">
+<p>The job of the <code>ContentTypeFilter</code> is to initialize the AggregationState
+.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s created and populated with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Character encoding</p>
+</li>
+<li>
+<p>Original URI</p>
+</li>
+<li>
+<p>Original URL</p>
+</li>
+<li>
+<p>Extension</p>
+</li>
+<li>
+<p>Query string</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>AggregationState</code> is accessible using
+<code>MgnlContext.getAggregationState()</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Content-Type</code> header is not set by <code>ContentTypeFilter</code> anymore. The
+MIME type was incorrectly set according to the request extension. It is
+now the responsibility of renderers/servlets to set the correct content
+type. For instance FreemarkerRenderer sets the content type.</p>
+</div>
+<div class="paragraph">
+<p>Content type filter can be configured to
+<a href="MIME-type-mapping.html#src-196595867_MIMEtypemapping-Matchingrequeststocontenttypes">match
+requests to content types</a>. See
+<a href="MIME-type-mapping.html#src-196595867_MIMEtypemapping-RestrictingresponsestoconfiguredMIMEtypes">Restricting
+responses to configured MIME types</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Cookiesdetector"><a class="anchor" href="#src-196595729_Filters-Cookiesdetector"></a>Cookies detector</h3>
+<div class="paragraph">
+<p>CookiesDetectorFilter is a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>
+filter that detects request cookies and adds them as traits to the
+aggregation state. <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Date"><a class="anchor" href="#src-196595729_Filters-Date"></a>Date</h3>
+<div class="paragraph">
+<p>DateDetectorFilter is a simple date
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Traitsdescribethevisitors">trait</a>
+filter for
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>
+that stores the current system time in the <code>TraitCollector</code> . <br></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Country"><a class="anchor" href="#src-196595729_Filters-Country"></a>Country</h3>
+<div class="paragraph">
+<p>CountryDetectorFilter is a GeoIP
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Traitsdescribethevisitors">trait</a>
+filter that detects the user&#8217;s country using the IP address of the
+request for
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>.
+It adds the country to the aggregation state as a trait. If a GET
+parameter <code>Country#REQUEST_PARAMETER</code> with an IP address is supplied,
+this address is used to resolve the country, which is stored in the
+<code>TraitCollector</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Visitor"><a class="anchor" href="#src-196595729_Filters-Visitor"></a>Visitor</h3>
+<div class="paragraph">
+<p>VisitorDetectorFilter is a visitor
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Traitsdescribethevisitors">trait</a>
+filter that detects the type of visitor based on the current user and
+cookies for
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>.
+<code>visitorCookies</code> can be configured for returning and registered users.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitor</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">visitorCookies</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">returning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">returning</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">level</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VISITOR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">returning</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">registered</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">registered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VISITOR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">registered</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">new</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">new</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">maxAge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">86400</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NEW_VISITOR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">new</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.personalization.visitor.VisitorDetectorFilter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Additional Properties</strong></p>
+</div>
+<div class="paragraph">
+<p>(Applicable to the cookie <em>name</em> nodes, i.e. to "returning",
+"registered" and "new" in the above examples.)</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>httpOnly</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em><strong><br>
+</strong></p>
+</div>
+<div class="paragraph">
+<p>A security setting that prevents cookies from being read by potentially
+malicious code.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>secure</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Setting the property to <code>true</code> (recommended) will prevent cookies from
+being sent if the protocol used is insecure (HTTP instead of HTTPS).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Devicedetection"><a class="anchor" href="#src-196595729_Filters-Devicedetection"></a>Device detection</h3>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Only used by the STK.</p>
+</div>
+<div class="paragraph">
+<p>DeviceDetectionFilter detects the type of device requesting content.
+Device detection is done using the
+<a href="https://github.com/steveswinsburg/mobile-detect">Mobile Detect</a> API.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Multipartrequest"><a class="anchor" href="#src-196595729_Filters-Multipartrequest"></a>Multipart request</h3>
+<div class="paragraph">
+<p>CosMultipartRequestFilter checks to see if there are any binary uploads
+such as form attachments in the request, extracts the binaries and
+persists them in the JCR.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-UnicodeNormalization"><a class="anchor" href="#src-196595729_Filters-UnicodeNormalization"></a>Unicode Normalization</h3>
+<div class="paragraph">
+<p>UnicodeNormalizationFilter normalizes the current URI to the NFC form
+that is used internally.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Registration"><a class="anchor" href="#src-196595729_Filters-Registration"></a>Registration</h3>
+<div class="paragraph">
+<p>RegistrationFilter checks the validity of the registration of a DX Core
+installation and delegates to the registration form so that the user can
+enter the license key. The license is also checked in other parts of the
+code such as in the STK.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Login"><a class="anchor" href="#src-196595729_Filters-Login"></a>Login</h3>
+<div class="paragraph">
+<p>Handles incoming login requests and delegates to login handlers. The
+handlers are configured under this filter. LoginFilter checks to verify
+that user credentials have been authenticated so that only authenticated
+users can be made active users. Magnolia uses
+<a href="http://en.wikipedia.org/wiki/Java_Authentication_and_Authorization_Service">JAAS</a>
+for authentication. For more information see
+<a href="Security.html">Security</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Activation"><a class="anchor" href="#src-196595729_Filters-Activation"></a>Activation</h3>
+<div class="paragraph">
+<p>The activation filter handles incoming activation requests. This filter
+is the receiving part of the activation process.</p>
+</div>
+<div class="paragraph">
+<p>The activation filter is implemented using ReceiveFilter from the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Activation+module">Activation
+module</a>. In DX Core, RegistrationFilter (included in the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Transactional+Activation+module">Transactional
+Activation module</a>) extends <code>ReceiveFilter</code> to provide
+transaction-related communications with syndicators.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example of how to use the bypass feature to avoid specific
+filters. This configuration will only handle requests where the URI
+starts with <code>/.magnolia/activation</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">activation</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bypasses</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">allButActivationHandler</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.URIStartsWithVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/.magnolia/activation</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.module.exchangetransactional.XAReceiveFilter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-GZip"><a class="anchor" href="#src-196595729_Filters-GZip"></a>GZip</h3>
+<div class="paragraph">
+<p>To increase the performance of the site GZipFilter replaces text type
+responses with the gzipped response. The trick in this filter is that it
+passes a ResponseWrapper instead of the response object it got in the
+<code>doFilter(..)</code> call to the filter chain. After all the following filters
+have been executed, content is extracted from the ResponseWrapper,
+gzipped and written to the original response.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Channel"><a class="anchor" href="#src-196595729_Filters-Channel"></a>Channel</h3>
+<div class="paragraph">
+<p>MultiChannelFilter resolves the channel to use by considering variations
+of the set channel. Resulting site gets set in ExtendedAggregationState
+.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Multisite"><a class="anchor" href="#src-196595729_Filters-Multisite"></a>Multisite</h3>
+<div class="paragraph">
+<p>MultiSiteFilter is a DX Core filter. It detects which site definition
+should be used. The filter makes site related properties available in
+the AggregationState .</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Sitemerge"><a class="anchor" href="#src-196595729_Filters-Sitemerge"></a>Site merge</h3>
+<div class="paragraph">
+<p>SiteMergeFilter merges channel variations with the site definition.
+Configurations under this filter override configuration done in the site
+definition. The filter sets the site definition in the aggregation
+state. In the Community Edition, this filter sets the site in the
+aggregation state. In DX Core, the multisite filter can also set the
+site.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Logout"><a class="anchor" href="#src-196595729_Filters-Logout"></a>Logout</h3>
+<div class="paragraph">
+<p>LogoutFilter checks to see if the logout attribute <code>mgnlLogout</code> is set
+as a request parameter. If this flag is found, the user will be logged
+out and the filter chain will restart with the first filter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Securitycallback"><a class="anchor" href="#src-196595729_Filters-Securitycallback"></a>Security callback</h3>
+<div class="paragraph">
+<p>SecurityCallbackFilter handles 401 and 403 HTTP response codes and
+<code>AccessDeniedExceptions</code>. The filter renders an appropriate "login form"
+that can consist of a redirect or anything else.</p>
+</div>
+<div class="paragraph">
+<p>Multiple <code>HttpClientCallbacks</code> with different configuration and behavior
+can be configured for this filter.</p>
+</div>
+<div class="paragraph">
+<p>Here is the client callback configuration for the Travel demo members
+area redirect and login form.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">securityCallback</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">clientCallbacks</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel-demo-pur</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">originalUrlPattern</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.util.SimpleUrlPattern</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">patternString</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">travel)/members/(profile-update</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">protected)*</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.security.auth.callback.RedirectClientCallback</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">location</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/travel/members/login.html</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">form</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.security.SecurityCallbackFilter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Both callback classes implement the HttpClientCallback interface and
+support their own configuration properties. A custom callback should
+implement this interface.</p>
+</div>
+<div class="paragraph">
+<p>Classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>RedirectClientCallback redirects to a configured path or URL. This is
+useful, for example in single sign-on (SSO) context where the login
+screen is handled by a different application, or to hide the login form
+from a public instance using a fronting server configuration.</p>
+</li>
+<li>
+<p>FormClientCallback renders a login form using Freemarker and the
+template configured with <code>loginForm</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>AbstractHttpClientCallback provides a number of filtering capabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>url</code>. Current request URL decoded and without the context path.</p>
+</li>
+<li>
+<p><code>urlPattern</code></p>
+</li>
+<li>
+<p><code>originalUrl</code>. Original request URL decoded and without the context
+path, but not modified by any filter.</p>
+</li>
+<li>
+<p><code>originalUrlPattern</code></p>
+</li>
+<li>
+<p><code>hostPattern</code></p>
+</li>
+<li>
+<p><code>voters</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, in a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+use+Multisite">multisite</a>
+installation for the request
+<code><a href="http://demo.magnolia-cms.com/travel/about.html" class="bare">http://demo.magnolia-cms.com/travel/about.html</a> :</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>url</code> is <code>/about.html</code></p>
+</li>
+<li>
+<p><code>originalUrl</code> is <code>/travel/about.html</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <a href="#src-196595729_Filters-Multisite">Multisite filter</a> removes the
+first-level node name from the URL.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The methods provided by <code>AbstractHttpClientCallback</code> are also provided
+by the utility class UrlPatternDelegate .</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-CSRFsecurity"><a class="anchor" href="#src-196595729_Filters-CSRFsecurity"></a>CSRF security</h3>
+<div class="paragraph">
+<p>CsrfSecurityFilter checks the HTTP
+<a href="http://en.wikipedia.org/wiki/HTTP_referer">referer</a> header to ensure that
+the request is not a
+<a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet">cross-site
+request forgery</a> attack. When a possible CSRF attack is detected the
+system serves a 400 Bad Request status to the browser. Magnolia also
+logs a security warning to the <a href="Audit.html">audit log</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you access Magnolia with a script, set the referer header in your
+script to ensure the script can access Magnolia. Similarly, if you embed
+Magnolia content into a different website, disable the CSRF filter or
+add a voter (see below) that bypasses the CSRF filter for any requests
+coming from the trusted URL.</p>
+</div>
+<div class="paragraph">
+<p>The CSRF security filter causes a request to fail if:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The referer header is empty</p>
+<div class="paragraph">
+<p><code>Host: mysite.com/.magnolia/pages/adminCentral.html</code></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>`Referer: `
+* The host part of the referer header does not match the requested host.</p>
+</div>
+<div class="paragraph">
+<p>+
+<code>Host: mysite.com/.magnolia/pages/adminCentral.html</code></p>
+</div>
+<div class="paragraph">
+<p><code>Referer: hackersite.io</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Bypassingthefilter"><a class="anchor" href="#src-196595729_Filters-Bypassingthefilter"></a>Bypassing the filter</h4>
+<div class="paragraph">
+<p>You can bypass the CSRF security filter with a <a href="Voters.html">voter</a>.</p>
+</div>
+<div class="paragraph">
+<p>By default, the filter is bypassed if:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The requested URL does not start with <code>/.magnolia</code>. Only AdminCentral
+URLs are vulnerable to CSRF attacks. Other URLs are not checked.</p>
+</li>
+<li>
+<p>The user is not authenticated for AdminCentral access. Only
+authenticated requests are vulnerable to CSRF attacks.</p>
+</li>
+<li>
+<p>The request does not have query parameters.</p>
+</li>
+<li>
+<p>The requested resource is somewhere in AdminCentral. Vaadin has its
+own CSRF protection so Magnolia hands the responsibility over to Vaadin.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can create your own whitelist of referrer domains or URIs using a
+voter. The filter is bypassed for the whitelisted referrers. In this
+example, we bypass the filter for any requests referred by
+`http://www.trustedsite.com/ `.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">csrfSecurity</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bypasses</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BypassWhenNotInAdminCentral</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BypassWhenNotAuthenticated</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BypassWhenNoQueryParameters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BypassWhenVaadinRequest</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">whitelist</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.RequestHeaderPatternSimpleVoter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headerName</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">referer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pattern</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.trustedsite.com" class="bare">http://www.trustedsite.com</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.security.CsrfSecurityFilter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Voter properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;voter node&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Voter node. Name the node for example <code>whitelist</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Fully-qualified voter class name.</p>
+</div>
+<div class="paragraph">
+<p>Available classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>info.magnolia.voting.voters.RequestHeaderPatternSimpleVoter</code>: Checks
+for a URL pattern compliant to SimpleUrlPattern such as
+`http://www.trustedsite.* `.</p>
+</li>
+<li>
+<p><code>info.magnolia.voting.voters.RequestHeaderPatternRegexVoter</code>: Checks
+for a regular expression pattern.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>headerName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Header you are checking such as <code>referer</code>.
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+This is
+<a href="http://en.wikipedia.org/wiki/HTTP_referer#Origin_of_the_term_referer">not
+a misspelling</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pattern</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Domain or URI pattern compliant to SimpleUrlPattern . The pattern must
+be present in the header for the filter to be bypassed.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-CSRFandInternetExplorer"><a class="anchor" href="#src-196595729_Filters-CSRFandInternetExplorer"></a>CSRF and Internet Explorer</h4>
+<div class="paragraph">
+<p>Some builds of Internet Explorer don&#8217;t send the HTTP request header
+<a href="https://en.wikipedia.org/wiki/HTTP_referer">referrer</a> when submitting a
+form or when opening a popup. If the referrer is not in the HTTP request
+header, <code>CsrfSecurityFilter#handlePossibleCsrf</code> interprets the request
+as potential CSRF attack which forces the user to log in on the popup.
+(See
+<a href="https://jira.magnolia-cms.com/browse/MAGNOLIA-6211?src=confmacro"><</a> - Popup requires another login in IE 11
+<span class="status  green  subtle">Closed</span> ). To overcome this issue, add voter
+class UserAgentVoter to bypass CsrfSecurityFilter for Internet Explorer.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">csrfSecurity</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bypasses</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">userAgent</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">allowed</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IE6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.<strong>MSIE 6\.0.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IE11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">.<strong>Trident/7.0; rv:11.0.</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.voting.voters.UserAgentVoter</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Below the node <code>allowed</code> you can add a list of regular expressions to
+match the HTTP header userAgent. In the example above we have bypassed
+Internet Explorer 6 and 11.</p>
+</div>
+<div class="paragraph">
+<p>To ensure the filter is bypassed, make sure to have at least one
+property on the node <code>allowed</code> with a value which will match the
+userAgent of the browser for which you want to bypass the filter. (For
+Internet Explorer 11, the userAgent
+<a href="https://blogs.msdn.microsoft.com/ieinternals/2013/09/21/internet-explorer-11s-many-user-agent-strings/">might
+be</a> <em>Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko</em>.)</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Always test changes on test environment before applying it to a
+production system. When adding an erroneous regular expression - you
+won&#8217;t access admin central anymore. (In such case you have to use
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Groovy+module#Groovymodule-RescueApp">Groovy
+Rescue App</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Cross-sitesecurity"><a class="anchor" href="#src-196595729_Filters-Cross-sitesecurity"></a>Cross-site security</h3>
+<div class="paragraph">
+<p>CrossSiteSecurityFilter grants or denies permission to a site when the
+site is requested through a particular domain name. For example, if you
+only grant access to the <code>travel</code> site through <code>www.travel.com</code>, no
+other URL can be used to access the content. When a user tries to access
+one site&#8217;s content through another site&#8217;s domain name, the system
+displays a HTTP 404 error (page not found). See
+<a href="Cross-site-security.html">Cross-site security</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-URIsecurity"><a class="anchor" href="#src-196595729_Filters-URIsecurity"></a>URI security</h3>
+<div class="paragraph">
+<p>URISecurityFilter checks to see if the active user has permission to
+access the requested URI. In DX Core, SiteUriSecurityFilter (included in
+the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Multisite+module">Multisite
+module</a>) extends <code>UriSecurityFilter</code> to provide site aware
+functionality.</p>
+</div>
+<div class="paragraph">
+<p>The following constraints are considered in finding the permissions of
+the user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>URI ACLs of the user&#8217;s roles</p>
+</li>
+<li>
+<p>URI ACLs of the user&#8217;s groups' roles</p>
+</li>
+<li>
+<p>Permissions on IP addresses</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the user does not have the permission to access the URI then JAAS
+will provide a login form. This default behavior of the URI security
+filter can be changed in JAAS configuration.</p>
+</div>
+<div class="paragraph">
+<p>You can configure your own login form in the URI security filter to
+replace the default Magnolia login form. The form is configured in
+<code>/server/filters/securityCallback/clientCallbacks</code>. Here is an example
+of a custom form used to grant public users access to a restricted
+members area. Authentication is delegated to the custom form when a
+particular URI is accessed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196595729/login-form.png" alt="images/download/attachments/196595729/login-form.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you do not <a href="Roles-and-access-control-lists.html">grant permission
+to the custom login form path</a>, a standard Magnolia login form is
+displayed, usually on the author instance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Range"><a class="anchor" href="#src-196595729_Filters-Range"></a>Range</h3>
+<div class="paragraph">
+<p>RangeSupportFilter adds support for ranged requests. Ranged requests is
+used by iPhone and some other clients to stream videos. In contrast to
+Android phones, iPhone does not support any other method of streaming
+videos.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-i18ncontentsupport"><a class="anchor" href="#src-196595729_Filters-i18ncontentsupport"></a>i18n content support</h3>
+<div class="paragraph">
+<p>I18nContentSupportFilter detects the requested locale and sets the
+locale in the aggregation state. The filter rewrites the internal
+current URI, whether virtual or not. It does not rewrite the URI
+displayed to the user, however. See <a href="Language.html">Language</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Cache"><a class="anchor" href="#src-196595729_Filters-Cache"></a>Cache</h3>
+<div class="paragraph">
+<p>CacheFilter manages the Magnolia cache.</p>
+</div>
+<div class="paragraph">
+<p>The cache filter checks if a requested resource is already stored in the
+cache to avoid recreation of the resource. If the resource is in the
+cache, then it will be written to the response and the filter chain
+stops. If the resource is not found in the cache, then a
+<code>ResponseWrapper</code>, which not only writes to the "standard" response but
+also saves the response, is passed to the chain. After the filters that
+follow have been executed (and the requested resource created), the
+content is extracted from the response wrapper and stored in the cache.</p>
+</div>
+<div class="paragraph">
+<p>The cache filter is part of
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cache+core">Cache core</a> and
+the respective configuration can be found in the module configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-VirtualURI"><a class="anchor" href="#src-196595729_Filters-VirtualURI"></a>Virtual URI</h3>
+<div class="paragraph">
+<p>VirtualUriFilter checks if the requested URI matches a configured URI
+pattern and executes the <a href="URI-mapping.html">URI mapping</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Servletsfilterchain"><a class="anchor" href="#src-196595729_Filters-Servletsfilterchain"></a>Servlets filter chain</h3>
+<div class="paragraph">
+<p>The servlets configured in modules are installed in Magnolia&#8217;s servlets
+filter chain using the ServletDispatchingFilter as the implementing
+filter class. If the servlet mapping matches the URI, then the
+<code>service(..</code>) method of the servlet is called. See
+<a href="Registering-a-servlet.html">Registering a servlet</a> for more.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-CMSfilterchain"><a class="anchor" href="#src-196595729_Filters-CMSfilterchain"></a>CMS filter chain</h3>
+<div class="paragraph">
+<p>Finally, we arrive at the filter chain which does the page rendering and
+delivery. The filters are grouped in this filter chain so they share a
+co-bypass definition.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Repositorymapping"><a class="anchor" href="#src-196595729_Filters-Repositorymapping"></a>Repository mapping</h4>
+<div class="paragraph">
+<p>RepositoryMappingFilter handles access to different
+<a href="Workspaces.html">workspaces</a>. By default, Magnolia is connected with
+the <code>website</code> workspace. Therefore a request URI is interpreted as the
+path to a node in the <code>website</code> workspace. If you want to address nodes
+in other workspaces you need to specify a repository mapping in
+<code>/server/URI2RepositoryMapping</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Contentsecurity"><a class="anchor" href="#src-196595729_Filters-Contentsecurity"></a>Content security</h4>
+<div class="paragraph">
+<p>Whereas the <a href="#src-196595729_Filters-URIsecurity">URI security</a> filter
+checks permissions on the URI, ContentSecurityFilter checks if the
+current user has permission to access the requested content resource.
+The following constraints are considered in finding the permissions of
+the user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Workspace-specific ACLs of the user&#8217;s roles</p>
+</li>
+<li>
+<p>Workspace-specific ACLs of the user&#8217;s groups' roles</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the user does not have permission to the resource, then JAAS will
+provide a login form. This default behavior of the content security
+filter can be changed in JAAS configuration.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Aggregator"><a class="anchor" href="#src-196595729_Filters-Aggregator"></a>Aggregator</h4>
+<div class="paragraph">
+<p>AggregatorFilter analyses the request and stores the results in the
+AggregationState . After this filter, every value the aggregation state
+can have is known.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Target</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Collected information</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>Content node of the requested page</p>
+</li>
+<li>
+<p>Template</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NodeData</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><code>NodeData</code> object of the requested data</p>
+</li>
+<li>
+<p>Template if a template is connected with the <code>NodeData</code></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Variantresolver"><a class="anchor" href="#src-196595729_Filters-Variantresolver"></a>Variant resolver</h4>
+<div class="paragraph">
+<p>VariantResolverFilter is a
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization">personalization</a>
+filter that wraps
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Personalization#Personalization-Variantsarealternativecontent">variant
+nodes</a>. The filter tries to resolve a variant from the current node
+(from <code>AggregationState</code>) using all available traits stored in the
+<code>TraitCollector</code> and wraps it accordingly, if required. It only uses
+<code>PersonalizationNodeWrapper</code> if a variant was resolved. Non-variants are
+not wrapped.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 69%;">
+<col style="width: 31%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">cms</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">variantResolver</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wrapOnlyPersonalizedNodes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Property:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>wrapOnlyPersonalizedNodes</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong> <em>, default is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>If set to <code>true</code>, only page variants are wrapped.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Intercept"><a class="anchor" href="#src-196595729_Filters-Intercept"></a>Intercept</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+Deprecated since Magnolia 5.1. This filter is no longer used. Its
+function is now handled in part by the page editor and in part by the
+<a href="#src-196595729_Filters-Channel"><code>MultiChannelFilter</code></a> .</p>
+</div>
+<div class="paragraph">
+<p>InterceptFilter handles administrative requests from AdminCentral like</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sort nodes</p>
+</li>
+<li>
+<p>Delete a node</p>
+</li>
+<li>
+<p>Switch to preview</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Modelexecution"><a class="anchor" href="#src-196595729_Filters-Modelexecution"></a>Model execution</h4>
+<div class="paragraph">
+<p>ModelExecutionFilter executes the component model before template
+rendering. The filter looks for a request parameter containing the UUID
+of the component to execute. The model can send output in which case
+page rendering is skipped, or return a URI prefixed by <code>redirect</code>,
+<code>permanent</code> or <code>forward</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196595729_Filters-Rendering"><a class="anchor" href="#src-196595729_Filters-Rendering"></a>Rendering</h4>
+<div class="paragraph">
+<p>Finally, RenderingFilter is responsible for delivering the requested
+resource. If the requested resource is data, such as a file, then the
+data is just copied to the response.</p>
+</div>
+<div class="paragraph">
+<p>The rendering filter is terminal, meaning it ends the filter chain and
+filtering process. If no filter before it has been able to fulfill the
+request and the rendering filter cannot find the page either, then a 404
+"Page not found" error is returned. This is the default behavior.</p>
+</div>
+<div class="paragraph">
+<p>You can change the behavior by adding a <code>terminateChain</code> property under
+the rendering filter and setting it to <code>false</code>. When a request for a
+page such as <code>/home/some/page</code> is received and no such page exists in
+the JCR, your own servlets can have a go at fulfilling the request. The
+default value for the <code>terminateChain</code> property is true.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Restrictingaccesstoresources"><a class="anchor" href="#src-196595729_Filters-Restrictingaccesstoresources"></a>Restricting access to resources</h3>
+<div class="paragraph">
+<p>Access to resources is defined in the
+<code>/modules/resources/config/resourceFilter</code> filter. By default, the
+filter allows access to resources as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>byType</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>css, map, js, htm(l), ico, woff(2), ttf, svg, gif, jp(e)g, tiff, bmp</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>byLocation</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>when located in the &#8216;webresources&#8217; directory</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-AddingHTTPheaders"><a class="anchor" href="#src-196595729_Filters-AddingHTTPheaders"></a>Adding HTTP headers</h3>
+<div class="paragraph">
+<p>The AddHeadersFilter implementation class allows configuration of a
+filter for adding HTTP headers to enable, for example,
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/CORS">Cross-origin
+resource sharing (CORS)</a>. The parameters configured in this filter are
+added to the HTTP header if the filter is triggered. You can restrict
+the filter&#8217;s scope by adding and configuring a <code>bypasses</code> node to it.
+For details please refer to the
+<a href="Request-processing-and-filters.html#src-196595721_Requestprocessingandfilters-Magnoliamainfilter">Magnolia
+main filter</a> page.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example configuration for CORS</strong></p>
+</div>
+<div class="paragraph">
+<p>The example allows CORS with header types <code>X-Requested-With</code>,
+<code>Content-Type</code>, <code>Accept</code>, with the <code>GET</code> method, and from any origin:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">server</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">filters</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HeaderFilterOne</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">enabled</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">class</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.cms.filters.AddHeadersFilter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headers</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Allow-Headers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">X-Requested-With, Content-Type, Accept</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Allow-Methods</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GET</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Access-Control-Allow-Origin</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The position of a filter within the filter chain matters. The
+appropriate position depends on the use case.</p>
+</div>
+<div class="paragraph">
+<p>When using this filter to enable cross-origin resource sharing (CORS) -
+place it <em>after</em> <code>uriSecurity</code> filter.</p>
+</div>
+<div class="paragraph">
+<p>Properties used in the example:</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 28%;">
+<col style="width: 72%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required,</strong> <em>deafult is `false`</em></p>
+</div>
+<div class="paragraph">
+<p>Enables or disables the filter.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Class that implements the filter: AddHeadersFilter.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Allow-Headers</code><strong><br>
+</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Headers allowed for the request.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Allow-Methods</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The HTTP verbs that are allowed to make the request.</p>
+</div>
+<div class="paragraph">
+<p>See: <a href="http://tools.ietf.org/html/7231#section-4">RFC 7231, section 4:
+Request methods</a> and <a href="http://tools.ietf.org/html/5789#section-2">RFC 5789,
+section 2: Patch method</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Access-Control-Allow-Origin</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The origin of the request (URL/host).</p>
+</div>
+<div class="paragraph">
+<p>The wildcard <code>*</code> is used to allow any origin.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196595729_Filters-Customfilters"><a class="anchor" href="#src-196595729_Filters-Customfilters"></a>Custom filters</h3>
+<div class="paragraph">
+<p>If you need a custom filter, please read <a href="Custom-filters.html">Custom
+filters</a>.</p>
+</div>
+<div class="paragraph">
+<p>Dynamic servlet mapping</p>
+</div>
+<div class="paragraph">
+<p>Registering a servlet</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

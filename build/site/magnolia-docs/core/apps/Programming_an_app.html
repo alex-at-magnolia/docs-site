@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Programming an app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Programming_an_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Programming_an_app.html">Programming an app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Programming an app - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Developing_an_app.html">Developing an app</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196598426"><a class="anchor" href="#src-196598426"></a>Programming an app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>To program an app, you need a development environment. Use the same
+environment you would use for other Magnolia development tasks. See
+<a href="http://documentation.magnolia-cms.com/developing.html">Developing</a> for
+instructions on how to set it up.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Components"><a class="anchor" href="#src-196598426_Programminganapp-Components"></a>Components</h3>
+<div class="paragraph">
+<p><strong>Note -</strong> The term component is a developer term that here refers to Java
+objects, not templating components.</p>
+</div>
+<div class="paragraph">
+<p>A component provides a service such as keeping a registry of templates.
+Components expose their functionality to other components through an
+interface or an API. A typical component depends on a number of other
+components and benefits from dependency injection as Magnolia will
+connect components to satisfy their dependencies. Components are either
+singletons, which means that they are around for the lifetime of the
+server, or they are tied to shorter durations such as the duration of an
+HTTP request or a user session. The duration is known as scope.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Appsandcomponents"><a class="anchor" href="#src-196598426_Programminganapp-Appsandcomponents"></a>Apps and components</h3>
+<div class="paragraph">
+<p>Each app has its own component provider that uses components in the
+<code>app-&lt;app name&gt;</code> group. Each subapp has a component provider that uses
+components described for it. Component providers have the app component
+provider as their parent:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598433/app-component-hierarchy.png" alt="images/download/attachments/196598433/app-component-hierarchy.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Definingappcomponentsinamoduledescriptor"><a class="anchor" href="#src-196598426_Programminganapp-Definingappcomponentsinamoduledescriptor"></a>Defining app components in a module descriptor</h3>
+<div class="paragraph">
+<p>Define your components in the module descriptor. Here is a minimal
+module descriptor that doesn&#8217;t declare any components yet. It just
+declares the module name and version.</p>
+</div>
+<div class="paragraph">
+<p>A minimal module descriptor</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE module SYSTEM <code>"module.dtd"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;module&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;name&gt;ui-helloworld-app&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;displayName&gt;Hello World App&lt;/displayName&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;description&gt;The Famous Hello World App&lt;/description&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;version&gt;<code>1.0</code>&lt;/version&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/module&gt;</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Defininganapporsubappasacomponent"><a class="anchor" href="#src-196598426_Programminganapp-Defininganapporsubappasacomponent"></a>Defining an app or subapp as a component</h3>
+<div class="paragraph">
+<p>Best practice</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Defining something as a component allows other developers quickly change
+the implementation. For this reason, you should define anything that is
+likely to be changed or customized later as a component. For example,
+define your apps and subapps as components. Views are also common
+customization points so define the views returned by subapps as
+components. Any components you define are available for injection. This
+is also true for components further up the hierarchy in parent
+components.</p>
+</div>
+<div class="paragraph">
+<p>In the module descriptor file, add a section for each component. Name
+the components using the following convention:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>app-&lt;app name&gt;</code></p>
+</li>
+<li>
+<p><code>app-&lt;app name&gt;-&lt;subapp name&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;app name&gt;</code> is the name configured in the app configuration in
+AdminCentral. For example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>app-helloworld</code></p>
+</li>
+<li>
+<p><code>app-helloworld-main</code></p>
+</li>
+<li>
+<p><code>app-helloworld-greeter</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Component defined in a module descriptor XML file</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;components&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;id&gt;app-helloworld&lt;/id&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/components&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;components&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;id&gt;app-helloworld-main&lt;/id&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;component&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;type&gt;info.magnolia.ui.app.helloworld.main.HelloWorldMainSubAppView&lt;/type&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;implementation&gt;info.magnolia.ui.app.helloworld.main.HelloWorldMainSubAppViewImpl&lt;/implementation&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/component&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/components&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;components&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;id&gt;app-helloworld-greeter&lt;/id&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;component&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;type&gt;info.magnolia.ui.app.helloworld.greeter.HelloWorldGreeterSubAppView&lt;/type&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;implementation&gt;info.magnolia.ui.app.helloworld.greeter.HelloWorldGreeterSubAppViewImpl&lt;/implementation&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/component&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/components&gt;</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Projectstructure"><a class="anchor" href="#src-196598426_Programminganapp-Projectstructure"></a>Project structure</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use a
+<a href="http://wiki.magnolia-cms.com/display/WIKI/Module+QuickStart">Maven
+archetype</a> to get a ready-made Magnolia module structure. An archetype
+has a top-level project and a webapp configured as a Maven submodule.</p>
+</li>
+<li>
+<p>Structure your app project in the IDE as shown in the example below.
+Put the app and subapp classes in the same folder.</p>
+</li>
+<li>
+<p>Export the app configuration and the <a href="App_launcher_layout.html">app
+launcher configuration</a> into XML and put them in the <code>resources</code> folder.
+The module descriptor file goes in <code>resources/META-INF.magnolia</code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>App project structure in your IDE:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598426/magnolia-ui-app-helloworld.png" alt="images/download/attachments/196598426/magnolia-ui-app-helloworld.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Implementinganapp"><a class="anchor" href="#src-196598426_Programminganapp-Implementinganapp"></a>Implementing an app</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a class that implements the <code>App</code> interface, or extend the
+<code>BaseApp</code> class. The second option is more convenient.</p>
+</li>
+<li>
+<p>In your app class, implement any custom methods or functionality you
+need.</p>
+</li>
+<li>
+<p>Inject the <code>AppContext</code> and <code>AppView</code> as a dependency.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Note</strong>: This is only needed if you want to extend the App by custom
+functionality. Otherwise use <code>info.magnolia.ui.framework.app.BaseApp</code> as
+the app class in the configuration.</p>
+</div>
+<div class="paragraph">
+<p>Implementing an app class and injecting a dependency on AppContext.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> HelloWorldApp </code>extends`</code> BaseApp {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> HelloWorldApp(AppContext appContext, AppView view) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(appContext, view);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-Startinganapp"><a class="anchor" href="#src-196598426_Programminganapp-Startinganapp"></a>Starting an app</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>To start an app, you can either search for it In the Find Bar or click
+the app launcher icon and then click the the icon. To do this
+programmatically, you can trigger a <code>LocationChange</code> event by calling
+<code>LocationController.goTo()</code> with the location as an argument.</p>
+</li>
+<li>
+<p>The <code>AppController</code> will now take care of opening the correct app and
+subapp based on the app name and subapp ID as defined in the
+<a href="App_descriptor.html">configuration</a>.</p>
+</li>
+<li>
+<p>To hook into the starting cycle or location handling of an app:</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Override App methods</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> HelloWorldApp </code>extends`</code> BaseApp {`</p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>void</code> start(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>super</code>.start(location);`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// code to extend default behavior</code></p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> locationChanged(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>.locationChanged(location);`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// code to extend default behavior</code></p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-Stoppinganapp"><a class="anchor" href="#src-196598426_Programminganapp-Stoppinganapp"></a>Stopping an app</h4>
+<div class="paragraph">
+<p>When an app stops, you get a callback to the <code>stop</code> method to do
+cleanup. The cleanup can involve closing files, closing network
+connections and so on.</p>
+</div>
+<div class="paragraph">
+<p>Stopping an app</p>
+</div>
+<div class="paragraph">
+<p><code>@Override</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> stop() {`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`// code to extend default behavior</code></p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-Handlinglocationchanges"><a class="anchor" href="#src-196598426_Programminganapp-Handlinglocationchanges"></a>Handling location changes</h4>
+<div class="paragraph">
+<p>When your app is requested with a location fragment, you might need to
+handle changing the location. In your app class, override the
+<code>locationChanged</code> method.</p>
+</div>
+<div class="paragraph">
+<p>Handling a location change</p>
+</div>
+<div class="paragraph">
+<p><code>@Override</code></p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>void`</code> locationChanged(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>super</code>.locationChanged(location);`</p>
+</div>
+<div class="paragraph">
+<p>`  String parameter = location.getParameter();`</p>
+</div>
+<div class="paragraph">
+<p>`    doFoo(parameter);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Remember, if the subapp is requested with a location that is already
+open in a running subapp, the Magnolia Shell takes care of bringing that
+subapp to focus instead of starting a new one.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-SubApp"><a class="anchor" href="#src-196598426_Programminganapp-SubApp"></a>SubApp</h3>
+<div class="paragraph">
+<p>Subapp is an app that runs in its own tab. For example, the Pages app
+always has the <code>main</code> subapp open in the first tab and multiple <code>detail</code>
+subapps for each page that is edited. The <code>main</code> subapp has the label
+“Pages” while the <code>detail</code> subapps are labeled according to the page
+title, for example Travel Home.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598426/subApp.png" alt="images/download/attachments/196598426/subApp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>When the subapp starts it must return a view. The view draws a user
+interface on the tab so that there is something for the user to interact
+with. The view takes up the whole tab and adds a caption.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-ImplementingaSubApp"><a class="anchor" href="#src-196598426_Programminganapp-ImplementingaSubApp"></a>Implementing a SubApp</h4>
+<div class="paragraph">
+<p>Create a class that implements the SubApp interface or extend the
+<code>BaseSubApp</code> class. The second option is more convenient. In your subApp
+class, implement any custom methods or functionality you need. Inject
+the <code>SubAppContext</code> and a view associated with the subApp as a
+dependency.</p>
+</div>
+<div class="paragraph">
+<p>Implementing a SubApp</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> MyMainSubApp </code>extends`</code> BaseSubApp {`</p>
+</div>
+<div class="paragraph">
+<p>`  `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> MyMainSubApp(<code>final</code> SubAppContext subAppContext, <code>final</code> View view) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(subAppContext, view);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-StartingasubApp"><a class="anchor" href="#src-196598426_Programminganapp-StartingasubApp"></a>Starting a subApp</h4>
+<div class="paragraph">
+<p>The default implementation for starting and changing the location of
+Apps is being delegated to the actual subApp defined in the <code>location</code>.
+If a subApp with the referenced <code>subApp Id</code> is already running, it will
+be asked whether it actually supports the <code>location</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> BaseSubApp </code>implements`</code> SubApp {`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>boolean</code> supportsLocation(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>true</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>In this case all locations with a reference to its subApp Id will be
+handled by this subApp instance. By overriding this method and make it
+return <code>false</code> you would open a new tab for every location change the
+AppController gets which is targeted to this subAppId. To open a new tab
+based on the parameters passed to the subApp, it would look like this:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> MySubApp </code>extends`</code> BaseSubApp {`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`  <code>public</code> <code>boolean</code> supportsLocation(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`        DefaultLocation newLocation = (DefaultLocation) location;`</p>
+</div>
+<div class="paragraph">
+<p>`        String currentParameter = getCurrentLocation().getParameter();`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> currentParameter.equals(newLocation.getParameter());`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>To hook into the starting cycle or location handling of an App:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> MySubApp </code>extends`</code> BaseSubApp {`</p>
+</div>
+<div class="paragraph">
+<p>`  &#8230;&#8203;`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>void</code> onSubAppStart() {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// code to extend default behavior</code></p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>void</code> onSubAppStop() {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// code to extend default behavior</code></p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> locationChanged(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>super</code>.locationChanged(location);`</p>
+</div>
+<div class="paragraph">
+<p>`      <code>`// code to extend default behavior</code></p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-Moduledependencies"><a class="anchor" href="#src-196598426_Programminganapp-Moduledependencies"></a>Module dependencies</h3>
+<div class="paragraph">
+<p>You need to declare your dependencies in the module descriptor. You can
+define runtime or install time dependencies, not build dependencies. If
+you define a dependency on another module, then this module will be
+installed and started before your module. In order to develop a basic
+app, add the following section to your module descriptor:</p>
+</div>
+<div class="paragraph">
+<p>Adding a dependency on AdminCentral.</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;dependencies&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`    &lt;dependency&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;name&gt;ui-admincentral&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;version&gt;<code>5.0</code>/*&lt;/version&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/dependency&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/dependencies&gt;</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196598426_Programminganapp-HelloWorldexample"><a class="anchor" href="#src-196598426_Programminganapp-HelloWorldexample"></a>Hello World example</h3>
+<div class="paragraph">
+<p>This is a step-by-step guide on how to implement a basic hello world
+app. When started, it shows a <code>main</code> subApp containing two buttons.
+Clicking on a button should open a new <code>greeter</code> subApp greeting the
+user associated with the button.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-MainSubApp"><a class="anchor" href="#src-196598426_Programminganapp-MainSubApp"></a>Main SubApp</h4>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598426/hello-world-main-subapp.png" alt="images/download/attachments/196598426/hello-world-main-subapp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>The logic is taken care of by the <code>HelloWorldMainSubApp</code> which adds
+buttons to the view and listens to actions by implementing the
+<code>Listener</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the <code>SubAppContext</code> and the <code>View</code> we also inject the
+<code>LocationController</code> which will be used to open the <code>greeter</code> subApp.</p>
+</div>
+<div class="paragraph">
+<p>Creating a main subapp</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> HelloWorldMainSubApp </code>extends<code> BaseSubApp </code>implements`</code> HelloWorldMainSubAppView.Listener {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> LocationController locationController;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> HelloWorldMainSubApp(<code>final</code> SubAppContext subAppContext, HelloWorldMainSubAppView view, LocationController locationController) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(subAppContext, view);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.locationController = locationController;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>void</code> onSubAppStart() {`</p>
+</div>
+<div class="paragraph">
+<p>`        getView().setListener(<code>this</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        getView().addUser(<code>"Lisa"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        getView().addUser(<code>"Mark"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> HelloWorldMainSubAppView getView() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> (HelloWorldMainSubAppView) <code>super</code>.getView();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * When a button gets clicked in the {@link HelloWorldMainSubAppView} it will call back to this method.`</p>
+</div>
+<div class="paragraph">
+<p>`     * The {@link LocationController#goTo(info.magnolia.ui.framework.location.Location)} will cause the app framework to handle the location change event.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> greetUser(String user) {`</p>
+</div>
+<div class="paragraph">
+<p>`        locationController.goTo(<code>new</code> DefaultLocation(DefaultLocation.LOCATION_TYPE_APP, getAppContext().getName(), <code>"greeter"</code>, user));`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>A simple interface providing methods to add buttons in the view.</p>
+</div>
+<div class="paragraph">
+<p>View Interface and Listener for actions in the view</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface<code> HelloWorldMainSubAppView </code>extends`</code> View {`</p>
+</div>
+<div class="paragraph">
+<p>`   `</p>
+</div>
+<div class="paragraph">
+<p>`  <code>void</code> setListener(Listener listener);`</p>
+</div>
+<div class="paragraph">
+<p>`  <code>void</code> addUser(String user);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>interface</code> Listener {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>void</code> greetUser(String user);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>The view consists of a VerticalLayout and a Label "Say Hello!".</p>
+</div>
+<div class="paragraph">
+<p>Implementing a View for the main subapp</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> HelloWorldMainSubAppViewImpl </code>implements`</code> HelloWorldMainSubAppView {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> VerticalLayout layout = <code>new</code> VerticalLayout();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> Listener listener;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> HelloWorldMainSubAppViewImpl() {`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.setMargin(<code>true</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.setSpacing(<code>true</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.addComponent(<code>new</code> Label(<code>"Say Hello!"</code>));`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> setListener(Listener listener) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.listener = listener;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Component asVaadinComponent() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> layout;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> addUser(<code>final</code> String user) {`</p>
+</div>
+<div class="paragraph">
+<p>`        Button button = <code>new</code> Button(<code>"Say hello to &#8220;` + user + <code>&#8221;!"</code>);</code></p>
+</div>
+<div class="paragraph">
+<p>`        button.addClickListener(<code>new</code> Button.ClickListener() {`</p>
+</div>
+<div class="paragraph">
+<p>`            <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`            <code>public</code> <code>void</code> buttonClick(Button.ClickEvent event) {`</p>
+</div>
+<div class="paragraph">
+<p>`                listener.greetUser(user);`</p>
+</div>
+<div class="paragraph">
+<p>`            }`</p>
+</div>
+<div class="paragraph">
+<p>`        });`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.addComponent(button);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196598426_Programminganapp-GreetersubApp"><a class="anchor" href="#src-196598426_Programminganapp-GreetersubApp"></a>Greeter subApp</h4>
+<div class="paragraph">
+<p>When the user clicks one of the buttons, a new location is requested.
+The <code>AppController</code> will take care of redirecting it to the hello world
+app and launching the <code>greeter</code> subApp.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598426/hello-world-greeter-subapp.png" alt="images/download/attachments/196598426/hello-world-greeter-subapp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>A simple interface providing a method to set the name.</p>
+</div>
+<div class="paragraph">
+<p>Simple View Interface</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface<code> HelloWorldGreeterSubAppView </code>extends`</code> View {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>void</code> setGreeting(String name);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>The view consists of a VerticalLayout and a Label
+<code>"Hello " + name + "!"</code>.</p>
+</div>
+<div class="paragraph">
+<p>Implementing a View for the main subapp</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> HelloWorldGreeterSubAppViewImpl </code>implements`</code> HelloWorldGreeterSubAppView {`</p>
+</div>
+<div class="paragraph">
+<p>`    VerticalLayout layout = <code>new</code> VerticalLayout();`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> HelloWorldGreeterSubAppViewImpl() {`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.setMargin(<code>true</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.setSpacing(<code>true</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> Component asVaadinComponent() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> layout;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>void</code> setGreeting(String name) {`</p>
+</div>
+<div class="paragraph">
+<p>`        layout.addComponent(<code>new</code> Label(<code>"Hello &#8220;` + name + <code>&#8221;!"</code>));</code></p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>HelloWorldGreeterSubApp</code> will override the default caption of the
+tab by the name passed as a parameter and set it on the view.</p>
+</div>
+<div class="paragraph">
+<p>Creating a main subapp</p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class<code> HelloWorldGreeterSubApp </code>extends`</code> BaseSubApp {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> String name;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Inject</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> HelloWorldGreeterSubApp(<code>final</code> SubAppContext subAppContext, <code>final</code> HelloWorldGreeterSubAppView view) {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>super</code>(subAppContext, view);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Extracts the name to greet from the {@link Location}s parameter and passes it to the {@link HelloWorldGreeterSubAppView}.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>void</code> onSubAppStart() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>this</code>.name = getCurrentLocation().getParameter();`</p>
+</div>
+<div class="paragraph">
+<p>`        getView().setGreeting(name);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> HelloWorldGreeterSubAppView getView() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> (HelloWorldGreeterSubAppView)<code>super</code>.getView();`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * Used to set the label on the tab.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> String getCaption() {`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> name;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`/**</code></p>
+</div>
+<div class="paragraph">
+<p>`     * In case there is a subApp instance running, here the decision is made whether this instance will handle the new {@link Location}.`</p>
+</div>
+<div class="paragraph">
+<p>`     */`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>public</code> <code>boolean</code> supportsLocation(Location location) {`</p>
+</div>
+<div class="paragraph">
+<p>`        String newUser = location.getParameter();`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> getCurrentLocation().getParameter().equals(newUser);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>App framework</p>
+</div>
+<div class="paragraph">
+<p>Deploying an app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

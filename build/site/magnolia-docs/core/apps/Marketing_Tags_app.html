@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Marketing Tags app - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/apps/Marketing_Tags_app.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules/Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Marketing_Tags_app.html">Marketing Tags app - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Marketing Tags app - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Apps.html" class="bare">Apps.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Apps.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_apps.html">List of apps</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597937"><a class="anchor" href="#src-196597937"></a>Marketing Tags app</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>Related topics</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Marketing+Tags+module">Marketing
+Tags module</a></p>
+</li>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies">GDPR and
+cookies</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Marketing Tags app is a central place to manage marketing tags such
+as Web analytics, third-party content and advertising network code
+snippets. The app allows you to create tags and place them on pages.
+Since many of these tags require cookies to work, you can also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies#GDPRandcookies-anc-mktgtag-eg">link
+tags to cookies</a> defined in the <a href="Cookies_app.html">Cookies app</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597937/6-0-marketingTagsapp.png" alt="images/download/attachments/196597937/6-0-marketingTagsapp.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The app manages <em>marketing tags</em>, which are different from <em>content
+tags.</em> Content tags – keywords or terms assigned to an item of content –
+are managed using the <a href="Tags_app.html">Tags app</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_safe-id-TWFya2V0aW5nVGFnc2FwcC1XaGF0YXJlbWFya2V0aW5ndGFncz8"><a class="anchor" href="#src-196597937_safe-id-TWFya2V0aW5nVGFnc2FwcC1XaGF0YXJlbWFya2V0aW5ndGFncz8"></a>What are marketing tags?</h3>
+<div class="paragraph">
+<p>Marketing tags are snippets of code that you insert on Web pages. Tags
+typically collect analytics information such as how many visitors view
+the page and how long they stay. Tags can also integrate third-party
+content such as social media on your site or insert ad campaigns. You
+can use tags to learn more about visitors or provide content.</p>
+</div>
+<div class="paragraph">
+<p>A tag is typically a piece of JavaScript code. When a page loads, the
+JavaScript code runs and collects usage information about the page and
+the visitor. The tag then reports this information to the service that
+provided the tag. The service stores and analyses the information. If
+the service provides an analytics dashboard you can display it in the
+<a href="#">Marketing Tags app</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196598904/diagram-tags-manager.png" alt="images/download/attachments/196598904/diagram-tags-manager.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Since many of these tags require cookies to work, you can also
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies">link tags
+to cookies</a> defined in the <a href="Cookies_app.html">Cookies app</a>. By
+linking tags to cookies, you can make sure the tags used on your website
+comply with data privacy rules.</p>
+</div>
+<div class="paragraph">
+<p>For more information about what marketing tags are and how they are
+used, see:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.signal.co/resources/tag-management-101/">What are Third
+Party Tags and Tag Management?</a></p>
+</li>
+<li>
+<p><a href="https://developers.google.com/analytics/devguides/collection/gajs/">Google
+Analytics: Tracking Basics (Asynchronous Syntax)</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Configuration"><a class="anchor" href="#src-196597937_MarketingTagsapp-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>The Marketing Tags app is installed by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Marketing+Tags+module">Marketing
+Tags module</a>. The app is configured at <strong>Configuration &gt;</strong>
+<code>/modules/marketing-tags/</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modules</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">marketing-tags</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="src-196597937_MarketingTagsapp-Workspace"><a class="anchor" href="#src-196597937_MarketingTagsapp-Workspace"></a>Workspace</h4>
+<div class="paragraph">
+<p>The app operates on the <code>marketing-tags</code> workspace where the code
+snippets and their details are stored.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597937_MarketingTagsapp-Nodetypes"><a class="anchor" href="#src-196597937_MarketingTagsapp-Nodetypes"></a>Node types</h4>
+<div class="paragraph">
+<p>The Marketing Tags module registers a custom <code>mgnl:marketing-tag</code>
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Node+types">node type</a>. The
+Marketing Tags app operates on nodes of this type.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Pageareas"><a class="anchor" href="#src-196597937_MarketingTagsapp-Pageareas"></a>Page areas</h3>
+<div class="paragraph">
+<p>The module inserts marketing tags into three alternative page areas:
+<code>bodyBeginScripts</code>, <code>bodyEndScripts</code> and <code>headerScripts</code>. To function
+correctly your page templates should contain these areas.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>: DX Core Travel demo prototype in <strong>Site app</strong>
+/<code>travel/prototype/areas</code>.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Node name</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">areas</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodyBeginScripts</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">bodyEndScripts</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">extends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">../headerScripts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">headerScripts</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">createAreaNode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">modelClass</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">info.magnolia.marketingtags.model.ScriptsAreaModel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">templateScript</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">/templates/scriptsArea.ftl</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">noComponent</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">renderType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">freemarker</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Properties:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>&lt;area name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Area+definition">Area
+definition</a> within a page template</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createAreaNode</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>When set to <code>false</code> no area node is created in the repository. See
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Area+definition">Creating
+area nodes</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>modelClass</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>ScriptsAreaModel : Area model for tag insertion. It looks through all
+the tags to determine which ones belong</p>
+</div>
+<div class="paragraph">
+<p>to each tag area of the page.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>templateScript</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>scriptsArea.ftl</code> assigns the model and inserts the marketing tags into
+the HTML. See below.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>type</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p><code>noComponent</code> areas contain no components.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>renderType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong> on Blossom*</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Renderers">Renderer</a> to use.
+Magnolia supports the <code>freemarker</code> renderer by default.</p>
+</div>
+<div class="paragraph">
+<p>*) If not defining the <em>renderType</em>, Magnolia is using the one defined
+on the parent template (typically the page template). On Blossom, you
+should define the <em>renderType</em> on the area too.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Here&#8217;s <code>scriptsArea.ftl</code>:</p>
+</div>
+<div class="paragraph">
+<p><code>[#assign areaModel = model!]</code></p>
+</div>
+<div class="paragraph">
+<p><code>[#list areaModel.tags as tagNode]</code></p>
+</div>
+<div class="paragraph">
+<p>`    [#assign tag = cmsfn.asContentMap(tagNode)]`</p>
+</div>
+<div class="paragraph">
+<p>`    [#if (cmsfn.publicInstance || tag.activeAuthor!false) &amp;&amp; tag.content?has_content]`</p>
+</div>
+<div class="paragraph">
+<p>`        ${areaModel.preRender(tag)}`</p>
+</div>
+<div class="paragraph">
+<p>`    [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>[/#list]</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Settingtagproperties"><a class="anchor" href="#src-196597937_MarketingTagsapp-Settingtagproperties"></a>Setting tag properties</h3>
+<div class="paragraph">
+<p>In tag properties, define a name for the tag and indicate where in page
+HTML it should be inserted. Usually, the provider of the tag specifies
+where the tag should be added. If not specified, the safest is probably
+the <code>head</code> element. If the tag takes a long time to load and delays page
+rendering put at the end of the body. Optionally you can also define a
+dashboard URL for viewing the information collected by the tag.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597937/6-0-marketingTagsApp-editTag.png" alt="images/download/attachments/196597937/6-0-marketingTagsApp-editTag.png"></span></p>
+</div>
+<div class="paragraph">
+<p>Fields:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Name</strong>: Name the service that provided the tag such as "Google
+Analytics".</p>
+</li>
+<li>
+<p><strong>Dashboard URL</strong>: Address of an analytics dashboard provided by the tag
+service. A dashboard reports the information collected by the tag.</p>
+</li>
+<li>
+<p><strong>Active on author</strong>: Check the box to insert the tag on pages also on
+the author
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Instances">instance</a>. You
+may want to do this during development and testing so you can see the
+tag while using the Page Editor. Tags should typically only be inserted
+on the public instance.</p>
+</li>
+<li>
+<p><strong>Tag location</strong>: Where to insert the tag in the page HTML. There are
+three options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>head</strong>: inside the <code>&lt;head&gt;</code> element</p>
+</li>
+<li>
+<p><strong>beginning of the body</strong>: right after the opening <code>&lt;body&gt;</code> element</p>
+</li>
+<li>
+<p><strong>end of the body</strong>: right before the closing <code>&lt;/body&gt;</code> element</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Settingtagcontent"><a class="anchor" href="#src-196597937_MarketingTagsapp-Settingtagcontent"></a>Setting tag content</h3>
+<div class="paragraph">
+<p>Tag content is typically a piece of JavaScript code. Some tag providers
+refer to it as a tag, others as a snippet or hook. Paste the code
+provided by the service into the box. Magnolia inserts the code on the
+pages you choose on the <strong>Pages</strong> tab.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597937/6-0-marketingTagsApp-content.png" alt="images/download/attachments/196597937/6-0-marketingTagsApp-content.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Choosingpages"><a class="anchor" href="#src-196597937_MarketingTagsapp-Choosingpages"></a>Choosing pages</h3>
+<div class="paragraph">
+<p>Choose to which pages the tag should be added. Check the <strong>Insert in
+subpages</strong> box to insert the tag on all pages in a site branch.
+Alternatively, you can select a template. Tags are added to all pages
+based on the template.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597937/6-0-marketingTagsApp-pages.png" alt="images/download/attachments/196597937/6-0-marketingTagsApp-pages.png"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Linkingtocookies"><a class="anchor" href="#src-196597937_MarketingTagsapp-Linkingtocookies"></a>Linking to cookies</h3>
+<div class="paragraph">
+<p>Link a tag to a cookie defined in the <a href="Cookies_app.html">Cookies app</a>
+to control whether the tag&#8217;s cookie is set or not.</p>
+</div>
+<div class="paragraph">
+<p>Marketing tag cookies are set on the client-side using JavaScript.
+Although you cannot control cookies set on the client-side using
+Magnolia, the JavaScript code snippet, which sets the tag&#8217;s cookie, is
+added by Magnolia on the server-side. By linking the tag to a cookie
+defined in the Cookies app, you can control whether or not the code
+snippet is added or not (and so whether the cookie is set or not) based
+on the website visitor&#8217;s
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/GDPR+and+cookies#GDPRandcookies-anc-cookie-consent-interaction">cookie
+consent decision</a>.</p>
+</div>
+<div class="paragraph">
+<p>Click <strong>Add</strong> and select a cookie from the Cookies app.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597937/6-0-marketingTagsApp-cookies.png" alt="images/download/attachments/196597937/6-0-marketingTagsApp-cookies.png"></span></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you do <em>not</em> link a cookie definition to a marketing tag, the
+marketing tag is always set following the marketing tag definition only
+without checking cookie consent.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Testing"><a class="anchor" href="#src-196597937_MarketingTagsapp-Testing"></a>Testing</h3>
+<div class="paragraph">
+<p>To test tag insertion, create a tag that displays a JavaScript popup.
+This way you can verify that a tag would be inserted on the correct
+pages.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a tag with the following content:</p>
+<div class="paragraph">
+<p>Test</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>&lt;script&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`   window.alert(<code>"Hello Magnolia!"</code>);`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/script&gt;</code>
+. Check the <strong>Active on author</strong> box.
+. Choose some pages where the tag is active.
+. Open a page that has the tag in the Pages app. A popup is displayed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/download/attachments/196597937/6-0-marketingTagsApp-popup.png" alt="images/download/attachments/196597937/6-0-marketingTagsApp-popup.png" height="137"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Publishing"><a class="anchor" href="#src-196597937_MarketingTagsapp-Publishing"></a>Publishing</h3>
+<div class="paragraph">
+<p>Publish the tags from the author instance to the public instance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597937_MarketingTagsapp-Viewingthedashboard"><a class="anchor" href="#src-196597937_MarketingTagsapp-Viewingthedashboard"></a>Viewing the dashboard</h3>
+<div class="paragraph">
+<p>Visit the website of the service that provided the tag in order to view
+the information collected by the tag. You can view the information in a
+separate browser window or in the Marketing Tags app. Click the <strong>Show
+provider dashboard</strong> action.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Some dashboards such as Google Analytics cannot be displayed in a
+subapp. Google explicitly specifies in their headers that a dashboard
+cannot be displayed in an iFrame (<code>x-frame-options: SAMEORIGIN</code>). To get
+around this limitation, click the link at the top of the subapp to open
+the dashboard in a new window.</p>
+</div>
+<div class="paragraph">
+<p>Mail Tools app</p>
+</div>
+<div class="paragraph">
+<p>Messages app</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

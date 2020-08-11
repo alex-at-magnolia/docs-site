@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Periscope module - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Periscope_module.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="Periscope_module.html">Periscope module - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Periscope module - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="List_of_modules.html">List of modules</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597114"><a class="anchor" href="#src-196597114"></a>Periscope module</h2>
+<div class="sectionbody">
+<table id="main-content" class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Edition</th>
+<th class="tableblock halign-left valign-top">CE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">License</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.magnolia-cms.com/mla">MLA</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://jira.magnolia-cms.com/browse/MGNLPER">MGNLPER</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maven site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://nexus.magnolia-cms.com/content/repositories/magnolia.public.releases/info/magnolia/periscope">periscope</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Latest version</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Related topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a></p>
+</li>
+<li>
+<p><a href="Periscope_Result_Ranker_module.html">Periscope Result Ranker
+module</a></p>
+</li>
+<li>
+<p><a href="Image_Recognition_module.html">Image Recognition module</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Periscope module provides back-end functionality used by the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a>. It can
+be used out-of-the-box to search all content apps or extended by
+activating search in external data sources and by implementing
+operations commonly used by your users. The Find Bar brings the back-end
+search functionality of the Periscope module into the
+<a href="UI_module.html">Magnolia UI</a>. It provides the UI display of the Find
+Bar search box, search results grid and the drop-down filters to refine
+results.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The DX Core <a href="Periscope_Result_Ranker_module.html">Periscope Result
+Ranker</a> module works with the periscope modules to provide neural
+network-based ranking for your search results.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597114_Periscopemodule-Modulestructure"><a class="anchor" href="#src-196597114_Periscopemodule-Modulestructure"></a>Module structure</h3>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 23%;">
+<col style="width: 77%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">artifactID</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-periscope-parent</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent reactor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-periscope-api</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides an API to plug in search result
+suppliers to the search result set, as well as to create your own query
+sniffers (for example for vocal commands).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-periscope-core</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides the default search result supplier
+and periscope operation configuration files.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>magnolia-speech-recognition</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Optional submodule.</p>
+</div>
+<div class="paragraph">
+<p>Provides the speech recognition module and service to enable voice data
+processing.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597114_Periscopemodule-Installing"><a class="anchor" href="#src-196597114_Periscopemodule-Installing"></a>Installing</h3>
+<div class="paragraph">
+<p>Maven is the easiest way to install the modules. Add the following
+dependencies to your
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+a+custom+webapp+with+Maven">webapp</a>.
+All the other necessary dependencies will be brought in automatically:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.periscope&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-periscope-core&lt;/artifactId&gt;
+  &lt;version&gt;1.2.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;info.magnolia.periscope&lt;/groupId&gt;
+  &lt;artifactId&gt;magnolia-speech-recognition&lt;/artifactId&gt;
+  &lt;version&gt;1.2.1&lt;/version&gt;
+&lt;/dependency&gt;</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597114_Periscopemodule-Configuration"><a class="anchor" href="#src-196597114_Periscopemodule-Configuration"></a>Configuration</h3>
+<div class="paragraph">
+<p>There&#8217;s no additional configuration required for standard use because
+the default configuration provides a number of search result suppliers
+and periscope operations. All content apps are detected upon startup and
+corresponding search result suppliers for their workspaces are generated
+by the system on-the-fly.</p>
+</div>
+<div class="paragraph">
+<p>You may configure additional search result suppliers and periscope
+operations to suit your specific needs. For general usage information,
+see the <a href="https://wiki.magnolia-cms.com/display/DOCS62/Find+Bar">Find Bar</a>
+page.</p>
+</div>
+<div class="sect3">
+<h4 id="src-196597114_Periscopemodule-Searchresultsuppliers"><a class="anchor" href="#src-196597114_Periscopemodule-Searchresultsuppliers"></a>Search result suppliers</h4>
+<div class="paragraph">
+<p>Search result suppliers are responsible for providing results to the
+Find Bar.</p>
+</div>
+<div class="paragraph">
+<p>By default, all the Magnolia JCR
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Workspaces">workspaces</a> are
+searchable. Content apps are detected when you start Magnolia and the
+system generates corresponding <code>SearchResultSuppliers</code> for their
+workspaces automatically. For performance reasons, search results are
+limited to 10 items per search result supplier and 100 items in total by
+default.</p>
+</div>
+<div class="paragraph">
+<p>For example, this is the definition for the
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Pages+app">Pages app</a>:</p>
+</div>
+<div class="paragraph">
+<p>/periscope-core/searchResultSuppliers/pages.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.periscope.search.jcr.JcrSearchResultSupplierDefinition`</p>
+</div>
+<div class="paragraph">
+<p><code>workspace: website</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeTypes:</code></p>
+</div>
+<div class="paragraph">
+<p>`  - mgnl:page`</p>
+</div>
+<div class="paragraph">
+<p><code>fullTextSearch: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>titleProperty: title</code></p>
+</div>
+<div class="paragraph">
+<p><code>icon: webpages-app</code></p>
+</div>
+<div class="paragraph">
+<p>If you want to search non-JCR databases or external datasets, you must
+create your own corresponding <code>SearchResultSupplier</code>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>For normal content apps you don&#8217;t need to create your own
+<code>SearchResultSupplier</code> Java class or YAML definition. Search result
+suppliers for existing JCR workspaces (at start up) are generated
+automatically.</p>
+</div>
+<div class="sect4">
+<h5 id="src-196597114_Periscopemodule-Creatingacustomsearchresultsupplier"><a class="anchor" href="#src-196597114_Periscopemodule-Creatingacustomsearchresultsupplier"></a>Creating a custom search result supplier</h5>
+<div class="paragraph">
+<p>Use the SearchResultSupplierDefinition interface provided by the
+<code>magnolia-periscope-api</code> submodule to implement a search result
+supplier. For example, you could implement a search result supplier to
+search through images stored on S3 or Flickr.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface`</code> SearchResultSupplier {`</p>
+</div>
+<div class="paragraph">
+<p>`    String getName();`</p>
+</div>
+<div class="paragraph">
+<p>`    Stream&lt;SearchResult&gt; search(SearchQuery query) <code>throws</code> SearchException;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>Each <code>SearchResultSupplier</code> is responsible for supplying results. The
+results of suppliers are represented by <code>SearchResult</code> objects which
+contain text, metadata and a periscope operation request, which
+specifies what should be done when a user selects that result.</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>class`</code> SearchResult {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> String text;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> String excerpt;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> Object operationRequest;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> String type;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> String lastModifiedBy;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>final</code> ZonedDateTime lastModified;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>For example, the built-in <code>JcrSearchResultSupplierDefinition</code> creates an
+<code>InternalNavigationRequest</code> to open the result selected by the user in
+Magnolia.</p>
+</div>
+<div class="sect5">
+<h6 id="src-196597114_Periscopemodule-ForRESTintegrations"><a class="anchor" href="#src-196597114_Periscopemodule-ForRESTintegrations"></a>For REST integrations</h6>
+<div class="paragraph">
+<p>You can define a search result supplier using YAML for integration of
+external data set through REST. For more details, see the page
+<a href="REST_search_result_suppliers_for_Periscope.html">REST search result
+suppliers for Periscope</a>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="src-196597114_Periscopemodule-ForJCRworkspaces"><a class="anchor" href="#src-196597114_Periscopemodule-ForJCRworkspaces"></a>For JCR workspaces</h6>
+<div class="paragraph">
+<p>Content apps are detected when you start Magnolia and the system
+generates corresponding <code>SearchResultSuppliers</code> for their JCR workspaces
+automatically. You only need to define a search result supplier using
+YAML to search JCR workspaces if you want to customize the supplier.
+Magnolia provides a registry with a specific
+JcrSearchResultSupplierDefinition class that searches over defined JCR
+workspaces using specific node types and with the option of performing
+full-text search.</p>
+</div>
+<div class="paragraph">
+<p>In the example below, the <code>JcrSearchResultSupplierDefinition</code> class,
+<code>&lt;my-custom-workspace&gt;</code> workspace and node type <code>&lt;my-node-type&gt;</code> are
+specified. Full-text search is activated within the workspace defined.</p>
+</div>
+<div class="paragraph">
+<p>/my-module/searchResultSuppliers/appName.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>workspace: &lt;my-custom-workspace&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>nodeTypes:</code></p>
+</div>
+<div class="paragraph">
+<p><code>- &lt;my-node-type&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>fullTextSearch: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>titleProperty: caption</code></p>
+</div>
+<div class="paragraph">
+<p><code>class`</code>: info.magnolia.periscope.search.jcr.JcrSearchResultSupplierDefinition`</p>
+</div>
+<div class="paragraph">
+<p><strong>Properties</strong></p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 99%;">
+<colgroup>
+<col style="width: 35%;">
+<col style="width: 65%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>Fully qualified class name of the definition. Must extend
+<code>SearchResultSupplierDefinition</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>enabled</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>Enable or disable the search provider.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>workspace</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The workspace to be searched.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>nodeType</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The node type to be searched.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>titleProperty</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>JCR property to be considered the title of a node. It is always searched
+and used for the result title.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fullTextSearch</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong>, <em>default is `true`</em></p>
+</div>
+<div class="paragraph">
+<p>When set to <code>false</code>, only node names are searched.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>appName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of your app. Specifies which app is opened when a result is
+clicked.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597114_Periscopemodule-Disablingsearchresultsuppliers"><a class="anchor" href="#src-196597114_Periscopemodule-Disablingsearchresultsuppliers"></a>Disabling search result suppliers</h5>
+<div class="paragraph">
+<p>To change which suppliers are enabled, you must provide your own Find
+Bar configuration through component mapping.</p>
+</div>
+<div class="paragraph">
+<p><span id="src-196597114_Periscopemodule-anc-custom-config-provider">#</span>#For
+example, add a custom configuration provider to your
+<a href="Module_descriptor.html">module descriptor</a> :</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;component&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>` &lt;type&gt;info.magnolia.admincentral.findbar.FindBarConfigurationProvider&lt;/type&gt;`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;implementation&gt;com.example.findbar.CustomFindBarConfigurationProvider&lt;/implementation&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/component&gt;</code></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597114_Periscopemodule-Changingtheorderofsearchresultsupplierresults"><a class="anchor" href="#src-196597114_Periscopemodule-Changingtheorderofsearchresultsupplierresults"></a>Changing the order of search result supplier results</h5>
+<div class="paragraph">
+<p>Results are presented asynchronously by search result supplier, from all
+workspaces and in the following default order:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Apps</p>
+</li>
+<li>
+<p>Pages</p>
+</li>
+<li>
+<p>Stories</p>
+</li>
+<li>
+<p>Assets</p>
+</li>
+<li>
+<p>Tours</p>
+</li>
+<li>
+<p>Any other search result suppliers in alphabetical order.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This order is configurable. To change it, you must provide your own Find
+Bar configuration through component mapping
+(<a href="#src-196597114_Periscopemodule-anc-custom-config-provider">see
+example above</a>)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="src-196597114_Periscopemodule-Configuringthedefaultnumberofsearchresultspersupplier"><a class="anchor" href="#src-196597114_Periscopemodule-Configuringthedefaultnumberofsearchresultspersupplier"></a>Configuring the default number of search results per supplier</h5>
+<div class="paragraph">
+<p>For performance reasons, search results are limited to 10 items per
+search result supplier by default.</p>
+</div>
+<div class="paragraph">
+<p>This limit is configurable. To change it, you must provide your own Find
+Bar configuration through component mapping
+(<a href="#src-196597114_Periscopemodule-anc-custom-config-provider">see
+example above</a>)</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597114_Periscopemodule-Periscopeoperations"><a class="anchor" href="#src-196597114_Periscopemodule-Periscopeoperations"></a>Periscope operations</h4>
+<div class="paragraph">
+<p>Periscope operations are actions that are executed based on a
+corresponding operation request, usually triggered by a search result
+when a user clicks it in the Find Bar.</p>
+</div>
+<div class="paragraph">
+<p>By default, Magnolia provides the following `Operation`s out-of-the-box:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Internal navigation – shows an item inside a workspace by opening the
+corresponding app.</p>
+</li>
+<li>
+<p>External navigation – opens a URL in a new browser tab.</p>
+</li>
+<li>
+<p>App navigation – opens an app.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, this is the <code>Operation</code> definition provided for opening an
+app, for example, when a user clicks the "pages app" result or types
+"open pages app":</p>
+</div>
+<div class="paragraph">
+<p>/admincentral/operations/appNavigation.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>requestClass: info.magnolia.periscope.operation.request.AppNavigationRequest</code></p>
+</div>
+<div class="paragraph">
+<p><code>operationClass: info.magnolia.admincentral.findbar.operation.AppNavigationOperation</code></p>
+</div>
+<div class="sect4">
+<h5 id="src-196597114_Periscopemodule-ConfiguringaOperation"><a class="anchor" href="#src-196597114_Periscopemodule-ConfiguringaOperation"></a>Configuring a Operation</h5>
+<div class="paragraph">
+<p>Developers can define additional custom operations to be used by result
+suppliers.</p>
+</div>
+<div class="paragraph">
+<p>This is the generic interface that should be implemented in order to
+introduce a new <code>Operation</code>:</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface`</code> Operation&lt;R&gt; {`</p>
+</div>
+<div class="paragraph">
+<p>`    OperationResult execute(R request);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>In order for Periscope to register the operation, create a definition
+complying with <code>OperationDefinition</code>, for example by creating a YAML
+file under <code>src/main/resources/&lt;module-name&gt;/operations</code> as follows:</p>
+</div>
+<div class="paragraph">
+<p>customOperation.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>requestClass: com.example.mypackage.MyCustomRequest</code></p>
+</div>
+<div class="paragraph">
+<p><code>operationClass: com.example.mypackage.MyCustomOperation</code></p>
+</div>
+<div class="paragraph">
+<p>In this example, a <code>MyCustomOperation</code> is executed whenever a
+<code>SearchResult&#8217;s `getOperationRequest()</code> returns an instance of
+<code>MyCustomRequest</code> (after the result has been clicked).</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Operation definitions work like any other definition in Magnolia,
+meaning they support features like
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">decorations</a>
+or hot-swapping.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="src-196597114_Periscopemodule-Querysniffers"><a class="anchor" href="#src-196597114_Periscopemodule-Querysniffers"></a>Query sniffers</h4>
+<div class="paragraph">
+<p>Query sniffers are listeners for changes in the Find Bar. When a user
+enters a search query into the Find Bar (by typing or speaking),
+Periscope notifies all registered sniffers. The sniffers then decide
+whether to take action or not based on the same query.</p>
+</div>
+<div class="paragraph">
+<p>All built-in query sniffers have the form of commands: they execute an
+action based on certain text patterns. The default ones are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Find – searches and opens the first result:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>node (node name or title), triggered by queries like "find mountain
+tour".</p>
+</li>
+<li>
+<p>content (full-text), triggered by queries like "find pages about
+biking".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Open – command to open apps, triggered by, for example, "open assets
+app".</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="src-196597114_Periscopemodule-Definingquerysniffers"><a class="anchor" href="#src-196597114_Periscopemodule-Definingquerysniffers"></a>Defining query sniffers</h5>
+<div class="paragraph">
+<p>Custom query sniffers can be introduced by implementing the
+<code>QuerySniffer</code> interface:</p>
+</div>
+<div class="paragraph">
+<p>QuerySniffer</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>interface`</code> QuerySniffer {`</p>
+</div>
+<div class="paragraph">
+<p>`    Optional&lt;OperationResult&gt; sniff(String query);`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>For sniffers intended to take action based on a regex pattern, extend
+<code>PatternCommandSniffer</code>, which abstracts away the matching part. For
+example, a command for creating contacts can be implemented as follows:</p>
+</div>
+<div class="paragraph">
+<p>CreateContactCommandSniffer</p>
+</div>
+<div class="paragraph">
+<p><code>public<code> </code>abstract<code> </code>class<code> CreateContactCommandSniffer </code>extends`</code> PatternCommandSniffer {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>private</code> <code>static</code> <code>final</code> Pattern COMMAND_PATTERN = Pattern.compile(<code>"create contact (?&lt;contactName&gt;([^\\s]+))"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>abstract</code> Pattern getPattern() {`</p>
+</div>
+<div class="paragraph">
+<p>`        COMMAND_PATTERN;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>`@Override</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>protected</code> <code>abstract</code> OperationResult execute(Matcher matcher) {`</p>
+</div>
+<div class="paragraph">
+<p>`        String contactName = matcher.group(<code>"contactName"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`        <code>`// &#8230;&#8203; (create contact)</code></p>
+</div>
+<div class="paragraph">
+<p>`        <code>return</code> <code>new</code> OperationResult(<code>true</code>, <code>"Successfully created new contact named: "</code> + contactName);`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>To be recognized by Periscope, each sniffer must be registered through a
+definition. New query sniffer definitions are automatically detected by
+the running system. To register a sniffer, create a YAML definition file
+under <code>src/main/resources/&lt;module-name&gt;/querySniffers</code> as follows:</p>
+</div>
+<div class="paragraph">
+<p>createContact.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>snifferClass: com.example.periscope.sniff.CreateContactCommandSniffer</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Just like other definitions, sniffer definitions are listed in the
+Definitions app. If something is not working as expected, this is a good
+place to start troubleshooting.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597114_Periscopemodule-Speechrecognitionservice"><a class="anchor" href="#src-196597114_Periscopemodule-Speechrecognitionservice"></a>Speech recognition service</h3>
+<div class="paragraph">
+<p>The speech-recognition module provides the speech recognition service to
+enable voice data processing for users searching using the Find Bar.
+Typically users speak to Magnolia via a microphone and the speech
+recognition service translates their voice data into text. The periscope
+executes that text like a normal text query from the user.</p>
+</div>
+<div class="paragraph">
+<p>The default Speech recognition implementation uses
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API">Web
+Speech API</a>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Check which browsers are supported by the Web Speech API
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#Browser_compatibility">here</a>.
+At the time of publication, only Google Chrome was supported.</p>
+</div>
+<div class="paragraph">
+<p>Password Manager module</p>
+</div>
+<div class="paragraph">
+<p>Periscope Result Ranker module</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
