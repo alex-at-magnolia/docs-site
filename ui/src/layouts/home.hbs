@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-{{> head-first}}
-    <title>Magnolia Documentation</title>
-    {{#with page.canonicalUrl}}
-    <link rel="canonical" href="{{this}}">
-    {{/with}}
-{{> head-last}}
+{{> head defaultPageTitle='Untitled'}}
   </head>
-  <body class="home">
+  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
 {{> header}}
 {{> body-home}}
 {{> footer}}
