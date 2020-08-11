@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>XML-based module descriptor - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/XML-based_module_descriptor.html">
+    <meta name="generator" content="Antora 2.3.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="icon" href="../../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="">
+        <img class="logo" src="../../../_/img/magnolia-medium.png" style="width: 10rem; height:auto; margin-left:0.8rem; margin-top:0.4rem;" alt="Magnolia">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Releases</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Core</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Developing</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Cloud</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Features</a>
+            <a class="navbar-item" href="#">Cloud Light Development</a>
+            <a class="navbar-item" href="#">Upgrading in the Cloud</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Headless</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Getting Started</a>
+            <a class="navbar-item" href="#">Visual SPA Editor</a>
+            <a class="navbar-item" href="#">API</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://www.magnolia-cms.com/get-started">Get Magnolia</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="lower-head">
+    
+  </div>
+</header>
+<div class="body">
+<div class="nav-container" data-component="magnolia-docs" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Releases and Upgrading</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../releases/Releases.html">Releases</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../upgrade/Upgrading-to-Magnolia-6.2.x.html">Upgrading-to-Magnolia-6.2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting Started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../getting-started/hello-magnolia.html">Hello Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/getting-started/hello-cloud.html">Hello Magnolia Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Cache.html">Cache</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Commenting.html">Commenting</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/content-authoring.html">Content authoring</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/content-editor.html">Content editor</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-tagging.html">Content tagging</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/content-types.html">Content types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/data-privacy.html">Data privacy</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/dam.html">Digital asset management</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/find-bar.html">Find bar</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/image-recognition.html">Image recognition</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/features/integration.adoc">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Personalization.html">Personalization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../features/component-personalization.html">Component personalization</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/rest-in-magnolia.html">REST in Magnolia</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../features/Search.html">Search</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/jackrabbit-search.adoc">Placeholder</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#core/features/solr-search.adoc">Placeholder</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/search-engine-optimization.html">SEO</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/spa.html">SPA</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Tasks.html">Tasks</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/text-classification.html">Text classification</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../features/Workflow.html">Workflow</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Cloud</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cloud/Magnolia-Cloud.html">Cloud</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Administration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../administration/Administration.html">Administration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Developing</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developing/Developing.html">Developing</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Templating</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../templating/Templating.html">Templating</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Modules</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Modules.html">Modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authoring</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Logging_in.html">Logging in</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_pages.html">Editing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_pages.html">Managing pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Editing_images.html">Editing images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Managing_assets.html">Managing assets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Publishing.html">Publishing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Deleting_and_restoring.html">Deleting and restoring</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Versioning.html">Versioning</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Keyboard_shortcuts.html">Keyboard shortcuts</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../authoring/Feeds.html">Feeds</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Connector Packs</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../connector-packs/Connector_Packs.html">Connector Packs Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Analytics_Connector_Pack.html">Analytics Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Analytics_module.html">Analytics module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Integrated_User_Experience.html">Integrated User Experience</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Commerce_Connector_Pack.html">Commerce Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_app.html">E-commerce app</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_module.html">E-commerce module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/ecomfn.html">ecomfn Templating function</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/E-commerce_REST_endpoints.html">E-commerce REST endpoints</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/How_to_configure_a_custom_e-commerce_connector.html">Configure a custom e-commerce connector</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/DAM_Connector_Pack.html">DAM Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/External_DAM_module.html">External DAM module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_Connector_Pack.html">Marketing Automation Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_module.html">Marketing automation module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Marketing_Automation_REST_endpoint.html">Marketing automation REST endpoint</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../connector-packs/Optimization_Connector_Pack.html">Optimization Connector Pack</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../connector-packs/Siteimprove_module.html">Siteimprove module</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Apps</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../apps/Apps.html">Apps</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">CLI</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI.html">Command Line Interface</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v3.html">Magnolia CLI v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Updating-CLI-to-v3.html">Updating CLI to v3</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-v2.html">Magnolia CLI v2</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../cli/Magnolia-CLI-walkthrough.html">Magnolia CLI walkthrough</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Special Features</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../special-features/Special-Features.html">Special Features</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Magnolia Documentation</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Magnolia Documentation</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+    <a href="../../releases/Releases.html" class="home-link"></a>
+
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Magnolia Documentation</a></li>
+    <li><a href="XML-based_module_descriptor.html">XML-based module descriptor - Magnolia 6.2 documentation</a></li>
+  </ul>
+</nav>
+
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">XML-based module descriptor - Magnolia 6.2 documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div id="ht-loader" class="paragraph">
+<p>This content cannot be displayed without JavaScript.<br>
+Please enable JavaScript and reload the page.</p>
+</div>
+<div class="paragraph">
+<p><a href="" class="bare"></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="Modules.html" class="bare">Modules.html</a></p>
+</div>
+<div class="sect2">
+<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
+<div id="ht-sidebar-dragbar" class="paragraph">
+<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
+</div>
+<div id="ht-breadcrumb" class="ulist">
+<ul>
+<li>
+<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
+</li>
+<li>
+<p><a href="Module_descriptor.html">Module descriptor</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597532"><a class="anchor" href="#src-196597532"></a>XML-based module descriptor</h2>
+<div class="sectionbody">
+<div id="main-content" class="paragraph">
+<p>This page is about the XML-based module descriptor file which identifies
+and defines a Magnolia Maven module. If you are using a Magnolia light
+module, you should use a
+<a href="YAML-based_module_descriptor.html">YAML-based module descriptor</a>.</p>
+</div>
+<div class="paragraph">
+<p>The XML file:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Conforms to
+<a href="https://git.magnolia-cms.com/projects/PLATFORM/repos/main/browse/magnolia-core/src/main/resources/info/magnolia/module/model/module.dtd">module.dtd</a>.</p>
+</li>
+<li>
+<p>Is stored in <code>src/main/resources/META-INF/magnolia/&lt;module-name&gt;.xml</code></p>
+</li>
+<li>
+<p>Can refer to nodes of the module
+<a href="http://maven.apache.org/guides/introduction/introduction-to-the-pom">pom
+file</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When you start Magnolia, the system identifies available modules by
+locating each module&#8217;s descriptor file.</p>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Benefitsofamoduledescriptor"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Benefitsofamoduledescriptor"></a>Benefits of a module descriptor</h3>
+<div class="paragraph">
+<p>The XML based module descriptor has a number of benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Dependency_injection_and_inversion_of_control.html">Dependency
+injection</a>: Inject components into the module.</p>
+</li>
+<li>
+<p><a href="#src-196597532_XML-basedmoduledescriptor-Moduleversions">Module
+version handling</a>: Smoother version changes with Maven.</p>
+</li>
+<li>
+<p><a href="#src-196597532_XML-basedmoduledescriptor-Moduledependencies">Dependencies</a>:
+Define runtime and install time dependencies to other modules.</p>
+</li>
+<li>
+<p><a href="#src-196597532_XML-basedmoduledescriptor-Servlets">Servlets</a>:
+Register servlets in your module.</p>
+</li>
+<li>
+<p><a href="#src-196597532_XML-basedmoduledescriptor-Workspaces">Workspaces</a>:
+Create workspaces.</p>
+</li>
+<li>
+<p><a href="Module_configuration.html#src-196597526_Moduleconfiguration-Moduleclassbeanproperties">Module
+class</a>: Register a module class that allows you to define module
+specific properties.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Examplemoduledescriptor"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Examplemoduledescriptor"></a>Example module descriptor</h3>
+<div class="paragraph">
+<p>Here is an example XML Maven module descriptor that defines a module
+class (<code>class</code> element<em>),</em> a module version handler (<code>versionHandler</code>
+element), an IoC component, and a dependency on the <code>ui-admincentral</code>
+module:</p>
+</div>
+<div class="paragraph">
+<p>acme-geotagging-module.xml</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!DOCTYPE module SYSTEM "module.dtd"&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>module</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>name</code>&gt;acme-geotagging-module&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>displayName</code>&gt;Acme geotagging module.&lt;/<code>displayName</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>class</code>&gt;com.acme.GeotaggingModule&lt;/<code>class</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>versionHandler</code>&gt;com.acme.GeotaggingModuleVersionHandler&lt;/<code>versionHandler</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>version</code>&gt;${project.version}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>components</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>id</code>&gt;app-geotagging&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>components</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>components</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>id</code>&gt;app-geotagging-main&lt;/<code>id</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>type</code>&gt;com.acme.geo.app.main.GeoTaggingMainSubappView&lt;/<code>type</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>implementation</code>&gt;com.acme.geo.app.main.GeoTaggingMainSubappViewImpl&lt;/<code>implementation</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>component</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>components</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;ui-admincentral&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>version</code>&gt;${project.version}&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/<code>dependencies</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>module</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>Lines 8, 22: Note how you can refer to Maven properties within the
+module descriptor.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Moduledescriptorelements"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduledescriptorelements"></a>Module descriptor elements</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The functional
+<a href="#src-196597532_XML-basedmoduledescriptor-Modulenaming">name</a> of the
+module. You will see this name in the config workspace.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>version</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>The module
+<a href="#src-196597532_XML-basedmoduledescriptor-Moduleversions">version</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>displayName</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The display name of the module.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>description</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Full description of the module.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of a
+<a href="Module_configuration.html#src-196597526_Moduleconfiguration-Moduleclassbeanproperties">module
+class</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>versionHandler</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The name of the version handler class.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>properties</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Properties that can be used with the version handler.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>dependencies</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="#src-196597532_XML-basedmoduledescriptor-Moduledependencies">Dependencies</a>
+on other modules - the module will install only after the specified
+modules.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>servlets</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Servlets which will be included in the servlet filter.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>repositories</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>The
+<a href="#src-196597532_XML-basedmoduledescriptor-Repositories">repositories</a>
+which must exist or will be created for this module.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>components</code></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><strong>optional</strong></p>
+</div>
+<div class="paragraph">
+<p>Injected components used by the module. Example:
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Programming+an+app">Defining
+an app or subapp as a component</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Modulenaming"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Modulenaming"></a>Module naming</h3>
+<div class="paragraph">
+<p>For each module you have to provide:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>artifactId</code> and <code>groupId</code> to the identify the Maven artifact</p>
+</li>
+<li>
+<p>Name of the module descriptor file.</p>
+</li>
+<li>
+<p><code>&lt;name&gt;</code> of the module in the module descriptor file.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>There are no strict naming conventions. You should give a name that
+reflects the purpose of the module. The name may also contain the name
+of your company.</p>
+</div>
+<div class="paragraph">
+<p>Depending on the module purpose it might be a good idea to use the same
+value for the artifact ID and module name.</p>
+</div>
+<div class="paragraph">
+<p>It is definitively good practice to name the <em>module descriptor file</em> by
+the pattern <code>&lt;module-name&gt;.xml</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Example</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Module name:
+<a href="https://wiki.magnolia-cms.com/display/WIKIARCHIVE/Social+Media+Hub">Social
+Media Hub</a></p>
+</li>
+<li>
+<p>Artifact ID: <code>social-media-hub</code></p>
+</li>
+<li>
+<p>Group ID: <code>com.tinext.magnolia</code> (contains the name of the creator
+<a href="http://Tinext.com">Tinext.com</a>)</p>
+</li>
+<li>
+<p>Module descriptor file: <code>social-media-hub.xml</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Moduleversions"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduleversions"></a>Module versions</h3>
+<div class="paragraph">
+<p>The syntax for a version is:</p>
+</div>
+<div class="paragraph">
+<p><code>from version / to version</code></p>
+</div>
+<div class="paragraph">
+<p>where the version number consists of three parts: <code>x.y.z</code>. In this
+notation <code>x.y</code> denotes a major version and <code>z</code> a maintenance release.
+The last two parts are optional. For a strict version dependency, use
+just one version string.</p>
+</div>
+<div class="paragraph">
+<p>The VersionRange class supports the following notation to indicate
+version dependency.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>Only three parts are supported. The major, minor and security version
+positions. The build number is not supported. See
+<a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Runtime.Version.html">Runtime.Version</a>
+for more information.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><strong></code> - Includes all versions -
+<span class="image"><img src="../../_images/images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/<em>/images/icons/emoticons/warning.svg" alt="images/s/en_GB/8100/5084f018d64a97dc638ca9a178856f851ea353ff/</em>/images/icons/emoticons/warning.svg"></span>
+When using this option in a YAML file, please wrap <code></strong></code> with quotes
+(<code>version: "*"</code>)</p>
+</li>
+<li>
+<p><code>1.2</code> - Matches only 1.2 exactly.</p>
+</li>
+<li>
+<p><code>1.2/*</code> - Matches all versions including and above 1.2.</p>
+</li>
+<li>
+<p><code>1.2/1.2.9</code> - Matches all versions including and between 1.2 and
+1.2.9.</p>
+</li>
+<li>
+<p><code>[1.2,1.2.9]</code> - Inward square brackets mean inclusion. Same as above.
+Matches all versions including and between 1.2 and 1.2.9.</p>
+</li>
+<li>
+<p><code>[1.2,1.2.9[</code> - Outward square brackets mean exclusion. Matches all
+versions between 1.2 and 1.2.9, including 1.2 but excluding 1.2.9.</p>
+</li>
+<li>
+<p><code>[1.2,1.2.9)</code> - Parentheses mean exclusion. Same as outward square
+brackets above. Matches all versions between 1.2 and 1.2.9, including
+1.2 but excluding 1.2.9.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Example</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3.6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.6.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3.6.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.6 and maintenance version 3.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3/*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3 or higher.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3.6/*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.6 or higher.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3.6.3/*</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.6 and maintenance version 3 or
+higher.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*/3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3 or lower.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*/3.6</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.6 or lower.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*/3.6.3</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must have major version 3.6 and maintenance version 3 or
+lower.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>3.5/3.6.2</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version not lower than 3.5 and not higher than 3.6.2.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[3.5/3.6.2]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Versions between 3.5 and 3.6.2 including the boundaries.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[3.5/3.6.2[</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Versions between 3.5 and 3.6.2, excluding the upper
+boundary 3.6.2.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>[3.5/3.6.2)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Versions between 3.5 and 3.6.2, excluding the upper
+boundary 3.6.2. Same as above but alternative syntax.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Moduledependencies"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduledependencies"></a>Module dependencies</h3>
+<div class="paragraph">
+<p>You can define runtime or install time dependencies (not build
+dependencies). If you define a dependency on a module, then this module
+will be installed and started before your module. A dependency can be
+optional. Optional in this context means that if an optional module is
+not present, installation will proceed, but if the optional module is
+present, this module will be installed first. The dependencies could
+look like this:</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>dependencies</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`   &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;core&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>version</code>&gt;3.6.0/*&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;!--  in case cache module is present, `</p>
+</div>
+<div class="paragraph">
+<p>`   make sure we install after so we can add a bypass -&#8594;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>name</code>&gt;cache&lt;/<code>name</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>version</code>&gt;3.6.0/*&lt;/<code>version</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>optional</code>&gt;true&lt;/<code>optional</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`   &lt;/<code>dependency</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>dependencies</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>The module dependencies define the order in which modules are loaded
+during startup. For example, if <code>module-a</code> depends on <code>module-b</code>,
+<code>module-b</code> will be loaded before <code>module-a.</code> The order becomes
+important, for example, if both <code>module-a</code> and <code>module-b</code> decorate the
+same definition or if <code>module-a</code> inherits a definition from <code>module-b</code>.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration">Decorations</a>
+are applied in the module load order.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-196597532_XML-basedmoduledescriptor-Workspaces"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Workspaces"></a>Workspaces</h3>
+<div class="paragraph">
+<p>Workspaces can be defined in the module descriptor. If necessary
+Magnolia initializes these workspaces before the installation starts. As
+an example look at the data module:</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;repositories&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;repository&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;name&gt;magnolia&lt;/name&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;workspaces&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`        &lt;workspace&gt;data&lt;/workspace&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;/workspaces&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;nodeTypeFile&gt;/mgnl-nodetypes/magnolia-module-data-nodetypes.xml&lt;/nodeTypeFile&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;/repository&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;/repositories&gt;`</p>
+</div>
+<div class="paragraph">
+<p>Under the hood, these repository workspaces are registered and
+initialized by the SetupModuleRepositoriesTask when the module is
+installed.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you are using the Magnolia <a href="Content_Types_module.html">Content
+Types module</a>, you can define workspaces (and node types) also in light
+modules.</p>
+</div>
+<div class="paragraph">
+<p>Please read the page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Defining+JCR+node+types+and+workspaces">Defining
+JCR node types and workspaces</a>, which provides an overview of all ways
+to define custom JCR node types and create new workspaces with Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>Module descriptor</p>
+</div>
+<div class="paragraph">
+<p>YAML-based module descriptor</p>
+</div>
+<div class="paragraph">
+<p><a href="#" class="bare">#</a></p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <div class="col">
+        <div class="footer-logo">
+          <a href="https://www.magnolia-cms.com" class="icon">
+            <img src="../../../_/img/magnolia-medium.png" alt="Magnolia">
+          </a>
+        </div>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://documentation.magnolia-cms.com" target="_blank" rel="noopener">Full Docs Set</a></li>
+          <li><a href="https://wiki.magnolia-cms.com/" target="_blank" rel="noopener">Community Wiki</a></li>
+          <li><a href="https://support.magnolia-cms.com" target="_blank" rel="noopener">Support</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul>
+          <li><a href="https://marketplace.magnolia-cms.com/" target="_blank" rel="noopener">Extend Magnolia</a></li>
+          <li><a href="https://magnolia-cms.com/blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.magnolia-cms.com/training" target="_blank" >Training</a></li>
+        </ul>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.facebook.com/Magnolia" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="26.363 116.363 560.215 560.215"><path d="m586.58 209.58c0-48.96-44.252-93.212-93.212-93.212h-373.79c-48.96 0-93.212 44.252-93.212 93.212v373.79c0 48.96 44.252 93.212 93.212 93.212h186.42v-211.85h-68.732v-93.212h68.732v-36.72c0-63.083 47.077-119.58 105.45-119.58h75.323v93.212h-75.323c-8.474 0-17.889 10.357-17.889 25.422v37.662h93.212v93.212h-93.212v211.85h99.803c48.96 0 93.212-44.252 93.212-93.212v-373.79z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/magnolia_cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="32.012 176.622 542.326 437.815"><path d="m574.34 227.46c-19.772 8.474-41.428 15.065-64.025 17.889 22.597-14.123 40.486-35.778 48.96-61.2-21.655 13.182-45.194 21.655-70.615 27.305-20.714-21.655-48.96-34.837-80.972-34.837-61.2 0-111.1 49.902-111.1 111.1 0 8.474 0.942 16.948 2.825 25.422-92.271-5.649-174.18-49.902-229.74-117.69-9.415 16.006-15.065 35.778-15.065 55.551 0 38.603 19.772 72.498 49.902 92.271-17.889-0.942-35.778-5.649-50.843-14.123v0.942c0 53.668 38.603 98.862 89.446 109.22-9.415 2.825-18.831 3.766-29.188 3.766-7.532 0-14.123-0.942-20.714-1.883 14.123 44.252 55.551 76.265 103.57 77.206-37.662 30.129-85.68 48.018-138.41 48.018-9.415 0-17.889-0.941-26.363-1.883 48.96 32.012 107.34 49.902 170.42 49.902 204.31 0 316.36-169.48 316.36-316.36v-14.123c21.656-14.125 40.487-33.897 55.551-56.494z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/magnolia-cms" target="_blank" class="icon">
+              <svg width="50px" height="50px" viewBox="31.071 119.188 539.537 540.443"><path d="m531.97 119.19h-461.35c-21.655 0-39.545 16.948-39.545 38.603v463.24c0 21.655 17.889 38.603 39.545 38.603h460.41c21.655 0 39.545-16.948 39.545-38.603v-463.24c0.942-21.656-16.947-38.603-38.603-38.603zm-337.07 451.94h-81.914v-243.86h81.914v243.86zm-40.486-276.81c-28.246 0-46.135-18.831-46.135-42.369s17.889-42.369 46.135-42.369 45.194 17.889 45.194 42.369c0.942 23.538-16.948 42.369-45.194 42.369zm335.19 276.81h-81.914v-129.93c0-32.954-12.24-55.551-41.428-55.551-22.597 0-35.778 15.065-41.428 30.129-1.883 5.649-2.825 12.24-2.825 19.772v136.52h-81.914s0.942-221.26 0-243.86h81.914v34.837c11.298-16.948 30.129-40.486 73.44-40.486 53.668 0 94.154 34.837 94.154 110.16l1e-3 138.41zm-168.54-208.08s0.941-0.941 0 0z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-terms">
+      <span>2020 Magnolia International Ltd. All rights reserved.</span>
+      <a href="https://www.magnolia-cms.com/legal/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
