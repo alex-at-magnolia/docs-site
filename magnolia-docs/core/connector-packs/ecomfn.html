@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>ecomfn - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>ecomfn :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/ecomfn.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -405,44 +405,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">ecomfn - Magnolia 6.2 documentation</h1>
+<h1 class="page">ecomfn</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Commerce_Connector_Pack.html">Commerce Connector Pack</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-209819263"><a class="anchor" href="#src-209819263"></a>ecomfn</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>The <code>ecomfn</code> templating functions provide access to the products from
@@ -463,81 +427,89 @@ templating functions</a></p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-GetacategorybyID"><a class="anchor" href="#src-209819263_ecomfn-GetacategorybyID"></a>Get a category by ID</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-GetacategorybyID"><a class="anchor" href="#src-209819263_ecomfn-GetacategorybyID"></a>Get a category by ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets information about a category by ID.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Category getCategoryById(String definitionName, String connectionName, String categoryId)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments"><a class="anchor" href="#src-209819263_ecomfn-Arguments"></a>Arguments</h4>
-<table class="tableblock frame-all grid-all" style="width: 99%;">
-<colgroup>
-<col style="width: 27%;">
-<col style="width: 73%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>definitionName</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>required</strong></p>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments"><a class="anchor" href="#src-209819263_ecomfn-Arguments"></a>Arguments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>|==
+|<code>definitionName</code> a|
+<strong>required</strong></p>
 </div>
 <div class="paragraph">
 <p>The definition name, for example <code>magentodefinition</code>.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>connectionName</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>|<code>connectionName</code> a|
+<strong>required</strong></p>
 </div>
 <div class="paragraph">
 <p>The connection name, for example <code>production</code>.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>categoryId</code></p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p><strong>required</strong></p>
+</div>
+<div class="paragraph">
+<p>|<code>categoryId</code> a|
+<strong>required</strong></p>
 </div>
 <div class="paragraph">
 <p>The category ID.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns"><a class="anchor" href="#src-209819263_ecomfn-Returns"></a>Returns</h4>
+<div class="paragraph">
+<p>|==</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns"><a class="anchor" href="#src-209819263_ecomfn-Returns"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A category.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage"><a class="anchor" href="#src-209819263_ecomfn-Usage"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage"><a class="anchor" href="#src-209819263_ecomfn-Usage"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getCategoryById(definitionName, connectionName, categoryId)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-GetaproductbyID"><a class="anchor" href="#src-209819263_ecomfn-GetaproductbyID"></a>Get a product by ID</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-GetaproductbyID"><a class="anchor" href="#src-209819263_ecomfn-GetaproductbyID"></a>Get a product by ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets information about a product by ID.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.1"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.1"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.1"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.1"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Product getProductById(String definitionName, String connectionName, String productId)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.1"><a class="anchor" href="#src-209819263_ecomfn-Arguments.1"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.1"><a class="anchor" href="#src-209819263_ecomfn-Arguments.1"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -574,32 +546,42 @@ templating functions</a></p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.1"><a class="anchor" href="#src-209819263_ecomfn-Returns.1"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.1"><a class="anchor" href="#src-209819263_ecomfn-Returns.1"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A product.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.1"><a class="anchor" href="#src-209819263_ecomfn-Usage.1"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.1"><a class="anchor" href="#src-209819263_ecomfn-Usage.1"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getProductById(definitionName, connectionName, productId)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-Getallcategories"><a class="anchor" href="#src-209819263_ecomfn-Getallcategories"></a>Get all categories</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Getallcategories"><a class="anchor" href="#src-209819263_ecomfn-Getallcategories"></a>Get all categories</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets all categories.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.2"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.2"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.2"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.2"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Collection&lt;Category&gt; getAllCategories(String definitionName, String connectionName)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.2"><a class="anchor" href="#src-209819263_ecomfn-Arguments.2"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.2"><a class="anchor" href="#src-209819263_ecomfn-Arguments.2"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -627,34 +609,44 @@ templating functions</a></p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.2"><a class="anchor" href="#src-209819263_ecomfn-Returns.2"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.2"><a class="anchor" href="#src-209819263_ecomfn-Returns.2"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A list of categories.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.2"><a class="anchor" href="#src-209819263_ecomfn-Usage.2"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.2"><a class="anchor" href="#src-209819263_ecomfn-Usage.2"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getAllCategories(definitionName, connectionName)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-GetallcategoriesbyproductID"><a class="anchor" href="#src-209819263_ecomfn-GetallcategoriesbyproductID"></a>Get all categories by product ID</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-GetallcategoriesbyproductID"><a class="anchor" href="#src-209819263_ecomfn-GetallcategoriesbyproductID"></a>Get all categories by product ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets all categories by product ID. For example, you have a
 product with the ID <code>redhandbag1</code> that belongs to categories such as
 <code>accessories</code>, <code>red</code>, <code>evening-wear</code> and <code>formal</code>.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.3"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.3"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.3"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.3"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Collection&lt;Category&gt; getCategoriesByProductId(String definitionName, String connectionName, String productId)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.3"><a class="anchor" href="#src-209819263_ecomfn-Arguments.3"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.3"><a class="anchor" href="#src-209819263_ecomfn-Arguments.3"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -691,34 +683,44 @@ product with the ID <code>redhandbag1</code> that belongs to categories such as
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.3"><a class="anchor" href="#src-209819263_ecomfn-Returns.3"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.3"><a class="anchor" href="#src-209819263_ecomfn-Returns.3"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A list of all categories by product ID.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.3"><a class="anchor" href="#src-209819263_ecomfn-Usage.3"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.3"><a class="anchor" href="#src-209819263_ecomfn-Usage.3"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getAllCategories(definitionName, connectionName, productId)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-GetallcategoriesbyparentID"><a class="anchor" href="#src-209819263_ecomfn-GetallcategoriesbyparentID"></a>Get all categories by parent ID</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-GetallcategoriesbyparentID"><a class="anchor" href="#src-209819263_ecomfn-GetallcategoriesbyparentID"></a>Get all categories by parent ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets all categories by parent category. For example, you have
 a parent category with the ID <code>summer</code>, that has child categories such
 as <code>sun-glasses</code>, <code>sun-cream</code>, <code>swimwear</code> and so on.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.4"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.4"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.4"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.4"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Collection&lt;Category&gt; getCategoriesByParentCategoryId(String definitionName, String connectionName, String categoryId)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.4"><a class="anchor" href="#src-209819263_ecomfn-Arguments.4"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.4"><a class="anchor" href="#src-209819263_ecomfn-Arguments.4"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -755,32 +757,42 @@ as <code>sun-glasses</code>, <code>sun-cream</code>, <code>swimwear</code> and s
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.4"><a class="anchor" href="#src-209819263_ecomfn-Returns.4"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.4"><a class="anchor" href="#src-209819263_ecomfn-Returns.4"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A list of all categories by the parent category ID.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.4"><a class="anchor" href="#src-209819263_ecomfn-Usage.4"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.4"><a class="anchor" href="#src-209819263_ecomfn-Usage.4"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getCategoriesByParentCategoryId(definitionName, connectionName, categoryId)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-Getallproducts"><a class="anchor" href="#src-209819263_ecomfn-Getallproducts"></a>Get all products</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Getallproducts"><a class="anchor" href="#src-209819263_ecomfn-Getallproducts"></a>Get all products</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets all products.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.5"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.5"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.5"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.5"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Collection&lt;Product&gt; getAllProducts(String definitionName, String connectionName)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.5"><a class="anchor" href="#src-209819263_ecomfn-Arguments.5"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.5"><a class="anchor" href="#src-209819263_ecomfn-Arguments.5"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -808,32 +820,42 @@ as <code>sun-glasses</code>, <code>sun-cream</code>, <code>swimwear</code> and s
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.5"><a class="anchor" href="#src-209819263_ecomfn-Returns.5"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.5"><a class="anchor" href="#src-209819263_ecomfn-Returns.5"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A list of all products.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.5"><a class="anchor" href="#src-209819263_ecomfn-Usage.5"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.5"><a class="anchor" href="#src-209819263_ecomfn-Usage.5"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getAllProducts(definitionName, connectionName)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-GetallproductsbycategoryID"><a class="anchor" href="#src-209819263_ecomfn-GetallproductsbycategoryID"></a>Get all products by category ID</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-GetallproductsbycategoryID"><a class="anchor" href="#src-209819263_ecomfn-GetallproductsbycategoryID"></a>Get all products by category ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets all products by category ID.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.6"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.6"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.6"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.6"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>Collection&lt;Product&gt; getProductsByCategoryId(String definitionName, String connectionName, String categoryId)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.6"><a class="anchor" href="#src-209819263_ecomfn-Arguments.6"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.6"><a class="anchor" href="#src-209819263_ecomfn-Arguments.6"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -870,32 +892,42 @@ as <code>sun-glasses</code>, <code>sun-cream</code>, <code>swimwear</code> and s
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.6"><a class="anchor" href="#src-209819263_ecomfn-Returns.6"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.6"><a class="anchor" href="#src-209819263_ecomfn-Returns.6"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A list of products by category ID.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.6"><a class="anchor" href="#src-209819263_ecomfn-Usage.6"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.6"><a class="anchor" href="#src-209819263_ecomfn-Usage.6"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getProductsByCategoryId(definitionName, connectionName, categoryId)</code></p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819263_ecomfn-Getimagelink"><a class="anchor" href="#src-209819263_ecomfn-Getimagelink"></a>Get image link</h3>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Getimagelink"><a class="anchor" href="#src-209819263_ecomfn-Getimagelink"></a>Get image link</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The method gets a URL link to an image by product.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Methodsignature.7"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.7"></a>Method signature</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Methodsignature.7"><a class="anchor" href="#src-209819263_ecomfn-Methodsignature.7"></a>Method signature</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>String getImageLink(Product product)</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Arguments.7"><a class="anchor" href="#src-209819263_ecomfn-Arguments.7"></a>Arguments</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Arguments.7"><a class="anchor" href="#src-209819263_ecomfn-Arguments.7"></a>Arguments</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -914,14 +946,18 @@ as <code>sun-glasses</code>, <code>sun-cream</code>, <code>swimwear</code> and s
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Returns.7"><a class="anchor" href="#src-209819263_ecomfn-Returns.7"></a>Returns</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Returns.7"><a class="anchor" href="#src-209819263_ecomfn-Returns.7"></a>Returns</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>An image URL.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819263_ecomfn-Usage.7"><a class="anchor" href="#src-209819263_ecomfn-Usage.7"></a>Usage</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819263_ecomfn-Usage.7"><a class="anchor" href="#src-209819263_ecomfn-Usage.7"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>ecomfn.getImageLink(product)</code></p>
 </div>
@@ -933,8 +969,6 @@ as <code>sun-glasses</code>, <code>sun-cream</code>, <code>swimwear</code> and s
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>

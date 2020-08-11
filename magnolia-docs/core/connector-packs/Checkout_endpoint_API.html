@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Checkout endpoint API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Checkout endpoint API :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/Checkout_endpoint_API.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -396,57 +396,15 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="Checkout_endpoint_API.html">Checkout endpoint API - Magnolia 6.2 documentation</a></li>
+    <li><a href="Checkout_endpoint_API.html">Checkout endpoint API</a></li>
   </ul>
 </nav>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Checkout endpoint API - Magnolia 6.2 documentation</h1>
+<h1 class="page">Checkout endpoint API</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="">&#8230;&#8203;</a></p>
-</li>
-<li>
-<p><a href="Commerce_Connector_Pack.html">Commerce Connector Pack</a></p>
-</li>
-<li>
-<p><a href="E-commerce_REST_endpoints.html">E-commerce REST endpoints</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-209819267"><a class="anchor" href="#src-209819267"></a>Checkout endpoint API</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page describes the <code>checkout</code> endpoint, which can be used to
@@ -480,8 +438,11 @@ e-commerce solution.</p>
 <div class="paragraph">
 <p>With this endpoint, you can:</p>
 </div>
-<div class="sect2">
-<h3 id="src-209819267_CheckoutendpointAPI-address"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-address"></a>PUT address</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-address"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-address"></a>PUT address</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Only relevant for commercetools.</p>
 </div>
@@ -491,14 +452,19 @@ a successful checkout process. The billing address is set when the
 address object contains the field <code>addressType</code> with a <code>billing</code> value.
 The billing address is optional.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-RequestURL"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL"></a>Request URL</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-RequestURL"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL"></a>Request URL</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/checkouts/address/{cartId}</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Parameters"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters"></a>Parameters</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Parameters"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters"></a>Parameters</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -570,8 +536,10 @@ value.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-commercetoolsexample"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample"></a>commercetools example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-commercetoolsexample"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample"></a>commercetools example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Sets the <em>shipping</em> address for a cart and returns the cart with the
 shipping address.</p>
@@ -648,8 +616,8 @@ shipping address.</p>
 <div class="paragraph">
 <p><code>}"</code></p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -1522,8 +1490,8 @@ billing address.</p>
 <p><code>}"</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.1"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.1"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -2397,8 +2365,9 @@ billing address.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819267_CheckoutendpointAPI-shippingmethods"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-shippingmethods"></a>POST shipping methods</h3>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-shippingmethods"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-shippingmethods"></a>POST shipping methods</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>For Magento, sets the address for checkout and gets a list of shipping
 methods for a cart (make sure the cart has at least one item, otherwise
@@ -2408,14 +2377,19 @@ empty is returned).</p>
 <p>For commercetools, gets the shipping method for a cart by location and
 currency.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-RequestURL.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL.1"></a>Request URL</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-RequestURL.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL.1"></a>Request URL</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/checkouts/shippingmethods/{cartId}</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Parameters.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters.1"></a>Parameters</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Parameters.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters.1"></a>Parameters</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2509,8 +2483,10 @@ to be set in the <code>address</code> object.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-commercetoolsexample.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample.1"></a>commercetools example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-commercetoolsexample.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample.1"></a>commercetools example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a list of shipping methods.</p>
 </div>
@@ -2538,8 +2514,8 @@ to be set in the <code>address</code> object.</p>
 <div class="paragraph">
 <p><code>}"</code></p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.2"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.2"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -3004,8 +2980,10 @@ to be set in the <code>address</code> object.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Magentoexample"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Magentoexample"></a>Magento example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Magentoexample"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Magentoexample"></a>Magento example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Sets the checkout address as the United States and returns a list of
 shipping methods.</p>
@@ -3031,8 +3009,8 @@ shipping methods.</p>
 <div class="paragraph">
 <p><code>}"</code></p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.3"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.3"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -3117,8 +3095,9 @@ shipping methods.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819267_CheckoutendpointAPI-shippingmethod"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-shippingmethod"></a>PUT shipping method</h3>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-shippingmethod"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-shippingmethod"></a>PUT shipping method</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns the payment method and total amounts for the cart.</p>
 </div>
@@ -3126,14 +3105,19 @@ shipping methods.</p>
 <p>For commercetools, sets the shipping method for a cart and returns the
 cart with the shipping method.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-RequestURL.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL.2"></a>Request URL</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-RequestURL.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL.2"></a>Request URL</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>.rest/ecommerce/v1/checkouts/shippingmethod/{cartId}</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Parameters.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters.2"></a>Parameters</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Parameters.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters.2"></a>Parameters</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all" style="width: 98%;">
 <colgroup>
 <col style="width: 15%;">
@@ -3229,8 +3213,10 @@ cart with the shipping method.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-commercetoolsexample.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample.2"></a>commercetools example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-commercetoolsexample.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample.2"></a>commercetools example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request PUT ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/checkouts/shippingmethod/66d22d22-72e6-408a-bba7-3017376e836e?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
@@ -3252,8 +3238,8 @@ cart with the shipping method.</p>
 <div class="paragraph">
 <p>`  }"`</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.4"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.4"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.4"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.4"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -4924,8 +4910,10 @@ cart with the shipping method.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Magentoexample.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Magentoexample.1"></a>Magento example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Magentoexample.1"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Magentoexample.1"></a>Magento example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>`curl --user <code>'superuser:superuser'</code> --request PUT <code>"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/checkouts/shippingmethod/19?definitionName=magento&amp;connectionName=connection"</code> `</p>
 </div>
@@ -5022,8 +5010,8 @@ cart with the shipping method.</p>
 <div class="paragraph">
 <p><code>}"</code></p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.5"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.5"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.5"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.5"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -5129,22 +5117,28 @@ cart with the shipping method.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819267_CheckoutendpointAPI-anorder"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-anorder"></a>POST an order</h3>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-anorder"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-anorder"></a>POST an order</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>For Magento, creates an order and returns an <code>orderId</code>.</p>
 </div>
 <div class="paragraph">
 <p>For commercetools, creates and returns an order.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-RequestURL.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL.3"></a>Request URL</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-RequestURL.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-RequestURL.3"></a>Request URL</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/checkouts/order/{cartId}</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Parameters.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters.3"></a>Parameters</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Parameters.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Parameters.3"></a>Parameters</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all" style="width: 98%;">
 <colgroup>
 <col style="width: 15%;">
@@ -5229,16 +5223,18 @@ cart with the shipping method.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-commercetoolsexample.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample.3"></a>commercetools example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-commercetoolsexample.3"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-commercetoolsexample.3"></a>commercetools example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request POST <code>"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/checkouts/order/66d22d22-72e6-408a-bba7-3017376e836e?definitionName=commercetools&amp;connectionName=connection"</code> \</code></p>
 </div>
 <div class="paragraph">
 <p>`  --header <code>`"Content-Type: application/json"</code></p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.6"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.6"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.6"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.6"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -7929,8 +7925,10 @@ cart with the shipping method.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819267_CheckoutendpointAPI-Magentoexample.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Magentoexample.2"></a>Magento example</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819267_CheckoutendpointAPI-Magentoexample.2"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Magentoexample.2"></a>Magento example</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Sets the payment method to <code>checkmo</code>.</p>
 </div>
@@ -7958,8 +7956,8 @@ cart with the shipping method.</p>
 <div class="paragraph">
 <p><code>}"</code></p>
 </div>
-<div class="sect4">
-<h5 id="src-209819267_CheckoutendpointAPI-Response.7"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.7"></a>Response</h5>
+<div class="sect2">
+<h3 id="src-209819267_CheckoutendpointAPI-Response.7"><a class="anchor" href="#src-209819267_CheckoutendpointAPI-Response.7"></a>Response</h3>
 <div class="paragraph">
 <p>A number representing the ID of the order (<code>orderId</code>) that has been
 created successfully.</p>
@@ -7978,8 +7976,6 @@ created successfully.</p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>

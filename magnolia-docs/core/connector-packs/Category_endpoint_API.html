@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Category endpoint API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Category endpoint API :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/Category_endpoint_API.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -396,57 +396,15 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="Category_endpoint_API.html">Category endpoint API - Magnolia 6.2 documentation</a></li>
+    <li><a href="Category_endpoint_API.html">Category endpoint API</a></li>
   </ul>
 </nav>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Category endpoint API - Magnolia 6.2 documentation</h1>
+<h1 class="page">Category endpoint API</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="">&#8230;&#8203;</a></p>
-</li>
-<li>
-<p><a href="Commerce_Connector_Pack.html">Commerce Connector Pack</a></p>
-</li>
-<li>
-<p><a href="E-commerce_REST_endpoints.html">E-commerce REST endpoints</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-209819266"><a class="anchor" href="#src-209819266"></a>Category endpoint API</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page describes the <code>category</code> endpoint, which can be used to
@@ -455,21 +413,28 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <div class="paragraph">
 <p>With this endpoint, you can:</p>
 </div>
-<div class="sect2">
-<h3 id="src-209819266_CategoryendpointAPI-"><a class="anchor" href="#src-209819266_CategoryendpointAPI-"></a>GET</h3>
-<div class="sect3">
-<h4 id="src-209819266_CategoryendpointAPI-Getallcategories"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Getallcategories"></a>Get all categories</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819266_CategoryendpointAPI-"><a class="anchor" href="#src-209819266_CategoryendpointAPI-"></a>GET</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819266_CategoryendpointAPI-Getallcategories"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Getallcategories"></a>Get all categories</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a list of all categories for a given connection.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-RequestURL"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-RequestURL"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/categories/list</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Parameters"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Parameters"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -525,16 +490,17 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Magentoexample"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Magentoexample"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets a list of all the categories.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/list?definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -959,17 +925,17 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <p><code>&#8230;&#8203;</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-commercetoolsexample"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-commercetoolsexample"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets a list of all the categories.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/list?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.1"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.1"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -1666,19 +1632,20 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819266_CategoryendpointAPI-GetcategorybyID"><a class="anchor" href="#src-209819266_CategoryendpointAPI-GetcategorybyID"></a>Get category by ID</h4>
+<div class="sect1">
+<h2 id="src-209819266_CategoryendpointAPI-GetcategorybyID"><a class="anchor" href="#src-209819266_CategoryendpointAPI-GetcategorybyID"></a>Get category by ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a category based on its ID.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-RequestURL.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL.1"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-RequestURL.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL.1"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/categories/{categoryId}</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Parameters.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters.1"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Parameters.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters.1"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all" style="width: 98%;">
 <colgroup>
 <col style="width: 24%;">
@@ -1751,16 +1718,17 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Magentoexample.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample.1"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Magentoexample.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample.1"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets the category with an ID of <code>2</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/2?definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.2"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.2"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -1885,17 +1853,17 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <p><code>}</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-commercetoolsexample.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample.1"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-commercetoolsexample.1"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample.1"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets the category with an ID of <code>77a188b9-9c85-4aff-ae4d-9a8fc22f19cf</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/77a188b9-9c85-4aff-ae4d-9a8fc22f19cf?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.3"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.3"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -2238,19 +2206,20 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819266_CategoryendpointAPI-GetcategorybyproductID"><a class="anchor" href="#src-209819266_CategoryendpointAPI-GetcategorybyproductID"></a>Get category by product ID</h4>
+<div class="sect1">
+<h2 id="src-209819266_CategoryendpointAPI-GetcategorybyproductID"><a class="anchor" href="#src-209819266_CategoryendpointAPI-GetcategorybyproductID"></a>Get category by product ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a category based on the ID of a product.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-RequestURL.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL.2"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-RequestURL.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL.2"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/categories/product/{productId}</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Parameters.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters.2"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Parameters.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters.2"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -2326,8 +2295,8 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Magentoexample.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample.2"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Magentoexample.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample.2"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets the category corresponding to the product with an ID (SKU) of
 <code>24-MB01</code>.</p>
@@ -2335,8 +2304,9 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/product/24-MB01?definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.4"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.4"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.4"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.4"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -2695,9 +2665,8 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <p><code>]</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-commercetoolsexample.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample.2"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-commercetoolsexample.2"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample.2"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets the category corresponding to the product with an ID of
 <code>cb292097-a8cf-4b51-8258-879d3e85036a</code>.</p>
@@ -2705,8 +2674,9 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/product/cb292097-a8cf-4b51-8258-879d3e85036a?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.5"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.5"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.5"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.5"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -3037,19 +3007,20 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819266_CategoryendpointAPI-GetcategorybyparentID"><a class="anchor" href="#src-209819266_CategoryendpointAPI-GetcategorybyparentID"></a>Get category by parent ID</h4>
+<div class="sect1">
+<h2 id="src-209819266_CategoryendpointAPI-GetcategorybyparentID"><a class="anchor" href="#src-209819266_CategoryendpointAPI-GetcategorybyparentID"></a>Get category by parent ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a category based on the ID of the parent category.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-RequestURL.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL.3"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-RequestURL.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-RequestURL.3"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/categories/?parentId</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Parameters.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters.3"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Parameters.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Parameters.3"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3125,16 +3096,17 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-Magentoexample.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample.3"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Magentoexample.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Magentoexample.3"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets the child category of the parent category with an ID of <code>3</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/?parentId=3&amp;definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.6"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.6"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.6"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.6"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -3613,9 +3585,8 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <p><code>]</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819266_CategoryendpointAPI-commercetoolsexample.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample.3"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-commercetoolsexample.3"><a class="anchor" href="#src-209819266_CategoryendpointAPI-commercetoolsexample.3"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets the child category of the parent category with an ID of
 <code>cf94acbc-bf7c-4b45-8679-77284c5b76f9</code>.</p>
@@ -3623,8 +3594,9 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/categories/?parentId=cf94acbc-bf7c-4b45-8679-77284c5b76f9&amp;definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819266_CategoryendpointAPI-Response.7"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.7"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819266_CategoryendpointAPI-Response.7"><a class="anchor" href="#src-209819266_CategoryendpointAPI-Response.7"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -3978,9 +3950,6 @@ interact with your external e-commerce solution&#8217;s REST service.</p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

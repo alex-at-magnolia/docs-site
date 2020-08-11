@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>How to configure a custom e-commerce connector - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <title>How to configure a custom e-commerce connector :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/How_to_configure_a_custom_e-commerce_connector.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -405,44 +405,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">How to configure a custom e-commerce connector - Magnolia 6.2</h1>
+<h1 class="page">How to configure a custom e-commerce connector</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Commerce_Connector_Pack.html">Commerce Connector Pack</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-209819269"><a class="anchor" href="#src-209819269"></a>How to configure a custom e-commerce connector</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Related topics:</p>
@@ -459,8 +423,11 @@ Please enable JavaScript and reload the page.</p>
 commercetools, Magento and Salesforce Commerce Cloud. If you use another
 third-party e-commerce solution, you can configure your own connector.</p>
 </div>
-<div class="sect2">
-<h3 id="src-209819269_Howtoconfigureacustome-commerceconnector-Prerequisites"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Prerequisites"></a>Prerequisites</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-Prerequisites"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We assume you are familiar with Magnolia,
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/Maven">Maven</a> and Java.</p>
@@ -484,13 +451,18 @@ documentation).</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819269_Howtoconfigureacustome-commerceconnector-Configuration"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Configuration"></a>Configuration</h3>
+</div>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-Configuration"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Configuration"></a>Configuration</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Complete the steps below to configure your connector.</p>
 </div>
-<div class="sect3">
-<h4 id="src-209819269_Howtoconfigureacustome-commerceconnector-CreateyourMavenmodule"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-CreateyourMavenmodule"></a>Create your Maven module</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-CreateyourMavenmodule"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-CreateyourMavenmodule"></a>Create your Maven module</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -520,8 +492,10 @@ client providers upon stopping the module. For reference see
 <code>info.magnolia.ecommerce.magento.EcommerceMagentoModule</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819269_Howtoconfigureacustome-commerceconnector-Implementthedatasuppliersandrequiredcartandcheckoutfunctionality"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Implementthedatasuppliersandrequiredcartandcheckoutfunctionality"></a>Implement the data suppliers and required cart and checkout functionality</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-Implementthedatasuppliersandrequiredcartandcheckoutfunctionality"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Implementthedatasuppliersandrequiredcartandcheckoutfunctionality"></a>Implement the data suppliers and required cart and checkout functionality</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -558,8 +532,10 @@ components for injection. For an example, see
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819269_Howtoconfigureacustome-commerceconnector-Implementtheprovider"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Implementtheprovider"></a>Implement the provider</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-Implementtheprovider"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Implementtheprovider"></a>Implement the provider</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Implement the <code>EcommerceClientProvider</code> according to the connection type
 you want to use to connect to your external e-commerce solution:</p>
@@ -581,8 +557,10 @@ For an example, see
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819269_Howtoconfigureacustome-commerceconnector-Defineyourconnector"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Defineyourconnector"></a>Define your connector</h4>
+</div>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-Defineyourconnector"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Defineyourconnector"></a>Define your connector</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Using <code>info.magnolia.ecommerce.common.DefaultEcommerceDefinition</code>,
 create your connector definition configuration file under:
@@ -594,8 +572,9 @@ create your connector definition configuration file under:
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-209819269_Howtoconfigureacustome-commerceconnector-Conclusion"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Conclusion"></a>Conclusion</h3>
+<div class="sect1">
+<h2 id="src-209819269_Howtoconfigureacustome-commerceconnector-Conclusion"><a class="anchor" href="#src-209819269_Howtoconfigureacustome-commerceconnector-Conclusion"></a>Conclusion</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>To finish:</p>
 </div>
@@ -624,7 +603,6 @@ the connection parameters</a> to your external e-commerce solution.</p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Marketing Automation REST endpoint - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Marketing Automation REST endpoint :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/Marketing_Automation_REST_endpoint.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -405,45 +405,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Marketing Automation REST endpoint - Magnolia 6.2 documentation</h1>
+<h1 class="page">Marketing Automation REST endpoint</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Marketing_Automation_Connector_Pack.html">Marketing Automation
-Connector Pack</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-209819303"><a class="anchor" href="#src-209819303"></a>Marketing Automation REST endpoint</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page describes the <code>MarketingLeadEndpoint</code> endpoint, which can be
@@ -459,22 +422,29 @@ used to get data about marketing leads.</p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="src-209819303_MarketingAutomationRESTendpoint-"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-"></a>GET</h3>
-<div class="sect3">
-<h4 id="src-209819303_MarketingAutomationRESTendpoint-Getamarketinglead"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Getamarketinglead"></a>Get a marketing lead</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819303_MarketingAutomationRESTendpoint-"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-"></a>GET</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819303_MarketingAutomationRESTendpoint-Getamarketinglead"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Getamarketinglead"></a>Get a marketing lead</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Gets a marketing lead from your third-party marketing software solution,
 such as Marketo or Salesforce Marketing Cloud, based on a filter.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819303_MarketingAutomationRESTendpoint-RequestURL"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-RequestURL"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819303_MarketingAutomationRESTendpoint-RequestURL"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-RequestURL"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/marketing-automation/v1/leads/</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819303_MarketingAutomationRESTendpoint-Parameters"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Parameters"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819303_MarketingAutomationRESTendpoint-Parameters"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Parameters"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -569,8 +539,8 @@ checked.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819303_MarketingAutomationRESTendpoint-Example"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Example"></a>Example</h5>
+<div class="sect2">
+<h3 id="src-209819303_MarketingAutomationRESTendpoint-Example"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Example"></a>Example</h3>
 <div class="paragraph">
 <p>Gets the first and last names for the lead with the email
 <code>test@best-cms.com</code> from Marketo.</p>
@@ -578,8 +548,9 @@ checked.</p>
 <div class="paragraph">
 <p><code>http:`</code>//localhost:8080/magnoliaPublic/.rest/marketing-automation/v1/leads?definitionName=marketo&amp;filterType=email&amp;filterValues=<a href="mailto:test@best-cms.com">test@best-cms.com</a>&amp;fields=FirstName,LastName`</p>
 </div>
-<div class="sect5">
-<h6 id="src-209819303_MarketingAutomationRESTendpoint-Response"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Response"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819303_MarketingAutomationRESTendpoint-Response"><a class="anchor" href="#src-209819303_MarketingAutomationRESTendpoint-Response"></a>Response</h3>
 <div class="paragraph">
 <p><code>{</code></p>
 </div>
@@ -624,9 +595,6 @@ checked.</p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>

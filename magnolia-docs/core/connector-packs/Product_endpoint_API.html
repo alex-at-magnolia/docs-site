@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Product endpoint API - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Product endpoint API :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/connector-packs/Product_endpoint_API.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -396,57 +396,15 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="Product_endpoint_API.html">Product endpoint API - Magnolia 6.2 documentation</a></li>
+    <li><a href="Product_endpoint_API.html">Product endpoint API</a></li>
   </ul>
 </nav>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Product endpoint API - Magnolia 6.2 documentation</h1>
+<h1 class="page">Product endpoint API</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Connector_Packs.html" class="bare">Connector_Packs.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Connector_Packs.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="">&#8230;&#8203;</a></p>
-</li>
-<li>
-<p><a href="Commerce_Connector_Pack.html">Commerce Connector Pack</a></p>
-</li>
-<li>
-<p><a href="E-commerce_REST_endpoints.html">E-commerce REST endpoints</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-209819268"><a class="anchor" href="#src-209819268"></a>Product endpoint API</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page describes the <code>product</code> endpoint, which can be used to
@@ -456,21 +414,28 @@ service.</p>
 <div class="paragraph">
 <p>With this endpoint, you can:</p>
 </div>
-<div class="sect2">
-<h3 id="src-209819268_ProductendpointAPI-"><a class="anchor" href="#src-209819268_ProductendpointAPI-"></a>GET</h3>
-<div class="sect3">
-<h4 id="src-209819268_ProductendpointAPI-Getallproducts"><a class="anchor" href="#src-209819268_ProductendpointAPI-Getallproducts"></a>Get all products</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819268_ProductendpointAPI-"><a class="anchor" href="#src-209819268_ProductendpointAPI-"></a>GET</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-209819268_ProductendpointAPI-Getallproducts"><a class="anchor" href="#src-209819268_ProductendpointAPI-Getallproducts"></a>Get all products</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a list of all the products.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-RequestURL"><a class="anchor" href="#src-209819268_ProductendpointAPI-RequestURL"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-RequestURL"><a class="anchor" href="#src-209819268_ProductendpointAPI-RequestURL"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/products</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-Parameters"><a class="anchor" href="#src-209819268_ProductendpointAPI-Parameters"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Parameters"><a class="anchor" href="#src-209819268_ProductendpointAPI-Parameters"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -526,16 +491,17 @@ service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-Magentoexample"><a class="anchor" href="#src-209819268_ProductendpointAPI-Magentoexample"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Magentoexample"><a class="anchor" href="#src-209819268_ProductendpointAPI-Magentoexample"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets a list of all the products.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/products?definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819268_ProductendpointAPI-Response"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Response"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -864,17 +830,17 @@ service.</p>
 <p><code>&#8230;&#8203;</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-commercetoolsexample"><a class="anchor" href="#src-209819268_ProductendpointAPI-commercetoolsexample"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-commercetoolsexample"><a class="anchor" href="#src-209819268_ProductendpointAPI-commercetoolsexample"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets a list of all the products.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/products?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819268_ProductendpointAPI-Response.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.1"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Response.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.1"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -1298,19 +1264,20 @@ service.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819268_ProductendpointAPI-GetproductbyID"><a class="anchor" href="#src-209819268_ProductendpointAPI-GetproductbyID"></a>Get product by ID</h4>
+<div class="sect1">
+<h2 id="src-209819268_ProductendpointAPI-GetproductbyID"><a class="anchor" href="#src-209819268_ProductendpointAPI-GetproductbyID"></a>Get product by ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a given product based on its ID.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-RequestURL.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-RequestURL.1"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-RequestURL.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-RequestURL.1"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>.rest/ecommerce/v1/products/{productId}</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-Parameters.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-Parameters.1"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Parameters.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-Parameters.1"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -1386,16 +1353,17 @@ service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-Magentoexample.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-Magentoexample.1"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Magentoexample.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-Magentoexample.1"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets the product with an ID of <code>24-MB05</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/products/24-MB01?definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819268_ProductendpointAPI-Response.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.2"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Response.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.2"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -1529,17 +1497,17 @@ service.</p>
 <p><code>}</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-commercetoolsexample.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-commercetoolsexample.1"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-commercetoolsexample.1"><a class="anchor" href="#src-209819268_ProductendpointAPI-commercetoolsexample.1"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets the product with an ID of <code>cb292097-a8cf-4b51-8258-879d3e85036a</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/products/cb292097-a8cf-4b51-8258-879d3e85036a?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819268_ProductendpointAPI-Response.3"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.3"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Response.3"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.3"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -3049,19 +3017,20 @@ service.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-209819268_ProductendpointAPI-GetproductbycategoryID"><a class="anchor" href="#src-209819268_ProductendpointAPI-GetproductbycategoryID"></a>Get product by category ID</h4>
+<div class="sect1">
+<h2 id="src-209819268_ProductendpointAPI-GetproductbycategoryID"><a class="anchor" href="#src-209819268_ProductendpointAPI-GetproductbycategoryID"></a>Get product by category ID</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Returns a list of products based on the ID of a category.</p>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-RequestURL.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-RequestURL.2"></a>Request URL</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-RequestURL.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-RequestURL.2"></a>Request URL</h3>
 <div class="paragraph">
 <p><code>/.rest/ecommerce/v1/products/category/{categoryId}</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-Parameters.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-Parameters.2"></a>Parameters</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Parameters.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-Parameters.2"></a>Parameters</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -3134,16 +3103,17 @@ service.</p>
 </tbody>
 </table>
 </div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-Magentoexample.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-Magentoexample.2"></a>Magento example</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Magentoexample.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-Magentoexample.2"></a>Magento example</h3>
 <div class="paragraph">
 <p>Gets the list of products from the category with an ID of <code>6</code>.</p>
 </div>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/products/category/6?definitionName=magento&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819268_ProductendpointAPI-Response.4"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.4"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Response.4"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.4"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -4168,9 +4138,8 @@ service.</p>
 <p><code>]</code></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="src-209819268_ProductendpointAPI-commercetoolsexample.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-commercetoolsexample.2"></a>commercetools example</h5>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-commercetoolsexample.2"><a class="anchor" href="#src-209819268_ProductendpointAPI-commercetoolsexample.2"></a>commercetools example</h3>
 <div class="paragraph">
 <p>Gets the list of products from the category with an ID of
 <code>5c804c8d-d628-41fe-84ca-6f5a1fb161a9</code>.</p>
@@ -4178,8 +4147,9 @@ service.</p>
 <div class="paragraph">
 <p><code>curl --user <code>'superuser:superuser'</code> --request GET ``"http://localhost:8080/magnoliaAuthor/.rest/ecommerce/v1/products/category/5c804c8d-d628-41fe-84ca-6f5a1fb161a9?definitionName=commercetools&amp;connectionName=connection"</code></p>
 </div>
-<div class="sect5">
-<h6 id="src-209819268_ProductendpointAPI-Response.5"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.5"></a>Response</h6>
+</div>
+<div class="sect2">
+<h3 id="src-209819268_ProductendpointAPI-Response.5"><a class="anchor" href="#src-209819268_ProductendpointAPI-Response.5"></a>Response</h3>
 <div class="paragraph">
 <p>JSON</p>
 </div>
@@ -4401,9 +4371,6 @@ service.</p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
