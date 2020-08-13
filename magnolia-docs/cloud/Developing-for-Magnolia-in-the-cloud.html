@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Developing for Magnolia in the cloud - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Developing for Magnolia in the cloud :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Developing-for-Magnolia-in-the-cloud.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -539,53 +572,20 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Developing for Magnolia in the cloud - Magnolia 6.2 documentation</h1>
+<h1 class="page">Developing for Magnolia in the cloud</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321175"><a class="anchor" href="#src-215321175"></a>Developing for Magnolia in the cloud</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page gives an overview of the Magnolia development cycle for
 standard and custom bundles.</p>
 </div>
-<div class="sect2">
-<h3 id="src-215321175_DevelopingforMagnoliainthecloud-Standardcloudbundledevelopmentworkflow"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Standardcloudbundledevelopmentworkflow"></a>Standard cloud bundle development workflow</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321175_DevelopingforMagnoliainthecloud-Standardcloudbundledevelopmentworkflow"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Standardcloudbundledevelopmentworkflow"></a>Standard cloud bundle development workflow</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321175/mnow-local-dev-overview.png" alt="images/download/attachments/215321175/mnow-local-dev-overview.png" width="600"></span></p>
+<p><span class="image"><img src="../_images/cloud/mnow-local-dev-overview.png" alt="cloud/mnow-local-dev-overview.png" width="600"></span></p>
 </div>
 <div class="paragraph">
 <p>[.admonition-icon .confluence-information-macro-icon]##</p>
@@ -601,8 +601,11 @@ only a UAT and a Live environment. In these cases, you can
 a development snapshot</a> directly in the Live or in the UAT environment
 respectively.</p>
 </div>
-<div class="sect3">
-<h4 id="src-215321175_DevelopingforMagnoliainthecloud-Localdevelopment"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Localdevelopment"></a>Local development</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321175_DevelopingforMagnoliainthecloud-Localdevelopment"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Localdevelopment"></a>Local development</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><strong>Creating new features and functions in your Magnolia
 <em><a href="Magnolia-cockpit-concepts.html#src-215321159_Magnoliacockpitconcepts-glossary-package">package</a></em></strong>
@@ -618,8 +621,10 @@ features before sending them to the cloud via the Git repository.</p>
 <p>[<mark>src-215321175_DevelopingforMagnoliainthecloud-localdevprereqs]</mark>#</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321175_DevelopingforMagnoliainthecloud-WorkinginMagnoliacloud"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-WorkinginMagnoliacloud"></a>Working in Magnolia cloud</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321175_DevelopingforMagnoliainthecloud-WorkinginMagnoliacloud"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-WorkinginMagnoliacloud"></a>Working in Magnolia cloud</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>After developing locally and pushing your work to the Magnolia Git
 repository, log in to the <a href="Cockpit.html">cockpit</a> to retrieve your
@@ -666,10 +671,12 @@ running instances of Magnolia in the cloud.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321175_DevelopingforMagnoliainthecloud-Prerequisites"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Prerequisites"></a>Prerequisites</h4>
-<div class="sect4">
-<h5 id="src-215321175_DevelopingforMagnoliainthecloud-Java"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Java"></a>Java</h5>
+</div>
+<div class="sect1">
+<h2 id="src-215321175_DevelopingforMagnoliainthecloud-Prerequisites"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="src-215321175_DevelopingforMagnoliainthecloud-Java"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Java"></a>Java</h3>
 <div class="paragraph">
 <p>Java 1.8 or higher is required to run the Magnolia local development
 bundle. If you do not know whether you have Java installed or which
@@ -678,8 +685,8 @@ version you have, please read
 Java</a>.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-215321175_DevelopingforMagnoliainthecloud-Git"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Git"></a>Git</h5>
+<div class="sect2">
+<h3 id="src-215321175_DevelopingforMagnoliainthecloud-Git"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Git"></a>Git</h3>
 <div class="paragraph">
 <p><a href="https://git-scm.com/">Git</a> is required to develop for Magnolia in the
 cloud. You need:</p>
@@ -709,8 +716,9 @@ workflow.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321175_DevelopingforMagnoliainthecloud-Customcloudbundledevelopmentworkflow"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Customcloudbundledevelopmentworkflow"></a>Custom cloud bundle development workflow</h3>
+<div class="sect1">
+<h2 id="src-215321175_DevelopingforMagnoliainthecloud-Customcloudbundledevelopmentworkflow"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Customcloudbundledevelopmentworkflow"></a>Custom cloud bundle development workflow</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In the case of
 <a href="Supported-modules-in-the-cloud.html#src-215321299_Supportedmodulesinthecloud-anc-cloud-bundle"><em>custom</em>
@@ -719,7 +727,7 @@ You or your cloud partner create the Magnolia bundle that is deployed to
 the cloud.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321175/cloud-custom-dev-overview.png" alt="images/download/attachments/215321175/cloud-custom-dev-overview.png" width="600"></span></p>
+<p><span class="image"><img src="../_images/cloud/cloud-custom-dev-overview.png" alt="cloud/cloud-custom-dev-overview.png" width="600"></span></p>
 </div>
 <div class="paragraph">
 <p>From Magnolia 6.2.1, Magnolia provides a
@@ -738,22 +746,14 @@ above) and Java custom modules.</p>
 deploying custom cloud bundles</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321175_DevelopingforMagnoliainthecloud-Hands-onlearning"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Hands-onlearning"></a>Hands-on learning</h3>
+</div>
+<div class="sect1">
+<h2 id="src-215321175_DevelopingforMagnoliainthecloud-Hands-onlearning"><a class="anchor" href="#src-215321175_DevelopingforMagnoliainthecloud-Hands-onlearning"></a>Hands-on learning</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Try out our end-to-end
-<a href="Hello-cloud---a-development-tutorial.html">Hello-cloud development
+<a href="getting-started/hello-cloud.html" class="page">Hello-cloud development
 tutorial</a>, in which you set up a light module and deploy it in Magnolia.</p>
-</div>
-<div class="paragraph">
-<p>Understanding cockpit notifications</p>
-</div>
-<div class="paragraph">
-<p>Creating and deploying custom cloud bundles</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

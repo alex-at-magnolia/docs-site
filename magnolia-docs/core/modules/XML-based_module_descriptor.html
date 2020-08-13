@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>XML-based module descriptor - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>XML-based module descriptor :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/XML-based_module_descriptor.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="Modules.html">Modules</a>
+    <a class="nav-link" href="Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -531,51 +564,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="XML-based_module_descriptor.html">XML-based module descriptor - Magnolia 6.2 documentation</a></li>
+    <li>Modules</li>
+    <li><a href="Module_descriptor.html">Module descriptor</a></li>
+    <li><a href="XML-based_module_descriptor.html">XML Based</a></li>
   </ul>
 </nav>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">XML-based module descriptor - Magnolia 6.2 documentation</h1>
+<h1 class="page">XML-based module descriptor</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Modules.html" class="bare">Modules.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Module_descriptor.html">Module descriptor</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196597532"><a class="anchor" href="#src-196597532"></a>XML-based module descriptor</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page is about the XML-based module descriptor file which identifies
@@ -606,8 +605,11 @@ file</a>.</p>
 <p>When you start Magnolia, the system identifies available modules by
 locating each module&#8217;s descriptor file.</p>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Benefitsofamoduledescriptor"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Benefitsofamoduledescriptor"></a>Benefits of a module descriptor</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Benefitsofamoduledescriptor"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Benefitsofamoduledescriptor"></a>Benefits of a module descriptor</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The XML based module descriptor has a number of benefits:</p>
 </div>
@@ -641,8 +643,10 @@ specific properties.</p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Examplemoduledescriptor"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Examplemoduledescriptor"></a>Example module descriptor</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Examplemoduledescriptor"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Examplemoduledescriptor"></a>Example module descriptor</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Here is an example XML Maven module descriptor that defines a module
 class (<code>class</code> element<em>),</em> a module version handler (<code>versionHandler</code>
@@ -729,8 +733,10 @@ module:</p>
 module descriptor.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Moduledescriptorelements"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduledescriptorelements"></a>Module descriptor elements</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Moduledescriptorelements"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduledescriptorelements"></a>Module descriptor elements</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -850,8 +856,10 @@ an app or subapp as a component</a></p>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Modulenaming"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Modulenaming"></a>Module naming</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Modulenaming"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Modulenaming"></a>Module naming</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>For each module you have to provide:</p>
 </div>
@@ -904,8 +912,10 @@ Media Hub</a></p>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Moduleversions"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduleversions"></a>Module versions</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Moduleversions"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduleversions"></a>Module versions</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The syntax for a version is:</p>
 </div>
@@ -1038,8 +1048,10 @@ boundary 3.6.2. Same as above but alternative syntax.</p></td>
 </tbody>
 </table>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Moduledependencies"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduledependencies"></a>Module dependencies</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Moduledependencies"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Moduledependencies"></a>Module dependencies</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>You can define runtime or install time dependencies (not build
 dependencies). If you define a dependency on a module, then this module
@@ -1103,8 +1115,10 @@ same definition or if <code>module-a</code> inherits a definition from <code>mod
 are applied in the module load order.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597532_XML-basedmoduledescriptor-Workspaces"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Workspaces"></a>Workspaces</h3>
+</div>
+<div class="sect1">
+<h2 id="src-196597532_XML-basedmoduledescriptor-Workspaces"><a class="anchor" href="#src-196597532_XML-basedmoduledescriptor-Workspaces"></a>Workspaces</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Workspaces can be defined in the module descriptor. If necessary
 Magnolia initializes these workspaces before the installation starts. As
@@ -1164,7 +1178,6 @@ to define custom JCR node types and create new workspaces with Magnolia.</p>
 </div>
 <div class="paragraph">
 <p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

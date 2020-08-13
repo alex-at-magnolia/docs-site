@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Backing up and restoring - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Backing up and restoring :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Backing-up-and-restoring.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,48 +573,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Backing up and restoring - Magnolia 6.2 documentation</h1>
+<h1 class="page">Backing up and restoring</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Managing-environments-using-the-Magnolia-cockpit.html">Managing
-environments using the Magnolia cockpit</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321267"><a class="anchor" href="#src-215321267"></a>Backing up and restoring</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page and its subpages explain how to backup and restore data in a
@@ -625,8 +618,11 @@ environment</a></p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="src-215321267_Backingupandrestoring-Howandwheredataiskeptsafe"><a class="anchor" href="#src-215321267_Backingupandrestoring-Howandwheredataiskeptsafe"></a>How and where data is kept safe</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321267_Backingupandrestoring-Howandwheredataiskeptsafe"><a class="anchor" href="#src-215321267_Backingupandrestoring-Howandwheredataiskeptsafe"></a>How and where data is kept safe</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A Magnolia subscription package contains different types of data. We
 make sure that all your data is safe and can be recovered.</p>
@@ -696,10 +692,7 @@ safeguard it.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="src-215321267_Backingupandrestoring-Whatdataisbackedup"><a class="anchor" href="#src-215321267_Backingupandrestoring-Whatdataisbackedup"></a>What data is backed up</h2>
-<div class="sectionbody">
+<h1 id="src-215321267_Backingupandrestoring-Whatdataisbackedup" class="sect0"><a class="anchor" href="#src-215321267_Backingupandrestoring-Whatdataisbackedup"></a>What data is backed up</h1>
 <div class="paragraph">
 <p>When a backup is executed, the following data is saved from the Live
 environment in its current state:</p>
@@ -725,11 +718,7 @@ such as, <code>website</code>, <code>dam</code>, <code>category</code>, <code>co
 <div class="paragraph">
 <p>This applies to both for automatic and manual backups.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321267_Backingupandrestoring-Whendataisbackedup"><a class="anchor" href="#src-215321267_Backingupandrestoring-Whendataisbackedup"></a>When data is backed up</h2>
-<div class="sectionbody">
+<h1 id="src-215321267_Backingupandrestoring-Whendataisbackedup" class="sect0"><a class="anchor" href="#src-215321267_Backingupandrestoring-Whendataisbackedup"></a>When data is backed up</h1>
 <div class="paragraph">
 <p>Different events trigger the creation of backups:</p>
 </div>
@@ -753,11 +742,7 @@ of Magnolia in a Live environment</a>.</p>
 <div class="paragraph">
 <p>[<mark>src-215321267_Backingupandrestoring-how-many-backups]</mark>#</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321267_safe-id-QmFja2luZ3VwYW5kcmVzdG9yaW5nLUhvd21hbnliYWNrdXBzYXJla2VwdD8"><a class="anchor" href="#src-215321267_safe-id-QmFja2luZ3VwYW5kcmVzdG9yaW5nLUhvd21hbnliYWNrdXBzYXJla2VwdD8"></a>How many backups are kept?</h2>
-<div class="sectionbody">
+<h1 id="src-215321267_safe-id-QmFja2luZ3VwYW5kcmVzdG9yaW5nLUhvd21hbnliYWNrdXBzYXJla2VwdD8" class="sect0"><a class="anchor" href="#src-215321267_safe-id-QmFja2luZ3VwYW5kcmVzdG9yaW5nLUhvd21hbnliYWNrdXBzYXJla2VwdD8"></a>How many backups are kept?</h1>
 <div class="paragraph">
 <p>The system keeps the most recently created backup for each type:</p>
 </div>
@@ -781,17 +766,6 @@ of Magnolia in a Live environment</a>.</p>
 <p>If you need more backups stored,
 <a href="https://jira.magnolia-cms.com/servicedesk/customer/portal/6/group/18">contact
 the Cloud Helpdesk</a> to find an arrangement.</p>
-</div>
-<div class="paragraph">
-<p>Protecting environments</p>
-</div>
-<div class="paragraph">
-<p>Creating a backup manually</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

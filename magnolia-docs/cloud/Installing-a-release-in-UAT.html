@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Installing a release in UAT - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Installing a release in UAT :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Installing-a-release-in-UAT.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,48 +573,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Installing a release in UAT - Magnolia 6.2 documentation</h1>
+<h1 class="page">Installing a release in UAT</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Installing-updates-using-the-Magnolia-cockpit.html">Installing
-updates using the Magnolia cockpit</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321219"><a class="anchor" href="#src-215321219"></a>Installing a release in UAT</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Related topics</p>
@@ -611,22 +604,25 @@ tested and accepted in the UAT environment, the release can be
 environment</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321219/mnow-int-uat.png" alt="images/download/attachments/215321219/mnow-int-uat.png" width="500"></span></p>
+<p><span class="image"><img src="../_images/cloud/mnow-int-uat.png" alt="cloud/mnow-int-uat.png" width="500"></span></p>
 </div>
-<div class="sect2">
-<h3 id="src-215321219_safe-id-SW5zdGFsbGluZ2FyZWxlYXNlaW5VQVQtVG9pbnN0YWxsYXJlbGVhc2U6"><a class="anchor" href="#src-215321219_safe-id-SW5zdGFsbGluZ2FyZWxlYXNlaW5VQVQtVG9pbnN0YWxsYXJlbGVhc2U6"></a>To install a release:</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321219_safe-id-SW5zdGFsbGluZ2FyZWxlYXNlaW5VQVQtVG9pbnN0YWxsYXJlbGVhc2U6"><a class="anchor" href="#src-215321219_safe-id-SW5zdGFsbGluZ2FyZWxlYXNlaW5VQVQtVG9pbnN0YWxsYXJlbGVhc2U6"></a>To install a release:</h2>
+<div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>In <strong>Installed releases</strong> click <strong>Install an update</strong> .</p>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321219/InstallUAT1_scope_v2.png" alt="images/download/attachments/215321219/InstallUAT1_scope_v2.png" width="600"></span></p>
+<p><span class="image"><img src="../_images/cloud/InstallUAT1_scope_v2.png" alt="cloud/InstallUAT1_scope_v2.png" width="600"></span></p>
 </div>
 </li>
 <li>
 <p>Click <strong>Install a release</strong>.</p>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321219/Install-site-release.png" alt="images/download/attachments/215321219/Install-site-release.png" width="600"></span></p>
+<p><span class="image"><img src="../_images/cloud/Install-site-release.png" alt="cloud/Install-site-release.png" width="600"></span></p>
 </div>
 </li>
 <li>
@@ -638,7 +634,7 @@ environment</a>.</p>
 versions display first. Select <strong>Other site releases</strong> for a dropdown of
 earlier versions.</p>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321219/pick.png" alt="images/download/attachments/215321219/pick.png" width="600"></span></p>
+<p><span class="image"><img src="../_images/cloud/pick.png" alt="cloud/pick.png" width="600"></span></p>
 </div>
 </li>
 <li>
@@ -666,8 +662,10 @@ banner is displayed. The new release details are displayed in
 Environments section of the Package overview page.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321219_InstallingareleaseinUAT-Testchangesonupdatedenvironment"><a class="anchor" href="#src-215321219_InstallingareleaseinUAT-Testchangesonupdatedenvironment"></a>Test changes on updated environment</h3>
+</div>
+<div class="sect1">
+<h2 id="src-215321219_InstallingareleaseinUAT-Testchangesonupdatedenvironment"><a class="anchor" href="#src-215321219_InstallingareleaseinUAT-Testchangesonupdatedenvironment"></a>Test changes on updated environment</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>To check that the environment is running on the correct release:</p>
 </div>
@@ -690,20 +688,6 @@ templates, etc. or a stakeholder may check updated style, etc. pp.</p>
 <div class="paragraph">
 <p>Always avoid hotfixing problems in the Resources app because the changes
 are not propagated back to your GIT repository.</p>
-</div>
-<div class="paragraph">
-<p>Next: * <a href="Installing-a-release-in-Live.html">Installing a release in
-Live</a></p>
-</div>
-<div class="paragraph">
-<p>Defining a release</p>
-</div>
-<div class="paragraph">
-<p>Installing a release in Live</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -542,11 +575,12 @@
 <h1 class="page">Hello Cloud</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>Hi there and welcome to the <strong>Hello Cloud Tutorial</strong>. This tutorial guides you on setting up and using Light Development with Magnolia Cloud.</p>
+<div id="main-content" class="paragraph">
+<p>Welcome to the <strong>Hello Cloud Tutorial</strong> . This tutorial guides you on
+setting up and using Light Development with Magnolia Cloud.</p>
 </div>
 <div class="paragraph">
-<p>Magnolia Cloud is a Platform as a Service (PaaS) offering that provides: Yo yo yo</p>
+<p>Magnolia Cloud is a Platform as a Service (PaaS) offering that provides:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -561,716 +595,990 @@
 </li>
 </ul>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-Although we have both a custom and standard bundle variant, this tutorial focuses on the standard bundle where your projects are leveraged using Light Development. Your site is hosted in Magnolia Cloud and Magnolia manages the environment as a service.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-For more on custom bundles, check out Creating and deploying custom cloud bundles.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Although we have both a custom and standard bundle variant, this
+tutorial focuses on the standard bundle where your projects are
+leveraged using Light Development. Your site is hosted in Magnolia Cloud
+and Magnolia manages the environment as a service.</p>
+</div>
+<div class="paragraph">
+<p>For more on custom bundles, check out
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Creating+and+deploying+custom+cloud+bundles">Creating
+and deploying custom cloud bundles</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_magnolia_system_requirements"><a class="anchor" href="#_magnolia_system_requirements"></a>Magnolia System requirements</h2>
+<h2 id="src-223317259_HelloCloud-Tutorialstructure"><a class="anchor" href="#src-223317259_HelloCloud-Tutorialstructure"></a>Tutorial structure</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are certain prerequisites that you must have in order to continue with this tutorial. Basically, you need to be able to install Magnolia and in order to do that, you need:</p>
+<p><span class="image"><img src="../../_images/cloud/tutorial-structure-static.png" alt="images/download/attachments/223317259/tutorial-structure-static.png" width="600"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-223317259_HelloCloud-Prerequisites"><a class="anchor" href="#src-223317259_HelloCloud-Prerequisites"></a>Prerequisites</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You need to be able to install Magnolia and in order to do that, you
+need Java, Node.js, npm, Git, and access to the Magnolia Cockpit which
+is provided to you when you signed up for Magnolia Cloud.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you have any issues with logging into the Cockpit, please contact the
+<a href="https://mgnl.io/cloud-helpdesk">Magnolia Cloud Helpdesk</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="src-223317259_HelloCloud-Java"><a class="anchor" href="#src-223317259_HelloCloud-Java"></a>Java</h3>
+<div class="paragraph">
+<p>You must have Java version 8 or higher. Check this by going to your
+terminal and running <code>java --version</code>. If you do not see a version
+number as below, you need to install Java for your operating system.</p>
+</div>
+<div class="paragraph">
+<p><code>$ java --version</code></p>
+</div>
+<div class="paragraph">
+<p><code>java 14.0.1 2020-04-14</code></p>
+</div>
+<div class="paragraph">
+<p><code>Java&#8482; SE Runtime Environment (build 14.0.1+7)</code></p>
+</div>
+<div class="paragraph">
+<p><code>Java HotSpot&#8482; 64-Bit Server VM (build 14.0.1+7, mixed mode, sharing)</code></p>
+</div>
+<div class="paragraph">
+<p><strong>For your OS</strong></p>
+</div>
+<div class="paragraph">
+<p>Mac OS X</p>
+</div>
+<div class="paragraph">
+<p>Java is not pre-installed on Mac OS X 10.7 and later.
+<a href="https://www.java.com/en/download/">Download</a> the latest Java from Oracle.</p>
+</div>
+<div class="paragraph">
+<p>Windows</p>
+</div>
+<div class="paragraph">
+<p>On Windows you need a Java SE <em>Development</em> Kit (JDK). The Java
+<em>Runtime</em> Environment (JRE) is not enough because the Tomcat application
+server does not recognize it.</p>
+</div>
+<div class="paragraph">
+<p>What is the difference?</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_java">Java</a></p>
+<p>JRE is for users who run Java programs on their computer.</p>
 </li>
 <li>
-<p><a href="#_node_js_and_npm">Node.js and npm</a></p>
-</li>
-<li>
-<p><a href="#_git">Git</a></p>
-</li>
-<li>
-<p>Access to the Magnolia Cockpit which is provided to you when you signed up for Magnolia Cloud.</p>
+<p>JDK is for developers who write Java-based applications.</p>
 </li>
 </ul>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If you do not know your Cockpit URL and/or login information, contact the Magnolia Cloud Helpdesk.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Download</a>
+and install JDK. By default JDK is installed in
+<code>C:\Program Files\Java\</code>. You can choose another location.</p>
+</div>
+<div class="paragraph">
+<p><strong>Check JAVA_HOME environment variable</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open the command prompt.</p>
+</li>
+<li>
+<p>Type <code>set</code> and press ENTER.</p>
+</li>
+<li>
+<p>Find <code>JAVA_HOME</code> in the command output and verify that the path points
+to your JDK installation directory.</p>
+</li>
+<li>
+<p>If <code>JAVA_HOME</code> is missing or it points to the wrong directory, see Set
+JAVA_HOME environment variable below.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Set JAVA_HOME environment variable</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Right-click <strong>My Computer</strong> and select <strong>Properties</strong>.</p>
+</li>
+<li>
+<p>Go to the <strong>Advanced</strong> tab.<br>
+(In Windows 7+, right-click <strong>Computer</strong> and select <strong>Advanced System
+Settings</strong>, then <strong>Environment variables</strong>.)</p>
+</li>
+<li>
+<p>If the <code>JAVA_HOME</code> environment variable does not exist in <strong>User
+variables</strong> or <strong>System variables</strong>, create it:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>User variables apply to the currently signed-in user only. Create
+<code>JAVA_HOME</code> here if you want it to apply only to the currently logged in
+user. These variables take precedence over system variables.</p>
+</li>
+<li>
+<p>System variables apply to all users. Create <code>JAVA_HOME</code> here if you
+want it to apply to all users. You must be an administrator to modify a
+system environment variable.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/plugins/servlet/confluence/placeholder/unknown-attachment.png" alt="images/plugins/servlet/confluence/placeholder/unknown-attachment.png"></span><br>
+<span class="caption">5-7-0-installingJavaWindows-setHavaHome.png</span></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Set the value of <code>JAVA_HOME</code> to the path of your JDK installation
+directory, for example <code>C:\Program Files\Java\jdk1.8.0_131</code>.</p>
+</li>
+<li>
+<p>Optional step: Add the Magnolia <code>bin</code> directory to the <code>PATH</code>
+variable, for example <code>C:\Program Files\magnolia\apache-tomcat-x.y\bin</code>.
+Setting the <code>PATH</code> allows you to issue the Magnolia <code>start</code> and <code>stop</code>
+commands from anywhere without navigating to the installation directory
+first. Separate the path from existing paths with a semicolon ( ; ). If
+you do this, you also need to add <code>CATALINA_HOME</code> to environment
+variables. Set the value of <code>CATALINA_HOME</code> to the Tomcat installation
+directory, for example <code>C:\Program Files\magnolia\apache-tomcat-x.y</code></p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+<li>
+<p>Go back to Check JAVA_HOME environment variable above and test that
+the variable is found and has the correct value. You need to open a new
+command prompt since environment variables are session specific.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Alternatively you can set JAVA_HOME with a batch file, by adding a line
+like the one below to <code>/apache-tomcat/bin/magnolia_control.bat</code>:</p>
+</div>
+<div class="paragraph">
+<p><code>set JAVA_HOME=C:\Program Files\Java\jdk1.<code>8</code>.0_131</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>set</code> command creates the <code>JAVA_HOME</code> environment variable and sets
+its value to the JDK directory. The command is executed when Magnolia
+starts.</p>
+</div>
+<div class="paragraph">
+<p>Linux</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.java.com/en/download/">Download</a> the latest Java from Oracle.
+The installation directory varies from one Linux system to another. For
+example, on Ubuntu 18.04 the OpenJDK is installed in
+<code>/usr/lib/jvm/java-11-openjdk-amd64/bin/java</code> by default.</p>
+</div>
+<div class="paragraph">
+<p>Solaris</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.java.com/en/download/">Download</a> the latest Java from Oracle.
+You can install it in any directory such as <code>/usr/java</code>.</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_java"><a class="anchor" href="#_java"></a>Java</h3>
+<h3 id="src-223317259_HelloCloud-Nodeandnpm"><a class="anchor" href="#src-223317259_HelloCloud-Nodeandnpm"></a>Node and npm</h3>
 <div class="paragraph">
-<p>You must have <strong>Java version 8 or higher</strong>. Check this by going to your terminal and running  <code>java --version</code>. If you get a version number as such below, you&#8217;re good to go. If not, you need to get Java for your operating system.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ java --version
-java 14.0.1 2020-04-14
-Java(TM) SE Runtime Environment (build 14.0.1+7)
-Java HotSpot(TM) 64-Bit Server VM (build 14.0.1+7, mixed mode, sharing)</code></pre>
-</div>
+<p>You also need Node.js and npm. Check this by running <code>node --version</code>
+and <code>npm --version</code> respectively in your terminal. If you do not see a
+version (as below), you must install Node.js and npm.</p>
 </div>
 <div class="paragraph">
-<p> <br></p>
+<p><code>$ node --version</code></p>
+</div>
+<div class="paragraph">
+<p><code>v12.18.1</code></p>
+</div>
+<div class="paragraph">
+<p><code>$ npm --version</code></p>
+</div>
+<div class="paragraph">
+<p><code>6.14.5</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Install</strong></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you do not have Node installed, go to <a href="https://nodejs.org/">Node.js</a> to
+download and install the latest LTS version. For installation
+instructions of npm, see
+<a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" class="bare">https://docs.npmjs.com/downloading-and-installing-node-js-and-npm</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_node_js_and_npm"><a class="anchor" href="#_node_js_and_npm"></a>Node.js and npm</h3>
+<h3 id="src-223317259_HelloCloud-Git"><a class="anchor" href="#src-223317259_HelloCloud-Git"></a>Git</h3>
 <div class="paragraph">
-<p>You also need Node.js and npm. If you think you may have them, do a quick check by running <code>node --version</code>  and <code>npm --version </code> respectively in your terminal. If you get a version number, you&#8217;re good to go. However, if you do not see a version (as below), you will need to install these. Don&#8217;t worry, it&#8217;s quick and easy.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-If you do not have Node installed, go to <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> to download and install the latest LTS version.  For installation instructions of npm, see  <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank" rel="noopener">npm&#8217;s website</a> .
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ node --version
-v12.18.1
-
-$ npm --version
-6.14.5)</code></pre>
-</div>
+<p>Finally, you need Git for version control and pushing local changes to
+your Magnolia remote repository. Check this by running <code>git --version</code> .
+If you do not have git, download the latest stable version from Git&#8217;s
+website <a href="https://git-scm.com/downloads">here</a>.</p>
 </div>
 <div class="paragraph">
-<p> <br></p>
+<p><code>$ git --version</code></p>
+</div>
+<div class="paragraph">
+<p><code>git version 2.27.0</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_git"><a class="anchor" href="#_git"></a>Git</h3>
+<h3 id="src-223317259_HelloCloud-GetMagnolia"><a class="anchor" href="#src-223317259_HelloCloud-GetMagnolia"></a>Get Magnolia</h3>
 <div class="paragraph">
-<p>And finally, you will need Git for version control and pushing local changes to your Magnolia remote repository. You can check this in your terminal by running <code>git --version</code>. If you see a version number (as below), you are good to go. However, if you do not have git, simply download it from Git&#8217;s website <a href="https://git-scm.com/" target="_blank" rel="noopener">here</a>.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ git --version
-git version 2.27.0</code></pre>
-</div>
+<p>Run <code>npm install @magnolia /cli -g</code> in your terminal where the <code>-g</code> flag
+makes Magnolia available to you globally on your machine. To check if
+Magnolia was installed successfully, run <code>mgnl --version</code> and you will
+see the Magnolia CLI version number (as below).</p>
 </div>
 <div class="paragraph">
-<p> <br></p>
+<p><code>$ mgnl --version</code></p>
+</div>
+<div class="paragraph">
+<p><code>Magnolia CLI: 3.1.0 (node.js: v12.18.1)</code></p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>You may have to run the terminal as an administrator if you receive an
+error such as <code>npm ERR!</code> .</p>
+</div>
+<div class="paragraph">
+<p><strong>MAC or Linux</strong>:</p>
+</div>
+<div class="paragraph">
+<p><code>sudo npm install @magnolia /cli -g</code></p>
+</div>
+<div class="paragraph">
+<p><strong>Windows</strong>:</p>
+</div>
+<div class="paragraph">
+<p>Right click CMD, and choose Run as Administrator.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="src-223317259_HelloCloud-JumpstartMagnolia"><a class="anchor" href="#src-223317259_HelloCloud-JumpstartMagnolia"></a>Jumpstart Magnolia</h3>
+<div class="paragraph">
+<p>Now that Magnolia is installed, let&#8217;s jumpstart it.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to the directory where you want to download Magnolia. For
+example purposes, we&#8217;ll call this directory <code>magnolia</code>.</p>
+</li>
+<li>
+<p>In your <code>magnolia</code> directory, run <code>mgnl jumpstart -m &lt;version&gt;</code>. If
+prompted, choose option <code>3 magnolia-community-demo-webapp</code>. If
+successful, you see:</p>
+<div class="paragraph">
+<p><code>&#8230;&#8203;.</code></p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>info Magnolia has been successfully setup <code>for</code> light development!</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;.</code>
+. To make sure it&#8217;s working, run <code>mgnl start</code> from the <code>magnolia</code>
+directory and after a few seconds, go to the
+<a href="http://localhost:8080/magnoliaAuthor/">localhost:8080/magnoliaAuthor</a> in
+your browser and log in as superuser with the password superuser.</p>
+</div>
+<div class="paragraph">
+<p>+
+[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>For now, shut down the local server by entering <code>CTRL+C</code> in your
+terminal where the server is running.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>The <code>jumpstart</code> command:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Downloads the Magnolia bundle specified into the <code>magnolia</code> directory.</p>
+</li>
+<li>
+<p>Creates a <code>light-modules</code> folder in the directory.</p>
+</li>
+<li>
+<p>Changes the default value of the <code>magnolia.resources.dir</code>
+configuration property from <code>${magnolia.home}/modules</code> to
+<code>/magnolia/light-modules</code> for both the Author and the Public instances
+of Magnolia.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_get_magnolia"><a class="anchor" href="#_get_magnolia"></a>Get Magnolia</h2>
+<h2 id="src-223317259_HelloCloud-PrepareEnvironmentsintheCockpit"><a class="anchor" href="#src-223317259_HelloCloud-PrepareEnvironmentsintheCockpit"></a>Prepare Environments in the Cockpit</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Whew! Now, we can finally install and jumpstart Magnolia.</p>
+<p>In this section, we log in to the Cockpit and set up new <strong>Integration</strong> ,
+<strong>UAT</strong> , and <strong>Live</strong> environments. If these environments were already set
+up during onboarding, you can skip this step.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s go ahead and install Magnolia. Make sure you have the <a href="#_prerequisites">prerequisites</a> completed and we&#8217;ll install and jumpstart Magnolia from the command line.</p>
-</div>
-<div class="sect2">
-<h3 id="_prerequisites"><a class="anchor" href="#_prerequisites"></a>Prerequisites</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>You should have all <a href="#_magnolia_system_requirements">Magnolia System requirements</a> completed before trying to install Magnolia with the Magnolia CLI.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_procedure"><a class="anchor" href="#_procedure"></a>Procedure</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Just run <code>npm install @magnolia /cli -g</code> in your terminal where the <code>-g</code>  flag makes Magnolia available to you globally on your machine.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-To check if Magnolia was installed successfully, run <code>mgnl --version</code> and you will see the Magnolia CLI version number (as below).
-</td>
-</tr>
-</table>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ mgnl --version
-Magnolia CLI: 3.1.0 (node.js: v12.18.1)</code></pre>
-</div>
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
 </div>
 <div class="paragraph">
-<p> <br></p>
-</div>
-<div class="sect3">
-<h4 id="_whoops_that_didnt_work"><a class="anchor" href="#_whoops_that_didnt_work"></a>Whoops! That didn&#8217;t work</h4>
-<div class="paragraph">
-<p>You may have to run the terminal as an administrator if you receive an error such as npm ERR! .</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">MAC or Linux</dt>
-<dd>
-<p><code>sudo npm install @magnolia /cli -g </code></p>
-</dd>
-<dt class="hdlist1">Windows</dt>
-<dd>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Right click CMD, and choose <strong>Run as Administrator</strong>.</p>
-</li>
-</ol>
-</div>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p> <br></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_jumpstart_magnolia"><a class="anchor" href="#_jumpstart_magnolia"></a>Jumpstart Magnolia</h3>
-<div class="paragraph">
-<p>Now that Magnolia is installed, let&#8217;s jumpstart it. Simply, navigate to the directory where you want to download Magnolia. For example purposes, we&#8217;ll call this directory <strong>magnolia</strong>.</p>
+<p>If you have any issues with logging into the Cockpit, please contact the
+<a href="https://mgnl.io/cloud-helpdesk">Magnolia Cloud Helpdesk</a>.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In your <strong>magnolia</strong> directory, run <code>mgnl jumpstart -m &lt;version&gt;</code>.  If prompted, choose option <code>3 magnolia-community-demo-webapp</code>. If successful, you see:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">....
-info Magnolia has been successfully setup for light development!
-....</code></pre>
-</div>
-</div>
+<p>Log in to the Cockpit.</p>
 </li>
 <li>
-<p>To make sure it&#8217;s working, run <code>mgnl start</code> from the <strong>magnolia directory</strong> and after a few seconds, go to the <a href="http://localhost:8080/magnoliaAuthor/" target="_blank" rel="noopener">localhost:8080/magnoliaAuthor</a> in your browser and login as <strong>superuser</strong> with the password <strong>superuser</strong>.</p>
-</li>
-</ol>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-For now, go ahead and shut down the local server by entering CTRL+C in your terminal where the server is running. Don&#8217;t worry, we will come back to this later.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>The <code>jumpstart</code> command:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Downloads the Magnolia bundle specified into the magnolia directory.</p>
-</li>
-<li>
-<p>Creates a <code>light-modules</code> folder in the directory.</p>
-</li>
-<li>
-<p>Changes the default value of the <code>magnolia.resources.dir</code> configuration property from <code>${magnolia.home}/modules</code> to <code>/magnolia light-modules</code> for both the <em>Author</em> and the <em>Public</em> instances of Magnolia.</p>
-</li>
-</ul>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_set_up_the_cockpit"><a class="anchor" href="#_set_up_the_cockpit"></a>Set up the Cockpit</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Let&#8217;s enter the cockpit. We need to log in to the Cockpit to set up our Integration, UAT, and Live environments. This will help us when we are installing releases and is typically a good thing to do when first using the Cockpit.</p>
-</div>
-<div class="paragraph">
-<p> <br></p>
-</div>
-<div class="sect2">
-<h3 id="_prerequisites_2"><a class="anchor" href="#_prerequisites_2"></a>Prerequisites</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>You must have credentials to log in to the Cockpit</p>
-</li>
-<li>
-<p>You must know your Cockpit URL</p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-If you do not know your URL or credentials, contact the <a href="https://jira.magnolia-cms.com/servicedesk/customer/portals" target="_blank" rel="noopener">Magnolia Help Desk</a>
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p> <br></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_procedure_2"><a class="anchor" href="#_procedure_2"></a>Procedure</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Log in to the Cockpit. You were provided with a URL for the Cockpit along with login details for all requested users when you subscribed to Magnolia Cloud. Go ahead and use that now. You should see the login screen where you will enter your credentials.</p>
-</li>
-<li>
-<p>Set up a new Environment for Integration, UAT, and Live.</p>
+<p>Set up a new Environment for Integration, UAT, and Live. You will need
+to repeat these steps for each of the three environment types.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>On the landing page by your Subscriptions, select Show Package Overview on the right side of the page.</p>
+<p>On the landing page by your Subscriptions, click <strong>Show Package
+Overview</strong> on the right side of the page.</p>
 </li>
 <li>
-<p>Choose Set up environment for the chosen Environment (<em>Integration, Live, or UAT</em>).</p>
+<p>Choose <strong>Set up environment</strong> for the chosen Environment (
+<em>Integration, UAT, or Live</em> ).</p>
 </li>
 <li>
-<p>Choose the Magnolia version. You can see runtime information regarding the available bundles .</p>
+<p>Choose the Magnolia version. You can see runtime information
+regarding the available bundles.</p>
 </li>
 <li>
-<p>Select Set up <em>&lt;environment name&gt;</em>. The creation of the environment may take some time.</p>
+<p>Click <strong>Set up &lt;environment name&gt;</strong>. The creation of the environment
+may take some time.</p>
 </li>
 <li>
-<p>Select OK.</p>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-You will need to repeat these steps for each of the three environment types.
-</td>
-</tr>
-</table>
+<p>Click <strong>OK</strong>.</p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/cockpit/set-up-environment.png" alt="set up environment"></span></p>
+<p>Actions in the Magnolia Cockpit are asynchronous. You receive a
+notification when the Environment is up and running.
+. Copy or note your Magnolia Cloud .git repository from the Cockpit.
+This is found under <strong>Additional Information</strong> on the Package Overview
+page.<span class="image"><img src="../../_images/cloud/cockpit-git-repo.png" alt="images/download/attachments/223317259/cockpit-git-repo.png" width="600"></span></p>
 </div>
-</li>
-</ol>
 </div>
-</li>
-</ol>
+</div>
+<div class="sect1">
+<h2 id="src-223317259_HelloCloud-CreateaLightModule"><a class="anchor" href="#src-223317259_HelloCloud-CreateaLightModule"></a>Create a Light Module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OK, so let&#8217;s create something - specifically a light module. We are now
+back on your local machine in the <code>magnolia</code> folder where we installed
+Magnolia.</p>
+</div>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>If you are curious to know more about light modules, check them out
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Light+modules">here</a>. But,
+let&#8217;s continue on for now.</p>
 </div>
 <div class="olist arabic">
-<ol class="arabic" start="3">
+<ol class="arabic">
 <li>
-<p>Copy or note your Magnolia Cloud .git repository from the Cockpit. This is found under Additional Information on the Package Overview page.</p>
+<p>In the root <code>magnolia</code> folder, initialize a git repository and add
+your Magnolia Cloud repo as the remote origin.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>run <code>git init</code></p>
+</li>
+<li>
+<p>run <code>git remote add origin &lt;yourMagnoliaRemoteRepo&gt;</code>. <em>This is what
+you just copied from the Cockpit.</em></p>
+</li>
+<li>
+<p>run <code>git remote -v</code> and you should see your Magnolia repo as the
+<code>origin</code> for both <code>fetch</code> and <code>push</code>.</p>
+</li>
+<li>
+<p>run <code>git pull origin master</code> and now you&#8217;re ready to make some local
+changes. <em>This may take a minute.</em></p>
 </li>
 </ol>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-As all actions in the Magnolia cockpit are asynchronous, so you can click on OK before the action is complete. The action runs in the background and a notification displays once it is complete. The action also appears in the activity log. In other words, go ahead and move onto the next section and the environments will be ready when we return.
-</td>
-</tr>
-</table>
+</li>
+<li>
+<p>Navigate down one level to your <code>light-modules</code> directory.</p>
+</li>
+<li>
+<p>Run <code>mgnl create-light-module forest</code>. <em>Magnolia CLI has now created
+the following for you:</em></p>
+<div class="paragraph">
+<p>/magnolia/light-modules/forest</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><code>forest/</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── decorations</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── dialogs</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── i18n</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── forest-messages_en.properties</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── includes</code></p>
+</div>
+<div class="paragraph">
+<p><code>├── templates</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   ├── components</code></p>
+</div>
+<div class="paragraph">
+<p><code>│   └── pages</code></p>
+</div>
+<div class="paragraph">
+<p><code>└── webresources</code>
+. The forest light module is now ready. Navigate to
+<code>light-modules/forest</code>. Create a page template in forest using
+<code>mgnl create-page big-tree</code>.</p>
+</div>
+<div class="paragraph">
+<p>+
+That command created:</p>
+</div>
+<div class="paragraph">
+<p>A <a href="https://wiki.magnolia-cms.com/display/DOCS62/Page+definition">Page
+template definition</a></p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/templates/pages/big-tree.yaml</code></p>
+</div>
+<div class="paragraph">
+<p>A Page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Template+scripts">template
+script</a></p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/templates/pages/big-tree.ftl</code></p>
+</div>
+<div class="paragraph">
+<p>A Page
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Dialog+definition">dialog
+definition</a></p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/dialogs/pages/big-tree.yaml</code>
+. In <code>light-modules/forest</code>, run <code>mgnl create-component nest</code> to create
+a component.</p>
+</div>
+<div class="paragraph">
+<p>+
+That command created:</p>
+</div>
+<div class="paragraph">
+<p>A
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Component+definition">Component
+template definition</a></p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/templates/components/nest.yaml</code></p>
+</div>
+<div class="paragraph">
+<p>A Component
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Template+scripts">template
+script</a></p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/templates/components/nest.ftl</code></p>
+</div>
+<div class="paragraph">
+<p>Component
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Dialog+definition">dialog
+definition</a></p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/dialogs/components/nest.yaml</code>
+. We need to make the <strong>nest</strong> <strong>component</strong> available to the <strong>big-tree page
+template</strong>. Still in <code>light-modules/forest</code>, run
+<code>mgnl add-availability components/nest pages/big-tree@main</code>.</p>
+</div>
+<div class="paragraph">
+<p>+
+That command:</p>
+</div>
+<div class="paragraph">
+<p>Added <code>[@cms.area name="main"/]</code> to:</p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/templates/components/big-tree.yaml</code></p>
+</div>
+<div class="paragraph">
+<p>Added the component <code>nest</code> with an <code>id:forest:components/nest</code> to:</p>
+</div>
+<div class="paragraph">
+<p><code>light-modules/forest/templates/components/big-tree.ftl</code></p>
+</div>
+<div class="paragraph">
+<p>+
+[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+<div class="paragraph">
+<p>In <code>light-modules/forest/templates/pages/big-tree.ftl</code>, make sure the
+main area is inside the <code>&lt;div class="container"&gt;</code> as so:</p>
+</div>
+<div class="paragraph">
+<p>` &lt;<code>div</code> <code>class</code>=<code>"container"</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      &lt;<code>h1</code>&gt;big-tree works!&lt;/<code>h1</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`      [@cms.area name="main"/]`</p>
+</div>
+<div class="paragraph">
+<p>` &lt;/<code>div</code>&gt;`
+. Make the
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/MTK+module">MTK
+module</a> (<em>Magnolia Templating Kit module</em>) HTML available to the
+<strong>big-tree</strong> page. From <code>light-modules/forest</code>, run
+<code>mgnl add-availability mtk:components/html pages/big-tree@main</code>. Your
+<code>templates/pages/big-tree.yaml</code> file should now look like:</p>
+</div>
+<div class="paragraph">
+<p>+
+big-tree.yaml</p>
+</div>
+<div class="paragraph">
+<p><code>title: big-tree</code></p>
+</div>
+<div class="paragraph">
+<p><code>templateScript: /forest/templates/pages/big-tree.ftl</code></p>
+</div>
+<div class="paragraph">
+<p><code>renderType: freemarker</code></p>
+</div>
+<div class="paragraph">
+<p><code>dialog: forest:pages/big-tree</code></p>
+</div>
+<div class="paragraph">
+<p><code>visible: ``true</code></p>
+</div>
+<div class="paragraph">
+<p><code>areas:</code></p>
+</div>
+<div class="paragraph">
+<p>`  main:`</p>
+</div>
+<div class="paragraph">
+<p>`    availableComponents:`</p>
+</div>
+<div class="paragraph">
+<p>`      nest:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: forest:components/nest`</p>
+</div>
+<div class="paragraph">
+<p>`      html:`</p>
+</div>
+<div class="paragraph">
+<p>`        id: mtk:components/html`
+. Let&#8217;s add some simple functionality. Navigate to and open
+<code>/magnolia/light-modules/forest/templates/pages/big-tree.ftl</code>.
+.. Uncomment the <code>resfn.css</code> and <code>refsn.js</code> snippets.
+.. Save the File.</p>
+</div>
+<div class="paragraph">
+<p>+
+big-tree.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;.</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.css(["/forest/.*css"])!}</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>head</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;.</code></p>
+</div>
+<div class="paragraph">
+<p><code>${resfn.js(["/forest/.*js"])!}</code></p>
+</div>
+<div class="paragraph">
+<p><code>&lt;/<code>body</code>&gt;</code>
+. Navigate to and open
+<code>/magnolia/light-modules/forest/templates/components/nest.ftl</code>.
+.. Add a simple button and div below the <code>content.title</code> section at the
+top of the file.
+.. Save the File.</p>
+</div>
+<div class="paragraph">
+<p>+
+nest.ftl</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;<code>div</code> <code>class</code>=<code>"nest"</code>&gt;</code></p>
+</div>
+<div class="paragraph">
+<p>`  [#if content.title?has_content]`</p>
+</div>
+<div class="paragraph">
+<p>`    &lt;<code>h2</code>&gt;${content.title!}&lt;/<code>h2</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  [/#if]`</p>
+</div>
+<div class="paragraph">
+<p><code>&lt;!-- add the button and div below -&#8594;</code></p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>button</code> <code>onclick</code>=<code>"tweet()"</code>&gt;Click me&lt;/<code>button</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p>`  &lt;<code>div</code> <code>id</code>=<code>"birdie"</code>&gt;&lt;<code>h2</code>&gt;I&#8217;m a wee birdie&lt;/<code>h2</code>&gt;&lt;/<code>div</code>&gt;`</p>
+</div>
+<div class="paragraph">
+<p><code>&#8230;&#8203;.</code>
+. Create a new folder called css at <code>forest/webresources</code>.
+.. Navigate to the new <code>forest/webresources/css</code> folder.
+.. Create a file called styles.css.
+.. Copy and paste the code below into styles.css.
+.. Save the File.</p>
+</div>
+<div class="paragraph">
+<p>+
+styles.css</p>
+</div>
+<div class="paragraph">
+<p><code>div.nest {</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>background-color</code>: <code>#8c720b</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>padding</code>: <code>100px</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    border-radius: <code>15px</code> <code>50px</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>color</code>: <code>white</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p>` `</p>
+</div>
+<div class="paragraph">
+<p><code>button {</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>padding</code>: <code>5px</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>background-color</code>: <code>rgb</code>(<code>129</code>, <code>126</code>, <code>125</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>color</code>: whitesmoke;`</p>
+</div>
+<div class="paragraph">
+<p>`    border-radius: <code>8px</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    box-shadow: <code>-1px</code> <code>0px</code> <code>11px</code> <code>-3px</code> rgba(<code>0</code>, <code>0</code>, <code>0</code>, <code>0.671</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>cursor</code>: <code>pointer</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code></p>
+</div>
+<div class="paragraph">
+<p><code>#birdie {</code></p>
+</div>
+<div class="paragraph">
+<p>`    <code>display</code>: <code>none</code>;`</p>
+</div>
+<div class="paragraph">
+<p><code>}</code>
+. Finally, create a new folder called js at <code>forest/webresources</code>.
+.. Navigate to the new <code>forest/webresources/js</code> folder.
+.. Create a file called tweet.js.
+.. Copy and paste the code below into the tweet.js file.
+.. Save the File.</p>
+</div>
+<div class="paragraph">
+<p>+
+tweet.js</p>
+</div>
+<div class="paragraph">
+<p><code>function`</code> tweet() {`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>var</code> x = document.getElementById(<code>"birdie"</code>);`</p>
+</div>
+<div class="paragraph">
+<p>`    <code>if</code> (x.style.display == <code>"none"</code>) {`</p>
+</div>
+<div class="paragraph">
+<p>`      x.style.display = <code>"block"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    } <code>else</code> {`</p>
+</div>
+<div class="paragraph">
+<p>`      x.style.display = <code>"none"</code>;`</p>
+</div>
+<div class="paragraph">
+<p>`    }`</p>
+</div>
+<div class="paragraph">
+<p>`  }`</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-223317259_HelloCloud-Localtest"><a class="anchor" href="#src-223317259_HelloCloud-Localtest"></a>Local test</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the root <code>magnolia</code> folder, run <code>mgnl start</code> and then use your
+favorite web browser to open the URL
+`http://localhost:8080/magnoliaAuthor/ `.</p>
+</li>
+<li>
+<p>Create a new page with using your big-tree page template and choose
+the nest component.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Navigate to the Pages App via the icon on the top bar.</p>
+</li>
+<li>
+<p>Click <strong>Add Page</strong>.</p>
+</li>
+<li>
+<p>Name the page home and click on big-tree
+template.<span class="image"><img src="../../_images/cloud/cockpit-create-page.png" alt="images/download/attachments/223317259/cockpit-create-page.png" width="600"></span></p>
+</li>
+<li>
+<p>Double-click the newly-created home page.</p>
+</li>
+<li>
+<p>Add the nest component to the
+page.<span class="image"><img src="../../_images/cloud/cockpit-add-component.png" alt="images/download/attachments/223317259/cockpit-add-component.png" width="600"></span></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Make sure your forest module is in your Resource Files app.</p>
+<div class="paragraph">
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Use the search bar at the top and type Resource Files.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-223317259_HelloCloud-Pushyourchanges"><a class="anchor" href="#src-223317259_HelloCloud-Pushyourchanges"></a>Push your changes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are happy that all is well locally, let&#8217;s push those changes to
+your Magnolia Cloud repository.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the the <code>magnolia</code> folder (the parent directory of your
+light-modules) stop the local server with <code>CTRL+C</code>.</p>
+</li>
+<li>
+<p>Run <code>git add . &amp;&amp; git commit -m "flyAway" &amp;&amp; git push origin master</code>.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="src-223317259_HelloCloud-InstallgitchangesintheCockpit"><a class="anchor" href="#src-223317259_HelloCloud-InstallgitchangesintheCockpit"></a>Install git changes in the Cockpit</h3>
+<div class="paragraph">
+<p>Go back to your Cockpit and log in using your provided credentials.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Navigate to <strong>My Subscription Packages &gt; Subscription &gt; Install an
+Update</strong>.</p>
+</li>
+<li>
+<p>Choose <strong>Install a development snapshot</strong>. Choose Branch &gt; Master in the
+on-screen
+wizard.<span class="image"><img src="../../_images/cloud/cockpit-install-development-snapshot.png" alt="images/download/attachments/223317259/cockpit-install-development-snapshot.png" width="600"></span></p>
+</li>
+<li>
+<p>On the Install an Update page, Choose <strong>Define a new release</strong>. Follow
+the on-screen wizard.
+<span class="image"><img src="../../_images/cloud/cockpit-define-release.png" alt="images/download/attachments/223317259/cockpit-define-release.png" width="600"></span></p>
+</li>
+<li>
+<p>On the Install an Update Page, Choose <strong>Install a release</strong>. Follow the
+on-screen wizard for the UAT and repeat for the Live Environment as
+well.<span class="image"><img src="../../_images/cloud/cockpit-install-a-release.png" alt="images/download/attachments/223317259/cockpit-install-a-release.png" width="600"></span></p>
+</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_create_your_first_light_module_and_page_template"><a class="anchor" href="#_create_your_first_light_module_and_page_template"></a>Create your first light module and page template</h2>
+<h2 id="src-223317259_HelloCloud-CreateaPage"><a class="anchor" href="#src-223317259_HelloCloud-CreateaPage"></a>Create a Page</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Let&#8217;s create our first light module. This brief set of instructions will guide you on creating a simple light module following standard Magnolia processes.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-When creating a name for a module, do not use spaces, accented characters such as <em>é, à, ç, ä, ö, ü</em> or special characters such as slashes like <em>/, \</em> and so on.
-</td>
-</tr>
-</table>
-</div>
-<div class="sect2">
-<h3 id="_prerequisites_3"><a class="anchor" href="#_prerequisites_3"></a>Prerequisites</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>You must have all of the <a href="#_magnolia_system_requirements">Magnolia System requirements</a> completed.</p>
-</li>
-<li>
-<p>Of course, you must have downloaded and installed Magnolia. <em>Just a friendly reminder</em></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p> <br></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_create_the_light_module"><a class="anchor" href="#_create_the_light_module"></a>Create the light module</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In the root magnolia folder, let&#8217;s initialize a git repository and add your Magnolia Cloud repo as the remote origin.</p>
+<p>Navigate to your Live Environment under Environments.</p>
 </li>
 <li>
-<p>Run <code>git init</code>.</p>
+<p>Go into the Author space by clicking on the author URL under the
+Artifact
+ID.<span class="image"><img src="../../_images/cloud/cloud-cockpit-edit-content.png" alt="images/download/attachments/223317259/cloud-cockpit-edit-content.png" width="600"></span></p>
 </li>
 <li>
-<p>Run <code>git remote add origin &lt;yourMagnoliaRemoteRepo&gt;</code>. <em>This is what you just copied from the Cockpit</em>.</p>
+<p>Edit the Home page by right clicking it and choosing <strong>Change Template</strong>
+and change the template to use your <strong>big-tree</strong> page
+template.<span class="image"><img src="../../_images/cloud/cockpit-create-page.png" alt="images/download/attachments/223317259/cockpit-create-page.png" width="600"></span></p>
 </li>
 <li>
-<p>Run <code>git remote -v</code> and you should see your Magnolia repo as the origin  for both <code>fetch</code>  and <code>push</code>.</p>
-</li>
-<li>
-<p>Run <code>git pull origin master</code> and now you&#8217;re ready to make some local changes. This may take a minute.</p>
-</li>
-<li>
-<p>Navigate to the <code>light-modules</code> folder of your Magnolia installation.</p>
-</li>
-<li>
-<p>Run <code>mgnl create-light-module hello-magnolia</code>. This creates the structure below:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">hello-magnolia/
-├── decorations/
-├── dialogs/
-│   ├── components/
-│   └── pages/
-├── i18n/
-│   └── hello-magnolia-messages_en.properties
-├── includes
-│   └── README.txt
-├── README.md
-├── templates/
-│   ├── components/
-│   └── pages/
-└── webresources/</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p>Magnolia continuously scans the file system folder defined by the <code>magnolia.resources.dir</code> property. In this case, it looks inside the <strong>light-modules folder</strong>, and registers your module(s) automatically. It detects new and modified templates, dialogs and (web)resources. Cool, huh?</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p> <br></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_create_the_page_template"><a class="anchor" href="#_create_the_page_template"></a>Create the page template</h3>
-<div class="paragraph">
-<p>When creating your first page template, you will create:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Some basic CSS for styling the page.</p>
-</li>
-<li>
-<p>A <strong>page template script</strong> file containing FreeMarker directives. Directives make it possible to retrieve the content of some parts of the page from the JCR repository.</p>
-</li>
-<li>
-<p>A <strong>page template definition</strong> that makes the template available to Magnolia&#8217;s authoring system.</p>
-</li>
-<li>
-<p>A <strong>dialog definition</strong> which defines the editable page properties.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s get started:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Create a new css folder in <code>/hello-magnolia/webresources/</code>.</p>
-</li>
-<li>
-<p>Download the CSS file <a href="../../_attachments/files/hello-styles.css" target="_blank" rel="noopener">hello-styles.css</a> and save it as <code>/hello-magnolia/webresources/css/hello-style.css</code>. We will reference this stylesheet in a FreeMarker template script.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-upon saving, the file becomes a resource available as <a href="http://localhost:8080/magnoliaAuthor/.resources/hello-magnolia/webresources/css/hello-style.css" class="bare">http://localhost:8080/magnoliaAuthor/.resources/hello-magnolia/webresources/css/hello-style.css</a>.
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Go to the <code>/hello-magnolia/templates/pages/</code> folder.</p>
-</li>
-<li>
-<p>In the pages folder, download <a href="../../_attachments/files/hello.ftl" target="_blank" rel="noopener">hello.ftl</a> and save it as <code>/hello-magnolia/templates/pages/hello.ftl</code>.</p>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-A template script defines the output, typically HTML, and is interpreted by a page renderer. The script in this step uses a templating language called FreeMarker.
-</td>
-</tr>
-</table>
-</div>
-</li>
-<li>
-<p>Copy the template definition code below and save it to <code>hello-magnolia/templates/pages/hello.yaml</code>. <em>A template definition gives the template a name and makes it available to the system. It also tells the system which script renders the content</em>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">title: hello
-templateScript: /hello-magnolia/templates/pages/hello.ftl
-renderType: freemarker
-dialog: hello-magnolia:pages/hello
-visible: true</code></pre>
-</div>
-</div>
-</li>
-<li>
-<p>Copy the following code to a file named <code><code>hello.yaml</code></code> in <code>/hello-magnolia/dialogs/pages/</code>. <em>A dialog defined like this allows content authors to add and edit the values of page properties such as windowTitle and title. The content of these properties is stored in the Magnolia JCR repository</em>.</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">label: Page properties
-form:
-  tabs:
-    - name: tabMain
-      label: hello
-      fields:
-        - name: title
-          fieldType: text
-          i18n: true
-          label: Title
-        - name: windowTitle
-          fieldType: text
-          i18n: true
-          label: Window title
-
-actions:
-  commit:
-    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
-  cancel:
-    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition</code></pre>
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_install_git_changes"><a class="anchor" href="#_install_git_changes"></a>Install git changes</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>To install git changes, we need to make sure we have the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>You Magnolia git repository URL (this is found under Additional Information on the Package Overview page in the Cockpit).</p>
-</li>
-<li>
-<p>Git installed locally</p>
-</li>
-<li>
-<p>Access to your Magnolia Cockpit</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_push_local_to_remote"><a class="anchor" href="#_push_local_to_remote"></a>Push local to remote</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>From your root <code>magnolia</code> folder (the parent directory of the light-modules folder), run <code>git remote -v</code> to make sure you see the correct remote git repository.</p>
-</li>
-<li>
-<p>If that looks right, you can run the one-liner below:</p>
-</li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git add . &amp;&amp; git commit -m "commitMessage" &amp;&amp; git push origin master</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p> <br></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_install_git_changes_in_the_cockpit"><a class="anchor" href="#_install_git_changes_in_the_cockpit"></a>Install git changes in the Cockpit</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Navigate to <strong>My Subscription Packages &gt; Subscription &gt; Install an Update</strong> (<em>this is found under Installed Releases under the Package Overview page</em>).</p>
+<p>Publish the page.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Choose Install a Development Snapshot. Choose Branch &gt; Master in the on-screen wizard.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../../_images/cockpit/install-development-snapshot.png" alt="install development snapshot"></span></p>
-</div>
-</li>
-</ol>
-</div>
+<p>Click <strong>Preview Page</strong>.</p>
 </li>
 <li>
-<p>Wrap the snapshot carrying the module updates into a release. We do this by navigating to <strong>My Subscription Packages &gt; Subscription &gt; Install an Update</strong> (<em>this is found under Installed Releases under the Package Overview page</em>).</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Choose Define a New Release. Follow the on-screen wizard.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../../_images/cockpit/define-a-new-release.png" alt="define a new release"></span></p>
-</div>
-</li>
-</ol>
-</div>
+<p>Once in Preview, click <strong>Publish</strong>. This assigns a publishing task to
+your publishing group.</p>
 </li>
 <li>
-<p>Finally, let&#8217;s install the release to both the UAT and Live Environments. We do this by navigating to <strong>My Subscription Packages &gt; Subscription &gt; Install an Update</strong> (<em>this is found under Installed Releases under the Package Overview page</em>).</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
+<p>Navigate to Tasks, found in the top navigation bar.</p>
+</li>
 <li>
-<p>Choose Install a release. Follow the on-screen wizard for the UAT and repeat for the Live Environment as well.</p>
-<div class="paragraph">
-<p><span class="image"><img src="../../_images/cockpit/install-a-release.png" alt="install a release"></span></p>
-</div>
+<p>Select the task and click <strong>Assign to Me</strong>.</p>
+</li>
+<li>
+<p>Navigate to the <strong>Assigned Tab</strong> in Tasks.</p>
+</li>
+<li>
+<p>Click on the task assigned to you.</p>
+</li>
+<li>
+<p>Click <strong>Preview Task.</strong></p>
+</li>
+<li>
+<p>Once in Preview, click <strong>Approve and Publish</strong>.</p>
 </li>
 </ol>
 </div>
 </li>
 </ol>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_add_a_page"><a class="anchor" href="#_add_a_page"></a>Add a page</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>To add a page using an existing page template, we use the Author instance to create the page and then publish it to our Public instance.</p>
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
 </div>
-<div class="sect2">
-<h3 id="_prerequisites_4"><a class="anchor" href="#_prerequisites_4"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>You can now go to your public Live environment URL (or associated
+<a href="https://wiki.magnolia-cms.com/display/DOCS62/Cloud+domains+and+certificates">domain
+name</a>) and see the updated page.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>Take a bow, my friend. You&#8217;re done. You have successfully:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>You must have downloaded and installed Magnolia.</p>
+<p><strong>Logged in</strong> to your Cockpit.</p>
 </li>
 <li>
-<p>You must have access to your Magnolia Cockpit.</p>
+<p><strong>Set up</strong> Integration, UAT, and Live environments.</p>
+</li>
+<li>
+<p><strong>Made changes</strong> locally via Magnolia CLI, pushed them to Magnolia
+Cloud, and implemented those changes.</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_procedure_3"><a class="anchor" href="#_procedure_3"></a>Procedure</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Go to the <strong>App launcher</strong> and select the Pages tile to open the Pages app. <span class="image"><img src="../../_images/cockpit/navigate-to-pages-app.png" alt="navigate to pages app"></span></p>
-</li>
-<li>
-<p>Create a new page called <strong>hello</strong>. Start this by selecting Add page from the Action bar on the right-hand side.</p>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/cockpit/add-page-icon.png" alt="add page icon"></span></p>
+<p>[.admonition-icon .confluence-information-macro-icon]##</p>
 </div>
-</li>
-<li>
-<p>In the Add page dialog that appears, choose the hello template as the page template and select Next.</p>
-</li>
-<li>
-<p>In the Page properties dialog, enter Hello Magnolia into the Title and Window title fields.</p>
-</li>
-<li>
-<p>Select Commit.</p>
-</li>
-<li>
-<p>Select Preview page on the right to preview your page.</p>
-</li>
-<li>
-<p>Select Publish. You can then access the page on the Public instance of your Magnolia installation your public instance URL.</p>
-</li>
-</ol>
-</div>
+<div class="paragraph">
+<p>Have a look at the rest of the
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Magnolia+Cloud">Magnolia
+Cloud</a> or dig further into light module development by learning about
+<a href="https://documentation.magnolia-cms.com/display/DOCS62/Magnolia+front-end+development">front-end
+development in Magnolia</a> .</p>
 </div>
 </div>
 </div>

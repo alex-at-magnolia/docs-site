@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Monitoring and logging - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Monitoring and logging :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Monitoring-and-logging.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,56 +573,19 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Monitoring and logging - Magnolia 6.2 documentation</h1>
+<h1 class="page">Monitoring and logging</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Managing-environments-using-the-Magnolia-cockpit.html">Managing
-environments using the Magnolia cockpit</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-219778433"><a class="anchor" href="#src-219778433"></a>Monitoring and logging</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Magnolia Cloud integrates with Datadog for logging and monitoring
 services to help you troubleshoot your instances and ensure the quality
 of your website.</p>
 </div>
-<div class="sect2">
-<h3 id="src-219778433_Monitoringandlogging-Datadogaccounts"><a class="anchor" href="#src-219778433_Monitoringandlogging-Datadogaccounts"></a>Datadog accounts</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-219778433_Monitoringandlogging-Datadogaccounts"><a class="anchor" href="#src-219778433_Monitoringandlogging-Datadogaccounts"></a>Datadog accounts</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A URL link to Datadog for your subscription package is provided in the
 Additional information section of the Cockpit.</p>
@@ -613,8 +609,10 @@ contact our
 Cloud Helpdesk</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-219778433_safe-id-TW9uaXRvcmluZ2FuZGxvZ2dpbmctRGFzaGJvYXJkcyxtZXRyaWNzYW5kbG9ncw"><a class="anchor" href="#src-219778433_safe-id-TW9uaXRvcmluZ2FuZGxvZ2dpbmctRGFzaGJvYXJkcyxtZXRyaWNzYW5kbG9ncw"></a>Dashboards, metrics and logs</h3>
+</div>
+<div class="sect1">
+<h2 id="src-219778433_safe-id-TW9uaXRvcmluZ2FuZGxvZ2dpbmctRGFzaGJvYXJkcyxtZXRyaWNzYW5kbG9ncw"><a class="anchor" href="#src-219778433_safe-id-TW9uaXRvcmluZ2FuZGxvZ2dpbmctRGFzaGJvYXJkcyxtZXRyaWNzYW5kbG9ncw"></a>Dashboards, metrics and logs</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We provide access to preconfigured Datadog dashboards, metrics and logs
 about how your setup is performing such as response time, req/s, error
@@ -647,8 +645,10 @@ and the indexes can be rehydrated from there when needed.</p>
 <p>Customized dashboards, metrics and logs are currently <em>not</em> supported.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-219778433_Monitoringandlogging-Auditlogs"><a class="anchor" href="#src-219778433_Monitoringandlogging-Auditlogs"></a>Audit logs</h3>
+</div>
+<div class="sect1">
+<h2 id="src-219778433_Monitoringandlogging-Auditlogs"><a class="anchor" href="#src-219778433_Monitoringandlogging-Auditlogs"></a>Audit logs</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>In addition to Datadog logging, you can enable audit trail logs in
 Magnolia.</p>
@@ -669,16 +669,6 @@ in the Datadog log stream.</p>
 <div class="paragraph">
 <p>See <a href="https://wiki.magnolia-cms.com/display/DOCS62/Audit">Audit</a> for more
 information.</p>
-</div>
-<div class="paragraph">
-<p>Managing environments using the Magnolia cockpit</p>
-</div>
-<div class="paragraph">
-<p>Managing cloud log levels</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

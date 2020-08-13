@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Module structure - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Module structure :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Module_structure.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="Modules.html">Modules</a>
+    <a class="nav-link" href="Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -531,48 +564,16 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="Module_structure.html">Module structure - Magnolia 6.2 documentation</a></li>
+    <li>Modules</li>
+    <li><a href="Module_structure.html">Module structure</a></li>
   </ul>
 </nav>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Module structure - Magnolia 6.2 documentation</h1>
+<h1 class="page">Module structure</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Modules.html" class="bare">Modules.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196597525"><a class="anchor" href="#src-196597525"></a>Module structure</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>A Magnolia module can be purely file based or it can be wrapped in a
@@ -782,8 +783,11 @@ expression <code>[a-zA-Z0-9-_]</code>.</p>
 CLI</a> creates the module folder structure on the file system
 automatically.</p>
 </div>
-<div class="sect2">
-<h3 id="src-196597525_Modulestructure-Modulesubfolders"><a class="anchor" href="#src-196597525_Modulestructure-Modulesubfolders"></a>Module subfolders</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-Modulesubfolders"><a class="anchor" href="#src-196597525_Modulestructure-Modulesubfolders"></a>Module subfolders</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -895,8 +899,11 @@ requests to the actual content locations.</p>
 </tr>
 </tbody>
 </table>
-<div class="sect3">
-<h4 id="src-196597525_Modulestructure-Definitionitemfolders"><a class="anchor" href="#src-196597525_Modulestructure-Definitionitemfolders"></a>Definition item folders</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-Definitionitemfolders"><a class="anchor" href="#src-196597525_Modulestructure-Definitionitemfolders"></a>Definition item folders</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A definition item is a component configuration for executing tasks in a
 Magnolia instance.
@@ -931,25 +938,30 @@ recommended approach.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597525_Modulestructure-Magnoliamodulespecificfiles"><a class="anchor" href="#src-196597525_Modulestructure-Magnoliamodulespecificfiles"></a>Magnolia module specific files</h3>
-<div class="sect3">
-<h4 id="src-196597525_Modulestructure-Moduledescriptor"><a class="anchor" href="#src-196597525_Modulestructure-Moduledescriptor"></a>Module descriptor</h4>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-Magnoliamodulespecificfiles"><a class="anchor" href="#src-196597525_Modulestructure-Magnoliamodulespecificfiles"></a>Magnolia module specific files</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-Moduledescriptor"><a class="anchor" href="#src-196597525_Modulestructure-Moduledescriptor"></a>Module descriptor</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Module descriptor is a Magnolia-specific file that identifies and
 defines a module. When you start Magnolia, the system identifies
 available modules by locating each module&#8217;s descriptor file.</p>
 </div>
-<div class="sect4">
-<h5 id="src-196597525_Modulestructure-InMagnoliaMavenmodules"><a class="anchor" href="#src-196597525_Modulestructure-InMagnoliaMavenmodules"></a>In Magnolia Maven modules</h5>
+<div class="sect2">
+<h3 id="src-196597525_Modulestructure-InMagnoliaMavenmodules"><a class="anchor" href="#src-196597525_Modulestructure-InMagnoliaMavenmodules"></a>In Magnolia Maven modules</h3>
 <div class="paragraph">
 <p>Magnolia Maven-based modules must provide a module descriptor. It is
 located at <code>src/main/resources/META-INF/magnolia/&lt;module-name&gt;.xml</code>. See
 <a href="XML-based_module_descriptor.html">XML-based module descriptor</a>.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-196597525_Modulestructure-Inlightmodules"><a class="anchor" href="#src-196597525_Modulestructure-Inlightmodules"></a>In light modules</h5>
+<div class="sect2">
+<h3 id="src-196597525_Modulestructure-Inlightmodules"><a class="anchor" href="#src-196597525_Modulestructure-Inlightmodules"></a>In light modules</h3>
 <div class="paragraph">
 <p>In a Magnolia file-based module (light module), the descriptor is
 located at <code>$magnolia.resources.dir/example-light-module/module.yaml</code>.
@@ -965,8 +977,10 @@ dependencies only.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-196597525_Modulestructure-Theconfig.yamlmoduleconfigurationfile"><a class="anchor" href="#src-196597525_Modulestructure-Theconfig.yamlmoduleconfigurationfile"></a>The config.yaml module configuration file</h4>
+</div>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-Theconfig.yamlmoduleconfigurationfile"><a class="anchor" href="#src-196597525_Modulestructure-Theconfig.yamlmoduleconfigurationfile"></a>The config.yaml module configuration file</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A Magnolia Maven-based module may contain the
 <code>src/main/resources/&lt;module-name&gt;/config.yaml</code> file. It contains
@@ -976,8 +990,9 @@ configuration</a> for more information.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597525_safe-id-TW9kdWxlc3RydWN0dXJlLUxpZ2h0bW9kdWxlczpmaWxlLWJhc2VkbW9kdWxlc2luJG1hZ25vbGlhLnJlc291cmNlcy5kaXI"><a class="anchor" href="#src-196597525_safe-id-TW9kdWxlc3RydWN0dXJlLUxpZ2h0bW9kdWxlczpmaWxlLWJhc2VkbW9kdWxlc2luJG1hZ25vbGlhLnJlc291cmNlcy5kaXI"></a>Light modules: file-based modules in $magnolia.resources.dir</h3>
+<div class="sect1">
+<h2 id="src-196597525_safe-id-TW9kdWxlc3RydWN0dXJlLUxpZ2h0bW9kdWxlczpmaWxlLWJhc2VkbW9kdWxlc2luJG1hZ25vbGlhLnJlc291cmNlcy5kaXI"><a class="anchor" href="#src-196597525_safe-id-TW9kdWxlc3RydWN0dXJlLUxpZ2h0bW9kdWxlczpmaWxlLWJhc2VkbW9kdWxlc2luJG1hZ25vbGlhLnJlc291cmNlcy5kaXI"></a>Light modules: file-based modules in $magnolia.resources.dir</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>As of Magnolia 5.4, a Magnolia module does not have to be a Maven
 module. You can add a file-based module in the <code>$magnolia.resources.dir</code>
@@ -989,8 +1004,11 @@ directory.</p>
 <a href="Installing_a_module.html">Add the module folder to $magnolia.home</a>
 for more information about <code>$magnolia.home</code>.</p>
 </div>
-<div class="sect3">
-<h4 id="src-196597525_Modulestructure-CreatingalightmodulewithMagnoliaCLI"><a class="anchor" href="#src-196597525_Modulestructure-CreatingalightmodulewithMagnoliaCLI"></a>Creating a light module with Magnolia CLI</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-CreatingalightmodulewithMagnoliaCLI"><a class="anchor" href="#src-196597525_Modulestructure-CreatingalightmodulewithMagnoliaCLI"></a>Creating a light module with Magnolia CLI</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Using the
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+CLI">Magnolia CLI</a>
@@ -1014,8 +1032,9 @@ Installation</a>.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597525_Modulestructure-MagnoliaMavenmodule"><a class="anchor" href="#src-196597525_Modulestructure-MagnoliaMavenmodule"></a>Magnolia Maven module</h3>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-MagnoliaMavenmodule"><a class="anchor" href="#src-196597525_Modulestructure-MagnoliaMavenmodule"></a>Magnolia Maven module</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you are familiar with Java and Maven, you can use Maven to create and
 build your Magnolia module. Using Maven streamlines the process of
@@ -1024,8 +1043,11 @@ modules. All modules provided by Magnolia are built with Maven. This
 makes it easy to install or uninstall them by adding or removing a JAR
 file.</p>
 </div>
-<div class="sect3">
-<h4 id="src-196597525_Modulestructure-CreatingaMagnoliaMavenmodulewithMavenarchetypes"><a class="anchor" href="#src-196597525_Modulestructure-CreatingaMagnoliaMavenmodulewithMavenarchetypes"></a>Creating a Magnolia Maven module with Maven archetypes</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597525_Modulestructure-CreatingaMagnoliaMavenmodulewithMavenarchetypes"><a class="anchor" href="#src-196597525_Modulestructure-CreatingaMagnoliaMavenmodulewithMavenarchetypes"></a>Creating a Magnolia Maven module with Maven archetypes</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Magnolia provides a set of Maven archetypes for various tasks, one of
 which is creating a Magnolia Maven module.</p>
@@ -1044,8 +1066,8 @@ familiar with
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/How+to+use+Magnolia+Maven+archetypes#HowtouseMagnoliaMavenarchetypes-HThearchetypeplugin">How
 to use Magnolia Maven archetypes: The archetype plugin</a>.</p>
 </div>
-<div class="sect4">
-<h5 id="src-196597525_Modulestructure-Executingthearchetypeplugincommand"><a class="anchor" href="#src-196597525_Modulestructure-Executingthearchetypeplugincommand"></a>Executing the archetype plugin command</h5>
+<div class="sect2">
+<h3 id="src-196597525_Modulestructure-Executingthearchetypeplugincommand"><a class="anchor" href="#src-196597525_Modulestructure-Executingthearchetypeplugincommand"></a>Executing the archetype plugin command</h3>
 <div class="paragraph">
 <p>Open a shell and change to the directory where you want the Magnolia
 Maven module skeleton to be created.</p>
@@ -1069,17 +1091,6 @@ displays their list and asks you to confirm it. If you confirm by
 pressing <code>ENTER</code>, the plugin generates the skeleton of your archetype.
 You should see a <code>BUILD SUCCESS</code> message at the end of the process. If
 you press <code>N</code> or <code>CTRL</code> + <code>C</code>, nothing is generated.</p>
-</div>
-<div class="paragraph">
-<p>Installing a module</p>
-</div>
-<div class="paragraph">
-<p>Module configuration</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>

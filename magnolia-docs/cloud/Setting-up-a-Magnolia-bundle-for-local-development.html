@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Setting up a Magnolia bundle for local development - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <title>Setting up a Magnolia bundle for local development :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Setting-up-a-Magnolia-bundle-for-local-development.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,48 +573,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Setting up a Magnolia bundle for local development - Magnolia 6.2</h1>
+<h1 class="page">Setting up a Magnolia bundle for local development</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
-in the cloud</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321180"><a class="anchor" href="#src-215321180"></a>Setting up a Magnolia bundle for local development</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page explains how to set up a Magnolia bundle on your local
@@ -592,8 +585,11 @@ repository</a> which is connected to your Magnolia subscription package.
 Magnolia automatically detects new files that you add to the
 <code>light-modules</code> folder of the local Git repository.</p>
 </div>
-<div class="sect2">
-<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Beforeyoustart"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Beforeyoustart"></a>Before you start</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Beforeyoustart"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Beforeyoustart"></a>Before you start</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Have a look at the
 <a href="Developing-for-Magnolia-in-the-cloud.html#src-215321175_DevelopingforMagnoliainthecloud-localdevprereqs">prerequisites</a>
@@ -603,15 +599,20 @@ before you get started.</p>
 <p>Make sure you are familiar with the following configuration information.
 If not specified otherwise, the paths shown follow Mac usage.</p>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-PathtothelocalGitrepository"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-PathtothelocalGitrepository"></a>Path to the local Git repository</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-PathtothelocalGitrepository"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-PathtothelocalGitrepository"></a>Path to the local Git repository</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Note the path to your local Git repository.<br>
 Example: <code>/Users/&lt;username&gt;/dev/repo/mgnl-cloud-packages/magnolia-docs</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Pathtothelight-modulesfolder"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Pathtothelight-modulesfolder"></a>Path to the light-modules folder</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Pathtothelight-modulesfolder"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Pathtothelight-modulesfolder"></a>Path to the light-modules folder</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Note your <code>light-modules</code> folder, which is a subfolder of the local Git
 repository.<br>
@@ -619,8 +620,10 @@ Example:
 <code>/Users/&lt;username&gt;/dev/repo/mgnl-cloud-packages/magnolia-docs/light-modules</code></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundleinstallationdirectory"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundleinstallationdirectory"></a>Magnolia bundle installation directory</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundleinstallationdirectory"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundleinstallationdirectory"></a>Magnolia bundle installation directory</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Note the Magnolia bundle installation directory. This is the directory
 in which you install the local development bundle. When choosing a name,
@@ -643,8 +646,10 @@ remember:</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-magnolia.resources.dirproperty"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-magnolia.resources.dirproperty"></a>magnolia.resources.dir property</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-magnolia.resources.dirproperty"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-magnolia.resources.dirproperty"></a>magnolia.resources.dir property</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><code>magnolia.resources.dir</code> is a property defining the directory from which
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/Resources">resources</a> are
@@ -682,8 +687,10 @@ your light-modules folder. For example:</p>
 to set the property manually.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundle"></a>Magnolia bundle</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Magnoliabundle"></a>Magnolia bundle</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The Magnolia bundle for local development is bundled with a Tomcat
 application server containing the
@@ -701,14 +708,18 @@ Magnolia CLI and you don&#8217;t need a license for it.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingthelocalMagnoliabundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingthelocalMagnoliabundle"></a>Installing the local Magnolia bundle</h3>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingthelocalMagnoliabundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingthelocalMagnoliabundle"></a>Installing the local Magnolia bundle</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>There are two ways to install the bundle: using Magnolia CLI or
 manually.</p>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingwithMagnoliaCLI"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingwithMagnoliaCLI"></a>Installing with Magnolia CLI</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingwithMagnoliaCLI"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-InstallingwithMagnoliaCLI"></a>Installing with Magnolia CLI</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The installation of the bundle with Magnolia CLI is done via the
 <code>jumpstart</code> command. To be able to install the bundle, you must have
@@ -801,10 +812,12 @@ bundle from this directory.</p>
 <p>Example path: <code>/Users/&lt;username&gt;/dev/mgnl-bundles/apache-tomcat/bin</code>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Installingthebundlemanually"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Installingthebundlemanually"></a>Installing the bundle manually</h4>
-<div class="sect4">
-<h5 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Downloadandunzipthebundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Downloadandunzipthebundle"></a>Download and unzip the bundle</h5>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Installingthebundlemanually"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Installingthebundlemanually"></a>Installing the bundle manually</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Downloadandunzipthebundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Downloadandunzipthebundle"></a>Download and unzip the bundle</h3>
 <div class="paragraph">
 <p>Download the bundle manually. Here is a link to the latest version:
 <a href="https://nexus.magnolia-cms.com:443/content/repositories/magnolia.enterprise.releases//info/magnolia/dx/magnolia-dx-core-webapp/6.2.1/magnolia-dx-core-webapp-6.2.1-tomcat-bundle.zip">magnolia-cloud-bundle</a>.
@@ -853,8 +866,8 @@ bundle from this directory.</p>
 <code>/Users/&lt;user-name&gt;/dev/mgnl-bundles/magnolia-&lt;x.y.z.&gt;/apache-tomcat-&lt;x.y.z.&gt;/bin</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Setthemagnolia.resources.dirproperty"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Setthemagnolia.resources.dirproperty"></a>Set the magnolia.resources.dir property</h5>
+<div class="sect2">
+<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Setthemagnolia.resources.dirproperty"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Setthemagnolia.resources.dirproperty"></a>Set the magnolia.resources.dir property</h3>
 <div class="paragraph">
 <p>Edit the <code>magnolia.properties</code> file. The file is located in
 <code>magnolia-&lt;x.y.z.&gt;/apache-tomcat-&lt;x.y.z.&gt;/webapps/magnoliaAuthor/WEB-INF/config/default/magnolia.properties</code>
@@ -867,13 +880,17 @@ to:</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundle"></a>Starting and stopping the bundle</h3>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundle"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundle"></a>Starting and stopping the bundle</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>When you have finished configuring the bundle, start it up.</p>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-StartingandstoppingwithMagnoliaCLI"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-StartingandstoppingwithMagnoliaCLI"></a>Starting and stopping with Magnolia CLI</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-StartingandstoppingwithMagnoliaCLI"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-StartingandstoppingwithMagnoliaCLI"></a>Starting and stopping with Magnolia CLI</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Magnolia CLI looks in the current working directory or parent
 directories for the nearest folder with a name that starts with
@@ -899,8 +916,10 @@ server.</p>
 documentation</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundlewiththemagnolia_controlscript"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundlewiththemagnolia_controlscript"></a>Starting and stopping the bundle with the magnolia_control script</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundlewiththemagnolia_controlscript"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Startingandstoppingthebundlewiththemagnolia_controlscript"></a>Starting and stopping the bundle with the magnolia_control script</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Open a shell and go to the <code>bin</code> directory of your Magnolia Tomcat
 bundle. If you have installed the bundle using Magnolia CLI <code>jumpstart</code>,
@@ -923,8 +942,8 @@ execute the file <code>magnolia_control.sh</code>, Windows users have to execute
 the <code>magnolia_control.bat</code> file. Execute the script with the <code>start</code>
 option. To shut Magnolia down, use the <code>stop</code> option.</p>
 </div>
-<div class="sect4">
-<h5 id="src-215321180_safe-id-U2V0dGluZ3VwYU1hZ25vbGlhYnVuZGxlZm9ybG9jYWxkZXZlbG9wbWVudC1NYWMsTGludXhhbmRTb2xhcmlzdXNlcnM"><a class="anchor" href="#src-215321180_safe-id-U2V0dGluZ3VwYU1hZ25vbGlhYnVuZGxlZm9ybG9jYWxkZXZlbG9wbWVudC1NYWMsTGludXhhbmRTb2xhcmlzdXNlcnM"></a>Mac, Linux and Solaris users</h5>
+<div class="sect2">
+<h3 id="src-215321180_safe-id-U2V0dGluZ3VwYU1hZ25vbGlhYnVuZGxlZm9ybG9jYWxkZXZlbG9wbWVudC1NYWMsTGludXhhbmRTb2xhcmlzdXNlcnM"><a class="anchor" href="#src-215321180_safe-id-U2V0dGluZ3VwYU1hZ25vbGlhYnVuZGxlZm9ybG9jYWxkZXZlbG9wbWVudC1NYWMsTGludXhhbmRTb2xhcmlzdXNlcnM"></a>Mac, Linux and Solaris users</h3>
 <div class="paragraph">
 <p>Execute the following command:</p>
 </div>
@@ -945,8 +964,8 @@ the <code>--ignore-open-files-limit</code> option:</p>
 <p><code>.<code>/magnolia_control</code>.sh stop</code></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Windowsusers"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Windowsusers"></a>Windows users</h5>
+<div class="sect2">
+<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Windowsusers"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Windowsusers"></a>Windows users</h3>
 <div class="paragraph">
 <p>Execute the following command:</p>
 </div>
@@ -961,8 +980,10 @@ the <code>--ignore-open-files-limit</code> option:</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Tailingthelogfile"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Tailingthelogfile"></a>Tailing the log file</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Tailingthelogfile"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Tailingthelogfile"></a>Tailing the log file</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>[.admonition-icon .confluence-information-macro-icon]##</p>
 </div>
@@ -979,8 +1000,9 @@ you are still in the <code>bin</code> directory, execute:</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Concludetheinstallationinyourwebbrowser"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Concludetheinstallationinyourwebbrowser"></a>Conclude the installation in your web browser</h3>
+<div class="sect1">
+<h2 id="src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Concludetheinstallationinyourwebbrowser"><a class="anchor" href="#src-215321180_SettingupaMagnoliabundleforlocaldevelopment-Concludetheinstallationinyourwebbrowser"></a>Conclude the installation in your web browser</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>To finish the installation of the bundle, open the page
 `http://localhost:8080/magnoliaAuthor/ `in your web browser and follow
@@ -1003,19 +1025,6 @@ URI mapping</a> that redirects <code>/</code> to <code>/.magnolia/admincentral</
 <div class="paragraph">
 <p>Remove this redirect on your local installation or set it according to
 your needs.</p>
-</div>
-<div class="paragraph">
-<p>Next: * <a href="Developing-and-testing.html">Developing and testing</a></p>
-</div>
-<div class="paragraph">
-<p>Setting up a local Git repository</p>
-</div>
-<div class="paragraph">
-<p>Developing and testing</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Setting up a local Git repository - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Setting up a local Git repository :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Setting-up-a-local-Git-repository.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,48 +573,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Setting up a local Git repository - Magnolia 6.2 documentation</h1>
+<h1 class="page">Setting up a local Git repository</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
-in the cloud</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321178"><a class="anchor" href="#src-215321178"></a>Setting up a local Git repository</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Every cloud-based Magnolia package is connected to a Git repository. You
@@ -618,8 +611,11 @@ Magnolia package. In a more advanced Git setup, you could use multiple
 Git repositories: one for development only and another one connected to
 Magnolia for deployment.</p>
 </div>
-<div class="sect2">
-<h3 id="src-215321178_SettingupalocalGitrepository-Settingupalocallight-modulerepository"><a class="anchor" href="#src-215321178_SettingupalocalGitrepository-Settingupalocallight-modulerepository"></a>Setting up a local light-module repository</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321178_SettingupalocalGitrepository-Settingupalocallight-modulerepository"><a class="anchor" href="#src-215321178_SettingupalocalGitrepository-Settingupalocallight-modulerepository"></a>Setting up a local light-module repository</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Log in to the Magnolia <a href="Cockpit.html">cockpit</a> to obtain the
 <a href="Cockpit.html#src-215321133_Cockpit-Additionalinformation">URL of the
@@ -627,7 +623,7 @@ Git repository</a> connected to your Magnolia package. This information is
 in the <strong>Additional information</strong> section of the <strong>Package overview</strong>:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321178/AdditionalInformation.png" alt="images/download/attachments/215321178/AdditionalInformation.png" width="600"></span></p>
+<p><span class="image"><img src="../_images/cloud/AdditionalInformation.png" alt="cloud/AdditionalInformation.png" width="600"></span></p>
 </div>
 <div class="paragraph">
 <p>Open your shell, <code>cd</code> into a directory of your choice and clone the
@@ -667,8 +663,10 @@ the name of the directory (<code>magnolia-docs</code>) created as a result of th
 clone operation are just example names.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321178_SettingupalocalGitrepository-Locallight-modulesfolderpath"><a class="anchor" href="#src-215321178_SettingupalocalGitrepository-Locallight-modulesfolderpath"></a>Local light-modules folder path</h3>
+</div>
+<div class="sect1">
+<h2 id="src-215321178_SettingupalocalGitrepository-Locallight-modulesfolderpath"><a class="anchor" href="#src-215321178_SettingupalocalGitrepository-Locallight-modulesfolderpath"></a>Local light-modules folder path</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>You must know the path to your <code>light-modules</code> directory. All the code
 you develop will go into this directory. You need to know the absolute
@@ -695,21 +693,6 @@ paths are:</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>Next: *
-<a href="Setting-up-a-Magnolia-bundle-for-local-development.html">Setting up
-a Magnolia bundle for local development</a></p>
-</div>
-<div class="paragraph">
-<p>Creating and deploying custom cloud bundles</p>
-</div>
-<div class="paragraph">
-<p>Setting up a Magnolia bundle for local development</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
 </div>
 </div>
 </article>

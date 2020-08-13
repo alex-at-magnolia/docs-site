@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Module configuration - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Module configuration :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/core/modules/Module_configuration.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="Modules.html">Modules</a>
+    <a class="nav-link" href="Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -531,48 +564,16 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Magnolia Documentation</a></li>
-    <li><a href="Module_configuration.html">Module configuration - Magnolia 6.2 documentation</a></li>
+    <li>Modules</li>
+    <li><a href="Module_configuration.html">Module configuration</a></li>
   </ul>
 </nav>
 
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Module configuration - Magnolia 6.2 documentation</h1>
+<h1 class="page">Module configuration</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Modules.html" class="bare">Modules.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Modules.html">Magnolia 6.2 documentation</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196597526"><a class="anchor" href="#src-196597526"></a>Module configuration</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>This page explains how to configure modules in Magnolia. Module
@@ -593,8 +594,11 @@ other modules.</p>
 <p>The explanation on this page applies to Magnolia Maven modules with a
 module class.</p>
 </div>
-<div class="sect2">
-<h3 id="src-196597526_Moduleconfiguration-anc-how-it-worksHowitworks"><a class="anchor" href="#src-196597526_Moduleconfiguration-anc-how-it-worksHowitworks"></a><span id="src-196597526_Moduleconfiguration-anc-how-it-works " class="confluence-anchor-link">#</span>#How it works</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597526_Moduleconfiguration-anc-how-it-worksHowitworks"><a class="anchor" href="#src-196597526_Moduleconfiguration-anc-how-it-worksHowitworks"></a><span id="src-196597526_Moduleconfiguration-anc-how-it-works " class="confluence-anchor-link">#</span>#How it works</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>A Magnolia Maven module may contain a module class. The class needs to
 be specified in the <a href="XML-based_module_descriptor.html">module
@@ -689,8 +693,11 @@ ModuleConfigurationRegistry. On a running system, you can use the
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/Definitions+app">Definitions
 app</a> to check modules' configuration data.</p>
 </div>
-<div class="sect3">
-<h4 id="src-196597526_Moduleconfiguration-Changingtheconfigurationonarunningsystem"><a class="anchor" href="#src-196597526_Moduleconfiguration-Changingtheconfigurationonarunningsystem"></a>Changing the configuration on a running system</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597526_Moduleconfiguration-Changingtheconfigurationonarunningsystem"><a class="anchor" href="#src-196597526_Moduleconfiguration-Changingtheconfigurationonarunningsystem"></a>Changing the configuration on a running system</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>If you change configuration data on a running system, Magnolia is
 notified about it. When the configuration data changes, the properties
@@ -713,8 +720,9 @@ Magnolia, there is no need to restart the instance.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597526_Moduleconfiguration-anc-configuration-dataConfigurationdata"><a class="anchor" href="#src-196597526_Moduleconfiguration-anc-configuration-dataConfigurationdata"></a><span id="src-196597526_Moduleconfiguration-anc-configuration-data " class="confluence-anchor-link">#</span>#Configuration data</h3>
+<div class="sect1">
+<h2 id="src-196597526_Moduleconfiguration-anc-configuration-dataConfigurationdata"><a class="anchor" href="#src-196597526_Moduleconfiguration-anc-configuration-dataConfigurationdata"></a><span id="src-196597526_Moduleconfiguration-anc-configuration-data " class="confluence-anchor-link">#</span>#Configuration data</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>[.admonition-icon .confluence-information-macro-icon]##</p>
 </div>
@@ -887,8 +895,11 @@ hypothetical module class called
 <div class="paragraph">
 <p><code>}</code></p>
 </div>
-<div class="sect3">
-<h4 id="src-196597526_Moduleconfiguration-Theconfig.yamlfile"><a class="anchor" href="#src-196597526_Moduleconfiguration-Theconfig.yamlfile"></a>The config.yaml file</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-196597526_Moduleconfiguration-Theconfig.yamlfile"><a class="anchor" href="#src-196597526_Moduleconfiguration-Theconfig.yamlfile"></a>The config.yaml file</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The YAML file containing module configuration data has to reside at
 <code>src/main/resources/&lt;module-name&gt;/config.yaml</code>.</p>
@@ -913,8 +924,9 @@ hypothetical module class called
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-196597526_Moduleconfiguration-Changingmoduleconfiguration"><a class="anchor" href="#src-196597526_Moduleconfiguration-Changingmoduleconfiguration"></a>Changing module configuration</h3>
+<div class="sect1">
+<h2 id="src-196597526_Moduleconfiguration-Changingmoduleconfiguration"><a class="anchor" href="#src-196597526_Moduleconfiguration-Changingmoduleconfiguration"></a>Changing module configuration</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>There are several ways to change an original configuration.</p>
 </div>
@@ -950,10 +962,7 @@ the JCR <code>config</code> workspace.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="src-196597526_Moduleconfiguration-Decorating"><a class="anchor" href="#src-196597526_Moduleconfiguration-Decorating"></a>Decorating</h2>
-<div class="sectionbody">
+<h1 id="src-196597526_Moduleconfiguration-Decorating" class="sect0"><a class="anchor" href="#src-196597526_Moduleconfiguration-Decorating"></a>Decorating</h1>
 <div class="paragraph">
 <p>Decorating means adapting the current configuration. A decorator file
 can reside in any Magnolia Maven module or light module. In the example
@@ -972,11 +981,7 @@ below, we create a decorator file in a light module called
 <a href="https://wiki.magnolia-cms.com/display/DOCS62/Definition+decoration#Definitiondecoration-Definitiondecorationconcept">Definition
 decoration concept</a>.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196597526_Moduleconfiguration-Hotfixing"><a class="anchor" href="#src-196597526_Moduleconfiguration-Hotfixing"></a>Hotfixing</h2>
-<div class="sectionbody">
+<h1 id="src-196597526_Moduleconfiguration-Hotfixing" class="sect0"><a class="anchor" href="#src-196597526_Moduleconfiguration-Hotfixing"></a>Hotfixing</h1>
 <div class="paragraph">
 <p>Creating a <em>hotfix</em> means utilizing the Magnolia Resources framework&#8217;s
 capability which allows a resource to have different origins, see
@@ -1035,11 +1040,7 @@ instances.)</p>
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196597526_Moduleconfiguration-Intheconfigworkspace"><a class="anchor" href="#src-196597526_Moduleconfiguration-Intheconfigworkspace"></a>In the config workspace</h2>
-<div class="sectionbody">
+<h1 id="src-196597526_Moduleconfiguration-Intheconfigworkspace" class="sect0"><a class="anchor" href="#src-196597526_Moduleconfiguration-Intheconfigworkspace"></a>In the config workspace</h1>
 <div class="paragraph">
 <p>Even though we recommend using YAML files for configuration data, there
 are still a lot of modules whose configuration is stored in the JCR
@@ -1073,11 +1074,7 @@ to publish the node you changed to your author instances.)</p>
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-196597526_Moduleconfiguration-Accessingconfigurationdataprogrammatically"><a class="anchor" href="#src-196597526_Moduleconfiguration-Accessingconfigurationdataprogrammatically"></a>Accessing configuration data programmatically</h2>
-<div class="sectionbody">
+<h1 id="src-196597526_Moduleconfiguration-Accessingconfigurationdataprogrammatically" class="sect0"><a class="anchor" href="#src-196597526_Moduleconfiguration-Accessingconfigurationdataprogrammatically"></a>Accessing configuration data programmatically</h1>
 <div class="paragraph">
 <p>To access module configuration in a Java class, use
 <code>javax.inject.Provider</code> to access the sole instance of your module
@@ -1173,17 +1170,6 @@ class.</p>
 <p>Lines 23-25: Access the bean properties of your module.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Module structure</p>
-</div>
-<div class="paragraph">
-<p>Module definition items</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
 </div>
 </article>
 <aside class="toc sidebar" data-title="Contents" data-levels="2">

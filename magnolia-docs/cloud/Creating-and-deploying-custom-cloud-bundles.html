@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Creating and deploying custom cloud bundles - Magnolia 6.2 :: Magnolia CMS Docs</title>
+    <title>Creating and deploying custom cloud bundles :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Creating-and-deploying-custom-cloud-bundles.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,48 +573,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Creating and deploying custom cloud bundles - Magnolia 6.2</h1>
+<h1 class="page">Creating and deploying custom cloud bundles</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
-in the cloud</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-219777739"><a class="anchor" href="#src-219777739"></a>Creating and deploying custom cloud bundles</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>If you have decided to use the
@@ -594,8 +587,11 @@ must create and deploy the custom bundle.</p>
 practices must be followed when creating your project and when deploying
 it the first time or continuously thereafter.</p>
 </div>
-<div class="sect2">
-<h3 id="src-219777739_Creatinganddeployingcustomcloudbundles-Creatingyourcustombundle"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Creatingyourcustombundle"></a>Creating your custom bundle</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-219777739_Creatinganddeployingcustomcloudbundles-Creatingyourcustombundle"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Creatingyourcustombundle"></a>Creating your custom bundle</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Magnolia provides a
 <a href="https://git.magnolia-cms.com/projects/BUILD/repos/maven-archetypes/browse/magnolia-cloud-project-archetype/src/main/resources/archetype-resources/README.md">cloud-specific
@@ -614,8 +610,11 @@ Magnolia Cloud onboarding process.</p>
 <p>The <code>magnolia-cloud-project-archetype</code> is supported with version 1.3+ of
 the Magnolia Maven Archetype.</p>
 </div>
-<div class="sect3">
-<h4 id="src-219777739_Creatinganddeployingcustomcloudbundles-Usage"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Usage"></a>Usage</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-219777739_Creatinganddeployingcustomcloudbundles-Usage"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Usage"></a>Usage</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>`mvn org.apache.maven.plugins:maven-archetype-plugin:2.4:generate -DarchetypeCatalog=https:<code>//nexus</code>.magnolia-cms.com<code>/content/groups/public/</code> `</p>
 </div>
@@ -783,8 +782,9 @@ the structure shown above.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-219777739_Creatinganddeployingcustomcloudbundles-Continuousintegrationanddeploymentofcustombundles"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Continuousintegrationanddeploymentofcustombundles"></a>Continuous integration and deployment of custom bundles</h3>
+<div class="sect1">
+<h2 id="src-219777739_Creatinganddeployingcustomcloudbundles-Continuousintegrationanddeploymentofcustombundles"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Continuousintegrationanddeploymentofcustombundles"></a>Continuous integration and deployment of custom bundles</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>You must use the
 <a href="https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-maven-plugin/browse/README.md">Magnolia
@@ -803,8 +803,11 @@ when deploying a new bundle to Magnolia Cloud: v1.0-RC6.</p>
 <p>More information can be found in the readme here:
 <a href="https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-maven-plugin/browse/README.md" class="bare">https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-maven-plugin/browse/README.md</a></p>
 </div>
-<div class="sect3">
-<h4 id="src-219777739_Creatinganddeployingcustomcloudbundles-Validationofthecustombundle"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Validationofthecustombundle"></a>Validation of the custom bundle</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-219777739_Creatinganddeployingcustomcloudbundles-Validationofthecustombundle"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-Validationofthecustombundle"></a>Validation of the custom bundle</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The plugin performs validation checks against the built artifact
 (webapp) to ensure compatibility with the Magnolia Cloud infrastructure:</p>
@@ -821,8 +824,10 @@ when deploying a new bundle to Magnolia Cloud: v1.0-RC6.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-219777739_Creatinganddeployingcustomcloudbundles-DeploymentoftheWARfile"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-DeploymentoftheWARfile"></a>Deployment of the WAR file</h4>
+</div>
+<div class="sect1">
+<h2 id="src-219777739_Creatinganddeployingcustomcloudbundles-DeploymentoftheWARfile"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-DeploymentoftheWARfile"></a>Deployment of the WAR file</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The plugin uploads the built artifact to the entry point for Magnolia
 Cloud&#8217;s deployment pipelines. It also collects meta-information about
@@ -830,8 +835,9 @@ the artifact for debugging purposes.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-219777739_Creatinganddeployingcustomcloudbundles-MagnoliaCloudSimulator"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-MagnoliaCloudSimulator"></a>Magnolia Cloud Simulator</h3>
+<div class="sect1">
+<h2 id="src-219777739_Creatinganddeployingcustomcloudbundles-MagnoliaCloudSimulator"><a class="anchor" href="#src-219777739_Creatinganddeployingcustomcloudbundles-MagnoliaCloudSimulator"></a>Magnolia Cloud Simulator</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We recommend you test your custom bundle in a simulated cloud
 environment before deploying it.</p>
@@ -840,16 +846,6 @@ environment before deploying it.</p>
 <p>To do so, we offer a docker-compose based setup:
 <a href="https://git.magnolia-cms.com/projects/OD/repos/magnolia-cloud-simulator/browse/README.md">Magnolia
 Cloud Simulator</a>.</p>
-</div>
-<div class="paragraph">
-<p>Developing for Magnolia in the cloud</p>
-</div>
-<div class="paragraph">
-<p>Setting up a local Git repository</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>

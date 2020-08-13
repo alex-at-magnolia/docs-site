@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Developing and testing - Magnolia 6.2 documentation :: Magnolia CMS Docs</title>
+    <title>Developing and testing :: Magnolia CMS Docs</title>
     <link rel="canonical" href="http://localhost:9096/magnolia-docs/cloud/Developing-and-testing.html">
     <meta name="generator" content="Antora 2.3.3">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -350,7 +350,40 @@
     <span class="nav-text">Modules</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../core/modules/Modules.html">Modules</a>
+    <a class="nav-link" href="../core/modules/Modules.html">Modules Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/List_of_modules.html">Modules list</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Light_modules.html">Light modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Installing_a_module.html">Installing a module</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_structure.html">Module structure</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Module_configuration.html">Module configuration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#core/modules/Module_definition_terms.adoc">Module definition terms</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/modules/Module_descriptor.html">Module descriptor</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/XML-based_module_descriptor.html">XML Based</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/modules/YAML-based_module_descriptor.html">YAML Based</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core/modules/Dependency_injection.html">Dependency injection</a>
   </li>
 </ul>
   </li>
@@ -540,48 +573,8 @@
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Developing and testing - Magnolia 6.2 documentation</h1>
+<h1 class="page">Developing and testing</h1>
 <div id="preamble">
-<div class="sectionbody">
-<div id="ht-loader" class="paragraph">
-<p>This content cannot be displayed without JavaScript.<br>
-Please enable JavaScript and reload the page.</p>
-</div>
-<div class="paragraph">
-<p><a href="" class="bare"></a></p>
-</div>
-<div id="ht-search" class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_docs62"><a class="anchor" href="#_docs62"></a><span class="ht-logo-label">DOCS62</span> <span class="image"><img src="../_images/DOCS62.png" alt="image"></span></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><a href="Magnolia-Cloud.html" class="bare">Magnolia-Cloud.html</a></p>
-</div>
-<div class="sect2">
-<h3 id="_magnolia_6_2_documentation"><a class="anchor" href="#_magnolia_6_2_documentation"></a>Magnolia 6.2 documentation</h3>
-<div id="ht-sidebar-dragbar" class="paragraph">
-<p><span class="drag-handle-1"> [.drag-handle-2]</span> [.drag-handle-3]##</p>
-</div>
-<div id="ht-breadcrumb" class="ulist">
-<ul>
-<li>
-<p><a href="Magnolia-Cloud.html">Magnolia 6.2 documentation</a></p>
-</li>
-<li>
-<p><a href="Developing-for-Magnolia-in-the-cloud.html">Developing for Magnolia
-in the cloud</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="src-215321181"><a class="anchor" href="#src-215321181"></a>Developing and testing</h2>
 <div class="sectionbody">
 <div id="main-content" class="paragraph">
 <p>Once you have <a href="Setting-up-a-local-Git-repository.html">set up a local
@@ -601,10 +594,17 @@ repository.</p>
 <p>This page offers some insights about the development process itself:
 writing the code to create new features for your Magnolia cloud package.</p>
 </div>
-<div class="sect2">
-<h3 id="src-215321181_Developingandtesting-Developing"><a class="anchor" href="#src-215321181_Developingandtesting-Developing"></a>Developing</h3>
-<div class="sect3">
-<h4 id="src-215321181_Developingandtesting-Developwitharunninglocalinstance"><a class="anchor" href="#src-215321181_Developingandtesting-Developwitharunninglocalinstance"></a>Develop with a running local instance</h4>
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-Developing"><a class="anchor" href="#src-215321181_Developingandtesting-Developing"></a>Developing</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-Developwitharunninglocalinstance"><a class="anchor" href="#src-215321181_Developingandtesting-Developwitharunninglocalinstance"></a>Develop with a running local instance</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We recommend you develop with a
 <a href="Setting-up-a-Magnolia-bundle-for-local-development.html">running
@@ -624,8 +624,10 @@ the log</a>. Both display valuable information during code development, for
 example, whether your new items contain errors.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321181_Developingandtesting-Addyourcodetothelight-modulesfolder"><a class="anchor" href="#src-215321181_Developingandtesting-Addyourcodetothelight-modulesfolder"></a>Add your code to the light-modules folder</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-Addyourcodetothelight-modulesfolder"><a class="anchor" href="#src-215321181_Developingandtesting-Addyourcodetothelight-modulesfolder"></a>Add your code to the light-modules folder</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>We assume that you have already
 <a href="Setting-up-a-local-Git-repository.html">set up a local Git
@@ -676,8 +678,10 @@ Use only the characters from the <code>[a-zA-Z0-9-_]</code> regex range for the
 module name.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321181_Developingandtesting-UseMagnoliaCLI"><a class="anchor" href="#src-215321181_Developingandtesting-UseMagnoliaCLI"></a>Use Magnolia CLI</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-UseMagnoliaCLI"><a class="anchor" href="#src-215321181_Developingandtesting-UseMagnoliaCLI"></a>Use Magnolia CLI</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://wiki.magnolia-cms.com/display/DOCS62/Magnolia+CLI">Magnolia CLI</a>
 is an <a href="https://www.npmjs.com/">npm</a> package providing a command line
@@ -708,8 +712,10 @@ lacking so far, please let us know via the
 Box</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321181_Developingandtesting-Buildtemplates"><a class="anchor" href="#src-215321181_Developingandtesting-Buildtemplates"></a>Build templates</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-Buildtemplates"><a class="anchor" href="#src-215321181_Developingandtesting-Buildtemplates"></a>Build templates</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Writing templates is a very common task when it comes to development. If
 you are completely new to templating, have a look at some of the
@@ -737,10 +743,12 @@ tasks that would be complicated to resolve with FreeMarker directives
 only.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="src-215321181_Developingandtesting-DevelopmenttutorialforMagnoliainthecloud"><a class="anchor" href="#src-215321181_Developingandtesting-DevelopmenttutorialforMagnoliainthecloud"></a>Development tutorial for Magnolia in the cloud</h4>
+</div>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-DevelopmenttutorialforMagnoliainthecloud"><a class="anchor" href="#src-215321181_Developingandtesting-DevelopmenttutorialforMagnoliainthecloud"></a>Development tutorial for Magnolia in the cloud</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="../_images/images/download/attachments/215321181/cloudy_.gif" alt="images/download/attachments/215321181/cloudy_.gif"></span>
+<p><span class="image"><img src="../_images/cloud/cloudy_.gif" alt="cloud/cloudy_.gif"></span>
 Follow the <a href="Hello-cloud---a-development-tutorial.html">Hello-cloud
 tutorial</a>. It presents the complete Magnolia development cycle
 step-by-step based on a concrete example. In the tutorial you create a
@@ -758,8 +766,9 @@ front-end development</a> and
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="src-215321181_Developingandtesting-Testing"><a class="anchor" href="#src-215321181_Developingandtesting-Testing"></a>Testing</h3>
+<div class="sect1">
+<h2 id="src-215321181_Developingandtesting-Testing"><a class="anchor" href="#src-215321181_Developingandtesting-Testing"></a>Testing</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Testing should always be a part of your development process. In the
 context of local development, your goal should be to have error-free
@@ -775,21 +784,6 @@ the Live environment.</p>
 content that is already deployed in the UAT or Live environments, you
 can <a href="Copying-content-for-testing.html">copy content from an
 environment for testing purposes</a> .</p>
-</div>
-<div class="paragraph">
-<p>Next: *
-<a href="Committing-and-pushing-to-the-remote-Magnolia-Git-repository.html">Committing
-and pushing to the remote Magnolia Git repository</a></p>
-</div>
-<div class="paragraph">
-<p>Setting up a Magnolia bundle for local development</p>
-</div>
-<div class="paragraph">
-<p>Committing and pushing to the remote Magnolia Git repository</p>
-</div>
-<div class="paragraph">
-<p><a href="#" class="bare">#</a></p>
-</div>
 </div>
 </div>
 </div>
