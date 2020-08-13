@@ -314,7 +314,7 @@
 .land .imageblock img,
 .land .image > img {
   margin: auto;
-  width: 60%;
+  width: 100%;
 }
 
 #preamble .abstract blockquote {
@@ -645,4 +645,26 @@
 .land th.tableblock,
 .land td.tableblock {
   word-break: break-word; /* overflow-wrap for table cells; gives space higher precedence than hyphen opportunity */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+.grid-container .card {
+  background-color: transparent;
+  transition: 0.6s ease-in-out;
+}
+
+.grid-container .card:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
 }
