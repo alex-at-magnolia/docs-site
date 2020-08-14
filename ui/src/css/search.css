@@ -1,0 +1,31 @@
+#searchBar {
+  margin-left: 6.75rem;
+  padding-left: 1rem;
+  height: 60%;
+  margin-top: 12px;
+  margin-bottom: auto;
+  width: fit-content;
+  min-width: 400px;
+  border: none;
+  /* border-radius: 4px; */
+  border-bottom: 0.1em solid var(--color-primary-green);
+  background-color: var(--color-nav-background);
+  font-family: var(--body-font-family);
+  font-size: 0.9rem;
+  /* box-shadow: inset -1px 2px 11px -7px var(--color-primary-green); */
+  /* transform: skewX(-8deg); */
+}
+
+#searchBar:focus {
+  outline: 0;
+}
+
+#searchBar:disabled {
+  background: var(--color-gray-10);
+}
+
+@media screen and (max-width: 900px) {
+  #searchBar {
+    display: none;
+  }
+}
